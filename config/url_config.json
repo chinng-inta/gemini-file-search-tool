@@ -89,6 +89,11 @@
       "name": "M5GFX",
       "url": "https://docs.m5stack.com/ja/arduino/m5gfx/m5gfx_functions/",
       "description": "M5GFX API"
+    },
+    "C++": {
+      "name": "C++ Standerd",
+      "url": "https://cpprefjp.github.io/index.html/",
+      "description": "C++ / std::C++ / 標準C++"
     }
   }
 }
