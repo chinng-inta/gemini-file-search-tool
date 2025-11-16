@@ -10,7 +10,8 @@
   ],
   "workspaceFolder": "/workspace",
   "containerEnv": {
-    "GEMINI_API_KEY": "${localEnv:GEMINI_API_KEY}",
+    "GEMINI_FILE_SEARCH_API_KEY": "${localEnv:GEMINI_FILE_SEARCH_API_KEY}",
+    "GEMINI_CODE_GEN_API_KEY": "${localEnv:GEMINI_CODE_GEN_API_KEY}",
     "RAG_CONFIG_PATH": "/workspace/config/rag_config.json",
     "DOCS_STORE_PATH": "/workspace/data/docs"
   },

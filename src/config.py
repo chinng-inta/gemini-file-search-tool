@@ -27,8 +27,9 @@ class Config:
     
     def _load_env(self):
         """環境変数を読み込む."""
-        # Gemini API Key
-        self.gemini_api_key = os.getenv("GEMINI_API_KEY")
+        # Gemini API Keys
+        self.gemini_file_search_api_key = os.getenv("GEMINI_FILE_SEARCH_API_KEY")
+        self.gemini_code_gen_api_key = os.getenv("GEMINI_CODE_GEN_API_KEY")
         
         # Paths
         self.rag_config_path = os.getenv(
@@ -49,9 +50,15 @@ class Config:
     
     def _validate(self):
         """設定を検証."""
-        if not self.gemini_api_key:
+        if not self.gemini_file_search_api_key:
             raise ConfigError(
-                "GEMINI_API_KEY environment variable is not set. "
+                "GEMINI_FILE_SEARCH_API_KEY environment variable is not set. "
+                "Please set it in your .env file or environment."
+            )
+        
+        if not self.gemini_code_gen_api_key:
+            raise ConfigError(
+                "GEMINI_CODE_GEN_API_KEY environment variable is not set. "
                 "Please set it in your .env file or environment."
             )
         
@@ -66,9 +73,13 @@ class Config:
         if not path.exists():
             path.mkdir(parents=True, exist_ok=True)
     
-    def get_gemini_api_key(self) -> str:
-        """Gemini API Keyを取得."""
-        return self.gemini_api_key
+    def get_gemini_file_search_api_key(self) -> str:
+        """Gemini File Search API Keyを取得."""
+        return self.gemini_file_search_api_key
+    
+    def get_gemini_code_gen_api_key(self) -> str:
+        """Gemini Code Generation API Keyを取得."""
+        return self.gemini_code_gen_api_key
     
     def get_rag_config_path(self) -> str:
         """RAG設定ファイルのパスを取得."""

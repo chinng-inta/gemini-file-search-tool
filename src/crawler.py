@@ -2,7 +2,7 @@
 import asyncio
 import json
 import logging
-from datetime import datetime, UTC
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Optional
 from urllib.parse import urlparse, urljoin, urldefrag
@@ -25,6 +25,9 @@ class CrawlerError(Exception):
 
 class APICrawler:
     """APIドキュメントをクロールするクラス."""
+    
+    # 日本標準時のタイムゾーン
+    JST = timezone(timedelta(hours=9))
     
     def __init__(self, docs_path: Optional[str] = None, url_config_path: Optional[str] = None):
         """
@@ -294,7 +297,7 @@ class APICrawler:
             # メタデータを作成
             metadata = {
                 'url': url,
-                'crawled_at': datetime.now(UTC).isoformat().replace('+00:00', 'Z'),
+                'crawled_at': datetime.now(self.JST).strftime('%Y/%m/%d %H:%M:%S'),
                 'doc_type': doc_type
             }
             
