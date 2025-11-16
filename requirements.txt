@@ -14,3 +14,7 @@ python-dotenv>=1.0.0
 
 # ユーティリティ
 aiohttp>=3.9.1
+
+# テスト用
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
