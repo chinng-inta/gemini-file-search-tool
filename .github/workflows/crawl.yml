@@ -1,0 +1,40 @@
+name: Weekly API Documentation Crawl
+
+on:
+  schedule:
+    # 毎週日曜日 00:00 UTC に実行
+    - cron: '0 0 * * 0'
+  workflow_dispatch:  # 手動実行オプション
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          
+      - name: Run crawler
+        run: |
+          python scripts/auto_crawl.py
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/docs/
+          git diff --staged --quiet || git commit -m "Auto-update API documentation [skip ci]"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

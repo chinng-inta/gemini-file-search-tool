@@ -1,13 +1,18 @@
 """Gemini RAGを管理するモジュール."""
 import json
 import os
+import subprocess
 import time
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Optional
 import fcntl
 import asyncio
+import logging
 from google import genai
+
+# ロガーの設定
+logger = logging.getLogger(__name__)
 
 
 class RAGError(Exception):
@@ -440,6 +445,40 @@ class GeminiRAGManager:
         except Exception as e:
             raise RAGError(f"ドキュメントのアップロードに失敗しました: {e}")
     
+    def _git_pull(self) -> bool:
+        """
+        Git pullを実行してドキュメントを最新化.
+        
+        Returns:
+            bool: 成功した場合True
+        """
+        try:
+            # プロジェクトルートを取得
+            project_root = Path(self.config_path).parent.parent
+            
+            logger.info("Executing git pull to update documents...")
+            result = subprocess.run(
+                ['git', 'pull'],
+                cwd=project_root,
+                capture_output=True,
+                text=True,
+                timeout=30
+            )
+            
+            if result.returncode == 0:
+                logger.info(f"Git pull successful: {result.stdout.strip()}")
+                return True
+            else:
+                logger.warning(f"Git pull failed: {result.stderr}")
+                return False
+                
+        except subprocess.TimeoutExpired:
+            logger.warning("Git pull timed out")
+            return False
+        except Exception as e:
+            logger.warning(f"Git pull error: {e}")
+            return False
+    
     async def generate_code(
         self,
         prompt: str,
@@ -465,6 +504,9 @@ class GeminiRAGManager:
         
         if not doc_type:
             raise RAGError("doc_typeは必須です")
+        
+        # Git pullを実行してドキュメントを最新化
+        self._git_pull()
         
         # 最新のRAG IDを取得
         rag_id = self.get_latest_rag_id(doc_type)

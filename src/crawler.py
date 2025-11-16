@@ -271,7 +271,7 @@ class APICrawler:
             logger.error(f"Failed to convert HTML to text for {url}: {e}")
             raise CrawlerError(f"Failed to convert HTML to text: {e}")
     
-    def _save_document(self, url: str, text: str, doc_type: str) -> str:
+    def _save_document(self, url: str, text: str, doc_type: str, is_first_page: bool = False) -> str:
         """
         ドキュメントをメタデータ付きでファイルに保存.
         
@@ -279,6 +279,7 @@ class APICrawler:
             url: ページのURL
             text: 保存するテキストコンテンツ
             doc_type: ドキュメントの種類
+            is_first_page: 最初のページかどうか（Trueの場合は新規作成、Falseの場合は追記）
             
         Returns:
             str: 保存したファイルのパス
@@ -294,25 +295,40 @@ class APICrawler:
             file_name = f"{doc_type}.txt"
             file_path = self.docs_path / file_name
             
-            # メタデータを作成
-            metadata = {
-                'url': url,
-                'crawled_at': datetime.now(self.JST).strftime('%Y/%m/%d %H:%M:%S'),
-                'doc_type': doc_type
-            }
+            if is_first_page:
+                # 最初のページの場合は新規作成してメタデータを追加
+                metadata = {
+                    'doc_type': doc_type,
+                    'crawled_at': datetime.now(self.JST).strftime('%Y/%m/%d %H:%M:%S'),
+                    'first_url': url
+                }
+                
+                # メタデータとテキストを結合
+                content = "---\n"
+                for key, value in metadata.items():
+                    content += f"{key}: {value}\n"
+                content += "---\n\n"
+                content += f"# Page: {url}\n\n"
+                content += text
+                content += "\n\n" + "=" * 80 + "\n\n"
+                
+                # ファイルに保存（新規作成）
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write(content)
+                
+                logger.info(f"Successfully created document: {file_path}")
+            else:
+                # 2ページ目以降は追記
+                content = f"# Page: {url}\n\n"
+                content += text
+                content += "\n\n" + "=" * 80 + "\n\n"
+                
+                # ファイルに追記
+                with open(file_path, 'a', encoding='utf-8') as f:
+                    f.write(content)
+                
+                logger.info(f"Successfully appended to document: {file_path}")
             
-            # メタデータとテキストを結合
-            content = "---\n"
-            for key, value in metadata.items():
-                content += f"{key}: {value}\n"
-            content += "---\n\n"
-            content += text
-            
-            # ファイルに保存
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(content)
-            
-            logger.info(f"Successfully saved document: {file_path}")
             return str(file_path)
             
         except Exception as e:
@@ -401,6 +417,9 @@ class APICrawler:
         # クロールしたファイルパスのリスト
         file_paths = []
         
+        # ページカウンター（最初のページかどうかを判定するため）
+        page_counter = {'count': 0}
+        
         # aiohttpセッションを作成
         async with aiohttp.ClientSession() as session:
             # 再帰的クロールを実行
@@ -410,7 +429,8 @@ class APICrawler:
                 depth=0,
                 max_depth=max_depth,
                 doc_type=doc_type,
-                file_paths=file_paths
+                file_paths=file_paths,
+                page_counter=page_counter
             )
         
         logger.info(f"Crawl completed. Total pages crawled: {len(file_paths)}")
@@ -423,7 +443,8 @@ class APICrawler:
         depth: int,
         max_depth: int,
         doc_type: str,
-        file_paths: list[str]
+        file_paths: list[str],
+        page_counter: dict
     ):
         """
         再帰的にページをクロール（内部メソッド）.
@@ -435,6 +456,7 @@ class APICrawler:
             max_depth: 最大深度
             doc_type: ドキュメントの種類
             file_paths: クロールしたファイルパスのリスト（出力用）
+            page_counter: ページカウンター（最初のページかどうかを判定するため）
         """
         # 最大深度を超えた場合は終了
         if depth > max_depth:
@@ -456,9 +478,14 @@ class APICrawler:
             # テキストに変換
             text = self._convert_to_text(html, url)
             
+            # 最初のページかどうかを判定
+            is_first_page = page_counter['count'] == 0
+            page_counter['count'] += 1
+            
             # ファイルに保存
-            file_path = self._save_document(url, text, doc_type)
-            file_paths.append(file_path)
+            file_path = self._save_document(url, text, doc_type, is_first_page)
+            if is_first_page or file_path not in file_paths:
+                file_paths.append(file_path)
             
             # 最大深度に達していない場合、リンクを抽出して再帰的にクロール
             if depth < max_depth:
@@ -473,7 +500,8 @@ class APICrawler:
                         depth=depth + 1,
                         max_depth=max_depth,
                         doc_type=doc_type,
-                        file_paths=file_paths
+                        file_paths=file_paths,
+                        page_counter=page_counter
                     )
         
         except CrawlerError as e:
