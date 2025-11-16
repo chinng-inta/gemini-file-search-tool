@@ -2,6 +2,7 @@
 import asyncio
 import json
 import logging
+import subprocess
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Optional
@@ -35,13 +36,14 @@ class APICrawler:
     # 日本標準時のタイムゾーン
     JST = timezone(timedelta(hours=9))
     
-    def __init__(self, docs_path: Optional[str] = None, url_config_path: Optional[str] = None):
+    def __init__(self, docs_path: Optional[str] = None, url_config_path: Optional[str] = None, auto_git_push: bool = False):
         """
         APIクローラーを初期化.
         
         Args:
             docs_path: ドキュメント保存先パス（Noneの場合は設定から取得）
             url_config_path: URL設定ファイルのパス（Noneの場合は設定から取得）
+            auto_git_push: クロール完了後に自動的にGit push（デフォルト: False）
             
         Raises:
             CrawlerError: 初期化に失敗した場合
@@ -65,6 +67,10 @@ class APICrawler:
         # クロール状態管理
         self.visited_urls = set()
         self.rate_limit_delay = 1.0  # 秒
+        self.auto_git_push = auto_git_push
+        
+        # プロジェクトルートを取得
+        self.project_root = self.docs_path.parent.parent
     
     def _load_url_config(self) -> dict:
         """
@@ -182,6 +188,17 @@ class APICrawler:
             f"Keyword '{keyword}' not found in URL config. "
             f"Available keywords: {', '.join(available_keywords)}"
         )
+    
+    def reload_url_config(self) -> None:
+        """
+        URL設定ファイルを再読み込み.
+        
+        Raises:
+            CrawlerError: 設定ファイルの読み込みに失敗した場合
+        """
+        logger.info(f"Reloading URL config from {self.url_config_path}")
+        self.url_config = self._load_url_config()
+        logger.info(f"Successfully reloaded URL config with {len(self.url_config)} APIs")
     
     def list_available_apis(self) -> dict:
         """
@@ -356,6 +373,10 @@ class APICrawler:
             soup = BeautifulSoup(html, 'html.parser')
             links = []
             
+            # ベースURLのパスを取得
+            base_parsed = urlparse(base_url)
+            base_path = base_parsed.path.rstrip('/')
+            
             # すべてのaタグを取得
             for a_tag in soup.find_all('a', href=True):
                 href = a_tag['href']
@@ -371,11 +392,17 @@ class APICrawler:
                 absolute_url = urljoin(base_url, href)
                 
                 # 同じドメインのURLのみを対象とする
-                base_domain = urlparse(base_url).netloc
-                link_domain = urlparse(absolute_url).netloc
+                link_parsed = urlparse(absolute_url)
+                if base_parsed.netloc != link_parsed.netloc:
+                    continue
                 
-                if base_domain == link_domain:
-                    links.append(absolute_url)
+                # 現在のパスより上の階層へのリンクを除外
+                link_path = link_parsed.path.rstrip('/')
+                if not link_path.startswith(base_path):
+                    logger.debug(f"Skipping link to parent path: {absolute_url}")
+                    continue
+                
+                links.append(absolute_url)
             
             # 重複を除去
             unique_links = list(set(links))
@@ -386,6 +413,68 @@ class APICrawler:
         except Exception as e:
             logger.error(f"Failed to extract links from {base_url}: {e}")
             return []
+    
+    def _git_commit_and_push(self, doc_type: str, page_count: int) -> bool:
+        """
+        クロール結果をGitにコミット・プッシュ.
+        
+        Args:
+            doc_type: ドキュメントの種類
+            page_count: クロールしたページ数
+            
+        Returns:
+            bool: 成功した場合True
+        """
+        try:
+            # git add
+            logger.info("Executing git add...")
+            subprocess.run(
+                ['git', 'add', str(self.docs_path.relative_to(self.project_root))],
+                cwd=self.project_root,
+                capture_output=True,
+                text=True,
+                check=True
+            )
+            
+            # git commit
+            commit_message = f"Auto-crawl: Updated {doc_type} ({page_count} pages) at {datetime.now(self.JST).strftime('%Y-%m-%d %H:%M:%S')}"
+            logger.info(f"Executing git commit with message: {commit_message}")
+            result = subprocess.run(
+                ['git', 'commit', '-m', commit_message],
+                cwd=self.project_root,
+                capture_output=True,
+                text=True
+            )
+            
+            # コミットするものがない場合
+            if result.returncode != 0:
+                if 'nothing to commit' in result.stdout or 'nothing to commit' in result.stderr:
+                    logger.info("No changes to commit")
+                    return True
+                else:
+                    logger.error(f"Git commit failed: {result.stderr}")
+                    return False
+            
+            logger.info(f"Git commit successful: {result.stdout.strip()}")
+            
+            # git push
+            logger.info("Executing git push...")
+            result = subprocess.run(
+                ['git', 'push'],
+                cwd=self.project_root,
+                capture_output=True,
+                text=True,
+                check=True
+            )
+            logger.info(f"Git push successful: {result.stdout.strip()}")
+            return True
+            
+        except subprocess.CalledProcessError as e:
+            logger.error(f"Git operation failed: {e.stderr}")
+            return False
+        except Exception as e:
+            logger.error(f"Unexpected error during git operations: {e}")
+            return False
     
     async def crawl(self, start_url: str, max_depth: int = 3, doc_type: Optional[str] = None) -> list[str]:
         """
@@ -440,6 +529,15 @@ class APICrawler:
             )
         
         logger.info(f"Crawl completed. Total pages crawled: {len(file_paths)}")
+        
+        # 自動Git pushが有効な場合
+        if self.auto_git_push and len(file_paths) > 0:
+            logger.info("Auto git push is enabled, committing and pushing changes...")
+            if self._git_commit_and_push(doc_type, page_counter['count']):
+                logger.info("Successfully pushed changes to Git")
+            else:
+                logger.warning("Failed to push changes to Git")
+        
         return file_paths
     
     async def _crawl_recursive(

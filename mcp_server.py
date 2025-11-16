@@ -40,7 +40,8 @@ class GeminiRAGMCPServer:
             # APIクローラーを初期化
             self.crawler = APICrawler(
                 docs_path=config.get_docs_store_path(),
-                url_config_path=config.get_url_config_path()
+                url_config_path=config.get_url_config_path(),
+                auto_git_push=True
             )
             
             # Gemini RAGマネージャーを初期化
@@ -97,6 +98,19 @@ class GeminiRAGMCPServer:
                     }
                 ),
                 Tool(
+                    name="list_crawled_files",
+                    description="クロール済みのドキュメントファイル一覧を返します。",
+                    inputSchema={
+                        "type": "object",
+                        "properties": {
+                            "doc_type": {
+                                "type": "string",
+                                "description": "ドキュメントの種類（省略時は全ファイル）"
+                            }
+                        }
+                    }
+                ),
+                Tool(
                     name="upload_documents",
                     description="クロールしたドキュメントをGemini RAGにアップロードします。",
                     inputSchema={
@@ -142,6 +156,10 @@ class GeminiRAGMCPServer:
                     )
                 elif name == "list_api_docs":
                     result = await self.handle_list_api_docs()
+                elif name == "list_crawled_files":
+                    result = await self.handle_list_crawled_files(
+                        doc_type=arguments.get("doc_type")
+                    )
                 elif name == "upload_documents":
                     result = await self.handle_upload_documents(
                         doc_type=arguments.get("doc_type")
@@ -223,6 +241,85 @@ class GeminiRAGMCPServer:
             
         except Exception as e:
             logger.exception("Unexpected error while listing API docs")
+            return {
+                "success": False,
+                "error": f"Unexpected error: {str(e)}"
+            }
+    
+    async def handle_list_crawled_files(self, doc_type: str = None) -> dict:
+        """
+        クロール済みのドキュメントファイル一覧を返す.
+        
+        Args:
+            doc_type: ドキュメントの種類（省略時は全ファイル）
+            
+        Returns:
+            dict: ファイル一覧
+        """
+        try:
+            docs_path = Path(self.crawler.docs_path)
+            
+            if not docs_path.exists():
+                return {
+                    "success": True,
+                    "files": [],
+                    "count": 0,
+                    "message": "No documents directory found"
+                }
+            
+            files_info = []
+            
+            if doc_type:
+                # 特定のdoc_typeのファイルのみ
+                # パターン1: ディレクトリ形式
+                docs_dir = docs_path / doc_type
+                if docs_dir.exists() and docs_dir.is_dir():
+                    for file_path in docs_dir.glob("**/*.txt"):
+                        if file_path.is_file():
+                            files_info.append({
+                                "path": str(file_path),
+                                "name": file_path.name,
+                                "size": file_path.stat().st_size,
+                                "doc_type": doc_type
+                            })
+                
+                # パターン2: 単一ファイル形式
+                single_file = docs_path / f"{doc_type}.txt"
+                if single_file.exists() and single_file.is_file():
+                    files_info.append({
+                        "path": str(single_file),
+                        "name": single_file.name,
+                        "size": single_file.stat().st_size,
+                        "doc_type": doc_type
+                    })
+            else:
+                # 全ファイル
+                for file_path in docs_path.glob("**/*.txt"):
+                    if file_path.is_file():
+                        # doc_typeを推測
+                        if file_path.parent == docs_path:
+                            # 単一ファイル形式
+                            inferred_doc_type = file_path.stem
+                        else:
+                            # ディレクトリ形式
+                            inferred_doc_type = file_path.parent.name
+                        
+                        files_info.append({
+                            "path": str(file_path),
+                            "name": file_path.name,
+                            "size": file_path.stat().st_size,
+                            "doc_type": inferred_doc_type
+                        })
+            
+            return {
+                "success": True,
+                "files": files_info,
+                "count": len(files_info),
+                "doc_type_filter": doc_type
+            }
+            
+        except Exception as e:
+            logger.exception("Unexpected error while listing crawled files")
             return {
                 "success": False,
                 "error": f"Unexpected error: {str(e)}"

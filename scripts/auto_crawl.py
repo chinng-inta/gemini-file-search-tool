@@ -46,59 +46,6 @@ def git_pull():
         return False
 
 
-def git_commit_and_push(message: str):
-    """Git commit and pushを実行."""
-    try:
-        # git add
-        logger.info("Executing git add...")
-        subprocess.run(
-            ['git', 'add', 'data/docs/'],
-            cwd=project_root,
-            capture_output=True,
-            text=True,
-            check=True
-        )
-        
-        # git commit
-        logger.info(f"Executing git commit with message: {message}")
-        result = subprocess.run(
-            ['git', 'commit', '-m', message],
-            cwd=project_root,
-            capture_output=True,
-            text=True
-        )
-        
-        # コミットするものがない場合
-        if result.returncode != 0:
-            if 'nothing to commit' in result.stdout or 'nothing to commit' in result.stderr:
-                logger.info("No changes to commit")
-                return True
-            else:
-                logger.error(f"Git commit failed: {result.stderr}")
-                return False
-        
-        logger.info(f"Git commit successful: {result.stdout.strip()}")
-        
-        # git push
-        logger.info("Executing git push...")
-        result = subprocess.run(
-            ['git', 'push'],
-            cwd=project_root,
-            capture_output=True,
-            text=True,
-            check=True
-        )
-        logger.info(f"Git push successful: {result.stdout.strip()}")
-        return True
-        
-    except subprocess.CalledProcessError as e:
-        logger.error(f"Git operation failed: {e.stderr}")
-        return False
-    except Exception as e:
-        logger.error(f"Unexpected error during git operations: {e}")
-        return False
-
-
 async def crawl_all_apis():
     """
     URL設定ファイルに登録されたすべてのAPIドキュメントをクロール.
@@ -143,8 +90,8 @@ async def crawl_all_apis():
         logger.info(f"Document store path: {docs_path}")
         logger.info(f"URL config path: {url_config_path}")
         
-        # クローラーを初期化
-        crawler = APICrawler(docs_path=docs_path, url_config_path=url_config_path)
+        # クローラーを初期化（auto_git_push=Trueで自動Git push有効）
+        crawler = APICrawler(docs_path=docs_path, url_config_path=url_config_path, auto_git_push=True)
         
         # 登録されているAPI一覧を取得
         apis = crawler.list_available_apis()
@@ -220,15 +167,6 @@ async def crawl_all_apis():
                 logger.info(f"  - {error}")
         
         logger.info("=" * 80)
-        
-        # Git commit and pushを実行
-        if stats['total_pages'] > 0:
-            commit_message = f"Auto-crawl: Updated {stats['successful_apis']} APIs ({stats['total_pages']} pages) at {end_time.strftime('%Y-%m-%d %H:%M:%S')}"
-            if not git_commit_and_push(commit_message):
-                logger.warning("Git commit and push failed")
-                stats['errors'].append("Git commit and push failed")
-        else:
-            logger.info("No pages crawled, skipping git commit and push")
     
     return stats
 

@@ -1,14 +1,94 @@
 {
   "apis": {
-    "Arduino Docs": {
-      "name": "Arduino Docs",
-      "url": "https://docs.arduino.cc/",
-      "description": "Arduino公式ドキュメント"
+    "Arduino Hardware": {
+      "name": "Arduino Hardware",
+      "url": "https://docs.arduino.cc/hardware/",
+      "description": "Arduino Hardware / ハードウェア"
     },
-    "M5 Docs": {
-      "name": "M5 Docs",
-      "url": "https://docs.m5stack.com/ja/start",
-      "description": "M5シリーズ公式ドキュメント"
+    "Arduino Programming": {
+      "name": "Arduino Programming",
+      "url": "https://docs.arduino.cc/language-reference/",
+      "description": "Arduino Programming / プログラミング"
+    },
+    "Arduino liquidcrystal": {
+      "name": "Arduino liquidcrystal",
+      "url": "https://docs.arduino.cc/libraries/liquidcrystal/",
+      "description": "Arduino liquidcrystal / LCD / 液晶"
+    },
+    "Arduino liquidcrystalI2C": {
+      "name": "Arduino liquidcrystalI2C",
+      "url": "https://docs.arduino.cc/libraries/liquidcrystal-i2c/",
+      "description": "Arduino liquidcrystalI2C / LCDI2C / 液晶I2C"
+    },
+    "Arduino Servo": {
+      "name": "Arduino Servo",
+      "url": "https://docs.arduino.cc/libraries/servo/",
+      "description": "Arduino Servo / サーボ"
+    },
+    "Arduino Stepper": {
+      "name": "Arduino Servo",
+      "url": "https://docs.arduino.cc/libraries/stepper/",
+      "description": "Arduino Stepper / ステッパー"
+    },
+    "Arduino WiFi": {
+      "name": "Arduino WiFi",
+      "url": "https://docs.arduino.cc/libraries/wifi/",
+      "description": "Arduino WiFi"
+    },
+    "Arduino SD": {
+      "name": "Arduino SD",
+      "url": "https://docs.arduino.cc/libraries/sd/",
+      "description": "Arduino SD"
+    },
+    "M5 products": {
+      "name": "M5 products",
+      "url": "https://docs.m5stack.com/en/products/",
+      "description": "M5 products / 製品"
+    },
+    "M5Unified Button": {
+      "name": "M5Unified Button",
+      "url": "https://docs.m5stack.com/ja/arduino/m5unified/button_class/",
+      "description": "M5Unified Button / ボタン"
+    },
+    "M5Unified LED": {
+      "name": "M5Unified LED",
+      "url": "https://docs.m5stack.com/ja/arduino/m5unified/led_class/",
+      "description": "M5Unified LED"
+    },
+    "M5Unified Power": {
+      "name": "M5Unified Power",
+      "url": "https://docs.m5stack.com/ja/arduino/m5unified/power_class/",
+      "description": "M5Unified Power / 電源"
+    },
+    "M5Unified IMU": {
+      "name": "M5Unified Power",
+      "url": "https://docs.m5stack.com/ja/arduino/m5unified/imu_class/",
+      "description": "M5Unified IMU / 加速度"
+    },
+    "M5Unified Touch": {
+      "name": "M5Unified Power",
+      "url": "https://docs.m5stack.com/ja/arduino/m5unified/touch_class/",
+      "description": "M5Unified Touch / タッチ"
+    },
+    "M5Unified speaker": {
+      "name": "M5Unified Power",
+      "url": "https://docs.m5stack.com/ja/arduino/m5unified/speaker_class/",
+      "description": "M5Unified speaker / スピーカー"
+    },
+    "M5Unified Mic": {
+      "name": "M5Unified Power",
+      "url": "https://docs.m5stack.com/ja/arduino/m5unified/mic_class/",
+      "description": "M5Unified Mic / マイク"
+    },
+    "M5Unified RTC": {
+      "name": "M5Unified Power",
+      "url": "https://docs.m5stack.com/ja/arduino/m5unified/rtc8563_class/",
+      "description": "M5Unified RTC / リアルタイムクロック / 時間"
+    },
+    "M5GFX": {
+      "name": "M5GFX",
+      "url": "https://docs.m5stack.com/ja/arduino/m5gfx/m5gfx_functions/",
+      "description": "M5GFX API"
     }
   }
 }
