@@ -1,0 +1,379 @@
+"""Gemini RAG MCPサーバー."""
+import asyncio
+import logging
+from pathlib import Path
+from typing import Any
+
+from mcp.server import Server
+from mcp.server.stdio import stdio_server
+from mcp.types import Tool, TextContent
+
+from src.config import get_config, ConfigError
+from src.crawler import APICrawler, CrawlerError
+from src.rag_manager import GeminiRAGManager, RAGError
+
+# ロガーの設定
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+
+class MCPError(Exception):
+    """MCP関連のベースエラー."""
+    pass
+
+
+class GeminiRAGMCPServer:
+    """MCP Protocol準拠のサーバー."""
+    
+    def __init__(self):
+        """MCPサーバーを初期化."""
+        try:
+            # 設定を読み込む
+            config = get_config()
+            
+            # APIクローラーを初期化
+            self.crawler = APICrawler(
+                docs_path=config.get_docs_store_path(),
+                url_config_path=config.get_url_config_path()
+            )
+            
+            # Gemini RAGマネージャーを初期化
+            self.rag_manager = GeminiRAGManager(
+                config_path=config.get_rag_config_path(),
+                file_search_api_key=config.get_gemini_file_search_api_key(),
+                code_gen_api_key=config.get_gemini_code_gen_api_key()
+            )
+            
+            # MCPサーバーを初期化
+            self.server = Server("gemini-rag-mcp")
+            
+            # ツールハンドラーを登録
+            self._register_handlers()
+            
+            logger.info("Gemini RAG MCPサーバーを初期化しました")
+            
+        except (ConfigError, CrawlerError, RAGError) as e:
+            logger.error(f"MCPサーバーの初期化に失敗しました: {e}")
+            raise MCPError(f"Failed to initialize MCP server: {e}")
+    
+    def _register_handlers(self):
+        """ツールハンドラーを登録."""
+        # ツールリストハンドラー
+        @self.server.list_tools()
+        async def list_tools() -> list[Tool]:
+            """利用可能なツールのリストを返す."""
+            return [
+                Tool(
+                    name="crawl_api_docs",
+                    description="APIドキュメントをクロールします。キーワードまたはURLを指定できます。",
+                    inputSchema={
+                        "type": "object",
+                        "properties": {
+                            "keyword_or_url": {
+                                "type": "string",
+                                "description": "APIドキュメントのキーワード（例: 'gemini', 'gas'）またはURL"
+                            },
+                            "max_depth": {
+                                "type": "integer",
+                                "description": "クロールの最大深度（デフォルト: 3）",
+                                "default": 3
+                            }
+                        },
+                        "required": ["keyword_or_url"]
+                    }
+                ),
+                Tool(
+                    name="list_api_docs",
+                    description="登録されているAPIドキュメントの一覧を返します。",
+                    inputSchema={
+                        "type": "object",
+                        "properties": {}
+                    }
+                ),
+                Tool(
+                    name="upload_documents",
+                    description="クロールしたドキュメントをGemini RAGにアップロードします。",
+                    inputSchema={
+                        "type": "object",
+                        "properties": {
+                            "doc_type": {
+                                "type": "string",
+                                "description": "ドキュメントの種類（例: 'gemini', 'gas'）"
+                            }
+                        },
+                        "required": ["doc_type"]
+                    }
+                ),
+                Tool(
+                    name="generate_code",
+                    description="APIドキュメントに基づいてコードを生成します。",
+                    inputSchema={
+                        "type": "object",
+                        "properties": {
+                            "prompt": {
+                                "type": "string",
+                                "description": "コード生成のプロンプト"
+                            },
+                            "doc_type": {
+                                "type": "string",
+                                "description": "参照するドキュメントの種類（例: 'gemini', 'gas'）"
+                            }
+                        },
+                        "required": ["prompt", "doc_type"]
+                    }
+                )
+            ]
+        
+        # ツール呼び出しハンドラー
+        @self.server.call_tool()
+        async def call_tool(name: str, arguments: Any) -> list[TextContent]:
+            """ツールを呼び出す."""
+            try:
+                if name == "crawl_api_docs":
+                    result = await self.handle_crawl_api_docs(
+                        keyword_or_url=arguments.get("keyword_or_url"),
+                        max_depth=arguments.get("max_depth", 3)
+                    )
+                elif name == "list_api_docs":
+                    result = await self.handle_list_api_docs()
+                elif name == "upload_documents":
+                    result = await self.handle_upload_documents(
+                        doc_type=arguments.get("doc_type")
+                    )
+                elif name == "generate_code":
+                    result = await self.handle_generate_code(
+                        prompt=arguments.get("prompt"),
+                        doc_type=arguments.get("doc_type")
+                    )
+                else:
+                    raise MCPError(f"Unknown tool: {name}")
+                
+                return [TextContent(type="text", text=str(result))]
+                
+            except Exception as e:
+                logger.error(f"Tool execution error: {e}")
+                error_message = f"Error: {str(e)}"
+                return [TextContent(type="text", text=error_message)]
+    
+    async def handle_crawl_api_docs(
+        self,
+        keyword_or_url: str,
+        max_depth: int = 3
+    ) -> dict:
+        """
+        APIドキュメントをクロール.
+        
+        Args:
+            keyword_or_url: APIドキュメントのキーワードまたはURL
+            max_depth: クロールの最大深度
+            
+        Returns:
+            dict: クロール結果
+        """
+        try:
+            # URLを解決
+            url = self.crawler.resolve_url(keyword_or_url)
+            logger.info(f"Crawling API docs: {url}")
+            
+            # クロールを実行
+            file_paths = await self.crawler.crawl(url, max_depth=max_depth)
+            
+            return {
+                "success": True,
+                "message": f"Successfully crawled {len(file_paths)} pages",
+                "url": url,
+                "file_count": len(file_paths),
+                "file_paths": file_paths
+            }
+            
+        except CrawlerError as e:
+            logger.error(f"Crawler error: {e}")
+            return {
+                "success": False,
+                "error": str(e)
+            }
+        except Exception as e:
+            logger.exception("Unexpected error during crawl")
+            return {
+                "success": False,
+                "error": f"Unexpected error: {str(e)}"
+            }
+    
+    async def handle_list_api_docs(self) -> dict:
+        """
+        登録されたAPIドキュメント一覧を返す.
+        
+        Returns:
+            dict: APIドキュメント一覧
+        """
+        try:
+            apis = self.crawler.list_available_apis()
+            
+            return {
+                "success": True,
+                "apis": apis,
+                "count": len(apis)
+            }
+            
+        except Exception as e:
+            logger.exception("Unexpected error while listing API docs")
+            return {
+                "success": False,
+                "error": f"Unexpected error: {str(e)}"
+            }
+    
+    async def handle_upload_documents(self, doc_type: str) -> dict:
+        """
+        ドキュメントをGemini RAGにアップロード.
+        
+        Args:
+            doc_type: ドキュメントの種類
+            
+        Returns:
+            dict: アップロード結果
+        """
+        try:
+            # パラメータ検証
+            if not doc_type:
+                return {
+                    "success": False,
+                    "error": "doc_type is required"
+                }
+            
+            # ドキュメントストアからファイルを読み込む
+            docs_path = Path(self.crawler.docs_path) / doc_type
+            
+            if not docs_path.exists():
+                return {
+                    "success": False,
+                    "error": f"Document directory not found: {doc_type}. Please crawl documents first."
+                }
+            
+            # テキストファイルを収集
+            file_paths = []
+            for file_path in docs_path.glob("**/*.txt"):
+                if file_path.is_file():
+                    file_paths.append(str(file_path))
+            
+            if not file_paths:
+                return {
+                    "success": False,
+                    "error": f"No documents found for type: {doc_type}. Please crawl documents first."
+                }
+            
+            logger.info(f"Uploading {len(file_paths)} documents for type: {doc_type}")
+            
+            # Gemini RAGマネージャーを呼び出してアップロード
+            rag_id = await self.rag_manager.upload_documents(
+                doc_type=doc_type,
+                file_paths=file_paths,
+                description=f"{doc_type} API Documentation"
+            )
+            
+            return {
+                "success": True,
+                "message": f"Successfully uploaded {len(file_paths)} documents",
+                "doc_type": doc_type,
+                "file_count": len(file_paths),
+                "rag_id": rag_id
+            }
+            
+        except RAGError as e:
+            logger.error(f"RAG error: {e}")
+            return {
+                "success": False,
+                "error": str(e)
+            }
+        except Exception as e:
+            logger.exception("Unexpected error during document upload")
+            return {
+                "success": False,
+                "error": f"Unexpected error: {str(e)}"
+            }
+    
+    async def handle_generate_code(self, prompt: str, doc_type: str) -> dict:
+        """
+        コードを生成.
+        
+        Args:
+            prompt: コード生成プロンプト
+            doc_type: 参照するドキュメントの種類
+            
+        Returns:
+            dict: コード生成結果
+        """
+        try:
+            # パラメータ検証
+            if not prompt:
+                return {
+                    "success": False,
+                    "error": "prompt is required"
+                }
+            
+            if not doc_type:
+                return {
+                    "success": False,
+                    "error": "doc_type is required"
+                }
+            
+            logger.info(f"Generating code for doc_type: {doc_type}")
+            
+            # Gemini RAGマネージャーを呼び出してコード生成
+            generated_code = await self.rag_manager.generate_code(
+                prompt=prompt,
+                doc_type=doc_type
+            )
+            
+            return {
+                "success": True,
+                "message": "Code generated successfully",
+                "doc_type": doc_type,
+                "code": generated_code
+            }
+            
+        except RAGError as e:
+            logger.error(f"RAG error: {e}")
+            return {
+                "success": False,
+                "error": str(e)
+            }
+        except Exception as e:
+            logger.exception("Unexpected error during code generation")
+            return {
+                "success": False,
+                "error": f"Unexpected error: {str(e)}"
+            }
+    
+    async def run(self):
+        """MCPサーバーを起動."""
+        logger.info("Starting Gemini RAG MCP server...")
+        async with stdio_server() as (read_stream, write_stream):
+            await self.server.run(
+                read_stream,
+                write_stream,
+                self.server.create_initialization_options()
+            )
+
+
+async def main():
+    """メインエントリーポイント."""
+    try:
+        server = GeminiRAGMCPServer()
+        await server.run()
+    except MCPError as e:
+        logger.error(f"MCP server error: {e}")
+        return 1
+    except KeyboardInterrupt:
+        logger.info("Server stopped by user")
+        return 0
+    except Exception as e:
+        logger.exception(f"Unexpected error: {e}")
+        return 1
+
+
+if __name__ == "__main__":
+    exit_code = asyncio.run(main())
+    exit(exit_code)

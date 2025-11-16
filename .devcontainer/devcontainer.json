@@ -4,10 +4,7 @@
     "dockerfile": "Dockerfile",
     "context": ".."
   },
-  "mounts": [
-    "source=gemini-rag-data,target=/workspace/data,type=volume",
-    "source=gemini-rag-config,target=/workspace/config,type=volume"
-  ],
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
   "workspaceFolder": "/workspace",
   "containerEnv": {
     "GEMINI_FILE_SEARCH_API_KEY": "${localEnv:GEMINI_FILE_SEARCH_API_KEY}",
