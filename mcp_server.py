@@ -6,6 +6,14 @@ import sys
 from pathlib import Path
 from typing import Any
 
+# .envファイルを最初に読み込む（他のインポートより前）
+try:
+    from dotenv import load_dotenv
+    env_path = Path(__file__).parent / '.env'
+    load_dotenv(dotenv_path=env_path, override=True)
+except ImportError:
+    pass
+
 from mcp.server import Server
 from mcp.server.stdio import stdio_server
 from mcp.types import Tool, TextContent
@@ -239,19 +247,23 @@ class GeminiRAGMCPServer:
                 }
             
             # ドキュメントストアからファイルを読み込む
-            docs_path = Path(self.crawler.docs_path) / doc_type
+            # 2つのパターンをサポート:
+            # 1. docs_path/{doc_type}/ ディレクトリ内の複数ファイル
+            # 2. docs_path/{doc_type}.txt 単一ファイル
             
-            if not docs_path.exists():
-                return {
-                    "success": False,
-                    "error": f"Document directory not found: {doc_type}. Please crawl documents first."
-                }
-            
-            # テキストファイルを収集
             file_paths = []
-            for file_path in docs_path.glob("**/*.txt"):
-                if file_path.is_file():
-                    file_paths.append(str(file_path))
+            
+            # パターン1: ディレクトリ形式
+            docs_dir = Path(self.crawler.docs_path) / doc_type
+            if docs_dir.exists() and docs_dir.is_dir():
+                for file_path in docs_dir.glob("**/*.txt"):
+                    if file_path.is_file():
+                        file_paths.append(str(file_path))
+            
+            # パターン2: 単一ファイル形式
+            single_file = Path(self.crawler.docs_path) / f"{doc_type}.txt"
+            if single_file.exists() and single_file.is_file():
+                file_paths.append(str(single_file))
             
             if not file_paths:
                 return {

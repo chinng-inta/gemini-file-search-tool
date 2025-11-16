@@ -350,15 +350,61 @@ class GeminiRAGManager:
         
         return sorted_rags[0].get("rag_id")
     
-    async def _upload_file_with_retry(
+    async def _create_file_search_store_with_retry(
         self,
+        doc_type: str,
+        max_retries: int = 3
+    ) -> str:
+        """
+        File Search Storeを作成（リトライ付き）.
+        
+        Args:
+            doc_type: ドキュメントの種類
+            max_retries: 最大リトライ回数（デフォルト: 3）
+            
+        Returns:
+            str: 作成されたFile Search StoreのID
+            
+        Raises:
+            RAGError: 作成に失敗した場合
+        """
+        last_error = None
+        
+        for attempt in range(max_retries):
+            try:
+                # File Search Storeを作成
+                # Gemini APIではdisplay_nameではなく、引数なしで作成
+                store = await asyncio.to_thread(
+                    self.file_search_client.file_search_stores.create
+                )
+                
+                return store.name
+                
+            except Exception as e:
+                last_error = e
+                
+                # 最後の試行でない場合は指数バックオフで待機
+                if attempt < max_retries - 1:
+                    wait_time = 2 ** attempt  # 1秒、2秒、4秒...
+                    await asyncio.sleep(wait_time)
+        
+        # すべてのリトライが失敗した場合
+        raise RAGError(
+            f"File Search Storeの作成に失敗しました（{max_retries}回試行）\n"
+            f"エラー: {last_error}"
+        )
+    
+    async def _upload_file_to_store_with_retry(
+        self,
+        store_id: str,
         file_path: str,
         max_retries: int = 3
     ) -> str:
         """
-        ファイルをGeminiにアップロード（リトライ付き）.
+        ファイルをFile Search Storeにアップロード（リトライ付き）.
         
         Args:
+            store_id: File Search StoreのID
             file_path: アップロードするファイルのパス
             max_retries: 最大リトライ回数（デフォルト: 3）
             
@@ -372,13 +418,20 @@ class GeminiRAGManager:
         
         for attempt in range(max_retries):
             try:
-                # ファイルをアップロード（File Search API用クライアントを使用）
-                file = await asyncio.to_thread(
-                    self.file_search_client.files.upload,
-                    path=file_path
+                # ファイルをFile Search Storeにアップロード
+                # Gemini APIではファイルパスを直接指定する
+                operation = await asyncio.to_thread(
+                    self.file_search_client.file_search_stores.upload_to_file_search_store,
+                    file_search_store_name=store_id,
+                    file=file_path
                 )
                 
-                return file.name
+                # アップロード処理の完了を待つ
+                logger.info(f"Waiting for file processing to complete: {file_path}")
+                await self._wait_for_operation(operation)
+                logger.info(f"File processing completed: {file_path}")
+                
+                return operation.name
                 
             except Exception as e:
                 last_error = e
@@ -393,6 +446,41 @@ class GeminiRAGManager:
             f"ファイルのアップロードに失敗しました（{max_retries}回試行）: {file_path}\n"
             f"エラー: {last_error}"
         )
+    
+    async def _wait_for_operation(
+        self,
+        operation,
+        timeout: int = 300,
+        poll_interval: int = 2
+    ):
+        """
+        オペレーションの完了を待つ.
+        
+        Args:
+            operation: Gemini APIのオペレーションオブジェクト
+            timeout: タイムアウト時間（秒、デフォルト: 300秒 = 5分）
+            poll_interval: ポーリング間隔（秒、デフォルト: 2秒）
+            
+        Raises:
+            RAGError: タイムアウトまたはオペレーションが失敗した場合
+        """
+        start_time = time.time()
+        
+        while True:
+            # タイムアウトチェック
+            if time.time() - start_time > timeout:
+                raise RAGError(
+                    f"オペレーションがタイムアウトしました（{timeout}秒）"
+                )
+            
+            # オペレーションの状態を確認
+            if hasattr(operation, 'done') and operation.done:
+                logger.info("Operation completed successfully")
+                return
+            
+            # まだ完了していない場合は待機
+            logger.debug(f"Operation still processing... (elapsed: {int(time.time() - start_time)}s)")
+            await asyncio.sleep(poll_interval)
     
     async def upload_documents(
         self,
@@ -423,29 +511,27 @@ class GeminiRAGManager:
                 raise RAGError(f"ファイルが存在しません: {file_path}")
         
         try:
-            # すべてのファイルをアップロード（リトライ付き）
-            uploaded_files = []
-            for file_path in file_paths:
-                file_uri = await self._upload_file_with_retry(file_path)
-                uploaded_files.append(file_uri)
+            # File Search Storeを作成
+            logger.info(f"Creating File Search Store for {doc_type}...")
+            store_id = await self._create_file_search_store_with_retry(doc_type)
+            logger.info(f"File Search Store created: {store_id}")
             
-            # File Search Storeを作成（File Search API用クライアントを使用）
-            store = await asyncio.to_thread(
-                self.file_search_client.file_search_stores.create,
-                display_name=f"{doc_type}_docs_{datetime.now(self.JST).strftime('%Y%m%d_%H%M%S')}",
-                file_ids=uploaded_files
-            )
+            # すべてのファイルをFile Search Storeにアップロード
+            logger.info(f"Uploading {len(file_paths)} files to File Search Store...")
+            for i, file_path in enumerate(file_paths, 1):
+                logger.info(f"Uploading file {i}/{len(file_paths)}: {file_path}")
+                await self._upload_file_to_store_with_retry(store_id, file_path)
             
-            rag_id = store.name
+            logger.info(f"All files uploaded successfully to {store_id}")
             
             # RAG設定ファイルに追加
             self.add_rag(
                 doc_type=doc_type,
-                rag_id=rag_id,
+                rag_id=store_id,
                 description=description or f"{doc_type} API Documentation"
             )
             
-            return rag_id
+            return store_id
             
         except RAGError:
             raise

@@ -93,6 +93,8 @@ python mcp_server.py
 
 #### Kiro
 
+##### ローカル環境での実行
+
 `.kiro/settings/mcp.json`に以下を追加：
 
 ```json
@@ -113,6 +115,69 @@ python mcp_server.py
   }
 }
 ```
+
+##### Docker環境での実行（推奨）
+
+Dev Containerを起動した状態で、`.kiro/settings/mcp.json`に以下を追加：
+
+```json
+{
+  "mcpServers": {
+    "gemini-rag-mcp": {
+      "command": "docker",
+      "args": [
+        "exec",
+        "-i",
+        "-e",
+        "GEMINI_FILE_SEARCH_API_KEY=${localEnv:GEMINI_FILE_SEARCH_API_KEY}",
+        "-e",
+        "GEMINI_CODE_GEN_API_KEY=${localEnv:GEMINI_CODE_GEN_API_KEY}",
+        "-e",
+        "RAG_CONFIG_PATH=/workspace/config/rag_config.json",
+        "-e",
+        "DOCS_STORE_PATH=/workspace/data/docs",
+        "-e",
+        "URL_CONFIG_PATH=/workspace/config/url_config.json",
+        "-e",
+        "RAG_MAX_AGE_DAYS=90",
+        "YOUR_CONTAINER_NAME",
+        "python",
+        "/workspace/mcp_server.py"
+      ],
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}
+```
+
+**コンテナ名の確認と設定の自動生成:**
+
+便利なヘルパースクリプトを用意しています：
+
+```bash
+# Bash/WSLの場合
+bash scripts/get_container_name.sh
+
+# PowerShellの場合
+powershell -ExecutionPolicy Bypass -File scripts/get_container_name.ps1
+```
+
+または手動で確認：
+
+```bash
+# Windowsの場合
+docker ps --format "{{.Names}}"
+
+# WSLの場合
+docker.exe ps --format "{{.Names}}"
+```
+
+コンテナ名は通常`gemini-fie-search-tool-devcontainer-1`のような形式になります。上記コマンドで確認した名前を`YOUR_CONTAINER_NAME`の部分に置き換えてください。
+
+**注意事項:**
+- Dev Containerが起動している必要があります
+- 環境変数`GEMINI_FILE_SEARCH_API_KEY`と`GEMINI_CODE_GEN_API_KEY`をローカル環境（`.env`ファイルまたはシステム環境変数）に設定してください
 
 ### 利用可能なMCPツール
 

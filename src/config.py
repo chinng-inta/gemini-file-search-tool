@@ -8,7 +8,9 @@ from src.errors import MCPError
 try:
     from dotenv import load_dotenv
     # .envファイルを自動的に読み込む
-    load_dotenv()
+    # プロジェクトルート（/workspace）の.envファイルを明示的に指定
+    env_path = Path(__file__).parent.parent / '.env'
+    load_dotenv(dotenv_path=env_path)
 except ImportError:
     # python-dotenvがインストールされていない場合はスキップ
     pass
