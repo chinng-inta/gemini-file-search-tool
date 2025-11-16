@@ -17,17 +17,12 @@ project_root = Path(__file__).parent.parent
 sys.path.insert(0, str(project_root))
 
 from src.crawler import APICrawler, CrawlerError
+from src.logging_config import setup_logging, get_logger
 
 
-# ロギング設定
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.StreamHandler(sys.stdout)
-    ]
-)
-logger = logging.getLogger(__name__)
+# ロギング設定（標準出力に出力）
+setup_logging(log_level="INFO", use_stdout=True)
+logger = get_logger(__name__)
 
 
 def git_pull():

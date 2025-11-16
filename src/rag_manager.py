@@ -11,12 +11,19 @@ import asyncio
 import logging
 from google import genai
 
+from src.errors import MCPError
+from src.logging_config import get_logger
+
 # ロガーの設定
-logger = logging.getLogger(__name__)
+logger = get_logger(__name__)
 
 
-class RAGError(Exception):
-    """RAG関連のエラー."""
+class RAGError(MCPError):
+    """RAG関連のエラー.
+    
+    Gemini APIの呼び出し、ファイルアップロード、
+    RAG設定ファイルの操作などで発生するエラー。
+    """
     pass
 
 

@@ -3,6 +3,8 @@ import os
 from pathlib import Path
 from typing import Optional
 
+from src.errors import MCPError
+
 try:
     from dotenv import load_dotenv
     # .envファイルを自動的に読み込む
@@ -12,8 +14,12 @@ except ImportError:
     pass
 
 
-class ConfigError(Exception):
-    """設定関連のエラー."""
+class ConfigError(MCPError):
+    """設定関連のエラー.
+    
+    設定ファイルの読み込み、環境変数の取得、
+    設定値の検証などで発生するエラー。
+    """
     pass
 
 

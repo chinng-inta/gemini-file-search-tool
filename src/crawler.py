@@ -13,13 +13,19 @@ from bs4 import BeautifulSoup
 import html2text
 
 from src.config import get_config, ConfigError
+from src.errors import MCPError
+from src.logging_config import get_logger
 
 # ロガーの設定
-logger = logging.getLogger(__name__)
+logger = get_logger(__name__)
 
 
-class CrawlerError(Exception):
-    """クローラー関連のエラー."""
+class CrawlerError(MCPError):
+    """クローラー関連のエラー.
+    
+    Webページの取得、HTML解析、ファイル保存、
+    URL解決などで発生するエラー。
+    """
     pass
 
 

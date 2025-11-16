@@ -1,6 +1,8 @@
 """Gemini RAG MCPサーバー."""
+import argparse
 import asyncio
 import logging
+import sys
 from pathlib import Path
 from typing import Any
 
@@ -11,18 +13,11 @@ from mcp.types import Tool, TextContent
 from src.config import get_config, ConfigError
 from src.crawler import APICrawler, CrawlerError
 from src.rag_manager import GeminiRAGManager, RAGError
-
-# ロガーの設定
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger(__name__)
+from src.errors import MCPError
+from src.logging_config import setup_logging, get_logger
 
 
-class MCPError(Exception):
-    """MCP関連のベースエラー."""
-    pass
+logger = get_logger(__name__)
 
 
 class GeminiRAGMCPServer:
@@ -358,11 +353,70 @@ class GeminiRAGMCPServer:
             )
 
 
+def parse_args():
+    """
+    コマンドライン引数を解析.
+    
+    Returns:
+        argparse.Namespace: 解析された引数
+    """
+    parser = argparse.ArgumentParser(
+        description="Gemini RAG MCP Server - APIドキュメントを学習してコード生成を支援するMCPサーバー",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+使用例:
+  # 標準的な起動
+  python mcp_server.py
+  
+  # デバッグモードで起動
+  python mcp_server.py --log-level DEBUG
+  
+  # バージョン情報を表示
+  python mcp_server.py --version
+
+環境変数:
+  GEMINI_FILE_SEARCH_API_KEY  Gemini File Search APIキー（必須）
+  GEMINI_CODE_GEN_API_KEY     Gemini Code Generation APIキー（必須）
+  RAG_CONFIG_PATH             RAG設定ファイルのパス
+  DOCS_STORE_PATH             ドキュメントストアのパス
+  URL_CONFIG_PATH             URL設定ファイルのパス
+  RAG_MAX_AGE_DAYS            RAGの最大保持日数（デフォルト: 90）
+        """
+    )
+    
+    parser.add_argument(
+        "--log-level",
+        type=str,
+        default="INFO",
+        choices=["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"],
+        help="ログレベルを設定（デフォルト: INFO）"
+    )
+    
+    parser.add_argument(
+        "--version",
+        action="version",
+        version="Gemini RAG MCP Server 1.0.0"
+    )
+    
+    return parser.parse_args()
+
+
 async def main():
     """メインエントリーポイント."""
+    # コマンドライン引数を解析
+    args = parse_args()
+    
+    # ロギングを設定
+    setup_logging(args.log_level)
+    
     try:
+        logger.info("Gemini RAG MCP Server starting...")
+        logger.debug(f"Log level: {args.log_level}")
+        
+        # MCPサーバーを初期化して起動
         server = GeminiRAGMCPServer()
         await server.run()
+        
     except MCPError as e:
         logger.error(f"MCP server error: {e}")
         return 1
