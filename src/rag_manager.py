@@ -427,9 +427,11 @@ class GeminiRAGManager:
                 )
                 
                 # アップロード処理の完了を待つ
-                logger.info(f"Waiting for file processing to complete: {file_path}")
-                await self._wait_for_operation(operation)
-                logger.info(f"File processing completed: {file_path}")
+                # 注: 大きなファイルの場合、処理に時間がかかる可能性があります
+                logger.info(f"File uploaded, waiting for processing: {file_path}")
+                # オペレーション完了待ちは一旦スキップ（バックグラウンドで処理される）
+                # await self._wait_for_operation(operation)
+                logger.info(f"File upload initiated: {file_path}")
                 
                 return operation.name
                 
@@ -450,8 +452,8 @@ class GeminiRAGManager:
     async def _wait_for_operation(
         self,
         operation,
-        timeout: int = 300,
-        poll_interval: int = 2
+        timeout: int = 120,
+        poll_interval: int = 5
     ):
         """
         オペレーションの完了を待つ.
@@ -468,18 +470,30 @@ class GeminiRAGManager:
         
         while True:
             # タイムアウトチェック
-            if time.time() - start_time > timeout:
+            elapsed = time.time() - start_time
+            if elapsed > timeout:
                 raise RAGError(
                     f"オペレーションがタイムアウトしました（{timeout}秒）"
                 )
             
             # オペレーションの状態を確認
-            if hasattr(operation, 'done') and operation.done:
-                logger.info("Operation completed successfully")
-                return
+            # Gemini APIのオペレーションオブジェクトを再取得
+            try:
+                current_op = await asyncio.to_thread(
+                    self.file_search_client.operations.get,
+                    operation.name
+                )
+                
+                if hasattr(current_op, 'done') and current_op.done:
+                    logger.info("Operation completed successfully")
+                    return
+                
+                logger.info(f"Operation still processing... (elapsed: {int(elapsed)}s)")
+                
+            except Exception as e:
+                logger.warning(f"Error checking operation status: {e}")
             
             # まだ完了していない場合は待機
-            logger.debug(f"Operation still processing... (elapsed: {int(time.time() - start_time)}s)")
             await asyncio.sleep(poll_interval)
     
     async def upload_documents(
@@ -576,7 +590,7 @@ class GeminiRAGManager:
         self,
         prompt: str,
         doc_type: str,
-        model: str = "gemini-2.0-flash-exp"
+        model: str = "gemini-2.5-flash"
     ) -> str:
         """
         APIドキュメントに基づいてコードを生成.
@@ -584,7 +598,7 @@ class GeminiRAGManager:
         Args:
             prompt: コード生成プロンプト
             doc_type: 参照するドキュメントの種類（例: 'gemini', 'gas'）
-            model: 使用するGeminiモデル（デフォルト: gemini-2.0-flash-exp）
+            model: 使用するGeminiモデル（デフォルト: gemini-2.5-flash）
             
         Returns:
             str: 生成されたコード
@@ -610,36 +624,24 @@ class GeminiRAGManager:
                 f"先にupload_documentsを実行してください。"
             )
         
-        # システムプロンプトを設定
-        system_prompt = """あなたは優秀なソフトウェアエンジニアです。
-提供されたAPIドキュメントに基づいて、正確で実用的なコードを生成してください。
-
-コード生成時の要件:
-1. エラーハンドリングを適切に実装する
-2. コードにコメントを含める（日本語または英語）
-3. ベストプラクティスに従う
-4. 可読性の高いコードを書く
-5. 必要に応じて使用例を含める
-6. APIドキュメントの仕様に正確に従う
-
-生成するコードは、すぐに実行可能な状態にしてください。"""
-        
         try:
             # Gemini APIを呼び出してコードを生成（Code Generation API用クライアントを使用）
+            from google.genai import types
+            
+            # ツール設定: file_searchをtoolsに含める（参考: sinzy0925/py_gemini-rag）
             response = await asyncio.to_thread(
                 self.code_gen_client.models.generate_content,
                 model=model,
                 contents=prompt,
-                config={
-                    "system_instruction": system_prompt,
-                    "tools": [
-                        {
-                            "file_search": {
-                                "file_search_store_ids": [rag_id]
-                            }
-                        }
+                config=types.GenerateContentConfig(
+                    tools=[
+                        types.Tool(
+                            file_search=types.FileSearch(
+                                file_search_store_names=[rag_id]
+                            )
+                        )
                     ]
-                }
+                )
             )
             
             # レスポンスからテキストを抽出

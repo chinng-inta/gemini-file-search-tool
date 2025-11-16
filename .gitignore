@@ -216,3 +216,6 @@ __marimo__/
 
 # VSCode設定フォルダ
 .vscode/
+
+# rag設定はgit登録しない
+config/rag_config.json
