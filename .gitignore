@@ -135,6 +135,8 @@ celerybeat.pid
 *.sage.py
 
 # Environments
+# Gemini RAG MCP Server
+# 環境変数ファイル（APIキーを含む）
 .env
 .envrc
 .venv
@@ -205,3 +207,12 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# RAG関連ファイル（Gemini APIで生成されるファイル）
+*.rag
+
+# Kiro設定フォルダ（specsも除外）
+.kiro/
+
+# VSCode設定フォルダ
+.vscode/

@@ -1,0 +1,14 @@
+{
+  "apis": {
+    "Arduino Docs": {
+      "name": "Arduino Docs",
+      "url": "https://docs.arduino.cc/",
+      "description": "Arduino公式ドキュメント"
+    },
+    "M5 Docs": {
+      "name": "M5 Docs",
+      "url": "https://docs.m5stack.com/ja/start",
+      "description": "M5シリーズ公式ドキュメント"
+    }
+  }
+}
