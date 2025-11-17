@@ -92,8 +92,13 @@
     },
     "C++": {
       "name": "C++ Standerd",
-      "url": "https://cpprefjp.github.io/index.html/",
+      "url": "https://cpprefjp.github.io/reference.html",
       "description": "C++ / std::C++ / 標準C++"
+    },
+    "File Search Stores": {
+      "name": "File Search Stores",
+      "url": "https://ai.google.dev/api/file-search/file-search-stores?hl=ja&_gl=1*nnw22e*_up*MQ..*_ga*MTg4MTE3NzkzOS4xNzYzMjY2NzI1*_ga_P1DBVKWT6V*czE3NjMyNjY3MjUkbzEkZzAkdDE3NjMyNjY3MjUkajYwJGwwJGg1NjcwODgxODU.#response-body",
+      "description": "Gemini File Search Stores"
     }
   }
 }
