@@ -97,7 +97,7 @@
     },
     "File Search Stores": {
       "name": "File Search Stores",
-      "url": "https://ai.google.dev/api/file-search/file-search-stores?hl=ja&_gl=1*nnw22e*_up*MQ..*_ga*MTg4MTE3NzkzOS4xNzYzMjY2NzI1*_ga_P1DBVKWT6V*czE3NjMyNjY3MjUkbzEkZzAkdDE3NjMyNjY3MjUkajYwJGwwJGg1NjcwODgxODU.#response-body",
+      "url": "https://ai.google.dev/api/file-search/file-search-stores",
       "description": "Gemini File Search Stores"
     }
   }
