@@ -1,10 +1,10 @@
 ---
-doc_type: M5GFX
-crawled_at: 2025/11/18 00:19:31
-first_url: https://docs.m5stack.com/ja/arduino/m5gfx/m5gfx_functions/
+doc_type: M5Unified Power
+crawled_at: 2025/11/18 00:19:14
+first_url: https://docs.m5stack.com/ja/arduino/m5unified/power_class/
 ---
 
-# Page: https://docs.m5stack.com/ja/arduino/m5gfx/m5gfx_functions/
+# Page: https://docs.m5stack.com/ja/arduino/m5unified/power_class/
 
 [](https://m5stack.com/)
 
@@ -1735,495 +1735,702 @@ Product  Tutorial
 
 Search
 
-# M5GFX API
+# M5Unified Power Class
 
-## テキスト描画
+  * Power Class
+    * begin
+    * setExtOutput
+    * getExtOutput
+    * setUsbOutput
+    * getUsbOutput
+    * setLed
+    * powerOff
+    * timerSleep
+    * timerSleep
+    * timerSleep
+    * deepSleep
+    * lightSleep
+    * getBatteryLevel
+    * setBatteryCharge
+    * setChargeCurrent
+    * setChargeVoltage
+    * isCharging
+    * getBatteryVoltage
+    * getBatteryCurrent
+    * getKeyState
+    * setVibration
+    * getType
 
-#### 1\. テキスト表示
 
-  * [drawCenterString](/ja/arduino/m5gfx/m5gfx_text#drawcenterstring)
-  * [drawChar](/ja/arduino/m5gfx/m5gfx_text#drawchar)
-  * [drawFloat](/ja/arduino/m5gfx/m5gfx_text#drawfloat)
-  * [drawNumber](/ja/arduino/m5gfx/m5gfx_text#drawnumber)
-  * [drawString](/ja/arduino/m5gfx/m5gfx_text#drawstring)
-  * [print](/ja/arduino/m5gfx/m5gfx_text#print)
-  * [printf](/ja/arduino/m5gfx/m5gfx_text#printf)
-  * [println](/ja/arduino/m5gfx/m5gfx_text#println)
 
+## begin
 
+**Syntax:**
+    
+    
+    bool begin(void);
 
-#### 2\. テキスト属性
+`bool begin(void);`
 
-  * [setFont](/ja/arduino/m5gfx/m5gfx_text#setfont)
-  * [getFont](/ja/arduino/m5gfx/m5gfx_text#getfont)
-  * [showFont](/ja/arduino/m5gfx/m5gfx_text#showfont)
-  * [fontHeight](/ja/arduino/m5gfx/m5gfx_text#fontheight)
-  * [fontWidth](/ja/arduino/m5gfx/m5gfx_text#fontwidth)
-  * [loadFont](/ja/arduino/m5gfx/m5gfx_text#loadfont)
-  * [unloadFont](/ja/arduino/m5gfx/m5gfx_text#unloadfont)
-  * [setTextColor](/ja/arduino/m5gfx/m5gfx_text#settextcolor)
-  * [setTextSize](/ja/arduino/m5gfx/m5gfx_text#settextsize)
-  * [getTextSizeX](/ja/arduino/m5gfx/m5gfx_text#gettextsizex)
-  * [getTextSizeY](/ja/arduino/m5gfx/m5gfx_text#gettextsizey)
-  * [setTextStyle](/ja/arduino/m5gfx/m5gfx_text#settextstyle)
-  * [getTextStyle](/ja/arduino/m5gfx/m5gfx_text#gettextstyle)
-  * [textLength](/ja/arduino/m5gfx/m5gfx_text#textlength)
-  * [textWidth](/ja/arduino/m5gfx/m5gfx_text#textwidth)
+**Description:**
 
+  * Initialize the Power Management Integrated Circuit (PMIC).
 
 
-#### 3\. テキストの配置とマージン
 
-  * [setTextDatum](/ja/arduino/m5gfx/m5gfx_text#settextdatum)
-  * [getTextDatum](/ja/arduino/m5gfx/m5gfx_text#gettextdatum)
-  * [setTextPadding](/ja/arduino/m5gfx/m5gfx_text#settextpadding)
-  * [getTextPadding](/ja/arduino/m5gfx/m5gfx_text#gettextpadding)
+****Parameters:****
 
+  * null
 
 
-#### 4\. 自動改行
 
-  * [setTextWrap](/ja/arduino/m5gfx/m5gfx_text#settextwrap)
+**Return:**
 
+  * bool:
+    * true: Initialization successful.
+    * false: Initialization failed.
 
 
-## 図形描画
 
-#### 1\. 線形図形
+## setExtOutput
 
-  * [drawArc](/ja/arduino/m5gfx/m5gfx_graph#drawarc)
-  * [drawBezier](/ja/arduino/m5gfx/m5gfx_graph#drawbezier)
-  * [drawCircle](/ja/arduino/m5gfx/m5gfx_graph#drawcircle)
-  * [drawEllipse](/ja/arduino/m5gfx/m5gfx_graph#drawellipse)
-  * [drawEllipseArc](/ja/arduino/m5gfx/m5gfx_graph#drawellipsearc)
-  * [drawFastHLine](/ja/arduino/m5gfx/m5gfx_graph#drawfasthline)
-  * [drawFastVLine](/ja/arduino/m5gfx/m5gfx_graph#drawfastvline)
-  * [drawLine](/ja/arduino/m5gfx/m5gfx_graph#drawline)
-  * [drawGradientHLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradienthline)
-  * [drawGradientLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradientline)
-  * [drawGradientVLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradientvline)
-  * [drawPixel](/ja/arduino/m5gfx/m5gfx_graph#drawpixel)
-  * [drawTriangle](/ja/arduino/m5gfx/m5gfx_graph#drawtriangle)
+**Syntax:**
+    
+    
+    void setExtOutput(bool enable, ext_port_mask_t port_mask = (ext_port_mask_t)0xFF);
 
+`void setExtOutput(bool enable, ext_port_mask_t port_mask = (ext_port_mask_t)0xFF);`
 
+**Description:**
 
-#### 2\. 塗りつぶし図形
+  * Set the power output of the external port.
 
-  * [fillAffine](/ja/arduino/m5gfx/m5gfx_graph#fillaffine)
-  * [fillArc](/ja/arduino/m5gfx/m5gfx_graph#fillarc)
-  * [fillCircle](/ja/arduino/m5gfx/m5gfx_graph#fillcircle)
-  * [fillEllipse](/ja/arduino/m5gfx/m5gfx_graph#fillellipse)
-  * [fillEllipseArc](/ja/arduino/m5gfx/m5gfx_graph#fillellipsearc)
-  * [fillRect](/ja/arduino/m5gfx/m5gfx_graph#fillrect)
-  * [fillRectAlpha](/ja/arduino/m5gfx/m5gfx_graph#fillrectalpha)
-  * [fillRoundRect](/ja/arduino/m5gfx/m5gfx_graph#fillroundrect)
-  * [fillTriangle](/ja/arduino/m5gfx/m5gfx_graph#filltriangle)
-  * [floodFill](/ja/arduino/m5gfx/m5gfx_graph#floodfill)
-  * [paint](/ja/arduino/m5gfx/m5gfx_graph#paint)
-  * [copyRect](/ja/arduino/m5gfx/m5gfx_graph#copyrect)
 
 
+****Parameters:****
 
-#### 3\. 特殊図形
+  * bool enable:
+    * Power output enable state:
+      * true: Enable output.
+      * false: Disable output.
+  * ext_port_mask_t port_mask:
+    * The mask for the output port to operate:
+      * Valid for devices that support independent power switching for multiple output ports (e.g., M5Station).
 
-  * [progressBar](/ja/arduino/m5gfx/m5gfx_graph#progressbar)
-  * [qrcode](/ja/arduino/m5gfx/m5gfx_graph#qrcode)
 
 
+**Return:**
 
-#### 4\. write and read
+  * null
 
-  * [getStartCount](/ja/arduino/m5gfx/m5gfx_graph#getstartcount)
-  * [readPixel](/ja/arduino/m5gfx/m5gfx_graph#readpixel)
-  * [readPixelRGB](/ja/arduino/m5gfx/m5gfx_graph#readpixelrgb)
-  * [readRect](/ja/arduino/m5gfx/m5gfx_graph#readrect)
-  * [readRectRGB](/ja/arduino/m5gfx/m5gfx_graph#readrectrgb)
-  * [startWrite](/ja/arduino/m5gfx/m5gfx_graph#startwrite)
-  * [endWrite](/ja/arduino/m5gfx/m5gfx_graph#endwrite)
-  * [pushBlock](/ja/arduino/m5gfx/m5gfx_graph#pushblock)
-  * [pushPixels](/ja/arduino/m5gfx/m5gfx_graph#pushpixels)
-  * [pushPixelsDMA](/ja/arduino/m5gfx/m5gfx_graph#pushpixelsdma)
-  * [writeColor](/ja/arduino/m5gfx/m5gfx_graph#writecolor)
-  * [writeFastHLine](/ja/arduino/m5gfx/m5gfx_graph#writefasthline)
-  * [writeFastVLine](/ja/arduino/m5gfx/m5gfx_graph#writefastvline)
-  * [writeFillRect](/ja/arduino/m5gfx/m5gfx_graph#writefillrect)
-  * [writeFillRectPreclipped](/ja/arduino/m5gfx/m5gfx_graph#writefillrectpreclipped)
-  * [writeIndexedPixels](/ja/arduino/m5gfx/m5gfx_graph#writeindexedpixels)
-  * [writePixel](/ja/arduino/m5gfx/m5gfx_graph#writepixel)
-  * [writePixels](/ja/arduino/m5gfx/m5gfx_graph#writepixels)
-  * [writePixelsDMA](/ja/arduino/m5gfx/m5gfx_graph#writepixelsdma)
 
 
+## getExtOutput
 
-## 画像描画
+**Syntax:**
+    
+    
+    bool getExtOutput(void);
 
-#### 1\. 画像
+`bool getExtOutput(void);`
 
-  * [createPng](/ja/arduino/m5gfx/m5gfx_image#createpng)
-  * [drawBmp](/ja/arduino/m5gfx/m5gfx_image#drawbmp)
-  * [drawBmpFile](/ja/arduino/m5gfx/m5gfx_image#drawbmpfile)
-  * [drawBmpUrl](/ja/arduino/m5gfx/m5gfx_image#drawbmpurl)
-  * [drawJpg](/ja/arduino/m5gfx/m5gfx_image#drawjpg)
-  * [drawJpgFile](/ja/arduino/m5gfx/m5gfx_image#drawjpgfile)
-  * [drawJpgUrl](/ja/arduino/m5gfx/m5gfx_image#drawjpgurl)
-  * [drawPng](/ja/arduino/m5gfx/m5gfx_image#drawpng)
-  * [drawPngFile](/ja/arduino/m5gfx/m5gfx_image#drawpngfile)
-  * [drawPngUrl](/ja/arduino/m5gfx/m5gfx_image#drawpngurl)
-  * [drawQoi](/ja/arduino/m5gfx/m5gfx_image#drawqoi)
-  * [drawQoiFile](/ja/arduino/m5gfx/m5gfx_image#drawqoifile)
+**Description:**
 
+  * Read the power output state of the external port.
 
 
-#### 
 
-  * [drawQoiUrl](/ja/arduino/m5gfx/m5gfx_image#drawqoiurl)
-  * [pushAlphaImage](/ja/arduino/m5gfx/m5gfx_image#pushalphaimage)
-  * [pushGrayscaleImage](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimage)
-  * [pushGrayscaleImageAffine](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimageaffine)
-  * [pushGrayscaleImageRotateZoom](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimagerotatezoom)
-  * [pushImage](/ja/arduino/m5gfx/m5gfx_image#pushimage)
-  * [pushImageDMA](/ja/arduino/m5gfx/m5gfx_image#pushimagedma)
-  * [pushImageAffine](/ja/arduino/m5gfx/m5gfx_image#pushimageaffine)
-  * [pushImageAffineWithAA](/ja/arduino/m5gfx/m5gfx_image#pushimageaffinewithaa)
-  * [pushImageRotateZoom](/ja/arduino/m5gfx/m5gfx_image#pushimagerotatezoom)
-  * [pushImageRotateZoomWithAA](/ja/arduino/m5gfx/m5gfx_image#pushimagerotatezoomwithaa)
+****Parameters:****
 
+  * null
 
 
-#### 2\. 画像色変換
 
-  * [setSwapBytes](/ja/arduino/m5gfx/m5gfx_image#setswapbytes)
-  * [getSwapBytes](/ja/arduino/m5gfx/m5gfx_image#getswapbytes)
-  * [swap565](/ja/arduino/m5gfx/m5gfx_image#swap565)
-  * [swap888](/ja/arduino/m5gfx/m5gfx_image#swap888)
+**Return:**
 
+  * bool:
+    * true: Output enabled.
+    * false: Output disabled.
 
 
-## キャンバス管理
 
-#### 1\. 面板パネルパラメータ参数
+## setUsbOutput
 
-  * [isEPD](/ja/arduino/m5gfx/m5gfx_sprite#isepd)
-  * [height](/ja/arduino/m5gfx/m5gfx_sprite#height)
-  * [width](/ja/arduino/m5gfx/m5gfx_sprite#width)
-  * [popState](/ja/arduino/m5gfx/m5gfx_sprite#popstate)
-  * [pushState](/ja/arduino/m5gfx/m5gfx_sprite#pushstate)
-  * [setBrightness](/ja/arduino/m5gfx/m5gfx_sprite#setbrightness)
-  * [getBrightness](/ja/arduino/m5gfx/m5gfx_sprite#getbrightness)
-  * [setEpdMode](/ja/arduino/m5gfx/m5gfx_sprite#setepdmode)
-  * [getEpdMode](/ja/arduino/m5gfx/m5gfx_sprite#getepdmode)
-  * [setResolution](/ja/arduino/m5gfx/m5gfx_sprite#setresolution)
-  * [setRotation](/ja/arduino/m5gfx/m5gfx_sprite#setrotation)
-  * [getRotation](/ja/arduino/m5gfx/m5gfx_sprite#getrotation)
+**Syntax:**
+    
+    
+    void setUsbOutput(bool enable);
 
+`void setUsbOutput(bool enable);`
 
+**Description:**
 
-#### 2\. カラー
+  * Set the USB power output state (for M5Stack CoreS3 main USB port, not for M5Station external USB).
 
-  * [setBaseColor](/ja/arduino/m5gfx/m5gfx_sprite#setbasecolor)
-  * [getBaseColor](/ja/arduino/m5gfx/m5gfx_sprite#getbasecolor)
-  * [setColor](/ja/arduino/m5gfx/m5gfx_sprite#setcolor)
-  * [setRawColor](/ja/arduino/m5gfx/m5gfx_sprite#setrawcolor)
-  * [getRawColor](/ja/arduino/m5gfx/m5gfx_sprite#getrawcolor)
-  * [setColorDepth](/ja/arduino/m5gfx/m5gfx_sprite#setcolordepth)
-  * [getColorDepth](/ja/arduino/m5gfx/m5gfx_sprite#getcolordepth)
-  * [getPalette](/ja/arduino/m5gfx/m5gfx_sprite#getpalette)
-  * [getPaletteCount](/ja/arduino/m5gfx/m5gfx_sprite#getpalettecount)
 
 
+****Parameters:****
 
-#### 3\. 画面クリア
+  * bool enable:
+    * USB power output enable state:
+      * true: Enable output.
+      * false: Disable output.
 
-  * [clear](/ja/arduino/m5gfx/m5gfx_sprite#clear)
-  * [clearDisplay](/ja/arduino/m5gfx/m5gfx_sprite#cleardisplay)
-  * [fillScreen](/ja/arduino/m5gfx/m5gfx_sprite#fillscreen)
 
 
+**Return:**
 
-#### 4\. 座標設定
+  * null
 
-  * [setCursor](/ja/arduino/m5gfx/m5gfx_sprite#setcursor)
-  * [getCursorX](/ja/arduino/m5gfx/m5gfx_sprite#getcursorx)
-  * [getCursorY](/ja/arduino/m5gfx/m5gfx_sprite#getcursory)
-  * [setPivot](/ja/arduino/m5gfx/m5gfx_sprite#setpivot)
-  * [getPivotX](/ja/arduino/m5gfx/m5gfx_sprite#getpivotx)
-  * [getPivotY](/ja/arduino/m5gfx/m5gfx_sprite#getpivoty)
 
 
+## getUsbOutput
 
-#### 5\. キャンバス領域選択
+**Syntax:**
+    
+    
+    bool getUsbOutput(void);
 
-  * [setAddrWindow](/ja/arduino/m5gfx/m5gfx_sprite#setaddrwindow)
-  * [setWindow](/ja/arduino/m5gfx/m5gfx_sprite#setwindow)
-  * [setClipRect](/ja/arduino/m5gfx/m5gfx_sprite#setcliprect)
-  * [getClipRect](/ja/arduino/m5gfx/m5gfx_sprite#getcliprect)
-  * [clearClipRect](/ja/arduino/m5gfx/m5gfx_sprite#clearcliprect)
+`bool getUsbOutput(void);`
 
+**Description:**
 
+  * Read the USB power output state (for M5Stack CoreS3 main USB port, not for M5Station external USB).
 
-#### 6\. キャンバススクロール
 
-  * [scroll](/ja/arduino/m5gfx/m5gfx_sprite#scroll)
-  * [setTextScroll](/ja/arduino/m5gfx/m5gfx_sprite#settextscroll)
-  * [setScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#setscrollrect)
-  * [getScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#getscrollrect)
-  * [clearScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#clearscrollrect)
 
+****Parameters:****
 
+  * bool enable:
+    * USB power output enable state.
 
-#### 7\. カスタム処理
 
-  * [effect](/ja/arduino/m5gfx/m5gfx_sprite#effect)
 
+**Return:**
 
+  * bool:
+    * true: Output enabled.
+    * false: Output disabled.
 
-## スクリーン電源管理
 
-#### 1\. 電源状態管理
 
-  * [powerSave](/ja/arduino/m5gfx/m5gfx_power#powersave)
-  * [powerSaveOff](/ja/arduino/m5gfx/m5gfx_power#powersaveoff)
-  * [powerSaveOn](/ja/arduino/m5gfx/m5gfx_power#powersaveon)
+## setLed
 
+**Syntax:**
+    
+    
+    void setLed(uint8_t brightness = 255);
 
+`void setLed(uint8_t brightness = 255);`
 
-#### 2\. スリープとウェイクアップ
+**Description:**
 
-  * [sleep](/ja/arduino/m5gfx/m5gfx_power#sleep)
-  * [wakeup](/ja/arduino/m5gfx/m5gfx_power#wakeup)
+  * Set the state of the power LED light.
 
 
 
-## タッチスクリーン
+****Parameters:****
 
-#### 1\. タッチ情報
+  * uint8_t brightness:
+    * 0=OFF
+    * 1-255=ON
 
-  * [getTouch](/ja/arduino/m5gfx/m5gfx_touch#gettouch)
-  * [getTouchRaw](/ja/arduino/m5gfx/m5gfx_touch#gettouchraw)
-  * [convertRawXY](/ja/arduino/m5gfx/m5gfx_touch#convertrawxy)
 
 
+**Return:**
 
-#### 2\. 画面キャリブレーション
+  * null
 
-  * [calibrateTouch](/ja/arduino/m5gfx/m5gfx_touch#calibratetouch)
-  * [setTouchCalibrate](/ja/arduino/m5gfx/m5gfx_touch#settouchcalibrate)
 
 
+## powerOff
 
-## アルファベット索引
+**Syntax:**
+    
+    
+    void powerOff(void);
 
-#### a-d
+`void powerOff(void);`
 
-  * [calibrateTouch](/ja/arduino/m5gfx/m5gfx_touch#calibratetouch)
-  * [clear](/ja/arduino/m5gfx/m5gfx_sprite#clear)
-  * [clearClipRect](/ja/arduino/m5gfx/m5gfx_sprite#clearcliprect)
-  * [clearDisplay](/ja/arduino/m5gfx/m5gfx_sprite#cleardisplay)
-  * [clearScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#clearscrollrect)
-  * [convertRawXY](/ja/arduino/m5gfx/m5gfx_touch#convertrawxy)
-  * [copyRect](/ja/arduino/m5gfx/m5gfx_graph#copyrect)
-  * [createPng](/ja/arduino/m5gfx/m5gfx_image#createpng)
-  * [drawArc](/ja/arduino/m5gfx/m5gfx_graph#drawarc)
-  * [drawBezier](/ja/arduino/m5gfx/m5gfx_graph#drawbezier)
-  * [drawBmp](/ja/arduino/m5gfx/m5gfx_image#drawbmp)
-  * [drawBmpFile](/ja/arduino/m5gfx/m5gfx_image#drawbmpfile)
-  * [drawBmpUrl](/ja/arduino/m5gfx/m5gfx_image#drawbmpurl)
+**Description:**
 
+  * Turn off all power supplies.
 
 
-#### 
 
-  * [drawCenterString](/ja/arduino/m5gfx/m5gfx_text#drawcenterstring)
-  * [drawChar](/ja/arduino/m5gfx/m5gfx_text#drawchar)
-  * [drawCircle](/ja/arduino/m5gfx/m5gfx_graph#drawcircle)
-  * [drawEllipse](/ja/arduino/m5gfx/m5gfx_graph#drawellipse)
-  * [drawEllipseArc](/ja/arduino/m5gfx/m5gfx_graph#drawellipsearc)
-  * [drawFastHLine](/ja/arduino/m5gfx/m5gfx_graph#drawfasthline)
-  * [drawFastVLine](/ja/arduino/m5gfx/m5gfx_graph#drawfastvline)
-  * [drawFloat](/ja/arduino/m5gfx/m5gfx_text#drawfloat)
-  * [drawGradientHLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradienthline)
-  * [drawGradientLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradientline)
-  * [drawGradientVLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradientvline)
-  * [drawJpg](/ja/arduino/m5gfx/m5gfx_image#drawjpg)
-  * [drawJpgFile](/ja/arduino/m5gfx/m5gfx_image#drawjpgfile)
+****Parameters:****
 
+  * null
 
 
-#### 
 
-  * [drawJpgUrl](/ja/arduino/m5gfx/m5gfx_image#drawjpgurl)
-  * [drawLine](/ja/arduino/m5gfx/m5gfx_graph#drawline)
-  * [drawNumber](/ja/arduino/m5gfx/m5gfx_text#drawnumber)
-  * [drawPixel](/ja/arduino/m5gfx/m5gfx_graph#drawpixel)
-  * [drawPng](/ja/arduino/m5gfx/m5gfx_image#drawpng)
-  * [drawPngFile](/ja/arduino/m5gfx/m5gfx_image#drawpngfile)
-  * [drawPngUrl](/ja/arduino/m5gfx/m5gfx_image#drawpngurl)
-  * [drawQoi](/ja/arduino/m5gfx/m5gfx_image#drawqoi)
-  * [drawQoiFile](/ja/arduino/m5gfx/m5gfx_image#drawqoifile)
-  * [drawQoiUrl](/ja/arduino/m5gfx/m5gfx_image#drawqoiurl)
-  * [drawString](/ja/arduino/m5gfx/m5gfx_text#drawstring)
-  * [drawTriangle](/ja/arduino/m5gfx/m5gfx_graph#drawtriangle)
+**Return:**
 
+  * null
 
 
-#### e-h
 
-  * [effect](/ja/arduino/m5gfx/m5gfx_sprite#effect)
-  * [endWrite](/ja/arduino/m5gfx/m5gfx_graph#endwrite)
-  * [fillAffine](/ja/arduino/m5gfx/m5gfx_graph#fillaffine)
-  * [fillArc](/ja/arduino/m5gfx/m5gfx_graph#fillarc)
-  * [fillCircle](/ja/arduino/m5gfx/m5gfx_graph#fillcircle)
-  * [fillEllipse](/ja/arduino/m5gfx/m5gfx_graph#fillellipse)
-  * [fillEllipseArc](/ja/arduino/m5gfx/m5gfx_graph#fillellipsearc)
-  * [fillRect](/ja/arduino/m5gfx/m5gfx_graph#fillrect)
-  * [fillRectAlpha](/ja/arduino/m5gfx/m5gfx_graph#fillrectalpha)
-  * [fillRoundRect](/ja/arduino/m5gfx/m5gfx_graph#fillroundrect)
-  * [fillScreen](/ja/arduino/m5gfx/m5gfx_sprite#fillscreen)
-  * [fillTriangle](/ja/arduino/m5gfx/m5gfx_graph#filltriangle)
-  * [floodFill](/ja/arduino/m5gfx/m5gfx_graph#floodfill)
-  * [fontHeight](/ja/arduino/m5gfx/m5gfx_text#fontheight)
+## timerSleep
 
+Note on timerSleep 
 
+Some devices without integrated PMIC, such as M5Paper, cannot power off when powered by USB. This function only works when powered by a battery.
 
-#### 
+**Syntax:**
+    
+    
+    void timerSleep(int seconds);
 
-  * [fontWidth](/ja/arduino/m5gfx/m5gfx_text#fontwidth)
-  * [getBaseColor](/ja/arduino/m5gfx/m5gfx_sprite#getbasecolor)
-  * [getBrightness](/ja/arduino/m5gfx/m5gfx_sprite#getbrightness)
-  * [getClipRect](/ja/arduino/m5gfx/m5gfx_sprite#getcliprect)
-  * [getColorDepth](/ja/arduino/m5gfx/m5gfx_sprite#getcolordepth)
-  * [getCursorX](/ja/arduino/m5gfx/m5gfx_sprite#getcursorx)
-  * [getCursorY](/ja/arduino/m5gfx/m5gfx_sprite#getcursory)
-  * [getEpdMode](/ja/arduino/m5gfx/m5gfx_sprite#getepdmode)
-  * [getFont](/ja/arduino/m5gfx/m5gfx_text#getfont)
-  * [getPalette](/ja/arduino/m5gfx/m5gfx_sprite#getpalette)
-  * [getPaletteCount](/ja/arduino/m5gfx/m5gfx_sprite#getpalettecount)
-  * [getPivotX](/ja/arduino/m5gfx/m5gfx_sprite#getpivotx)
-  * [getPivotY](/ja/arduino/m5gfx/m5gfx_sprite#getpivoty)
-  * [getRawColor](/ja/arduino/m5gfx/m5gfx_sprite#getrawcolor)
+`void timerSleep(int seconds);`
 
+**Description:**
 
+  * The device sleeps and wakes up after a specified period.
 
-#### 
 
-  * [getRotation](/ja/arduino/m5gfx/m5gfx_sprite#getrotation)
-  * [getScrollRect](../m5gfx_sprite#getscrollrect)
-  * [getStartCount](/ja/arduino/m5gfx/m5gfx_graph#getstartcount)
-  * [getSwapBytes](/ja/arduino/m5gfx/m5gfx_image#getswapbytes)
-  * [getTextDatum](/ja/arduino/m5gfx/m5gfx_text#gettextdatum)
-  * [getTextPadding](/ja/arduino/m5gfx/m5gfx_text#gettextpadding)
-  * [getTextSizeX](/ja/arduino/m5gfx/m5gfx_text#gettextsizex)
-  * [getTextSizeY](/ja/arduino/m5gfx/m5gfx_text#gettextsizey)
-  * [getTextStyle](/ja/arduino/m5gfx/m5gfx_text#gettextstyle)
-  * [getTouch](/ja/arduino/m5gfx/m5gfx_touch#gettouch)
-  * [getTouchRaw](/ja/arduino/m5gfx/m5gfx_touch#gettouchraw)
-  * [height](/ja/arduino/m5gfx/m5gfx_sprite#height)
 
+****Parameters:****
 
+  * int seconds:
+    * Sleep duration in seconds.
 
-#### i-r
 
-  * [isEPD](/ja/arduino/m5gfx/m5gfx_sprite#isepd)
-  * [loadFont](/ja/arduino/m5gfx/m5gfx_text#loadfont)
-  * [paint](/ja/arduino/m5gfx/m5gfx_graph#paint)
-  * [popState](/ja/arduino/m5gfx/m5gfx_sprite#popstate)
-  * [powerSave](/ja/arduino/m5gfx/m5gfx_power#powersave)
-  * [powerSaveOff](/ja/arduino/m5gfx/m5gfx_power#powersaveoff)
-  * [powerSaveOn](/ja/arduino/m5gfx/m5gfx_power#powersaveon)
-  * [print](/ja/arduino/m5gfx/m5gfx_text#print)
-  * [printf](/ja/arduino/m5gfx/m5gfx_text#printf)
-  * [println](/ja/arduino/m5gfx/m5gfx_text#println)
 
+**Return:**
 
+  * null
 
-#### 
 
-  * [progressBar](/ja/arduino/m5gfx/m5gfx_graph#progressbar)
-  * [pushAlphaImage](/ja/arduino/m5gfx/m5gfx_image#pushalphaimage)
-  * [pushBlock](/ja/arduino/m5gfx/m5gfx_graph#pushblock)
-  * [pushGrayscaleImage](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimage)
-  * [pushGrayscaleImageAffine](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimageaffine)
-  * [pushGrayscaleImageRotateZoom](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimagerotatezoom)
-  * [pushImage](/ja/arduino/m5gfx/m5gfx_image#pushimage)
-  * [pushImageAffine](/ja/arduino/m5gfx/m5gfx_image#pushimageaffine)
-  * [pushImageAffineWithAA](/ja/arduino/m5gfx/m5gfx_image#pushimageaffinewithaa)
-  * [pushImageDMA](/ja/arduino/m5gfx/m5gfx_image#pushimagedma)
 
+## timerSleep
 
+**Syntax:**
+    
+    
+    void timerSleep(const rtc_time_t& time);
 
-#### 
+`void timerSleep(const rtc_time_t& time);`
 
-  * [pushImageRotateZoom](/ja/arduino/m5gfx/m5gfx_image#pushimagerotatezoom)
-  * [pushImageRotateZoomWithAA](/ja/arduino/m5gfx/m5gfx_image#pushimagerotatezoomwithaa)
-  * [pushPixels](/ja/arduino/m5gfx/m5gfx_graph#pushpixels)
-  * [pushPixelsDMA](/ja/arduino/m5gfx/m5gfx_graph#pushpixelsdma)
-  * [pushState](/ja/arduino/m5gfx/m5gfx_sprite#pushstate)
-  * [qrcode](/ja/arduino/m5gfx/m5gfx_image#qrcode)
-  * [readPixel](/ja/arduino/m5gfx/m5gfx_graph#readpixel)
-  * [readPixelRGB](/ja/arduino/m5gfx/m5gfx_graph#readpixelrgb)
-  * [readRect](/ja/arduino/m5gfx/m5gfx_graph#readrect)
-  * [readRectRGB](/ja/arduino/m5gfx/m5gfx_graph#readrectrgb)
+**Description:**
 
+  * The device sleeps and wakes up at a specified time.
 
 
-#### s-z
 
-  * [scroll](/ja/arduino/m5gfx/m5gfx_sprite#scroll)
-  * [setAddrWindow](/ja/arduino/m5gfx/m5gfx_sprite#setaddrwindow)
-  * [setBaseColor](/ja/arduino/m5gfx/m5gfx_sprite#setbasecolor)
-  * [setBrightness](/ja/arduino/m5gfx/m5gfx_sprite#setbrightness)
-  * [setClipRect](/ja/arduino/m5gfx/m5gfx_sprite#setcliprect)
-  * [setColor](/ja/arduino/m5gfx/m5gfx_sprite#setcolor)
-  * [setColorDepth](/ja/arduino/m5gfx/m5gfx_sprite#setcolordepth)
-  * [setCursor](/ja/arduino/m5gfx/m5gfx_sprite#setcursor)
-  * [setEpdMode](/ja/arduino/m5gfx/m5gfx_sprite#setepdmode)
-  * [setFont](/ja/arduino/m5gfx/m5gfx_text#setfont)
-  * [setPivot](/ja/arduino/m5gfx/m5gfx_sprite#setpivot)
-  * [setRawColor](/ja/arduino/m5gfx/m5gfx_sprite#setrawcolor)
-  * [setResolution](/ja/arduino/m5gfx/m5gfx_sprite#setresolution)
-  * [setRotation](/ja/arduino/m5gfx/m5gfx_sprite#setrotation)
-  * [setScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#setscrollrect)
+****Parameters:****
 
+  * const rtc_time_t& time:
+    * Wake-up time (only minutes and hours can be specified. Seconds are ignored).
 
 
-#### 
 
-  * [setSwapBytes](/ja/arduino/m5gfx/m5gfx_image#setswapbytes)
-  * [setTextColor](/ja/arduino/m5gfx/m5gfx_text#settextcolor)
-  * [setTextDatum](/ja/arduino/m5gfx/m5gfx_text#settextdatum)
-  * [setTextPadding](/ja/arduino/m5gfx/m5gfx_text#settextpadding)
-  * [setTextScroll](/ja/arduino/m5gfx/m5gfx_sprite#settextscroll)
-  * [setTextSize](/ja/arduino/m5gfx/m5gfx_text#settextsize)
-  * [setTextStyle](/ja/arduino/m5gfx/m5gfx_text#settextstyle)
-  * [setTextWrap](/ja/arduino/m5gfx/m5gfx_text#settextwrap)
-  * [setTouchCalibrate](/ja/arduino/m5gfx/m5gfx_touch#settouchcalibrate)
-  * [setWindow](/ja/arduino/m5gfx/m5gfx_sprite#setwindow)
-  * [showFont](/ja/arduino/m5gfx/m5gfx_text#showfont)
-  * [sleep](/ja/arduino/m5gfx/m5gfx_power#sleep)
-  * [startWrite](/ja/arduino/m5gfx/m5gfx_graph#startwrite)
-  * [swap565](/ja/arduino/m5gfx/m5gfx_image#swap565)
-  * [swap888](/ja/arduino/m5gfx/m5gfx_image#swap888)
+**Return:**
 
+  * null
 
 
-#### 
 
-  * [textLength](/ja/arduino/m5gfx/m5gfx_text#textlength)
-  * [textWidth](/ja/arduino/m5gfx/m5gfx_text#textwidth)
-  * [unloadFont](/ja/arduino/m5gfx/m5gfx_text#unloadfont)
-  * [wakeup](/ja/arduino/m5gfx/m5gfx_power#wakeup)
-  * [width](/ja/arduino/m5gfx/m5gfx_sprite#width)
-  * [writeColor](/ja/arduino/m5gfx/m5gfx_graph#writecolor)
-  * [writeFastHLine](/ja/arduino/m5gfx/m5gfx_graph#writefasthline)
-  * [writeFastVLine](/ja/arduino/m5gfx/m5gfx_graph#writefastvline)
-  * [writeFillRect](/ja/arduino/m5gfx/m5gfx_graph#writefillrect)
-  * [writeFillRectPreclipped](/ja/arduino/m5gfx/m5gfx_graph#writefillrectpreclipped)
-  * [writeIndexedPixels](/ja/arduino/m5gfx/m5gfx_graph#writeindexedpixels)
-  * [writePixel](/ja/arduino/m5gfx/m5gfx_graph#writepixel)
-  * [writePixels](/ja/arduino/m5gfx/m5gfx_graph#writepixels)
-  * [writePixelsDMA](/ja/arduino/m5gfx/m5gfx_graph#writepixelsdma)
+## timerSleep
 
+**Syntax:**
+    
+    
+    void timerSleep(const rtc_date_t& date, const rtc_time_t& time);
 
+`void timerSleep(const rtc_date_t& date, const rtc_time_t& time);`
+
+**Description:**
+
+  * The device sleeps and wakes up at a specified date and time.
+
+
+
+****Parameters:****
+
+  * int const rtc_date_t& date:
+    * Wake-up date (only date and day of the week can be specified. Year and month are ignored).
+  * const rtc_time_t& time:
+    * Wake-up time (only minutes and hours can be specified. Seconds are ignored).
+
+
+
+**Return:**
+
+  * null
+
+
+
+## deepSleep
+
+**Syntax:**
+    
+    
+    void deepSleep(std::uint64_t micro_seconds = 0, bool touch_wakeup = true);
+
+`void deepSleep(std::uint64_t micro_seconds = 0, bool touch_wakeup = true);`
+
+**Description:**
+
+  * The chip enters deep sleep and wakes up after a period.
+
+
+
+****Parameters:****
+
+  * uint64_t micro_seconds:
+    * Sleep duration in microseconds.
+  * bool touch_wakeup:
+    * Whether to enable touch screen wake-up.
+
+
+
+**Return:**
+
+  * null
+
+
+
+## lightSleep
+
+**Syntax:**
+    
+    
+    void lightSleep(std::uint64_t micro_seconds = 0, bool touch_wakeup = true);
+
+`void lightSleep(std::uint64_t micro_seconds = 0, bool touch_wakeup = true);`
+
+**Description:**
+
+  * The chip enters light sleep and wakes up after a period.
+
+
+
+****Parameters:****
+
+  * uint64_t micro_seconds:
+    * Sleep duration in microseconds.
+  * bool touch_wakeup:
+    * Whether to enable touch screen wake-up.
+
+
+
+**Return:**
+
+  * null
+
+
+
+## getBatteryLevel
+
+**Syntax:**
+
+cpp `/// Get the remaining battery power. /// @return 0-100 level std::int32_t getBatteryLevel(void);`
+
+1 2 3
+    
+    
+    /// Get the remaining battery power.
+    /// @return 0-100 level
+    std::int32_t getBatteryLevel(void);
+
+**Description:**
+
+  * Get the reference value of the remaining battery power.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * int32_t level:
+    * 0-100
+
+
+
+## setBatteryCharge
+
+**Syntax:**
+    
+    
+    void setBatteryCharge(bool enable);
+
+`void setBatteryCharge(bool enable);`
+
+**Description:**
+
+  * Set the battery charging enable.
+
+
+
+****Parameters:****
+
+  * bool enable:
+    * true: Enable battery charging.
+    * false: Disable battery charging.
+
+
+
+**Return:**
+
+  * null
+
+
+
+## setChargeCurrent
+
+Note on setCharge 
+
+APIs related to setting charging voltage and current are only supported on some devices with integrated PMIC.
+
+**Syntax:**
+    
+    
+    void setChargeCurrent(std::uint16_t max_mA);
+
+`void setChargeCurrent(std::uint16_t max_mA);`
+
+**Description:**
+
+  * Set the battery charging current.
+
+
+
+****Parameters:****
+
+  * uint16_t max_mA:
+    * Maximum charging current in milliamperes.
+
+
+
+**Return:**
+
+  * null
+
+
+
+## setChargeVoltage
+
+**Syntax:**
+    
+    
+    void setChargeVoltage(std::uint16_t max_mV);
+
+`void setChargeVoltage(std::uint16_t max_mV);`
+
+**Description:**
+
+  * Set the battery charging voltage.
+
+
+
+****Parameters:****
+
+  * uint16_t max_mV:
+    * Maximum charging voltage in millivolts.
+
+
+
+**Return:**
+
+  * null
+
+
+
+## isCharging
+
+**Syntax:**
+    
+    
+    is_charging_t isCharging(void);
+
+`is_charging_t isCharging(void);`
+
+**Description:**
+
+  * Determine if currently charging.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * bool:
+    * true: Charging.
+    * false: Not charging.
+
+
+
+## getBatteryVoltage
+
+**Syntax:**
+    
+    
+    int16_t getBatteryVoltage(void);
+
+`int16_t getBatteryVoltage(void);`
+
+**Description:**
+
+  * Get the battery voltage.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * int16_t voltage:
+    * Battery voltage in millivolts.
+
+
+
+## getBatteryCurrent
+
+**Syntax:**
+    
+    
+    int32_t getBatteryCurrent(void);
+
+`int32_t getBatteryCurrent(void);`
+
+**Description:**
+
+  * Get the battery current.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * int32_t current:
+    * Battery current in milliamperes (+=charge / -=discharge).
+
+
+
+## getKeyState
+
+**Syntax:**
+
+cpp `/// Get Power Key Press condition. /// @return 0=none / 1=long pressed / 2=short clicked / 3=both /// @attention Only for models with AXP192 or AXP2101 /// @attention Once this function is called, the value is reset to 0, and the value changes when pressed next time. uint8_t getKeyState(void);`
+
+1 2 3 4 5
+    
+    
+    /// Get Power Key Press condition.
+    /// @return 0=none / 1=long pressed / 2=short clicked / 3=both
+    /// @attention Only for models with AXP192 or AXP2101
+    /// @attention Once this function is called, the value is reset to 0, and the value changes when pressed next time.
+    uint8_t getKeyState(void);
+
+**Description:**
+
+  * Get the state of the PMIC button input signal (Only for models with AXP192 or AXP2101). The state is reset after calling this function.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * uint8_t key:
+    * none: 0
+    * long pressed: 1
+    * short clicked: 2
+    * both: 3
+
+
+
+## setVibration
+
+**Syntax:**
+    
+    
+    void setVibration(uint8_t level);
+
+`void setVibration(uint8_t level);`
+
+**Description:**
+
+  * Control the vibration motor vibration.
+
+
+
+****Parameters:****
+
+  * uint8_t level:
+    * Vibration level: 0-255, 0=stop.
+
+
+
+**Return:**
+
+  * null
+
+
+
+## getType
+
+**Syntax:**
+    
+    
+    pmic_t getType(void) const { return _pmic; }
+
+`pmic_t getType(void) const { return _pmic; }`
+
+**Description:**
+
+  * Get the PMIC type.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * pmic_t:
+    * The type of PMIC chip.
+
+
+
+cpp `enum pmic_t { pmic_unknown , pmic_adc , pmic_axp192 , pmic_ip5306 , pmic_axp2101 };`
+
+1 2 3 4 5 6 7
+    
+    
+    enum pmic_t
+    { pmic_unknown
+    , pmic_adc
+    , pmic_axp192
+    , pmic_ip5306
+    , pmic_axp2101
+    };
 
 [Next 1\. Arduino環境設定 - 1. Arduino IDEインストール ](/en/arduino/arduino_ide)
 

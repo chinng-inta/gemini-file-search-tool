@@ -1,10 +1,10 @@
 ---
-doc_type: M5GFX
-crawled_at: 2025/11/18 00:19:31
-first_url: https://docs.m5stack.com/ja/arduino/m5gfx/m5gfx_functions/
+doc_type: M5Unified Mic
+crawled_at: 2025/11/18 00:19:25
+first_url: https://docs.m5stack.com/ja/arduino/m5unified/mic_class/
 ---
 
-# Page: https://docs.m5stack.com/ja/arduino/m5gfx/m5gfx_functions/
+# Page: https://docs.m5stack.com/ja/arduino/m5unified/mic_class/
 
 [](https://m5stack.com/)
 
@@ -1735,493 +1735,355 @@ Product  Tutorial
 
 Search
 
-# M5GFX API
+# M5Unified Mic Class
+
+  * Mic Class
+    * config
+    * begin
+    * end
+    * isRunning
+    * isEnabled
+    * isRecording
+    * setSampleRate
+    * record
+
+
+
+## config
+
+**Syntax:**
+    
+    
+    mic_config_t config(void);
+
+`mic_config_t config(void);`
+
+**Description:**
 
-## テキスト描画
+  * Get the current Mic configuration information
 
-#### 1\. テキスト表示
 
-  * [drawCenterString](/ja/arduino/m5gfx/m5gfx_text#drawcenterstring)
-  * [drawChar](/ja/arduino/m5gfx/m5gfx_text#drawchar)
-  * [drawFloat](/ja/arduino/m5gfx/m5gfx_text#drawfloat)
-  * [drawNumber](/ja/arduino/m5gfx/m5gfx_text#drawnumber)
-  * [drawString](/ja/arduino/m5gfx/m5gfx_text#drawstring)
-  * [print](/ja/arduino/m5gfx/m5gfx_text#print)
-  * [printf](/ja/arduino/m5gfx/m5gfx_text#printf)
-  * [println](/ja/arduino/m5gfx/m5gfx_text#println)
 
+****Parameters:****
 
+  * None
 
-#### 2\. テキスト属性
 
-  * [setFont](/ja/arduino/m5gfx/m5gfx_text#setfont)
-  * [getFont](/ja/arduino/m5gfx/m5gfx_text#getfont)
-  * [showFont](/ja/arduino/m5gfx/m5gfx_text#showfont)
-  * [fontHeight](/ja/arduino/m5gfx/m5gfx_text#fontheight)
-  * [fontWidth](/ja/arduino/m5gfx/m5gfx_text#fontwidth)
-  * [loadFont](/ja/arduino/m5gfx/m5gfx_text#loadfont)
-  * [unloadFont](/ja/arduino/m5gfx/m5gfx_text#unloadfont)
-  * [setTextColor](/ja/arduino/m5gfx/m5gfx_text#settextcolor)
-  * [setTextSize](/ja/arduino/m5gfx/m5gfx_text#settextsize)
-  * [getTextSizeX](/ja/arduino/m5gfx/m5gfx_text#gettextsizex)
-  * [getTextSizeY](/ja/arduino/m5gfx/m5gfx_text#gettextsizey)
-  * [setTextStyle](/ja/arduino/m5gfx/m5gfx_text#settextstyle)
-  * [getTextStyle](/ja/arduino/m5gfx/m5gfx_text#gettextstyle)
-  * [textLength](/ja/arduino/m5gfx/m5gfx_text#textlength)
-  * [textWidth](/ja/arduino/m5gfx/m5gfx_text#textwidth)
 
+**Return:**
 
+  * mic_config_t: 
+    * Mic configuration information
 
-#### 3\. テキストの配置とマージン
 
-  * [setTextDatum](/ja/arduino/m5gfx/m5gfx_text#settextdatum)
-  * [getTextDatum](/ja/arduino/m5gfx/m5gfx_text#gettextdatum)
-  * [setTextPadding](/ja/arduino/m5gfx/m5gfx_text#settextpadding)
-  * [getTextPadding](/ja/arduino/m5gfx/m5gfx_text#gettextpadding)
 
+cpp ` struct mic_config_t { /// i2s_data_in (for mic) int pin_data_in = -1; /// i2s_bclk int pin_bck = I2S_PIN_NO_CHANGE; /// i2s_mclk int pin_mck = I2S_PIN_NO_CHANGE; /// i2s_ws (lrck) int pin_ws = I2S_PIN_NO_CHANGE; /// input sampling rate (Hz) uint32_t sample_rate = 16000; union { struct { uint8_t left_channel : 1; uint8_t stereo : 1; uint8_t reserve : 6; }; input_channel_t input_channel = input_only_right; }; /// Sampling times of obtaining the average value uint8_t over_sampling = 2; /// multiplier for input value uint8_t magnification = 16; /// Coefficient of the previous value, used for noise filtering uint8_t noise_filter_level = 0; /// use analog input mic ( need only pin_data_in ) bool use_adc = false; /// for I2S dma_buf_len size_t dma_buf_len = 128; /// for I2S dma_buf_count size_t dma_buf_count = 8; /// background task priority uint8_t task_priority = 2; /// background task pinned core uint8_t task_pinned_core = -1; /// I2S port i2s_port_t i2s_port = i2s_port_t::I2S_NUM_0; };`
 
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55
+    
+    
+      struct mic_config_t
+      {
+        /// i2s_data_in (for mic)
+        int pin_data_in = -1;
+    
+        /// i2s_bclk
+        int pin_bck = I2S_PIN_NO_CHANGE;
+    
+        /// i2s_mclk
+        int pin_mck = I2S_PIN_NO_CHANGE;
+    
+        /// i2s_ws (lrck)
+        int pin_ws = I2S_PIN_NO_CHANGE;
+    
+        /// input sampling rate (Hz)
+        uint32_t sample_rate = 16000;
+    
+        union
+        {
+          struct
+          {
+            uint8_t left_channel : 1;
+            uint8_t stereo : 1;
+            uint8_t reserve : 6;
+          };
+          input_channel_t input_channel = input_only_right;
+        };
+    
+        /// Sampling times of obtaining the average value
+        uint8_t over_sampling = 2;
+    
+        /// multiplier for input value
+        uint8_t magnification = 16;
+    
+        /// Coefficient of the previous value, used for noise filtering
+        uint8_t noise_filter_level = 0;
+    
+        /// use analog input mic ( need only pin_data_in )
+        bool use_adc = false;
+    
+        /// for I2S dma_buf_len
+        size_t dma_buf_len = 128;
+    
+        /// for I2S dma_buf_count
+        size_t dma_buf_count = 8;
+    
+        /// background task priority
+        uint8_t task_priority = 2;
+    
+        /// background task pinned core
+        uint8_t task_pinned_core = -1;
+    
+        /// I2S port
+        i2s_port_t i2s_port = i2s_port_t::I2S_NUM_0;
+      };
 
-#### 4\. 自動改行
+**Syntax:**
+    
+    
+    void config(const mic_config_t& cfg);
 
-  * [setTextWrap](/ja/arduino/m5gfx/m5gfx_text#settextwrap)
+`void config(const mic_config_t& cfg);`
 
+**Description:**
 
+  * Configure the Mic configuration information
 
-## 図形描画
 
-#### 1\. 線形図形
 
-  * [drawArc](/ja/arduino/m5gfx/m5gfx_graph#drawarc)
-  * [drawBezier](/ja/arduino/m5gfx/m5gfx_graph#drawbezier)
-  * [drawCircle](/ja/arduino/m5gfx/m5gfx_graph#drawcircle)
-  * [drawEllipse](/ja/arduino/m5gfx/m5gfx_graph#drawellipse)
-  * [drawEllipseArc](/ja/arduino/m5gfx/m5gfx_graph#drawellipsearc)
-  * [drawFastHLine](/ja/arduino/m5gfx/m5gfx_graph#drawfasthline)
-  * [drawFastVLine](/ja/arduino/m5gfx/m5gfx_graph#drawfastvline)
-  * [drawLine](/ja/arduino/m5gfx/m5gfx_graph#drawline)
-  * [drawGradientHLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradienthline)
-  * [drawGradientLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradientline)
-  * [drawGradientVLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradientvline)
-  * [drawPixel](/ja/arduino/m5gfx/m5gfx_graph#drawpixel)
-  * [drawTriangle](/ja/arduino/m5gfx/m5gfx_graph#drawtriangle)
+****Parameters:****
 
+  * mic_config_t& cfg: 
+    * Configuration information reference
 
 
-#### 2\. 塗りつぶし図形
 
-  * [fillAffine](/ja/arduino/m5gfx/m5gfx_graph#fillaffine)
-  * [fillArc](/ja/arduino/m5gfx/m5gfx_graph#fillarc)
-  * [fillCircle](/ja/arduino/m5gfx/m5gfx_graph#fillcircle)
-  * [fillEllipse](/ja/arduino/m5gfx/m5gfx_graph#fillellipse)
-  * [fillEllipseArc](/ja/arduino/m5gfx/m5gfx_graph#fillellipsearc)
-  * [fillRect](/ja/arduino/m5gfx/m5gfx_graph#fillrect)
-  * [fillRectAlpha](/ja/arduino/m5gfx/m5gfx_graph#fillrectalpha)
-  * [fillRoundRect](/ja/arduino/m5gfx/m5gfx_graph#fillroundrect)
-  * [fillTriangle](/ja/arduino/m5gfx/m5gfx_graph#filltriangle)
-  * [floodFill](/ja/arduino/m5gfx/m5gfx_graph#floodfill)
-  * [paint](/ja/arduino/m5gfx/m5gfx_graph#paint)
-  * [copyRect](/ja/arduino/m5gfx/m5gfx_graph#copyrect)
+**Return:**
 
+  * None
 
 
-#### 3\. 特殊図形
 
-  * [progressBar](/ja/arduino/m5gfx/m5gfx_graph#progressbar)
-  * [qrcode](/ja/arduino/m5gfx/m5gfx_graph#qrcode)
+## begin
 
+**Syntax:**
+    
+    
+    bool begin(void);
 
+`bool begin(void);`
 
-#### 4\. write and read
+**Description:**
 
-  * [getStartCount](/ja/arduino/m5gfx/m5gfx_graph#getstartcount)
-  * [readPixel](/ja/arduino/m5gfx/m5gfx_graph#readpixel)
-  * [readPixelRGB](/ja/arduino/m5gfx/m5gfx_graph#readpixelrgb)
-  * [readRect](/ja/arduino/m5gfx/m5gfx_graph#readrect)
-  * [readRectRGB](/ja/arduino/m5gfx/m5gfx_graph#readrectrgb)
-  * [startWrite](/ja/arduino/m5gfx/m5gfx_graph#startwrite)
-  * [endWrite](/ja/arduino/m5gfx/m5gfx_graph#endwrite)
-  * [pushBlock](/ja/arduino/m5gfx/m5gfx_graph#pushblock)
-  * [pushPixels](/ja/arduino/m5gfx/m5gfx_graph#pushpixels)
-  * [pushPixelsDMA](/ja/arduino/m5gfx/m5gfx_graph#pushpixelsdma)
-  * [writeColor](/ja/arduino/m5gfx/m5gfx_graph#writecolor)
-  * [writeFastHLine](/ja/arduino/m5gfx/m5gfx_graph#writefasthline)
-  * [writeFastVLine](/ja/arduino/m5gfx/m5gfx_graph#writefastvline)
-  * [writeFillRect](/ja/arduino/m5gfx/m5gfx_graph#writefillrect)
-  * [writeFillRectPreclipped](/ja/arduino/m5gfx/m5gfx_graph#writefillrectpreclipped)
-  * [writeIndexedPixels](/ja/arduino/m5gfx/m5gfx_graph#writeindexedpixels)
-  * [writePixel](/ja/arduino/m5gfx/m5gfx_graph#writepixel)
-  * [writePixels](/ja/arduino/m5gfx/m5gfx_graph#writepixels)
-  * [writePixelsDMA](/ja/arduino/m5gfx/m5gfx_graph#writepixelsdma)
+  * Initialize the Mic
 
 
 
-## 画像描画
+****Parameters:****
 
-#### 1\. 画像
+  * None
 
-  * [createPng](/ja/arduino/m5gfx/m5gfx_image#createpng)
-  * [drawBmp](/ja/arduino/m5gfx/m5gfx_image#drawbmp)
-  * [drawBmpFile](/ja/arduino/m5gfx/m5gfx_image#drawbmpfile)
-  * [drawBmpUrl](/ja/arduino/m5gfx/m5gfx_image#drawbmpurl)
-  * [drawJpg](/ja/arduino/m5gfx/m5gfx_image#drawjpg)
-  * [drawJpgFile](/ja/arduino/m5gfx/m5gfx_image#drawjpgfile)
-  * [drawJpgUrl](/ja/arduino/m5gfx/m5gfx_image#drawjpgurl)
-  * [drawPng](/ja/arduino/m5gfx/m5gfx_image#drawpng)
-  * [drawPngFile](/ja/arduino/m5gfx/m5gfx_image#drawpngfile)
-  * [drawPngUrl](/ja/arduino/m5gfx/m5gfx_image#drawpngurl)
-  * [drawQoi](/ja/arduino/m5gfx/m5gfx_image#drawqoi)
-  * [drawQoiFile](/ja/arduino/m5gfx/m5gfx_image#drawqoifile)
 
 
+**Return:**
 
-#### 
+  * bool: 
+    * true:successful initialization
+    * false:failure
 
-  * [drawQoiUrl](/ja/arduino/m5gfx/m5gfx_image#drawqoiurl)
-  * [pushAlphaImage](/ja/arduino/m5gfx/m5gfx_image#pushalphaimage)
-  * [pushGrayscaleImage](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimage)
-  * [pushGrayscaleImageAffine](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimageaffine)
-  * [pushGrayscaleImageRotateZoom](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimagerotatezoom)
-  * [pushImage](/ja/arduino/m5gfx/m5gfx_image#pushimage)
-  * [pushImageDMA](/ja/arduino/m5gfx/m5gfx_image#pushimagedma)
-  * [pushImageAffine](/ja/arduino/m5gfx/m5gfx_image#pushimageaffine)
-  * [pushImageAffineWithAA](/ja/arduino/m5gfx/m5gfx_image#pushimageaffinewithaa)
-  * [pushImageRotateZoom](/ja/arduino/m5gfx/m5gfx_image#pushimagerotatezoom)
-  * [pushImageRotateZoomWithAA](/ja/arduino/m5gfx/m5gfx_image#pushimagerotatezoomwithaa)
 
 
+## end
 
-#### 2\. 画像色変換
+**Syntax:**
+    
+    
+    void end(void);
 
-  * [setSwapBytes](/ja/arduino/m5gfx/m5gfx_image#setswapbytes)
-  * [getSwapBytes](/ja/arduino/m5gfx/m5gfx_image#getswapbytes)
-  * [swap565](/ja/arduino/m5gfx/m5gfx_image#swap565)
-  * [swap888](/ja/arduino/m5gfx/m5gfx_image#swap888)
+`void end(void);`
 
+**Description:**
 
+  * Reverse initialization
 
-## キャンバス管理
 
-#### 1\. 面板パネルパラメータ参数
 
-  * [isEPD](/ja/arduino/m5gfx/m5gfx_sprite#isepd)
-  * [height](/ja/arduino/m5gfx/m5gfx_sprite#height)
-  * [width](/ja/arduino/m5gfx/m5gfx_sprite#width)
-  * [popState](/ja/arduino/m5gfx/m5gfx_sprite#popstate)
-  * [pushState](/ja/arduino/m5gfx/m5gfx_sprite#pushstate)
-  * [setBrightness](/ja/arduino/m5gfx/m5gfx_sprite#setbrightness)
-  * [getBrightness](/ja/arduino/m5gfx/m5gfx_sprite#getbrightness)
-  * [setEpdMode](/ja/arduino/m5gfx/m5gfx_sprite#setepdmode)
-  * [getEpdMode](/ja/arduino/m5gfx/m5gfx_sprite#getepdmode)
-  * [setResolution](/ja/arduino/m5gfx/m5gfx_sprite#setresolution)
-  * [setRotation](/ja/arduino/m5gfx/m5gfx_sprite#setrotation)
-  * [getRotation](/ja/arduino/m5gfx/m5gfx_sprite#getrotation)
+****Parameters:****
 
+  * None
 
 
-#### 2\. カラー
 
-  * [setBaseColor](/ja/arduino/m5gfx/m5gfx_sprite#setbasecolor)
-  * [getBaseColor](/ja/arduino/m5gfx/m5gfx_sprite#getbasecolor)
-  * [setColor](/ja/arduino/m5gfx/m5gfx_sprite#setcolor)
-  * [setRawColor](/ja/arduino/m5gfx/m5gfx_sprite#setrawcolor)
-  * [getRawColor](/ja/arduino/m5gfx/m5gfx_sprite#getrawcolor)
-  * [setColorDepth](/ja/arduino/m5gfx/m5gfx_sprite#setcolordepth)
-  * [getColorDepth](/ja/arduino/m5gfx/m5gfx_sprite#getcolordepth)
-  * [getPalette](/ja/arduino/m5gfx/m5gfx_sprite#getpalette)
-  * [getPaletteCount](/ja/arduino/m5gfx/m5gfx_sprite#getpalettecount)
+**Return:**
 
+  * None
 
 
-#### 3\. 画面クリア
 
-  * [clear](/ja/arduino/m5gfx/m5gfx_sprite#clear)
-  * [clearDisplay](/ja/arduino/m5gfx/m5gfx_sprite#cleardisplay)
-  * [fillScreen](/ja/arduino/m5gfx/m5gfx_sprite#fillscreen)
+## isRunning
 
+**Syntax:**
+    
+    
+    bool isRunning(void);
 
+`bool isRunning(void);`
 
-#### 4\. 座標設定
+**Description:**
 
-  * [setCursor](/ja/arduino/m5gfx/m5gfx_sprite#setcursor)
-  * [getCursorX](/ja/arduino/m5gfx/m5gfx_sprite#getcursorx)
-  * [getCursorY](/ja/arduino/m5gfx/m5gfx_sprite#getcursory)
-  * [setPivot](/ja/arduino/m5gfx/m5gfx_sprite#setpivot)
-  * [getPivotX](/ja/arduino/m5gfx/m5gfx_sprite#getpivotx)
-  * [getPivotY](/ja/arduino/m5gfx/m5gfx_sprite#getpivoty)
+  * Determine if the current Mic background task is running
 
 
 
-#### 5\. キャンバス領域選択
+****Parameters:****
 
-  * [setAddrWindow](/ja/arduino/m5gfx/m5gfx_sprite#setaddrwindow)
-  * [setWindow](/ja/arduino/m5gfx/m5gfx_sprite#setwindow)
-  * [setClipRect](/ja/arduino/m5gfx/m5gfx_sprite#setcliprect)
-  * [getClipRect](/ja/arduino/m5gfx/m5gfx_sprite#getcliprect)
-  * [clearClipRect](/ja/arduino/m5gfx/m5gfx_sprite#clearcliprect)
+  * None
 
 
 
-#### 6\. キャンバススクロール
+**Return:**
 
-  * [scroll](/ja/arduino/m5gfx/m5gfx_sprite#scroll)
-  * [setTextScroll](/ja/arduino/m5gfx/m5gfx_sprite#settextscroll)
-  * [setScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#setscrollrect)
-  * [getScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#getscrollrect)
-  * [clearScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#clearscrollrect)
+  * bool:
+    * true: Running
+    * false: Not running
 
 
 
-#### 7\. カスタム処理
+## isEnabled
 
-  * [effect](/ja/arduino/m5gfx/m5gfx_sprite#effect)
+**Syntax:**
+    
+    
+    bool isEnabled(void);
 
+`bool isEnabled(void);`
 
+**Description:**
 
-## スクリーン電源管理
+  * Determine if the current Mic is initialized
 
-#### 1\. 電源状態管理
 
-  * [powerSave](/ja/arduino/m5gfx/m5gfx_power#powersave)
-  * [powerSaveOff](/ja/arduino/m5gfx/m5gfx_power#powersaveoff)
-  * [powerSaveOn](/ja/arduino/m5gfx/m5gfx_power#powersaveon)
 
+****Parameters:****
 
+  * None
 
-#### 2\. スリープとウェイクアップ
 
-  * [sleep](/ja/arduino/m5gfx/m5gfx_power#sleep)
-  * [wakeup](/ja/arduino/m5gfx/m5gfx_power#wakeup)
 
+**Return:**
 
+  * bool:
+    * true: Initialized
+    * false: Not initialized
 
-## タッチスクリーン
 
-#### 1\. タッチ情報
 
-  * [getTouch](/ja/arduino/m5gfx/m5gfx_touch#gettouch)
-  * [getTouchRaw](/ja/arduino/m5gfx/m5gfx_touch#gettouchraw)
-  * [convertRawXY](/ja/arduino/m5gfx/m5gfx_touch#convertrawxy)
+## isRecording
 
+**Syntax:**
+    
+    
+    size_t isRecording(void);
 
+`size_t isRecording(void);`
 
-#### 2\. 画面キャリブレーション
+**Description:**
 
-  * [calibrateTouch](/ja/arduino/m5gfx/m5gfx_touch#calibratetouch)
-  * [setTouchCalibrate](/ja/arduino/m5gfx/m5gfx_touch#settouchcalibrate)
+  * Determine if the current Mic is recording
 
 
 
-## アルファベット索引
+****Parameters:****
 
-#### a-d
+  * None
 
-  * [calibrateTouch](/ja/arduino/m5gfx/m5gfx_touch#calibratetouch)
-  * [clear](/ja/arduino/m5gfx/m5gfx_sprite#clear)
-  * [clearClipRect](/ja/arduino/m5gfx/m5gfx_sprite#clearcliprect)
-  * [clearDisplay](/ja/arduino/m5gfx/m5gfx_sprite#cleardisplay)
-  * [clearScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#clearscrollrect)
-  * [convertRawXY](/ja/arduino/m5gfx/m5gfx_touch#convertrawxy)
-  * [copyRect](/ja/arduino/m5gfx/m5gfx_graph#copyrect)
-  * [createPng](/ja/arduino/m5gfx/m5gfx_image#createpng)
-  * [drawArc](/ja/arduino/m5gfx/m5gfx_graph#drawarc)
-  * [drawBezier](/ja/arduino/m5gfx/m5gfx_graph#drawbezier)
-  * [drawBmp](/ja/arduino/m5gfx/m5gfx_image#drawbmp)
-  * [drawBmpFile](/ja/arduino/m5gfx/m5gfx_image#drawbmpfile)
-  * [drawBmpUrl](/ja/arduino/m5gfx/m5gfx_image#drawbmpurl)
 
 
+**Return:**
 
-#### 
+  * Not Recording: 0
+  * Recording (There's room in the queue): 1
+  * Recording (There's no room in the queue.): 2
 
-  * [drawCenterString](/ja/arduino/m5gfx/m5gfx_text#drawcenterstring)
-  * [drawChar](/ja/arduino/m5gfx/m5gfx_text#drawchar)
-  * [drawCircle](/ja/arduino/m5gfx/m5gfx_graph#drawcircle)
-  * [drawEllipse](/ja/arduino/m5gfx/m5gfx_graph#drawellipse)
-  * [drawEllipseArc](/ja/arduino/m5gfx/m5gfx_graph#drawellipsearc)
-  * [drawFastHLine](/ja/arduino/m5gfx/m5gfx_graph#drawfasthline)
-  * [drawFastVLine](/ja/arduino/m5gfx/m5gfx_graph#drawfastvline)
-  * [drawFloat](/ja/arduino/m5gfx/m5gfx_text#drawfloat)
-  * [drawGradientHLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradienthline)
-  * [drawGradientLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradientline)
-  * [drawGradientVLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradientvline)
-  * [drawJpg](/ja/arduino/m5gfx/m5gfx_image#drawjpg)
-  * [drawJpgFile](/ja/arduino/m5gfx/m5gfx_image#drawjpgfile)
 
 
+## setSampleRate
 
-#### 
+**Syntax:**
+    
+    
+    void setSampleRate(uint32_t sample_rate);
 
-  * [drawJpgUrl](/ja/arduino/m5gfx/m5gfx_image#drawjpgurl)
-  * [drawLine](/ja/arduino/m5gfx/m5gfx_graph#drawline)
-  * [drawNumber](/ja/arduino/m5gfx/m5gfx_text#drawnumber)
-  * [drawPixel](/ja/arduino/m5gfx/m5gfx_graph#drawpixel)
-  * [drawPng](/ja/arduino/m5gfx/m5gfx_image#drawpng)
-  * [drawPngFile](/ja/arduino/m5gfx/m5gfx_image#drawpngfile)
-  * [drawPngUrl](/ja/arduino/m5gfx/m5gfx_image#drawpngurl)
-  * [drawQoi](/ja/arduino/m5gfx/m5gfx_image#drawqoi)
-  * [drawQoiFile](/ja/arduino/m5gfx/m5gfx_image#drawqoifile)
-  * [drawQoiUrl](/ja/arduino/m5gfx/m5gfx_image#drawqoiurl)
-  * [drawString](/ja/arduino/m5gfx/m5gfx_text#drawstring)
-  * [drawTriangle](/ja/arduino/m5gfx/m5gfx_graph#drawtriangle)
+`void setSampleRate(uint32_t sample_rate);`
 
+**Description:**
 
+  * Set the recording sample rate
 
-#### e-h
 
-  * [effect](/ja/arduino/m5gfx/m5gfx_sprite#effect)
-  * [endWrite](/ja/arduino/m5gfx/m5gfx_graph#endwrite)
-  * [fillAffine](/ja/arduino/m5gfx/m5gfx_graph#fillaffine)
-  * [fillArc](/ja/arduino/m5gfx/m5gfx_graph#fillarc)
-  * [fillCircle](/ja/arduino/m5gfx/m5gfx_graph#fillcircle)
-  * [fillEllipse](/ja/arduino/m5gfx/m5gfx_graph#fillellipse)
-  * [fillEllipseArc](/ja/arduino/m5gfx/m5gfx_graph#fillellipsearc)
-  * [fillRect](/ja/arduino/m5gfx/m5gfx_graph#fillrect)
-  * [fillRectAlpha](/ja/arduino/m5gfx/m5gfx_graph#fillrectalpha)
-  * [fillRoundRect](/ja/arduino/m5gfx/m5gfx_graph#fillroundrect)
-  * [fillScreen](/ja/arduino/m5gfx/m5gfx_sprite#fillscreen)
-  * [fillTriangle](/ja/arduino/m5gfx/m5gfx_graph#filltriangle)
-  * [floodFill](/ja/arduino/m5gfx/m5gfx_graph#floodfill)
-  * [fontHeight](/ja/arduino/m5gfx/m5gfx_text#fontheight)
 
+****Parameters:****
 
+  * uint32_t sample_rate: 
+    * The sample rate in Hz
 
-#### 
 
-  * [fontWidth](/ja/arduino/m5gfx/m5gfx_text#fontwidth)
-  * [getBaseColor](/ja/arduino/m5gfx/m5gfx_sprite#getbasecolor)
-  * [getBrightness](/ja/arduino/m5gfx/m5gfx_sprite#getbrightness)
-  * [getClipRect](/ja/arduino/m5gfx/m5gfx_sprite#getcliprect)
-  * [getColorDepth](/ja/arduino/m5gfx/m5gfx_sprite#getcolordepth)
-  * [getCursorX](/ja/arduino/m5gfx/m5gfx_sprite#getcursorx)
-  * [getCursorY](/ja/arduino/m5gfx/m5gfx_sprite#getcursory)
-  * [getEpdMode](/ja/arduino/m5gfx/m5gfx_sprite#getepdmode)
-  * [getFont](/ja/arduino/m5gfx/m5gfx_text#getfont)
-  * [getPalette](/ja/arduino/m5gfx/m5gfx_sprite#getpalette)
-  * [getPaletteCount](/ja/arduino/m5gfx/m5gfx_sprite#getpalettecount)
-  * [getPivotX](/ja/arduino/m5gfx/m5gfx_sprite#getpivotx)
-  * [getPivotY](/ja/arduino/m5gfx/m5gfx_sprite#getpivoty)
-  * [getRawColor](/ja/arduino/m5gfx/m5gfx_sprite#getrawcolor)
 
+**Return:**
 
+  * None
 
-#### 
 
-  * [getRotation](/ja/arduino/m5gfx/m5gfx_sprite#getrotation)
-  * [getScrollRect](../m5gfx_sprite#getscrollrect)
-  * [getStartCount](/ja/arduino/m5gfx/m5gfx_graph#getstartcount)
-  * [getSwapBytes](/ja/arduino/m5gfx/m5gfx_image#getswapbytes)
-  * [getTextDatum](/ja/arduino/m5gfx/m5gfx_text#gettextdatum)
-  * [getTextPadding](/ja/arduino/m5gfx/m5gfx_text#gettextpadding)
-  * [getTextSizeX](/ja/arduino/m5gfx/m5gfx_text#gettextsizex)
-  * [getTextSizeY](/ja/arduino/m5gfx/m5gfx_text#gettextsizey)
-  * [getTextStyle](/ja/arduino/m5gfx/m5gfx_text#gettextstyle)
-  * [getTouch](/ja/arduino/m5gfx/m5gfx_touch#gettouch)
-  * [getTouchRaw](/ja/arduino/m5gfx/m5gfx_touch#gettouchraw)
-  * [height](/ja/arduino/m5gfx/m5gfx_sprite#height)
 
+## record
 
+**Syntax:**
+    
+    
+    bool record(uint8_t* rec_data, size_t array_len, uint32_t sample_rate, bool stereo = false);
 
-#### i-r
+`bool record(uint8_t* rec_data, size_t array_len, uint32_t sample_rate, bool stereo = false);`
+    
+    
+    bool record(int16_t* rec_data, size_t array_len, uint32_t sample_rate, bool stereo = false);
 
-  * [isEPD](/ja/arduino/m5gfx/m5gfx_sprite#isepd)
-  * [loadFont](/ja/arduino/m5gfx/m5gfx_text#loadfont)
-  * [paint](/ja/arduino/m5gfx/m5gfx_graph#paint)
-  * [popState](/ja/arduino/m5gfx/m5gfx_sprite#popstate)
-  * [powerSave](/ja/arduino/m5gfx/m5gfx_power#powersave)
-  * [powerSaveOff](/ja/arduino/m5gfx/m5gfx_power#powersaveoff)
-  * [powerSaveOn](/ja/arduino/m5gfx/m5gfx_power#powersaveon)
-  * [print](/ja/arduino/m5gfx/m5gfx_text#print)
-  * [printf](/ja/arduino/m5gfx/m5gfx_text#printf)
-  * [println](/ja/arduino/m5gfx/m5gfx_text#println)
+`bool record(int16_t* rec_data, size_t array_len, uint32_t sample_rate, bool stereo = false);`
+    
+    
+    bool record(uint8_t* rec_data, size_t array_len);
 
+`bool record(uint8_t* rec_data, size_t array_len);`
+    
+    
+    bool record(int16_t* rec_data, size_t array_len);
 
+`bool record(int16_t* rec_data, size_t array_len);`
 
-#### 
+**Description:**
 
-  * [progressBar](/ja/arduino/m5gfx/m5gfx_graph#progressbar)
-  * [pushAlphaImage](/ja/arduino/m5gfx/m5gfx_image#pushalphaimage)
-  * [pushBlock](/ja/arduino/m5gfx/m5gfx_graph#pushblock)
-  * [pushGrayscaleImage](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimage)
-  * [pushGrayscaleImageAffine](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimageaffine)
-  * [pushGrayscaleImageRotateZoom](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimagerotatezoom)
-  * [pushImage](/ja/arduino/m5gfx/m5gfx_image#pushimage)
-  * [pushImageAffine](/ja/arduino/m5gfx/m5gfx_image#pushimageaffine)
-  * [pushImageAffineWithAA](/ja/arduino/m5gfx/m5gfx_image#pushimageaffinewithaa)
-  * [pushImageDMA](/ja/arduino/m5gfx/m5gfx_image#pushimagedma)
+  * Record raw audio data in 8-bit or 16-bit wav format
 
 
 
-#### 
+****Parameters:****
 
-  * [pushImageRotateZoom](/ja/arduino/m5gfx/m5gfx_image#pushimagerotatezoom)
-  * [pushImageRotateZoomWithAA](/ja/arduino/m5gfx/m5gfx_image#pushimagerotatezoomwithaa)
-  * [pushPixels](/ja/arduino/m5gfx/m5gfx_graph#pushpixels)
-  * [pushPixelsDMA](/ja/arduino/m5gfx/m5gfx_graph#pushpixelsdma)
-  * [pushState](/ja/arduino/m5gfx/m5gfx_sprite#pushstate)
-  * [qrcode](/ja/arduino/m5gfx/m5gfx_image#qrcode)
-  * [readPixel](/ja/arduino/m5gfx/m5gfx_graph#readpixel)
-  * [readPixelRGB](/ja/arduino/m5gfx/m5gfx_graph#readpixelrgb)
-  * [readRect](/ja/arduino/m5gfx/m5gfx_graph#readrect)
-  * [readRectRGB](/ja/arduino/m5gfx/m5gfx_graph#readrectrgb)
+  * uint8_t* rec_data: 
+    * Pointer to store the raw audio data
+  * size_t array_len: 
+    * The length of the array
+  * uint32_t sample_rate: 
+    * The sample rate for recording in Hz
+  * bool stereo: 
+    * true:stereo
+    * false:mono
 
 
 
-#### s-z
+**Return:**
 
-  * [scroll](/ja/arduino/m5gfx/m5gfx_sprite#scroll)
-  * [setAddrWindow](/ja/arduino/m5gfx/m5gfx_sprite#setaddrwindow)
-  * [setBaseColor](/ja/arduino/m5gfx/m5gfx_sprite#setbasecolor)
-  * [setBrightness](/ja/arduino/m5gfx/m5gfx_sprite#setbrightness)
-  * [setClipRect](/ja/arduino/m5gfx/m5gfx_sprite#setcliprect)
-  * [setColor](/ja/arduino/m5gfx/m5gfx_sprite#setcolor)
-  * [setColorDepth](/ja/arduino/m5gfx/m5gfx_sprite#setcolordepth)
-  * [setCursor](/ja/arduino/m5gfx/m5gfx_sprite#setcursor)
-  * [setEpdMode](/ja/arduino/m5gfx/m5gfx_sprite#setepdmode)
-  * [setFont](/ja/arduino/m5gfx/m5gfx_text#setfont)
-  * [setPivot](/ja/arduino/m5gfx/m5gfx_sprite#setpivot)
-  * [setRawColor](/ja/arduino/m5gfx/m5gfx_sprite#setrawcolor)
-  * [setResolution](/ja/arduino/m5gfx/m5gfx_sprite#setresolution)
-  * [setRotation](/ja/arduino/m5gfx/m5gfx_sprite#setrotation)
-  * [setScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#setscrollrect)
-
-
-
-#### 
-
-  * [setSwapBytes](/ja/arduino/m5gfx/m5gfx_image#setswapbytes)
-  * [setTextColor](/ja/arduino/m5gfx/m5gfx_text#settextcolor)
-  * [setTextDatum](/ja/arduino/m5gfx/m5gfx_text#settextdatum)
-  * [setTextPadding](/ja/arduino/m5gfx/m5gfx_text#settextpadding)
-  * [setTextScroll](/ja/arduino/m5gfx/m5gfx_sprite#settextscroll)
-  * [setTextSize](/ja/arduino/m5gfx/m5gfx_text#settextsize)
-  * [setTextStyle](/ja/arduino/m5gfx/m5gfx_text#settextstyle)
-  * [setTextWrap](/ja/arduino/m5gfx/m5gfx_text#settextwrap)
-  * [setTouchCalibrate](/ja/arduino/m5gfx/m5gfx_touch#settouchcalibrate)
-  * [setWindow](/ja/arduino/m5gfx/m5gfx_sprite#setwindow)
-  * [showFont](/ja/arduino/m5gfx/m5gfx_text#showfont)
-  * [sleep](/ja/arduino/m5gfx/m5gfx_power#sleep)
-  * [startWrite](/ja/arduino/m5gfx/m5gfx_graph#startwrite)
-  * [swap565](/ja/arduino/m5gfx/m5gfx_image#swap565)
-  * [swap888](/ja/arduino/m5gfx/m5gfx_image#swap888)
-
-
-
-#### 
-
-  * [textLength](/ja/arduino/m5gfx/m5gfx_text#textlength)
-  * [textWidth](/ja/arduino/m5gfx/m5gfx_text#textwidth)
-  * [unloadFont](/ja/arduino/m5gfx/m5gfx_text#unloadfont)
-  * [wakeup](/ja/arduino/m5gfx/m5gfx_power#wakeup)
-  * [width](/ja/arduino/m5gfx/m5gfx_sprite#width)
-  * [writeColor](/ja/arduino/m5gfx/m5gfx_graph#writecolor)
-  * [writeFastHLine](/ja/arduino/m5gfx/m5gfx_graph#writefasthline)
-  * [writeFastVLine](/ja/arduino/m5gfx/m5gfx_graph#writefastvline)
-  * [writeFillRect](/ja/arduino/m5gfx/m5gfx_graph#writefillrect)
-  * [writeFillRectPreclipped](/ja/arduino/m5gfx/m5gfx_graph#writefillrectpreclipped)
-  * [writeIndexedPixels](/ja/arduino/m5gfx/m5gfx_graph#writeindexedpixels)
-  * [writePixel](/ja/arduino/m5gfx/m5gfx_graph#writepixel)
-  * [writePixels](/ja/arduino/m5gfx/m5gfx_graph#writepixels)
-  * [writePixelsDMA](/ja/arduino/m5gfx/m5gfx_graph#writepixelsdma)
+  * bool:
+    * true: Successfully executed
+    * false: Execution failed
 
 
 

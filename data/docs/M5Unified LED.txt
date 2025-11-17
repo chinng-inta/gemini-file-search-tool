@@ -1,10 +1,10 @@
 ---
-doc_type: M5GFX
-crawled_at: 2025/11/18 00:19:31
-first_url: https://docs.m5stack.com/ja/arduino/m5gfx/m5gfx_functions/
+doc_type: M5Unified LED
+crawled_at: 2025/11/18 00:19:11
+first_url: https://docs.m5stack.com/ja/arduino/m5unified/led_class/
 ---
 
-# Page: https://docs.m5stack.com/ja/arduino/m5gfx/m5gfx_functions/
+# Page: https://docs.m5stack.com/ja/arduino/m5unified/led_class/
 
 [](https://m5stack.com/)
 
@@ -1735,495 +1735,451 @@ Product  Tutorial
 
 Search
 
-# M5GFX API
+# M5Unified LED Class
 
-## テキスト描画
+  * LED Class
+    * setLedInstance
+    * getLedInstancePtr
+    * begin
+    * display
+    * setAutoDisplay
+    * getCount
+    * getBuffer
+    * setBrightness
+    * setColor
+    * setColors
+    * setAllColor
+    * isEnabled
+    * サンプルプログラム
 
-#### 1\. テキスト表示
 
-  * [drawCenterString](/ja/arduino/m5gfx/m5gfx_text#drawcenterstring)
-  * [drawChar](/ja/arduino/m5gfx/m5gfx_text#drawchar)
-  * [drawFloat](/ja/arduino/m5gfx/m5gfx_text#drawfloat)
-  * [drawNumber](/ja/arduino/m5gfx/m5gfx_text#drawnumber)
-  * [drawString](/ja/arduino/m5gfx/m5gfx_text#drawstring)
-  * [print](/ja/arduino/m5gfx/m5gfx_text#print)
-  * [printf](/ja/arduino/m5gfx/m5gfx_text#printf)
-  * [println](/ja/arduino/m5gfx/m5gfx_text#println)
 
+## setLedInstance
 
+**関数プロトタイプ:**
+    
+    
+    void setLedInstance(std::shared_ptr<LED_Base> instance);
 
-#### 2\. テキスト属性
+`void setLedInstance(std::shared_ptr<LED_Base> instance);`
 
-  * [setFont](/ja/arduino/m5gfx/m5gfx_text#setfont)
-  * [getFont](/ja/arduino/m5gfx/m5gfx_text#getfont)
-  * [showFont](/ja/arduino/m5gfx/m5gfx_text#showfont)
-  * [fontHeight](/ja/arduino/m5gfx/m5gfx_text#fontheight)
-  * [fontWidth](/ja/arduino/m5gfx/m5gfx_text#fontwidth)
-  * [loadFont](/ja/arduino/m5gfx/m5gfx_text#loadfont)
-  * [unloadFont](/ja/arduino/m5gfx/m5gfx_text#unloadfont)
-  * [setTextColor](/ja/arduino/m5gfx/m5gfx_text#settextcolor)
-  * [setTextSize](/ja/arduino/m5gfx/m5gfx_text#settextsize)
-  * [getTextSizeX](/ja/arduino/m5gfx/m5gfx_text#gettextsizex)
-  * [getTextSizeY](/ja/arduino/m5gfx/m5gfx_text#gettextsizey)
-  * [setTextStyle](/ja/arduino/m5gfx/m5gfx_text#settextstyle)
-  * [getTextStyle](/ja/arduino/m5gfx/m5gfx_text#gettextstyle)
-  * [textLength](/ja/arduino/m5gfx/m5gfx_text#textlength)
-  * [textWidth](/ja/arduino/m5gfx/m5gfx_text#textwidth)
+**機能説明:**
 
+  * LED インスタンスを設定する
 
 
-#### 3\. テキストの配置とマージン
 
-  * [setTextDatum](/ja/arduino/m5gfx/m5gfx_text#settextdatum)
-  * [getTextDatum](/ja/arduino/m5gfx/m5gfx_text#gettextdatum)
-  * [setTextPadding](/ja/arduino/m5gfx/m5gfx_text#settextpadding)
-  * [getTextPadding](/ja/arduino/m5gfx/m5gfx_text#gettextpadding)
+**入力パラメータ:**
 
+  * instance：
+    * LED インスタンスポインタ
 
 
-#### 4\. 自動改行
 
-  * [setTextWrap](/ja/arduino/m5gfx/m5gfx_text#settextwrap)
+**戻り値:**
 
+  * null
 
 
-## 図形描画
 
-#### 1\. 線形図形
+## getLedInstancePtr
 
-  * [drawArc](/ja/arduino/m5gfx/m5gfx_graph#drawarc)
-  * [drawBezier](/ja/arduino/m5gfx/m5gfx_graph#drawbezier)
-  * [drawCircle](/ja/arduino/m5gfx/m5gfx_graph#drawcircle)
-  * [drawEllipse](/ja/arduino/m5gfx/m5gfx_graph#drawellipse)
-  * [drawEllipseArc](/ja/arduino/m5gfx/m5gfx_graph#drawellipsearc)
-  * [drawFastHLine](/ja/arduino/m5gfx/m5gfx_graph#drawfasthline)
-  * [drawFastVLine](/ja/arduino/m5gfx/m5gfx_graph#drawfastvline)
-  * [drawLine](/ja/arduino/m5gfx/m5gfx_graph#drawline)
-  * [drawGradientHLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradienthline)
-  * [drawGradientLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradientline)
-  * [drawGradientVLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradientvline)
-  * [drawPixel](/ja/arduino/m5gfx/m5gfx_graph#drawpixel)
-  * [drawTriangle](/ja/arduino/m5gfx/m5gfx_graph#drawtriangle)
+**関数プロトタイプ:**
+    
+    
+    LED_Base* getLedInstancePtr(void);
 
+`LED_Base* getLedInstancePtr(void);`
 
+**機能説明:**
 
-#### 2\. 塗りつぶし図形
+  * LED インスタンスポインタを取得する
 
-  * [fillAffine](/ja/arduino/m5gfx/m5gfx_graph#fillaffine)
-  * [fillArc](/ja/arduino/m5gfx/m5gfx_graph#fillarc)
-  * [fillCircle](/ja/arduino/m5gfx/m5gfx_graph#fillcircle)
-  * [fillEllipse](/ja/arduino/m5gfx/m5gfx_graph#fillellipse)
-  * [fillEllipseArc](/ja/arduino/m5gfx/m5gfx_graph#fillellipsearc)
-  * [fillRect](/ja/arduino/m5gfx/m5gfx_graph#fillrect)
-  * [fillRectAlpha](/ja/arduino/m5gfx/m5gfx_graph#fillrectalpha)
-  * [fillRoundRect](/ja/arduino/m5gfx/m5gfx_graph#fillroundrect)
-  * [fillTriangle](/ja/arduino/m5gfx/m5gfx_graph#filltriangle)
-  * [floodFill](/ja/arduino/m5gfx/m5gfx_graph#floodfill)
-  * [paint](/ja/arduino/m5gfx/m5gfx_graph#paint)
-  * [copyRect](/ja/arduino/m5gfx/m5gfx_graph#copyrect)
 
 
+**入力パラメータ:**
 
-#### 3\. 特殊図形
+  * null
 
-  * [progressBar](/ja/arduino/m5gfx/m5gfx_graph#progressbar)
-  * [qrcode](/ja/arduino/m5gfx/m5gfx_graph#qrcode)
 
 
+**戻り値:**
 
-#### 4\. write and read
+  * LED_Base*:
+    * LED インスタンスポインタ
 
-  * [getStartCount](/ja/arduino/m5gfx/m5gfx_graph#getstartcount)
-  * [readPixel](/ja/arduino/m5gfx/m5gfx_graph#readpixel)
-  * [readPixelRGB](/ja/arduino/m5gfx/m5gfx_graph#readpixelrgb)
-  * [readRect](/ja/arduino/m5gfx/m5gfx_graph#readrect)
-  * [readRectRGB](/ja/arduino/m5gfx/m5gfx_graph#readrectrgb)
-  * [startWrite](/ja/arduino/m5gfx/m5gfx_graph#startwrite)
-  * [endWrite](/ja/arduino/m5gfx/m5gfx_graph#endwrite)
-  * [pushBlock](/ja/arduino/m5gfx/m5gfx_graph#pushblock)
-  * [pushPixels](/ja/arduino/m5gfx/m5gfx_graph#pushpixels)
-  * [pushPixelsDMA](/ja/arduino/m5gfx/m5gfx_graph#pushpixelsdma)
-  * [writeColor](/ja/arduino/m5gfx/m5gfx_graph#writecolor)
-  * [writeFastHLine](/ja/arduino/m5gfx/m5gfx_graph#writefasthline)
-  * [writeFastVLine](/ja/arduino/m5gfx/m5gfx_graph#writefastvline)
-  * [writeFillRect](/ja/arduino/m5gfx/m5gfx_graph#writefillrect)
-  * [writeFillRectPreclipped](/ja/arduino/m5gfx/m5gfx_graph#writefillrectpreclipped)
-  * [writeIndexedPixels](/ja/arduino/m5gfx/m5gfx_graph#writeindexedpixels)
-  * [writePixel](/ja/arduino/m5gfx/m5gfx_graph#writepixel)
-  * [writePixels](/ja/arduino/m5gfx/m5gfx_graph#writepixels)
-  * [writePixelsDMA](/ja/arduino/m5gfx/m5gfx_graph#writepixelsdma)
 
 
+## begin
 
-## 画像描画
+**関数プロトタイプ:**
+    
+    
+    bool begin(void);
 
-#### 1\. 画像
+`bool begin(void);`
 
-  * [createPng](/ja/arduino/m5gfx/m5gfx_image#createpng)
-  * [drawBmp](/ja/arduino/m5gfx/m5gfx_image#drawbmp)
-  * [drawBmpFile](/ja/arduino/m5gfx/m5gfx_image#drawbmpfile)
-  * [drawBmpUrl](/ja/arduino/m5gfx/m5gfx_image#drawbmpurl)
-  * [drawJpg](/ja/arduino/m5gfx/m5gfx_image#drawjpg)
-  * [drawJpgFile](/ja/arduino/m5gfx/m5gfx_image#drawjpgfile)
-  * [drawJpgUrl](/ja/arduino/m5gfx/m5gfx_image#drawjpgurl)
-  * [drawPng](/ja/arduino/m5gfx/m5gfx_image#drawpng)
-  * [drawPngFile](/ja/arduino/m5gfx/m5gfx_image#drawpngfile)
-  * [drawPngUrl](/ja/arduino/m5gfx/m5gfx_image#drawpngurl)
-  * [drawQoi](/ja/arduino/m5gfx/m5gfx_image#drawqoi)
-  * [drawQoiFile](/ja/arduino/m5gfx/m5gfx_image#drawqoifile)
+**機能説明:**
 
+  * LED を初期化する
 
 
-#### 
 
-  * [drawQoiUrl](/ja/arduino/m5gfx/m5gfx_image#drawqoiurl)
-  * [pushAlphaImage](/ja/arduino/m5gfx/m5gfx_image#pushalphaimage)
-  * [pushGrayscaleImage](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimage)
-  * [pushGrayscaleImageAffine](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimageaffine)
-  * [pushGrayscaleImageRotateZoom](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimagerotatezoom)
-  * [pushImage](/ja/arduino/m5gfx/m5gfx_image#pushimage)
-  * [pushImageDMA](/ja/arduino/m5gfx/m5gfx_image#pushimagedma)
-  * [pushImageAffine](/ja/arduino/m5gfx/m5gfx_image#pushimageaffine)
-  * [pushImageAffineWithAA](/ja/arduino/m5gfx/m5gfx_image#pushimageaffinewithaa)
-  * [pushImageRotateZoom](/ja/arduino/m5gfx/m5gfx_image#pushimagerotatezoom)
-  * [pushImageRotateZoomWithAA](/ja/arduino/m5gfx/m5gfx_image#pushimagerotatezoomwithaa)
+**入力パラメータ:**
 
+  * null
 
 
-#### 2\. 画像色変換
 
-  * [setSwapBytes](/ja/arduino/m5gfx/m5gfx_image#setswapbytes)
-  * [getSwapBytes](/ja/arduino/m5gfx/m5gfx_image#getswapbytes)
-  * [swap565](/ja/arduino/m5gfx/m5gfx_image#swap565)
-  * [swap888](/ja/arduino/m5gfx/m5gfx_image#swap888)
+**戻り値:**
 
+  * bool:
+    * true: 初期化成功
+    * false: 初期化失敗
 
 
-## キャンバス管理
 
-#### 1\. 面板パネルパラメータ参数
+## display
 
-  * [isEPD](/ja/arduino/m5gfx/m5gfx_sprite#isepd)
-  * [height](/ja/arduino/m5gfx/m5gfx_sprite#height)
-  * [width](/ja/arduino/m5gfx/m5gfx_sprite#width)
-  * [popState](/ja/arduino/m5gfx/m5gfx_sprite#popstate)
-  * [pushState](/ja/arduino/m5gfx/m5gfx_sprite#pushstate)
-  * [setBrightness](/ja/arduino/m5gfx/m5gfx_sprite#setbrightness)
-  * [getBrightness](/ja/arduino/m5gfx/m5gfx_sprite#getbrightness)
-  * [setEpdMode](/ja/arduino/m5gfx/m5gfx_sprite#setepdmode)
-  * [getEpdMode](/ja/arduino/m5gfx/m5gfx_sprite#getepdmode)
-  * [setResolution](/ja/arduino/m5gfx/m5gfx_sprite#setresolution)
-  * [setRotation](/ja/arduino/m5gfx/m5gfx_sprite#setrotation)
-  * [getRotation](/ja/arduino/m5gfx/m5gfx_sprite#getrotation)
+**関数プロトタイプ:**
+    
+    
+    void display(void);
 
+`void display(void);`
 
+**機能説明:**
 
-#### 2\. カラー
+  * LED 状態を更新する
 
-  * [setBaseColor](/ja/arduino/m5gfx/m5gfx_sprite#setbasecolor)
-  * [getBaseColor](/ja/arduino/m5gfx/m5gfx_sprite#getbasecolor)
-  * [setColor](/ja/arduino/m5gfx/m5gfx_sprite#setcolor)
-  * [setRawColor](/ja/arduino/m5gfx/m5gfx_sprite#setrawcolor)
-  * [getRawColor](/ja/arduino/m5gfx/m5gfx_sprite#getrawcolor)
-  * [setColorDepth](/ja/arduino/m5gfx/m5gfx_sprite#setcolordepth)
-  * [getColorDepth](/ja/arduino/m5gfx/m5gfx_sprite#getcolordepth)
-  * [getPalette](/ja/arduino/m5gfx/m5gfx_sprite#getpalette)
-  * [getPaletteCount](/ja/arduino/m5gfx/m5gfx_sprite#getpalettecount)
 
 
+**入力パラメータ:**
 
-#### 3\. 画面クリア
+  * null
 
-  * [clear](/ja/arduino/m5gfx/m5gfx_sprite#clear)
-  * [clearDisplay](/ja/arduino/m5gfx/m5gfx_sprite#cleardisplay)
-  * [fillScreen](/ja/arduino/m5gfx/m5gfx_sprite#fillscreen)
 
 
+**戻り値:**
 
-#### 4\. 座標設定
+  * null
 
-  * [setCursor](/ja/arduino/m5gfx/m5gfx_sprite#setcursor)
-  * [getCursorX](/ja/arduino/m5gfx/m5gfx_sprite#getcursorx)
-  * [getCursorY](/ja/arduino/m5gfx/m5gfx_sprite#getcursory)
-  * [setPivot](/ja/arduino/m5gfx/m5gfx_sprite#setpivot)
-  * [getPivotX](/ja/arduino/m5gfx/m5gfx_sprite#getpivotx)
-  * [getPivotY](/ja/arduino/m5gfx/m5gfx_sprite#getpivoty)
 
 
+## setAutoDisplay
 
-#### 5\. キャンバス領域選択
+**関数プロトタイプ:**
+    
+    
+    void setAutoDisplay(bool enable);
 
-  * [setAddrWindow](/ja/arduino/m5gfx/m5gfx_sprite#setaddrwindow)
-  * [setWindow](/ja/arduino/m5gfx/m5gfx_sprite#setwindow)
-  * [setClipRect](/ja/arduino/m5gfx/m5gfx_sprite#setcliprect)
-  * [getClipRect](/ja/arduino/m5gfx/m5gfx_sprite#getcliprect)
-  * [clearClipRect](/ja/arduino/m5gfx/m5gfx_sprite#clearcliprect)
+`void setAutoDisplay(bool enable);`
 
+**機能説明:**
 
+  * LED 状態の自動更新を設定する（デフォルトでは自動更新）
 
-#### 6\. キャンバススクロール
 
-  * [scroll](/ja/arduino/m5gfx/m5gfx_sprite#scroll)
-  * [setTextScroll](/ja/arduino/m5gfx/m5gfx_sprite#settextscroll)
-  * [setScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#setscrollrect)
-  * [getScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#getscrollrect)
-  * [clearScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#clearscrollrect)
 
+**入力パラメータ:**
 
+  * enable：
+    * true：自動更新を有効にする
+    * false：自動更新を無効にする
 
-#### 7\. カスタム処理
 
-  * [effect](/ja/arduino/m5gfx/m5gfx_sprite#effect)
 
+**戻り値:**
 
+  * null
 
-## スクリーン電源管理
 
-#### 1\. 電源状態管理
 
-  * [powerSave](/ja/arduino/m5gfx/m5gfx_power#powersave)
-  * [powerSaveOff](/ja/arduino/m5gfx/m5gfx_power#powersaveoff)
-  * [powerSaveOn](/ja/arduino/m5gfx/m5gfx_power#powersaveon)
+## getCount
 
+**関数プロトタイプ:**
+    
+    
+    size_t getCount(void);
 
+`size_t getCount(void);`
 
-#### 2\. スリープとウェイクアップ
+**機能説明:**
 
-  * [sleep](/ja/arduino/m5gfx/m5gfx_power#sleep)
-  * [wakeup](/ja/arduino/m5gfx/m5gfx_power#wakeup)
+  * LED の数を取得する
 
 
 
-## タッチスクリーン
+**入力パラメータ:**
 
-#### 1\. タッチ情報
+  * null
 
-  * [getTouch](/ja/arduino/m5gfx/m5gfx_touch#gettouch)
-  * [getTouchRaw](/ja/arduino/m5gfx/m5gfx_touch#gettouchraw)
-  * [convertRawXY](/ja/arduino/m5gfx/m5gfx_touch#convertrawxy)
 
 
+**戻り値:**
 
-#### 2\. 画面キャリブレーション
+  * size_t:
+    * LED の数
 
-  * [calibrateTouch](/ja/arduino/m5gfx/m5gfx_touch#calibratetouch)
-  * [setTouchCalibrate](/ja/arduino/m5gfx/m5gfx_touch#settouchcalibrate)
 
 
+## getBuffer
 
-## アルファベット索引
+**関数プロトタイプ:**
+    
+    
+    RGBColor* getBuffer(void);
 
-#### a-d
+`RGBColor* getBuffer(void);`
 
-  * [calibrateTouch](/ja/arduino/m5gfx/m5gfx_touch#calibratetouch)
-  * [clear](/ja/arduino/m5gfx/m5gfx_sprite#clear)
-  * [clearClipRect](/ja/arduino/m5gfx/m5gfx_sprite#clearcliprect)
-  * [clearDisplay](/ja/arduino/m5gfx/m5gfx_sprite#cleardisplay)
-  * [clearScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#clearscrollrect)
-  * [convertRawXY](/ja/arduino/m5gfx/m5gfx_touch#convertrawxy)
-  * [copyRect](/ja/arduino/m5gfx/m5gfx_graph#copyrect)
-  * [createPng](/ja/arduino/m5gfx/m5gfx_image#createpng)
-  * [drawArc](/ja/arduino/m5gfx/m5gfx_graph#drawarc)
-  * [drawBezier](/ja/arduino/m5gfx/m5gfx_graph#drawbezier)
-  * [drawBmp](/ja/arduino/m5gfx/m5gfx_image#drawbmp)
-  * [drawBmpFile](/ja/arduino/m5gfx/m5gfx_image#drawbmpfile)
-  * [drawBmpUrl](/ja/arduino/m5gfx/m5gfx_image#drawbmpurl)
+**機能説明:**
 
+  * LED カラーバッファを取得する
 
 
-#### 
 
-  * [drawCenterString](/ja/arduino/m5gfx/m5gfx_text#drawcenterstring)
-  * [drawChar](/ja/arduino/m5gfx/m5gfx_text#drawchar)
-  * [drawCircle](/ja/arduino/m5gfx/m5gfx_graph#drawcircle)
-  * [drawEllipse](/ja/arduino/m5gfx/m5gfx_graph#drawellipse)
-  * [drawEllipseArc](/ja/arduino/m5gfx/m5gfx_graph#drawellipsearc)
-  * [drawFastHLine](/ja/arduino/m5gfx/m5gfx_graph#drawfasthline)
-  * [drawFastVLine](/ja/arduino/m5gfx/m5gfx_graph#drawfastvline)
-  * [drawFloat](/ja/arduino/m5gfx/m5gfx_text#drawfloat)
-  * [drawGradientHLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradienthline)
-  * [drawGradientLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradientline)
-  * [drawGradientVLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradientvline)
-  * [drawJpg](/ja/arduino/m5gfx/m5gfx_image#drawjpg)
-  * [drawJpgFile](/ja/arduino/m5gfx/m5gfx_image#drawjpgfile)
+**入力パラメータ:**
 
+  * null
 
 
-#### 
 
-  * [drawJpgUrl](/ja/arduino/m5gfx/m5gfx_image#drawjpgurl)
-  * [drawLine](/ja/arduino/m5gfx/m5gfx_graph#drawline)
-  * [drawNumber](/ja/arduino/m5gfx/m5gfx_text#drawnumber)
-  * [drawPixel](/ja/arduino/m5gfx/m5gfx_graph#drawpixel)
-  * [drawPng](/ja/arduino/m5gfx/m5gfx_image#drawpng)
-  * [drawPngFile](/ja/arduino/m5gfx/m5gfx_image#drawpngfile)
-  * [drawPngUrl](/ja/arduino/m5gfx/m5gfx_image#drawpngurl)
-  * [drawQoi](/ja/arduino/m5gfx/m5gfx_image#drawqoi)
-  * [drawQoiFile](/ja/arduino/m5gfx/m5gfx_image#drawqoifile)
-  * [drawQoiUrl](/ja/arduino/m5gfx/m5gfx_image#drawqoiurl)
-  * [drawString](/ja/arduino/m5gfx/m5gfx_text#drawstring)
-  * [drawTriangle](/ja/arduino/m5gfx/m5gfx_graph#drawtriangle)
+**戻り値:**
 
+  * RGBColor*:
+    * LED カラーバッファポインタ
 
 
-#### e-h
 
-  * [effect](/ja/arduino/m5gfx/m5gfx_sprite#effect)
-  * [endWrite](/ja/arduino/m5gfx/m5gfx_graph#endwrite)
-  * [fillAffine](/ja/arduino/m5gfx/m5gfx_graph#fillaffine)
-  * [fillArc](/ja/arduino/m5gfx/m5gfx_graph#fillarc)
-  * [fillCircle](/ja/arduino/m5gfx/m5gfx_graph#fillcircle)
-  * [fillEllipse](/ja/arduino/m5gfx/m5gfx_graph#fillellipse)
-  * [fillEllipseArc](/ja/arduino/m5gfx/m5gfx_graph#fillellipsearc)
-  * [fillRect](/ja/arduino/m5gfx/m5gfx_graph#fillrect)
-  * [fillRectAlpha](/ja/arduino/m5gfx/m5gfx_graph#fillrectalpha)
-  * [fillRoundRect](/ja/arduino/m5gfx/m5gfx_graph#fillroundrect)
-  * [fillScreen](/ja/arduino/m5gfx/m5gfx_sprite#fillscreen)
-  * [fillTriangle](/ja/arduino/m5gfx/m5gfx_graph#filltriangle)
-  * [floodFill](/ja/arduino/m5gfx/m5gfx_graph#floodfill)
-  * [fontHeight](/ja/arduino/m5gfx/m5gfx_text#fontheight)
+## setBrightness
 
+**関数プロトタイプ:**
+    
+    
+    void setBrightness(uint8_t brightness);
 
+`void setBrightness(uint8_t brightness);`
 
-#### 
+**機能説明:**
 
-  * [fontWidth](/ja/arduino/m5gfx/m5gfx_text#fontwidth)
-  * [getBaseColor](/ja/arduino/m5gfx/m5gfx_sprite#getbasecolor)
-  * [getBrightness](/ja/arduino/m5gfx/m5gfx_sprite#getbrightness)
-  * [getClipRect](/ja/arduino/m5gfx/m5gfx_sprite#getcliprect)
-  * [getColorDepth](/ja/arduino/m5gfx/m5gfx_sprite#getcolordepth)
-  * [getCursorX](/ja/arduino/m5gfx/m5gfx_sprite#getcursorx)
-  * [getCursorY](/ja/arduino/m5gfx/m5gfx_sprite#getcursory)
-  * [getEpdMode](/ja/arduino/m5gfx/m5gfx_sprite#getepdmode)
-  * [getFont](/ja/arduino/m5gfx/m5gfx_text#getfont)
-  * [getPalette](/ja/arduino/m5gfx/m5gfx_sprite#getpalette)
-  * [getPaletteCount](/ja/arduino/m5gfx/m5gfx_sprite#getpalettecount)
-  * [getPivotX](/ja/arduino/m5gfx/m5gfx_sprite#getpivotx)
-  * [getPivotY](/ja/arduino/m5gfx/m5gfx_sprite#getpivoty)
-  * [getRawColor](/ja/arduino/m5gfx/m5gfx_sprite#getrawcolor)
+  * LED の輝度を設定する
 
 
 
-#### 
+**入力パラメータ:**
 
-  * [getRotation](/ja/arduino/m5gfx/m5gfx_sprite#getrotation)
-  * [getScrollRect](../m5gfx_sprite#getscrollrect)
-  * [getStartCount](/ja/arduino/m5gfx/m5gfx_graph#getstartcount)
-  * [getSwapBytes](/ja/arduino/m5gfx/m5gfx_image#getswapbytes)
-  * [getTextDatum](/ja/arduino/m5gfx/m5gfx_text#gettextdatum)
-  * [getTextPadding](/ja/arduino/m5gfx/m5gfx_text#gettextpadding)
-  * [getTextSizeX](/ja/arduino/m5gfx/m5gfx_text#gettextsizex)
-  * [getTextSizeY](/ja/arduino/m5gfx/m5gfx_text#gettextsizey)
-  * [getTextStyle](/ja/arduino/m5gfx/m5gfx_text#gettextstyle)
-  * [getTouch](/ja/arduino/m5gfx/m5gfx_touch#gettouch)
-  * [getTouchRaw](/ja/arduino/m5gfx/m5gfx_touch#gettouchraw)
-  * [height](/ja/arduino/m5gfx/m5gfx_sprite#height)
+  * brightness：
+    * 輝度値 (0-255)
 
 
 
-#### i-r
+**戻り値:**
 
-  * [isEPD](/ja/arduino/m5gfx/m5gfx_sprite#isepd)
-  * [loadFont](/ja/arduino/m5gfx/m5gfx_text#loadfont)
-  * [paint](/ja/arduino/m5gfx/m5gfx_graph#paint)
-  * [popState](/ja/arduino/m5gfx/m5gfx_sprite#popstate)
-  * [powerSave](/ja/arduino/m5gfx/m5gfx_power#powersave)
-  * [powerSaveOff](/ja/arduino/m5gfx/m5gfx_power#powersaveoff)
-  * [powerSaveOn](/ja/arduino/m5gfx/m5gfx_power#powersaveon)
-  * [print](/ja/arduino/m5gfx/m5gfx_text#print)
-  * [printf](/ja/arduino/m5gfx/m5gfx_text#printf)
-  * [println](/ja/arduino/m5gfx/m5gfx_text#println)
+  * null
 
 
 
-#### 
+## setColor
 
-  * [progressBar](/ja/arduino/m5gfx/m5gfx_graph#progressbar)
-  * [pushAlphaImage](/ja/arduino/m5gfx/m5gfx_image#pushalphaimage)
-  * [pushBlock](/ja/arduino/m5gfx/m5gfx_graph#pushblock)
-  * [pushGrayscaleImage](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimage)
-  * [pushGrayscaleImageAffine](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimageaffine)
-  * [pushGrayscaleImageRotateZoom](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimagerotatezoom)
-  * [pushImage](/ja/arduino/m5gfx/m5gfx_image#pushimage)
-  * [pushImageAffine](/ja/arduino/m5gfx/m5gfx_image#pushimageaffine)
-  * [pushImageAffineWithAA](/ja/arduino/m5gfx/m5gfx_image#pushimageaffinewithaa)
-  * [pushImageDMA](/ja/arduino/m5gfx/m5gfx_image#pushimagedma)
+**関数プロトタイプ1:**
+    
+    
+    void setColor(size_t index, const RGBColor& color);
 
+`void setColor(size_t index, const RGBColor& color);`
 
+**関数プロトタイプ2:**
+    
+    
+    void setColor(size_t index, uint8_t red, uint8_t green, uint8_t blue);
 
-#### 
+`void setColor(size_t index, uint8_t red, uint8_t green, uint8_t blue);`
 
-  * [pushImageRotateZoom](/ja/arduino/m5gfx/m5gfx_image#pushimagerotatezoom)
-  * [pushImageRotateZoomWithAA](/ja/arduino/m5gfx/m5gfx_image#pushimagerotatezoomwithaa)
-  * [pushPixels](/ja/arduino/m5gfx/m5gfx_graph#pushpixels)
-  * [pushPixelsDMA](/ja/arduino/m5gfx/m5gfx_graph#pushpixelsdma)
-  * [pushState](/ja/arduino/m5gfx/m5gfx_sprite#pushstate)
-  * [qrcode](/ja/arduino/m5gfx/m5gfx_image#qrcode)
-  * [readPixel](/ja/arduino/m5gfx/m5gfx_graph#readpixel)
-  * [readPixelRGB](/ja/arduino/m5gfx/m5gfx_graph#readpixelrgb)
-  * [readRect](/ja/arduino/m5gfx/m5gfx_graph#readrect)
-  * [readRectRGB](/ja/arduino/m5gfx/m5gfx_graph#readrectrgb)
+**関数プロトタイプ3:**
+    
+    
+    void setColor(size_t index, T c);
 
+`void setColor(size_t index, T c);`
 
+**機能説明:**
 
-#### s-z
+  * 指定された LED の色を設定する
 
-  * [scroll](/ja/arduino/m5gfx/m5gfx_sprite#scroll)
-  * [setAddrWindow](/ja/arduino/m5gfx/m5gfx_sprite#setaddrwindow)
-  * [setBaseColor](/ja/arduino/m5gfx/m5gfx_sprite#setbasecolor)
-  * [setBrightness](/ja/arduino/m5gfx/m5gfx_sprite#setbrightness)
-  * [setClipRect](/ja/arduino/m5gfx/m5gfx_sprite#setcliprect)
-  * [setColor](/ja/arduino/m5gfx/m5gfx_sprite#setcolor)
-  * [setColorDepth](/ja/arduino/m5gfx/m5gfx_sprite#setcolordepth)
-  * [setCursor](/ja/arduino/m5gfx/m5gfx_sprite#setcursor)
-  * [setEpdMode](/ja/arduino/m5gfx/m5gfx_sprite#setepdmode)
-  * [setFont](/ja/arduino/m5gfx/m5gfx_text#setfont)
-  * [setPivot](/ja/arduino/m5gfx/m5gfx_sprite#setpivot)
-  * [setRawColor](/ja/arduino/m5gfx/m5gfx_sprite#setrawcolor)
-  * [setResolution](/ja/arduino/m5gfx/m5gfx_sprite#setresolution)
-  * [setRotation](/ja/arduino/m5gfx/m5gfx_sprite#setrotation)
-  * [setScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#setscrollrect)
 
 
+**入力パラメータ:**
 
-#### 
+  * index：
+    * LED のインデックス位置 (0 から開始)
+  * color / red, green, blue / c：
+    * カラー値 / RGB カラー値 / ジェネリックカラー値
 
-  * [setSwapBytes](/ja/arduino/m5gfx/m5gfx_image#setswapbytes)
-  * [setTextColor](/ja/arduino/m5gfx/m5gfx_text#settextcolor)
-  * [setTextDatum](/ja/arduino/m5gfx/m5gfx_text#settextdatum)
-  * [setTextPadding](/ja/arduino/m5gfx/m5gfx_text#settextpadding)
-  * [setTextScroll](/ja/arduino/m5gfx/m5gfx_sprite#settextscroll)
-  * [setTextSize](/ja/arduino/m5gfx/m5gfx_text#settextsize)
-  * [setTextStyle](/ja/arduino/m5gfx/m5gfx_text#settextstyle)
-  * [setTextWrap](/ja/arduino/m5gfx/m5gfx_text#settextwrap)
-  * [setTouchCalibrate](/ja/arduino/m5gfx/m5gfx_touch#settouchcalibrate)
-  * [setWindow](/ja/arduino/m5gfx/m5gfx_sprite#setwindow)
-  * [showFont](/ja/arduino/m5gfx/m5gfx_text#showfont)
-  * [sleep](/ja/arduino/m5gfx/m5gfx_power#sleep)
-  * [startWrite](/ja/arduino/m5gfx/m5gfx_graph#startwrite)
-  * [swap565](/ja/arduino/m5gfx/m5gfx_image#swap565)
-  * [swap888](/ja/arduino/m5gfx/m5gfx_image#swap888)
 
 
+**戻り値:**
 
-#### 
+  * null
 
-  * [textLength](/ja/arduino/m5gfx/m5gfx_text#textlength)
-  * [textWidth](/ja/arduino/m5gfx/m5gfx_text#textwidth)
-  * [unloadFont](/ja/arduino/m5gfx/m5gfx_text#unloadfont)
-  * [wakeup](/ja/arduino/m5gfx/m5gfx_power#wakeup)
-  * [width](/ja/arduino/m5gfx/m5gfx_sprite#width)
-  * [writeColor](/ja/arduino/m5gfx/m5gfx_graph#writecolor)
-  * [writeFastHLine](/ja/arduino/m5gfx/m5gfx_graph#writefasthline)
-  * [writeFastVLine](/ja/arduino/m5gfx/m5gfx_graph#writefastvline)
-  * [writeFillRect](/ja/arduino/m5gfx/m5gfx_graph#writefillrect)
-  * [writeFillRectPreclipped](/ja/arduino/m5gfx/m5gfx_graph#writefillrectpreclipped)
-  * [writeIndexedPixels](/ja/arduino/m5gfx/m5gfx_graph#writeindexedpixels)
-  * [writePixel](/ja/arduino/m5gfx/m5gfx_graph#writepixel)
-  * [writePixels](/ja/arduino/m5gfx/m5gfx_graph#writepixels)
-  * [writePixelsDMA](/ja/arduino/m5gfx/m5gfx_graph#writepixelsdma)
 
 
+## setColors
+
+**関数プロトタイプ:**
+    
+    
+    void setColors(const T* values, size_t index = 0, size_t length = INT32_MAX);
+
+`void setColors(const T* values, size_t index = 0, size_t length = INT32_MAX);`
+
+**機能説明:**
+
+  * LED の色を一括設定する
+
+
+
+**入力パラメータ:**
+
+  * values：
+    * カラー値配列ポインタ
+  * index：
+    * 開始 LED インデックス位置 (0 から開始)
+  * length：
+    * カラー値配列の長さ
+
+
+
+**戻り値:**
+
+  * null
+
+
+
+## setAllColor
+
+**関数プロトタイプ:**
+    
+    
+    void setAllColor(T c);
+
+`void setAllColor(T c);`
+
+**機能説明:**
+
+  * すべての LED の色を設定する
+
+
+
+**入力パラメータ:**
+
+  * c：
+    * カラー値エンコード
+
+
+
+**戻り値:**
+
+  * null
+
+
+
+## isEnabled
+
+**関数プロトタイプ:**
+    
+    
+    bool isEnabled(void);
+
+`bool isEnabled(void);`
+
+**機能説明:**
+
+  * LEDの有効状態を取得する
+
+
+
+**入力パラメータ:**
+
+  * null
+
+
+
+**戻り値:**
+
+  * bool:
+    * true: 有効
+    * false: 無効
+
+
+
+## サンプルプログラム
+
+cpp `#include "M5Unified.h" #include "utility/led/LED_Strip_Class.hpp" #include "utility/led/LED_Base.hpp" RGBColor colors[10] = { { 255, 0, 0 }, // Red { 0, 255, 0 }, // Green { 0, 0, 255 }, // Blue { 255, 255, 0 }, // Yellow { 0, 255, 255 }, // Cyan { 255, 0, 255 }, // Magenta { 128, 128, 128 }, // Gray { 255, 128, 0 }, // Orange { 0, 128, 255 }, // Sky Blue { 128, 0, 255 } // Purple-Blue }; void setup() { M5.begin(); // Configure RMT bus for LED strip (data pin: GPIO26) auto busled = std::make_shared<m5::LedBus_RMT>(); auto buscfg = busled->getConfig(); buscfg.pin_data = 26; busled->setConfig(buscfg); // Configure LED strip (30 LEDs, 3 bytes/LED, GRB order) auto led_strip = std::make_shared<m5::LED_Strip_Class>(); auto ledcfg = led_strip->getConfig(); ledcfg.led_count = 30; ledcfg.byte_per_led = 3; ledcfg.color_order = m5::LED_Strip_Class::config_t::color_order_grb; led_strip->setConfig(ledcfg); led_strip->setBus(busled); // Link bus to LED strip M5.Led.setLedInstance(led_strip); // Register to M5 system M5.Led.begin(); // Initialize LED strip M5.Display.clear(); M5.Display.setFont(&fonts::FreeMonoBoldOblique12pt7b); M5.Display.setCursor(20, 50); M5.Display.printf("LED Cnt: %d", M5.Led.getCount()); M5.Display.setCursor(20, 70); M5.Display.printf("LED Status: %s", M5.Led.isEnabled() ? "Enabled" : "Disabled"); M5.Led.setBrightness(100); } void loop() { static int offset = 0; // Scrolling offset (persists between loops) RGBColor* buf = M5.Led.getBuffer(); // Get LED color buffer // Assign colors to each LED with offset (cyclic scrolling) for (int i = 0; i < 30; ++i) { buf[i] = colors[(i + offset) % 10]; } M5.Led.setColors(buf, 0, 30); // Update LED strip with buffer data offset = (offset + 1) % 10; // Increment offset (cycle 0-9) }`
+
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59
+    
+    
+    #include "M5Unified.h"
+    #include "utility/led/LED_Strip_Class.hpp"
+    #include "utility/led/LED_Base.hpp"
+    
+    RGBColor colors[10] = {
+      { 255, 0, 0 },      // Red 
+      { 0, 255, 0 },      // Green
+      { 0, 0, 255 },      // Blue 
+      { 255, 255, 0 },    // Yellow 
+      { 0, 255, 255 },    // Cyan
+      { 255, 0, 255 },    // Magenta
+      { 128, 128, 128 },  // Gray
+      { 255, 128, 0 },    // Orange
+      { 0, 128, 255 },    // Sky Blue
+      { 128, 0, 255 }     // Purple-Blue
+    };
+    
+    void setup() {
+      M5.begin();
+    
+      // Configure RMT bus for LED strip (data pin: GPIO26)
+      auto busled = std::make_shared<m5::LedBus_RMT>();
+      auto buscfg = busled->getConfig();
+      buscfg.pin_data = 26;
+      busled->setConfig(buscfg);
+    
+      // Configure LED strip (30 LEDs, 3 bytes/LED, GRB order)
+      auto led_strip = std::make_shared<m5::LED_Strip_Class>();
+      auto ledcfg = led_strip->getConfig();
+      ledcfg.led_count = 30;
+      ledcfg.byte_per_led = 3;
+      ledcfg.color_order = m5::LED_Strip_Class::config_t::color_order_grb;
+      led_strip->setConfig(ledcfg);
+    
+      led_strip->setBus(busled);  // Link bus to LED strip
+      M5.Led.setLedInstance(led_strip);  // Register to M5 system
+      M5.Led.begin();  // Initialize LED strip
+    
+      M5.Display.clear();
+      M5.Display.setFont(&fonts::FreeMonoBoldOblique12pt7b);
+      M5.Display.setCursor(20, 50);
+      M5.Display.printf("LED Cnt: %d", M5.Led.getCount());
+      M5.Display.setCursor(20, 70);
+      M5.Display.printf("LED Status: %s", M5.Led.isEnabled() ? "Enabled" : "Disabled");
+      M5.Led.setBrightness(100);
+    }
+    
+    void loop() {
+      static int offset = 0;  // Scrolling offset (persists between loops)
+      RGBColor* buf = M5.Led.getBuffer();  // Get LED color buffer
+    
+      // Assign colors to each LED with offset (cyclic scrolling)
+      for (int i = 0; i < 30; ++i) {
+        buf[i] = colors[(i + offset) % 10];
+      }
+    
+      M5.Led.setColors(buf, 0, 30);  // Update LED strip with buffer data
+      offset = (offset + 1) % 10;    // Increment offset (cycle 0-9)
+    }
+
+M5GO を使用して上記のコードを実行し、PORT.B に 30 個の RGB LED ストリップを接続すると、以下のような効果が得られます：
 
 [Next 1\. Arduino環境設定 - 1. Arduino IDEインストール ](/en/arduino/arduino_ide)
 

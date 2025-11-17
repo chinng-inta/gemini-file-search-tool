@@ -1,10 +1,10 @@
 ---
-doc_type: M5GFX
-crawled_at: 2025/11/18 00:19:31
-first_url: https://docs.m5stack.com/ja/arduino/m5gfx/m5gfx_functions/
+doc_type: M5Unified IMU
+crawled_at: 2025/11/18 00:19:16
+first_url: https://docs.m5stack.com/ja/arduino/m5unified/imu_class/
 ---
 
-# Page: https://docs.m5stack.com/ja/arduino/m5gfx/m5gfx_functions/
+# Page: https://docs.m5stack.com/ja/arduino/m5unified/imu_class/
 
 [](https://m5stack.com/)
 
@@ -1735,493 +1735,779 @@ Product  Tutorial
 
 Search
 
-# M5GFX API
+# M5Unified IMU Class
 
-## テキスト描画
+  * IMU Class
+    * begin
+    * init
+    * sleep
+    * setClock
+    * update
+    * getImuData
+    * setAxisOrder
+    * setAxisOrderRightHanded
+    * setAxisOrderLeftHanded
+    * getAccel
+    * getGyro
+    * getMag
+    * getTemp
+    * isEnabled
+    * getType
+    * setINTPinActiveLogic
+    * setCalibration
+    * saveOffsetToNVS
+    * loadOffsetFromNVS
+    * clearOffsetData
+    * setOffsetData
+    * getOffsetData
+    * getRawData
+    * getImuInstancePtr
 
-#### 1\. テキスト表示
 
-  * [drawCenterString](/ja/arduino/m5gfx/m5gfx_text#drawcenterstring)
-  * [drawChar](/ja/arduino/m5gfx/m5gfx_text#drawchar)
-  * [drawFloat](/ja/arduino/m5gfx/m5gfx_text#drawfloat)
-  * [drawNumber](/ja/arduino/m5gfx/m5gfx_text#drawnumber)
-  * [drawString](/ja/arduino/m5gfx/m5gfx_text#drawstring)
-  * [print](/ja/arduino/m5gfx/m5gfx_text#print)
-  * [printf](/ja/arduino/m5gfx/m5gfx_text#printf)
-  * [println](/ja/arduino/m5gfx/m5gfx_text#println)
 
+## begin
 
+**Syntax:**
+    
+    
+    bool begin(I2C_Class* i2c = nullptr, board_t board = board_t::board_unknown);
 
-#### 2\. テキスト属性
+`bool begin(I2C_Class* i2c = nullptr, board_t board = board_t::board_unknown);`
 
-  * [setFont](/ja/arduino/m5gfx/m5gfx_text#setfont)
-  * [getFont](/ja/arduino/m5gfx/m5gfx_text#getfont)
-  * [showFont](/ja/arduino/m5gfx/m5gfx_text#showfont)
-  * [fontHeight](/ja/arduino/m5gfx/m5gfx_text#fontheight)
-  * [fontWidth](/ja/arduino/m5gfx/m5gfx_text#fontwidth)
-  * [loadFont](/ja/arduino/m5gfx/m5gfx_text#loadfont)
-  * [unloadFont](/ja/arduino/m5gfx/m5gfx_text#unloadfont)
-  * [setTextColor](/ja/arduino/m5gfx/m5gfx_text#settextcolor)
-  * [setTextSize](/ja/arduino/m5gfx/m5gfx_text#settextsize)
-  * [getTextSizeX](/ja/arduino/m5gfx/m5gfx_text#gettextsizex)
-  * [getTextSizeY](/ja/arduino/m5gfx/m5gfx_text#gettextsizey)
-  * [setTextStyle](/ja/arduino/m5gfx/m5gfx_text#settextstyle)
-  * [getTextStyle](/ja/arduino/m5gfx/m5gfx_text#gettextstyle)
-  * [textLength](/ja/arduino/m5gfx/m5gfx_text#textlength)
-  * [textWidth](/ja/arduino/m5gfx/m5gfx_text#textwidth)
+**Description:**
 
+  * Initialize the IMU and specify the I2C interface and board type for initialization.
 
 
-#### 3\. テキストの配置とマージン
 
-  * [setTextDatum](/ja/arduino/m5gfx/m5gfx_text#settextdatum)
-  * [getTextDatum](/ja/arduino/m5gfx/m5gfx_text#gettextdatum)
-  * [setTextPadding](/ja/arduino/m5gfx/m5gfx_text#settextpadding)
-  * [getTextPadding](/ja/arduino/m5gfx/m5gfx_text#gettextpadding)
+****Parameters:****
 
+  * I2C_Class* i2c
+    * The I2C interface used.
+  * board_t board
+    * M5Stack board type.
 
 
-#### 4\. 自動改行
 
-  * [setTextWrap](/ja/arduino/m5gfx/m5gfx_text#settextwrap)
+**Return:**
 
+  * bool:
+    * true: Initialization successful.
+    * false: Initialization failed.
 
 
-## 図形描画
 
-#### 1\. 線形図形
+## init
 
-  * [drawArc](/ja/arduino/m5gfx/m5gfx_graph#drawarc)
-  * [drawBezier](/ja/arduino/m5gfx/m5gfx_graph#drawbezier)
-  * [drawCircle](/ja/arduino/m5gfx/m5gfx_graph#drawcircle)
-  * [drawEllipse](/ja/arduino/m5gfx/m5gfx_graph#drawellipse)
-  * [drawEllipseArc](/ja/arduino/m5gfx/m5gfx_graph#drawellipsearc)
-  * [drawFastHLine](/ja/arduino/m5gfx/m5gfx_graph#drawfasthline)
-  * [drawFastVLine](/ja/arduino/m5gfx/m5gfx_graph#drawfastvline)
-  * [drawLine](/ja/arduino/m5gfx/m5gfx_graph#drawline)
-  * [drawGradientHLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradienthline)
-  * [drawGradientLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradientline)
-  * [drawGradientVLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradientvline)
-  * [drawPixel](/ja/arduino/m5gfx/m5gfx_graph#drawpixel)
-  * [drawTriangle](/ja/arduino/m5gfx/m5gfx_graph#drawtriangle)
+**Syntax:**
+    
+    
+    bool init(I2C_Class* i2c = nullptr) { return begin(i2c); }
 
+`bool init(I2C_Class* i2c = nullptr) { return begin(i2c); }`
 
+**Description:**
 
-#### 2\. 塗りつぶし図形
+  * Initialize the IMU and specify the I2C interface for initialization.
 
-  * [fillAffine](/ja/arduino/m5gfx/m5gfx_graph#fillaffine)
-  * [fillArc](/ja/arduino/m5gfx/m5gfx_graph#fillarc)
-  * [fillCircle](/ja/arduino/m5gfx/m5gfx_graph#fillcircle)
-  * [fillEllipse](/ja/arduino/m5gfx/m5gfx_graph#fillellipse)
-  * [fillEllipseArc](/ja/arduino/m5gfx/m5gfx_graph#fillellipsearc)
-  * [fillRect](/ja/arduino/m5gfx/m5gfx_graph#fillrect)
-  * [fillRectAlpha](/ja/arduino/m5gfx/m5gfx_graph#fillrectalpha)
-  * [fillRoundRect](/ja/arduino/m5gfx/m5gfx_graph#fillroundrect)
-  * [fillTriangle](/ja/arduino/m5gfx/m5gfx_graph#filltriangle)
-  * [floodFill](/ja/arduino/m5gfx/m5gfx_graph#floodfill)
-  * [paint](/ja/arduino/m5gfx/m5gfx_graph#paint)
-  * [copyRect](/ja/arduino/m5gfx/m5gfx_graph#copyrect)
 
 
+****Parameters:****
 
-#### 3\. 特殊図形
+  * I2C_Class* i2c
+    * The I2C interface used.
 
-  * [progressBar](/ja/arduino/m5gfx/m5gfx_graph#progressbar)
-  * [qrcode](/ja/arduino/m5gfx/m5gfx_graph#qrcode)
 
 
+**Return:**
 
-#### 4\. write and read
+  * bool:
+    * true: Initialization successful.
+    * false: Initialization failed.
 
-  * [getStartCount](/ja/arduino/m5gfx/m5gfx_graph#getstartcount)
-  * [readPixel](/ja/arduino/m5gfx/m5gfx_graph#readpixel)
-  * [readPixelRGB](/ja/arduino/m5gfx/m5gfx_graph#readpixelrgb)
-  * [readRect](/ja/arduino/m5gfx/m5gfx_graph#readrect)
-  * [readRectRGB](/ja/arduino/m5gfx/m5gfx_graph#readrectrgb)
-  * [startWrite](/ja/arduino/m5gfx/m5gfx_graph#startwrite)
-  * [endWrite](/ja/arduino/m5gfx/m5gfx_graph#endwrite)
-  * [pushBlock](/ja/arduino/m5gfx/m5gfx_graph#pushblock)
-  * [pushPixels](/ja/arduino/m5gfx/m5gfx_graph#pushpixels)
-  * [pushPixelsDMA](/ja/arduino/m5gfx/m5gfx_graph#pushpixelsdma)
-  * [writeColor](/ja/arduino/m5gfx/m5gfx_graph#writecolor)
-  * [writeFastHLine](/ja/arduino/m5gfx/m5gfx_graph#writefasthline)
-  * [writeFastVLine](/ja/arduino/m5gfx/m5gfx_graph#writefastvline)
-  * [writeFillRect](/ja/arduino/m5gfx/m5gfx_graph#writefillrect)
-  * [writeFillRectPreclipped](/ja/arduino/m5gfx/m5gfx_graph#writefillrectpreclipped)
-  * [writeIndexedPixels](/ja/arduino/m5gfx/m5gfx_graph#writeindexedpixels)
-  * [writePixel](/ja/arduino/m5gfx/m5gfx_graph#writepixel)
-  * [writePixels](/ja/arduino/m5gfx/m5gfx_graph#writepixels)
-  * [writePixelsDMA](/ja/arduino/m5gfx/m5gfx_graph#writepixelsdma)
 
 
+## sleep
 
-## 画像描画
+**Syntax:**
+    
+    
+    bool sleep(void);
 
-#### 1\. 画像
+`bool sleep(void);`
 
-  * [createPng](/ja/arduino/m5gfx/m5gfx_image#createpng)
-  * [drawBmp](/ja/arduino/m5gfx/m5gfx_image#drawbmp)
-  * [drawBmpFile](/ja/arduino/m5gfx/m5gfx_image#drawbmpfile)
-  * [drawBmpUrl](/ja/arduino/m5gfx/m5gfx_image#drawbmpurl)
-  * [drawJpg](/ja/arduino/m5gfx/m5gfx_image#drawjpg)
-  * [drawJpgFile](/ja/arduino/m5gfx/m5gfx_image#drawjpgfile)
-  * [drawJpgUrl](/ja/arduino/m5gfx/m5gfx_image#drawjpgurl)
-  * [drawPng](/ja/arduino/m5gfx/m5gfx_image#drawpng)
-  * [drawPngFile](/ja/arduino/m5gfx/m5gfx_image#drawpngfile)
-  * [drawPngUrl](/ja/arduino/m5gfx/m5gfx_image#drawpngurl)
-  * [drawQoi](/ja/arduino/m5gfx/m5gfx_image#drawqoi)
-  * [drawQoiFile](/ja/arduino/m5gfx/m5gfx_image#drawqoifile)
+**Description:**
 
+  * Put the IMU into sleep mode.
 
 
-#### 
 
-  * [drawQoiUrl](/ja/arduino/m5gfx/m5gfx_image#drawqoiurl)
-  * [pushAlphaImage](/ja/arduino/m5gfx/m5gfx_image#pushalphaimage)
-  * [pushGrayscaleImage](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimage)
-  * [pushGrayscaleImageAffine](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimageaffine)
-  * [pushGrayscaleImageRotateZoom](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimagerotatezoom)
-  * [pushImage](/ja/arduino/m5gfx/m5gfx_image#pushimage)
-  * [pushImageDMA](/ja/arduino/m5gfx/m5gfx_image#pushimagedma)
-  * [pushImageAffine](/ja/arduino/m5gfx/m5gfx_image#pushimageaffine)
-  * [pushImageAffineWithAA](/ja/arduino/m5gfx/m5gfx_image#pushimageaffinewithaa)
-  * [pushImageRotateZoom](/ja/arduino/m5gfx/m5gfx_image#pushimagerotatezoom)
-  * [pushImageRotateZoomWithAA](/ja/arduino/m5gfx/m5gfx_image#pushimagerotatezoomwithaa)
+****Parameters:****
 
+  * null
 
 
-#### 2\. 画像色変換
 
-  * [setSwapBytes](/ja/arduino/m5gfx/m5gfx_image#setswapbytes)
-  * [getSwapBytes](/ja/arduino/m5gfx/m5gfx_image#getswapbytes)
-  * [swap565](/ja/arduino/m5gfx/m5gfx_image#swap565)
-  * [swap888](/ja/arduino/m5gfx/m5gfx_image#swap888)
+**Return:**
 
+  * bool:
+    * true: Successfully entered sleep mode.
+    * false: Failed to enter sleep mode.
 
 
-## キャンバス管理
 
-#### 1\. 面板パネルパラメータ参数
+## setClock
 
-  * [isEPD](/ja/arduino/m5gfx/m5gfx_sprite#isepd)
-  * [height](/ja/arduino/m5gfx/m5gfx_sprite#height)
-  * [width](/ja/arduino/m5gfx/m5gfx_sprite#width)
-  * [popState](/ja/arduino/m5gfx/m5gfx_sprite#popstate)
-  * [pushState](/ja/arduino/m5gfx/m5gfx_sprite#pushstate)
-  * [setBrightness](/ja/arduino/m5gfx/m5gfx_sprite#setbrightness)
-  * [getBrightness](/ja/arduino/m5gfx/m5gfx_sprite#getbrightness)
-  * [setEpdMode](/ja/arduino/m5gfx/m5gfx_sprite#setepdmode)
-  * [getEpdMode](/ja/arduino/m5gfx/m5gfx_sprite#getepdmode)
-  * [setResolution](/ja/arduino/m5gfx/m5gfx_sprite#setresolution)
-  * [setRotation](/ja/arduino/m5gfx/m5gfx_sprite#setrotation)
-  * [getRotation](/ja/arduino/m5gfx/m5gfx_sprite#getrotation)
+**Syntax:**
+    
+    
+    void setClock(std::uint32_t freq);
 
+`void setClock(std::uint32_t freq);`
 
+**Description:**
 
-#### 2\. カラー
+  * Set the internal IMU clock frequency.
 
-  * [setBaseColor](/ja/arduino/m5gfx/m5gfx_sprite#setbasecolor)
-  * [getBaseColor](/ja/arduino/m5gfx/m5gfx_sprite#getbasecolor)
-  * [setColor](/ja/arduino/m5gfx/m5gfx_sprite#setcolor)
-  * [setRawColor](/ja/arduino/m5gfx/m5gfx_sprite#setrawcolor)
-  * [getRawColor](/ja/arduino/m5gfx/m5gfx_sprite#getrawcolor)
-  * [setColorDepth](/ja/arduino/m5gfx/m5gfx_sprite#setcolordepth)
-  * [getColorDepth](/ja/arduino/m5gfx/m5gfx_sprite#getcolordepth)
-  * [getPalette](/ja/arduino/m5gfx/m5gfx_sprite#getpalette)
-  * [getPaletteCount](/ja/arduino/m5gfx/m5gfx_sprite#getpalettecount)
 
 
+****Parameters:****
 
-#### 3\. 画面クリア
+  * uint32_t freq:
+    * Clock frequency.
 
-  * [clear](/ja/arduino/m5gfx/m5gfx_sprite#clear)
-  * [clearDisplay](/ja/arduino/m5gfx/m5gfx_sprite#cleardisplay)
-  * [fillScreen](/ja/arduino/m5gfx/m5gfx_sprite#fillscreen)
 
 
+**Return:**
 
-#### 4\. 座標設定
+  * null
 
-  * [setCursor](/ja/arduino/m5gfx/m5gfx_sprite#setcursor)
-  * [getCursorX](/ja/arduino/m5gfx/m5gfx_sprite#getcursorx)
-  * [getCursorY](/ja/arduino/m5gfx/m5gfx_sprite#getcursory)
-  * [setPivot](/ja/arduino/m5gfx/m5gfx_sprite#setpivot)
-  * [getPivotX](/ja/arduino/m5gfx/m5gfx_sprite#getpivotx)
-  * [getPivotY](/ja/arduino/m5gfx/m5gfx_sprite#getpivoty)
 
 
+## update
 
-#### 5\. キャンバス領域選択
+**Syntax:**
+    
+    
+    sensor_mask_t update(void);
 
-  * [setAddrWindow](/ja/arduino/m5gfx/m5gfx_sprite#setaddrwindow)
-  * [setWindow](/ja/arduino/m5gfx/m5gfx_sprite#setwindow)
-  * [setClipRect](/ja/arduino/m5gfx/m5gfx_sprite#setcliprect)
-  * [getClipRect](/ja/arduino/m5gfx/m5gfx_sprite#getcliprect)
-  * [clearClipRect](/ja/arduino/m5gfx/m5gfx_sprite#clearcliprect)
+`sensor_mask_t update(void);`
 
+**Description:**
 
+  * Get IMU data update.
 
-#### 6\. キャンバススクロール
 
-  * [scroll](/ja/arduino/m5gfx/m5gfx_sprite#scroll)
-  * [setTextScroll](/ja/arduino/m5gfx/m5gfx_sprite#settextscroll)
-  * [setScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#setscrollrect)
-  * [getScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#getscrollrect)
-  * [clearScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#clearscrollrect)
 
+****Parameters:****
 
+  * null
 
-#### 7\. カスタム処理
 
-  * [effect](/ja/arduino/m5gfx/m5gfx_sprite#effect)
 
+**Return:**
 
+  * sensor_mask_t:
+    * Sensor data acquisition mask values:
+      * sensor_mask_none: `0000`
+      * sensor_mask_accel: `0001`
+      * sensor_mask_gyro: `0010`
+      * sensor_mask_mag: `0100`
 
-## スクリーン電源管理
 
-#### 1\. 電源状態管理
 
-  * [powerSave](/ja/arduino/m5gfx/m5gfx_power#powersave)
-  * [powerSaveOff](/ja/arduino/m5gfx/m5gfx_power#powersaveoff)
-  * [powerSaveOn](/ja/arduino/m5gfx/m5gfx_power#powersaveon)
+cpp `enum sensor_index_t { sensor_index_accel = 0, sensor_index_gyro = 1, sensor_index_mag = 2, }; enum sensor_mask_t { sensor_mask_none = 0, sensor_mask_accel = 1 << sensor_index_accel, sensor_mask_gyro = 1 << sensor_index_gyro, sensor_mask_mag = 1 << sensor_index_mag, };`
 
+1 2 3 4 5 6 7 8 9 10 11 12 13 14
+    
+    
+    enum sensor_index_t
+    {
+      sensor_index_accel = 0,
+      sensor_index_gyro  = 1,
+      sensor_index_mag   = 2,
+    };
+    
+    enum sensor_mask_t
+    {
+      sensor_mask_none = 0,
+      sensor_mask_accel = 1 << sensor_index_accel,
+      sensor_mask_gyro  = 1 << sensor_index_gyro,
+      sensor_mask_mag   = 1 << sensor_index_mag,
+    };
 
+## getImuData
 
-#### 2\. スリープとウェイクアップ
+**Syntax:**
+    
+    
+    void getImuData(imu_data_t* imu_data);
 
-  * [sleep](/ja/arduino/m5gfx/m5gfx_power#sleep)
-  * [wakeup](/ja/arduino/m5gfx/m5gfx_power#wakeup)
+`void getImuData(imu_data_t* imu_data);`
+    
+    
+    const imu_data_t& getImuData(void) { getImuData(&_last_data); return _last_data; }
 
+`const imu_data_t& getImuData(void) { getImuData(&_last_data); return _last_data; }`
 
+**Description:**
 
-## タッチスクリーン
+  * Get the current IMU data.
 
-#### 1\. タッチ情報
 
-  * [getTouch](/ja/arduino/m5gfx/m5gfx_touch#gettouch)
-  * [getTouchRaw](/ja/arduino/m5gfx/m5gfx_touch#gettouchraw)
-  * [convertRawXY](/ja/arduino/m5gfx/m5gfx_touch#convertrawxy)
 
+****Parameters:****
 
+  * null
 
-#### 2\. 画面キャリブレーション
 
-  * [calibrateTouch](/ja/arduino/m5gfx/m5gfx_touch#calibratetouch)
-  * [setTouchCalibrate](/ja/arduino/m5gfx/m5gfx_touch#settouchcalibrate)
 
+**Return:**
 
+  * imu_data_t data:
+    * `data.accel.x`: accel x-axis value.
+    * `data.accel.y`: accel y-axis value.
+    * `data.accel.z`: accel z-axis value.
+    * `data.accel.value`: accel 3values array [0]=x / [1]=y / [2]=z.
+    * `data.gyro.x`: gyro x-axis value.
+    * `data.gyro.y`: gyro y-axis value.
+    * `data.gyro.z`: gyro z-axis value.
+    * `data.gyro.value`: gyro 3values array [0]=x / [1]=y / [2]=z.
+    * `data.mag.x`: mag x-axis value.
+    * `data.mag.y`: mag y-axis value.
+    * `data.mag.z`: mag z-axis value.
+    * `data.mag.value`: mag 3values array [0]=x / [1]=y / [2]=z.
+    * `data.value`: all sensor 9values array [0-2]=accel / [3-5]=gyro / [6-8]=mag
 
-## アルファベット索引
 
-#### a-d
 
-  * [calibrateTouch](/ja/arduino/m5gfx/m5gfx_touch#calibratetouch)
-  * [clear](/ja/arduino/m5gfx/m5gfx_sprite#clear)
-  * [clearClipRect](/ja/arduino/m5gfx/m5gfx_sprite#clearcliprect)
-  * [clearDisplay](/ja/arduino/m5gfx/m5gfx_sprite#cleardisplay)
-  * [clearScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#clearscrollrect)
-  * [convertRawXY](/ja/arduino/m5gfx/m5gfx_touch#convertrawxy)
-  * [copyRect](/ja/arduino/m5gfx/m5gfx_graph#copyrect)
-  * [createPng](/ja/arduino/m5gfx/m5gfx_image#createpng)
-  * [drawArc](/ja/arduino/m5gfx/m5gfx_graph#drawarc)
-  * [drawBezier](/ja/arduino/m5gfx/m5gfx_graph#drawbezier)
-  * [drawBmp](/ja/arduino/m5gfx/m5gfx_image#drawbmp)
-  * [drawBmpFile](/ja/arduino/m5gfx/m5gfx_image#drawbmpfile)
-  * [drawBmpUrl](/ja/arduino/m5gfx/m5gfx_image#drawbmpurl)
+## setAxisOrder
 
+**Syntax:**
+    
+    
+    bool setAxisOrder(axis_t axis0, axis_t axis1, axis_t axis2);
 
+`bool setAxisOrder(axis_t axis0, axis_t axis1, axis_t axis2);`
 
-#### 
+**Description:**
 
-  * [drawCenterString](/ja/arduino/m5gfx/m5gfx_text#drawcenterstring)
-  * [drawChar](/ja/arduino/m5gfx/m5gfx_text#drawchar)
-  * [drawCircle](/ja/arduino/m5gfx/m5gfx_graph#drawcircle)
-  * [drawEllipse](/ja/arduino/m5gfx/m5gfx_graph#drawellipse)
-  * [drawEllipseArc](/ja/arduino/m5gfx/m5gfx_graph#drawellipsearc)
-  * [drawFastHLine](/ja/arduino/m5gfx/m5gfx_graph#drawfasthline)
-  * [drawFastVLine](/ja/arduino/m5gfx/m5gfx_graph#drawfastvline)
-  * [drawFloat](/ja/arduino/m5gfx/m5gfx_text#drawfloat)
-  * [drawGradientHLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradienthline)
-  * [drawGradientLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradientline)
-  * [drawGradientVLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradientvline)
-  * [drawJpg](/ja/arduino/m5gfx/m5gfx_image#drawjpg)
-  * [drawJpgFile](/ja/arduino/m5gfx/m5gfx_image#drawjpgfile)
+  * Specify the axis order. Default is X+, Y+, Z+.
 
 
 
-#### 
+****Parameters:****
 
-  * [drawJpgUrl](/ja/arduino/m5gfx/m5gfx_image#drawjpgurl)
-  * [drawLine](/ja/arduino/m5gfx/m5gfx_graph#drawline)
-  * [drawNumber](/ja/arduino/m5gfx/m5gfx_text#drawnumber)
-  * [drawPixel](/ja/arduino/m5gfx/m5gfx_graph#drawpixel)
-  * [drawPng](/ja/arduino/m5gfx/m5gfx_image#drawpng)
-  * [drawPngFile](/ja/arduino/m5gfx/m5gfx_image#drawpngfile)
-  * [drawPngUrl](/ja/arduino/m5gfx/m5gfx_image#drawpngurl)
-  * [drawQoi](/ja/arduino/m5gfx/m5gfx_image#drawqoi)
-  * [drawQoiFile](/ja/arduino/m5gfx/m5gfx_image#drawqoifile)
-  * [drawQoiUrl](/ja/arduino/m5gfx/m5gfx_image#drawqoiurl)
-  * [drawString](/ja/arduino/m5gfx/m5gfx_text#drawstring)
-  * [drawTriangle](/ja/arduino/m5gfx/m5gfx_graph#drawtriangle)
+  * axis_t axis0, axis_t axis1, axis_t axis2
 
 
 
-#### e-h
+cpp `enum axis_t { axis_x_pos = 0, axis_x_neg = 1, axis_y_pos = 2, axis_y_neg = 3, axis_z_pos = 4, axis_z_neg = 5, };`
 
-  * [effect](/ja/arduino/m5gfx/m5gfx_sprite#effect)
-  * [endWrite](/ja/arduino/m5gfx/m5gfx_graph#endwrite)
-  * [fillAffine](/ja/arduino/m5gfx/m5gfx_graph#fillaffine)
-  * [fillArc](/ja/arduino/m5gfx/m5gfx_graph#fillarc)
-  * [fillCircle](/ja/arduino/m5gfx/m5gfx_graph#fillcircle)
-  * [fillEllipse](/ja/arduino/m5gfx/m5gfx_graph#fillellipse)
-  * [fillEllipseArc](/ja/arduino/m5gfx/m5gfx_graph#fillellipsearc)
-  * [fillRect](/ja/arduino/m5gfx/m5gfx_graph#fillrect)
-  * [fillRectAlpha](/ja/arduino/m5gfx/m5gfx_graph#fillrectalpha)
-  * [fillRoundRect](/ja/arduino/m5gfx/m5gfx_graph#fillroundrect)
-  * [fillScreen](/ja/arduino/m5gfx/m5gfx_sprite#fillscreen)
-  * [fillTriangle](/ja/arduino/m5gfx/m5gfx_graph#filltriangle)
-  * [floodFill](/ja/arduino/m5gfx/m5gfx_graph#floodfill)
-  * [fontHeight](/ja/arduino/m5gfx/m5gfx_text#fontheight)
+1 2 3 4 5 6 7 8 9
+    
+    
+    enum axis_t
+    {
+      axis_x_pos = 0,
+      axis_x_neg = 1,
+      axis_y_pos = 2,
+      axis_y_neg = 3,
+      axis_z_pos = 4,
+      axis_z_neg = 5,
+    };
 
+**Return:**
 
+  * bool:
+    * true: Axis order set successfully.
+    * false: Axis order set failed.
 
-#### 
 
-  * [fontWidth](/ja/arduino/m5gfx/m5gfx_text#fontwidth)
-  * [getBaseColor](/ja/arduino/m5gfx/m5gfx_sprite#getbasecolor)
-  * [getBrightness](/ja/arduino/m5gfx/m5gfx_sprite#getbrightness)
-  * [getClipRect](/ja/arduino/m5gfx/m5gfx_sprite#getcliprect)
-  * [getColorDepth](/ja/arduino/m5gfx/m5gfx_sprite#getcolordepth)
-  * [getCursorX](/ja/arduino/m5gfx/m5gfx_sprite#getcursorx)
-  * [getCursorY](/ja/arduino/m5gfx/m5gfx_sprite#getcursory)
-  * [getEpdMode](/ja/arduino/m5gfx/m5gfx_sprite#getepdmode)
-  * [getFont](/ja/arduino/m5gfx/m5gfx_text#getfont)
-  * [getPalette](/ja/arduino/m5gfx/m5gfx_sprite#getpalette)
-  * [getPaletteCount](/ja/arduino/m5gfx/m5gfx_sprite#getpalettecount)
-  * [getPivotX](/ja/arduino/m5gfx/m5gfx_sprite#getpivotx)
-  * [getPivotY](/ja/arduino/m5gfx/m5gfx_sprite#getpivoty)
-  * [getRawColor](/ja/arduino/m5gfx/m5gfx_sprite#getrawcolor)
 
+## setAxisOrderRightHanded
 
+**Syntax:**
+    
+    
+    bool setAxisOrderRightHanded(axis_t axis0, axis_t axis1);
 
-#### 
+`bool setAxisOrderRightHanded(axis_t axis0, axis_t axis1);`
 
-  * [getRotation](/ja/arduino/m5gfx/m5gfx_sprite#getrotation)
-  * [getScrollRect](../m5gfx_sprite#getscrollrect)
-  * [getStartCount](/ja/arduino/m5gfx/m5gfx_graph#getstartcount)
-  * [getSwapBytes](/ja/arduino/m5gfx/m5gfx_image#getswapbytes)
-  * [getTextDatum](/ja/arduino/m5gfx/m5gfx_text#gettextdatum)
-  * [getTextPadding](/ja/arduino/m5gfx/m5gfx_text#gettextpadding)
-  * [getTextSizeX](/ja/arduino/m5gfx/m5gfx_text#gettextsizex)
-  * [getTextSizeY](/ja/arduino/m5gfx/m5gfx_text#gettextsizey)
-  * [getTextStyle](/ja/arduino/m5gfx/m5gfx_text#gettextstyle)
-  * [getTouch](/ja/arduino/m5gfx/m5gfx_touch#gettouch)
-  * [getTouchRaw](/ja/arduino/m5gfx/m5gfx_touch#gettouchraw)
-  * [height](/ja/arduino/m5gfx/m5gfx_sprite#height)
+**Description:**
 
+  * Specify the axis order for a right-handed coordinate system. Default is X+, Y+, Z+.
 
 
-#### i-r
 
-  * [isEPD](/ja/arduino/m5gfx/m5gfx_sprite#isepd)
-  * [loadFont](/ja/arduino/m5gfx/m5gfx_text#loadfont)
-  * [paint](/ja/arduino/m5gfx/m5gfx_graph#paint)
-  * [popState](/ja/arduino/m5gfx/m5gfx_sprite#popstate)
-  * [powerSave](/ja/arduino/m5gfx/m5gfx_power#powersave)
-  * [powerSaveOff](/ja/arduino/m5gfx/m5gfx_power#powersaveoff)
-  * [powerSaveOn](/ja/arduino/m5gfx/m5gfx_power#powersaveon)
-  * [print](/ja/arduino/m5gfx/m5gfx_text#print)
-  * [printf](/ja/arduino/m5gfx/m5gfx_text#printf)
-  * [println](/ja/arduino/m5gfx/m5gfx_text#println)
+****Parameters:****
 
+  * axis_t axis0, axis_t axis1
 
 
-#### 
 
-  * [progressBar](/ja/arduino/m5gfx/m5gfx_graph#progressbar)
-  * [pushAlphaImage](/ja/arduino/m5gfx/m5gfx_image#pushalphaimage)
-  * [pushBlock](/ja/arduino/m5gfx/m5gfx_graph#pushblock)
-  * [pushGrayscaleImage](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimage)
-  * [pushGrayscaleImageAffine](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimageaffine)
-  * [pushGrayscaleImageRotateZoom](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimagerotatezoom)
-  * [pushImage](/ja/arduino/m5gfx/m5gfx_image#pushimage)
-  * [pushImageAffine](/ja/arduino/m5gfx/m5gfx_image#pushimageaffine)
-  * [pushImageAffineWithAA](/ja/arduino/m5gfx/m5gfx_image#pushimageaffinewithaa)
-  * [pushImageDMA](/ja/arduino/m5gfx/m5gfx_image#pushimagedma)
+**Return:**
 
+  * bool:
+    * true: Axis order set successfully.
+    * false: Axis order set failed.
 
 
-#### 
 
-  * [pushImageRotateZoom](/ja/arduino/m5gfx/m5gfx_image#pushimagerotatezoom)
-  * [pushImageRotateZoomWithAA](/ja/arduino/m5gfx/m5gfx_image#pushimagerotatezoomwithaa)
-  * [pushPixels](/ja/arduino/m5gfx/m5gfx_graph#pushpixels)
-  * [pushPixelsDMA](/ja/arduino/m5gfx/m5gfx_graph#pushpixelsdma)
-  * [pushState](/ja/arduino/m5gfx/m5gfx_sprite#pushstate)
-  * [qrcode](/ja/arduino/m5gfx/m5gfx_image#qrcode)
-  * [readPixel](/ja/arduino/m5gfx/m5gfx_graph#readpixel)
-  * [readPixelRGB](/ja/arduino/m5gfx/m5gfx_graph#readpixelrgb)
-  * [readRect](/ja/arduino/m5gfx/m5gfx_graph#readrect)
-  * [readRectRGB](/ja/arduino/m5gfx/m5gfx_graph#readrectrgb)
+## setAxisOrderLeftHanded
 
+**Syntax:**
+    
+    
+    bool setAxisOrderLeftHanded(axis_t axis0, axis_t axis1);
 
+`bool setAxisOrderLeftHanded(axis_t axis0, axis_t axis1);`
 
-#### s-z
+## getAccel
 
-  * [scroll](/ja/arduino/m5gfx/m5gfx_sprite#scroll)
-  * [setAddrWindow](/ja/arduino/m5gfx/m5gfx_sprite#setaddrwindow)
-  * [setBaseColor](/ja/arduino/m5gfx/m5gfx_sprite#setbasecolor)
-  * [setBrightness](/ja/arduino/m5gfx/m5gfx_sprite#setbrightness)
-  * [setClipRect](/ja/arduino/m5gfx/m5gfx_sprite#setcliprect)
-  * [setColor](/ja/arduino/m5gfx/m5gfx_sprite#setcolor)
-  * [setColorDepth](/ja/arduino/m5gfx/m5gfx_sprite#setcolordepth)
-  * [setCursor](/ja/arduino/m5gfx/m5gfx_sprite#setcursor)
-  * [setEpdMode](/ja/arduino/m5gfx/m5gfx_sprite#setepdmode)
-  * [setFont](/ja/arduino/m5gfx/m5gfx_text#setfont)
-  * [setPivot](/ja/arduino/m5gfx/m5gfx_sprite#setpivot)
-  * [setRawColor](/ja/arduino/m5gfx/m5gfx_sprite#setrawcolor)
-  * [setResolution](/ja/arduino/m5gfx/m5gfx_sprite#setresolution)
-  * [setRotation](/ja/arduino/m5gfx/m5gfx_sprite#setrotation)
-  * [setScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#setscrollrect)
+**Syntax:**
+    
+    
+    bool getAccel(float* ax, float* ay, float* az);
 
+`bool getAccel(float* ax, float* ay, float* az);`
 
+**Description:**
 
-#### 
+  * Read the three-axis acceleration.
 
-  * [setSwapBytes](/ja/arduino/m5gfx/m5gfx_image#setswapbytes)
-  * [setTextColor](/ja/arduino/m5gfx/m5gfx_text#settextcolor)
-  * [setTextDatum](/ja/arduino/m5gfx/m5gfx_text#settextdatum)
-  * [setTextPadding](/ja/arduino/m5gfx/m5gfx_text#settextpadding)
-  * [setTextScroll](/ja/arduino/m5gfx/m5gfx_sprite#settextscroll)
-  * [setTextSize](/ja/arduino/m5gfx/m5gfx_text#settextsize)
-  * [setTextStyle](/ja/arduino/m5gfx/m5gfx_text#settextstyle)
-  * [setTextWrap](/ja/arduino/m5gfx/m5gfx_text#settextwrap)
-  * [setTouchCalibrate](/ja/arduino/m5gfx/m5gfx_touch#settouchcalibrate)
-  * [setWindow](/ja/arduino/m5gfx/m5gfx_sprite#setwindow)
-  * [showFont](/ja/arduino/m5gfx/m5gfx_text#showfont)
-  * [sleep](/ja/arduino/m5gfx/m5gfx_power#sleep)
-  * [startWrite](/ja/arduino/m5gfx/m5gfx_graph#startwrite)
-  * [swap565](/ja/arduino/m5gfx/m5gfx_image#swap565)
-  * [swap888](/ja/arduino/m5gfx/m5gfx_image#swap888)
 
 
+****Parameters:****
 
-#### 
+  * float* ax, float* ay, float* az
 
-  * [textLength](/ja/arduino/m5gfx/m5gfx_text#textlength)
-  * [textWidth](/ja/arduino/m5gfx/m5gfx_text#textwidth)
-  * [unloadFont](/ja/arduino/m5gfx/m5gfx_text#unloadfont)
-  * [wakeup](/ja/arduino/m5gfx/m5gfx_power#wakeup)
-  * [width](/ja/arduino/m5gfx/m5gfx_sprite#width)
-  * [writeColor](/ja/arduino/m5gfx/m5gfx_graph#writecolor)
-  * [writeFastHLine](/ja/arduino/m5gfx/m5gfx_graph#writefasthline)
-  * [writeFastVLine](/ja/arduino/m5gfx/m5gfx_graph#writefastvline)
-  * [writeFillRect](/ja/arduino/m5gfx/m5gfx_graph#writefillrect)
-  * [writeFillRectPreclipped](/ja/arduino/m5gfx/m5gfx_graph#writefillrectpreclipped)
-  * [writeIndexedPixels](/ja/arduino/m5gfx/m5gfx_graph#writeindexedpixels)
-  * [writePixel](/ja/arduino/m5gfx/m5gfx_graph#writepixel)
-  * [writePixels](/ja/arduino/m5gfx/m5gfx_graph#writepixels)
-  * [writePixelsDMA](/ja/arduino/m5gfx/m5gfx_graph#writepixelsdma)
+
+
+**Return:**
+
+  * bool:
+    * true: Read successful.
+    * false: Read failed.
+
+
+
+## getGyro
+
+**Syntax:**
+    
+    
+    bool getGyro(float* gx, float* gy, float* gz);
+
+`bool getGyro(float* gx, float* gy, float* gz);`
+
+**Description:**
+
+  * Read the three-axis angular velocity.
+
+
+
+****Parameters:****
+
+  * float* gx, float* gy, float* gz
+
+
+
+**Return:**
+
+  * bool:
+    * true: Read successful.
+    * false: Read failed.
+
+
+
+## getMag
+
+**Syntax:**
+    
+    
+    bool getMag(float* mx, float* my, float* mz);
+
+`bool getMag(float* mx, float* my, float* mz);`
+
+**Description:**
+
+  * Read the three-axis magnetic field strength.
+
+
+
+****Parameters:****
+
+  * float* mx, float* my, float* mz
+
+
+
+**Return:**
+
+  * bool:
+    * true: Read successful.
+    * false: Read failed.
+
+
+
+## getTemp
+
+**Syntax:**
+    
+    
+    bool getTemp(float *t);
+
+`bool getTemp(float *t);`
+
+**Description:**
+
+  * Read the temperature measurement data.
+
+
+
+****Parameters:****
+
+  * float *t
+
+
+
+**Return:**
+
+  * bool:
+    * true: Read successful.
+    * false: Read failed.
+
+
+
+## isEnabled
+
+**Syntax:**
+    
+    
+    bool isEnabled(void) const { return _imu != imu_none; }
+
+`bool isEnabled(void) const { return _imu != imu_none; }`
+
+**Description:**
+
+  * Check if the IMU is initialized.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * bool:
+    * true: IMU is initialized.
+    * false: IMU is not initialized.
+
+
+
+## getType
+
+**Syntax:**
+    
+    
+    imu_t getType(void) const { return _imu; }
+
+`imu_t getType(void) const { return _imu; }`
+
+**Description:**
+
+  * Get the IMU type.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * imu_t:
+    * The type of IMU chip.
+
+
+
+cpp `enum imu_t { imu_none, imu_unknown, imu_sh200q, imu_mpu6050, imu_mpu6886, imu_mpu9250, imu_bmi270, };`
+
+1 2 3 4 5 6 7 8 9
+    
+    
+    enum imu_t
+    { imu_none,
+      imu_unknown,
+      imu_sh200q,
+      imu_mpu6050,
+      imu_mpu6886,
+      imu_mpu9250,
+      imu_bmi270,
+    };
+
+## setINTPinActiveLogic
+
+**Syntax:**
+    
+    
+    bool setINTPinActiveLogic(bool level);
+
+`bool setINTPinActiveLogic(bool level);`
+
+**Description:**
+
+  * Set the active logic level of the interrupt pin.
+
+
+
+****Parameters:****
+
+  * bool level: The active logic level.
+
+
+
+**Return:**
+
+  * bool:
+    * true: Setting successful.
+    * false: Setting failed.
+
+
+
+## setCalibration
+
+**Syntax:**
+    
+    
+    void setCalibration(uint8_t accel_strength, uint8_t gyro_strength, uint8_t mag_strength);
+
+`void setCalibration(uint8_t accel_strength, uint8_t gyro_strength, uint8_t mag_strength);`
+
+**Description:**
+
+  * Specify the strength of the automatic offset adjustment function for each sensor. 0=no auto calibration, 1~255=auto calibration with actual calibration operation performed during each M5.Imu.update.
+
+
+
+****Parameters:****
+
+  * uint8_t accel_strength
+  * uint8_t gyro_strength
+  * uint8_t mag_strength
+
+
+
+**Return:**
+
+  * null
+
+
+
+## saveOffsetToNVS
+
+**Syntax:**
+    
+    
+    bool saveOffsetToNVS(void);
+
+`bool saveOffsetToNVS(void);`
+
+**Description:**
+
+  * Save the IMU offset values to NVS.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * bool:
+    * true: Save successful.
+    * false: Save failed.
+
+
+
+## loadOffsetFromNVS
+
+**Syntax:**
+    
+    
+    bool loadOffsetFromNVS(void);
+
+`bool loadOffsetFromNVS(void);`
+
+**Description:**
+
+  * Load the IMU offset values from NVS.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * bool:
+    * true: Load successful.
+    * false: Load failed.
+
+
+
+## clearOffsetData
+
+**Syntax:**
+    
+    
+    void clearOffsetData(void);
+
+`void clearOffsetData(void);`
+
+**Description:**
+
+  * Clear the IMU offset values in NVS.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * bool:
+    * true: Clear successful.
+    * false: Clear failed.
+
+
+
+## setOffsetData
+
+**Syntax:**
+    
+    
+    void setOffsetData(size_t index, int32_t value);
+
+`void setOffsetData(size_t index, int32_t value);`
+
+**Description:**
+
+  * Set the IMU offset values.
+
+
+
+****Parameters:****
+
+  * size_t index:
+    * The index of the axis to set.
+  * int32_t value
+    * The offset value.
+
+
+
+**Return:**
+
+  * null
+
+
+
+## getOffsetData
+
+**Syntax:**
+    
+    
+    int32_t getOffsetData(size_t index);
+
+`int32_t getOffsetData(size_t index);`
+
+**Description:**
+
+  * Get the IMU offset values.
+
+
+
+****Parameters:****
+
+  * size_t index:
+    * The index of the axis to read.
+
+
+
+**Return:**
+
+  * int32_t: The offset value.
+
+
+
+## getRawData
+
+**Syntax:**
+    
+    
+    int16_t getRawData(size_t index);
+
+`int16_t getRawData(size_t index);`
+
+**Description:**
+
+  * Get the IMU Raw data.
+
+
+
+****Parameters:****
+
+  * size_t index:
+    * The index of the axis to read.
+
+
+
+**Return:**
+
+  * int16_t: The IMU Raw data.
+
+
+
+## getImuInstancePtr
+
+**Syntax:**
+    
+    
+    IMU_Base* getImuInstancePtr(int idx) const { return _imu_instance[idx].get(); }
+
+`IMU_Base* getImuInstancePtr(int idx) const { return _imu_instance[idx].get(); }`
+
+**Description:**
+
+  * Get the IMU instance pointer.
+
+
+
+****Parameters:****
+
+  * int idx:
+    * The instance index.
+
+
+
+**Return:**
+
+  * IMU_Base:
+    * The IMU instance pointer.
 
 
 

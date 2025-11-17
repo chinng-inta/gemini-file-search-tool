@@ -1,10 +1,10 @@
 ---
-doc_type: M5GFX
-crawled_at: 2025/11/18 00:19:31
-first_url: https://docs.m5stack.com/ja/arduino/m5gfx/m5gfx_functions/
+doc_type: M5Unified Button
+crawled_at: 2025/11/18 00:19:08
+first_url: https://docs.m5stack.com/ja/arduino/m5unified/button_class/
 ---
 
-# Page: https://docs.m5stack.com/ja/arduino/m5gfx/m5gfx_functions/
+# Page: https://docs.m5stack.com/ja/arduino/m5unified/button_class/
 
 [](https://m5stack.com/)
 
@@ -1735,493 +1735,696 @@ Product  Tutorial
 
 Search
 
-# M5GFX API
+# M5Unified Button Class
 
-## テキスト描画
+  * Button Class
+    * wasClicked
+    * wasHold
+    * wasSingleClicked
+    * wasDoubleClicked
+    * wasDecideClickCount
+    * getClickCount
+    * isHolding
+    * wasChangePressed
+    * isPressed
+    * isReleased
+    * wasPressed
+    * wasReleased
+    * wasReleasedAfterHold
+    * wasReleaseFor
+    * setDebounceThresh
+    * setHoldThresh
+    * setRawState
+    * setState
+    * getState
+    * lastChange
+    * getDebounceThresh
+    * getHoldThresh
+    * getUpdateMsec
 
-#### 1\. テキスト表示
 
-  * [drawCenterString](/ja/arduino/m5gfx/m5gfx_text#drawcenterstring)
-  * [drawChar](/ja/arduino/m5gfx/m5gfx_text#drawchar)
-  * [drawFloat](/ja/arduino/m5gfx/m5gfx_text#drawfloat)
-  * [drawNumber](/ja/arduino/m5gfx/m5gfx_text#drawnumber)
-  * [drawString](/ja/arduino/m5gfx/m5gfx_text#drawstring)
-  * [print](/ja/arduino/m5gfx/m5gfx_text#print)
-  * [printf](/ja/arduino/m5gfx/m5gfx_text#printf)
-  * [println](/ja/arduino/m5gfx/m5gfx_text#println)
 
+## wasClicked
 
+**Syntax:**
+    
+    
+    bool wasClicked(void)
 
-#### 2\. テキスト属性
+`bool wasClicked(void)`
 
-  * [setFont](/ja/arduino/m5gfx/m5gfx_text#setfont)
-  * [getFont](/ja/arduino/m5gfx/m5gfx_text#getfont)
-  * [showFont](/ja/arduino/m5gfx/m5gfx_text#showfont)
-  * [fontHeight](/ja/arduino/m5gfx/m5gfx_text#fontheight)
-  * [fontWidth](/ja/arduino/m5gfx/m5gfx_text#fontwidth)
-  * [loadFont](/ja/arduino/m5gfx/m5gfx_text#loadfont)
-  * [unloadFont](/ja/arduino/m5gfx/m5gfx_text#unloadfont)
-  * [setTextColor](/ja/arduino/m5gfx/m5gfx_text#settextcolor)
-  * [setTextSize](/ja/arduino/m5gfx/m5gfx_text#settextsize)
-  * [getTextSizeX](/ja/arduino/m5gfx/m5gfx_text#gettextsizex)
-  * [getTextSizeY](/ja/arduino/m5gfx/m5gfx_text#gettextsizey)
-  * [setTextStyle](/ja/arduino/m5gfx/m5gfx_text#settextstyle)
-  * [getTextStyle](/ja/arduino/m5gfx/m5gfx_text#gettextstyle)
-  * [textLength](/ja/arduino/m5gfx/m5gfx_text#textlength)
-  * [textWidth](/ja/arduino/m5gfx/m5gfx_text#textwidth)
+**Description:**
 
+  * Determine if the button has been clicked
 
 
-#### 3\. テキストの配置とマージン
 
-  * [setTextDatum](/ja/arduino/m5gfx/m5gfx_text#settextdatum)
-  * [getTextDatum](/ja/arduino/m5gfx/m5gfx_text#gettextdatum)
-  * [setTextPadding](/ja/arduino/m5gfx/m5gfx_text#settextpadding)
-  * [getTextPadding](/ja/arduino/m5gfx/m5gfx_text#gettextpadding)
+****Parameters:****
 
+  * null
 
 
-#### 4\. 自動改行
 
-  * [setTextWrap](/ja/arduino/m5gfx/m5gfx_text#settextwrap)
+**Return:**
 
+  * bool:
+    * true: Button click triggered
+    * false: Button click not triggered
 
 
-## 図形描画
 
-#### 1\. 線形図形
+## wasHold
 
-  * [drawArc](/ja/arduino/m5gfx/m5gfx_graph#drawarc)
-  * [drawBezier](/ja/arduino/m5gfx/m5gfx_graph#drawbezier)
-  * [drawCircle](/ja/arduino/m5gfx/m5gfx_graph#drawcircle)
-  * [drawEllipse](/ja/arduino/m5gfx/m5gfx_graph#drawellipse)
-  * [drawEllipseArc](/ja/arduino/m5gfx/m5gfx_graph#drawellipsearc)
-  * [drawFastHLine](/ja/arduino/m5gfx/m5gfx_graph#drawfasthline)
-  * [drawFastVLine](/ja/arduino/m5gfx/m5gfx_graph#drawfastvline)
-  * [drawLine](/ja/arduino/m5gfx/m5gfx_graph#drawline)
-  * [drawGradientHLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradienthline)
-  * [drawGradientLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradientline)
-  * [drawGradientVLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradientvline)
-  * [drawPixel](/ja/arduino/m5gfx/m5gfx_graph#drawpixel)
-  * [drawTriangle](/ja/arduino/m5gfx/m5gfx_graph#drawtriangle)
+**Syntax:**
+    
+    
+    bool wasHold(void)
 
+`bool wasHold(void)`
 
+**Description:**
 
-#### 2\. 塗りつぶし図形
+  * Determine if the button is held down, default threshold time is 500ms
 
-  * [fillAffine](/ja/arduino/m5gfx/m5gfx_graph#fillaffine)
-  * [fillArc](/ja/arduino/m5gfx/m5gfx_graph#fillarc)
-  * [fillCircle](/ja/arduino/m5gfx/m5gfx_graph#fillcircle)
-  * [fillEllipse](/ja/arduino/m5gfx/m5gfx_graph#fillellipse)
-  * [fillEllipseArc](/ja/arduino/m5gfx/m5gfx_graph#fillellipsearc)
-  * [fillRect](/ja/arduino/m5gfx/m5gfx_graph#fillrect)
-  * [fillRectAlpha](/ja/arduino/m5gfx/m5gfx_graph#fillrectalpha)
-  * [fillRoundRect](/ja/arduino/m5gfx/m5gfx_graph#fillroundrect)
-  * [fillTriangle](/ja/arduino/m5gfx/m5gfx_graph#filltriangle)
-  * [floodFill](/ja/arduino/m5gfx/m5gfx_graph#floodfill)
-  * [paint](/ja/arduino/m5gfx/m5gfx_graph#paint)
-  * [copyRect](/ja/arduino/m5gfx/m5gfx_graph#copyrect)
 
 
+****Parameters:****
 
-#### 3\. 特殊図形
+  * null
 
-  * [progressBar](/ja/arduino/m5gfx/m5gfx_graph#progressbar)
-  * [qrcode](/ja/arduino/m5gfx/m5gfx_graph#qrcode)
 
 
+**Return:**
 
-#### 4\. write and read
+  * bool:
+    * true: Button hold triggered
+    * false: Button hold not triggered
 
-  * [getStartCount](/ja/arduino/m5gfx/m5gfx_graph#getstartcount)
-  * [readPixel](/ja/arduino/m5gfx/m5gfx_graph#readpixel)
-  * [readPixelRGB](/ja/arduino/m5gfx/m5gfx_graph#readpixelrgb)
-  * [readRect](/ja/arduino/m5gfx/m5gfx_graph#readrect)
-  * [readRectRGB](/ja/arduino/m5gfx/m5gfx_graph#readrectrgb)
-  * [startWrite](/ja/arduino/m5gfx/m5gfx_graph#startwrite)
-  * [endWrite](/ja/arduino/m5gfx/m5gfx_graph#endwrite)
-  * [pushBlock](/ja/arduino/m5gfx/m5gfx_graph#pushblock)
-  * [pushPixels](/ja/arduino/m5gfx/m5gfx_graph#pushpixels)
-  * [pushPixelsDMA](/ja/arduino/m5gfx/m5gfx_graph#pushpixelsdma)
-  * [writeColor](/ja/arduino/m5gfx/m5gfx_graph#writecolor)
-  * [writeFastHLine](/ja/arduino/m5gfx/m5gfx_graph#writefasthline)
-  * [writeFastVLine](/ja/arduino/m5gfx/m5gfx_graph#writefastvline)
-  * [writeFillRect](/ja/arduino/m5gfx/m5gfx_graph#writefillrect)
-  * [writeFillRectPreclipped](/ja/arduino/m5gfx/m5gfx_graph#writefillrectpreclipped)
-  * [writeIndexedPixels](/ja/arduino/m5gfx/m5gfx_graph#writeindexedpixels)
-  * [writePixel](/ja/arduino/m5gfx/m5gfx_graph#writepixel)
-  * [writePixels](/ja/arduino/m5gfx/m5gfx_graph#writepixels)
-  * [writePixelsDMA](/ja/arduino/m5gfx/m5gfx_graph#writepixelsdma)
 
 
+## wasSingleClicked
 
-## 画像描画
+**Syntax:**
+    
+    
+    bool wasSingleClicked(void)
 
-#### 1\. 画像
+`bool wasSingleClicked(void)`
 
-  * [createPng](/ja/arduino/m5gfx/m5gfx_image#createpng)
-  * [drawBmp](/ja/arduino/m5gfx/m5gfx_image#drawbmp)
-  * [drawBmpFile](/ja/arduino/m5gfx/m5gfx_image#drawbmpfile)
-  * [drawBmpUrl](/ja/arduino/m5gfx/m5gfx_image#drawbmpurl)
-  * [drawJpg](/ja/arduino/m5gfx/m5gfx_image#drawjpg)
-  * [drawJpgFile](/ja/arduino/m5gfx/m5gfx_image#drawjpgfile)
-  * [drawJpgUrl](/ja/arduino/m5gfx/m5gfx_image#drawjpgurl)
-  * [drawPng](/ja/arduino/m5gfx/m5gfx_image#drawpng)
-  * [drawPngFile](/ja/arduino/m5gfx/m5gfx_image#drawpngfile)
-  * [drawPngUrl](/ja/arduino/m5gfx/m5gfx_image#drawpngurl)
-  * [drawQoi](/ja/arduino/m5gfx/m5gfx_image#drawqoi)
-  * [drawQoiFile](/ja/arduino/m5gfx/m5gfx_image#drawqoifile)
+**Description:**
 
+  * Determine if the button single click event has occurred
 
 
-#### 
 
-  * [drawQoiUrl](/ja/arduino/m5gfx/m5gfx_image#drawqoiurl)
-  * [pushAlphaImage](/ja/arduino/m5gfx/m5gfx_image#pushalphaimage)
-  * [pushGrayscaleImage](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimage)
-  * [pushGrayscaleImageAffine](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimageaffine)
-  * [pushGrayscaleImageRotateZoom](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimagerotatezoom)
-  * [pushImage](/ja/arduino/m5gfx/m5gfx_image#pushimage)
-  * [pushImageDMA](/ja/arduino/m5gfx/m5gfx_image#pushimagedma)
-  * [pushImageAffine](/ja/arduino/m5gfx/m5gfx_image#pushimageaffine)
-  * [pushImageAffineWithAA](/ja/arduino/m5gfx/m5gfx_image#pushimageaffinewithaa)
-  * [pushImageRotateZoom](/ja/arduino/m5gfx/m5gfx_image#pushimagerotatezoom)
-  * [pushImageRotateZoomWithAA](/ja/arduino/m5gfx/m5gfx_image#pushimagerotatezoomwithaa)
+****Parameters:****
 
+  * null
 
 
-#### 2\. 画像色変換
 
-  * [setSwapBytes](/ja/arduino/m5gfx/m5gfx_image#setswapbytes)
-  * [getSwapBytes](/ja/arduino/m5gfx/m5gfx_image#getswapbytes)
-  * [swap565](/ja/arduino/m5gfx/m5gfx_image#swap565)
-  * [swap888](/ja/arduino/m5gfx/m5gfx_image#swap888)
+**Return:**
 
+  * bool:
+    * true: Button single click triggered
+    * false: Button single click not triggered
 
 
-## キャンバス管理
 
-#### 1\. 面板パネルパラメータ参数
+## wasDoubleClicked
 
-  * [isEPD](/ja/arduino/m5gfx/m5gfx_sprite#isepd)
-  * [height](/ja/arduino/m5gfx/m5gfx_sprite#height)
-  * [width](/ja/arduino/m5gfx/m5gfx_sprite#width)
-  * [popState](/ja/arduino/m5gfx/m5gfx_sprite#popstate)
-  * [pushState](/ja/arduino/m5gfx/m5gfx_sprite#pushstate)
-  * [setBrightness](/ja/arduino/m5gfx/m5gfx_sprite#setbrightness)
-  * [getBrightness](/ja/arduino/m5gfx/m5gfx_sprite#getbrightness)
-  * [setEpdMode](/ja/arduino/m5gfx/m5gfx_sprite#setepdmode)
-  * [getEpdMode](/ja/arduino/m5gfx/m5gfx_sprite#getepdmode)
-  * [setResolution](/ja/arduino/m5gfx/m5gfx_sprite#setresolution)
-  * [setRotation](/ja/arduino/m5gfx/m5gfx_sprite#setrotation)
-  * [getRotation](/ja/arduino/m5gfx/m5gfx_sprite#getrotation)
+**Syntax:**
+    
+    
+    bool wasDoubleClicked(void)
 
+`bool wasDoubleClicked(void)`
 
+**Description:**
 
-#### 2\. カラー
+  * Determine if the button double click event has occurred
 
-  * [setBaseColor](/ja/arduino/m5gfx/m5gfx_sprite#setbasecolor)
-  * [getBaseColor](/ja/arduino/m5gfx/m5gfx_sprite#getbasecolor)
-  * [setColor](/ja/arduino/m5gfx/m5gfx_sprite#setcolor)
-  * [setRawColor](/ja/arduino/m5gfx/m5gfx_sprite#setrawcolor)
-  * [getRawColor](/ja/arduino/m5gfx/m5gfx_sprite#getrawcolor)
-  * [setColorDepth](/ja/arduino/m5gfx/m5gfx_sprite#setcolordepth)
-  * [getColorDepth](/ja/arduino/m5gfx/m5gfx_sprite#getcolordepth)
-  * [getPalette](/ja/arduino/m5gfx/m5gfx_sprite#getpalette)
-  * [getPaletteCount](/ja/arduino/m5gfx/m5gfx_sprite#getpalettecount)
 
 
+****Parameters:****
 
-#### 3\. 画面クリア
+  * null
 
-  * [clear](/ja/arduino/m5gfx/m5gfx_sprite#clear)
-  * [clearDisplay](/ja/arduino/m5gfx/m5gfx_sprite#cleardisplay)
-  * [fillScreen](/ja/arduino/m5gfx/m5gfx_sprite#fillscreen)
 
 
+**Return:**
 
-#### 4\. 座標設定
+  * bool:
+    * true: Button double click triggered
+    * false: Button double click not triggered
 
-  * [setCursor](/ja/arduino/m5gfx/m5gfx_sprite#setcursor)
-  * [getCursorX](/ja/arduino/m5gfx/m5gfx_sprite#getcursorx)
-  * [getCursorY](/ja/arduino/m5gfx/m5gfx_sprite#getcursory)
-  * [setPivot](/ja/arduino/m5gfx/m5gfx_sprite#setpivot)
-  * [getPivotX](/ja/arduino/m5gfx/m5gfx_sprite#getpivotx)
-  * [getPivotY](/ja/arduino/m5gfx/m5gfx_sprite#getpivoty)
 
 
+## wasDecideClickCount
 
-#### 5\. キャンバス領域選択
+**Syntax:**
+    
+    
+    bool wasDecideClickCount(void)
 
-  * [setAddrWindow](/ja/arduino/m5gfx/m5gfx_sprite#setaddrwindow)
-  * [setWindow](/ja/arduino/m5gfx/m5gfx_sprite#setwindow)
-  * [setClipRect](/ja/arduino/m5gfx/m5gfx_sprite#setcliprect)
-  * [getClipRect](/ja/arduino/m5gfx/m5gfx_sprite#getcliprect)
-  * [clearClipRect](/ja/arduino/m5gfx/m5gfx_sprite#clearcliprect)
+`bool wasDecideClickCount(void)`
 
+**Description:**
 
+  * Trigger button click count, click count can be obtained through getClickCount API
 
-#### 6\. キャンバススクロール
 
-  * [scroll](/ja/arduino/m5gfx/m5gfx_sprite#scroll)
-  * [setTextScroll](/ja/arduino/m5gfx/m5gfx_sprite#settextscroll)
-  * [setScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#setscrollrect)
-  * [getScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#getscrollrect)
-  * [clearScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#clearscrollrect)
 
+****Parameters:****
 
+  * null
 
-#### 7\. カスタム処理
 
-  * [effect](/ja/arduino/m5gfx/m5gfx_sprite#effect)
 
+**Return:**
 
+  * bool:
+    * true: Click count triggered
+    * false: Click count not triggered
 
-## スクリーン電源管理
 
-#### 1\. 電源状態管理
 
-  * [powerSave](/ja/arduino/m5gfx/m5gfx_power#powersave)
-  * [powerSaveOff](/ja/arduino/m5gfx/m5gfx_power#powersaveoff)
-  * [powerSaveOn](/ja/arduino/m5gfx/m5gfx_power#powersaveon)
+## getClickCount
 
+**Syntax:**
+    
+    
+    uint8_t getClickCount(void)
 
+`uint8_t getClickCount(void)`
 
-#### 2\. スリープとウェイクアップ
+**Description:**
 
-  * [sleep](/ja/arduino/m5gfx/m5gfx_power#sleep)
-  * [wakeup](/ja/arduino/m5gfx/m5gfx_power#wakeup)
+  * Get the number of button clicks
 
 
 
-## タッチスクリーン
+****Parameters:****
 
-#### 1\. タッチ情報
+  * null
 
-  * [getTouch](/ja/arduino/m5gfx/m5gfx_touch#gettouch)
-  * [getTouchRaw](/ja/arduino/m5gfx/m5gfx_touch#gettouchraw)
-  * [convertRawXY](/ja/arduino/m5gfx/m5gfx_touch#convertrawxy)
 
 
+**Return:**
 
-#### 2\. 画面キャリブレーション
+  * uint8_t: Number of clicks
 
-  * [calibrateTouch](/ja/arduino/m5gfx/m5gfx_touch#calibratetouch)
-  * [setTouchCalibrate](/ja/arduino/m5gfx/m5gfx_touch#settouchcalibrate)
 
 
+## isHolding
 
-## アルファベット索引
+**Syntax:**
+    
+    
+    bool isHolding(void)
 
-#### a-d
+`bool isHolding(void)`
 
-  * [calibrateTouch](/ja/arduino/m5gfx/m5gfx_touch#calibratetouch)
-  * [clear](/ja/arduino/m5gfx/m5gfx_sprite#clear)
-  * [clearClipRect](/ja/arduino/m5gfx/m5gfx_sprite#clearcliprect)
-  * [clearDisplay](/ja/arduino/m5gfx/m5gfx_sprite#cleardisplay)
-  * [clearScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#clearscrollrect)
-  * [convertRawXY](/ja/arduino/m5gfx/m5gfx_touch#convertrawxy)
-  * [copyRect](/ja/arduino/m5gfx/m5gfx_graph#copyrect)
-  * [createPng](/ja/arduino/m5gfx/m5gfx_image#createpng)
-  * [drawArc](/ja/arduino/m5gfx/m5gfx_graph#drawarc)
-  * [drawBezier](/ja/arduino/m5gfx/m5gfx_graph#drawbezier)
-  * [drawBmp](/ja/arduino/m5gfx/m5gfx_image#drawbmp)
-  * [drawBmpFile](/ja/arduino/m5gfx/m5gfx_image#drawbmpfile)
-  * [drawBmpUrl](/ja/arduino/m5gfx/m5gfx_image#drawbmpurl)
+**Description:**
 
+  * Determine if the button is currently held down
 
 
-#### 
 
-  * [drawCenterString](/ja/arduino/m5gfx/m5gfx_text#drawcenterstring)
-  * [drawChar](/ja/arduino/m5gfx/m5gfx_text#drawchar)
-  * [drawCircle](/ja/arduino/m5gfx/m5gfx_graph#drawcircle)
-  * [drawEllipse](/ja/arduino/m5gfx/m5gfx_graph#drawellipse)
-  * [drawEllipseArc](/ja/arduino/m5gfx/m5gfx_graph#drawellipsearc)
-  * [drawFastHLine](/ja/arduino/m5gfx/m5gfx_graph#drawfasthline)
-  * [drawFastVLine](/ja/arduino/m5gfx/m5gfx_graph#drawfastvline)
-  * [drawFloat](/ja/arduino/m5gfx/m5gfx_text#drawfloat)
-  * [drawGradientHLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradienthline)
-  * [drawGradientLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradientline)
-  * [drawGradientVLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradientvline)
-  * [drawJpg](/ja/arduino/m5gfx/m5gfx_image#drawjpg)
-  * [drawJpgFile](/ja/arduino/m5gfx/m5gfx_image#drawjpgfile)
+****Parameters:****
 
+  * null
 
 
-#### 
 
-  * [drawJpgUrl](/ja/arduino/m5gfx/m5gfx_image#drawjpgurl)
-  * [drawLine](/ja/arduino/m5gfx/m5gfx_graph#drawline)
-  * [drawNumber](/ja/arduino/m5gfx/m5gfx_text#drawnumber)
-  * [drawPixel](/ja/arduino/m5gfx/m5gfx_graph#drawpixel)
-  * [drawPng](/ja/arduino/m5gfx/m5gfx_image#drawpng)
-  * [drawPngFile](/ja/arduino/m5gfx/m5gfx_image#drawpngfile)
-  * [drawPngUrl](/ja/arduino/m5gfx/m5gfx_image#drawpngurl)
-  * [drawQoi](/ja/arduino/m5gfx/m5gfx_image#drawqoi)
-  * [drawQoiFile](/ja/arduino/m5gfx/m5gfx_image#drawqoifile)
-  * [drawQoiUrl](/ja/arduino/m5gfx/m5gfx_image#drawqoiurl)
-  * [drawString](/ja/arduino/m5gfx/m5gfx_text#drawstring)
-  * [drawTriangle](/ja/arduino/m5gfx/m5gfx_graph#drawtriangle)
+**Return:**
 
+  * bool:
+    * true: Button is currently in a held-down state
+    * false: Button is not currently in a held-down state
 
 
-#### e-h
 
-  * [effect](/ja/arduino/m5gfx/m5gfx_sprite#effect)
-  * [endWrite](/ja/arduino/m5gfx/m5gfx_graph#endwrite)
-  * [fillAffine](/ja/arduino/m5gfx/m5gfx_graph#fillaffine)
-  * [fillArc](/ja/arduino/m5gfx/m5gfx_graph#fillarc)
-  * [fillCircle](/ja/arduino/m5gfx/m5gfx_graph#fillcircle)
-  * [fillEllipse](/ja/arduino/m5gfx/m5gfx_graph#fillellipse)
-  * [fillEllipseArc](/ja/arduino/m5gfx/m5gfx_graph#fillellipsearc)
-  * [fillRect](/ja/arduino/m5gfx/m5gfx_graph#fillrect)
-  * [fillRectAlpha](/ja/arduino/m5gfx/m5gfx_graph#fillrectalpha)
-  * [fillRoundRect](/ja/arduino/m5gfx/m5gfx_graph#fillroundrect)
-  * [fillScreen](/ja/arduino/m5gfx/m5gfx_sprite#fillscreen)
-  * [fillTriangle](/ja/arduino/m5gfx/m5gfx_graph#filltriangle)
-  * [floodFill](/ja/arduino/m5gfx/m5gfx_graph#floodfill)
-  * [fontHeight](/ja/arduino/m5gfx/m5gfx_text#fontheight)
+## wasChangePressed
 
+**Syntax:**
+    
+    
+    bool wasChangePressed(void)
 
+`bool wasChangePressed(void)`
 
-#### 
+**Description:**
 
-  * [fontWidth](/ja/arduino/m5gfx/m5gfx_text#fontwidth)
-  * [getBaseColor](/ja/arduino/m5gfx/m5gfx_sprite#getbasecolor)
-  * [getBrightness](/ja/arduino/m5gfx/m5gfx_sprite#getbrightness)
-  * [getClipRect](/ja/arduino/m5gfx/m5gfx_sprite#getcliprect)
-  * [getColorDepth](/ja/arduino/m5gfx/m5gfx_sprite#getcolordepth)
-  * [getCursorX](/ja/arduino/m5gfx/m5gfx_sprite#getcursorx)
-  * [getCursorY](/ja/arduino/m5gfx/m5gfx_sprite#getcursory)
-  * [getEpdMode](/ja/arduino/m5gfx/m5gfx_sprite#getepdmode)
-  * [getFont](/ja/arduino/m5gfx/m5gfx_text#getfont)
-  * [getPalette](/ja/arduino/m5gfx/m5gfx_sprite#getpalette)
-  * [getPaletteCount](/ja/arduino/m5gfx/m5gfx_sprite#getpalettecount)
-  * [getPivotX](/ja/arduino/m5gfx/m5gfx_sprite#getpivotx)
-  * [getPivotY](/ja/arduino/m5gfx/m5gfx_sprite#getpivoty)
-  * [getRawColor](/ja/arduino/m5gfx/m5gfx_sprite#getrawcolor)
+  * Determine if the button state has changed
 
 
 
-#### 
+****Parameters:****
 
-  * [getRotation](/ja/arduino/m5gfx/m5gfx_sprite#getrotation)
-  * [getScrollRect](../m5gfx_sprite#getscrollrect)
-  * [getStartCount](/ja/arduino/m5gfx/m5gfx_graph#getstartcount)
-  * [getSwapBytes](/ja/arduino/m5gfx/m5gfx_image#getswapbytes)
-  * [getTextDatum](/ja/arduino/m5gfx/m5gfx_text#gettextdatum)
-  * [getTextPadding](/ja/arduino/m5gfx/m5gfx_text#gettextpadding)
-  * [getTextSizeX](/ja/arduino/m5gfx/m5gfx_text#gettextsizex)
-  * [getTextSizeY](/ja/arduino/m5gfx/m5gfx_text#gettextsizey)
-  * [getTextStyle](/ja/arduino/m5gfx/m5gfx_text#gettextstyle)
-  * [getTouch](/ja/arduino/m5gfx/m5gfx_touch#gettouch)
-  * [getTouchRaw](/ja/arduino/m5gfx/m5gfx_touch#gettouchraw)
-  * [height](/ja/arduino/m5gfx/m5gfx_sprite#height)
+  * null
 
 
 
-#### i-r
+**Return:**
 
-  * [isEPD](/ja/arduino/m5gfx/m5gfx_sprite#isepd)
-  * [loadFont](/ja/arduino/m5gfx/m5gfx_text#loadfont)
-  * [paint](/ja/arduino/m5gfx/m5gfx_graph#paint)
-  * [popState](/ja/arduino/m5gfx/m5gfx_sprite#popstate)
-  * [powerSave](/ja/arduino/m5gfx/m5gfx_power#powersave)
-  * [powerSaveOff](/ja/arduino/m5gfx/m5gfx_power#powersaveoff)
-  * [powerSaveOn](/ja/arduino/m5gfx/m5gfx_power#powersaveon)
-  * [print](/ja/arduino/m5gfx/m5gfx_text#print)
-  * [printf](/ja/arduino/m5gfx/m5gfx_text#printf)
-  * [println](/ja/arduino/m5gfx/m5gfx_text#println)
+  * bool:
+    * true: Button state changed
+    * false: No button state change
 
 
 
-#### 
+## isPressed
 
-  * [progressBar](/ja/arduino/m5gfx/m5gfx_graph#progressbar)
-  * [pushAlphaImage](/ja/arduino/m5gfx/m5gfx_image#pushalphaimage)
-  * [pushBlock](/ja/arduino/m5gfx/m5gfx_graph#pushblock)
-  * [pushGrayscaleImage](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimage)
-  * [pushGrayscaleImageAffine](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimageaffine)
-  * [pushGrayscaleImageRotateZoom](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimagerotatezoom)
-  * [pushImage](/ja/arduino/m5gfx/m5gfx_image#pushimage)
-  * [pushImageAffine](/ja/arduino/m5gfx/m5gfx_image#pushimageaffine)
-  * [pushImageAffineWithAA](/ja/arduino/m5gfx/m5gfx_image#pushimageaffinewithaa)
-  * [pushImageDMA](/ja/arduino/m5gfx/m5gfx_image#pushimagedma)
+**Syntax:**
+    
+    
+    bool isPressed(void)
 
+`bool isPressed(void)`
 
+**Description:**
 
-#### 
+  * Determine if the button is pressed
 
-  * [pushImageRotateZoom](/ja/arduino/m5gfx/m5gfx_image#pushimagerotatezoom)
-  * [pushImageRotateZoomWithAA](/ja/arduino/m5gfx/m5gfx_image#pushimagerotatezoomwithaa)
-  * [pushPixels](/ja/arduino/m5gfx/m5gfx_graph#pushpixels)
-  * [pushPixelsDMA](/ja/arduino/m5gfx/m5gfx_graph#pushpixelsdma)
-  * [pushState](/ja/arduino/m5gfx/m5gfx_sprite#pushstate)
-  * [qrcode](/ja/arduino/m5gfx/m5gfx_image#qrcode)
-  * [readPixel](/ja/arduino/m5gfx/m5gfx_graph#readpixel)
-  * [readPixelRGB](/ja/arduino/m5gfx/m5gfx_graph#readpixelrgb)
-  * [readRect](/ja/arduino/m5gfx/m5gfx_graph#readrect)
-  * [readRectRGB](/ja/arduino/m5gfx/m5gfx_graph#readrectrgb)
 
 
+****Parameters:****
 
-#### s-z
+  * null
 
-  * [scroll](/ja/arduino/m5gfx/m5gfx_sprite#scroll)
-  * [setAddrWindow](/ja/arduino/m5gfx/m5gfx_sprite#setaddrwindow)
-  * [setBaseColor](/ja/arduino/m5gfx/m5gfx_sprite#setbasecolor)
-  * [setBrightness](/ja/arduino/m5gfx/m5gfx_sprite#setbrightness)
-  * [setClipRect](/ja/arduino/m5gfx/m5gfx_sprite#setcliprect)
-  * [setColor](/ja/arduino/m5gfx/m5gfx_sprite#setcolor)
-  * [setColorDepth](/ja/arduino/m5gfx/m5gfx_sprite#setcolordepth)
-  * [setCursor](/ja/arduino/m5gfx/m5gfx_sprite#setcursor)
-  * [setEpdMode](/ja/arduino/m5gfx/m5gfx_sprite#setepdmode)
-  * [setFont](/ja/arduino/m5gfx/m5gfx_text#setfont)
-  * [setPivot](/ja/arduino/m5gfx/m5gfx_sprite#setpivot)
-  * [setRawColor](/ja/arduino/m5gfx/m5gfx_sprite#setrawcolor)
-  * [setResolution](/ja/arduino/m5gfx/m5gfx_sprite#setresolution)
-  * [setRotation](/ja/arduino/m5gfx/m5gfx_sprite#setrotation)
-  * [setScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#setscrollrect)
 
 
+**Return:**
 
-#### 
+  * bool:
+    * true: Button is in a pressed state
+    * false: Button is not in a pressed state
 
-  * [setSwapBytes](/ja/arduino/m5gfx/m5gfx_image#setswapbytes)
-  * [setTextColor](/ja/arduino/m5gfx/m5gfx_text#settextcolor)
-  * [setTextDatum](/ja/arduino/m5gfx/m5gfx_text#settextdatum)
-  * [setTextPadding](/ja/arduino/m5gfx/m5gfx_text#settextpadding)
-  * [setTextScroll](/ja/arduino/m5gfx/m5gfx_sprite#settextscroll)
-  * [setTextSize](/ja/arduino/m5gfx/m5gfx_text#settextsize)
-  * [setTextStyle](/ja/arduino/m5gfx/m5gfx_text#settextstyle)
-  * [setTextWrap](/ja/arduino/m5gfx/m5gfx_text#settextwrap)
-  * [setTouchCalibrate](/ja/arduino/m5gfx/m5gfx_touch#settouchcalibrate)
-  * [setWindow](/ja/arduino/m5gfx/m5gfx_sprite#setwindow)
-  * [showFont](/ja/arduino/m5gfx/m5gfx_text#showfont)
-  * [sleep](/ja/arduino/m5gfx/m5gfx_power#sleep)
-  * [startWrite](/ja/arduino/m5gfx/m5gfx_graph#startwrite)
-  * [swap565](/ja/arduino/m5gfx/m5gfx_image#swap565)
-  * [swap888](/ja/arduino/m5gfx/m5gfx_image#swap888)
 
 
+## isReleased
 
-#### 
+**Syntax:**
+    
+    
+    bool isReleased(void)
 
-  * [textLength](/ja/arduino/m5gfx/m5gfx_text#textlength)
-  * [textWidth](/ja/arduino/m5gfx/m5gfx_text#textwidth)
-  * [unloadFont](/ja/arduino/m5gfx/m5gfx_text#unloadfont)
-  * [wakeup](/ja/arduino/m5gfx/m5gfx_power#wakeup)
-  * [width](/ja/arduino/m5gfx/m5gfx_sprite#width)
-  * [writeColor](/ja/arduino/m5gfx/m5gfx_graph#writecolor)
-  * [writeFastHLine](/ja/arduino/m5gfx/m5gfx_graph#writefasthline)
-  * [writeFastVLine](/ja/arduino/m5gfx/m5gfx_graph#writefastvline)
-  * [writeFillRect](/ja/arduino/m5gfx/m5gfx_graph#writefillrect)
-  * [writeFillRectPreclipped](/ja/arduino/m5gfx/m5gfx_graph#writefillrectpreclipped)
-  * [writeIndexedPixels](/ja/arduino/m5gfx/m5gfx_graph#writeindexedpixels)
-  * [writePixel](/ja/arduino/m5gfx/m5gfx_graph#writepixel)
-  * [writePixels](/ja/arduino/m5gfx/m5gfx_graph#writepixels)
-  * [writePixelsDMA](/ja/arduino/m5gfx/m5gfx_graph#writepixelsdma)
+`bool isReleased(void)`
+
+**Description:**
+
+  * Determine if the button is in a released state
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * bool:
+    * true: Button is in a released state
+    * false: Button is not in a released state
+
+
+
+## wasPressed
+
+**Syntax:**
+    
+    
+    bool wasPressed(void)
+
+`bool wasPressed(void)`
+
+**Description:**
+
+  * Determine if the button has changed from a released state to a pressed state
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * bool:
+    * true: Triggered button change from released to pressed state
+    * false: No trigger for button change from released to pressed state
+
+
+
+## wasReleased
+
+**Syntax:**
+    
+    
+    bool wasReleased(void)
+
+`bool wasReleased(void)`
+
+**Description:**
+
+  * Determine if the button has changed from a pressed state to a released state
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * bool:
+    * true: Triggered button change from pressed to released state
+    * false: No trigger for button change from pressed to released state
+
+
+
+## wasReleasedAfterHold
+
+**Syntax:**
+    
+    
+    bool wasReleasedAfterHold(void)
+
+`bool wasReleasedAfterHold(void)`
+
+**Description:**
+
+  * Determine if the button was pressed, held for a while, and then changed to a released state
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * bool:
+    * true: Triggered button pressed, held, then released
+    * false: No trigger for button pressed, held, then released
+
+
+
+## wasReleaseFor
+
+**Syntax:**
+    
+    
+    bool wasReleaseFor(std::uint32_t ms)
+
+`bool wasReleaseFor(std::uint32_t ms)`
+
+**Description:**
+
+  * Determine if the button was pressed and released after exceeding a specified timeout
+
+
+
+****Parameters:****
+
+  * uint32_t ms:
+    * Button release timeout time in ms
+
+
+
+**Return:**
+
+  * bool:
+    * true: Triggered button release after timeout
+    * false: No trigger for button release after timeout
+
+
+
+## setDebounceThresh
+
+**Syntax:**
+    
+    
+    void setDebounceThresh(std::uint32_t msec)
+
+`void setDebounceThresh(std::uint32_t msec)`
+
+**Description:**
+
+  * Set the button debounce threshold
+
+
+
+****Parameters:****
+
+  * uint32_t msec:
+    * Button debounce time in ms
+
+
+
+**Return:**
+
+  * null
+
+
+
+## setHoldThresh
+
+**Syntax:**
+    
+    
+    void setHoldThresh(std::uint32_t msec)
+
+`void setHoldThresh(std::uint32_t msec)`
+
+**Description:**
+
+  * Set the Hold button trigger time threshold
+
+
+
+****Parameters:****
+
+  * uint32_t msec:
+    * Hold trigger threshold in ms
+
+
+
+**Return:**
+
+  * null
+
+
+
+## setRawState
+
+**Syntax:**
+    
+    
+    void setRawState(std::uint32_t msec, bool press);
+
+`void setRawState(std::uint32_t msec, bool press);`
+
+**Description:**
+
+  * Pass the current time and button level into the object to update the button event judgment
+
+
+
+****Parameters:****
+
+  * uint32_t msec:
+
+    * Current time in ms
+  * bool press:
+
+    * Button pin level
+
+
+
+**Return:**
+
+  * null
+
+
+
+## setState
+
+**Syntax:**
+    
+    
+    void setState(std::uint32_t msec, button_state_t state);
+
+`void setState(std::uint32_t msec, button_state_t state);`
+
+**Description:**
+
+  * Pass the button state into the object to update the button event judgment
+
+
+
+****Parameters:****
+
+  * uint32_t msec:
+
+    * Current time in ms
+  * button_state_t state
+
+    * Button state
+
+
+
+**Return:**
+
+  * null
+
+
+
+## getState
+
+**Syntax:**
+    
+    
+    button_state_t getState(void)
+
+`button_state_t getState(void)`
+
+**Description:**
+
+  * Get the current button state
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * button_state_t:
+    * state_nochange: No state update
+    * state_clicked: Button clicked
+    * state_hold: Button held
+    * state_decide_click_count: Click count
+
+
+
+## lastChange
+
+**Syntax:**
+    
+    
+    std::uint32_t lastChange(void) 
+
+`std::uint32_t lastChange(void) `
+
+**Description:**
+
+  * Get the time of the last state update
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * uint32_t: Time of the last state update in ms
+
+
+
+## getDebounceThresh
+
+**Syntax:**
+    
+    
+    std::uint32_t getDebounceThresh(void)
+
+`std::uint32_t getDebounceThresh(void)`
+
+**Description:**
+
+  * Get the debounce time threshold
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * uint32_t: Debounce time threshold in ms
+
+
+
+## getHoldThresh
+
+**Syntax:**
+    
+    
+    std::uint32_t getHoldThresh(void)
+
+`std::uint32_t getHoldThresh(void)`
+
+**Description:**
+
+  * Get the current Hold trigger threshold
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * uint32_t: Trigger threshold in ms
+
+
+
+## getUpdateMsec
+
+**Syntax:**
+    
+    
+    std::uint32_t getUpdateMsec(void)
+
+`std::uint32_t getUpdateMsec(void)`
+
+**Description:**
+
+  * Get the time of the last state check execution
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * uint32_t: Time of the last state check execution in ms
 
 
 

@@ -1,10 +1,10 @@
 ---
-doc_type: M5GFX
-crawled_at: 2025/11/18 00:19:31
-first_url: https://docs.m5stack.com/ja/arduino/m5gfx/m5gfx_functions/
+doc_type: M5Unified Touch
+crawled_at: 2025/11/18 00:19:19
+first_url: https://docs.m5stack.com/ja/arduino/m5unified/touch_class/
 ---
 
-# Page: https://docs.m5stack.com/ja/arduino/m5gfx/m5gfx_functions/
+# Page: https://docs.m5stack.com/ja/arduino/m5unified/touch_class/
 
 [](https://m5stack.com/)
 
@@ -1735,493 +1735,826 @@ Product  Tutorial
 
 Search
 
-# M5GFX API
+# M5Unified Touch Class
 
-## テキスト描画
+  * Touch Class
+    * begin
+    * update
+    * isEnabled
+    * end
+    * getCount
+    * getDetail
+    * getTouchPointRaw
+    * setHoldThresh
+    * setFlickThresh
+  * Touch Detail
+    * deltaX
+    * deltaY
+    * distanceX
+    * distanceY
+    * isPressed
+    * wasPressed
+    * wasClicked
+    * isReleased
+    * wasReleased
+    * isHolding
+    * wasHold
+    * wasFlickStart
+    * isFlicking
+    * wasFlicked
+    * wasDragStart
+    * isDragging
+    * wasDragged
+    * getClickCount
 
-#### 1\. テキスト表示
 
-  * [drawCenterString](/ja/arduino/m5gfx/m5gfx_text#drawcenterstring)
-  * [drawChar](/ja/arduino/m5gfx/m5gfx_text#drawchar)
-  * [drawFloat](/ja/arduino/m5gfx/m5gfx_text#drawfloat)
-  * [drawNumber](/ja/arduino/m5gfx/m5gfx_text#drawnumber)
-  * [drawString](/ja/arduino/m5gfx/m5gfx_text#drawstring)
-  * [print](/ja/arduino/m5gfx/m5gfx_text#print)
-  * [printf](/ja/arduino/m5gfx/m5gfx_text#printf)
-  * [println](/ja/arduino/m5gfx/m5gfx_text#println)
 
+## Touch Class
 
+## begin
 
-#### 2\. テキスト属性
+**Syntax:**
+    
+    
+    void begin(m5gfx::LGFX_Device* gfx);
 
-  * [setFont](/ja/arduino/m5gfx/m5gfx_text#setfont)
-  * [getFont](/ja/arduino/m5gfx/m5gfx_text#getfont)
-  * [showFont](/ja/arduino/m5gfx/m5gfx_text#showfont)
-  * [fontHeight](/ja/arduino/m5gfx/m5gfx_text#fontheight)
-  * [fontWidth](/ja/arduino/m5gfx/m5gfx_text#fontwidth)
-  * [loadFont](/ja/arduino/m5gfx/m5gfx_text#loadfont)
-  * [unloadFont](/ja/arduino/m5gfx/m5gfx_text#unloadfont)
-  * [setTextColor](/ja/arduino/m5gfx/m5gfx_text#settextcolor)
-  * [setTextSize](/ja/arduino/m5gfx/m5gfx_text#settextsize)
-  * [getTextSizeX](/ja/arduino/m5gfx/m5gfx_text#gettextsizex)
-  * [getTextSizeY](/ja/arduino/m5gfx/m5gfx_text#gettextsizey)
-  * [setTextStyle](/ja/arduino/m5gfx/m5gfx_text#settextstyle)
-  * [getTextStyle](/ja/arduino/m5gfx/m5gfx_text#gettextstyle)
-  * [textLength](/ja/arduino/m5gfx/m5gfx_text#textlength)
-  * [textWidth](/ja/arduino/m5gfx/m5gfx_text#textwidth)
+`void begin(m5gfx::LGFX_Device* gfx);`
 
+**Description:**
 
+  * Initialize the Touch instance.
 
-#### 3\. テキストの配置とマージン
 
-  * [setTextDatum](/ja/arduino/m5gfx/m5gfx_text#settextdatum)
-  * [getTextDatum](/ja/arduino/m5gfx/m5gfx_text#gettextdatum)
-  * [setTextPadding](/ja/arduino/m5gfx/m5gfx_text#settextpadding)
-  * [getTextPadding](/ja/arduino/m5gfx/m5gfx_text#gettextpadding)
 
+****Parameters:****
 
+  * m5gfx::LGFX_Device* gfx:
+    * Pointer to the screen device instance.
 
-#### 4\. 自動改行
 
-  * [setTextWrap](/ja/arduino/m5gfx/m5gfx_text#settextwrap)
 
+**Return:**
 
+  * bool:
+    * true: Initialization successful.
+    * false: Initialization failed.
 
-## 図形描画
 
-#### 1\. 線形図形
 
-  * [drawArc](/ja/arduino/m5gfx/m5gfx_graph#drawarc)
-  * [drawBezier](/ja/arduino/m5gfx/m5gfx_graph#drawbezier)
-  * [drawCircle](/ja/arduino/m5gfx/m5gfx_graph#drawcircle)
-  * [drawEllipse](/ja/arduino/m5gfx/m5gfx_graph#drawellipse)
-  * [drawEllipseArc](/ja/arduino/m5gfx/m5gfx_graph#drawellipsearc)
-  * [drawFastHLine](/ja/arduino/m5gfx/m5gfx_graph#drawfasthline)
-  * [drawFastVLine](/ja/arduino/m5gfx/m5gfx_graph#drawfastvline)
-  * [drawLine](/ja/arduino/m5gfx/m5gfx_graph#drawline)
-  * [drawGradientHLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradienthline)
-  * [drawGradientLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradientline)
-  * [drawGradientVLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradientvline)
-  * [drawPixel](/ja/arduino/m5gfx/m5gfx_graph#drawpixel)
-  * [drawTriangle](/ja/arduino/m5gfx/m5gfx_graph#drawtriangle)
+## update
 
+**Syntax:**
+    
+    
+    void update(std::uint32_t msec);
 
+`void update(std::uint32_t msec);`
 
-#### 2\. 塗りつぶし図形
+**Description:**
 
-  * [fillAffine](/ja/arduino/m5gfx/m5gfx_graph#fillaffine)
-  * [fillArc](/ja/arduino/m5gfx/m5gfx_graph#fillarc)
-  * [fillCircle](/ja/arduino/m5gfx/m5gfx_graph#fillcircle)
-  * [fillEllipse](/ja/arduino/m5gfx/m5gfx_graph#fillellipse)
-  * [fillEllipseArc](/ja/arduino/m5gfx/m5gfx_graph#fillellipsearc)
-  * [fillRect](/ja/arduino/m5gfx/m5gfx_graph#fillrect)
-  * [fillRectAlpha](/ja/arduino/m5gfx/m5gfx_graph#fillrectalpha)
-  * [fillRoundRect](/ja/arduino/m5gfx/m5gfx_graph#fillroundrect)
-  * [fillTriangle](/ja/arduino/m5gfx/m5gfx_graph#filltriangle)
-  * [floodFill](/ja/arduino/m5gfx/m5gfx_graph#floodfill)
-  * [paint](/ja/arduino/m5gfx/m5gfx_graph#paint)
-  * [copyRect](/ja/arduino/m5gfx/m5gfx_graph#copyrect)
+  * Update the Touch status.
 
 
 
-#### 3\. 特殊図形
+****Parameters:****
 
-  * [progressBar](/ja/arduino/m5gfx/m5gfx_graph#progressbar)
-  * [qrcode](/ja/arduino/m5gfx/m5gfx_graph#qrcode)
+  * uint32_t msec:
+    * Update time.
 
 
 
-#### 4\. write and read
+**Return:**
 
-  * [getStartCount](/ja/arduino/m5gfx/m5gfx_graph#getstartcount)
-  * [readPixel](/ja/arduino/m5gfx/m5gfx_graph#readpixel)
-  * [readPixelRGB](/ja/arduino/m5gfx/m5gfx_graph#readpixelrgb)
-  * [readRect](/ja/arduino/m5gfx/m5gfx_graph#readrect)
-  * [readRectRGB](/ja/arduino/m5gfx/m5gfx_graph#readrectrgb)
-  * [startWrite](/ja/arduino/m5gfx/m5gfx_graph#startwrite)
-  * [endWrite](/ja/arduino/m5gfx/m5gfx_graph#endwrite)
-  * [pushBlock](/ja/arduino/m5gfx/m5gfx_graph#pushblock)
-  * [pushPixels](/ja/arduino/m5gfx/m5gfx_graph#pushpixels)
-  * [pushPixelsDMA](/ja/arduino/m5gfx/m5gfx_graph#pushpixelsdma)
-  * [writeColor](/ja/arduino/m5gfx/m5gfx_graph#writecolor)
-  * [writeFastHLine](/ja/arduino/m5gfx/m5gfx_graph#writefasthline)
-  * [writeFastVLine](/ja/arduino/m5gfx/m5gfx_graph#writefastvline)
-  * [writeFillRect](/ja/arduino/m5gfx/m5gfx_graph#writefillrect)
-  * [writeFillRectPreclipped](/ja/arduino/m5gfx/m5gfx_graph#writefillrectpreclipped)
-  * [writeIndexedPixels](/ja/arduino/m5gfx/m5gfx_graph#writeindexedpixels)
-  * [writePixel](/ja/arduino/m5gfx/m5gfx_graph#writepixel)
-  * [writePixels](/ja/arduino/m5gfx/m5gfx_graph#writepixels)
-  * [writePixelsDMA](/ja/arduino/m5gfx/m5gfx_graph#writepixelsdma)
+  * null
 
 
 
-## 画像描画
+## isEnabled
 
-#### 1\. 画像
+**Syntax:**
+    
+    
+    bool isEnabled(void);
 
-  * [createPng](/ja/arduino/m5gfx/m5gfx_image#createpng)
-  * [drawBmp](/ja/arduino/m5gfx/m5gfx_image#drawbmp)
-  * [drawBmpFile](/ja/arduino/m5gfx/m5gfx_image#drawbmpfile)
-  * [drawBmpUrl](/ja/arduino/m5gfx/m5gfx_image#drawbmpurl)
-  * [drawJpg](/ja/arduino/m5gfx/m5gfx_image#drawjpg)
-  * [drawJpgFile](/ja/arduino/m5gfx/m5gfx_image#drawjpgfile)
-  * [drawJpgUrl](/ja/arduino/m5gfx/m5gfx_image#drawjpgurl)
-  * [drawPng](/ja/arduino/m5gfx/m5gfx_image#drawpng)
-  * [drawPngFile](/ja/arduino/m5gfx/m5gfx_image#drawpngfile)
-  * [drawPngUrl](/ja/arduino/m5gfx/m5gfx_image#drawpngurl)
-  * [drawQoi](/ja/arduino/m5gfx/m5gfx_image#drawqoi)
-  * [drawQoiFile](/ja/arduino/m5gfx/m5gfx_image#drawqoifile)
+`bool isEnabled(void);`
 
+**Description:**
 
+  * Check if Touch is initialized.
 
-#### 
 
-  * [drawQoiUrl](/ja/arduino/m5gfx/m5gfx_image#drawqoiurl)
-  * [pushAlphaImage](/ja/arduino/m5gfx/m5gfx_image#pushalphaimage)
-  * [pushGrayscaleImage](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimage)
-  * [pushGrayscaleImageAffine](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimageaffine)
-  * [pushGrayscaleImageRotateZoom](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimagerotatezoom)
-  * [pushImage](/ja/arduino/m5gfx/m5gfx_image#pushimage)
-  * [pushImageDMA](/ja/arduino/m5gfx/m5gfx_image#pushimagedma)
-  * [pushImageAffine](/ja/arduino/m5gfx/m5gfx_image#pushimageaffine)
-  * [pushImageAffineWithAA](/ja/arduino/m5gfx/m5gfx_image#pushimageaffinewithaa)
-  * [pushImageRotateZoom](/ja/arduino/m5gfx/m5gfx_image#pushimagerotatezoom)
-  * [pushImageRotateZoomWithAA](/ja/arduino/m5gfx/m5gfx_image#pushimagerotatezoomwithaa)
 
+****Parameters:****
 
+  * null
 
-#### 2\. 画像色変換
 
-  * [setSwapBytes](/ja/arduino/m5gfx/m5gfx_image#setswapbytes)
-  * [getSwapBytes](/ja/arduino/m5gfx/m5gfx_image#getswapbytes)
-  * [swap565](/ja/arduino/m5gfx/m5gfx_image#swap565)
-  * [swap888](/ja/arduino/m5gfx/m5gfx_image#swap888)
 
+**Return:**
 
+  * bool:
+    * true: Touch has been initialized.
+    * false: Touch is not initialized.
 
-## キャンバス管理
 
-#### 1\. 面板パネルパラメータ参数
 
-  * [isEPD](/ja/arduino/m5gfx/m5gfx_sprite#isepd)
-  * [height](/ja/arduino/m5gfx/m5gfx_sprite#height)
-  * [width](/ja/arduino/m5gfx/m5gfx_sprite#width)
-  * [popState](/ja/arduino/m5gfx/m5gfx_sprite#popstate)
-  * [pushState](/ja/arduino/m5gfx/m5gfx_sprite#pushstate)
-  * [setBrightness](/ja/arduino/m5gfx/m5gfx_sprite#setbrightness)
-  * [getBrightness](/ja/arduino/m5gfx/m5gfx_sprite#getbrightness)
-  * [setEpdMode](/ja/arduino/m5gfx/m5gfx_sprite#setepdmode)
-  * [getEpdMode](/ja/arduino/m5gfx/m5gfx_sprite#getepdmode)
-  * [setResolution](/ja/arduino/m5gfx/m5gfx_sprite#setresolution)
-  * [setRotation](/ja/arduino/m5gfx/m5gfx_sprite#setrotation)
-  * [getRotation](/ja/arduino/m5gfx/m5gfx_sprite#getrotation)
+## end
 
+**Syntax:**
+    
+    
+    void end(void);
 
+`void end(void);`
 
-#### 2\. カラー
+**Description:**
 
-  * [setBaseColor](/ja/arduino/m5gfx/m5gfx_sprite#setbasecolor)
-  * [getBaseColor](/ja/arduino/m5gfx/m5gfx_sprite#getbasecolor)
-  * [setColor](/ja/arduino/m5gfx/m5gfx_sprite#setcolor)
-  * [setRawColor](/ja/arduino/m5gfx/m5gfx_sprite#setrawcolor)
-  * [getRawColor](/ja/arduino/m5gfx/m5gfx_sprite#getrawcolor)
-  * [setColorDepth](/ja/arduino/m5gfx/m5gfx_sprite#setcolordepth)
-  * [getColorDepth](/ja/arduino/m5gfx/m5gfx_sprite#getcolordepth)
-  * [getPalette](/ja/arduino/m5gfx/m5gfx_sprite#getpalette)
-  * [getPaletteCount](/ja/arduino/m5gfx/m5gfx_sprite#getpalettecount)
+  * Set the Touch screen device instance pointer to null, reverse initialization.
 
 
 
-#### 3\. 画面クリア
+****Parameters:****
 
-  * [clear](/ja/arduino/m5gfx/m5gfx_sprite#clear)
-  * [clearDisplay](/ja/arduino/m5gfx/m5gfx_sprite#cleardisplay)
-  * [fillScreen](/ja/arduino/m5gfx/m5gfx_sprite#fillscreen)
+  * null
 
 
 
-#### 4\. 座標設定
+**Return:**
 
-  * [setCursor](/ja/arduino/m5gfx/m5gfx_sprite#setcursor)
-  * [getCursorX](/ja/arduino/m5gfx/m5gfx_sprite#getcursorx)
-  * [getCursorY](/ja/arduino/m5gfx/m5gfx_sprite#getcursory)
-  * [setPivot](/ja/arduino/m5gfx/m5gfx_sprite#setpivot)
-  * [getPivotX](/ja/arduino/m5gfx/m5gfx_sprite#getpivotx)
-  * [getPivotY](/ja/arduino/m5gfx/m5gfx_sprite#getpivoty)
+  * null
 
 
 
-#### 5\. キャンバス領域選択
+## getCount
 
-  * [setAddrWindow](/ja/arduino/m5gfx/m5gfx_sprite#setaddrwindow)
-  * [setWindow](/ja/arduino/m5gfx/m5gfx_sprite#setwindow)
-  * [setClipRect](/ja/arduino/m5gfx/m5gfx_sprite#setcliprect)
-  * [getClipRect](/ja/arduino/m5gfx/m5gfx_sprite#getcliprect)
-  * [clearClipRect](/ja/arduino/m5gfx/m5gfx_sprite#clearcliprect)
+**Syntax:**
+    
+    
+    std::uint8_t getCount(void);
 
+`std::uint8_t getCount(void);`
 
+**Description:**
 
-#### 6\. キャンバススクロール
+  * Get the number of current screen touch points.
 
-  * [scroll](/ja/arduino/m5gfx/m5gfx_sprite#scroll)
-  * [setTextScroll](/ja/arduino/m5gfx/m5gfx_sprite#settextscroll)
-  * [setScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#setscrollrect)
-  * [getScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#getscrollrect)
-  * [clearScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#clearscrollrect)
 
 
+****Parameters:****
 
-#### 7\. カスタム処理
+  * null
 
-  * [effect](/ja/arduino/m5gfx/m5gfx_sprite#effect)
 
 
+**Return:**
 
-## スクリーン電源管理
+  * uint8_t points:
+    * The number of screen touch points.
 
-#### 1\. 電源状態管理
 
-  * [powerSave](/ja/arduino/m5gfx/m5gfx_power#powersave)
-  * [powerSaveOff](/ja/arduino/m5gfx/m5gfx_power#powersaveoff)
-  * [powerSaveOn](/ja/arduino/m5gfx/m5gfx_power#powersaveon)
 
+## getDetail
 
+**Syntax:**
+    
+    
+    const touch_detail_t& getDetail(std::size_t index = 0);
 
-#### 2\. スリープとウェイクアップ
+`const touch_detail_t& getDetail(std::size_t index = 0);`
 
-  * [sleep](/ja/arduino/m5gfx/m5gfx_power#sleep)
-  * [wakeup](/ja/arduino/m5gfx/m5gfx_power#wakeup)
+**Description:**
 
+  * Get detailed information about the touch point.
 
 
-## タッチスクリーン
 
-#### 1\. タッチ情報
+****Parameters:****
 
-  * [getTouch](/ja/arduino/m5gfx/m5gfx_touch#gettouch)
-  * [getTouchRaw](/ja/arduino/m5gfx/m5gfx_touch#gettouchraw)
-  * [convertRawXY](/ja/arduino/m5gfx/m5gfx_touch#convertrawxy)
+  * size_t index:
+    * The index of the touch point to retrieve.
 
 
 
-#### 2\. 画面キャリブレーション
+**Return:**
 
-  * [calibrateTouch](/ja/arduino/m5gfx/m5gfx_touch#calibratetouch)
-  * [setTouchCalibrate](/ja/arduino/m5gfx/m5gfx_touch#settouchcalibrate)
+  * touch_detail_t detail:
+    * Detailed information about the screen touch point, including coordinates, offsets, touch point events, etc. For details, refer to the Touch Detail section.
 
 
 
-## アルファベット索引
+## getTouchPointRaw
 
-#### a-d
+**Syntax:**
+    
+    
+    inline const m5gfx::touch_point_t& getTouchPointRaw(std::size_t index = 0) const { return _touch_raw[index < _detail_count ? index : 0]; }
 
-  * [calibrateTouch](/ja/arduino/m5gfx/m5gfx_touch#calibratetouch)
-  * [clear](/ja/arduino/m5gfx/m5gfx_sprite#clear)
-  * [clearClipRect](/ja/arduino/m5gfx/m5gfx_sprite#clearcliprect)
-  * [clearDisplay](/ja/arduino/m5gfx/m5gfx_sprite#cleardisplay)
-  * [clearScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#clearscrollrect)
-  * [convertRawXY](/ja/arduino/m5gfx/m5gfx_touch#convertrawxy)
-  * [copyRect](/ja/arduino/m5gfx/m5gfx_graph#copyrect)
-  * [createPng](/ja/arduino/m5gfx/m5gfx_image#createpng)
-  * [drawArc](/ja/arduino/m5gfx/m5gfx_graph#drawarc)
-  * [drawBezier](/ja/arduino/m5gfx/m5gfx_graph#drawbezier)
-  * [drawBmp](/ja/arduino/m5gfx/m5gfx_image#drawbmp)
-  * [drawBmpFile](/ja/arduino/m5gfx/m5gfx_image#drawbmpfile)
-  * [drawBmpUrl](/ja/arduino/m5gfx/m5gfx_image#drawbmpurl)
+`inline const m5gfx::touch_point_t& getTouchPointRaw(std::size_t index = 0) const { return _touch_raw[index < _detail_count ? index : 0]; }`
 
+**Description:**
 
+  * Get the raw information of the touch point.
 
-#### 
 
-  * [drawCenterString](/ja/arduino/m5gfx/m5gfx_text#drawcenterstring)
-  * [drawChar](/ja/arduino/m5gfx/m5gfx_text#drawchar)
-  * [drawCircle](/ja/arduino/m5gfx/m5gfx_graph#drawcircle)
-  * [drawEllipse](/ja/arduino/m5gfx/m5gfx_graph#drawellipse)
-  * [drawEllipseArc](/ja/arduino/m5gfx/m5gfx_graph#drawellipsearc)
-  * [drawFastHLine](/ja/arduino/m5gfx/m5gfx_graph#drawfasthline)
-  * [drawFastVLine](/ja/arduino/m5gfx/m5gfx_graph#drawfastvline)
-  * [drawFloat](/ja/arduino/m5gfx/m5gfx_text#drawfloat)
-  * [drawGradientHLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradienthline)
-  * [drawGradientLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradientline)
-  * [drawGradientVLine](/ja/arduino/m5gfx/m5gfx_graph#drawgradientvline)
-  * [drawJpg](/ja/arduino/m5gfx/m5gfx_image#drawjpg)
-  * [drawJpgFile](/ja/arduino/m5gfx/m5gfx_image#drawjpgfile)
 
+****Parameters:****
 
+  * size_t index:
+    * The index of the touch point to retrieve.
 
-#### 
 
-  * [drawJpgUrl](/ja/arduino/m5gfx/m5gfx_image#drawjpgurl)
-  * [drawLine](/ja/arduino/m5gfx/m5gfx_graph#drawline)
-  * [drawNumber](/ja/arduino/m5gfx/m5gfx_text#drawnumber)
-  * [drawPixel](/ja/arduino/m5gfx/m5gfx_graph#drawpixel)
-  * [drawPng](/ja/arduino/m5gfx/m5gfx_image#drawpng)
-  * [drawPngFile](/ja/arduino/m5gfx/m5gfx_image#drawpngfile)
-  * [drawPngUrl](/ja/arduino/m5gfx/m5gfx_image#drawpngurl)
-  * [drawQoi](/ja/arduino/m5gfx/m5gfx_image#drawqoi)
-  * [drawQoiFile](/ja/arduino/m5gfx/m5gfx_image#drawqoifile)
-  * [drawQoiUrl](/ja/arduino/m5gfx/m5gfx_image#drawqoiurl)
-  * [drawString](/ja/arduino/m5gfx/m5gfx_text#drawstring)
-  * [drawTriangle](/ja/arduino/m5gfx/m5gfx_graph#drawtriangle)
 
+**Return:**
 
+  * touch_point_t point:
+    * Raw information of the screen touch point, including coordinates and ID.
 
-#### e-h
 
-  * [effect](/ja/arduino/m5gfx/m5gfx_sprite#effect)
-  * [endWrite](/ja/arduino/m5gfx/m5gfx_graph#endwrite)
-  * [fillAffine](/ja/arduino/m5gfx/m5gfx_graph#fillaffine)
-  * [fillArc](/ja/arduino/m5gfx/m5gfx_graph#fillarc)
-  * [fillCircle](/ja/arduino/m5gfx/m5gfx_graph#fillcircle)
-  * [fillEllipse](/ja/arduino/m5gfx/m5gfx_graph#fillellipse)
-  * [fillEllipseArc](/ja/arduino/m5gfx/m5gfx_graph#fillellipsearc)
-  * [fillRect](/ja/arduino/m5gfx/m5gfx_graph#fillrect)
-  * [fillRectAlpha](/ja/arduino/m5gfx/m5gfx_graph#fillrectalpha)
-  * [fillRoundRect](/ja/arduino/m5gfx/m5gfx_graph#fillroundrect)
-  * [fillScreen](/ja/arduino/m5gfx/m5gfx_sprite#fillscreen)
-  * [fillTriangle](/ja/arduino/m5gfx/m5gfx_graph#filltriangle)
-  * [floodFill](/ja/arduino/m5gfx/m5gfx_graph#floodfill)
-  * [fontHeight](/ja/arduino/m5gfx/m5gfx_text#fontheight)
 
+## setHoldThresh
 
+**Syntax:**
+    
+    
+    void setHoldThresh(std::uint16_t msec) { _msecHold = msec; }
 
-#### 
+`void setHoldThresh(std::uint16_t msec) { _msecHold = msec; }`
 
-  * [fontWidth](/ja/arduino/m5gfx/m5gfx_text#fontwidth)
-  * [getBaseColor](/ja/arduino/m5gfx/m5gfx_sprite#getbasecolor)
-  * [getBrightness](/ja/arduino/m5gfx/m5gfx_sprite#getbrightness)
-  * [getClipRect](/ja/arduino/m5gfx/m5gfx_sprite#getcliprect)
-  * [getColorDepth](/ja/arduino/m5gfx/m5gfx_sprite#getcolordepth)
-  * [getCursorX](/ja/arduino/m5gfx/m5gfx_sprite#getcursorx)
-  * [getCursorY](/ja/arduino/m5gfx/m5gfx_sprite#getcursory)
-  * [getEpdMode](/ja/arduino/m5gfx/m5gfx_sprite#getepdmode)
-  * [getFont](/ja/arduino/m5gfx/m5gfx_text#getfont)
-  * [getPalette](/ja/arduino/m5gfx/m5gfx_sprite#getpalette)
-  * [getPaletteCount](/ja/arduino/m5gfx/m5gfx_sprite#getpalettecount)
-  * [getPivotX](/ja/arduino/m5gfx/m5gfx_sprite#getpivotx)
-  * [getPivotY](/ja/arduino/m5gfx/m5gfx_sprite#getpivoty)
-  * [getRawColor](/ja/arduino/m5gfx/m5gfx_sprite#getrawcolor)
+**Description:**
 
+  * Set the touch hold trigger time threshold.
 
 
-#### 
 
-  * [getRotation](/ja/arduino/m5gfx/m5gfx_sprite#getrotation)
-  * [getScrollRect](../m5gfx_sprite#getscrollrect)
-  * [getStartCount](/ja/arduino/m5gfx/m5gfx_graph#getstartcount)
-  * [getSwapBytes](/ja/arduino/m5gfx/m5gfx_image#getswapbytes)
-  * [getTextDatum](/ja/arduino/m5gfx/m5gfx_text#gettextdatum)
-  * [getTextPadding](/ja/arduino/m5gfx/m5gfx_text#gettextpadding)
-  * [getTextSizeX](/ja/arduino/m5gfx/m5gfx_text#gettextsizex)
-  * [getTextSizeY](/ja/arduino/m5gfx/m5gfx_text#gettextsizey)
-  * [getTextStyle](/ja/arduino/m5gfx/m5gfx_text#gettextstyle)
-  * [getTouch](/ja/arduino/m5gfx/m5gfx_touch#gettouch)
-  * [getTouchRaw](/ja/arduino/m5gfx/m5gfx_touch#gettouchraw)
-  * [height](/ja/arduino/m5gfx/m5gfx_sprite#height)
+****Parameters:****
 
+  * uint16_t msec:
+    * Hold trigger threshold in milliseconds.
 
 
-#### i-r
 
-  * [isEPD](/ja/arduino/m5gfx/m5gfx_sprite#isepd)
-  * [loadFont](/ja/arduino/m5gfx/m5gfx_text#loadfont)
-  * [paint](/ja/arduino/m5gfx/m5gfx_graph#paint)
-  * [popState](/ja/arduino/m5gfx/m5gfx_sprite#popstate)
-  * [powerSave](/ja/arduino/m5gfx/m5gfx_power#powersave)
-  * [powerSaveOff](/ja/arduino/m5gfx/m5gfx_power#powersaveoff)
-  * [powerSaveOn](/ja/arduino/m5gfx/m5gfx_power#powersaveon)
-  * [print](/ja/arduino/m5gfx/m5gfx_text#print)
-  * [printf](/ja/arduino/m5gfx/m5gfx_text#printf)
-  * [println](/ja/arduino/m5gfx/m5gfx_text#println)
+**Return:**
 
+  * null
 
 
-#### 
 
-  * [progressBar](/ja/arduino/m5gfx/m5gfx_graph#progressbar)
-  * [pushAlphaImage](/ja/arduino/m5gfx/m5gfx_image#pushalphaimage)
-  * [pushBlock](/ja/arduino/m5gfx/m5gfx_graph#pushblock)
-  * [pushGrayscaleImage](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimage)
-  * [pushGrayscaleImageAffine](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimageaffine)
-  * [pushGrayscaleImageRotateZoom](/ja/arduino/m5gfx/m5gfx_image#pushgrayscaleimagerotatezoom)
-  * [pushImage](/ja/arduino/m5gfx/m5gfx_image#pushimage)
-  * [pushImageAffine](/ja/arduino/m5gfx/m5gfx_image#pushimageaffine)
-  * [pushImageAffineWithAA](/ja/arduino/m5gfx/m5gfx_image#pushimageaffinewithaa)
-  * [pushImageDMA](/ja/arduino/m5gfx/m5gfx_image#pushimagedma)
+## setFlickThresh
 
+**Syntax:**
+    
+    
+    void setFlickThresh(std::uint16_t distance) { _flickThresh = distance; }
 
+`void setFlickThresh(std::uint16_t distance) { _flickThresh = distance; }`
 
-#### 
+**Description:**
 
-  * [pushImageRotateZoom](/ja/arduino/m5gfx/m5gfx_image#pushimagerotatezoom)
-  * [pushImageRotateZoomWithAA](/ja/arduino/m5gfx/m5gfx_image#pushimagerotatezoomwithaa)
-  * [pushPixels](/ja/arduino/m5gfx/m5gfx_graph#pushpixels)
-  * [pushPixelsDMA](/ja/arduino/m5gfx/m5gfx_graph#pushpixelsdma)
-  * [pushState](/ja/arduino/m5gfx/m5gfx_sprite#pushstate)
-  * [qrcode](/ja/arduino/m5gfx/m5gfx_image#qrcode)
-  * [readPixel](/ja/arduino/m5gfx/m5gfx_graph#readpixel)
-  * [readPixelRGB](/ja/arduino/m5gfx/m5gfx_graph#readpixelrgb)
-  * [readRect](/ja/arduino/m5gfx/m5gfx_graph#readrect)
-  * [readRectRGB](/ja/arduino/m5gfx/m5gfx_graph#readrectrgb)
+  * Set the touch flick threshold.
 
 
 
-#### s-z
+****Parameters:****
 
-  * [scroll](/ja/arduino/m5gfx/m5gfx_sprite#scroll)
-  * [setAddrWindow](/ja/arduino/m5gfx/m5gfx_sprite#setaddrwindow)
-  * [setBaseColor](/ja/arduino/m5gfx/m5gfx_sprite#setbasecolor)
-  * [setBrightness](/ja/arduino/m5gfx/m5gfx_sprite#setbrightness)
-  * [setClipRect](/ja/arduino/m5gfx/m5gfx_sprite#setcliprect)
-  * [setColor](/ja/arduino/m5gfx/m5gfx_sprite#setcolor)
-  * [setColorDepth](/ja/arduino/m5gfx/m5gfx_sprite#setcolordepth)
-  * [setCursor](/ja/arduino/m5gfx/m5gfx_sprite#setcursor)
-  * [setEpdMode](/ja/arduino/m5gfx/m5gfx_sprite#setepdmode)
-  * [setFont](/ja/arduino/m5gfx/m5gfx_text#setfont)
-  * [setPivot](/ja/arduino/m5gfx/m5gfx_sprite#setpivot)
-  * [setRawColor](/ja/arduino/m5gfx/m5gfx_sprite#setrawcolor)
-  * [setResolution](/ja/arduino/m5gfx/m5gfx_sprite#setresolution)
-  * [setRotation](/ja/arduino/m5gfx/m5gfx_sprite#setrotation)
-  * [setScrollRect](/ja/arduino/m5gfx/m5gfx_sprite#setscrollrect)
+  * uint16_t distance:
+    * Touch offset flick threshold.
 
 
 
-#### 
+**Return:**
 
-  * [setSwapBytes](/ja/arduino/m5gfx/m5gfx_image#setswapbytes)
-  * [setTextColor](/ja/arduino/m5gfx/m5gfx_text#settextcolor)
-  * [setTextDatum](/ja/arduino/m5gfx/m5gfx_text#settextdatum)
-  * [setTextPadding](/ja/arduino/m5gfx/m5gfx_text#settextpadding)
-  * [setTextScroll](/ja/arduino/m5gfx/m5gfx_sprite#settextscroll)
-  * [setTextSize](/ja/arduino/m5gfx/m5gfx_text#settextsize)
-  * [setTextStyle](/ja/arduino/m5gfx/m5gfx_text#settextstyle)
-  * [setTextWrap](/ja/arduino/m5gfx/m5gfx_text#settextwrap)
-  * [setTouchCalibrate](/ja/arduino/m5gfx/m5gfx_touch#settouchcalibrate)
-  * [setWindow](/ja/arduino/m5gfx/m5gfx_sprite#setwindow)
-  * [showFont](/ja/arduino/m5gfx/m5gfx_text#showfont)
-  * [sleep](/ja/arduino/m5gfx/m5gfx_power#sleep)
-  * [startWrite](/ja/arduino/m5gfx/m5gfx_graph#startwrite)
-  * [swap565](/ja/arduino/m5gfx/m5gfx_image#swap565)
-  * [swap888](/ja/arduino/m5gfx/m5gfx_image#swap888)
+  * null
 
 
 
-#### 
+## Touch Detail
 
-  * [textLength](/ja/arduino/m5gfx/m5gfx_text#textlength)
-  * [textWidth](/ja/arduino/m5gfx/m5gfx_text#textwidth)
-  * [unloadFont](/ja/arduino/m5gfx/m5gfx_text#unloadfont)
-  * [wakeup](/ja/arduino/m5gfx/m5gfx_power#wakeup)
-  * [width](/ja/arduino/m5gfx/m5gfx_sprite#width)
-  * [writeColor](/ja/arduino/m5gfx/m5gfx_graph#writecolor)
-  * [writeFastHLine](/ja/arduino/m5gfx/m5gfx_graph#writefasthline)
-  * [writeFastVLine](/ja/arduino/m5gfx/m5gfx_graph#writefastvline)
-  * [writeFillRect](/ja/arduino/m5gfx/m5gfx_graph#writefillrect)
-  * [writeFillRectPreclipped](/ja/arduino/m5gfx/m5gfx_graph#writefillrectpreclipped)
-  * [writeIndexedPixels](/ja/arduino/m5gfx/m5gfx_graph#writeindexedpixels)
-  * [writePixel](/ja/arduino/m5gfx/m5gfx_graph#writepixel)
-  * [writePixels](/ja/arduino/m5gfx/m5gfx_graph#writepixels)
-  * [writePixelsDMA](/ja/arduino/m5gfx/m5gfx_graph#writepixelsdma)
+**Syntax:**
+
+cpp ` struct touch_detail_t : public m5gfx::touch_point_t { // ... (Content truncated for brevity) };`
+
+1 2 3 4
+    
+    
+        struct touch_detail_t : public m5gfx::touch_point_t
+        {
+          // ... (Content truncated for brevity)
+        };
+
+## deltaX
+
+**Syntax:**
+    
+    
+    inline int deltaX(void) const { return x - prev_x; }
+
+`inline int deltaX(void) const { return x - prev_x; }`
+
+**Description:**
+
+  * Get the offset of the touch point's X coordinate relative to the last sampling.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * int deltaX:
+    * The offset of the touch point's X coordinate relative to the last sampling.
+
+
+
+## deltaY
+
+**Syntax:**
+    
+    
+    inline int deltaY(void) const { return y - prev_y; }
+
+`inline int deltaY(void) const { return y - prev_y; }`
+
+**Description:**
+
+  * Get the offset of the touch point's Y coordinate relative to the last sampling.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * int deltaY:
+    * The offset of the touch point's Y coordinate relative to the last sampling.
+
+
+
+## distanceX
+
+**Syntax:**
+    
+    
+    inline int distanceX(void) const { return x - base_x; }
+
+`inline int distanceX(void) const { return x - base_x; }`
+
+**Description:**
+
+  * Get the offset of the touch point's X coordinate relative to the touch start sampling.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * int distanceX:
+    * The offset of the touch point's X coordinate relative to the touch start sampling.
+
+
+
+## distanceY
+
+**Syntax:**
+    
+    
+    inline int distanceY(void) const { return y - base_y; }
+
+`inline int distanceY(void) const { return y - base_y; }`
+
+**Description:**
+
+  * Get the offset of the touch point's Y coordinate relative to the touch start sampling.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * int distanceY:
+    * The offset of the touch point's Y coordinate relative to the touch start sampling.
+
+
+
+## isPressed
+
+**Syntax:**
+    
+    
+    inline bool isPressed(void) const { return state & touch_state_t::mask_touch; };
+
+`inline bool isPressed(void) const { return state & touch_state_t::mask_touch; };`
+
+**Description:**
+
+  * Determine if the touch point is pressed.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * bool:
+    * true: The touch point is in a pressed state.
+    * false: The touch point is not in a pressed state.
+
+
+
+## wasPressed
+
+**Syntax:**
+    
+    
+    inline bool wasPressed(void) const { return state == touch_state_t::touch_begin; };
+
+`inline bool wasPressed(void) const { return state == touch_state_t::touch_begin; };`
+
+**Description:**
+
+  * Determine if the touch point has changed from a released state to a pressed state.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * bool:
+    * true: The touch point has changed from a released state to a pressed state.
+    * false: The touch point has not changed from a released state to a pressed state.
+
+
+
+## wasClicked
+
+**Syntax:**
+    
+    
+    inline bool wasClicked(void) const { return state == touch_state_t::touch_end; };
+
+`inline bool wasClicked(void) const { return state == touch_state_t::touch_end; };`
+
+**Description:**
+
+  * Determine if the touch point has been clicked.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * bool:
+    * true: The touch point has been clicked.
+    * false: The touch point has not been clicked.
+
+
+
+## isReleased
+
+**Syntax:**
+    
+    
+    inline bool isReleased(void) const { return !(state & touch_state_t::mask_touch); };
+
+`inline bool isReleased(void) const { return !(state & touch_state_t::mask_touch); };`
+
+**Description:**
+
+  * Determine if the touch point is in a released state.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * bool:
+    * true: The touch point is in a released state.
+    * false: The touch point is not in a released state.
+
+
+
+## wasReleased
+
+**Syntax:**
+    
+    
+    inline bool wasReleased(void) const { return (state & (touch_state_t::mask_touch | touch_state_t::mask_change)) == touch_state_t::mask_change; };
+
+`inline bool wasReleased(void) const { return (state & (touch_state_t::mask_touch | touch_state_t::mask_change)) == touch_state_t::mask_change; };`
+
+**Description:**
+
+  * Determine if the touch point has changed from a pressed state to a released state.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * bool:
+    * true: The touch point has changed from a pressed state to a released state.
+    * false: The touch point has not changed from a pressed state to a released state.
+
+
+
+## isHolding
+
+**Syntax:**
+    
+    
+    inline bool isHolding(void) const { return (state & (touch_state_t::mask_touch | touch_state_t::mask_holding)) == (touch_state_t::mask_touch | touch_state_t::mask_holding); }
+
+`inline bool isHolding(void) const { return (state & (touch_state_t::mask_touch | touch_state_t::mask_holding)) == (touch_state_t::mask_touch | touch_state_t::mask_holding); }`
+
+**Description:**
+
+  * Determine if the touch point is currently being held down.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * bool:
+    * true: The touch point is currently being held down.
+    * false: The touch point is not currently being held down.
+
+
+
+## wasHold
+
+**Syntax:**
+    
+    
+    inline bool wasHold(void) const { return state == touch_state_t::hold_begin; }
+
+`inline bool wasHold(void) const { return state == touch_state_t::hold_begin; }`
+
+**Description:**
+
+  * Determine if the touch point has been held down, with a default threshold time of 500ms.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * bool:
+    * true: The touch point has been held down.
+    * false: The touch point has not been held down.
+
+
+
+## wasFlickStart
+
+**Syntax:**
+    
+    
+    inline bool wasFlickStart(void) const { return state == touch_state_t::flick_begin; }
+
+`inline bool wasFlickStart(void) const { return state == touch_state_t::flick_begin; }`
+
+**Description:**
+
+  * Determine if the touch flick action has started.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * bool:
+    * true: The touch flick action has started.
+    * false: The touch flick action has not started.
+
+
+
+## isFlicking
+
+**Syntax:**
+    
+    
+    inline bool isFlicking(void) const { return (state & touch_state_t::drag) == touch_state_t::flick; }
+
+`inline bool isFlicking(void) const { return (state & touch_state_t::drag) == touch_state_t::flick; }`
+
+**Description:**
+
+  * Determine if the touch flick action is in progress.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * bool:
+    * true: The touch flick action is in progress.
+    * false: The touch flick action is not in progress.
+
+
+
+## wasFlicked
+
+**Syntax:**
+    
+    
+    inline bool wasFlicked(void) const { return state == touch_state_t::flick_end; }
+
+`inline bool wasFlicked(void) const { return state == touch_state_t::flick_end; }`
+
+**Description:**
+
+  * Determine if the touch flick action has ended.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * bool:
+    * true: The touch flick action has ended.
+    * false: The touch flick action has not ended.
+
+
+
+## wasDragStart
+
+**Syntax:**
+    
+    
+    inline bool wasDragStart(void) const { return state == touch_state_t::drag_begin; }
+
+`inline bool wasDragStart(void) const { return state == touch_state_t::drag_begin; }`
+
+**Description:**
+
+  * Determine if the touch drag action has started, triggered after holding and moving.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * bool:
+    * true: The touch drag action has started.
+    * false: The touch drag action has not started.
+
+
+
+## isDragging
+
+**Syntax:**
+    
+    
+    inline bool isDragging(void) const { return (state & touch_state_t::drag) == touch_state_t::drag; }
+
+`inline bool isDragging(void) const { return (state & touch_state_t::drag) == touch_state_t::drag; }`
+
+**Description:**
+
+  * Determine if the touch drag action is in progress.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * bool:
+    * true: The touch drag action is in progress.
+    * false: The touch drag action is not in progress.
+
+
+
+## wasDragged
+
+**Syntax:**
+    
+    
+    inline bool wasDragged(void) const { return state == touch_state_t::drag_end; }
+
+`inline bool wasDragged(void) const { return state == touch_state_t::drag_end; }`
+
+**Description:**
+
+  * Determine if the touch drag action has ended.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * bool:
+    * true: The touch drag action has ended.
+    * false: The touch drag action has not ended.
+
+
+
+## getClickCount
+
+**Syntax:**
+    
+    
+    inline std::uint8_t getClickCount(void) const { return click_count; }
+
+`inline std::uint8_t getClickCount(void) const { return click_count; }`
+
+**Description:**
+
+  * Get the number of consecutive touch clicks.
+
+
+
+****Parameters:****
+
+  * null
+
+
+
+**Return:**
+
+  * uint8_t count:
+    * The number of consecutive touch clicks.
 
 
 
