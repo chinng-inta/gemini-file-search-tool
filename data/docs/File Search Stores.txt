@@ -1,0 +1,1994 @@
+---
+doc_type: File Search Stores
+crawled_at: 2025/11/17 23:47:10
+first_url: https://ai.google.dev/api/file-search/file-search-stores?hl=ja&_gl=1*nnw22e*_up*MQ..*_ga*MTg4MTE3NzkzOS4xNzYzMjY2NzI1*_ga_P1DBVKWT6V*czE3NjMyNjY3MjUkbzEkZzAkdDE3NjMyNjY3MjUkajYwJGwwJGg1NjcwODgxODU.#response-body
+---
+
+# Page: https://ai.google.dev/api/file-search/file-search-stores?hl=ja&_gl=1*nnw22e*_up*MQ..*_ga*MTg4MTE3NzkzOS4xNzYzMjY2NzI1*_ga_P1DBVKWT6V*czE3NjMyNjY3MjUkbzEkZzAkdDE3NjMyNjY3MjUkajYwJGwwJGg1NjcwODgxODU.#response-body
+
+メイン コンテンツにスキップ 
+
+[ ](/)
+
+  * 
+
+
+`/`
+
+  * English
+  * Deutsch
+  * Español – América Latina
+  * Français
+  * Indonesia
+  * Italiano
+  * Polski
+  * Português – Brasil
+  * Shqip
+  * Tiếng Việt
+  * Türkçe
+  * Русский
+  * עברית
+  * العربيّة
+  * فارسی
+  * हिंदी
+  * বাংলা
+  * ภาษาไทย
+  * 中文 – 简体
+  * 中文 – 繁體
+  * 日本語
+  * 한국어
+
+[ API キーを取得する ](https://aistudio.google.com/apikey?hl=ja) [ クックブック ](https://github.com/google-gemini/cookbook) [ Community ](https://discuss.ai.google.dev/c/gemini-api/?hl=ja) ログイン
+
+[ Gemini API ドキュメント ](https://ai.google.dev/gemini-api/docs?hl=ja) [ API リファレンス ](https://ai.google.dev/api?hl=ja)
+
+[ ](/)
+
+  * 
+
+
+  * [ Gemini API  ](/gemini-api/docs)
+    * [ Gemini API ドキュメント  ](/gemini-api/docs)
+    * [ API リファレンス  ](/api)
+  * [ API キーを取得する  ](https://aistudio.google.com/apikey)
+  * [ クックブック  ](https://github.com/google-gemini/cookbook)
+  * [ Community  ](https://discuss.ai.google.dev/c/gemini-api/)
+
+
+
+  * [概要](/api)
+  * [API バージョン](/gemini-api/docs/api-versions)
+  * 機能
+
+  * [モデル](/api/models)
+  * [コンテンツの生成](/api/generate-content)
+  * [Live API](/api/live)
+  * [Live Music API](/api/live_music)
+  * [トークン](/api/tokens)
+  * [ファイル](/api/files)
+  * [バッチ API](/api/batch-api)
+  * [キャッシュ](/api/caching)
+  * [エンベディング](/api/embeddings)
+  * ファイル検索
+
+    * [ファイル検索ストア](/api/file-search/file-search-stores)
+    * [ドキュメント](/api/file-search/documents)
+
+  * [すべてのメソッド](/api/all-methods)
+  * 非推奨
+
+    * [PaLM（廃止）](/api/palm)
+
+  * SDK リファレンス
+
+  * [Python](https://googleapis.github.io/python-genai/)
+  * [Go](https://pkg.go.dev/google.golang.org/genai)
+  * [TypeScript](https://googleapis.github.io/js-genai/)
+  * [Java](https://googleapis.github.io/java-genai/javadoc/)
+  * [C#](https://googleapis.github.io/dotnet-genai/)
+
+
+
+search[ファイル検索](https://ai.google.dev/gemini-api/docs/file-search?hl=ja)ツールを使用して、Gemini API で RAG を試します。 
+
+このページは [Cloud Translation API](//cloud.google.com/translate/?hl=ja) によって翻訳されました。 
+
+  * [ ホーム ](https://ai.google.dev/?hl=ja)
+  * [ Gemini API ](https://ai.google.dev/gemini-api?hl=ja)
+  * [ API リファレンス ](https://ai.google.dev/api?hl=ja)
+
+
+
+フィードバックを送信 
+
+#  File Search Stores
+
+File Search API は、Google のインフラストラクチャを使用して検索拡張生成（RAG）システムを構築するためのホスト型質問応答サービスを提供します。
+
+## メソッド: media.uploadToFileSearchStore
+
+  * エンドポイント
+  * パスパラメータ
+  * リクエストの本文
+    * JSON 表現
+  * レスポンスの本文
+    * JSON 表現
+
+
+
+データを FileSearchStore にアップロードし、前処理とチャンク化を行ってから FileSearchStore ドキュメントに保存します。
+
+### エンドポイント
+
+  * アップロード URI（メディアのアップロード リクエストの場合）:  
+
+
+post  `https://generativelanguage.googleapis.com/upload/v1beta/{fileSearchStoreName=fileSearchStores/*}:uploadToFileSearchStore`
+
+  * メタデータ URI（メタデータのみのリクエストの場合）:  
+
+
+post  `https://generativelanguage.googleapis.com/v1beta/{fileSearchStoreName=fileSearchStores/*}:uploadToFileSearchStore`
+
+### パスパラメータ
+
+`fileSearchStoreName` `string`
+
+必須。変更不可。ファイルをアップロードする `FileSearchStore` の名前。例: `fileSearchStores/my-file-search-store-123` 形式は `fileSearchStores/{filesearchstore}` です。
+
+### リクエストの本文
+
+リクエストの本文には、次の構造のデータが含まれます。
+
+フィールド 
+
+`displayName` `string`
+
+省略可。作成されたドキュメントの表示名。
+
+`customMetadata[]` `object (`CustomMetadata`)`
+
+データに関連付けるカスタム メタデータ。
+
+`chunkingConfig` `object (`ChunkingConfig`)`
+
+省略可。サービスにデータのチャンク方法を指示する構成。指定しない場合、サービスはデフォルトのパラメータを使用します。
+
+`mimeType` `string`
+
+省略可。データの MIME タイプ。指定されていない場合は、アップロードされたコンテンツから推測されます。
+
+### レスポンスの本文
+
+これは google.longrunning.Operation のコピーです。scotty とやり取りするには、最上位の Operation proto に追加できない scotty 固有のフィールドを追加する必要があるため、コピーする必要があります。
+
+成功した場合、レスポンスの本文には次の構造のデータが含まれます。
+
+フィールド 
+
+`name` `string`
+
+サーバーによって割り当てられる名前。最初にその名前を返すサービスと同じサービス内でのみ一意になります。デフォルトの HTTP マッピングを使用している場合は、`name` を `operations/{unique_id}` で終わるリソース名にします。
+
+`metadata` `object`
+
+オペレーションに関連付けられているサービス固有のメタデータ。通常は進捗情報や、作成日時などの共通メタデータが含まれます。一部のサービスでは、このようなメタデータが提供されないこともあります。メタデータがある場合、長時間実行オペレーションを返すメソッドでは、メタデータの型をドキュメント化しておく必要があります。
+
+任意の型のフィールドを含むオブジェクト。追加フィールドの `"@type"` には、その型を識別する URI が含まれます。例: `{ "id": 1234, "@type": "types.example.com/standard/id" }`
+
+`done` `boolean`
+
+値が `false` の場合は、オペレーションが進行中であることを意味します。`true` の場合、オペレーションは完了しており、`error` または `response` が利用可能です。
+
+`result` `Union type`
+
+オペレーションの結果。`error` または有効な `response` になります。`done` == `false` の場合、`error` も `response` も設定されません。`done` == `true` の場合、`error` または `response` のどちらか一つだけが設定されます。一部のサービスでは結果が返されない場合があります。`result` は次のいずれかになります。
+
+`error` `object (`[Status](https://ai.google.dev/api/files?hl=ja#v1beta.Status)`)`
+
+失敗またはキャンセルされた場合のオペレーションのエラー結果。
+
+`response` `object`
+
+オペレーションの通常の成功レスポンス。元のメソッドで成功時にデータが返されない場合（`Delete` など）、レスポンスは `google.protobuf.Empty` になります。元のメソッドが標準の `Get`/`Create`/`Update` である場合、レスポンスはリソースになります。他のメソッドについては、レスポンスの型が `XxxResponse`（`Xxx` は元のメソッド名）になります。たとえば、元のメソッド名が `TakeSnapshot()` であれば、レスポンスの型は `TakeSnapshotResponse` になると推測できます。
+
+任意の型のフィールドを含むオブジェクト。追加フィールドの `"@type"` には、その型を識別する URI が含まれます。例: `{ "id": 1234, "@type": "types.example.com/standard/id" }`
+
+JSON 表現  
+---  
+      
+    
+    {
+      "name": string,
+      "metadata": {
+        "@type": string,
+        field1: ...,
+        ...
+      },
+      "done": boolean,
+    
+      // result
+      "error": {
+        object ([Status](https://ai.google.dev/api/files?hl=ja#v1beta.Status))
+      },
+      "response": {
+        "@type": string,
+        field1: ...,
+        ...
+      }
+      // Union type
+    }  
+  
+## メソッド: fileSearchStores.create
+
+  * エンドポイント
+  * リクエストの本文
+  * レスポンスの本文
+  * 認可スコープ
+
+
+
+空の `FileSearchStore` を作成します。
+
+### エンドポイント
+
+post  `https://generativelanguage.googleapis.com/v1beta/fileSearchStores`   
+
+
+### リクエストの本文
+
+リクエストの本文には `[FileSearchStore](https://ai.google.dev/api/file-search/file-search-stores?hl=ja#FileSearchStore)` のインスタンスが含まれます。
+
+フィールド 
+
+`displayName` `string`
+
+省略可。`FileSearchStore` の人が読める表示名。表示名は、スペースを含めて 512 文字以下にする必要があります。例: 「セマンティック リトリーバーに関するドキュメント」
+
+### レスポンスの本文
+
+成功した場合、レスポンスの本文には、新しく作成された `[FileSearchStore](https://ai.google.dev/api/file-search/file-search-stores?hl=ja#FileSearchStore)` のインスタンスが含まれます。
+
+## メソッド: fileSearchStores.delete
+
+  * エンドポイント
+  * パスパラメータ
+  * クエリ パラメータ
+  * リクエストの本文
+  * レスポンスの本文
+  * 認可スコープ
+
+
+
+`FileSearchStore` を削除します。
+
+### エンドポイント
+
+削除  `https://generativelanguage.googleapis.com/v1beta/{name=fileSearchStores/*}`   
+
+
+### パスパラメータ
+
+`name` `string`
+
+必須。`FileSearchStore` のリソース名。例: `fileSearchStores/my-file-search-store-123` 形式は `fileSearchStores/{filesearchstore}` です。
+
+### クエリ パラメータ
+
+`force` `boolean`
+
+省略可。true に設定すると、この `FileSearchStore` に関連する `Document` とオブジェクトも削除されます。
+
+false（デフォルト）の場合、`FileSearchStore` に `Document` が含まれていると、`FAILED_PRECONDITION` エラーが返されます。
+
+### リクエストの本文
+
+リクエストの本文は空にする必要があります。
+
+### レスポンスの本文
+
+成功した場合、レスポンスの本文は空の JSON オブジェクトになります。
+
+## メソッド: fileSearchStores.get
+
+  * エンドポイント
+  * パスパラメータ
+  * リクエストの本文
+  * レスポンスの本文
+  * 認可スコープ
+
+
+
+特定の `FileSearchStore` に関する情報を取得します。
+
+### エンドポイント
+
+get  `https://generativelanguage.googleapis.com/v1beta/{name=fileSearchStores/*}`   
+
+
+### パスパラメータ
+
+`name` `string`
+
+必須。`FileSearchStore` の名前。例: `fileSearchStores/my-file-search-store-123` 形式は `fileSearchStores/{filesearchstore}` です。
+
+### リクエストの本文
+
+リクエストの本文は空にする必要があります。
+
+### レスポンスの本文
+
+成功した場合、レスポンスの本文には `[FileSearchStore](https://ai.google.dev/api/file-search/file-search-stores?hl=ja#FileSearchStore)` のインスタンスが含まれます。
+
+## メソッド: fileSearchStores.list
+
+  * エンドポイント
+  * クエリ パラメータ
+  * リクエストの本文
+  * レスポンスの本文
+    * JSON 表現
+  * 認可スコープ
+
+
+
+ユーザーが所有するすべての `FileSearchStores` を一覧表示します。
+
+### エンドポイント
+
+get  `https://generativelanguage.googleapis.com/v1beta/fileSearchStores`   
+
+
+### クエリ パラメータ
+
+`pageSize` `integer`
+
+省略可。返す `FileSearchStores` の最大数（ページごと）。サービスが返す `FileSearchStores` は、これより少ない場合があります。
+
+指定されていない場合、最大で 10 個の `FileSearchStores` が返されます。最大サイズの上限は 1 ページあたり 20 `FileSearchStores` です。
+
+`pageToken` `string`
+
+省略可。前回の `fileSearchStores.list` 呼び出しから受け取ったページトークン。
+
+次のページを取得するには、レスポンスで返された `nextPageToken` を次のリクエストの引数として指定します。
+
+ページ分割を行う場合、`fileSearchStores.list` に指定する他のすべてのパラメータは、ページトークンを提供した呼び出しと一致する必要があります。
+
+### リクエストの本文
+
+リクエストの本文は空にする必要があります。
+
+### レスポンスの本文
+
+`FileSearchStores` のページ分割されたリストを含む `fileSearchStores.list` からのレスポンス。結果は `fileSearchStore.create_time` の昇順で並べ替えられます。
+
+成功した場合、レスポンスの本文には次の構造のデータが含まれます。
+
+フィールド 
+
+`fileSearchStores[]` `object (`[FileSearchStore](https://ai.google.dev/api/file-search/file-search-stores?hl=ja#FileSearchStore)`)`
+
+返された ragStores。
+
+`nextPageToken` `string`
+
+次のページを取得するために `pageToken` として送信できるトークン。このフィールドを省略すると、それ以上ページは取得されません。
+
+JSON 表現  
+---  
+      
+    
+    {
+      "fileSearchStores": [
+        {
+          object ([FileSearchStore](https://ai.google.dev/api/file-search/file-search-stores?hl=ja#FileSearchStore))
+        }
+      ],
+      "nextPageToken": string
+    }  
+  
+## メソッド: fileSearchStores.importFile
+
+  * エンドポイント
+  * パスパラメータ
+  * リクエストの本文
+    * JSON 表現
+  * レスポンスの本文
+
+
+
+ファイル サービスから `FileSearchStore` に `File` をインポートします。
+
+### エンドポイント
+
+post  `https://generativelanguage.googleapis.com/v1beta/{fileSearchStoreName=fileSearchStores/*}:importFile`   
+
+
+### パスパラメータ
+
+`fileSearchStoreName` `string`
+
+必須。変更不可。ファイルをインポートする `FileSearchStore` の名前。例: `fileSearchStores/my-file-search-store-123` 形式は `fileSearchStores/{filesearchstore}` です。
+
+### リクエストの本文
+
+リクエストの本文には、次の構造のデータが含まれます。
+
+フィールド 
+
+`fileName` `string`
+
+必須。インポートする `File` の名前。例: `files/abc-123`
+
+`customMetadata[]` `object (`CustomMetadata`)`
+
+ファイルに関連付けるカスタム メタデータ。
+
+`chunkingConfig` `object (`ChunkingConfig`)`
+
+省略可。サービスにファイルのチャンク方法を指示する構成。指定しない場合、サービスはデフォルトのパラメータを使用します。
+
+### レスポンスの本文
+
+成功した場合、レスポンスの本文には `[Operation](https://ai.google.dev/api/batch-api?hl=ja#Operation)` のインスタンスが含まれます。
+
+## REST リソース: fileSearchStores.operations
+
+  * リソース: Operation
+    * JSON 表現
+  * メソッド
+
+
+
+## リソース: Operation
+
+このリソースは、ネットワーク API 呼び出しの結果である長時間実行オペレーションを表します。
+
+フィールド 
+
+`name` `string`
+
+サーバーによって割り当てられる名前。最初にその名前を返すサービスと同じサービス内でのみ一意になります。デフォルトの HTTP マッピングを使用している場合は、`name` を `operations/{unique_id}` で終わるリソース名にします。
+
+`metadata` `object`
+
+オペレーションに関連付けられているサービス固有のメタデータ。通常は進捗情報や、作成日時などの共通メタデータが含まれます。一部のサービスでは、このようなメタデータが提供されないこともあります。メタデータがある場合、長時間実行オペレーションを返すメソッドでは、メタデータの型をドキュメント化しておく必要があります。
+
+任意の型のフィールドを含むオブジェクト。追加フィールドの `"@type"` には、その型を識別する URI が含まれます。例: `{ "id": 1234, "@type": "types.example.com/standard/id" }`
+
+`done` `boolean`
+
+値が `false` の場合は、オペレーションが進行中であることを意味します。`true` の場合、オペレーションは完了しており、`error` または `response` が利用可能です。
+
+`result` `Union type`
+
+オペレーションの結果。`error` または有効な `response` になります。`done` == `false` の場合、`error` も `response` も設定されません。`done` == `true` の場合、`error` または `response` のどちらか一つだけが設定されます。一部のサービスでは結果が返されない場合があります。`result` は次のいずれかになります。
+
+`error` `object (`[Status](https://ai.google.dev/api/files?hl=ja#v1beta.Status)`)`
+
+失敗またはキャンセルされた場合のオペレーションのエラー結果。
+
+`response` `object`
+
+オペレーションの通常の成功レスポンス。元のメソッドで成功時にデータが返されない場合（`Delete` など）、レスポンスは `google.protobuf.Empty` になります。元のメソッドが標準の `Get`/`Create`/`Update` である場合、レスポンスはリソースになります。他のメソッドについては、レスポンスの型が `XxxResponse`（`Xxx` は元のメソッド名）になります。たとえば、元のメソッド名が `TakeSnapshot()` であれば、レスポンスの型は `TakeSnapshotResponse` になると推測できます。
+
+任意の型のフィールドを含むオブジェクト。追加フィールドの `"@type"` には、その型を識別する URI が含まれます。例: `{ "id": 1234, "@type": "types.example.com/standard/id" }`
+
+JSON 表現  
+---  
+      
+    
+    {
+      "name": string,
+      "metadata": {
+        "@type": string,
+        field1: ...,
+        ...
+      },
+      "done": boolean,
+    
+      // result
+      "error": {
+        object ([Status](https://ai.google.dev/api/files?hl=ja#v1beta.Status))
+      },
+      "response": {
+        "@type": string,
+        field1: ...,
+        ...
+      }
+      // Union type
+    }  
+  
+## メソッド: fileSearchStores.operations.get
+
+  * エンドポイント
+  * パスパラメータ
+  * リクエストの本文
+  * レスポンスの本文
+  * 認可スコープ
+
+
+
+長時間実行オペレーションの最新状態を取得します。クライアントはこのメソッドを使用して、API サービスで推奨される間隔でオペレーションの結果をポーリングできます。
+
+### エンドポイント
+
+get  `https://generativelanguage.googleapis.com/v1beta/{name=fileSearchStores/*/operations/*}`   
+
+
+### パスパラメータ
+
+`name` `string`
+
+オペレーション リソースの名前。形式は `fileSearchStores/{filesearchstore}/operations/{operation}` です。
+
+### リクエストの本文
+
+リクエストの本文は空にする必要があります。
+
+### レスポンスの本文
+
+成功した場合、レスポンスの本文には `[Operation](https://ai.google.dev/api/batch-api?hl=ja#Operation)` のインスタンスが含まれます。
+
+## REST リソース: fileSearchStores.upload.operations
+
+  * リソース: Operation
+    * JSON 表現
+  * メソッド
+
+
+
+## リソース: Operation
+
+このリソースは、ネットワーク API 呼び出しの結果である長時間実行オペレーションを表します。
+
+フィールド 
+
+`name` `string`
+
+サーバーによって割り当てられる名前。最初にその名前を返すサービスと同じサービス内でのみ一意になります。デフォルトの HTTP マッピングを使用している場合は、`name` を `operations/{unique_id}` で終わるリソース名にします。
+
+`metadata` `object`
+
+オペレーションに関連付けられているサービス固有のメタデータ。通常は進捗情報や、作成日時などの共通メタデータが含まれます。一部のサービスでは、このようなメタデータが提供されないこともあります。メタデータがある場合、長時間実行オペレーションを返すメソッドでは、メタデータの型をドキュメント化しておく必要があります。
+
+任意の型のフィールドを含むオブジェクト。追加フィールドの `"@type"` には、その型を識別する URI が含まれます。例: `{ "id": 1234, "@type": "types.example.com/standard/id" }`
+
+`done` `boolean`
+
+値が `false` の場合は、オペレーションが進行中であることを意味します。`true` の場合、オペレーションは完了しており、`error` または `response` が利用可能です。
+
+`result` `Union type`
+
+オペレーションの結果。`error` または有効な `response` になります。`done` == `false` の場合、`error` も `response` も設定されません。`done` == `true` の場合、`error` または `response` のどちらか一つだけが設定されます。一部のサービスでは結果が返されない場合があります。`result` は次のいずれかになります。
+
+`error` `object (`[Status](https://ai.google.dev/api/files?hl=ja#v1beta.Status)`)`
+
+失敗またはキャンセルされた場合のオペレーションのエラー結果。
+
+`response` `object`
+
+オペレーションの通常の成功レスポンス。元のメソッドで成功時にデータが返されない場合（`Delete` など）、レスポンスは `google.protobuf.Empty` になります。元のメソッドが標準の `Get`/`Create`/`Update` である場合、レスポンスはリソースになります。他のメソッドについては、レスポンスの型が `XxxResponse`（`Xxx` は元のメソッド名）になります。たとえば、元のメソッド名が `TakeSnapshot()` であれば、レスポンスの型は `TakeSnapshotResponse` になると推測できます。
+
+任意の型のフィールドを含むオブジェクト。追加フィールドの `"@type"` には、その型を識別する URI が含まれます。例: `{ "id": 1234, "@type": "types.example.com/standard/id" }`
+
+JSON 表現  
+---  
+      
+    
+    {
+      "name": string,
+      "metadata": {
+        "@type": string,
+        field1: ...,
+        ...
+      },
+      "done": boolean,
+    
+      // result
+      "error": {
+        object ([Status](https://ai.google.dev/api/files?hl=ja#v1beta.Status))
+      },
+      "response": {
+        "@type": string,
+        field1: ...,
+        ...
+      }
+      // Union type
+    }  
+  
+## メソッド: fileSearchStores.upload.operations.get
+
+  * エンドポイント
+  * パスパラメータ
+  * リクエストの本文
+  * レスポンスの本文
+  * 認可スコープ
+
+
+
+長時間実行オペレーションの最新状態を取得します。クライアントはこのメソッドを使用して、API サービスで推奨される間隔でオペレーションの結果をポーリングできます。
+
+### エンドポイント
+
+get  `https://generativelanguage.googleapis.com/v1beta/{name=fileSearchStores/*/upload/operations/*}`   
+
+
+### パスパラメータ
+
+`name` `string`
+
+オペレーション リソースの名前。形式は `fileSearchStores/{filesearchstore}/upload/operations/{operation}` です。
+
+### リクエストの本文
+
+リクエストの本文は空にする必要があります。
+
+### レスポンスの本文
+
+成功した場合、レスポンスの本文には `[Operation](https://ai.google.dev/api/batch-api?hl=ja#Operation)` のインスタンスが含まれます。
+
+## REST リソース: fileSearchStores
+
+  * リソース: FileSearchStore
+    * JSON 表現
+  * メソッド
+
+
+
+## リソース: FileSearchStore
+
+`FileSearchStore` は `Document` のコレクションです。
+
+フィールド 
+
+`name` `string`
+
+出力専用。変更不可。ID。`FileSearchStore` リソース名。これは、小文字の英数字またはダッシュ（-）で構成される最大 40 文字の ID（「fileSearchStores/」接頭辞を除く名前）です。出力専用です。一意の名前は、`displayName` と 12 文字のランダムな接尾辞から派生します。例: `fileSearchStores/my-awesome-file-search-store-123a456b789c`。`displayName` が指定されていない場合、名前はランダムに生成されます。
+
+`displayName` `string`
+
+省略可。`FileSearchStore` の人が読める表示名。表示名は、スペースを含めて 512 文字以下にする必要があります。例: 「セマンティック リトリーバーに関するドキュメント」
+
+`createTime` `string (`[Timestamp](https://protobuf.dev/reference/protobuf/google.protobuf/#timestamp)` format)`
+
+出力専用。`FileSearchStore` が作成されたときのタイムスタンプ。
+
+RFC 3339 を使用します。生成された出力は常に Z 正規化され、小数点以下は 0、3、6、または 9 桁になります。「Z」以外のオフセットも使用できます。例: `"2014-10-02T15:01:23Z"`、`"2014-10-02T15:01:23.045123456Z"`、`"2014-10-02T15:01:23+05:30"`。
+
+`updateTime` `string (`[Timestamp](https://protobuf.dev/reference/protobuf/google.protobuf/#timestamp)` format)`
+
+出力専用。`FileSearchStore` が最後に更新されたときのタイムスタンプ。
+
+RFC 3339 を使用します。生成された出力は常に Z 正規化され、小数点以下は 0、3、6、または 9 桁になります。「Z」以外のオフセットも使用できます。例: `"2014-10-02T15:01:23Z"`、`"2014-10-02T15:01:23.045123456Z"`、`"2014-10-02T15:01:23+05:30"`。
+
+`activeDocumentsCount` `string ([int64](https://developers.google.com/discovery/v1/type-format?hl=ja) format)`
+
+出力専用。`FileSearchStore` 内でアクティブであり、取得の準備ができているドキュメントの数。
+
+`pendingDocumentsCount` `string ([int64](https://developers.google.com/discovery/v1/type-format?hl=ja) format)`
+
+出力専用。処理中の `FileSearchStore` 内のドキュメントの数。
+
+`failedDocumentsCount` `string ([int64](https://developers.google.com/discovery/v1/type-format?hl=ja) format)`
+
+出力専用。処理に失敗した `FileSearchStore` 内のドキュメントの数。
+
+`sizeBytes` `string ([int64](https://developers.google.com/discovery/v1/type-format?hl=ja) format)`
+
+出力専用。`FileSearchStore` に取り込まれた未加工バイトのサイズ。これは、`FileSearchStore` 内のすべてのドキュメントの合計サイズです。
+
+JSON 表現  
+---  
+      
+    
+    {
+      "name": string,
+      "displayName": string,
+      "createTime": string,
+      "updateTime": string,
+      "activeDocumentsCount": string,
+      "pendingDocumentsCount": string,
+      "failedDocumentsCount": string,
+      "sizeBytes": string
+    }  
+  
+フィードバックを送信 
+
+特に記載のない限り、このページのコンテンツは[クリエイティブ・コモンズの表示 4.0 ライセンス](https://creativecommons.org/licenses/by/4.0/)により使用許諾されます。コードサンプルは [Apache 2.0 ライセンス](https://www.apache.org/licenses/LICENSE-2.0)により使用許諾されます。詳しくは、[Google Developers サイトのポリシー](https://developers.google.com/site-policies?hl=ja)をご覧ください。Java は Oracle および関連会社の登録商標です。
+
+最終更新日 2025-11-06 UTC。
+
+ご意見をお聞かせください  [[["わかりやすい","easyToUnderstand","thumb-up"],["問題の解決に役立った","solvedMyProblem","thumb-up"],["その他","otherUp","thumb-up"]],[["必要な情報がない","missingTheInformationINeed","thumb-down"],["複雑すぎる / 手順が多すぎる","tooComplicatedTooManySteps","thumb-down"],["最新ではない","outOfDate","thumb-down"],["翻訳に関する問題","translationIssue","thumb-down"],["サンプル / コードに問題がある","samplesCodeIssue","thumb-down"],["その他","otherDown","thumb-down"]],["最終更新日 2025-11-06 UTC。"],[],[]] 
+
+  * [ 利用規約 ](//policies.google.com/terms?hl=ja)
+  * [ プライバシー ](//policies.google.com/privacy?hl=ja)
+  * Manage cookies 
+
+
+
+  * English
+  * Deutsch
+  * Español – América Latina
+  * Français
+  * Indonesia
+  * Italiano
+  * Polski
+  * Português – Brasil
+  * Shqip
+  * Tiếng Việt
+  * Türkçe
+  * Русский
+  * עברית
+  * العربيّة
+  * فارسی
+  * हिंदी
+  * বাংলা
+  * ภาษาไทย
+  * 中文 – 简体
+  * 中文 – 繁體
+  * 日本語
+  * 한국어
+
+================================================================================
+
+# Page: https://ai.google.dev/api/file-search/file-search-stores
+
+Skip to main content 
+
+[ ](/)
+
+  * 
+
+
+`/`
+
+  * English
+  * Deutsch
+  * Español – América Latina
+  * Français
+  * Indonesia
+  * Italiano
+  * Polski
+  * Português – Brasil
+  * Shqip
+  * Tiếng Việt
+  * Türkçe
+  * Русский
+  * עברית
+  * العربيّة
+  * فارسی
+  * हिंदी
+  * বাংলা
+  * ภาษาไทย
+  * 中文 – 简体
+  * 中文 – 繁體
+  * 日本語
+  * 한국어
+
+[ Get API key ](https://aistudio.google.com/apikey) [ Cookbook ](https://github.com/google-gemini/cookbook) [ Community ](https://discuss.ai.google.dev/c/gemini-api/) Sign in
+
+[ Gemini API Docs ](https://ai.google.dev/gemini-api/docs) [ API reference ](https://ai.google.dev/api)
+
+[ ](/)
+
+  * 
+
+
+  * [ Gemini API  ](/gemini-api/docs)
+    * [ Gemini API Docs  ](/gemini-api/docs)
+    * [ API reference  ](/api)
+  * [ Get API key  ](https://aistudio.google.com/apikey)
+  * [ Cookbook  ](https://github.com/google-gemini/cookbook)
+  * [ Community  ](https://discuss.ai.google.dev/c/gemini-api/)
+
+
+
+  * [Overview](/api)
+  * [API versions](/gemini-api/docs/api-versions)
+  * Capabilities
+
+  * [Models](/api/models)
+  * [Generating content](/api/generate-content)
+  * [Live API](/api/live)
+  * [Live Music API](/api/live_music)
+  * [Tokens](/api/tokens)
+  * [Files](/api/files)
+  * [Batch API](/api/batch-api)
+  * [Caching](/api/caching)
+  * [Embeddings](/api/embeddings)
+  * File search
+
+    * [File search stores](/api/file-search/file-search-stores)
+    * [Document](/api/file-search/documents)
+
+  * [All methods](/api/all-methods)
+  * Deprecated
+
+    * [PaLM (decomissioned)](/api/palm)
+
+  * SDK references
+
+  * [Python](https://googleapis.github.io/python-genai/)
+  * [Go](https://pkg.go.dev/google.golang.org/genai)
+  * [TypeScript](https://googleapis.github.io/js-genai/)
+  * [Java](https://googleapis.github.io/java-genai/javadoc/)
+  * [C#](https://googleapis.github.io/dotnet-genai/)
+
+
+
+searchTry RAG with the Gemini API using the [File Search](https://ai.google.dev/gemini-api/docs/file-search) tool. 
+
+  * [ Home ](https://ai.google.dev/)
+  * [ Gemini API ](https://ai.google.dev/gemini-api)
+  * [ API reference ](https://ai.google.dev/api)
+
+
+
+Send feedback 
+
+#  File Search Stores
+
+The File Search API provides a hosted question answering service for building Retrieval Augmented Generation (RAG) systems using Google's infrastructure.
+
+## Method: media.uploadToFileSearchStore
+
+  * Endpoint
+  * Path parameters
+  * Request body
+    * JSON representation
+  * Response body
+    * JSON representation
+
+
+
+Uploads data to a FileSearchStore, preprocesses and chunks before storing it in a FileSearchStore Document.
+
+### Endpoint
+
+  * Upload URI, for media upload requests:  
+
+
+post  `https://generativelanguage.googleapis.com/upload/v1beta/{fileSearchStoreName=fileSearchStores/*}:uploadToFileSearchStore`
+
+  * Metadata URI, for metadata-only requests:  
+
+
+post  `https://generativelanguage.googleapis.com/v1beta/{fileSearchStoreName=fileSearchStores/*}:uploadToFileSearchStore`
+
+### Path parameters
+
+`fileSearchStoreName` `string` Required. Immutable. The name of the `FileSearchStore` to upload the file into. Example: `fileSearchStores/my-file-search-store-123` It takes the form `fileSearchStores/{filesearchstore}`.
+
+### Request body
+
+The request body contains data with the following structure: | Fields  
+  
+`displayName` `string` Optional. Display name of the created document. | `customMetadata[]` `object (`CustomMetadata`)` Custom metadata to be associated with the data. | `chunkingConfig` `object (`ChunkingConfig`)` Optional. Config for telling the service how to chunk the data. If not provided, the service will use default parameters. | `mimeType` `string` Optional. MIME type of the data. If not provided, it will be inferred from the uploaded content.
+
+### Response body
+
+This is a copy of google.longrunning.Operation. We need to copy it because for interacting with scotty, we need to add a scotty specific field that can't be added in the top level Operation proto. If successful, the response body contains data with the following structure: | Fields  
+  
+`name` `string` The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`. | `metadata` `object` Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.An object containing fields of an arbitrary type. An additional field `"@type"` contains a URI identifying the type. Example: `{ "id": 1234, "@type": "types.example.com/standard/id" }`. | `done` `boolean` If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available. | `result` `Union type`  
+  
+The operation result, which can be either an `error` or a valid `response`. If `done` == `false`, neither `error` nor `response` is set. If `done` == `true`, exactly one of `error` or `response` can be set. Some services might not provide the result. `result` can be only one of the following:
+
+`error` `object (`[Status](/api/files#v1beta.Status)`)` The error result of the operation in case of failure or cancellation. | `response` `object` The normal, successful response of the operation. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.An object containing fields of an arbitrary type. An additional field `"@type"` contains a URI identifying the type. Example: `{ "id": 1234, "@type": "types.example.com/standard/id" }`. | JSON representation  
+---  
+      
+    
+    {
+      "name": string,
+      "metadata": {
+        "@type": string,
+        field1: ...,
+        ...
+      },
+      "done": boolean,
+    
+      // result
+      "error": {
+        object ([Status](/api/files#v1beta.Status))
+      },
+      "response": {
+        "@type": string,
+        field1: ...,
+        ...
+      }
+      // Union type
+    }  
+  
+## Method: fileSearchStores.create
+
+  * Endpoint
+  * Request body
+  * Response body
+  * Authorization scopes
+
+
+
+Creates an empty `FileSearchStore`.
+
+### Endpoint
+
+post  `https://generativelanguage.googleapis.com/v1beta/fileSearchStores`   
+
+
+### Request body
+
+The request body contains an instance of `[FileSearchStore](/api/file-search/file-search-stores#FileSearchStore)`.
+
+Fields  
+  
+`displayName` `string` Optional. The human-readable display name for the `FileSearchStore`. The display name must be no more than 512 characters in length, including spaces. Example: "Docs on Semantic Retriever"
+
+### Response body
+
+If successful, the response body contains a newly created instance of `[FileSearchStore](/api/file-search/file-search-stores#FileSearchStore)`.
+
+## Method: fileSearchStores.delete
+
+  * Endpoint
+  * Path parameters
+  * Query parameters
+  * Request body
+  * Response body
+  * Authorization scopes
+
+Deletes a `FileSearchStore`.
+
+### Endpoint
+
+delete  `https://generativelanguage.googleapis.com/v1beta/{name=fileSearchStores/*}`   
+
+
+### Path parameters
+
+| `name` `string` Required. The resource name of the `FileSearchStore`. Example: `fileSearchStores/my-file-search-store-123` It takes the form `fileSearchStores/{filesearchstore}`.
+
+### Query parameters
+
+| `force` `boolean` Optional. If set to true, any `Document`s and objects related to this `FileSearchStore` will also be deleted.If false (the default), a `FAILED_PRECONDITION` error will be returned if `FileSearchStore` contains any `Document`s.
+
+### Request body
+
+The request body must be empty.
+
+### Response body
+
+If successful, the response body is an empty JSON object.
+
+## Method: fileSearchStores.get
+
+  * Endpoint
+  * Path parameters
+  * Request body
+  * Response body
+  * Authorization scopes
+
+Gets information about a specific `FileSearchStore`.
+
+### Endpoint
+
+get  `https://generativelanguage.googleapis.com/v1beta/{name=fileSearchStores/*}`   
+
+
+### Path parameters
+
+| `name` `string` Required. The name of the `FileSearchStore`. Example: `fileSearchStores/my-file-search-store-123` It takes the form `fileSearchStores/{filesearchstore}`.
+
+### Request body
+
+The request body must be empty.
+
+### Response body
+
+If successful, the response body contains an instance of `[FileSearchStore](/api/file-search/file-search-stores#FileSearchStore)`.
+
+## Method: fileSearchStores.list
+
+  * Endpoint
+  * Query parameters
+  * Request body
+  * Response body
+    * JSON representation
+  * Authorization scopes
+
+Lists all `FileSearchStores` owned by the user.
+
+### Endpoint
+
+get  `https://generativelanguage.googleapis.com/v1beta/fileSearchStores`   
+
+
+### Query parameters
+
+| `pageSize` `integer` Optional. The maximum number of `FileSearchStores` to return (per page). The service may return fewer `FileSearchStores`.If unspecified, at most 10 `FileSearchStores` will be returned. The maximum size limit is 20 `FileSearchStores` per page. | `pageToken` `string` Optional. A page token, received from a previous `fileSearchStores.list` call.Provide the `nextPageToken` returned in the response as an argument to the next request to retrieve the next page.When paginating, all other parameters provided to `fileSearchStores.list` must match the call that provided the page token.
+
+### Request body
+
+The request body must be empty.
+
+### Response body
+
+Response from `fileSearchStores.list` containing a paginated list of `FileSearchStores`. The results are sorted by ascending `fileSearchStore.create_time`. If successful, the response body contains data with the following structure: | Fields  
+  
+`fileSearchStores[]` `object (`[FileSearchStore](/api/file-search/file-search-stores#FileSearchStore)`)` The returned ragStores. | `nextPageToken` `string` A token, which can be sent as `pageToken` to retrieve the next page. If this field is omitted, there are no more pages. | JSON representation  
+---  
+      
+    
+    {
+      "fileSearchStores": [
+        {
+          object ([FileSearchStore](/api/file-search/file-search-stores#FileSearchStore))
+        }
+      ],
+      "nextPageToken": string
+    }  
+  
+## Method: fileSearchStores.importFile
+
+  * Endpoint
+  * Path parameters
+  * Request body
+    * JSON representation
+  * Response body
+
+
+
+Imports a `File` from File Service to a `FileSearchStore`.
+
+### Endpoint
+
+post  `https://generativelanguage.googleapis.com/v1beta/{fileSearchStoreName=fileSearchStores/*}:importFile`   
+
+
+### Path parameters
+
+`fileSearchStoreName` `string` Required. Immutable. The name of the `FileSearchStore` to import the file into. Example: `fileSearchStores/my-file-search-store-123` It takes the form `fileSearchStores/{filesearchstore}`.
+
+### Request body
+
+The request body contains data with the following structure: | Fields  
+  
+`fileName` `string` Required. The name of the `File` to import. Example: `files/abc-123` | `customMetadata[]` `object (`CustomMetadata`)` Custom metadata to be associated with the file. | `chunkingConfig` `object (`ChunkingConfig`)` Optional. Config for telling the service how to chunk the file. If not provided, the service will use default parameters.
+
+### Response body
+
+If successful, the response body contains an instance of `[Operation](/api/batch-api#Operation)`.
+
+## REST Resource: fileSearchStores.operations
+
+  * Resource: Operation
+    * JSON representation
+  * Methods
+
+
+
+## Resource: Operation
+
+This resource represents a long-running operation that is the result of a network API call. | Fields  
+  
+`name` `string` The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`. | `metadata` `object` Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.An object containing fields of an arbitrary type. An additional field `"@type"` contains a URI identifying the type. Example: `{ "id": 1234, "@type": "types.example.com/standard/id" }`. | `done` `boolean` If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available. | `result` `Union type`  
+  
+The operation result, which can be either an `error` or a valid `response`. If `done` == `false`, neither `error` nor `response` is set. If `done` == `true`, exactly one of `error` or `response` can be set. Some services might not provide the result. `result` can be only one of the following:
+
+`error` `object (`[Status](/api/files#v1beta.Status)`)` The error result of the operation in case of failure or cancellation. | `response` `object` The normal, successful response of the operation. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.An object containing fields of an arbitrary type. An additional field `"@type"` contains a URI identifying the type. Example: `{ "id": 1234, "@type": "types.example.com/standard/id" }`. | JSON representation  
+---  
+      
+    
+    {
+      "name": string,
+      "metadata": {
+        "@type": string,
+        field1: ...,
+        ...
+      },
+      "done": boolean,
+    
+      // result
+      "error": {
+        object ([Status](/api/files#v1beta.Status))
+      },
+      "response": {
+        "@type": string,
+        field1: ...,
+        ...
+      }
+      // Union type
+    }  
+  
+## Method: fileSearchStores.operations.get
+
+  * Endpoint
+  * Path parameters
+  * Request body
+  * Response body
+  * Authorization scopes
+
+
+
+Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+
+### Endpoint
+
+get  `https://generativelanguage.googleapis.com/v1beta/{name=fileSearchStores/*/operations/*}`   
+
+
+### Path parameters
+
+`name` `string` The name of the operation resource. It takes the form `fileSearchStores/{filesearchstore}/operations/{operation}`.
+
+### Request body
+
+The request body must be empty.
+
+### Response body
+
+If successful, the response body contains an instance of `[Operation](/api/batch-api#Operation)`.
+
+## REST Resource: fileSearchStores.upload.operations
+
+  * Resource: Operation
+    * JSON representation
+  * Methods
+
+
+
+## Resource: Operation
+
+This resource represents a long-running operation that is the result of a network API call. | Fields  
+  
+`name` `string` The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`. | `metadata` `object` Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.An object containing fields of an arbitrary type. An additional field `"@type"` contains a URI identifying the type. Example: `{ "id": 1234, "@type": "types.example.com/standard/id" }`. | `done` `boolean` If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available. | `result` `Union type`  
+  
+The operation result, which can be either an `error` or a valid `response`. If `done` == `false`, neither `error` nor `response` is set. If `done` == `true`, exactly one of `error` or `response` can be set. Some services might not provide the result. `result` can be only one of the following:
+
+`error` `object (`[Status](/api/files#v1beta.Status)`)` The error result of the operation in case of failure or cancellation. | `response` `object` The normal, successful response of the operation. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.An object containing fields of an arbitrary type. An additional field `"@type"` contains a URI identifying the type. Example: `{ "id": 1234, "@type": "types.example.com/standard/id" }`. | JSON representation  
+---  
+      
+    
+    {
+      "name": string,
+      "metadata": {
+        "@type": string,
+        field1: ...,
+        ...
+      },
+      "done": boolean,
+    
+      // result
+      "error": {
+        object ([Status](/api/files#v1beta.Status))
+      },
+      "response": {
+        "@type": string,
+        field1: ...,
+        ...
+      }
+      // Union type
+    }  
+  
+## Method: fileSearchStores.upload.operations.get
+
+  * Endpoint
+  * Path parameters
+  * Request body
+  * Response body
+  * Authorization scopes
+
+
+
+Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+
+### Endpoint
+
+get  `https://generativelanguage.googleapis.com/v1beta/{name=fileSearchStores/*/upload/operations/*}`   
+
+
+### Path parameters
+
+`name` `string` The name of the operation resource. It takes the form `fileSearchStores/{filesearchstore}/upload/operations/{operation}`.
+
+### Request body
+
+The request body must be empty.
+
+### Response body
+
+If successful, the response body contains an instance of `[Operation](/api/batch-api#Operation)`.
+
+## REST Resource: fileSearchStores
+
+  * Resource: FileSearchStore
+    * JSON representation
+  * Methods
+
+
+
+## Resource: FileSearchStore
+
+A `FileSearchStore` is a collection of `Document`s. | Fields  
+  
+`name` `string` Output only. Immutable. Identifier. The `FileSearchStore` resource name. It is an ID (name excluding the "fileSearchStores/" prefix) that can contain up to 40 characters that are lowercase alphanumeric or dashes (-). It is output only. The unique name will be derived from `displayName` along with a 12 character random suffix. Example: `fileSearchStores/my-awesome-file-search-store-123a456b789c` If `displayName` is not provided, the name will be randomly generated. | `displayName` `string` Optional. The human-readable display name for the `FileSearchStore`. The display name must be no more than 512 characters in length, including spaces. Example: "Docs on Semantic Retriever" | `createTime` `string (`[Timestamp](https://protobuf.dev/reference/protobuf/google.protobuf/#timestamp)` format)` Output only. The Timestamp of when the `FileSearchStore` was created.Uses RFC 3339, where generated output will always be Z-normalized and use 0, 3, 6 or 9 fractional digits. Offsets other than "Z" are also accepted. Examples: `"2014-10-02T15:01:23Z"`, `"2014-10-02T15:01:23.045123456Z"` or `"2014-10-02T15:01:23+05:30"`. | `updateTime` `string (`[Timestamp](https://protobuf.dev/reference/protobuf/google.protobuf/#timestamp)` format)` Output only. The Timestamp of when the `FileSearchStore` was last updated.Uses RFC 3339, where generated output will always be Z-normalized and use 0, 3, 6 or 9 fractional digits. Offsets other than "Z" are also accepted. Examples: `"2014-10-02T15:01:23Z"`, `"2014-10-02T15:01:23.045123456Z"` or `"2014-10-02T15:01:23+05:30"`. | `activeDocumentsCount` `string ([int64](https://developers.google.com/discovery/v1/type-format) format)` Output only. The number of documents in the `FileSearchStore` that are active and ready for retrieval. | `pendingDocumentsCount` `string ([int64](https://developers.google.com/discovery/v1/type-format) format)` Output only. The number of documents in the `FileSearchStore` that are being processed. | `failedDocumentsCount` `string ([int64](https://developers.google.com/discovery/v1/type-format) format)` Output only. The number of documents in the `FileSearchStore` that have failed processing. | `sizeBytes` `string ([int64](https://developers.google.com/discovery/v1/type-format) format)` Output only. The size of raw bytes ingested into the `FileSearchStore`. This is the total size of all the documents in the `FileSearchStore`. | JSON representation  
+---  
+      
+    
+    {
+      "name": string,
+      "displayName": string,
+      "createTime": string,
+      "updateTime": string,
+      "activeDocumentsCount": string,
+      "pendingDocumentsCount": string,
+      "failedDocumentsCount": string,
+      "sizeBytes": string
+    }  
+  
+Send feedback 
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+Last updated 2025-11-06 UTC.
+
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2025-11-06 UTC."],[],[]] 
+
+  * [ Terms ](//policies.google.com/terms)
+  * [ Privacy ](//policies.google.com/privacy)
+  * Manage cookies 
+
+
+
+  * English
+  * Deutsch
+  * Español – América Latina
+  * Français
+  * Indonesia
+  * Italiano
+  * Polski
+  * Português – Brasil
+  * Shqip
+  * Tiếng Việt
+  * Türkçe
+  * Русский
+  * עברית
+  * العربيّة
+  * فارسی
+  * हिंदी
+  * বাংলা
+  * ภาษาไทย
+  * 中文 – 简体
+  * 中文 – 繁體
+  * 日本語
+  * 한국어
+
+================================================================================
+
+# Page: https://ai.google.dev/api/file-search/file-search-stores?hl=ja
+
+メイン コンテンツにスキップ 
+
+[ ](/)
+
+  * 
+
+
+`/`
+
+  * English
+  * Deutsch
+  * Español – América Latina
+  * Français
+  * Indonesia
+  * Italiano
+  * Polski
+  * Português – Brasil
+  * Shqip
+  * Tiếng Việt
+  * Türkçe
+  * Русский
+  * עברית
+  * العربيّة
+  * فارسی
+  * हिंदी
+  * বাংলা
+  * ภาษาไทย
+  * 中文 – 简体
+  * 中文 – 繁體
+  * 日本語
+  * 한국어
+
+[ API キーを取得する ](https://aistudio.google.com/apikey?hl=ja) [ クックブック ](https://github.com/google-gemini/cookbook) [ Community ](https://discuss.ai.google.dev/c/gemini-api/?hl=ja) ログイン
+
+[ Gemini API ドキュメント ](https://ai.google.dev/gemini-api/docs?hl=ja) [ API リファレンス ](https://ai.google.dev/api?hl=ja)
+
+[ ](/)
+
+  * 
+
+
+  * [ Gemini API  ](/gemini-api/docs)
+    * [ Gemini API ドキュメント  ](/gemini-api/docs)
+    * [ API リファレンス  ](/api)
+  * [ API キーを取得する  ](https://aistudio.google.com/apikey)
+  * [ クックブック  ](https://github.com/google-gemini/cookbook)
+  * [ Community  ](https://discuss.ai.google.dev/c/gemini-api/)
+
+
+
+  * [概要](/api)
+  * [API バージョン](/gemini-api/docs/api-versions)
+  * 機能
+
+  * [モデル](/api/models)
+  * [コンテンツの生成](/api/generate-content)
+  * [Live API](/api/live)
+  * [Live Music API](/api/live_music)
+  * [トークン](/api/tokens)
+  * [ファイル](/api/files)
+  * [バッチ API](/api/batch-api)
+  * [キャッシュ](/api/caching)
+  * [エンベディング](/api/embeddings)
+  * ファイル検索
+
+    * [ファイル検索ストア](/api/file-search/file-search-stores)
+    * [ドキュメント](/api/file-search/documents)
+
+  * [すべてのメソッド](/api/all-methods)
+  * 非推奨
+
+    * [PaLM（廃止）](/api/palm)
+
+  * SDK リファレンス
+
+  * [Python](https://googleapis.github.io/python-genai/)
+  * [Go](https://pkg.go.dev/google.golang.org/genai)
+  * [TypeScript](https://googleapis.github.io/js-genai/)
+  * [Java](https://googleapis.github.io/java-genai/javadoc/)
+  * [C#](https://googleapis.github.io/dotnet-genai/)
+
+
+
+search[ファイル検索](https://ai.google.dev/gemini-api/docs/file-search?hl=ja)ツールを使用して、Gemini API で RAG を試します。 
+
+このページは [Cloud Translation API](//cloud.google.com/translate/?hl=ja) によって翻訳されました。 
+
+  * [ ホーム ](https://ai.google.dev/?hl=ja)
+  * [ Gemini API ](https://ai.google.dev/gemini-api?hl=ja)
+  * [ API リファレンス ](https://ai.google.dev/api?hl=ja)
+
+
+
+フィードバックを送信 
+
+#  File Search Stores
+
+File Search API は、Google のインフラストラクチャを使用して検索拡張生成（RAG）システムを構築するためのホスト型質問応答サービスを提供します。
+
+## メソッド: media.uploadToFileSearchStore
+
+  * エンドポイント
+  * パスパラメータ
+  * リクエストの本文
+    * JSON 表現
+  * レスポンスの本文
+    * JSON 表現
+
+
+
+データを FileSearchStore にアップロードし、前処理とチャンク化を行ってから FileSearchStore ドキュメントに保存します。
+
+### エンドポイント
+
+  * アップロード URI（メディアのアップロード リクエストの場合）:  
+
+
+post  `https://generativelanguage.googleapis.com/upload/v1beta/{fileSearchStoreName=fileSearchStores/*}:uploadToFileSearchStore`
+
+  * メタデータ URI（メタデータのみのリクエストの場合）:  
+
+
+post  `https://generativelanguage.googleapis.com/v1beta/{fileSearchStoreName=fileSearchStores/*}:uploadToFileSearchStore`
+
+### パスパラメータ
+
+`fileSearchStoreName` `string`
+
+必須。変更不可。ファイルをアップロードする `FileSearchStore` の名前。例: `fileSearchStores/my-file-search-store-123` 形式は `fileSearchStores/{filesearchstore}` です。
+
+### リクエストの本文
+
+リクエストの本文には、次の構造のデータが含まれます。
+
+フィールド 
+
+`displayName` `string`
+
+省略可。作成されたドキュメントの表示名。
+
+`customMetadata[]` `object (`CustomMetadata`)`
+
+データに関連付けるカスタム メタデータ。
+
+`chunkingConfig` `object (`ChunkingConfig`)`
+
+省略可。サービスにデータのチャンク方法を指示する構成。指定しない場合、サービスはデフォルトのパラメータを使用します。
+
+`mimeType` `string`
+
+省略可。データの MIME タイプ。指定されていない場合は、アップロードされたコンテンツから推測されます。
+
+### レスポンスの本文
+
+これは google.longrunning.Operation のコピーです。scotty とやり取りするには、最上位の Operation proto に追加できない scotty 固有のフィールドを追加する必要があるため、コピーする必要があります。
+
+成功した場合、レスポンスの本文には次の構造のデータが含まれます。
+
+フィールド 
+
+`name` `string`
+
+サーバーによって割り当てられる名前。最初にその名前を返すサービスと同じサービス内でのみ一意になります。デフォルトの HTTP マッピングを使用している場合は、`name` を `operations/{unique_id}` で終わるリソース名にします。
+
+`metadata` `object`
+
+オペレーションに関連付けられているサービス固有のメタデータ。通常は進捗情報や、作成日時などの共通メタデータが含まれます。一部のサービスでは、このようなメタデータが提供されないこともあります。メタデータがある場合、長時間実行オペレーションを返すメソッドでは、メタデータの型をドキュメント化しておく必要があります。
+
+任意の型のフィールドを含むオブジェクト。追加フィールドの `"@type"` には、その型を識別する URI が含まれます。例: `{ "id": 1234, "@type": "types.example.com/standard/id" }`
+
+`done` `boolean`
+
+値が `false` の場合は、オペレーションが進行中であることを意味します。`true` の場合、オペレーションは完了しており、`error` または `response` が利用可能です。
+
+`result` `Union type`
+
+オペレーションの結果。`error` または有効な `response` になります。`done` == `false` の場合、`error` も `response` も設定されません。`done` == `true` の場合、`error` または `response` のどちらか一つだけが設定されます。一部のサービスでは結果が返されない場合があります。`result` は次のいずれかになります。
+
+`error` `object (`[Status](https://ai.google.dev/api/files?hl=ja#v1beta.Status)`)`
+
+失敗またはキャンセルされた場合のオペレーションのエラー結果。
+
+`response` `object`
+
+オペレーションの通常の成功レスポンス。元のメソッドで成功時にデータが返されない場合（`Delete` など）、レスポンスは `google.protobuf.Empty` になります。元のメソッドが標準の `Get`/`Create`/`Update` である場合、レスポンスはリソースになります。他のメソッドについては、レスポンスの型が `XxxResponse`（`Xxx` は元のメソッド名）になります。たとえば、元のメソッド名が `TakeSnapshot()` であれば、レスポンスの型は `TakeSnapshotResponse` になると推測できます。
+
+任意の型のフィールドを含むオブジェクト。追加フィールドの `"@type"` には、その型を識別する URI が含まれます。例: `{ "id": 1234, "@type": "types.example.com/standard/id" }`
+
+JSON 表現  
+---  
+      
+    
+    {
+      "name": string,
+      "metadata": {
+        "@type": string,
+        field1: ...,
+        ...
+      },
+      "done": boolean,
+    
+      // result
+      "error": {
+        object ([Status](https://ai.google.dev/api/files?hl=ja#v1beta.Status))
+      },
+      "response": {
+        "@type": string,
+        field1: ...,
+        ...
+      }
+      // Union type
+    }  
+  
+## メソッド: fileSearchStores.create
+
+  * エンドポイント
+  * リクエストの本文
+  * レスポンスの本文
+  * 認可スコープ
+
+
+
+空の `FileSearchStore` を作成します。
+
+### エンドポイント
+
+post  `https://generativelanguage.googleapis.com/v1beta/fileSearchStores`   
+
+
+### リクエストの本文
+
+リクエストの本文には `[FileSearchStore](https://ai.google.dev/api/file-search/file-search-stores?hl=ja#FileSearchStore)` のインスタンスが含まれます。
+
+フィールド 
+
+`displayName` `string`
+
+省略可。`FileSearchStore` の人が読める表示名。表示名は、スペースを含めて 512 文字以下にする必要があります。例: 「セマンティック リトリーバーに関するドキュメント」
+
+### レスポンスの本文
+
+成功した場合、レスポンスの本文には、新しく作成された `[FileSearchStore](https://ai.google.dev/api/file-search/file-search-stores?hl=ja#FileSearchStore)` のインスタンスが含まれます。
+
+## メソッド: fileSearchStores.delete
+
+  * エンドポイント
+  * パスパラメータ
+  * クエリ パラメータ
+  * リクエストの本文
+  * レスポンスの本文
+  * 認可スコープ
+
+
+
+`FileSearchStore` を削除します。
+
+### エンドポイント
+
+削除  `https://generativelanguage.googleapis.com/v1beta/{name=fileSearchStores/*}`   
+
+
+### パスパラメータ
+
+`name` `string`
+
+必須。`FileSearchStore` のリソース名。例: `fileSearchStores/my-file-search-store-123` 形式は `fileSearchStores/{filesearchstore}` です。
+
+### クエリ パラメータ
+
+`force` `boolean`
+
+省略可。true に設定すると、この `FileSearchStore` に関連する `Document` とオブジェクトも削除されます。
+
+false（デフォルト）の場合、`FileSearchStore` に `Document` が含まれていると、`FAILED_PRECONDITION` エラーが返されます。
+
+### リクエストの本文
+
+リクエストの本文は空にする必要があります。
+
+### レスポンスの本文
+
+成功した場合、レスポンスの本文は空の JSON オブジェクトになります。
+
+## メソッド: fileSearchStores.get
+
+  * エンドポイント
+  * パスパラメータ
+  * リクエストの本文
+  * レスポンスの本文
+  * 認可スコープ
+
+
+
+特定の `FileSearchStore` に関する情報を取得します。
+
+### エンドポイント
+
+get  `https://generativelanguage.googleapis.com/v1beta/{name=fileSearchStores/*}`   
+
+
+### パスパラメータ
+
+`name` `string`
+
+必須。`FileSearchStore` の名前。例: `fileSearchStores/my-file-search-store-123` 形式は `fileSearchStores/{filesearchstore}` です。
+
+### リクエストの本文
+
+リクエストの本文は空にする必要があります。
+
+### レスポンスの本文
+
+成功した場合、レスポンスの本文には `[FileSearchStore](https://ai.google.dev/api/file-search/file-search-stores?hl=ja#FileSearchStore)` のインスタンスが含まれます。
+
+## メソッド: fileSearchStores.list
+
+  * エンドポイント
+  * クエリ パラメータ
+  * リクエストの本文
+  * レスポンスの本文
+    * JSON 表現
+  * 認可スコープ
+
+
+
+ユーザーが所有するすべての `FileSearchStores` を一覧表示します。
+
+### エンドポイント
+
+get  `https://generativelanguage.googleapis.com/v1beta/fileSearchStores`   
+
+
+### クエリ パラメータ
+
+`pageSize` `integer`
+
+省略可。返す `FileSearchStores` の最大数（ページごと）。サービスが返す `FileSearchStores` は、これより少ない場合があります。
+
+指定されていない場合、最大で 10 個の `FileSearchStores` が返されます。最大サイズの上限は 1 ページあたり 20 `FileSearchStores` です。
+
+`pageToken` `string`
+
+省略可。前回の `fileSearchStores.list` 呼び出しから受け取ったページトークン。
+
+次のページを取得するには、レスポンスで返された `nextPageToken` を次のリクエストの引数として指定します。
+
+ページ分割を行う場合、`fileSearchStores.list` に指定する他のすべてのパラメータは、ページトークンを提供した呼び出しと一致する必要があります。
+
+### リクエストの本文
+
+リクエストの本文は空にする必要があります。
+
+### レスポンスの本文
+
+`FileSearchStores` のページ分割されたリストを含む `fileSearchStores.list` からのレスポンス。結果は `fileSearchStore.create_time` の昇順で並べ替えられます。
+
+成功した場合、レスポンスの本文には次の構造のデータが含まれます。
+
+フィールド 
+
+`fileSearchStores[]` `object (`[FileSearchStore](https://ai.google.dev/api/file-search/file-search-stores?hl=ja#FileSearchStore)`)`
+
+返された ragStores。
+
+`nextPageToken` `string`
+
+次のページを取得するために `pageToken` として送信できるトークン。このフィールドを省略すると、それ以上ページは取得されません。
+
+JSON 表現  
+---  
+      
+    
+    {
+      "fileSearchStores": [
+        {
+          object ([FileSearchStore](https://ai.google.dev/api/file-search/file-search-stores?hl=ja#FileSearchStore))
+        }
+      ],
+      "nextPageToken": string
+    }  
+  
+## メソッド: fileSearchStores.importFile
+
+  * エンドポイント
+  * パスパラメータ
+  * リクエストの本文
+    * JSON 表現
+  * レスポンスの本文
+
+
+
+ファイル サービスから `FileSearchStore` に `File` をインポートします。
+
+### エンドポイント
+
+post  `https://generativelanguage.googleapis.com/v1beta/{fileSearchStoreName=fileSearchStores/*}:importFile`   
+
+
+### パスパラメータ
+
+`fileSearchStoreName` `string`
+
+必須。変更不可。ファイルをインポートする `FileSearchStore` の名前。例: `fileSearchStores/my-file-search-store-123` 形式は `fileSearchStores/{filesearchstore}` です。
+
+### リクエストの本文
+
+リクエストの本文には、次の構造のデータが含まれます。
+
+フィールド 
+
+`fileName` `string`
+
+必須。インポートする `File` の名前。例: `files/abc-123`
+
+`customMetadata[]` `object (`CustomMetadata`)`
+
+ファイルに関連付けるカスタム メタデータ。
+
+`chunkingConfig` `object (`ChunkingConfig`)`
+
+省略可。サービスにファイルのチャンク方法を指示する構成。指定しない場合、サービスはデフォルトのパラメータを使用します。
+
+### レスポンスの本文
+
+成功した場合、レスポンスの本文には `[Operation](https://ai.google.dev/api/batch-api?hl=ja#Operation)` のインスタンスが含まれます。
+
+## REST リソース: fileSearchStores.operations
+
+  * リソース: Operation
+    * JSON 表現
+  * メソッド
+
+
+
+## リソース: Operation
+
+このリソースは、ネットワーク API 呼び出しの結果である長時間実行オペレーションを表します。
+
+フィールド 
+
+`name` `string`
+
+サーバーによって割り当てられる名前。最初にその名前を返すサービスと同じサービス内でのみ一意になります。デフォルトの HTTP マッピングを使用している場合は、`name` を `operations/{unique_id}` で終わるリソース名にします。
+
+`metadata` `object`
+
+オペレーションに関連付けられているサービス固有のメタデータ。通常は進捗情報や、作成日時などの共通メタデータが含まれます。一部のサービスでは、このようなメタデータが提供されないこともあります。メタデータがある場合、長時間実行オペレーションを返すメソッドでは、メタデータの型をドキュメント化しておく必要があります。
+
+任意の型のフィールドを含むオブジェクト。追加フィールドの `"@type"` には、その型を識別する URI が含まれます。例: `{ "id": 1234, "@type": "types.example.com/standard/id" }`
+
+`done` `boolean`
+
+値が `false` の場合は、オペレーションが進行中であることを意味します。`true` の場合、オペレーションは完了しており、`error` または `response` が利用可能です。
+
+`result` `Union type`
+
+オペレーションの結果。`error` または有効な `response` になります。`done` == `false` の場合、`error` も `response` も設定されません。`done` == `true` の場合、`error` または `response` のどちらか一つだけが設定されます。一部のサービスでは結果が返されない場合があります。`result` は次のいずれかになります。
+
+`error` `object (`[Status](https://ai.google.dev/api/files?hl=ja#v1beta.Status)`)`
+
+失敗またはキャンセルされた場合のオペレーションのエラー結果。
+
+`response` `object`
+
+オペレーションの通常の成功レスポンス。元のメソッドで成功時にデータが返されない場合（`Delete` など）、レスポンスは `google.protobuf.Empty` になります。元のメソッドが標準の `Get`/`Create`/`Update` である場合、レスポンスはリソースになります。他のメソッドについては、レスポンスの型が `XxxResponse`（`Xxx` は元のメソッド名）になります。たとえば、元のメソッド名が `TakeSnapshot()` であれば、レスポンスの型は `TakeSnapshotResponse` になると推測できます。
+
+任意の型のフィールドを含むオブジェクト。追加フィールドの `"@type"` には、その型を識別する URI が含まれます。例: `{ "id": 1234, "@type": "types.example.com/standard/id" }`
+
+JSON 表現  
+---  
+      
+    
+    {
+      "name": string,
+      "metadata": {
+        "@type": string,
+        field1: ...,
+        ...
+      },
+      "done": boolean,
+    
+      // result
+      "error": {
+        object ([Status](https://ai.google.dev/api/files?hl=ja#v1beta.Status))
+      },
+      "response": {
+        "@type": string,
+        field1: ...,
+        ...
+      }
+      // Union type
+    }  
+  
+## メソッド: fileSearchStores.operations.get
+
+  * エンドポイント
+  * パスパラメータ
+  * リクエストの本文
+  * レスポンスの本文
+  * 認可スコープ
+
+
+
+長時間実行オペレーションの最新状態を取得します。クライアントはこのメソッドを使用して、API サービスで推奨される間隔でオペレーションの結果をポーリングできます。
+
+### エンドポイント
+
+get  `https://generativelanguage.googleapis.com/v1beta/{name=fileSearchStores/*/operations/*}`   
+
+
+### パスパラメータ
+
+`name` `string`
+
+オペレーション リソースの名前。形式は `fileSearchStores/{filesearchstore}/operations/{operation}` です。
+
+### リクエストの本文
+
+リクエストの本文は空にする必要があります。
+
+### レスポンスの本文
+
+成功した場合、レスポンスの本文には `[Operation](https://ai.google.dev/api/batch-api?hl=ja#Operation)` のインスタンスが含まれます。
+
+## REST リソース: fileSearchStores.upload.operations
+
+  * リソース: Operation
+    * JSON 表現
+  * メソッド
+
+
+
+## リソース: Operation
+
+このリソースは、ネットワーク API 呼び出しの結果である長時間実行オペレーションを表します。
+
+フィールド 
+
+`name` `string`
+
+サーバーによって割り当てられる名前。最初にその名前を返すサービスと同じサービス内でのみ一意になります。デフォルトの HTTP マッピングを使用している場合は、`name` を `operations/{unique_id}` で終わるリソース名にします。
+
+`metadata` `object`
+
+オペレーションに関連付けられているサービス固有のメタデータ。通常は進捗情報や、作成日時などの共通メタデータが含まれます。一部のサービスでは、このようなメタデータが提供されないこともあります。メタデータがある場合、長時間実行オペレーションを返すメソッドでは、メタデータの型をドキュメント化しておく必要があります。
+
+任意の型のフィールドを含むオブジェクト。追加フィールドの `"@type"` には、その型を識別する URI が含まれます。例: `{ "id": 1234, "@type": "types.example.com/standard/id" }`
+
+`done` `boolean`
+
+値が `false` の場合は、オペレーションが進行中であることを意味します。`true` の場合、オペレーションは完了しており、`error` または `response` が利用可能です。
+
+`result` `Union type`
+
+オペレーションの結果。`error` または有効な `response` になります。`done` == `false` の場合、`error` も `response` も設定されません。`done` == `true` の場合、`error` または `response` のどちらか一つだけが設定されます。一部のサービスでは結果が返されない場合があります。`result` は次のいずれかになります。
+
+`error` `object (`[Status](https://ai.google.dev/api/files?hl=ja#v1beta.Status)`)`
+
+失敗またはキャンセルされた場合のオペレーションのエラー結果。
+
+`response` `object`
+
+オペレーションの通常の成功レスポンス。元のメソッドで成功時にデータが返されない場合（`Delete` など）、レスポンスは `google.protobuf.Empty` になります。元のメソッドが標準の `Get`/`Create`/`Update` である場合、レスポンスはリソースになります。他のメソッドについては、レスポンスの型が `XxxResponse`（`Xxx` は元のメソッド名）になります。たとえば、元のメソッド名が `TakeSnapshot()` であれば、レスポンスの型は `TakeSnapshotResponse` になると推測できます。
+
+任意の型のフィールドを含むオブジェクト。追加フィールドの `"@type"` には、その型を識別する URI が含まれます。例: `{ "id": 1234, "@type": "types.example.com/standard/id" }`
+
+JSON 表現  
+---  
+      
+    
+    {
+      "name": string,
+      "metadata": {
+        "@type": string,
+        field1: ...,
+        ...
+      },
+      "done": boolean,
+    
+      // result
+      "error": {
+        object ([Status](https://ai.google.dev/api/files?hl=ja#v1beta.Status))
+      },
+      "response": {
+        "@type": string,
+        field1: ...,
+        ...
+      }
+      // Union type
+    }  
+  
+## メソッド: fileSearchStores.upload.operations.get
+
+  * エンドポイント
+  * パスパラメータ
+  * リクエストの本文
+  * レスポンスの本文
+  * 認可スコープ
+
+
+
+長時間実行オペレーションの最新状態を取得します。クライアントはこのメソッドを使用して、API サービスで推奨される間隔でオペレーションの結果をポーリングできます。
+
+### エンドポイント
+
+get  `https://generativelanguage.googleapis.com/v1beta/{name=fileSearchStores/*/upload/operations/*}`   
+
+
+### パスパラメータ
+
+`name` `string`
+
+オペレーション リソースの名前。形式は `fileSearchStores/{filesearchstore}/upload/operations/{operation}` です。
+
+### リクエストの本文
+
+リクエストの本文は空にする必要があります。
+
+### レスポンスの本文
+
+成功した場合、レスポンスの本文には `[Operation](https://ai.google.dev/api/batch-api?hl=ja#Operation)` のインスタンスが含まれます。
+
+## REST リソース: fileSearchStores
+
+  * リソース: FileSearchStore
+    * JSON 表現
+  * メソッド
+
+
+
+## リソース: FileSearchStore
+
+`FileSearchStore` は `Document` のコレクションです。
+
+フィールド 
+
+`name` `string`
+
+出力専用。変更不可。ID。`FileSearchStore` リソース名。これは、小文字の英数字またはダッシュ（-）で構成される最大 40 文字の ID（「fileSearchStores/」接頭辞を除く名前）です。出力専用です。一意の名前は、`displayName` と 12 文字のランダムな接尾辞から派生します。例: `fileSearchStores/my-awesome-file-search-store-123a456b789c`。`displayName` が指定されていない場合、名前はランダムに生成されます。
+
+`displayName` `string`
+
+省略可。`FileSearchStore` の人が読める表示名。表示名は、スペースを含めて 512 文字以下にする必要があります。例: 「セマンティック リトリーバーに関するドキュメント」
+
+`createTime` `string (`[Timestamp](https://protobuf.dev/reference/protobuf/google.protobuf/#timestamp)` format)`
+
+出力専用。`FileSearchStore` が作成されたときのタイムスタンプ。
+
+RFC 3339 を使用します。生成された出力は常に Z 正規化され、小数点以下は 0、3、6、または 9 桁になります。「Z」以外のオフセットも使用できます。例: `"2014-10-02T15:01:23Z"`、`"2014-10-02T15:01:23.045123456Z"`、`"2014-10-02T15:01:23+05:30"`。
+
+`updateTime` `string (`[Timestamp](https://protobuf.dev/reference/protobuf/google.protobuf/#timestamp)` format)`
+
+出力専用。`FileSearchStore` が最後に更新されたときのタイムスタンプ。
+
+RFC 3339 を使用します。生成された出力は常に Z 正規化され、小数点以下は 0、3、6、または 9 桁になります。「Z」以外のオフセットも使用できます。例: `"2014-10-02T15:01:23Z"`、`"2014-10-02T15:01:23.045123456Z"`、`"2014-10-02T15:01:23+05:30"`。
+
+`activeDocumentsCount` `string ([int64](https://developers.google.com/discovery/v1/type-format?hl=ja) format)`
+
+出力専用。`FileSearchStore` 内でアクティブであり、取得の準備ができているドキュメントの数。
+
+`pendingDocumentsCount` `string ([int64](https://developers.google.com/discovery/v1/type-format?hl=ja) format)`
+
+出力専用。処理中の `FileSearchStore` 内のドキュメントの数。
+
+`failedDocumentsCount` `string ([int64](https://developers.google.com/discovery/v1/type-format?hl=ja) format)`
+
+出力専用。処理に失敗した `FileSearchStore` 内のドキュメントの数。
+
+`sizeBytes` `string ([int64](https://developers.google.com/discovery/v1/type-format?hl=ja) format)`
+
+出力専用。`FileSearchStore` に取り込まれた未加工バイトのサイズ。これは、`FileSearchStore` 内のすべてのドキュメントの合計サイズです。
+
+JSON 表現  
+---  
+      
+    
+    {
+      "name": string,
+      "displayName": string,
+      "createTime": string,
+      "updateTime": string,
+      "activeDocumentsCount": string,
+      "pendingDocumentsCount": string,
+      "failedDocumentsCount": string,
+      "sizeBytes": string
+    }  
+  
+フィードバックを送信 
+
+特に記載のない限り、このページのコンテンツは[クリエイティブ・コモンズの表示 4.0 ライセンス](https://creativecommons.org/licenses/by/4.0/)により使用許諾されます。コードサンプルは [Apache 2.0 ライセンス](https://www.apache.org/licenses/LICENSE-2.0)により使用許諾されます。詳しくは、[Google Developers サイトのポリシー](https://developers.google.com/site-policies?hl=ja)をご覧ください。Java は Oracle および関連会社の登録商標です。
+
+最終更新日 2025-11-06 UTC。
+
+ご意見をお聞かせください  [[["わかりやすい","easyToUnderstand","thumb-up"],["問題の解決に役立った","solvedMyProblem","thumb-up"],["その他","otherUp","thumb-up"]],[["必要な情報がない","missingTheInformationINeed","thumb-down"],["複雑すぎる / 手順が多すぎる","tooComplicatedTooManySteps","thumb-down"],["最新ではない","outOfDate","thumb-down"],["翻訳に関する問題","translationIssue","thumb-down"],["サンプル / コードに問題がある","samplesCodeIssue","thumb-down"],["その他","otherDown","thumb-down"]],["最終更新日 2025-11-06 UTC。"],[],[]] 
+
+  * [ 利用規約 ](//policies.google.com/terms?hl=ja)
+  * [ プライバシー ](//policies.google.com/privacy?hl=ja)
+  * Manage cookies 
+
+
+
+  * English
+  * Deutsch
+  * Español – América Latina
+  * Français
+  * Indonesia
+  * Italiano
+  * Polski
+  * Português – Brasil
+  * Shqip
+  * Tiếng Việt
+  * Türkçe
+  * Русский
+  * עברית
+  * العربيّة
+  * فارسی
+  * हिंदी
+  * বাংলা
+  * ภาษาไทย
+  * 中文 – 简体
+  * 中文 – 繁體
+  * 日本語
+  * 한국어
+
+================================================================================
+
