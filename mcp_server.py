@@ -4,7 +4,7 @@ import asyncio
 import logging
 import sys
 from pathlib import Path
-from typing import Any
+from typing import Any, Optional
 
 # .envファイルを最初に読み込む（他のインポートより前）
 try:
@@ -141,6 +141,19 @@ class GeminiRAGMCPServer:
                         },
                         "required": ["prompt", "doc_type"]
                     }
+                ),
+                Tool(
+                    name="list_uploaded_rags",
+                    description="アップロード済みのRAG一覧を取得します。doc_typeを指定すると特定の種類のRAGのみを取得できます。",
+                    inputSchema={
+                        "type": "object",
+                        "properties": {
+                            "doc_type": {
+                                "type": "string",
+                                "description": "ドキュメントの種類（省略時は全RAGを取得）"
+                            }
+                        }
+                    }
                 )
             ]
         
@@ -167,6 +180,10 @@ class GeminiRAGMCPServer:
                 elif name == "generate_code":
                     result = await self.handle_generate_code(
                         prompt=arguments.get("prompt"),
+                        doc_type=arguments.get("doc_type")
+                    )
+                elif name == "list_uploaded_rags":
+                    result = await self.handle_list_uploaded_rags(
                         doc_type=arguments.get("doc_type")
                     )
                 else:
@@ -446,6 +463,66 @@ class GeminiRAGMCPServer:
             }
         except Exception as e:
             logger.exception("Unexpected error during code generation")
+            return {
+                "success": False,
+                "error": f"Unexpected error: {str(e)}"
+            }
+    
+    async def handle_list_uploaded_rags(self, doc_type: Optional[str] = None) -> dict:
+        """
+        アップロード済みのRAG一覧を取得.
+        
+        Args:
+            doc_type: ドキュメントの種類（省略時は全RAG）
+            
+        Returns:
+            dict: RAG一覧と統計情報
+        """
+        try:
+            # RAG情報を取得
+            if doc_type:
+                # 特定のdoc_typeのRAGのみを取得
+                rags_list = self.rag_manager.get_rags_by_type(doc_type)
+                rags_dict = {doc_type: rags_list} if rags_list else {}
+            else:
+                # 全RAGを取得
+                rags_dict = self.rag_manager.get_all_rags()
+            
+            # 統計情報を計算
+            total_count = 0
+            doc_type_counts = {}
+            
+            for dt, rags_list in rags_dict.items():
+                count = len(rags_list)
+                doc_type_counts[dt] = count
+                total_count += count
+            
+            # レスポンスを構築
+            response = {
+                "success": True,
+                "rags": rags_dict,
+                "total_count": total_count,
+                "doc_type_counts": doc_type_counts
+            }
+            
+            # フィルタリングされている場合はfiltered_byフィールドを追加
+            if doc_type:
+                response["filtered_by"] = doc_type
+            
+            # RAGが存在しない場合はメッセージを追加
+            if total_count == 0:
+                response["message"] = "No RAGs found"
+            
+            return response
+            
+        except RAGError as e:
+            logger.error(f"RAG error: {e}")
+            return {
+                "success": False,
+                "error": str(e)
+            }
+        except Exception as e:
+            logger.exception("Unexpected error while listing uploaded RAGs")
             return {
                 "success": False,
                 "error": f"Unexpected error: {str(e)}"
