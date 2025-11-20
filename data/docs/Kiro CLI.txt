@@ -1,0 +1,3573 @@
+---
+doc_type: Kiro CLI
+crawled_at: 2025/11/20 23:10:56
+first_url: https://kiro.dev/docs/cli/
+---
+
+# Page: https://kiro.dev/docs/cli/
+
+[Loading image...](/)
+
+  * [CLI](/cli/)
+  * [Enterprise](/enterprise/)
+  * [Pricing](/pricing/)
+  * Docs
+  * Resources
+
+
+
+SIGN IN[DOWNLOADS](/downloads/)
+
+[Loading image...](/)
+
+  1. [Docs](/docs)
+  2.   3. [CLI](/docs/cli)
+
+
+
+# Get started
+
+On this page
+
+  * Core features
+  * Use cases
+  * What's next?
+
+
+
+* * *
+
+Loading image...
+
+Product
+
+  * [About Kiro](/about/)
+  * [CLI](/cli/)
+  * [Pricing](/pricing/)
+  * [Downloads](/downloads/)
+
+
+
+For
+
+  * [Enterprise](/enterprise/)
+  * [Startups](/startups/)
+
+
+
+Resources
+
+  * [Documentation](/docs/)
+  * [Blog](/blog/)
+  * [Changelog](/changelog/)
+  * [FAQs](/faq/)
+  * [Report a bug](https://github.com/kirodotdev/Kiro/issues/new/choose)
+  * [Suggest an idea](https://github.com/kirodotdev/Kiro/issues/new?template=feature_request.yml)
+  * [Billing support](https://support.aws.amazon.com/#/contacts/kiro)
+
+
+
+Social
+
+  * [](https://discord.gg/kirodotdev)
+  * [](https://www.linkedin.com/showcase/kirodotdev)
+  * [](https://x.com/kirodotdev)
+  * [](https://www.instagram.com/kirodotdev)
+  * [](https://www.youtube.com/@kirodotdev)
+  * [](https://bsky.app/profile/kiro.dev)
+  * [](https://www.twitch.tv/kirodotdev)
+
+
+
+[](https://aws.amazon.com)
+
+[Site Terms](https://aws.amazon.com/terms/)[License](/license/)[Responsible AI Policy](https://aws.amazon.com/ai/responsible-ai/policy/)[Legal](https://aws.amazon.com/legal/)[Privacy Policy](https://aws.amazon.com/privacy/)Cookie Preferences
+
+The Kiro CLI brings the power of AI-assisted development to your terminal. Build, test, and deploy applications using natural language commands and automated workflows.
+
+Get started with the Kiro CLI in minutes. Install on macOS and Linux:
+
+`curl -fsSL https://cli.kiro.dev/install | bash`
+
+Start using Kiro CLI:
+
+bash
+    
+    
+    cd my-project
+    kiro-cli
+    
+
+## Core features
+
+[Interactive ChatEngage with Kiro through natural conversation in your terminal.](/docs/cli/chat/)
+
+[Custom AgentsCreate and deploy specialized agents for your workflows.](/docs/cli/custom-agents/)
+
+[MCP IntegrationConnect external tools and data sources through Model Context Protocol.](/docs/cli/mcp/)
+
+[Smart HooksAutomate workflows with intelligent pre/post command hooks.](/docs/cli/hooks/)
+
+[Agent SteeringSteer Kiro agent with your best practices and preferences.](/docs/cli/steering/)
+
+[Auto CompleteIntelligent command completion with context awareness.](/docs/cli/autocomplete/)
+
+## Use cases
+
+The Kiro CLI is perfect for:
+
+  * **Interactive Development** : Chat with Kiro directly in your terminal for instant help
+  * **Custom Automation** : Create specialized agents for your specific workflows
+  * **Team Standardization** : Use team level best practises and preferences
+  * **External Integrations** : Connect tools and services through MCP servers
+  * **Intelligent Assistance** : Get context-aware suggestions and auto-completion
+  * **Workflow Optimization** : Automate repetitive tasks with smart hooks
+
+
+
+## What's next?
+
+### Ready to get started?
+
+Install the CLI and create your first project in under 5 minutes.
+
+[Install Kiro CLI →](/docs/cli/installation)
+
+Page updated: November 17, 2025
+
+[Installation](/docs/cli/installation/)
+
+================================================================================
+
+# Page: https://kiro.dev/docs/cli/mcp/
+
+[Loading image...](/)
+
+  * [CLI](/cli/)
+  * [Enterprise](/enterprise/)
+  * [Pricing](/pricing/)
+  * Docs
+  * Resources
+
+
+
+SIGN IN[DOWNLOADS](/downloads/)
+
+[Loading image...](/)
+
+  1. [Docs](/docs)
+  2.   3. [CLI](/docs/cli)
+  4.   5. MCP
+
+
+
+# Model context protocol (MCP)
+
+On this page
+
+  * What is MCP?
+  * Setting up MCP
+  * Prerequisites
+  * Managing MCP servers
+  * Command line management
+  * Configuration file
+  * Troubleshooting
+  * Checking MCP logs
+  * Common issues and solutions
+  * Additional resources
+  * Next steps
+
+
+
+* * *
+
+Loading image...
+
+Product
+
+  * [About Kiro](/about/)
+  * [CLI](/cli/)
+  * [Pricing](/pricing/)
+  * [Downloads](/downloads/)
+
+
+
+For
+
+  * [Enterprise](/enterprise/)
+  * [Startups](/startups/)
+
+
+
+Resources
+
+  * [Documentation](/docs/)
+  * [Blog](/blog/)
+  * [Changelog](/changelog/)
+  * [FAQs](/faq/)
+  * [Report a bug](https://github.com/kirodotdev/Kiro/issues/new/choose)
+  * [Suggest an idea](https://github.com/kirodotdev/Kiro/issues/new?template=feature_request.yml)
+  * [Billing support](https://support.aws.amazon.com/#/contacts/kiro)
+
+
+
+Social
+
+  * [](https://discord.gg/kirodotdev)
+  * [](https://www.linkedin.com/showcase/kirodotdev)
+  * [](https://x.com/kirodotdev)
+  * [](https://www.instagram.com/kirodotdev)
+  * [](https://www.youtube.com/@kirodotdev)
+  * [](https://bsky.app/profile/kiro.dev)
+  * [](https://www.twitch.tv/kirodotdev)
+
+
+
+[](https://aws.amazon.com)
+
+[Site Terms](https://aws.amazon.com/terms/)[License](/license/)[Responsible AI Policy](https://aws.amazon.com/ai/responsible-ai/policy/)[Legal](https://aws.amazon.com/legal/)[Privacy Policy](https://aws.amazon.com/privacy/)Cookie Preferences
+
+Model Context Protocol (MCP) extends Kiro's capabilities by connecting to specialized servers that provide additional tools and context. This guide helps you set up, configure, and use MCP servers with Kiro.
+
+**Tip**
+
+Within an interactive chat session, you can use the `/mcp` slash command to see which MCP servers are currently loaded. See [Slash Commands](/docs/cli/reference/slash-commands) for more details.
+
+## What is MCP?
+
+MCP is a protocol that allows Kiro to communicate with external servers to access specialized tools and information. For example, the AWS Documentation MCP server provides tools to search, read, and get recommendations from AWS documentation directly within Kiro.
+
+With MCP, you can:
+
+  * Access specialized knowledge bases and documentation
+  * Integrate with external services and APIs
+  * Extend Kiro's capabilities with domain-specific tools
+  * Create custom tools for your specific workflows
+
+
+
+## Setting up MCP
+
+### Prerequisites
+
+Before using MCP, make sure you have:
+
+  1. The latest version of Kiro installed
+  2. Any specific prerequisites for the MCP servers you want to use (listed in each server's documentation)
+
+
+
+## Managing MCP servers
+
+There are two ways of integrating MCP servers with Kiro CLI:
+
+### Command line management
+
+bash
+    
+    
+    # Add new MCP server
+    kiro-cli mcp add github \
+      --url "mcp://github.com/api" \
+      --auth-token "$GITHUB_TOKEN" \
+      --type "http"
+    
+
+### Configuration file
+
+json
+    
+    
+    {
+      "mcpServers": {
+        "local-server-name": {
+          "command": "command-to-run-server",
+          "args": ["arg1", "arg2"],
+          "env": {
+            "ENV_VAR1": "value1",
+            "ENV_VAR2": "value2"
+          },
+          "disabled": false
+        },
+        "remote-server-name": {
+          "url": "https://endpoint.to.connect.to",
+          "type": "http",
+          "headers": {
+            "HEADER1": "value1",
+            "HEADER2": "value2"
+          },
+          "disabled": false
+        }
+      }
+    }
+    
+
+## Troubleshooting
+
+If you encounter issues with MCP servers:
+
+### Checking MCP logs
+
+### Common issues and solutions
+
+Issue| Solution  
+---|---  
+Connection failures| Verify prerequisites are installed correctly  
+Permission errors| Check that tokens and API keys are valid  
+Tool not responding| Review MCP logs for specific error messages  
+Configuration not loading| Validate JSON syntax and save the config file  
+  
+## Additional resources
+
+  * [Official MCP Documentation](https://modelcontextprotocol.io/introduction)
+
+
+
+## Next steps
+
+Now that you understand MCP basics, explore these resources:
+
+  * **[Examples](/docs/cli/mcp/examples/)** \- Practical examples of using MCP servers with Kiro CLI
+  * **[Security Best Practices](/docs/cli/mcp/security/)** \- Best practices for secure MCP usage
+
+
+
+Page updated: November 16, 2025
+
+[Troubleshooting](/docs/cli/custom-agents/troubleshooting/)
+
+[Examples](/docs/cli/mcp/examples/)
+
+================================================================================
+
+# Page: https://kiro.dev/docs/cli/mcp/examples/
+
+[Loading image...](/)
+
+  * [CLI](/cli/)
+  * [Enterprise](/enterprise/)
+  * [Pricing](/pricing/)
+  * Docs
+  * Resources
+
+
+
+SIGN IN[DOWNLOADS](/downloads/)
+
+[Loading image...](/)
+
+  1. [Docs](/docs)
+  2.   3. [CLI](/docs/cli)
+  4.   5. [MCP](/docs/cli/mcp)
+  6.   7. Examples
+
+
+
+# Examples
+
+On this page
+
+  * AWS Documentation server
+  * Setup instructions
+  * Prerequisites
+  * Configuration
+  * Available tools
+  * Usage examples
+  * GitHub MCP server
+  * Capabilities
+  * Setup instructions
+  * Prerequisites
+  * Configuration
+  * Common tools
+  * Available toolsets
+  * Usage examples
+  * Custom MCP servers
+  * Creating a custom server
+  * Resources for custom server development
+  * Additional MCP servers
+  * Database servers
+  * Development tools
+  * Finding more MCP servers
+  * In the meantime
+  * Next steps
+
+
+
+* * *
+
+Loading image...
+
+Product
+
+  * [About Kiro](/about/)
+  * [CLI](/cli/)
+  * [Pricing](/pricing/)
+  * [Downloads](/downloads/)
+
+
+
+For
+
+  * [Enterprise](/enterprise/)
+  * [Startups](/startups/)
+
+
+
+Resources
+
+  * [Documentation](/docs/)
+  * [Blog](/blog/)
+  * [Changelog](/changelog/)
+  * [FAQs](/faq/)
+  * [Report a bug](https://github.com/kirodotdev/Kiro/issues/new/choose)
+  * [Suggest an idea](https://github.com/kirodotdev/Kiro/issues/new?template=feature_request.yml)
+  * [Billing support](https://support.aws.amazon.com/#/contacts/kiro)
+
+
+
+Social
+
+  * [](https://discord.gg/kirodotdev)
+  * [](https://www.linkedin.com/showcase/kirodotdev)
+  * [](https://x.com/kirodotdev)
+  * [](https://www.instagram.com/kirodotdev)
+  * [](https://www.youtube.com/@kirodotdev)
+  * [](https://bsky.app/profile/kiro.dev)
+  * [](https://www.twitch.tv/kirodotdev)
+
+
+
+[](https://aws.amazon.com)
+
+[Site Terms](https://aws.amazon.com/terms/)[License](/license/)[Responsible AI Policy](https://aws.amazon.com/ai/responsible-ai/policy/)[Legal](https://aws.amazon.com/legal/)[Privacy Policy](https://aws.amazon.com/privacy/)Cookie Preferences
+
+This guide provides information about a few sample Model Context Protocol (MCP) servers, their capabilities, and how to set them up with Kiro.
+
+**Warning**
+
+Only add MCP servers from trusted sources, and review all applicable server licensing information and documentation. Kiro is not responsible for any third-party MCP servers or other packages.
+
+## AWS Documentation server
+
+The AWS Documentation server provides access to AWS documentation, search capabilities, and content recommendations. Capabilities
+
+  * Search AWS documentation across all services
+  * Read documentation pages in markdown format
+  * Get content recommendations related to specific documentation pages
+
+
+
+### Setup instructions
+
+#### Prerequisites
+
+  1. Install uv from Astral:
+
+
+
+bash
+    
+    
+    # On macOS/Linux
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    
+    # On Windows PowerShell
+    irm https://astral.sh/uv/install.ps1 | iex
+    
+
+  2. Install Python 3.10 or newer:
+
+
+
+bash
+    
+    
+        uv python install 3.10
+    
+
+#### Configuration
+
+For macOS/Linux:
+
+json
+    
+    
+    {
+      "mcpServers": {
+        "aws-docs": {
+          "command": "uvx",
+          "args": ["awslabs.aws-documentation-mcp-server@latest"],
+          "env": {
+            "FASTMCP_LOG_LEVEL": "ERROR"
+          },
+          "disabled": false,
+          "autoApprove": []
+        }
+      }
+    }
+    
+
+For Windows:
+
+json
+    
+    
+    {
+      "mcpServers": {
+        "aws-docs": {
+          "command": "uv",
+          "args": [
+            "tool",
+            "run",
+            "--from",
+            "awslabs.aws-documentation-mcp-server@latest",
+            "awslabs.aws-documentation-mcp-server.exe"
+          ],
+          "env": {
+            "FASTMCP_LOG_LEVEL": "ERROR"
+          }
+        }
+      }
+    }
+    
+
+### Available tools
+
+Tool Name| Description  
+---|---  
+mcp_aws_docs_search_documentation| Search AWS documentation for specific topics  
+mcp_aws_docs_read_documentation| Read AWS documentation pages in markdown format  
+mcp_aws_docs_recommend| Get content recommendations related to a documentation page  
+  
+### Usage examples
+    
+    
+    # Search for information about S3 bucket policies
+    Search AWS documentation for S3 bucket policies
+    
+    # Read specific documentation
+    Read the AWS Lambda function URLs documentation
+    
+    # Get recommendations
+    Find related content to AWS ECS task definitions
+    
+
+## GitHub MCP server
+
+The GitHub MCP server allows Kiro to interact with GitHub repositories, issues, and pull requests.
+
+### Capabilities
+
+  * Access repository information including files, commits, and branches
+  * Create and manage issues and pull requests
+  * Search repositories for specific content
+
+
+
+### Setup instructions
+
+**Warning**
+
+The previously recommended @modelcontextprotocol/server-github package has been archived. GitHub now recommends using their official Docker-based MCP server.
+
+### Prerequisites
+
+  1. Install Docker if not already installed:
+
+     * Docker Desktop for macOS and Windows
+     * Docker Engine for Linux
+  2. Create a GitHub Personal Access Token:
+
+     * Go to GitHub Settings > Developer settings > Personal access tokens (fine-grained)
+     * Generate a new token with permissions that fit the tools you need
+
+
+
+### Configuration
+
+Follow these steps from the official GitHub documentation:
+
+  1. Create a .kiro/settings/mcp.json file in your workspace directory (or edit if it already exists)
+  2. Add this configuration:
+
+
+
+json
+    
+    
+    {
+      "mcpServers": {
+        "github": {
+          "command": "docker",
+          "args": [
+            "run", 
+            "-i", 
+            "--rm", 
+            "-e", 
+            "GITHUB_PERSONAL_ACCESS_TOKEN",
+            "ghcr.io/github/github-mcp-server"
+          ],
+          "env": {
+            "GITHUB_PERSONAL_ACCESS_TOKEN": "your-token-here"
+          },
+          "disabled": false,
+          "autoApprove": []
+        }
+      }
+    }
+    
+
+For more detailed installation instructions, refer to the official GitHub MCP Server documentation.
+
+### Common tools
+
+The GitHub MCP server provides a comprehensive set of tools for interacting with GitHub. Here are some of the most commonly used tools organized by category:
+
+Category| Tool Name| Description  
+---|---|---  
+Repository Tools| search_repositories| Search for GitHub repositories  
+Repository Tools| list_branches| List branches in a repository  
+Issue Tools| list_issues| List issues in a repository  
+Issue Tools| update_issue| Update an existing issue  
+Issue Tools| add_issue_comment| Add a comment to an issue  
+Pull Request Tools| create_pull_request| Create a new pull request  
+  
+### Available toolsets
+
+The GitHub MCP server organizes its functionality into toolsets that can be enabled or disabled as needed. By default, all toolsets are enabled. You can specify which toolsets you want to enable when configuring the GitHub MCP server. This allows you to control which GitHub API capabilities are available to your AI tools.
+
+You can specify which toolsets you want to enable when configuring the GitHub MCP server. This allows you to control which GitHub API capabilities are available to your AI tools. Using Toolsets With Docker
+
+When using Docker, you can pass the toolsets as environment variables:
+
+bash
+    
+    
+    docker run -i --rm \
+      -e GITHUB_PERSONAL_ACCESS_TOKEN=<your-token> \
+      -e GITHUB_TOOLSETS="repos,issues,pull_requests,actions,code_security,experiments" \
+      ghcr.io/github/github-mcp-server
+    
+
+### Usage examples
+    
+    
+    # Get repository information
+    Show me information about the tensorflow/tensorflow repository
+    
+    # Search for code
+    Find examples of React hooks in facebook/react
+    
+    # Create an issue
+    Create an issue in my repository about the login bug
+    
+
+## Custom MCP servers
+
+You can create your own MCP servers to extend Kiro's capabilities for your specific needs.
+
+### Creating a custom server
+
+  1. Choose a programming language (Python, Node.js, etc.)
+  2. Implement the MCP protocol using available libraries
+  3. Define your tools and their capabilities
+  4. Package and distribute your server
+
+
+
+#### Resources for custom server development
+
+  * [MCP Protocol Specification](https://modelcontextprotocol.io/specification/2025-06-18)
+  * [MCP Server Template (Python)]()
+  * [MCP Server Template (Node.js)]()
+
+
+
+### Additional MCP servers
+
+#### Database servers
+
+  * **PostgreSQL MCP Server** : Query and manage PostgreSQL databases
+  * **MongoDB MCP Server** : Interact with MongoDB databases
+
+
+
+#### Development tools
+
+  * **Docker MCP Server** : Manage Docker containers and images
+  * **Kubernetes MCP Server** : Interact with Kubernetes clusters
+
+
+
+### Finding more MCP servers
+
+To discover additional MCP servers:
+
+  * Visit the [MCP Registry](https://github.com/modelcontextprotocol/registry)
+  * Check the [GitHub MCP Organization](https://github.com/modelcontextprotocol)
+  * Search for **mcp-server** on npm or PyPI
+
+
+
+## In the meantime
+
+While we prepare comprehensive examples, you can:
+
+  * Review [Security Best Practices](/docs/cli/mcp/security) for secure integration
+  * Visit the [official MCP documentation](https://modelcontextprotocol.io/introduction)
+  * Return to [MCP Overview](/docs/cli/mcp)
+
+
+
+## Next steps
+
+  * Review [Security Best Practices](/docs/cli/mcp/security)
+  * Return to [MCP Overview](/docs/cli/mcp)
+
+
+
+Page updated: November 16, 2025
+
+[MCP](/docs/cli/mcp/)
+
+[Security](/docs/cli/mcp/security/)
+
+================================================================================
+
+# Page: https://kiro.dev/docs/cli/mcp/security/
+
+[Loading image...](/)
+
+  * [CLI](/cli/)
+  * [Enterprise](/enterprise/)
+  * [Pricing](/pricing/)
+  * Docs
+  * Resources
+
+
+
+SIGN IN[DOWNLOADS](/downloads/)
+
+[Loading image...](/)
+
+  1. [Docs](/docs)
+  2.   3. [CLI](/docs/cli)
+  4.   5. [MCP](/docs/cli/mcp)
+  6.   7. Best practices
+
+
+
+# Security
+
+On this page
+
+  * Security considerations
+  * Trust and verification
+  * Access control
+  * Credential management
+  * Network security
+  * Monitoring and auditing
+  * Best practices
+  * Configuration security
+  * Next steps
+
+
+
+* * *
+
+Loading image...
+
+Product
+
+  * [About Kiro](/about/)
+  * [CLI](/cli/)
+  * [Pricing](/pricing/)
+  * [Downloads](/downloads/)
+
+
+
+For
+
+  * [Enterprise](/enterprise/)
+  * [Startups](/startups/)
+
+
+
+Resources
+
+  * [Documentation](/docs/)
+  * [Blog](/blog/)
+  * [Changelog](/changelog/)
+  * [FAQs](/faq/)
+  * [Report a bug](https://github.com/kirodotdev/Kiro/issues/new/choose)
+  * [Suggest an idea](https://github.com/kirodotdev/Kiro/issues/new?template=feature_request.yml)
+  * [Billing support](https://support.aws.amazon.com/#/contacts/kiro)
+
+
+
+Social
+
+  * [](https://discord.gg/kirodotdev)
+  * [](https://www.linkedin.com/showcase/kirodotdev)
+  * [](https://x.com/kirodotdev)
+  * [](https://www.instagram.com/kirodotdev)
+  * [](https://www.youtube.com/@kirodotdev)
+  * [](https://bsky.app/profile/kiro.dev)
+  * [](https://www.twitch.tv/kirodotdev)
+
+
+
+[](https://aws.amazon.com)
+
+[Site Terms](https://aws.amazon.com/terms/)[License](/license/)[Responsible AI Policy](https://aws.amazon.com/ai/responsible-ai/policy/)[Legal](https://aws.amazon.com/legal/)[Privacy Policy](https://aws.amazon.com/privacy/)Cookie Preferences
+
+Security is critical when integrating external MCP servers with your development workflow. The MCP security model in Kiro CLI is designed with these principles:
+
+  1. **Explicit Permission** : Tools require explicit user permission before execution
+  2. **Local Execution** : MCP servers run locally on your machine
+  3. **Isolation** : Each MCP server runs as a separate process
+  4. **Transparency** : Users can see what tools are available and what they do
+
+
+
+## Security considerations
+
+When using MCP servers with Kiro CLI, keep these security principles in mind:
+
+### Trust and verification
+
+  * Only install MCP servers from trusted sources
+  * Review tool descriptions and documentation before installation
+  * Check for security advisories and updates
+
+
+
+### Access control
+
+  * Use least-privilege principles for server permissions
+  * Limit file system access to necessary directories only
+  * Restrict network access where possible
+  * Use environment variables for sensitive credentials
+
+
+
+### Credential management
+
+  * Never hardcode API keys or tokens in configuration files
+  * Use environment variables for sensitive data
+  * Rotate credentials regularly
+  * Store credentials securely using system keychains
+
+
+
+### Network security
+
+  * Use HTTPS for remote MCP servers
+  * Verify SSL/TLS certificates
+  * Be cautious with servers that require broad network access
+  * Monitor network traffic for unusual activity
+
+
+
+### Monitoring and auditing
+
+  * Review MCP server logs regularly
+  * Monitor for unexpected behavior
+  * Keep track of installed servers and their permissions
+  * Remove unused or untrusted servers promptly
+
+
+
+## Best practices
+
+### Configuration security
+
+bash
+    
+    
+    # Use environment variables for sensitive data
+    export MCP_API_KEY="your-secure-key"
+    export DATABASE_URL="your-connection-string"
+    
+    # Configure MCP server with environment variables
+    kiro-cli mcp add my-server --env MCP_API_KEY --env DATABASE_URL
+    
+
+## Next steps
+
+  * Explore [Examples](/docs/cli/mcp/examples)
+  * Return to [MCP Overview](/docs/cli/mcp)
+
+
+
+Page updated: November 16, 2025
+
+[Examples](/docs/cli/mcp/examples/)
+
+[Steering](/docs/cli/steering/)
+
+================================================================================
+
+# Page: https://kiro.dev/docs/cli/chat/
+
+[Loading image...](/)
+
+  * [CLI](/cli/)
+  * [Enterprise](/enterprise/)
+  * [Pricing](/pricing/)
+  * Docs
+  * Resources
+
+
+
+SIGN IN[DOWNLOADS](/downloads/)
+
+[Loading image...](/)
+
+  1. [Docs](/docs)
+  2.   3. [CLI](/docs/cli)
+  4.   5. Chat
+
+
+
+# Chat
+
+On this page
+
+  * Starting a session
+  * Entering multi-line statements
+  * Conversation persistence
+  * Directory-based persistence
+  * Manually saving and loading conversations
+
+
+
+* * *
+
+Loading image...
+
+Product
+
+  * [About Kiro](/about/)
+  * [CLI](/cli/)
+  * [Pricing](/pricing/)
+  * [Downloads](/downloads/)
+
+
+
+For
+
+  * [Enterprise](/enterprise/)
+  * [Startups](/startups/)
+
+
+
+Resources
+
+  * [Documentation](/docs/)
+  * [Blog](/blog/)
+  * [Changelog](/changelog/)
+  * [FAQs](/faq/)
+  * [Report a bug](https://github.com/kirodotdev/Kiro/issues/new/choose)
+  * [Suggest an idea](https://github.com/kirodotdev/Kiro/issues/new?template=feature_request.yml)
+  * [Billing support](https://support.aws.amazon.com/#/contacts/kiro)
+
+
+
+Social
+
+  * [](https://discord.gg/kirodotdev)
+  * [](https://www.linkedin.com/showcase/kirodotdev)
+  * [](https://x.com/kirodotdev)
+  * [](https://www.instagram.com/kirodotdev)
+  * [](https://www.youtube.com/@kirodotdev)
+  * [](https://bsky.app/profile/kiro.dev)
+  * [](https://www.twitch.tv/kirodotdev)
+
+
+
+[](https://aws.amazon.com)
+
+[Site Terms](https://aws.amazon.com/terms/)[License](/license/)[Responsible AI Policy](https://aws.amazon.com/ai/responsible-ai/policy/)[Legal](https://aws.amazon.com/legal/)[Privacy Policy](https://aws.amazon.com/privacy/)Cookie Preferences
+
+The Kiro CLI provides an interactive chat mode that lets you have natural conversations with AI directly in your terminal. This feature brings the power of conversational AI to your command-line workflow.
+
+## Starting a session
+
+To start a chat session
+
+bash
+    
+    
+    kiro-cli
+    
+
+Or start a chat with a specific context:
+
+bash
+    
+    
+    kiro-cli --agent myagent
+    
+
+## Entering multi-line statements
+
+To enter multi-line statements, use the `/editor` command or type `Ctrl(^) + J` to insert new-line for multi-line prompt
+
+bash
+    
+    
+    /editor
+    
+
+This opens your default editor (defaults to vi) where you can compose longer, multi-line prompts. After you save and close the editor, the content will be sent as your message to Kiro.
+
+You can also:
+
+  * Use the [`/reply`](/docs/cli/chat/responding) command to open your editor with the most recent assistant message quoted for reply, which is useful for multi-line responses to previous messages.
+
+
+
+## Conversation persistence
+
+Kiro can remember your conversations based on the folder where you started them. When you start a session where you previously chatted with Kiro, you can tell Kiro to automatically load that conversation history, allowing you to seamlessly continue your discussion.
+
+### Directory-based persistence
+
+If it's your first time chatting in that directory, Kiro will start a new conversation (taking into consideration any designated context).
+
+To explicitly resume a conversation in the current directory, use:
+
+bash
+    
+    
+    $ kiro-cli chat --resume
+    
+
+### Manually saving and loading conversations
+
+You can also manually save and load conversations using the following commands while in a chat session:
+
+bash
+    
+    
+        /save [path] – Saves your current conversation to a JSON file.
+    
+            Add -f or --force to overwrite an existing file
+    
+            Examples:
+    
+            /save ./my-project-conversation -f
+    
+            /save /home/user/project/my-project-conversation.json
+    
+            You cannot use ~ to denote your home directory.
+    
+        /load [path] – Loads a conversation from a previously saved JSON file
+    
+            Example: /load ./my-project-conversation.json
+    
+
+**Info**
+
+The `/save` and `/load` commands operate independently of the directory where the conversation was originally created. When loading a conversation, be mindful that it will replace your current conversation regardless of which directory it was saved from.
+
+Page updated: November 16, 2025
+
+[Authentication](/docs/cli/authentication/)
+
+[Model selection](/docs/cli/chat/model-selection/)
+
+================================================================================
+
+# Page: https://kiro.dev/docs/cli/chat/model-selection/
+
+[Loading image...](/)
+
+  * [CLI](/cli/)
+  * [Enterprise](/enterprise/)
+  * [Pricing](/pricing/)
+  * Docs
+  * Resources
+
+
+
+SIGN IN[DOWNLOADS](/downloads/)
+
+[Loading image...](/)
+
+  1. [Docs](/docs)
+  2.   3. [CLI](/docs/cli)
+  4.   5. [Chat](/docs/cli/chat)
+  6.   7. Model selection
+
+
+
+# Model selection
+
+On this page
+
+  * Available models
+  * Auto (recommended)
+  * What model does Auto use?
+  * Claude Sonnet 4.0
+  * Claude Sonnet 4.5
+  * Cost comparison
+  * Choosing the right model
+  * Auto
+  * Sonnet 4.0 & Sonnet 4.5
+  * How to switch models
+  * In the chat interface
+  * Kiro CLI setting
+  * Best practices
+  * Maximizing efficiency
+  * Cost management
+
+
+
+* * *
+
+Loading image...
+
+Product
+
+  * [About Kiro](/about/)
+  * [CLI](/cli/)
+  * [Pricing](/pricing/)
+  * [Downloads](/downloads/)
+
+
+
+For
+
+  * [Enterprise](/enterprise/)
+  * [Startups](/startups/)
+
+
+
+Resources
+
+  * [Documentation](/docs/)
+  * [Blog](/blog/)
+  * [Changelog](/changelog/)
+  * [FAQs](/faq/)
+  * [Report a bug](https://github.com/kirodotdev/Kiro/issues/new/choose)
+  * [Suggest an idea](https://github.com/kirodotdev/Kiro/issues/new?template=feature_request.yml)
+  * [Billing support](https://support.aws.amazon.com/#/contacts/kiro)
+
+
+
+Social
+
+  * [](https://discord.gg/kirodotdev)
+  * [](https://www.linkedin.com/showcase/kirodotdev)
+  * [](https://x.com/kirodotdev)
+  * [](https://www.instagram.com/kirodotdev)
+  * [](https://www.youtube.com/@kirodotdev)
+  * [](https://bsky.app/profile/kiro.dev)
+  * [](https://www.twitch.tv/kirodotdev)
+
+
+
+[](https://aws.amazon.com)
+
+[Site Terms](https://aws.amazon.com/terms/)[License](/license/)[Responsible AI Policy](https://aws.amazon.com/ai/responsible-ai/policy/)[Legal](https://aws.amazon.com/legal/)[Privacy Policy](https://aws.amazon.com/privacy/)Cookie Preferences
+
+Kiro provides three powerful AI agent options to handle your development tasks: **Auto** , **Claude Sonnet 4.0** , **Claude Sonnet 4.5** , and **Claude Haiku 4.5**. Each offers distinct advantages depending on your needs and usage patterns.
+
+## Available models
+
+### Auto (recommended)
+
+Auto is Kiro's default intelligent model router that combines multiple frontier models with advanced optimization techniques.
+
+**Key benefits:**
+
+  * **Cost-effective** – Approximately 23% less expensive than direct Sonnet 4 usage
+  * **Smart routing** – Automatically chooses the optimal model for each task
+  * **Consistent quality** – Delivers Sonnet 4-level results across different task types
+  * **Plan efficiency** – Makes your usage limits go further
+
+
+
+#### What model does Auto use?
+
+Auto uses best in class LLM models (Claude Sonnet 4 and alike) to provide you the best quality for the type of tasks assigned to the agent. We maintain a very high bar to ensure that the quality of what is offered under Auto compares to or exceeds the quality of separate models made available to our users.
+
+### Claude Sonnet 4.0
+
+Direct access to Anthropic's Claude Sonnet 4.0 model for users who prefer consistent model selection or have specific requirements for using this particular model.
+
+**Key benefits:**
+
+  * **Predictable behavior** – Same model for all interactions
+  * **Direct access** – No routing or optimization layers
+  * **Full control** – Complete transparency in model selection
+
+
+
+### Claude Sonnet 4.5
+
+An experimental preview of Anthropic's Claude Sonnet 4.5 model for users who want to test the latest Anthropic model.
+
+**Key benefits:**
+
+  * **Task optimization** – Better performance on specialized tasks
+  * **Advanced logic** – Enhanced reasoning capabilities
+  * **Extended memory** – Improved context handling for longer conversations
+
+
+
+## Cost comparison
+
+Understanding the credit consumption differences:
+
+Model| Credit Usage| Example Task Cost  
+---|---|---  
+**Auto**|  1.0x| 10 credits  
+**Claude Sonnet 4.0**|  1.3x| 13 credits  
+**Claude Sonnet 4.5**|  1.3x| 13 credits  
+  
+## Choosing the right model
+
+### Auto
+
+Consider using Auto when:
+
+  * **Cost efficiency matters** – You want to maximize your plan's value
+  * **General development work** – Most coding, debugging, and planning tasks
+  * **Variable task types** – Working on diverse projects with different requirements
+  * **Plan optimization** – You want your limits to stretch further
+
+
+
+### Sonnet 4.0 & Sonnet 4.5
+
+Consider using Sonnet 4.0 or Sonnet 4.5 when:
+
+  * **Consistency is critical** – You need predictable model behavior
+  * **Specific requirements** – Your workflow depends on Sonnet 4's particular capabilities
+  * **Model transparency** – You prefer knowing exactly which model handles each request
+  * **Budget flexibility** – Higher costs aren't a primary concern
+
+
+
+## How to switch models
+
+### In the chat interface
+
+Loading image...
+
+### Kiro CLI setting
+
+bash
+    
+    
+    kiro-cli settings chat.defaultModel claude-sonnet4
+    
+
+## Best practices
+
+### Maximizing efficiency
+
+  * **Start with Auto** – Use it as your default for most tasks
+  * **Monitor usage** – Track how different models affect your plan consumption
+  * **Switch strategically** – Use Sonnet 4 or Sonnet 4.5 for specific high-stakes tasks
+  * **Experiment** – Try both models for similar tasks to compare results
+
+
+
+### Cost management
+
+  * **Plan accordingly** – Factor model choice into your tier selection
+  * **Track patterns** – Understand which tasks benefit most from each model
+  * **Optimize workflows** – Adjust development practices based on model strengths
+  * **Consider overages** – Enable if you need flexibility beyond plan limits
+
+
+
+Page updated: November 16, 2025
+
+[Chat](/docs/cli/chat/)
+
+[Prompts](/docs/cli/chat/manage-prompts/)
+
+================================================================================
+
+# Page: https://kiro.dev/docs/cli/chat/responding
+
+[Loading image...](/)
+
+  * [CLI](/cli/)
+  * [Enterprise](/enterprise/)
+  * [Pricing](/pricing/)
+  * Docs
+  * Resources
+
+
+
+SIGN IN[DOWNLOADS](/downloads/)
+
+[Loading image...](/)
+
+  1. [Docs](/docs)
+  2.   3. [CLI](/docs/cli)
+  4.   5. [Chat](/docs/cli/chat)
+  6.   7. Responding
+
+
+
+# Responding to messages
+
+On this page
+
+  * Overview
+  * How it works
+  * Editor behavior
+  * Use cases
+  * Responding to multiple questions
+  * Addressing specific points
+  * Providing structured feedback
+  * Status messages
+  * Error handling
+  * Best practices
+  * Next steps
+
+
+
+* * *
+
+Loading image...
+
+Product
+
+  * [About Kiro](/about/)
+  * [CLI](/cli/)
+  * [Pricing](/pricing/)
+  * [Downloads](/downloads/)
+
+
+
+For
+
+  * [Enterprise](/enterprise/)
+  * [Startups](/startups/)
+
+
+
+Resources
+
+  * [Documentation](/docs/)
+  * [Blog](/blog/)
+  * [Changelog](/changelog/)
+  * [FAQs](/faq/)
+  * [Report a bug](https://github.com/kirodotdev/Kiro/issues/new/choose)
+  * [Suggest an idea](https://github.com/kirodotdev/Kiro/issues/new?template=feature_request.yml)
+  * [Billing support](https://support.aws.amazon.com/#/contacts/kiro)
+
+
+
+Social
+
+  * [](https://discord.gg/kirodotdev)
+  * [](https://www.linkedin.com/showcase/kirodotdev)
+  * [](https://x.com/kirodotdev)
+  * [](https://www.instagram.com/kirodotdev)
+  * [](https://www.youtube.com/@kirodotdev)
+  * [](https://bsky.app/profile/kiro.dev)
+  * [](https://www.twitch.tv/kirodotdev)
+
+
+
+[](https://aws.amazon.com)
+
+[Site Terms](https://aws.amazon.com/terms/)[License](/license/)[Responsible AI Policy](https://aws.amazon.com/ai/responsible-ai/policy/)[Legal](https://aws.amazon.com/legal/)[Privacy Policy](https://aws.amazon.com/privacy/)Cookie Preferences
+
+## Overview
+
+Kiro CLI provides a convenient way to respond to specific parts of Kiro's previous message through the `/reply` command. It opens an editor with Kiro's last response quoted with > prefixes, allowing you to easily address individual points or provide structured feedback. The command uses your system's default editor, and falls back to `vi` if no editor is configured
+
+### How it works
+
+  * **Retrieves last response** : Finds the most recent assistant message from the conversation
+  * **Formats with quotes** : Each line is prefixed with > for clear attribution
+  * **Opens editor** : Your default editor opens with the quoted content
+  * **Edit and respond** : Add your responses below or interspersed with the quoted text
+  * **Submit** : When you save and close the editor, your response is submitted
+
+
+
+### Editor behavior
+
+  * Pre-populated content: Editor opens with Kiro's response already quoted
+  * Quote format: Each line prefixed with > for clear visual distinction
+  * Flexible editing: Add content anywhere - below quotes, between lines, or interspersed
+  * Auto-submission: Content is automatically submitted when editor closes successfully
+
+
+
+### Use cases
+
+#### Responding to multiple questions
+
+When Kiro asks several clarifying questions, use `/reply` to address each one:
+    
+    
+    > What programming language are you using?
+    Python
+    
+    > What framework are you working with?
+    Django
+    
+    > What specific error are you encountering?
+    I'm getting a 404 error when trying to access my API endpoints.
+    
+    
+
+#### Addressing specific points
+
+When Kiro provides a detailed explanation, respond to specific parts:
+    
+    
+    > Here are three approaches you could take:
+    > 1. Use a database migration
+    > 2. Update the model directly
+    > 3. Create a custom management command
+    
+    I'd like to go with option 1. Can you show me how to create the migration?
+    
+    > Make sure to backup your data first.
+    Already done - I have a full backup from this morning.
+    
+
+#### Providing structured feedback
+
+When Kiro suggests multiple changes, organize your responses clearly:
+    
+    
+    > I recommend these improvements:
+    > - Add error handling for network requests
+    > - Implement input validation
+    > - Add logging for debugging
+    
+    Agreed on all points. For the error handling:
+    - Should I use try/catch blocks or a decorator pattern?
+    
+    For logging:
+    - What level of detail do you recommend?
+    
+
+### Status messages
+
+The command provides clear feedback about its operation:
+
+  * Success: "Content loaded from editor. Submitting prompt..."
+  * No changes: "No changes made in editor, not submitting."
+  * No message: "No assistant message found to reply to."
+  * Editor error: "Error opening editor: [specific error details]"
+
+
+
+### Error handling
+
+  * No assistant message: Shows warning if no previous Kiro response is found
+  * Editor failures: Reports editor process failures with specific error details
+  * Empty content: Detects when no changes are made and skips submission
+  * Unchanged content: Compares with initial text to avoid submitting unmodified quotes
+
+
+
+### Best practices
+
+  * Use `/reply` when Kiro's response contains multiple points that need individual attention
+  * Keep your responses clear and organized when addressing quoted sections
+  * Focus on sections that need clarification rather than responding to every quoted line
+  * Use the quote structure to maintain context in longer conversations
+
+
+
+**Tip**
+
+  1. You can delete quote lines you don't need to respond to
+  2. Add blank lines between your responses for better readability
+  3. Use the quoted structure to break down complex topics into manageable parts
+  4. The command works best when Q Developer's previous response was substantial and detailed
+
+
+
+View related pages
+
+## Next steps
+
+  * Learn about [Context Management](/docs/cli/chat/context) for better responses
+  * Explore [Slash Commands](/docs/cli/reference/slash-commands) for quick actions
+  * Check [Conversations](/docs/cli/chat/conversations) to save and manage chats
+  * Review [Prompts](/docs/cli/chat/manage-prompts) for effective questioning
+
+
+
+Page updated: November 18, 2025
+
+[Context management](/docs/cli/chat/context/)
+
+[Permissions](/docs/cli/chat/permissions/)
+
+================================================================================
+
+# Page: https://kiro.dev/docs/cli/steering/
+
+[Loading image...](/)
+
+  * [CLI](/cli/)
+  * [Enterprise](/enterprise/)
+  * [Pricing](/pricing/)
+  * Docs
+  * Resources
+
+
+
+SIGN IN[DOWNLOADS](/downloads/)
+
+[Loading image...](/)
+
+  1. [Docs](/docs)
+  2.   3. [CLI](/docs/cli)
+  4.   5. Steering
+
+
+
+# Steering
+
+On this page
+
+  * What is steering?
+  * Key benefits
+  * Getting started with steering files
+  * Creating custom steering files
+  * Best practices
+  * Common steering file strategies
+
+
+
+* * *
+
+Loading image...
+
+Product
+
+  * [About Kiro](/about/)
+  * [CLI](/cli/)
+  * [Pricing](/pricing/)
+  * [Downloads](/downloads/)
+
+
+
+For
+
+  * [Enterprise](/enterprise/)
+  * [Startups](/startups/)
+
+
+
+Resources
+
+  * [Documentation](/docs/)
+  * [Blog](/blog/)
+  * [Changelog](/changelog/)
+  * [FAQs](/faq/)
+  * [Report a bug](https://github.com/kirodotdev/Kiro/issues/new/choose)
+  * [Suggest an idea](https://github.com/kirodotdev/Kiro/issues/new?template=feature_request.yml)
+  * [Billing support](https://support.aws.amazon.com/#/contacts/kiro)
+
+
+
+Social
+
+  * [](https://discord.gg/kirodotdev)
+  * [](https://www.linkedin.com/showcase/kirodotdev)
+  * [](https://x.com/kirodotdev)
+  * [](https://www.instagram.com/kirodotdev)
+  * [](https://www.youtube.com/@kirodotdev)
+  * [](https://bsky.app/profile/kiro.dev)
+  * [](https://www.twitch.tv/kirodotdev)
+
+
+
+[](https://aws.amazon.com)
+
+[Site Terms](https://aws.amazon.com/terms/)[License](/license/)[Responsible AI Policy](https://aws.amazon.com/ai/responsible-ai/policy/)[Legal](https://aws.amazon.com/legal/)[Privacy Policy](https://aws.amazon.com/privacy/)Cookie Preferences
+
+## What is steering?
+
+Steering gives Kiro persistent knowledge about your project through markdown files in `.kiro/steering/`. Instead of explaining your conventions in every chat, steering files ensure Kiro consistently follows your established patterns, libraries, and standards.
+
+## Key benefits
+
+**Consistent Code Generation** \- Every component, API endpoint, or test follows your team's established patterns and conventions.
+
+**Reduced Repetition** \- No need to explain project standards in each conversation. Kiro remembers your preferences.
+
+**Team Alignment** \- All developers work with the same standards, whether they're new to the project or seasoned contributors.
+
+**Scalable Project Knowledge** \- Documentation that grows with your codebase, capturing decisions and patterns as your project evolves.
+
+## Getting started with steering files
+
+Create foundational steering files to establish core project context:
+
+  1. Create a `.kiro/steering/` directory in your project root
+  2. Add markdown files for your project standards
+  3. Kiro will automatically load these files in chat sessions
+
+
+
+**Product Overview** (`product.md`) - Defines your product's purpose, target users, key features, and business objectives. This helps Kiro understand the "why" behind technical decisions and suggest solutions aligned with your product goals.
+
+**Technology Stack** (`tech.md`) - Documents your chosen frameworks, libraries, development tools, and technical constraints. When Kiro suggests implementations, it will prefer your established stack over alternatives.
+
+**Project Structure** (`structure.md`) - Outlines file organization, naming conventions, import patterns, and architectural decisions. This ensures generated code fits seamlessly into your existing codebase.
+
+These foundation files form the baseline of Kiro's project understanding.
+
+## Creating custom steering files
+
+Extend Kiro's understanding with specialized guidance tailored to your project's unique needs:
+
+  1. Create a new `.md` file in `.kiro/steering/`
+  2. Choose a descriptive filename (e.g., `api-standards.md`)
+  3. Write your guidance using standard markdown syntax
+  4. Use natural language to describe your requirements
+
+
+
+Examples:
+
+  * API specs: `#[[file:api/openapi.yaml]]`
+  * Component patterns: `#[[file:components/ui/button.tsx]]`
+  * Config templates: `#[[file:.env.example]]`
+
+
+
+## Best practices
+
+**Keep Files Focused** One domain per file - API design, testing, or deployment procedures.
+
+**Use Clear Names**
+
+  * `api-rest-conventions.md` \- REST API standards
+  * `testing-unit-patterns.md` \- Unit testing approaches
+  * `components-form-validation.md` \- Form component standards
+
+
+
+**Include Context** Explain why decisions were made, not just what the standards are.
+
+**Provide Examples** Use code snippets and before/after comparisons to demonstrate standards.
+
+**Security First** Never include API keys, passwords, or sensitive data. Steering files are part of your codebase.
+
+**Maintain Regularly**
+
+  * Review during sprint planning and architecture changes
+  * Test file references after restructuring
+  * Treat steering changes like code changes - require reviews
+
+
+
+## Common steering file strategies
+
+**API Standards** (`api-standards.md`) - Define REST conventions, error response formats, authentication flows, and versioning strategies. Include endpoint naming patterns, HTTP status code usage, and request/response examples.
+
+**Testing Approach** (`testing-standards.md`) - Establish unit test patterns, integration test strategies, mocking approaches, and coverage expectations. Document preferred testing libraries, assertion styles, and test file organization.
+
+**Code Style** (`code-conventions.md`) - Specify naming patterns, file organization, import ordering, and architectural decisions. Include examples of preferred code structures, component patterns, and anti-patterns to avoid.
+
+**Security Guidelines** (`security-policies.md`) - Document authentication requirements, data validation rules, input sanitization standards, and vulnerability prevention measures. Include secure coding practices specific to your application.
+
+**Deployment Process** (`deployment-workflow.md`) - Outline build procedures, environment configurations, deployment steps, and rollback strategies. Include CI/CD pipeline details and environment-specific requirements.
+
+Custom steering files are stored in `.kiro/steering/` and become immediately available across all Kiro CLI chat sessions.
+
+Page updated: November 16, 2025
+
+[Security](/docs/cli/mcp/security/)
+
+[Experimental](/docs/cli/experimental/)
+
+================================================================================
+
+# Page: https://kiro.dev/docs/cli/autocomplete/
+
+[Loading image...](/)
+
+  * [CLI](/cli/)
+  * [Enterprise](/enterprise/)
+  * [Pricing](/pricing/)
+  * Docs
+  * Resources
+
+
+
+SIGN IN[DOWNLOADS](/downloads/)
+
+[Loading image...](/)
+
+  1. [Docs](/docs)
+  2.   3. [CLI](/docs/cli)
+  4.   5. Autocomplete
+
+
+
+# Completions & autocomplete
+
+On this page
+
+  * Autocomplete dropdown menu
+  * Using autocomplete
+  * Configuration
+  * Inline suggestions
+  * Using inline suggestions
+  * Managing inline suggestions
+  * Supported tools
+  * Popular tools
+  * Language tools
+  * System tools
+  * Troubleshooting
+  * Autocomplete not working
+  * Inline suggestions issues
+
+
+
+* * *
+
+Loading image...
+
+Product
+
+  * [About Kiro](/about/)
+  * [CLI](/cli/)
+  * [Pricing](/pricing/)
+  * [Downloads](/downloads/)
+
+
+
+For
+
+  * [Enterprise](/enterprise/)
+  * [Startups](/startups/)
+
+
+
+Resources
+
+  * [Documentation](/docs/)
+  * [Blog](/blog/)
+  * [Changelog](/changelog/)
+  * [FAQs](/faq/)
+  * [Report a bug](https://github.com/kirodotdev/Kiro/issues/new/choose)
+  * [Suggest an idea](https://github.com/kirodotdev/Kiro/issues/new?template=feature_request.yml)
+  * [Billing support](https://support.aws.amazon.com/#/contacts/kiro)
+
+
+
+Social
+
+  * [](https://discord.gg/kirodotdev)
+  * [](https://www.linkedin.com/showcase/kirodotdev)
+  * [](https://x.com/kirodotdev)
+  * [](https://www.instagram.com/kirodotdev)
+  * [](https://www.youtube.com/@kirodotdev)
+  * [](https://bsky.app/profile/kiro.dev)
+  * [](https://www.twitch.tv/kirodotdev)
+
+
+
+[](https://aws.amazon.com)
+
+[Site Terms](https://aws.amazon.com/terms/)[License](/license/)[Responsible AI Policy](https://aws.amazon.com/ai/responsible-ai/policy/)[Legal](https://aws.amazon.com/legal/)[Privacy Policy](https://aws.amazon.com/privacy/)Cookie Preferences
+
+Kiro CLI provides two AI-powered assistance features to help you work more efficiently in your terminal:
+
+  * **Autocomplete Dropdown Menu** : A graphical menu showing available command options
+  * **Inline Suggestions** : Gray "ghost text" that appears as you type
+
+
+
+These features work independently and support hundreds of popular command line tools including `git`, `npm`, `docker`, and `aws`.
+
+## Autocomplete dropdown menu
+
+The autocomplete dropdown appears to the right of your cursor when typing commands, showing available options, subcommands, and arguments that you can select using arrow keys.
+
+### Using autocomplete
+
+The autocomplete dropdown is automatically enabled after you install Kiro CLI:
+
+  1. Open your terminal or command prompt
+  2. Start typing a command
+  3. A graphical menu will appear showing available options
+  4. Use arrow keys to navigate suggestions
+  5. Press **Tab** or **Enter** to select an option
+
+
+
+### Configuration
+
+Customize the autocomplete behavior:
+
+bash
+    
+    
+    # Enable/disable autocomplete
+    kiro-cli settings autocomplete.disable false  # enable
+    kiro-cli settings autocomplete.disable true   # disable
+    
+    # Change theme
+    kiro-cli theme dark
+    kiro-cli theme light  
+    kiro-cli theme system
+    
+    # View current theme
+    kiro-cli theme
+    
+    # List available themes
+    kiro-cli theme --list
+    
+
+## Inline suggestions
+
+Inline suggestions appear as gray "ghost text" directly on your command line as you type. This feature works independently from the dropdown menu.
+
+### Using inline suggestions
+
+Inline suggestions are enabled by default:
+
+  1. Start typing a command
+  2. Gray ghost text will appear showing potential completions
+  3. Press the **right arrow key** or **Tab** to accept
+  4. Continue typing to ignore the suggestion
+
+
+
+### Managing inline suggestions
+
+Control inline suggestions with the `kiro-cli inline` command:
+
+bash
+    
+    
+    # Enable inline suggestions
+    kiro-cli inline enable
+    
+    # Disable inline suggestions  
+    kiro-cli inline disable
+    
+    # Check current status
+    kiro-cli inline status
+    
+    # Set customization
+    kiro-cli inline set-customization [ARN]
+    
+    # Show available customizations
+    kiro-cli inline show-customizations
+    
+
+## Supported tools
+
+The autocomplete system supports hundreds of command line tools:
+
+### Popular tools
+
+  * **Git** : Branch names, commit hashes, file paths
+  * **Docker** : Container names, image tags, commands
+  * **npm/yarn** : Package names, scripts, dependencies
+  * **kubectl** : Resources, namespaces, contexts
+  * **terraform** : Resources, providers, variables
+  * **aws** : Services, regions, resource names
+
+
+
+### Language tools
+
+  * **Python** : `pip`, `poetry`, `conda`
+  * **Node.js** : `npm`, `yarn`, `pnpm`
+  * **Ruby** : `gem`, `bundle`
+  * **Go** : `go mod`, `go build`
+
+
+
+### System tools
+
+  * Standard Unix/Linux commands
+  * Package managers (`apt`, `brew`, `yum`)
+  * File operations (`ls`, `find`, `grep`)
+
+
+
+## Troubleshooting
+
+### Autocomplete not working
+
+If autocomplete isn't appearing:
+
+  1. Verify installation: `kiro-cli --version`
+  2. Check if disabled: `kiro-cli settings autocomplete.disable`
+  3. Restart your terminal
+  4. Try a different shell (bash, zsh, fish)
+
+
+
+### Inline suggestions issues
+
+If inline suggestions aren't working:
+
+  1. Check status: `kiro-cli inline status`
+  2. Enable if disabled: `kiro-cli inline enable`
+  3. Verify shell compatibility
+  4. Check terminal emulator support
+
+
+
+Page updated: November 16, 2025
+
+[Hooks](/docs/cli/hooks/)
+
+[Billing for individuals](/docs/cli/billing/)
+
+================================================================================
+
+# Page: https://kiro.dev/docs/cli
+
+[Loading image...](/)
+
+  * [CLI](/cli/)
+  * [Enterprise](/enterprise/)
+  * [Pricing](/pricing/)
+  * Docs
+  * Resources
+
+
+
+SIGN IN[DOWNLOADS](/downloads/)
+
+[Loading image...](/)
+
+  1. [Docs](/docs)
+  2.   3. [CLI](/docs/cli)
+
+
+
+# Get started
+
+On this page
+
+  * Core features
+  * Use cases
+  * What's next?
+
+
+
+* * *
+
+Loading image...
+
+Product
+
+  * [About Kiro](/about/)
+  * [CLI](/cli/)
+  * [Pricing](/pricing/)
+  * [Downloads](/downloads/)
+
+
+
+For
+
+  * [Enterprise](/enterprise/)
+  * [Startups](/startups/)
+
+
+
+Resources
+
+  * [Documentation](/docs/)
+  * [Blog](/blog/)
+  * [Changelog](/changelog/)
+  * [FAQs](/faq/)
+  * [Report a bug](https://github.com/kirodotdev/Kiro/issues/new/choose)
+  * [Suggest an idea](https://github.com/kirodotdev/Kiro/issues/new?template=feature_request.yml)
+  * [Billing support](https://support.aws.amazon.com/#/contacts/kiro)
+
+
+
+Social
+
+  * [](https://discord.gg/kirodotdev)
+  * [](https://www.linkedin.com/showcase/kirodotdev)
+  * [](https://x.com/kirodotdev)
+  * [](https://www.instagram.com/kirodotdev)
+  * [](https://www.youtube.com/@kirodotdev)
+  * [](https://bsky.app/profile/kiro.dev)
+  * [](https://www.twitch.tv/kirodotdev)
+
+
+
+[](https://aws.amazon.com)
+
+[Site Terms](https://aws.amazon.com/terms/)[License](/license/)[Responsible AI Policy](https://aws.amazon.com/ai/responsible-ai/policy/)[Legal](https://aws.amazon.com/legal/)[Privacy Policy](https://aws.amazon.com/privacy/)Cookie Preferences
+
+The Kiro CLI brings the power of AI-assisted development to your terminal. Build, test, and deploy applications using natural language commands and automated workflows.
+
+Get started with the Kiro CLI in minutes. Install on macOS and Linux:
+
+`curl -fsSL https://cli.kiro.dev/install | bash`
+
+Start using Kiro CLI:
+
+bash
+    
+    
+    cd my-project
+    kiro-cli
+    
+
+## Core features
+
+[Interactive ChatEngage with Kiro through natural conversation in your terminal.](/docs/cli/chat/)
+
+[Custom AgentsCreate and deploy specialized agents for your workflows.](/docs/cli/custom-agents/)
+
+[MCP IntegrationConnect external tools and data sources through Model Context Protocol.](/docs/cli/mcp/)
+
+[Smart HooksAutomate workflows with intelligent pre/post command hooks.](/docs/cli/hooks/)
+
+[Agent SteeringSteer Kiro agent with your best practices and preferences.](/docs/cli/steering/)
+
+[Auto CompleteIntelligent command completion with context awareness.](/docs/cli/autocomplete/)
+
+## Use cases
+
+The Kiro CLI is perfect for:
+
+  * **Interactive Development** : Chat with Kiro directly in your terminal for instant help
+  * **Custom Automation** : Create specialized agents for your specific workflows
+  * **Team Standardization** : Use team level best practises and preferences
+  * **External Integrations** : Connect tools and services through MCP servers
+  * **Intelligent Assistance** : Get context-aware suggestions and auto-completion
+  * **Workflow Optimization** : Automate repetitive tasks with smart hooks
+
+
+
+## What's next?
+
+### Ready to get started?
+
+Install the CLI and create your first project in under 5 minutes.
+
+[Install Kiro CLI →](/docs/cli/installation)
+
+Page updated: November 17, 2025
+
+[Installation](/docs/cli/installation/)
+
+================================================================================
+
+# Page: https://kiro.dev/docs/cli/hooks/
+
+[Loading image...](/)
+
+  * [CLI](/cli/)
+  * [Enterprise](/enterprise/)
+  * [Pricing](/pricing/)
+  * Docs
+  * Resources
+
+
+
+SIGN IN[DOWNLOADS](/downloads/)
+
+[Loading image...](/)
+
+  1. [Docs](/docs)
+  2.   3. [CLI](/docs/cli)
+  4.   5. Hooks
+
+
+
+# Hooks
+
+On this page
+
+  * Defining hooks
+  * Hook event
+  * Hook output
+  * Tool matching
+  * Examples
+  * Hook types
+  * AgentSpawn
+  * UserPromptSubmit
+  * PreToolUse
+  * PostToolUse
+  * Stop
+  * MCP Example
+  * Timeout
+  * Caching
+
+
+
+* * *
+
+Loading image...
+
+Product
+
+  * [About Kiro](/about/)
+  * [CLI](/cli/)
+  * [Pricing](/pricing/)
+  * [Downloads](/downloads/)
+
+
+
+For
+
+  * [Enterprise](/enterprise/)
+  * [Startups](/startups/)
+
+
+
+Resources
+
+  * [Documentation](/docs/)
+  * [Blog](/blog/)
+  * [Changelog](/changelog/)
+  * [FAQs](/faq/)
+  * [Report a bug](https://github.com/kirodotdev/Kiro/issues/new/choose)
+  * [Suggest an idea](https://github.com/kirodotdev/Kiro/issues/new?template=feature_request.yml)
+  * [Billing support](https://support.aws.amazon.com/#/contacts/kiro)
+
+
+
+Social
+
+  * [](https://discord.gg/kirodotdev)
+  * [](https://www.linkedin.com/showcase/kirodotdev)
+  * [](https://x.com/kirodotdev)
+  * [](https://www.instagram.com/kirodotdev)
+  * [](https://www.youtube.com/@kirodotdev)
+  * [](https://bsky.app/profile/kiro.dev)
+  * [](https://www.twitch.tv/kirodotdev)
+
+
+
+[](https://aws.amazon.com)
+
+[Site Terms](https://aws.amazon.com/terms/)[License](/license/)[Responsible AI Policy](https://aws.amazon.com/ai/responsible-ai/policy/)[Legal](https://aws.amazon.com/legal/)[Privacy Policy](https://aws.amazon.com/privacy/)Cookie Preferences
+
+Hooks allow you to execute custom commands at specific points during agent lifecycle and tool execution. This enables security validation, logging, formatting, context gathering, and other custom behaviors.
+
+## Defining hooks
+
+Hooks are defined in the agent configuration file. See the [Agent Configuration Reference](/docs/cli/custom-agents/agent-configuration-reference#hooks-field) for the complete syntax and examples.
+
+## Hook event
+
+Hooks receive hook event in JSON format via STDIN:
+
+json
+    
+    
+    {
+      "hook_event_name": "agentSpawn",
+      "cwd": "/current/working/directory"
+    }
+    
+
+For tool-related hooks, additional fields are included:
+
+  * `tool_name`: Name of the tool being executed
+  * `tool_input`: Tool-specific parameters (see individual tool documentation)
+  * `tool_response`: Tool execution results (PostToolUse only)
+
+
+
+## Hook output
+
+  * **Exit code 0** : Hook succeeded. STDOUT is captured but not shown to user.
+  * **Exit code 2** : (PreToolUse only) Block tool execution. STDERR is returned to the LLM.
+  * **Other exit codes** : Hook failed. STDERR is shown as warning to user.
+
+
+
+## Tool matching
+
+Use the `matcher` field to specify which tools the hook applies to:
+
+### Examples
+
+  * `"write"` \- Exact match for built-in tools
+  * `"@git"` \- All tools from git MCP server
+  * `"@git/status"` \- Specific tool from git MCP server
+  * `"*"` \- All tools (built-in and MCP)
+  * `"@builtin"` \- All built-in tools only
+  * No matcher - Applies to all tools
+
+
+
+For complete tool reference format, see [Agent Configuration Reference](/docs/cli/custom-agents/agent-configuration-reference#tools-field).
+
+## Hook types
+
+### AgentSpawn
+
+Runs when agent is activated. No tool context provided.
+
+**Hook Event**
+
+json
+    
+    
+    {
+      "hook_event_name": "agentSpawn",
+      "cwd": "/current/working/directory"
+    }
+    
+
+**Exit Code Behavior:**
+
+  * **0** : Hook succeeded, STDOUT is added to agent's context
+  * **Other** : Show STDERR warning to user
+
+
+
+### UserPromptSubmit
+
+Runs when user submits a prompt. Output is added to conversation context.
+
+**Hook Event**
+
+json
+    
+    
+    {
+      "hook_event_name": "userPromptSubmit",
+      "cwd": "/current/working/directory",
+      "prompt": "user's input prompt"
+    }
+    
+
+**Exit Code Behavior:**
+
+  * **0** : Hook succeeded, STDOUT is added to agent's context
+  * **Other** : Show STDERR warning to user
+
+
+
+### PreToolUse
+
+Runs before tool execution. Can validate and block tool usage.
+
+**Hook Event**
+
+json
+    
+    
+    {
+      "hook_event_name": "preToolUse",
+      "cwd": "/current/working/directory",
+      "tool_name": "read",
+      "tool_input": {
+        "operations": [
+          {
+            "mode": "Line",
+            "path": "/current/working/directory/docs/hooks.md"
+          }
+        ]
+      }
+    }
+    
+
+**Exit Code Behavior:**
+
+  * **0** : Allow tool execution.
+  * **2** : Block tool execution, return STDERR to LLM.
+  * **Other** : Show STDERR warning to user, allow tool execution.
+
+
+
+### PostToolUse
+
+Runs after tool execution with access to tool results.
+
+**Hook Event**
+
+json
+    
+    
+    {
+      "hook_event_name": "postToolUse",
+      "cwd": "/current/working/directory",
+      "tool_name": "read",
+      "tool_input": {
+        "operations": [
+          {
+            "mode": "Line",
+            "path": "/current/working/directory/docs/hooks.md"
+          }
+        ]
+      },
+      "tool_response": {
+        "success": true,
+        "result": ["# Hooks\n\nHooks allow you to execute..."]
+      }
+    }
+    
+
+**Exit Code Behavior:**
+
+  * **0** : Hook succeeded.
+  * **Other** : Show STDERR warning to user. Tool already ran.
+
+
+
+### Stop
+
+Runs when the assistant finishes responding to the user (at the end of each turn). This is useful for running post-processing tasks like code compilation, testing, formatting, or cleanup after the assistant's response.
+
+**Hook Event**
+
+json
+    
+    
+    {
+      "hook_event_name": "stop",
+      "cwd": "/current/working/directory"
+    }
+    
+
+**Exit Code Behavior:**
+
+  * **0** : Hook succeeded.
+  * **Other** : Show STDERR warning to user.
+
+
+
+**Note** : Stop hooks do not use matchers since they don't relate to specific tools.
+
+### MCP Example
+
+For MCP tools, the tool name includes the full namespaced format including the MCP Server name:
+
+**Hook Event**
+
+json
+    
+    
+    {
+      "hook_event_name": "preToolUse",
+      "cwd": "/current/working/directory",
+      "tool_name": "@postgres/query",
+      "tool_input": {
+        "sql": "SELECT * FROM orders LIMIT 10;"
+      }
+    }
+    
+
+## Timeout
+
+Default timeout is 30 seconds (30,000ms). Configure with `timeout_ms` field.
+
+## Caching
+
+Successful hook results are cached based on `cache_ttl_seconds`:
+
+  * `0`: No caching (default)
+  * `> 0`: Cache successful results for specified seconds
+  * AgentSpawn hooks are never cached
+
+
+
+Page updated: November 18, 2025
+
+[Delegate](/docs/cli/experimental/delegate/)
+
+[Auto complete](/docs/cli/autocomplete/)
+
+================================================================================
+
+# Page: https://kiro.dev/docs/cli/installation
+
+[Loading image...](/)
+
+  * [CLI](/cli/)
+  * [Enterprise](/enterprise/)
+  * [Pricing](/pricing/)
+  * Docs
+  * Resources
+
+
+
+SIGN IN[DOWNLOADS](/downloads/)
+
+[Loading image...](/)
+
+  1. [Docs](/docs)
+  2.   3. [CLI](/docs/cli)
+  4.   5. Installation
+
+
+
+# Installation
+
+On this page
+
+  * macOS
+  * Linux AppImage
+  * With a zip file
+  * Install and update requirements
+  * Checking your glibc version
+  * To download the installation file
+  * Standard version (glibc 2.34+)
+  * Musl version (for glibc < 2.34)
+  * To install Kiro CLI
+  * Ubuntu
+  * Proxy configuration
+  * Setting proxy environment variables
+  * Proxy with authentication
+  * Troubleshooting proxy issues
+  * Uninstalling Kiro CLI
+  * Debugging Kiro CLI
+  * Expected output
+  * Common issues
+  * Troubleshooting steps
+
+
+
+* * *
+
+Loading image...
+
+Product
+
+  * [About Kiro](/about/)
+  * [CLI](/cli/)
+  * [Pricing](/pricing/)
+  * [Downloads](/downloads/)
+
+
+
+For
+
+  * [Enterprise](/enterprise/)
+  * [Startups](/startups/)
+
+
+
+Resources
+
+  * [Documentation](/docs/)
+  * [Blog](/blog/)
+  * [Changelog](/changelog/)
+  * [FAQs](/faq/)
+  * [Report a bug](https://github.com/kirodotdev/Kiro/issues/new/choose)
+  * [Suggest an idea](https://github.com/kirodotdev/Kiro/issues/new?template=feature_request.yml)
+  * [Billing support](https://support.aws.amazon.com/#/contacts/kiro)
+
+
+
+Social
+
+  * [](https://discord.gg/kirodotdev)
+  * [](https://www.linkedin.com/showcase/kirodotdev)
+  * [](https://x.com/kirodotdev)
+  * [](https://www.instagram.com/kirodotdev)
+  * [](https://www.youtube.com/@kirodotdev)
+  * [](https://bsky.app/profile/kiro.dev)
+  * [](https://www.twitch.tv/kirodotdev)
+
+
+
+[](https://aws.amazon.com)
+
+[Site Terms](https://aws.amazon.com/terms/)[License](/license/)[Responsible AI Policy](https://aws.amazon.com/ai/responsible-ai/policy/)[Legal](https://aws.amazon.com/legal/)[Privacy Policy](https://aws.amazon.com/privacy/)Cookie Preferences
+
+## macOS
+
+You can natively install Kiro CLI for macOS at the command line.
+
+`curl -fsSL https://cli.kiro.dev/install | bash`
+
+Kiro will direct you to open your web browser, where you will follow the steps under [Authentication](../authentication).
+
+## Linux AppImage
+
+You can install Kiro CLI for Linux using the AppImage format, which is a portable format that works on most Linux distributions without requiring installation.
+
+To install Kiro CLI for Linux using AppImage, complete the following procedure.
+
+  1. Download Kiro CLI for Linux AppImage:
+
+
+
+`https://desktop-release.q.us-east-1.amazonaws.com/latest/kiro-cli.appimage`
+
+  2. Make the AppImage executable:
+
+bash
+         
+         chmod +x kiro-cli.appimage
+         
+
+  3. Run the AppImage:
+
+bash
+         
+         ./kiro-cli.appimage
+         
+
+  4. Kiro will direct you to open your web browser, where you will follow the steps under [Authentication](../authentication).
+
+
+
+
+## With a zip file
+
+The setup for Linux integration with the Kiro CLI requires installing the appropriate file for your system, verifying the file, and installing the program.
+
+### Install and update requirements
+
+  * You must be able to extract or "unzip" the downloaded package. If your operating system doesn't have the built-in unzip command, use an equivalent.
+  * Kiro for command line requires glibc 2.34 or newer, which is included by default in most major Linux distributions released since 2021.
+  * For older distributions with glibc versions earlier than 2.34, use the special musl-based version (indicated by `-musl.zip` in the filename).
+  * Kiro for command line is supported on 64-bit x86_64 and ARM aarch64 versions of recent distributions of Fedora, Ubuntu, and Amazon Linux 2023.
+
+
+
+### Checking your glibc version
+
+To determine which version you need, check your glibc version:
+    
+    
+    ldd --version
+    
+
+If the version is 2.34 or newer, use the standard version. If it's older, use the musl version.
+
+### To download the installation file
+
+Choose the appropriate download command based on your system architecture and glibc version:
+
+#### Standard version (glibc 2.34+)
+
+##### Linux x86-64
+
+`curl --proto '=https' --tlsv1.2 -sSf 'https://desktop-release.q.us-east-1.amazonaws.com/latest/kirocli-x86_64-linux.zip' -o 'kirocli.zip'`
+
+##### Linux ARM (aarch64)
+
+`curl --proto '=https' --tlsv1.2 -sSf 'https://desktop-release.q.us-east-1.amazonaws.com/latest/kirocli-aarch64-linux.zip' -o 'kirocli.zip'`
+
+#### Musl version (for glibc < 2.34)
+
+##### Linux x86-64 with musl
+
+`curl --proto '=https' --tlsv1.2 -sSf 'https://desktop-release.q.us-east-1.amazonaws.com/latest/kirocli-x86_64-linux-musl.zip' -o 'kirocli.zip'`
+
+##### Linux ARM (aarch64) with musl
+
+`curl --proto '=https' --tlsv1.2 -sSf 'https://desktop-release.q.us-east-1.amazonaws.com/latest/kirocli-aarch64-linux-musl.zip' -o 'kirocli.zip'`
+
+### To install Kiro CLI
+
+  1. Unzip the installer:
+         
+         unzip kirocli.zip
+         
+
+  2. Run the install program:
+         
+         ./kirocli/install.sh
+         
+
+By default, the files are installed to `~/.local/bin`.
+
+
+
+
+## Ubuntu
+
+You can install Kiro CLI for Ubuntu using the .deb package.
+
+To install Kiro CLI for Ubuntu, complete the following procedure.
+
+  1. Download Kiro CLI for Ubuntu.
+
+
+
+`wget https://desktop-release.q.us-east-1.amazonaws.com/latest/kiro-cli.deb`
+
+  2. Install the package:
+
+bash
+         
+         sudo dpkg -i kiro-cli.deb
+         sudo apt-get install -f
+         
+
+  3. Launch Kiro CLI:
+
+bash
+         
+         kiro-cli
+         
+
+  4. Kiro will direct you to open your web browser, where you will follow the steps under [Authentication](../authentication).
+
+
+
+
+## Proxy configuration
+
+Kiro CLI (v1.8.0 and later) supports proxy servers commonly used in enterprise environments. The CLI automatically respects standard proxy environment variables.
+
+### Setting proxy environment variables
+
+Configure proxy settings by setting these environment variables in your shell:
+
+bash
+    
+    
+    # HTTP proxy for non-SSL traffic
+    export HTTP_PROXY=http://proxy.company.com:8080
+    
+    # HTTPS proxy for SSL traffic  
+    export HTTPS_PROXY=http://proxy.company.com:8080
+    
+    # Bypass proxy for specific domains
+    export NO_PROXY=localhost,127.0.0.1,.company.com
+    
+
+### Proxy with authentication
+
+For proxies requiring authentication:
+
+bash
+    
+    
+    export HTTP_PROXY=http://username:password@proxy.company.com:8080
+    export HTTPS_PROXY=http://username:password@proxy.company.com:8080
+    
+
+### Troubleshooting proxy issues
+
+If you encounter proxy-related connection issues:
+
+  * Verify proxy server accessibility and credentials
+  * Ensure your corporate firewall allows connections to AWS endpoints
+  * Contact your IT administrator if SSL certificate validation fails
+  * Check that the proxy server supports the required protocols
+
+
+
+## Uninstalling Kiro CLI
+
+You can uninstall Kiro CLI if you no longer need it.
+
+To uninstall Kiro CLI on macOS, run:
+
+bash
+    
+    
+    kiro-cli uninstall
+    
+
+To uninstall Kiro CLI on Ubuntu, complete the following procedure.
+
+  1. Use the apt package manager to remove the package:
+
+bash
+         
+         sudo apt-get remove kiro-cli
+         
+
+  2. Remove any remaining configuration files:
+
+bash
+         
+         sudo apt-get purge kiro-cli
+         
+
+
+
+
+## Debugging Kiro CLI
+
+If you're having a problem with Kiro CLI, run `kiro-cli doctor` to identify and fix common issues.
+
+### Expected output
+
+bash
+    
+    
+    $ kiro-cli doctor
+    
+    ✔ Everything looks good!
+    
+    Kiro CLI still not working? Run kiro-cli issue to let us know!
+    
+
+If your output doesn't look like the expected output, follow the prompts to resolve your issue. If it's still not working, use `kiro-cli issue` to report the bug.
+
+### Common issues
+
+Here are some common issues you might encounter when using Kiro CLI:
+
+Authentication failures : If you're having trouble authenticating, try running `kiro-cli login` to re-authenticate.
+
+Autocomplete not working : Ensure your shell integration is properly installed by running `kiro-cli doctor`.
+
+SSH integration issues : Verify that your SSH server is properly configured to accept the required environment variables.
+
+### Troubleshooting steps
+
+Follow these steps to troubleshoot issues with Kiro CLI:
+
+  1. Run `kiro-cli doctor` to identify and fix common issues.
+  2. Check your internet connection.
+  3. Verify that you're using a supported environment. For more information, see [Supported command line environments](/docs/cli/reference/supported-environments).
+  4. Try reinstalling Kiro CLI.
+  5. If the issue persists, report it using `kiro-cli issue`.
+
+
+
+Page updated: November 18, 2025
+
+[Authentication](/docs/cli/authentication/)
+
+================================================================================
+
+# Page: https://kiro.dev/docs/cli/installation/
+
+[Loading image...](/)
+
+  * [CLI](/cli/)
+  * [Enterprise](/enterprise/)
+  * [Pricing](/pricing/)
+  * Docs
+  * Resources
+
+
+
+SIGN IN[DOWNLOADS](/downloads/)
+
+[Loading image...](/)
+
+  1. [Docs](/docs)
+  2.   3. [CLI](/docs/cli)
+  4.   5. Installation
+
+
+
+# Installation
+
+On this page
+
+  * macOS
+  * Linux AppImage
+  * With a zip file
+  * Install and update requirements
+  * Checking your glibc version
+  * To download the installation file
+  * Standard version (glibc 2.34+)
+  * Musl version (for glibc < 2.34)
+  * To install Kiro CLI
+  * Ubuntu
+  * Proxy configuration
+  * Setting proxy environment variables
+  * Proxy with authentication
+  * Troubleshooting proxy issues
+  * Uninstalling Kiro CLI
+  * Debugging Kiro CLI
+  * Expected output
+  * Common issues
+  * Troubleshooting steps
+
+
+
+* * *
+
+Loading image...
+
+Product
+
+  * [About Kiro](/about/)
+  * [CLI](/cli/)
+  * [Pricing](/pricing/)
+  * [Downloads](/downloads/)
+
+
+
+For
+
+  * [Enterprise](/enterprise/)
+  * [Startups](/startups/)
+
+
+
+Resources
+
+  * [Documentation](/docs/)
+  * [Blog](/blog/)
+  * [Changelog](/changelog/)
+  * [FAQs](/faq/)
+  * [Report a bug](https://github.com/kirodotdev/Kiro/issues/new/choose)
+  * [Suggest an idea](https://github.com/kirodotdev/Kiro/issues/new?template=feature_request.yml)
+  * [Billing support](https://support.aws.amazon.com/#/contacts/kiro)
+
+
+
+Social
+
+  * [](https://discord.gg/kirodotdev)
+  * [](https://www.linkedin.com/showcase/kirodotdev)
+  * [](https://x.com/kirodotdev)
+  * [](https://www.instagram.com/kirodotdev)
+  * [](https://www.youtube.com/@kirodotdev)
+  * [](https://bsky.app/profile/kiro.dev)
+  * [](https://www.twitch.tv/kirodotdev)
+
+
+
+[](https://aws.amazon.com)
+
+[Site Terms](https://aws.amazon.com/terms/)[License](/license/)[Responsible AI Policy](https://aws.amazon.com/ai/responsible-ai/policy/)[Legal](https://aws.amazon.com/legal/)[Privacy Policy](https://aws.amazon.com/privacy/)Cookie Preferences
+
+## macOS
+
+You can natively install Kiro CLI for macOS at the command line.
+
+`curl -fsSL https://cli.kiro.dev/install | bash`
+
+Kiro will direct you to open your web browser, where you will follow the steps under [Authentication](../authentication).
+
+## Linux AppImage
+
+You can install Kiro CLI for Linux using the AppImage format, which is a portable format that works on most Linux distributions without requiring installation.
+
+To install Kiro CLI for Linux using AppImage, complete the following procedure.
+
+  1. Download Kiro CLI for Linux AppImage:
+
+
+
+`https://desktop-release.q.us-east-1.amazonaws.com/latest/kiro-cli.appimage`
+
+  2. Make the AppImage executable:
+
+bash
+         
+         chmod +x kiro-cli.appimage
+         
+
+  3. Run the AppImage:
+
+bash
+         
+         ./kiro-cli.appimage
+         
+
+  4. Kiro will direct you to open your web browser, where you will follow the steps under [Authentication](../authentication).
+
+
+
+
+## With a zip file
+
+The setup for Linux integration with the Kiro CLI requires installing the appropriate file for your system, verifying the file, and installing the program.
+
+### Install and update requirements
+
+  * You must be able to extract or "unzip" the downloaded package. If your operating system doesn't have the built-in unzip command, use an equivalent.
+  * Kiro for command line requires glibc 2.34 or newer, which is included by default in most major Linux distributions released since 2021.
+  * For older distributions with glibc versions earlier than 2.34, use the special musl-based version (indicated by `-musl.zip` in the filename).
+  * Kiro for command line is supported on 64-bit x86_64 and ARM aarch64 versions of recent distributions of Fedora, Ubuntu, and Amazon Linux 2023.
+
+
+
+### Checking your glibc version
+
+To determine which version you need, check your glibc version:
+    
+    
+    ldd --version
+    
+
+If the version is 2.34 or newer, use the standard version. If it's older, use the musl version.
+
+### To download the installation file
+
+Choose the appropriate download command based on your system architecture and glibc version:
+
+#### Standard version (glibc 2.34+)
+
+##### Linux x86-64
+
+`curl --proto '=https' --tlsv1.2 -sSf 'https://desktop-release.q.us-east-1.amazonaws.com/latest/kirocli-x86_64-linux.zip' -o 'kirocli.zip'`
+
+##### Linux ARM (aarch64)
+
+`curl --proto '=https' --tlsv1.2 -sSf 'https://desktop-release.q.us-east-1.amazonaws.com/latest/kirocli-aarch64-linux.zip' -o 'kirocli.zip'`
+
+#### Musl version (for glibc < 2.34)
+
+##### Linux x86-64 with musl
+
+`curl --proto '=https' --tlsv1.2 -sSf 'https://desktop-release.q.us-east-1.amazonaws.com/latest/kirocli-x86_64-linux-musl.zip' -o 'kirocli.zip'`
+
+##### Linux ARM (aarch64) with musl
+
+`curl --proto '=https' --tlsv1.2 -sSf 'https://desktop-release.q.us-east-1.amazonaws.com/latest/kirocli-aarch64-linux-musl.zip' -o 'kirocli.zip'`
+
+### To install Kiro CLI
+
+  1. Unzip the installer:
+         
+         unzip kirocli.zip
+         
+
+  2. Run the install program:
+         
+         ./kirocli/install.sh
+         
+
+By default, the files are installed to `~/.local/bin`.
+
+
+
+
+## Ubuntu
+
+You can install Kiro CLI for Ubuntu using the .deb package.
+
+To install Kiro CLI for Ubuntu, complete the following procedure.
+
+  1. Download Kiro CLI for Ubuntu.
+
+
+
+`wget https://desktop-release.q.us-east-1.amazonaws.com/latest/kiro-cli.deb`
+
+  2. Install the package:
+
+bash
+         
+         sudo dpkg -i kiro-cli.deb
+         sudo apt-get install -f
+         
+
+  3. Launch Kiro CLI:
+
+bash
+         
+         kiro-cli
+         
+
+  4. Kiro will direct you to open your web browser, where you will follow the steps under [Authentication](../authentication).
+
+
+
+
+## Proxy configuration
+
+Kiro CLI (v1.8.0 and later) supports proxy servers commonly used in enterprise environments. The CLI automatically respects standard proxy environment variables.
+
+### Setting proxy environment variables
+
+Configure proxy settings by setting these environment variables in your shell:
+
+bash
+    
+    
+    # HTTP proxy for non-SSL traffic
+    export HTTP_PROXY=http://proxy.company.com:8080
+    
+    # HTTPS proxy for SSL traffic  
+    export HTTPS_PROXY=http://proxy.company.com:8080
+    
+    # Bypass proxy for specific domains
+    export NO_PROXY=localhost,127.0.0.1,.company.com
+    
+
+### Proxy with authentication
+
+For proxies requiring authentication:
+
+bash
+    
+    
+    export HTTP_PROXY=http://username:password@proxy.company.com:8080
+    export HTTPS_PROXY=http://username:password@proxy.company.com:8080
+    
+
+### Troubleshooting proxy issues
+
+If you encounter proxy-related connection issues:
+
+  * Verify proxy server accessibility and credentials
+  * Ensure your corporate firewall allows connections to AWS endpoints
+  * Contact your IT administrator if SSL certificate validation fails
+  * Check that the proxy server supports the required protocols
+
+
+
+## Uninstalling Kiro CLI
+
+You can uninstall Kiro CLI if you no longer need it.
+
+To uninstall Kiro CLI on macOS, run:
+
+bash
+    
+    
+    kiro-cli uninstall
+    
+
+To uninstall Kiro CLI on Ubuntu, complete the following procedure.
+
+  1. Use the apt package manager to remove the package:
+
+bash
+         
+         sudo apt-get remove kiro-cli
+         
+
+  2. Remove any remaining configuration files:
+
+bash
+         
+         sudo apt-get purge kiro-cli
+         
+
+
+
+
+## Debugging Kiro CLI
+
+If you're having a problem with Kiro CLI, run `kiro-cli doctor` to identify and fix common issues.
+
+### Expected output
+
+bash
+    
+    
+    $ kiro-cli doctor
+    
+    ✔ Everything looks good!
+    
+    Kiro CLI still not working? Run kiro-cli issue to let us know!
+    
+
+If your output doesn't look like the expected output, follow the prompts to resolve your issue. If it's still not working, use `kiro-cli issue` to report the bug.
+
+### Common issues
+
+Here are some common issues you might encounter when using Kiro CLI:
+
+Authentication failures : If you're having trouble authenticating, try running `kiro-cli login` to re-authenticate.
+
+Autocomplete not working : Ensure your shell integration is properly installed by running `kiro-cli doctor`.
+
+SSH integration issues : Verify that your SSH server is properly configured to accept the required environment variables.
+
+### Troubleshooting steps
+
+Follow these steps to troubleshoot issues with Kiro CLI:
+
+  1. Run `kiro-cli doctor` to identify and fix common issues.
+  2. Check your internet connection.
+  3. Verify that you're using a supported environment. For more information, see [Supported command line environments](/docs/cli/reference/supported-environments).
+  4. Try reinstalling Kiro CLI.
+  5. If the issue persists, report it using `kiro-cli issue`.
+
+
+
+Page updated: November 18, 2025
+
+[Authentication](/docs/cli/authentication/)
+
+================================================================================
+
+# Page: https://kiro.dev/docs/cli/custom-agents/
+
+[Loading image...](/)
+
+  * [CLI](/cli/)
+  * [Enterprise](/enterprise/)
+  * [Pricing](/pricing/)
+  * Docs
+  * Resources
+
+
+
+SIGN IN[DOWNLOADS](/downloads/)
+
+[Loading image...](/)
+
+  1. [Docs](/docs)
+  2.   3. [CLI](/docs/cli)
+  4.   5. Custom Agents
+
+
+
+# Custom agents
+
+On this page
+
+  * Benefits of using custom agents
+  * Relationship to MCP and built-in tools
+  * Next steps
+
+
+
+* * *
+
+Loading image...
+
+Product
+
+  * [About Kiro](/about/)
+  * [CLI](/cli/)
+  * [Pricing](/pricing/)
+  * [Downloads](/downloads/)
+
+
+
+For
+
+  * [Enterprise](/enterprise/)
+  * [Startups](/startups/)
+
+
+
+Resources
+
+  * [Documentation](/docs/)
+  * [Blog](/blog/)
+  * [Changelog](/changelog/)
+  * [FAQs](/faq/)
+  * [Report a bug](https://github.com/kirodotdev/Kiro/issues/new/choose)
+  * [Suggest an idea](https://github.com/kirodotdev/Kiro/issues/new?template=feature_request.yml)
+  * [Billing support](https://support.aws.amazon.com/#/contacts/kiro)
+
+
+
+Social
+
+  * [](https://discord.gg/kirodotdev)
+  * [](https://www.linkedin.com/showcase/kirodotdev)
+  * [](https://x.com/kirodotdev)
+  * [](https://www.instagram.com/kirodotdev)
+  * [](https://www.youtube.com/@kirodotdev)
+  * [](https://bsky.app/profile/kiro.dev)
+  * [](https://www.twitch.tv/kirodotdev)
+
+
+
+[](https://aws.amazon.com)
+
+[Site Terms](https://aws.amazon.com/terms/)[License](/license/)[Responsible AI Policy](https://aws.amazon.com/ai/responsible-ai/policy/)[Legal](https://aws.amazon.com/legal/)[Privacy Policy](https://aws.amazon.com/privacy/)Cookie Preferences
+
+Custom agents provide a way to customize Kiro behavior by defining specific configurations for different use cases. Each custom agent is defined by a configuration file that specifies which tools the agent can access, what permissions it has, and what context it should include.
+
+By default, Kiro CLI provides access to all available tools but requires user confirmation for most operations. This approach prioritizes security but can interrupt your workflow with frequent permission prompts.
+
+Custom agents solve this by allowing you to:
+
+  * **Pre-approve specific tools** \- Define which tools can run without prompting
+  * **Limit tool access** \- Restrict which tools are available to reduce complexity
+  * **Include relevant context** \- Automatically load project files, documentation, or system information
+  * **Configure tool behavior** \- Set specific parameters for how tools should operate
+
+
+
+### Benefits of using custom agents
+
+  1. Workflow optimization - Create custom agents tailored to specific tasks like AWS infrastructure management, code reviews, or debugging sessions.
+  2. Reduced interruptions - Pre-approve trusted tools to eliminate permission prompts during focused work sessions.
+  3. Enhanced context - Automatically include relevant project documentation, configuration files, or system information.
+  4. Team collaboration - Share custom agent configurations with team members to ensure consistent development environments.
+  5. Security control - Limit tool access to only what's needed for specific workflows, reducing potential security risks.
+
+
+
+### Relationship to MCP and built-in tools
+
+Custom agents work with both built-in tools and external tools provided through the Model Context Protocol (MCP). This gives you flexibility to:
+
+  * Use built-in tools - File operations, command execution, AWS CLI integration, and other core functionality
+  * Integrate MCP servers - Add custom tools and services through MCP server configurations
+  * Control tool access - Specify exactly which tools from each source are available
+  * Manage tool conflicts - Use aliases to handle naming conflicts between different tool sources
+
+
+
+## Next steps
+
+  * Learn how to [Create Custom Agents](/docs/cli/custom-agents/creating)
+
+
+
+Page updated: November 18, 2025
+
+[Security considerations](/docs/cli/chat/security/)
+
+[Creating custom agents](/docs/cli/custom-agents/creating/)
+
+================================================================================
+
+# Page: https://kiro.dev/docs/cli/custom-agents/creating
+
+[Loading image...](/)
+
+  * [CLI](/cli/)
+  * [Enterprise](/enterprise/)
+  * [Pricing](/pricing/)
+  * Docs
+  * Resources
+
+
+
+SIGN IN[DOWNLOADS](/downloads/)
+
+[Loading image...](/)
+
+  1. [Docs](/docs)
+  2.   3. [CLI](/docs/cli)
+  4.   5. [Custom Agents](/docs/cli/custom-agents)
+  6.   7. Creating
+
+
+
+# Creating custom agents
+
+On this page
+
+  * Quick start
+  * Agent configuration file
+  * Using your custom agent
+  * Next steps
+
+
+
+* * *
+
+Loading image...
+
+Product
+
+  * [About Kiro](/about/)
+  * [CLI](/cli/)
+  * [Pricing](/pricing/)
+  * [Downloads](/downloads/)
+
+
+
+For
+
+  * [Enterprise](/enterprise/)
+  * [Startups](/startups/)
+
+
+
+Resources
+
+  * [Documentation](/docs/)
+  * [Blog](/blog/)
+  * [Changelog](/changelog/)
+  * [FAQs](/faq/)
+  * [Report a bug](https://github.com/kirodotdev/Kiro/issues/new/choose)
+  * [Suggest an idea](https://github.com/kirodotdev/Kiro/issues/new?template=feature_request.yml)
+  * [Billing support](https://support.aws.amazon.com/#/contacts/kiro)
+
+
+
+Social
+
+  * [](https://discord.gg/kirodotdev)
+  * [](https://www.linkedin.com/showcase/kirodotdev)
+  * [](https://x.com/kirodotdev)
+  * [](https://www.instagram.com/kirodotdev)
+  * [](https://www.youtube.com/@kirodotdev)
+  * [](https://bsky.app/profile/kiro.dev)
+  * [](https://www.twitch.tv/kirodotdev)
+
+
+
+[](https://aws.amazon.com)
+
+[Site Terms](https://aws.amazon.com/terms/)[License](/license/)[Responsible AI Policy](https://aws.amazon.com/ai/responsible-ai/policy/)[Legal](https://aws.amazon.com/legal/)[Privacy Policy](https://aws.amazon.com/privacy/)Cookie Preferences
+
+Custom agents allow you to tailor Kiro CLI behavior for specific tasks by defining which tools are available, what permissions are granted, and what context is automatically included.
+
+## Quick start
+
+You can create an agent configuration using a slash command from within a Kiro CLI chat session. It will guide you through the process of configuring the agent:
+    
+    
+    > /agent generate
+    
+    ✔ Enter agent name:  · backend-specialist
+    ✔ Enter agent description:  · You are specialist in backend coding practices 
+    ✔ Agent scope · Local (current workspace)
+    Select MCP servers (use Space to toggle, Enter to confirm): markdown-downloader (node), code-analysis (uv)
+    
+    ✓ Agent 'backend-specialist' has been created and saved successfully!
+    
+
+Alternatively, you can also use the CLI command to create a new custom agent:
+
+bash
+    
+    
+    kiro-cli agent create --name my-agent
+    
+
+This will guide you through the setup process and create a configuration file at `~/.kiro/agents/my-agent.json`.
+
+## Agent configuration file
+
+Custom agents are defined using JSON configuration files. Here's a basic example:
+
+json
+    
+    
+    {
+      "name": "my-agent",
+      "description": "A custom agent for my workflow",
+      "tools": ["read","write"],
+      "allowedTools": ["read"],
+      "resources": ["file://README.md", "file://.kiro/steering/**/*.md"],
+      "prompt": "You are a helpful coding assistant",
+      "model": "claude-sonnet-4"
+    }
+    
+
+## Using your custom agent
+
+Start a new chat session - which uses the default agent ("kiro_default") and swap to an agent using the agent slash command
+
+bash
+    
+    
+    > /agent swap
+    
+     Choose one of the following agents 
+    ❯ rust-developer-agent
+      kiro_default
+      backend-specialist
+    
+
+After selecting an agent, you will see the following:
+
+bash
+    
+    
+    ✔ Choose one of the following agents · backend-specialist
+    
+    [backend-specialist] > 
+    
+
+Alternatively, start a chat session with your custom agent:
+
+bash
+    
+    
+    kiro-cli --agent my-agent
+    
+
+## Next steps
+
+  * Explore [Agent Configuration](/docs/cli/custom-agents/configuration-reference) options in detail
+
+
+
+Page updated: November 18, 2025
+
+[Custom agents](/docs/cli/custom-agents/)
+
+[Configuration reference](/docs/cli/custom-agents/configuration-reference/)
+
+================================================================================
+
+# Page: https://kiro.dev/docs/cli/custom-agents/creating/
+
+[Loading image...](/)
+
+  * [CLI](/cli/)
+  * [Enterprise](/enterprise/)
+  * [Pricing](/pricing/)
+  * Docs
+  * Resources
+
+
+
+SIGN IN[DOWNLOADS](/downloads/)
+
+[Loading image...](/)
+
+  1. [Docs](/docs)
+  2.   3. [CLI](/docs/cli)
+  4.   5. [Custom Agents](/docs/cli/custom-agents)
+  6.   7. Creating
+
+
+
+# Creating custom agents
+
+On this page
+
+  * Quick start
+  * Agent configuration file
+  * Using your custom agent
+  * Next steps
+
+
+
+* * *
+
+Loading image...
+
+Product
+
+  * [About Kiro](/about/)
+  * [CLI](/cli/)
+  * [Pricing](/pricing/)
+  * [Downloads](/downloads/)
+
+
+
+For
+
+  * [Enterprise](/enterprise/)
+  * [Startups](/startups/)
+
+
+
+Resources
+
+  * [Documentation](/docs/)
+  * [Blog](/blog/)
+  * [Changelog](/changelog/)
+  * [FAQs](/faq/)
+  * [Report a bug](https://github.com/kirodotdev/Kiro/issues/new/choose)
+  * [Suggest an idea](https://github.com/kirodotdev/Kiro/issues/new?template=feature_request.yml)
+  * [Billing support](https://support.aws.amazon.com/#/contacts/kiro)
+
+
+
+Social
+
+  * [](https://discord.gg/kirodotdev)
+  * [](https://www.linkedin.com/showcase/kirodotdev)
+  * [](https://x.com/kirodotdev)
+  * [](https://www.instagram.com/kirodotdev)
+  * [](https://www.youtube.com/@kirodotdev)
+  * [](https://bsky.app/profile/kiro.dev)
+  * [](https://www.twitch.tv/kirodotdev)
+
+
+
+[](https://aws.amazon.com)
+
+[Site Terms](https://aws.amazon.com/terms/)[License](/license/)[Responsible AI Policy](https://aws.amazon.com/ai/responsible-ai/policy/)[Legal](https://aws.amazon.com/legal/)[Privacy Policy](https://aws.amazon.com/privacy/)Cookie Preferences
+
+Custom agents allow you to tailor Kiro CLI behavior for specific tasks by defining which tools are available, what permissions are granted, and what context is automatically included.
+
+## Quick start
+
+You can create an agent configuration using a slash command from within a Kiro CLI chat session. It will guide you through the process of configuring the agent:
+    
+    
+    > /agent generate
+    
+    ✔ Enter agent name:  · backend-specialist
+    ✔ Enter agent description:  · You are specialist in backend coding practices 
+    ✔ Agent scope · Local (current workspace)
+    Select MCP servers (use Space to toggle, Enter to confirm): markdown-downloader (node), code-analysis (uv)
+    
+    ✓ Agent 'backend-specialist' has been created and saved successfully!
+    
+
+Alternatively, you can also use the CLI command to create a new custom agent:
+
+bash
+    
+    
+    kiro-cli agent create --name my-agent
+    
+
+This will guide you through the setup process and create a configuration file at `~/.kiro/agents/my-agent.json`.
+
+## Agent configuration file
+
+Custom agents are defined using JSON configuration files. Here's a basic example:
+
+json
+    
+    
+    {
+      "name": "my-agent",
+      "description": "A custom agent for my workflow",
+      "tools": ["read","write"],
+      "allowedTools": ["read"],
+      "resources": ["file://README.md", "file://.kiro/steering/**/*.md"],
+      "prompt": "You are a helpful coding assistant",
+      "model": "claude-sonnet-4"
+    }
+    
+
+## Using your custom agent
+
+Start a new chat session - which uses the default agent ("kiro_default") and swap to an agent using the agent slash command
+
+bash
+    
+    
+    > /agent swap
+    
+     Choose one of the following agents 
+    ❯ rust-developer-agent
+      kiro_default
+      backend-specialist
+    
+
+After selecting an agent, you will see the following:
+
+bash
+    
+    
+    ✔ Choose one of the following agents · backend-specialist
+    
+    [backend-specialist] > 
+    
+
+Alternatively, start a chat session with your custom agent:
+
+bash
+    
+    
+    kiro-cli --agent my-agent
+    
+
+## Next steps
+
+  * Explore [Agent Configuration](/docs/cli/custom-agents/configuration-reference) options in detail
+
+
+
+Page updated: November 18, 2025
+
+[Custom agents](/docs/cli/custom-agents/)
+
+[Configuration reference](/docs/cli/custom-agents/configuration-reference/)
+
+================================================================================
+
