@@ -98,7 +98,22 @@
     "File Search Stores": {
       "name": "File Search Stores",
       "url": "https://ai.google.dev/api/file-search/file-search-stores",
-      "description": "Gemini File Search Stores"
+      "description": "Gemini File Search Stores / File Search tool"
+    },
+    "Kiro CLI": {
+      "name": "Kiro CLI",
+      "url": "https://kiro.dev/docs/cli/",
+      "description": "Kiro CLI"
+    },
+    "FAST MCP Doc": {
+      "name": "FAST MCP Doc",
+      "url": "https://gofastmcp.com/",
+      "description": "FAST MCP Doc"
+    },
+    "FAST MCP Reference": {
+      "name": "FAST MCP Reference",
+      "url": "https://gofastmcp.com/python-sdk/",
+      "description": "FAST MCP Reference"
     }
   }
 }
