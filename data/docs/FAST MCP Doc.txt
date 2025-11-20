@@ -1,6 +1,6 @@
 ---
 doc_type: FAST MCP Doc
-crawled_at: 2025/11/20 23:50:27
+crawled_at: 2025/11/20 23:52:08
 first_url: https://gofastmcp.com/python-sdk/
 ---
 
