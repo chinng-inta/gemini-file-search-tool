@@ -92,6 +92,21 @@ class CloudflareRenderer:
                     logger.error(f"Cloudflare API returned error: {error_msg}")
                     raise CrawlerError(f"Cloudflare API error: {error_msg}")
                     
+            except CrawlerError as e:
+                # レート制限エラーの場合は指数バックオフでリトライ
+                if "rate limit" in str(e).lower():
+                    logger.warning(f"Rate limit error on attempt {attempt + 1}/{self.MAX_RETRIES}")
+                    if attempt < self.MAX_RETRIES - 1:
+                        backoff = self.INITIAL_BACKOFF * (2 ** attempt)
+                        logger.info(f"Rate limit exceeded, waiting {backoff} seconds before retry...")
+                        await asyncio.sleep(backoff)
+                    else:
+                        logger.error(f"Rate limit exceeded after {self.MAX_RETRIES} attempts")
+                        raise
+                else:
+                    # その他のCrawlerErrorは即座に再スロー
+                    raise
+                    
             except aiohttp.ClientError as e:
                 logger.warning(f"Network error on attempt {attempt + 1}/{self.MAX_RETRIES}: {e}")
                 if attempt < self.MAX_RETRIES - 1:
