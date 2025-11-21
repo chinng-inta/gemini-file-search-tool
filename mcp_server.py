@@ -154,6 +154,28 @@ class GeminiRAGMCPServer:
                             }
                         }
                     }
+                ),
+                Tool(
+                    name="upload_file_directly",
+                    description="ローカルファイルを直接RAGにアップロードします。",
+                    inputSchema={
+                        "type": "object",
+                        "properties": {
+                            "file_path": {
+                                "type": "string",
+                                "description": "アップロードするファイルのパス"
+                            },
+                            "doc_type": {
+                                "type": "string",
+                                "description": "ドキュメントの種類（省略時はファイル名から推測）"
+                            },
+                            "description": {
+                                "type": "string",
+                                "description": "RAGの説明"
+                            }
+                        },
+                        "required": ["file_path"]
+                    }
                 )
             ]
         
@@ -185,6 +207,12 @@ class GeminiRAGMCPServer:
                 elif name == "list_uploaded_rags":
                     result = await self.handle_list_uploaded_rags(
                         doc_type=arguments.get("doc_type")
+                    )
+                elif name == "upload_file_directly":
+                    result = await self.handle_upload_file_directly(
+                        file_path=arguments.get("file_path"),
+                        doc_type=arguments.get("doc_type"),
+                        description=arguments.get("description")
                     )
                 else:
                     raise MCPError(f"Unknown tool: {name}")
@@ -523,6 +551,61 @@ class GeminiRAGMCPServer:
             }
         except Exception as e:
             logger.exception("Unexpected error while listing uploaded RAGs")
+            return {
+                "success": False,
+                "error": f"Unexpected error: {str(e)}"
+            }
+    
+    async def handle_upload_file_directly(
+        self,
+        file_path: str,
+        doc_type: Optional[str] = None,
+        description: Optional[str] = None
+    ) -> dict:
+        """
+        ローカルファイルを直接RAGにアップロード.
+        
+        Args:
+            file_path: アップロードするファイルのパス
+            doc_type: ドキュメントの種類（省略時はファイル名から推測）
+            description: RAGの説明
+            
+        Returns:
+            dict: アップロード結果
+        """
+        try:
+            # パラメータ検証
+            if not file_path:
+                return {
+                    "success": False,
+                    "error": "file_path is required"
+                }
+            
+            logger.info(f"Uploading file directly: {file_path}")
+            
+            # RAGマネージャーを呼び出してアップロード
+            rag_id = await self.rag_manager.upload_file_directly(
+                file_path=file_path,
+                doc_type=doc_type,
+                description=description
+            )
+            
+            return {
+                "success": True,
+                "message": "File uploaded successfully",
+                "file_path": file_path,
+                "doc_type": doc_type,
+                "rag_id": rag_id
+            }
+            
+        except RAGError as e:
+            logger.error(f"RAG error: {e}")
+            return {
+                "success": False,
+                "error": str(e)
+            }
+        except Exception as e:
+            logger.exception("Unexpected error during file upload")
             return {
                 "success": False,
                 "error": f"Unexpected error: {str(e)}"
