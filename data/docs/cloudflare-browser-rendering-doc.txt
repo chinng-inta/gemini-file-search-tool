@@ -1,0 +1,58 @@
+# Cloudflare Browser Rendering Documentation
+
+## Overview
+Cloudflareのグローバルネットワーク上でヘッドレスChromeを実行し、ブラウザの自動化、ウェブスクレイピング、テスト、コンテンツ生成を実現します。
+
+利用可能なプラン：FreeおよびPaidプラン
+
+Browser Renderingは、開発者がCloudflareのグローバルネットワーク上で実行されているヘッドレスブラウザインスタンスをプログラムで制御し、対話できるようにします。
+
+## Use Cases
+
+Browser Renderingは、以下を含む幅広いユースケースをサポートしています：
+
+- `content`エンドポイントと`markdown`エンドポイントを使用して、レンダリングされたHTMLを抽出したり、ウェブページをMarkdownに変換
+- `screenshot`エンドポイントを使用して、ウェブサイトのサムネイルやソーシャルプレビューを作成
+- `pdf`エンドポイントを使用して、ウェブページやHTMLコンテンツからPDFを生成
+- HTMLとスクリーンショットの両方をキャプチャする`snapshot`エンドポイントを使用して、完全なウェブページの状態をアーカイブ
+- `scrape`エンドポイントと`links`エンドポイントを使用して、特定の要素を対象とするウェブスクレイパーを構築したり、すべてのリンクを抽出
+- `json`エンドポイントを使用して、ウェブページのデータをJSON形式に解析および構造化
+
+Browser Renderingは、エージェント的なワークフローにも最適です。Puppeteer、Playwright、Playwright MCP、またはStagehandを使用して、ウェブページと対話し、APIが存在しない場所からデータを抽出するAIエージェントを強化します。
+
+## Key Features
+
+- **数千のブラウザにスケール**：低いコールドスタート時間でグローバルなブラウザプールに即座にアクセスでき、大規模なスクリーンショット生成、データ抽出、または自動化に最適
+- **デフォルトでグローバル**：ブラウザセッションはCloudflareのエッジネットワーク上で実行され、ユーザーの近くで開くことで、世界中の速度と可用性を向上
+- **簡単な統合**：一般的なアクションにはREST APIを使用し、PuppeteerとPlaywrightは複雑なワークフローのための使い慣れた自動化ライブラリを提供
+- **セッション管理**：リクエスト間でブラウザセッションを再利用してパフォーマンスを向上させ、コールドスタートのオーバーヘッドを削減
+- **柔軟な価格設定**：寛大な無料利用枠で、使用したブラウザ時間に対してのみ支払い
+
+## Integration Methods
+
+以下のいずれかの方法で、Browser Renderingをアプリケーションに統合できます：
+
+- **REST API**: スクリーンショットのキャプチャ、PDFの生成、HTMLコンテンツの抽出など、シンプルでステートレスなタスクに最適
+- **Workers Bindings**: Cloudflare Workers内での高度なブラウザ自動化に適しています。この方法は、より複雑なワークフローと永続的なセッションを可能にする、より大きな制御を提供
+
+## Related Products
+
+- **Workers**: サーバーレスアプリケーションを構築し、卓越したパフォーマンス、信頼性、スケールのために即座に世界中にデプロイ
+- **Durable Objects**: 強力に一貫性のあるストレージを備えたグローバルに分散された調整API。Durable Objectsを使用してブラウザセッションを永続化することで、新しいブラウザセッションを起動するのにかかる時間をなくし、パフォーマンスを向上
+- **Agents**: Playwright MCPまたはStagehandを使用して、ウェブサイトを自律的にナビゲートし、タスクを実行するAI搭載エージェントを構築
+
+## Documentation Links
+
+- Overview: https://developers.cloudflare.com/browser-rendering/
+- Get started: https://developers.cloudflare.com/browser-rendering/get-started/
+- REST API: https://developers.cloudflare.com/browser-rendering/api/
+- Workers Bindings: https://developers.cloudflare.com/browser-rendering/workers-bindings/
+- Playwright: https://developers.cloudflare.com/browser-rendering/automation/playwright/
+- Puppeteer: https://developers.cloudflare.com/browser-rendering/automation/puppeteer/
+- Stagehand (Beta): https://developers.cloudflare.com/browser-rendering/automation/stagehand/
+- Tutorials: https://developers.cloudflare.com/browser-rendering/tutorials/
+- Reference: https://developers.cloudflare.com/browser-rendering/reference/
+- FAQ: https://developers.cloudflare.com/browser-rendering/faq/
+- Limits: https://developers.cloudflare.com/browser-rendering/limits/
+- Pricing: https://developers.cloudflare.com/browser-rendering/pricing/
+- Changelog: https://developers.cloudflare.com/browser-rendering/changelog/
