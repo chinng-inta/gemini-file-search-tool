@@ -752,6 +752,86 @@ class GeminiRAGManager:
             "errors": errors
         }
     
+    def _validate_file(self, file_path: str) -> dict:
+        """
+        ファイルを検証.
+        
+        Args:
+            file_path: 検証するファイルのパス
+            
+        Returns:
+            dict: 検証結果
+                - valid: bool - ファイルが有効かどうか
+                - error: Optional[str] - エラーメッセージ（有効な場合はNone）
+                - size: int - ファイルサイズ（バイト）
+                - extension: str - ファイル拡張子
+                
+        Raises:
+            RAGError: 検証処理自体に失敗した場合
+        """
+        result = {
+            "valid": False,
+            "error": None,
+            "size": 0,
+            "extension": ""
+        }
+        
+        try:
+            # ファイルパスをPathオブジェクトに変換
+            file = Path(file_path)
+            
+            # 存在チェック
+            if not file.exists():
+                result["error"] = f"File not found: {file_path}"
+                return result
+            
+            # 拡張子チェック
+            extension = file.suffix.lower()
+            supported_extensions = [".txt", ".md", ".pdf", ".png", ".jpg", ".jpeg", ".gif", ".webp"]
+            
+            if extension not in supported_extensions:
+                result["error"] = (
+                    f"Unsupported file extension: {extension}. "
+                    f"Supported: {', '.join(supported_extensions)}"
+                )
+                result["extension"] = extension
+                return result
+            
+            # サイズチェック
+            size = file.stat().st_size
+            max_size = 50 * 1024 * 1024  # 50MB
+            
+            if size > max_size:
+                result["error"] = (
+                    f"File too large: {size / 1024 / 1024:.2f}MB. "
+                    f"Maximum: 50MB"
+                )
+                result["size"] = size
+                result["extension"] = extension
+                return result
+            
+            # エンコーディング検証（テキストファイルの場合）
+            if extension in [".txt", ".md"]:
+                try:
+                    # UTF-8として読み取りを試行
+                    with open(file, 'r', encoding='utf-8') as f:
+                        # 最初の1KBだけ読んで検証
+                        f.read(1024)
+                except UnicodeDecodeError:
+                    result["error"] = f"Failed to read file encoding: {file_path}"
+                    result["size"] = size
+                    result["extension"] = extension
+                    return result
+            
+            # すべての検証をパス
+            result["valid"] = True
+            result["size"] = size
+            result["extension"] = extension
+            return result
+            
+        except Exception as e:
+            raise RAGError(f"ファイル検証中にエラーが発生しました: {e}")
+    
     def _remove_rag_from_config(self, doc_type: str, rag_id: str):
         """
         RAG設定ファイルから指定されたRAGを削除.

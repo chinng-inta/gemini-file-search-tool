@@ -219,3 +219,6 @@ __marimo__/
 
 # rag設定はgit登録しない
 config/rag_config.json
+
+# テスト用の大きなファイル
+tests/test_large_file_*.txt
