@@ -978,3 +978,127 @@ class GeminiRAGManager:
             raise
         except Exception as e:
             raise RAGError(f"ファイルの直接アップロードに失敗しました: {e}")
+    
+    async def upload_files_directly(
+        self,
+        file_paths: list[str],
+        doc_type: Optional[str] = None,
+        description: Optional[str] = None
+    ) -> dict:
+        """
+        複数のローカルファイルを同じRAGストアに直接アップロード.
+        
+        Args:
+            file_paths: アップロードするファイルパスのリスト
+            doc_type: ドキュメントの種類（省略時は最初のファイル名から推測）
+            description: RAGの説明（オプション）
+            
+        Returns:
+            dict: アップロード結果
+                - store_id: 作成されたRAG ID
+                - uploaded_files: 成功したファイルのリスト
+                - failed_files: 失敗したファイルのリスト（エラー情報を含む）
+                
+        Raises:
+            RAGError: すべてのファイルのアップロードに失敗した場合
+        """
+        if not file_paths:
+            raise RAGError("アップロードするファイルが指定されていません")
+        
+        # すべてのファイルを検証
+        validation_results = []
+        for file_path in file_paths:
+            validation_result = self._validate_file(file_path)
+            validation_results.append({
+                "file_path": file_path,
+                "validation": validation_result
+            })
+        
+        # 少なくとも1つのファイルが有効である必要がある
+        valid_files = [r for r in validation_results if r["validation"]["valid"]]
+        if not valid_files:
+            errors = [r["validation"]["error"] for r in validation_results if not r["validation"]["valid"]]
+            raise RAGError(f"すべてのファイルが無効です:\n" + "\n".join(errors))
+        
+        # doc_typeが指定されていない場合は最初の有効なファイル名から推測
+        if doc_type is None:
+            first_valid_file = Path(valid_files[0]["file_path"])
+            doc_type = first_valid_file.stem
+            logger.info(f"doc_type not provided, inferred from first valid filename: {doc_type}")
+        
+        uploaded_files = []
+        failed_files = []
+        store_id = None
+        
+        try:
+            # File Search Storeを作成（1回のみ）
+            logger.info(f"Creating File Search Store for {doc_type}...")
+            store_id = await self._create_file_search_store_with_retry(doc_type)
+            logger.info(f"File Search Store created: {store_id}")
+            
+            # すべてのファイルを順次アップロード
+            for result in validation_results:
+                file_path = result["file_path"]
+                validation = result["validation"]
+                
+                # 無効なファイルはスキップ
+                if not validation["valid"]:
+                    failed_files.append({
+                        "file_path": file_path,
+                        "error": validation["error"]
+                    })
+                    logger.warning(f"Skipping invalid file: {file_path} - {validation['error']}")
+                    continue
+                
+                try:
+                    # ファイルをFile Search Storeにアップロード
+                    logger.info(f"Uploading file to File Search Store: {file_path}")
+                    await self._upload_file_to_store_with_retry(store_id, file_path)
+                    logger.info(f"File uploaded successfully: {file_path}")
+                    
+                    uploaded_files.append(file_path)
+                    
+                except Exception as e:
+                    # エラーが発生しても継続
+                    error_msg = f"Failed to upload file: {e}"
+                    failed_files.append({
+                        "file_path": file_path,
+                        "error": error_msg
+                    })
+                    logger.error(f"Error uploading file {file_path}: {e}")
+            
+            # 少なくとも1つのファイルがアップロードされた場合のみRAG設定を更新
+            if uploaded_files:
+                # RAG設定ファイルに追加
+                uploaded_at = datetime.now(self.JST).strftime('%Y/%m/%d %H:%M:%S')
+                self.add_rag(
+                    doc_type=doc_type,
+                    rag_id=store_id,
+                    description=description or f"Multiple files upload: {len(uploaded_files)} files"
+                )
+                
+                logger.info(
+                    f"Multiple files upload completed:\n"
+                    f"  RAG ID: {store_id}\n"
+                    f"  Doc Type: {doc_type}\n"
+                    f"  Uploaded Files: {len(uploaded_files)}\n"
+                    f"  Failed Files: {len(failed_files)}\n"
+                    f"  Uploaded At: {uploaded_at}"
+                )
+            else:
+                # すべてのファイルのアップロードに失敗した場合
+                raise RAGError(
+                    f"すべてのファイルのアップロードに失敗しました:\n" +
+                    "\n".join([f"{f['file_path']}: {f['error']}" for f in failed_files])
+                )
+            
+            return {
+                "store_id": store_id,
+                "uploaded_files": uploaded_files,
+                "failed_files": failed_files
+            }
+            
+        except RAGError:
+            raise
+        except Exception as e:
+            raise RAGError(f"複数ファイルのアップロードに失敗しました: {e}")
