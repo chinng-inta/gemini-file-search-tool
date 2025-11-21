@@ -895,3 +895,86 @@ class GeminiRAGManager:
             raise
         except Exception as e:
             raise RAGError(f"RAGの削除に失敗しました: {e}")
+    
+    async def upload_file_directly(
+        self,
+        file_path: str,
+        doc_type: Optional[str] = None,
+        description: Optional[str] = None
+    ) -> str:
+        """
+        ローカルファイルを直接RAGにアップロード.
+        
+        Args:
+            file_path: アップロードするファイルのパス
+            doc_type: ドキュメントの種類（省略時はファイル名から推測）
+            description: RAGの説明（オプション）
+            
+        Returns:
+            str: 作成されたRAG ID
+            
+        Raises:
+            RAGError: アップロードに失敗した場合
+        """
+        # ファイルを検証
+        validation_result = self._validate_file(file_path)
+        
+        if not validation_result["valid"]:
+            raise RAGError(validation_result["error"])
+        
+        # doc_typeが指定されていない場合はファイル名から推測
+        if doc_type is None:
+            file = Path(file_path)
+            # ファイル名から拡張子を除いた部分をdoc_typeとして使用
+            doc_type = file.stem
+            logger.info(f"doc_type not provided, inferred from filename: {doc_type}")
+        
+        # メタデータを記録
+        file = Path(file_path)
+        uploaded_at = datetime.now(self.JST).strftime('%Y/%m/%d %H:%M:%S')
+        file_size = validation_result["size"]
+        file_extension = validation_result["extension"]
+        
+        logger.info(
+            f"Uploading file directly to RAG:\n"
+            f"  File: {file_path}\n"
+            f"  Doc Type: {doc_type}\n"
+            f"  Size: {file_size / 1024:.2f} KB\n"
+            f"  Extension: {file_extension}\n"
+            f"  Uploaded At: {uploaded_at}"
+        )
+        
+        try:
+            # File Search Storeを作成
+            logger.info(f"Creating File Search Store for {doc_type}...")
+            store_id = await self._create_file_search_store_with_retry(doc_type)
+            logger.info(f"File Search Store created: {store_id}")
+            
+            # ファイルをFile Search Storeにアップロード
+            logger.info(f"Uploading file to File Search Store: {file_path}")
+            await self._upload_file_to_store_with_retry(store_id, file_path)
+            logger.info(f"File uploaded successfully to {store_id}")
+            
+            # RAG設定ファイルに追加（メタデータを含む）
+            rag_entry = self.add_rag(
+                doc_type=doc_type,
+                rag_id=store_id,
+                description=description or f"Direct upload: {file.name}"
+            )
+            
+            # メタデータをログに記録
+            logger.info(
+                f"File upload completed:\n"
+                f"  RAG ID: {store_id}\n"
+                f"  Original Path: {file_path}\n"
+                f"  Uploaded At: {uploaded_at}\n"
+                f"  File Size: {file_size} bytes\n"
+                f"  Extension: {file_extension}"
+            )
+            
+            return store_id
+            
+        except RAGError:
+            raise
+        except Exception as e:
+            raise RAGError(f"ファイルの直接アップロードに失敗しました: {e}")
