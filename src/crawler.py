@@ -16,6 +16,8 @@ import html2text
 from src.config import get_config, ConfigError
 from src.errors import MCPError
 from src.logging_config import get_logger
+from src.cloudflare_renderer import CloudflareRenderer
+from src.page_classifier import PageClassifier
 
 # ロガーの設定
 logger = get_logger(__name__)
@@ -52,12 +54,24 @@ class APICrawler:
         if docs_path is not None and url_config_path is not None:
             self.docs_path = Path(docs_path)
             self.url_config_path = Path(url_config_path)
+            self.cloudflare_renderer = None
         else:
             # 設定から取得（環境変数が必要）
             try:
                 config = get_config()
                 self.docs_path = Path(docs_path or config.get_docs_store_path())
                 self.url_config_path = Path(url_config_path or config.get_url_config_path())
+                
+                # Cloudflare Browser Rendering統合を初期化
+                if config.cloudflare_api_token and config.cloudflare_account_id:
+                    self.cloudflare_renderer = CloudflareRenderer(
+                        api_token=config.cloudflare_api_token,
+                        account_id=config.cloudflare_account_id
+                    )
+                    logger.info("Cloudflare Browser Rendering enabled")
+                else:
+                    self.cloudflare_renderer = None
+                    logger.info("Cloudflare Browser Rendering disabled (credentials not set)")
             except ConfigError as e:
                 raise CrawlerError(f"Failed to initialize crawler: {e}")
         
@@ -209,16 +223,60 @@ class APICrawler:
         """
         return self.url_config.copy()
     
+    def _should_use_cloudflare(self, html: str) -> bool:
+        """
+        Cloudflareを使用すべきか判定.
+        
+        Args:
+            html: HTMLコンテンツ
+            
+        Returns:
+            bool: Cloudflareを使用すべき場合True
+        """
+        # Cloudflare Rendererが利用可能でない場合はFalse
+        if not self.cloudflare_renderer or not self.cloudflare_renderer.is_available():
+            return False
+        
+        # ページが動的かどうかを判定
+        return PageClassifier.is_dynamic_page(html)
+    
+    async def _fetch_page_with_cloudflare(self, url: str) -> str:
+        """
+        Cloudflareを使用してページを取得.
+        
+        Args:
+            url: 取得するページのURL
+            
+        Returns:
+            str: レンダリングされたMarkdown
+            
+        Raises:
+            CrawlerError: レンダリングに失敗した場合
+        """
+        try:
+            logger.info(f"Using Cloudflare Browser Rendering for: {url}")
+            markdown = await self.cloudflare_renderer.render_to_markdown(url)
+            return markdown
+        except CrawlerError as e:
+            logger.warning(f"Cloudflare rendering failed for {url}: {e}")
+            raise
+    
     async def _fetch_page(self, url: str, session: aiohttp.ClientSession) -> str:
         """
-        Webページを非同期で取得.
+        Webページを非同期で取得（Cloudflare統合を含む）.
+        
+        処理フロー:
+        1. 通常のHTTP GETでページを取得
+        2. 動的ページかどうかを判定
+        3. 動的ページの場合、Cloudflareでレンダリング
+        4. 静的ページの場合、BeautifulSoupで処理
         
         Args:
             url: 取得するページのURL
             session: aiohttpのクライアントセッション
             
         Returns:
-            str: 取得したHTMLコンテンツ
+            str: 取得したHTMLコンテンツまたはMarkdown
             
         Raises:
             CrawlerError: ページの取得に失敗した場合
@@ -234,7 +292,24 @@ class APICrawler:
                 if response.status == 200:
                     html = await response.text()
                     logger.info(f"Successfully fetched page: {url} ({len(html)} bytes)")
+                    
+                    # 動的ページかどうかを判定
+                    if self._should_use_cloudflare(html):
+                        try:
+                            # Cloudflareでレンダリング
+                            markdown = await self._fetch_page_with_cloudflare(url)
+                            logger.info(f"Successfully rendered with Cloudflare: {url}")
+                            return markdown
+                        except CrawlerError as e:
+                            # Cloudflareエラー時はBeautifulSoupにフォールバック
+                            logger.warning(
+                                f"Cloudflare rendering failed, falling back to BeautifulSoup: {e}"
+                            )
+                            return html
+                    
+                    # 静的ページの場合はそのまま返す
                     return html
+                    
                 elif response.status == 404:
                     raise CrawlerError(f"Page not found (404): {url}")
                 elif response.status == 403:
@@ -579,6 +654,12 @@ class APICrawler:
             # ページを取得
             html = await self._fetch_page(url, session)
             
+            # [HTTPS POST]
+            # URL: https://api.cloudflare.com/client/v4/accounts/{accountId}/
+            #     browser-rendering/Markdown
+            # Headers: Authorization: Bearer {API_TOKEN}
+            # Body: {"url": "https://example-spa.com/"}
+
             # テキストに変換
             text = self._convert_to_text(html, url)
             

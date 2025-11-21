@@ -108,12 +108,12 @@
     "FAST MCP Doc": {
       "name": "FAST MCP Doc",
       "url": "https://gofastmcp.com/",
-      "description": "FAST MCP Doc"
+      "description": "FAST MCP Doc / ドキュメント"
     },
     "FAST MCP Reference": {
       "name": "FAST MCP Reference",
       "url": "https://gofastmcp.com/python-sdk/",
-      "description": "FAST MCP Reference"
+      "description": "FAST MCP Reference / リファレンス"
     }
   }
 }

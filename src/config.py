@@ -39,6 +39,9 @@ class Config:
         self.gemini_file_search_api_key = os.getenv("GEMINI_FILE_SEARCH_API_KEY")
         self.gemini_code_gen_api_key = os.getenv("GEMINI_CODE_GEN_API_KEY")
         
+        self.cloudflare_api_token = os.getenv("CLOUDFLARE_API_TOKEN")
+        self.cloudflare_account_id = os.getenv("CLOUDFLARE_ACCOUNT_ID")
+
         # Paths
         self.rag_config_path = os.getenv(
             "RAG_CONFIG_PATH",
@@ -69,6 +72,8 @@ class Config:
                 "GEMINI_CODE_GEN_API_KEY environment variable is not set. "
                 "Please set it in your .env file or environment."
             )
+        if not self.cloudflare_api_token or not self.cloudflare_account_id:
+            print(f"CLOUDFLARE_API_TOKEN is not set, only use BeautifulSoup")
         
         # パスの存在確認（ディレクトリは作成）
         self._ensure_directory(Path(self.docs_store_path))
