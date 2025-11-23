@@ -100,11 +100,6 @@
       "url": "https://ai.google.dev/api/file-search/file-search-stores",
       "description": "Gemini File Search Stores / File Search tool"
     },
-    "Kiro CLI": {
-      "name": "Kiro CLI",
-      "url": "https://kiro.dev/docs/cli/",
-      "description": "Kiro CLI"
-    },
     "FAST MCP Doc": {
       "name": "FAST MCP Doc",
       "url": "https://gofastmcp.com/",
@@ -114,6 +109,21 @@
       "name": "FAST MCP Reference",
       "url": "https://gofastmcp.com/python-sdk/",
       "description": "FAST MCP Reference / リファレンス"
+    },
+    "Kiro Docs": {
+      "name": "Kiro Docs",
+      "url": "https://kiro.dev/docs/",
+      "description": "Kiro Docs / ドキュメント"
+    },
+    "Visual Studio Code documentation": {
+      "name": "Visual Studio Code documentation",
+      "url": "https://code.visualstudio.com/docs",
+      "description": "Visual Studio Code / VSCode / docs / documentation / ドキュメント"
+    },
+    "Anti Gravity": {
+      "name": "Anti Gravity Docs",
+      "url": "https://antigravity.google/docs/home",
+      "description": "Anti Gravity Docs / ドキュメント"
     }
   }
 }
