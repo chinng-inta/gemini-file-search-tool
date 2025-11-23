@@ -1,6 +1,6 @@
 ---
 doc_type: File Search Stores
-crawled_at: 2025/11/22 00:40:39
+crawled_at: 2025/11/23 09:50:15
 first_url: https://ai.google.dev/api/file-search/file-search-stores
 ---
 

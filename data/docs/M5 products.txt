@@ -1,458 +1,10 @@
 ---
 doc_type: M5 products
-crawled_at: 2025/11/22 00:39:50
+crawled_at: 2025/11/23 09:49:27
 first_url: https://docs.m5stack.com/en/products/
 ---
 
 # Page: https://docs.m5stack.com/en/products/
-
-[](https://m5stack.com/)
-
-[](/en)
-  * [SOLUTION](https://m5stack.com/solution?id=1)
-
-SOLUTION 
-
-  * [ Smart Factory ](https://m5stack.com/solution?id=1)
-
-  * [ Smart Agriculture ](https://m5stack.com/solution?id=2)
-
-  * [ Smart Retail ](https://m5stack.com/solution?id=3)
-
-  * [ Weather Station ](https://m5stack.com/solution?id=4)
-
-  * [STORE](https://m5stack-store.myshopify.com/)
-
-STORE 
-
-  * [ Controllers ](https://m5stack-store.myshopify.com/collections/m5-controllers)
-
-  * [ Sensors ](https://m5stack-store.myshopify.com/collections/m5-sensor)
-
-  * [ Modules ](https://m5stack-store.myshopify.com/collections/m5-modules)
-
-  * [ Cameras ](https://m5stack-store.myshopify.com/collections/m5-cameras)
-
-  * [ Kits ](https://m5stack-store.myshopify.com/collections/m5-kits)
-
-  * [ Hobby ](https://m5stack-store.myshopify.com/collections/m5-hobby)
-
-  * [ Accessories ](https://m5stack-store.myshopify.com/collections/m5-accessories)
-
-  * [SOFTWARE](https://uiflow2.m5stack.com/)
-
-SOFTWARE 
-
-  * [ UiFlow Coding IDE ](https://m5stack.com/uiflow)
-
-  * [- UiFlow1 ](https://flow.m5stack.com/)
-
-  * [- UiFlow2 ](https://uiflow2.m5stack.com/)
-
-  * [ Developer Tools ](/en/platform)
-
-  * [- M5Burner ](/en/uiflow/m5burner/intro)
-
-  * [- Block Designer ](https://block-designer.m5stack.com/)
-
-  * [- Ezdata 2.0 ](/en/guide/ezdata/ezdata_v2)
-
-  * [- EasyLoader Packer ](/en/guide/easyloader/easyloader_packer)
-
-  * [- Stacking Screw Length Calculator ](/en/learn/extension/module)
-
-  * [- vlw Font Creator ](/en/guide/develop_tools/vlw_font_creator)
-
-  * Device Driver 
-
-  * [- Device USB Driver ](/en/download)
-
-  * [DOCUMENT](/en/start)
-
-DOCUMENT 
-
-  * [ Products Document ](/en/products)
-
-  * [- Controllers ](/en/products?id=controllers-core)
-
-  * [- Unit ](/en/products?id=unit-sensor)
-
-  * [- For Stick ](/en/products?id=for stick-sensor)
-
-  * [- For Stack ](/en/products?id=for stack-module)
-
-  * [- For Atom ](/en/products?id=for atom-atom kit)
-
-  * [- For Stamp ](/en/products?id=for stamp-wireless)
-
-  * [- Hobby ](/en/products?id=hobby-drone)
-
-  * [- Accessories ](/en/products?id=accessories-cable)
-
-  * [- Other ](/en/products?id=others-coreink base)
-
-  * Platform 
-
-  * [- UiFlow1 ](/en/uiflow/uiflow_web)
-
-  * [- UiFlow2 ](/en/uiflow2/uiflow_web)
-
-  * [- Arduino ](/en/arduino/arduino_ide)
-
-  * [- ESP-IDF ](/en/esp_idf/esp_idf)
-
-  * [- StackFlow AI ](/en/stackflow/overview)
-
-  * [- Home Assistant ](/en/homeassistant/overview)
-
-  * [- nanoFramework ](https://github.com/nanoframework/nanoFramework.M5Stack)
-
-  * [- Product Guide ](/en/guide/product_guide)
-
-  * Datasheet & Files 
-
-  * [- Products Certification ](/en/learn/certification/certification)
-
-  * [- I2C Table ](/en/product_i2c_addr)
-
-  * [- Product Selector ](/en/products_selector/m5core_compare)
-
-  * [- 3D STL Files ](https://github.com/m5stack/M5_Hardware/tree/master/Structure)
-
-  * [- PCB Files ](https://github.com/m5stack/M5_Hardware/tree/master/PCB)
-
-  * EXPLORE
-
-EXPLORE 
-
-  * [ Project HUB ](https://m5stack.com/project-hub?category_id=1&page=1)
-
-  * [ YouTube ](https://www.youtube.com/m5stack)
-
-  * [ Forum ](https://community.m5stack.com/)
-
-  * [ Github ](https://github.com/m5stack)
-
-  * [ Global Contest ](https://m5stack.com/global-innovation-contest-2025)
-
-  * [ABOUT US](https://m5stack.com/about-us)
-
-ABOUT US 
-
-  * [ About us ](https://m5stack.com/about-us)
-
-  * [ News ](https://m5stack.com/explore?page=1)
-
-  * [FAQ](https://faq.m5stack.com/)
-
-
-
-__
-
-English 简体中文 日本語
-
-DOCUMENT
-
-Welcome to M5Stack Developer Center
-
-[ Learn More ](/en/learn/intro) [ Product Selector ](/en/products_selector/m5core_compare)
-
-SHOW EOL
-
-[START](/en/start)[PRODUCTS](/en/products)[DOWNLOAD](/en/download)[FAQ](https://faq.m5stack.com/)[I2C TABLE](/en/product_i2c_addr)
-
-Not Search Result HOT SEARCHES Camera  WiFi  RS485  RS232  Relay  LoRaWAN  GPS  NB-IoT  LTE  GSM  Zigbee  Servo  StepMotor  Ethernet  E-Paper 
-
-Product  Tutorial 
-
-Search
-
-Where to buy 
-
-  * [ Distributors ](https://m5stack.com/distributor)
-  * [ AliExpress ](https://m5stack.aliexpress.com/store/911661199)
-  * [ Amazon ](https://www.amazon.com/shops/m5stack)
-  * [ Taobao ](https://m5stack.taobao.com/)
-
-
-
-Support 
-
-  * [ FAQ ](https://faq.m5stack.com/)
-  * [ Forum ](https://community.m5stack.com/)
-  * [ Contact Us ](https://m5stack.com/contact)
-
-
-
-[ Document ](/en/products)
-
-  * [ UiFlow1 ](/en/uiflow/uiflow_web)
-  * [ UiFlow2 ](/en/uiflow2/uiflow_web)
-  * [ Arduino ](/en/arduino/arduino_ide)
-  * [ StackFlow AI ](/en/stackflow/overview)
-  * [ Product Guide ](/en/guide/product_guide)
-
-
-
-Terms & Conditions 
-
-  * [ Terms of Service ](https://m5stack-store.myshopify.com/policies/terms-of-service)
-  * [ Privacy Policy ](https://m5stack-store.myshopify.com/policies/privacy-policy)
-  * [ Shipping Policy ](https://m5stack-store.myshopify.com/policies/shipping-policy)
-  * [ Refund Policy ](https://m5stack-store.myshopify.com/policies/refund-policy)
-  * [ Payment Method ](https://m5stack-store.myshopify.com/pages/payment-method)
-
-
-
-Stay tuned 
-
-Weekly product releases, news, special offers, and more. 
-
-Subscribe 
-
-Email is invalid! 
-
-Thanks for subscribing 
-
-[](https://x.com/M5Stack)[](https://www.linkedin.com/company/m5stack)[](https://www.hackster.io/m5stack)[](https://discord.gg/ysQAWBUE9Q)[](https://www.youtube.com/m5stack)[](https://github.com/m5stack)[](https://www.facebook.com/M5Stack)[](https://www.instagram.com/m5stack)
-
-Address: 
-
-Block A10, Expo Bay South Coast, Fuhai Street, Bao'an District, Shenzhen, China 
-
-TEL: +86 755 8657 5379 
-
-Copyright ©2021- [M5Stack](/)
-
-[ 【粤ICP备16010631号】 ](https://beian.miit.gov.cn/)
-
-================================================================================
-
-# Page: https://docs.m5stack.com/en/products?id=controllers-core
-
-[](https://m5stack.com/)
-
-[](/en)
-  * [SOLUTION](https://m5stack.com/solution?id=1)
-
-SOLUTION 
-
-  * [ Smart Factory ](https://m5stack.com/solution?id=1)
-
-  * [ Smart Agriculture ](https://m5stack.com/solution?id=2)
-
-  * [ Smart Retail ](https://m5stack.com/solution?id=3)
-
-  * [ Weather Station ](https://m5stack.com/solution?id=4)
-
-  * [STORE](https://m5stack-store.myshopify.com/)
-
-STORE 
-
-  * [ Controllers ](https://m5stack-store.myshopify.com/collections/m5-controllers)
-
-  * [ Sensors ](https://m5stack-store.myshopify.com/collections/m5-sensor)
-
-  * [ Modules ](https://m5stack-store.myshopify.com/collections/m5-modules)
-
-  * [ Cameras ](https://m5stack-store.myshopify.com/collections/m5-cameras)
-
-  * [ Kits ](https://m5stack-store.myshopify.com/collections/m5-kits)
-
-  * [ Hobby ](https://m5stack-store.myshopify.com/collections/m5-hobby)
-
-  * [ Accessories ](https://m5stack-store.myshopify.com/collections/m5-accessories)
-
-  * [SOFTWARE](https://uiflow2.m5stack.com/)
-
-SOFTWARE 
-
-  * [ UiFlow Coding IDE ](https://m5stack.com/uiflow)
-
-  * [- UiFlow1 ](https://flow.m5stack.com/)
-
-  * [- UiFlow2 ](https://uiflow2.m5stack.com/)
-
-  * [ Developer Tools ](/en/platform)
-
-  * [- M5Burner ](/en/uiflow/m5burner/intro)
-
-  * [- Block Designer ](https://block-designer.m5stack.com/)
-
-  * [- Ezdata 2.0 ](/en/guide/ezdata/ezdata_v2)
-
-  * [- EasyLoader Packer ](/en/guide/easyloader/easyloader_packer)
-
-  * [- Stacking Screw Length Calculator ](/en/learn/extension/module)
-
-  * [- vlw Font Creator ](/en/guide/develop_tools/vlw_font_creator)
-
-  * Device Driver 
-
-  * [- Device USB Driver ](/en/download)
-
-  * [DOCUMENT](/en/start)
-
-DOCUMENT 
-
-  * [ Products Document ](/en/products)
-
-  * [- Controllers ](/en/products?id=controllers-core)
-
-  * [- Unit ](/en/products?id=unit-sensor)
-
-  * [- For Stick ](/en/products?id=for stick-sensor)
-
-  * [- For Stack ](/en/products?id=for stack-module)
-
-  * [- For Atom ](/en/products?id=for atom-atom kit)
-
-  * [- For Stamp ](/en/products?id=for stamp-wireless)
-
-  * [- Hobby ](/en/products?id=hobby-drone)
-
-  * [- Accessories ](/en/products?id=accessories-cable)
-
-  * [- Other ](/en/products?id=others-coreink base)
-
-  * Platform 
-
-  * [- UiFlow1 ](/en/uiflow/uiflow_web)
-
-  * [- UiFlow2 ](/en/uiflow2/uiflow_web)
-
-  * [- Arduino ](/en/arduino/arduino_ide)
-
-  * [- ESP-IDF ](/en/esp_idf/esp_idf)
-
-  * [- StackFlow AI ](/en/stackflow/overview)
-
-  * [- Home Assistant ](/en/homeassistant/overview)
-
-  * [- nanoFramework ](https://github.com/nanoframework/nanoFramework.M5Stack)
-
-  * [- Product Guide ](/en/guide/product_guide)
-
-  * Datasheet & Files 
-
-  * [- Products Certification ](/en/learn/certification/certification)
-
-  * [- I2C Table ](/en/product_i2c_addr)
-
-  * [- Product Selector ](/en/products_selector/m5core_compare)
-
-  * [- 3D STL Files ](https://github.com/m5stack/M5_Hardware/tree/master/Structure)
-
-  * [- PCB Files ](https://github.com/m5stack/M5_Hardware/tree/master/PCB)
-
-  * EXPLORE
-
-EXPLORE 
-
-  * [ Project HUB ](https://m5stack.com/project-hub?category_id=1&page=1)
-
-  * [ YouTube ](https://www.youtube.com/m5stack)
-
-  * [ Forum ](https://community.m5stack.com/)
-
-  * [ Github ](https://github.com/m5stack)
-
-  * [ Global Contest ](https://m5stack.com/global-innovation-contest-2025)
-
-  * [ABOUT US](https://m5stack.com/about-us)
-
-ABOUT US 
-
-  * [ About us ](https://m5stack.com/about-us)
-
-  * [ News ](https://m5stack.com/explore?page=1)
-
-  * [FAQ](https://faq.m5stack.com/)
-
-
-
-__
-
-English 简体中文 日本語
-
-DOCUMENT
-
-Welcome to M5Stack Developer Center
-
-[ Learn More ](/en/learn/intro) [ Product Selector ](/en/products_selector/m5core_compare)
-
-SHOW EOL
-
-[START](/en/start)[PRODUCTS](/en/products)[DOWNLOAD](/en/download)[FAQ](https://faq.m5stack.com/)[I2C TABLE](/en/product_i2c_addr)
-
-Not Search Result HOT SEARCHES Camera  WiFi  RS485  RS232  Relay  LoRaWAN  GPS  NB-IoT  LTE  GSM  Zigbee  Servo  StepMotor  Ethernet  E-Paper 
-
-Product  Tutorial 
-
-Search
-
-Where to buy 
-
-  * [ Distributors ](https://m5stack.com/distributor)
-  * [ AliExpress ](https://m5stack.aliexpress.com/store/911661199)
-  * [ Amazon ](https://www.amazon.com/shops/m5stack)
-  * [ Taobao ](https://m5stack.taobao.com/)
-
-
-
-Support 
-
-  * [ FAQ ](https://faq.m5stack.com/)
-  * [ Forum ](https://community.m5stack.com/)
-  * [ Contact Us ](https://m5stack.com/contact)
-
-
-
-[ Document ](/en/products)
-
-  * [ UiFlow1 ](/en/uiflow/uiflow_web)
-  * [ UiFlow2 ](/en/uiflow2/uiflow_web)
-  * [ Arduino ](/en/arduino/arduino_ide)
-  * [ StackFlow AI ](/en/stackflow/overview)
-  * [ Product Guide ](/en/guide/product_guide)
-
-
-
-Terms & Conditions 
-
-  * [ Terms of Service ](https://m5stack-store.myshopify.com/policies/terms-of-service)
-  * [ Privacy Policy ](https://m5stack-store.myshopify.com/policies/privacy-policy)
-  * [ Shipping Policy ](https://m5stack-store.myshopify.com/policies/shipping-policy)
-  * [ Refund Policy ](https://m5stack-store.myshopify.com/policies/refund-policy)
-  * [ Payment Method ](https://m5stack-store.myshopify.com/pages/payment-method)
-
-
-
-Stay tuned 
-
-Weekly product releases, news, special offers, and more. 
-
-Subscribe 
-
-Email is invalid! 
-
-Thanks for subscribing 
-
-[](https://x.com/M5Stack)[](https://www.linkedin.com/company/m5stack)[](https://www.hackster.io/m5stack)[](https://discord.gg/ysQAWBUE9Q)[](https://www.youtube.com/m5stack)[](https://github.com/m5stack)[](https://www.facebook.com/M5Stack)[](https://www.instagram.com/m5stack)
-
-Address: 
-
-Block A10, Expo Bay South Coast, Fuhai Street, Bao'an District, Shenzhen, China 
-
-TEL: +86 755 8657 5379 
-
-Copyright ©2021- [M5Stack](/)
-
-[ 【粤ICP备16010631号】 ](https://beian.miit.gov.cn/)
-
-================================================================================
-
-# Page: https://docs.m5stack.com/en/products?id=hobby-drone
 
 [](https://m5stack.com/)
 
@@ -1124,7 +676,231 @@ Copyright ©2021- [M5Stack](/)
 
 ================================================================================
 
-# Page: https://docs.m5stack.com/en/products?id=accessories-cable
+# Page: https://docs.m5stack.com/en/products?id=for atom-atom kit
+
+[](https://m5stack.com/)
+
+[](/en)
+  * [SOLUTION](https://m5stack.com/solution?id=1)
+
+SOLUTION 
+
+  * [ Smart Factory ](https://m5stack.com/solution?id=1)
+
+  * [ Smart Agriculture ](https://m5stack.com/solution?id=2)
+
+  * [ Smart Retail ](https://m5stack.com/solution?id=3)
+
+  * [ Weather Station ](https://m5stack.com/solution?id=4)
+
+  * [STORE](https://m5stack-store.myshopify.com/)
+
+STORE 
+
+  * [ Controllers ](https://m5stack-store.myshopify.com/collections/m5-controllers)
+
+  * [ Sensors ](https://m5stack-store.myshopify.com/collections/m5-sensor)
+
+  * [ Modules ](https://m5stack-store.myshopify.com/collections/m5-modules)
+
+  * [ Cameras ](https://m5stack-store.myshopify.com/collections/m5-cameras)
+
+  * [ Kits ](https://m5stack-store.myshopify.com/collections/m5-kits)
+
+  * [ Hobby ](https://m5stack-store.myshopify.com/collections/m5-hobby)
+
+  * [ Accessories ](https://m5stack-store.myshopify.com/collections/m5-accessories)
+
+  * [SOFTWARE](https://uiflow2.m5stack.com/)
+
+SOFTWARE 
+
+  * [ UiFlow Coding IDE ](https://m5stack.com/uiflow)
+
+  * [- UiFlow1 ](https://flow.m5stack.com/)
+
+  * [- UiFlow2 ](https://uiflow2.m5stack.com/)
+
+  * [ Developer Tools ](/en/platform)
+
+  * [- M5Burner ](/en/uiflow/m5burner/intro)
+
+  * [- Block Designer ](https://block-designer.m5stack.com/)
+
+  * [- Ezdata 2.0 ](/en/guide/ezdata/ezdata_v2)
+
+  * [- EasyLoader Packer ](/en/guide/easyloader/easyloader_packer)
+
+  * [- Stacking Screw Length Calculator ](/en/learn/extension/module)
+
+  * [- vlw Font Creator ](/en/guide/develop_tools/vlw_font_creator)
+
+  * Device Driver 
+
+  * [- Device USB Driver ](/en/download)
+
+  * [DOCUMENT](/en/start)
+
+DOCUMENT 
+
+  * [ Products Document ](/en/products)
+
+  * [- Controllers ](/en/products?id=controllers-core)
+
+  * [- Unit ](/en/products?id=unit-sensor)
+
+  * [- For Stick ](/en/products?id=for stick-sensor)
+
+  * [- For Stack ](/en/products?id=for stack-module)
+
+  * [- For Atom ](/en/products?id=for atom-atom kit)
+
+  * [- For Stamp ](/en/products?id=for stamp-wireless)
+
+  * [- Hobby ](/en/products?id=hobby-drone)
+
+  * [- Accessories ](/en/products?id=accessories-cable)
+
+  * [- Other ](/en/products?id=others-coreink base)
+
+  * Platform 
+
+  * [- UiFlow1 ](/en/uiflow/uiflow_web)
+
+  * [- UiFlow2 ](/en/uiflow2/uiflow_web)
+
+  * [- Arduino ](/en/arduino/arduino_ide)
+
+  * [- ESP-IDF ](/en/esp_idf/esp_idf)
+
+  * [- StackFlow AI ](/en/stackflow/overview)
+
+  * [- Home Assistant ](/en/homeassistant/overview)
+
+  * [- nanoFramework ](https://github.com/nanoframework/nanoFramework.M5Stack)
+
+  * [- Product Guide ](/en/guide/product_guide)
+
+  * Datasheet & Files 
+
+  * [- Products Certification ](/en/learn/certification/certification)
+
+  * [- I2C Table ](/en/product_i2c_addr)
+
+  * [- Product Selector ](/en/products_selector/m5core_compare)
+
+  * [- 3D STL Files ](https://github.com/m5stack/M5_Hardware/tree/master/Structure)
+
+  * [- PCB Files ](https://github.com/m5stack/M5_Hardware/tree/master/PCB)
+
+  * EXPLORE
+
+EXPLORE 
+
+  * [ Project HUB ](https://m5stack.com/project-hub?category_id=1&page=1)
+
+  * [ YouTube ](https://www.youtube.com/m5stack)
+
+  * [ Forum ](https://community.m5stack.com/)
+
+  * [ Github ](https://github.com/m5stack)
+
+  * [ Global Contest ](https://m5stack.com/global-innovation-contest-2025)
+
+  * [ABOUT US](https://m5stack.com/about-us)
+
+ABOUT US 
+
+  * [ About us ](https://m5stack.com/about-us)
+
+  * [ News ](https://m5stack.com/explore?page=1)
+
+  * [FAQ](https://faq.m5stack.com/)
+
+
+
+__
+
+English 简体中文 日本語
+
+DOCUMENT
+
+Welcome to M5Stack Developer Center
+
+[ Learn More ](/en/learn/intro) [ Product Selector ](/en/products_selector/m5core_compare)
+
+SHOW EOL
+
+[START](/en/start)[PRODUCTS](/en/products)[DOWNLOAD](/en/download)[FAQ](https://faq.m5stack.com/)[I2C TABLE](/en/product_i2c_addr)
+
+Not Search Result HOT SEARCHES Camera  WiFi  RS485  RS232  Relay  LoRaWAN  GPS  NB-IoT  LTE  GSM  Zigbee  Servo  StepMotor  Ethernet  E-Paper 
+
+Product  Tutorial 
+
+Search
+
+Where to buy 
+
+  * [ Distributors ](https://m5stack.com/distributor)
+  * [ AliExpress ](https://m5stack.aliexpress.com/store/911661199)
+  * [ Amazon ](https://www.amazon.com/shops/m5stack)
+  * [ Taobao ](https://m5stack.taobao.com/)
+
+
+
+Support 
+
+  * [ FAQ ](https://faq.m5stack.com/)
+  * [ Forum ](https://community.m5stack.com/)
+  * [ Contact Us ](https://m5stack.com/contact)
+
+
+
+[ Document ](/en/products)
+
+  * [ UiFlow1 ](/en/uiflow/uiflow_web)
+  * [ UiFlow2 ](/en/uiflow2/uiflow_web)
+  * [ Arduino ](/en/arduino/arduino_ide)
+  * [ StackFlow AI ](/en/stackflow/overview)
+  * [ Product Guide ](/en/guide/product_guide)
+
+
+
+Terms & Conditions 
+
+  * [ Terms of Service ](https://m5stack-store.myshopify.com/policies/terms-of-service)
+  * [ Privacy Policy ](https://m5stack-store.myshopify.com/policies/privacy-policy)
+  * [ Shipping Policy ](https://m5stack-store.myshopify.com/policies/shipping-policy)
+  * [ Refund Policy ](https://m5stack-store.myshopify.com/policies/refund-policy)
+  * [ Payment Method ](https://m5stack-store.myshopify.com/pages/payment-method)
+
+
+
+Stay tuned 
+
+Weekly product releases, news, special offers, and more. 
+
+Subscribe 
+
+Email is invalid! 
+
+Thanks for subscribing 
+
+[](https://x.com/M5Stack)[](https://www.linkedin.com/company/m5stack)[](https://www.hackster.io/m5stack)[](https://discord.gg/ysQAWBUE9Q)[](https://www.youtube.com/m5stack)[](https://github.com/m5stack)[](https://www.facebook.com/M5Stack)[](https://www.instagram.com/m5stack)
+
+Address: 
+
+Block A10, Expo Bay South Coast, Fuhai Street, Bao'an District, Shenzhen, China 
+
+TEL: +86 755 8657 5379 
+
+Copyright ©2021- [M5Stack](/)
+
+[ 【粤ICP备16010631号】 ](https://beian.miit.gov.cn/)
+
+================================================================================
+
+# Page: https://docs.m5stack.com/en/products
 
 [](https://m5stack.com/)
 
@@ -1612,6 +1388,230 @@ Copyright ©2021- [M5Stack](/)
 
 ================================================================================
 
+# Page: https://docs.m5stack.com/en/products?id=controllers-core
+
+[](https://m5stack.com/)
+
+[](/en)
+  * [SOLUTION](https://m5stack.com/solution?id=1)
+
+SOLUTION 
+
+  * [ Smart Factory ](https://m5stack.com/solution?id=1)
+
+  * [ Smart Agriculture ](https://m5stack.com/solution?id=2)
+
+  * [ Smart Retail ](https://m5stack.com/solution?id=3)
+
+  * [ Weather Station ](https://m5stack.com/solution?id=4)
+
+  * [STORE](https://m5stack-store.myshopify.com/)
+
+STORE 
+
+  * [ Controllers ](https://m5stack-store.myshopify.com/collections/m5-controllers)
+
+  * [ Sensors ](https://m5stack-store.myshopify.com/collections/m5-sensor)
+
+  * [ Modules ](https://m5stack-store.myshopify.com/collections/m5-modules)
+
+  * [ Cameras ](https://m5stack-store.myshopify.com/collections/m5-cameras)
+
+  * [ Kits ](https://m5stack-store.myshopify.com/collections/m5-kits)
+
+  * [ Hobby ](https://m5stack-store.myshopify.com/collections/m5-hobby)
+
+  * [ Accessories ](https://m5stack-store.myshopify.com/collections/m5-accessories)
+
+  * [SOFTWARE](https://uiflow2.m5stack.com/)
+
+SOFTWARE 
+
+  * [ UiFlow Coding IDE ](https://m5stack.com/uiflow)
+
+  * [- UiFlow1 ](https://flow.m5stack.com/)
+
+  * [- UiFlow2 ](https://uiflow2.m5stack.com/)
+
+  * [ Developer Tools ](/en/platform)
+
+  * [- M5Burner ](/en/uiflow/m5burner/intro)
+
+  * [- Block Designer ](https://block-designer.m5stack.com/)
+
+  * [- Ezdata 2.0 ](/en/guide/ezdata/ezdata_v2)
+
+  * [- EasyLoader Packer ](/en/guide/easyloader/easyloader_packer)
+
+  * [- Stacking Screw Length Calculator ](/en/learn/extension/module)
+
+  * [- vlw Font Creator ](/en/guide/develop_tools/vlw_font_creator)
+
+  * Device Driver 
+
+  * [- Device USB Driver ](/en/download)
+
+  * [DOCUMENT](/en/start)
+
+DOCUMENT 
+
+  * [ Products Document ](/en/products)
+
+  * [- Controllers ](/en/products?id=controllers-core)
+
+  * [- Unit ](/en/products?id=unit-sensor)
+
+  * [- For Stick ](/en/products?id=for stick-sensor)
+
+  * [- For Stack ](/en/products?id=for stack-module)
+
+  * [- For Atom ](/en/products?id=for atom-atom kit)
+
+  * [- For Stamp ](/en/products?id=for stamp-wireless)
+
+  * [- Hobby ](/en/products?id=hobby-drone)
+
+  * [- Accessories ](/en/products?id=accessories-cable)
+
+  * [- Other ](/en/products?id=others-coreink base)
+
+  * Platform 
+
+  * [- UiFlow1 ](/en/uiflow/uiflow_web)
+
+  * [- UiFlow2 ](/en/uiflow2/uiflow_web)
+
+  * [- Arduino ](/en/arduino/arduino_ide)
+
+  * [- ESP-IDF ](/en/esp_idf/esp_idf)
+
+  * [- StackFlow AI ](/en/stackflow/overview)
+
+  * [- Home Assistant ](/en/homeassistant/overview)
+
+  * [- nanoFramework ](https://github.com/nanoframework/nanoFramework.M5Stack)
+
+  * [- Product Guide ](/en/guide/product_guide)
+
+  * Datasheet & Files 
+
+  * [- Products Certification ](/en/learn/certification/certification)
+
+  * [- I2C Table ](/en/product_i2c_addr)
+
+  * [- Product Selector ](/en/products_selector/m5core_compare)
+
+  * [- 3D STL Files ](https://github.com/m5stack/M5_Hardware/tree/master/Structure)
+
+  * [- PCB Files ](https://github.com/m5stack/M5_Hardware/tree/master/PCB)
+
+  * EXPLORE
+
+EXPLORE 
+
+  * [ Project HUB ](https://m5stack.com/project-hub?category_id=1&page=1)
+
+  * [ YouTube ](https://www.youtube.com/m5stack)
+
+  * [ Forum ](https://community.m5stack.com/)
+
+  * [ Github ](https://github.com/m5stack)
+
+  * [ Global Contest ](https://m5stack.com/global-innovation-contest-2025)
+
+  * [ABOUT US](https://m5stack.com/about-us)
+
+ABOUT US 
+
+  * [ About us ](https://m5stack.com/about-us)
+
+  * [ News ](https://m5stack.com/explore?page=1)
+
+  * [FAQ](https://faq.m5stack.com/)
+
+
+
+__
+
+English 简体中文 日本語
+
+DOCUMENT
+
+Welcome to M5Stack Developer Center
+
+[ Learn More ](/en/learn/intro) [ Product Selector ](/en/products_selector/m5core_compare)
+
+SHOW EOL
+
+[START](/en/start)[PRODUCTS](/en/products)[DOWNLOAD](/en/download)[FAQ](https://faq.m5stack.com/)[I2C TABLE](/en/product_i2c_addr)
+
+Not Search Result HOT SEARCHES Camera  WiFi  RS485  RS232  Relay  LoRaWAN  GPS  NB-IoT  LTE  GSM  Zigbee  Servo  StepMotor  Ethernet  E-Paper 
+
+Product  Tutorial 
+
+Search
+
+Where to buy 
+
+  * [ Distributors ](https://m5stack.com/distributor)
+  * [ AliExpress ](https://m5stack.aliexpress.com/store/911661199)
+  * [ Amazon ](https://www.amazon.com/shops/m5stack)
+  * [ Taobao ](https://m5stack.taobao.com/)
+
+
+
+Support 
+
+  * [ FAQ ](https://faq.m5stack.com/)
+  * [ Forum ](https://community.m5stack.com/)
+  * [ Contact Us ](https://m5stack.com/contact)
+
+
+
+[ Document ](/en/products)
+
+  * [ UiFlow1 ](/en/uiflow/uiflow_web)
+  * [ UiFlow2 ](/en/uiflow2/uiflow_web)
+  * [ Arduino ](/en/arduino/arduino_ide)
+  * [ StackFlow AI ](/en/stackflow/overview)
+  * [ Product Guide ](/en/guide/product_guide)
+
+
+
+Terms & Conditions 
+
+  * [ Terms of Service ](https://m5stack-store.myshopify.com/policies/terms-of-service)
+  * [ Privacy Policy ](https://m5stack-store.myshopify.com/policies/privacy-policy)
+  * [ Shipping Policy ](https://m5stack-store.myshopify.com/policies/shipping-policy)
+  * [ Refund Policy ](https://m5stack-store.myshopify.com/policies/refund-policy)
+  * [ Payment Method ](https://m5stack-store.myshopify.com/pages/payment-method)
+
+
+
+Stay tuned 
+
+Weekly product releases, news, special offers, and more. 
+
+Subscribe 
+
+Email is invalid! 
+
+Thanks for subscribing 
+
+[](https://x.com/M5Stack)[](https://www.linkedin.com/company/m5stack)[](https://www.hackster.io/m5stack)[](https://discord.gg/ysQAWBUE9Q)[](https://www.youtube.com/m5stack)[](https://github.com/m5stack)[](https://www.facebook.com/M5Stack)[](https://www.instagram.com/m5stack)
+
+Address: 
+
+Block A10, Expo Bay South Coast, Fuhai Street, Bao'an District, Shenzhen, China 
+
+TEL: +86 755 8657 5379 
+
+Copyright ©2021- [M5Stack](/)
+
+[ 【粤ICP备16010631号】 ](https://beian.miit.gov.cn/)
+
+================================================================================
+
 # Page: https://docs.m5stack.com/en/products?id=for stack-module
 
 [](https://m5stack.com/)
@@ -1836,231 +1836,7 @@ Copyright ©2021- [M5Stack](/)
 
 ================================================================================
 
-# Page: https://docs.m5stack.com/en/products?id=for atom-atom kit
-
-[](https://m5stack.com/)
-
-[](/en)
-  * [SOLUTION](https://m5stack.com/solution?id=1)
-
-SOLUTION 
-
-  * [ Smart Factory ](https://m5stack.com/solution?id=1)
-
-  * [ Smart Agriculture ](https://m5stack.com/solution?id=2)
-
-  * [ Smart Retail ](https://m5stack.com/solution?id=3)
-
-  * [ Weather Station ](https://m5stack.com/solution?id=4)
-
-  * [STORE](https://m5stack-store.myshopify.com/)
-
-STORE 
-
-  * [ Controllers ](https://m5stack-store.myshopify.com/collections/m5-controllers)
-
-  * [ Sensors ](https://m5stack-store.myshopify.com/collections/m5-sensor)
-
-  * [ Modules ](https://m5stack-store.myshopify.com/collections/m5-modules)
-
-  * [ Cameras ](https://m5stack-store.myshopify.com/collections/m5-cameras)
-
-  * [ Kits ](https://m5stack-store.myshopify.com/collections/m5-kits)
-
-  * [ Hobby ](https://m5stack-store.myshopify.com/collections/m5-hobby)
-
-  * [ Accessories ](https://m5stack-store.myshopify.com/collections/m5-accessories)
-
-  * [SOFTWARE](https://uiflow2.m5stack.com/)
-
-SOFTWARE 
-
-  * [ UiFlow Coding IDE ](https://m5stack.com/uiflow)
-
-  * [- UiFlow1 ](https://flow.m5stack.com/)
-
-  * [- UiFlow2 ](https://uiflow2.m5stack.com/)
-
-  * [ Developer Tools ](/en/platform)
-
-  * [- M5Burner ](/en/uiflow/m5burner/intro)
-
-  * [- Block Designer ](https://block-designer.m5stack.com/)
-
-  * [- Ezdata 2.0 ](/en/guide/ezdata/ezdata_v2)
-
-  * [- EasyLoader Packer ](/en/guide/easyloader/easyloader_packer)
-
-  * [- Stacking Screw Length Calculator ](/en/learn/extension/module)
-
-  * [- vlw Font Creator ](/en/guide/develop_tools/vlw_font_creator)
-
-  * Device Driver 
-
-  * [- Device USB Driver ](/en/download)
-
-  * [DOCUMENT](/en/start)
-
-DOCUMENT 
-
-  * [ Products Document ](/en/products)
-
-  * [- Controllers ](/en/products?id=controllers-core)
-
-  * [- Unit ](/en/products?id=unit-sensor)
-
-  * [- For Stick ](/en/products?id=for stick-sensor)
-
-  * [- For Stack ](/en/products?id=for stack-module)
-
-  * [- For Atom ](/en/products?id=for atom-atom kit)
-
-  * [- For Stamp ](/en/products?id=for stamp-wireless)
-
-  * [- Hobby ](/en/products?id=hobby-drone)
-
-  * [- Accessories ](/en/products?id=accessories-cable)
-
-  * [- Other ](/en/products?id=others-coreink base)
-
-  * Platform 
-
-  * [- UiFlow1 ](/en/uiflow/uiflow_web)
-
-  * [- UiFlow2 ](/en/uiflow2/uiflow_web)
-
-  * [- Arduino ](/en/arduino/arduino_ide)
-
-  * [- ESP-IDF ](/en/esp_idf/esp_idf)
-
-  * [- StackFlow AI ](/en/stackflow/overview)
-
-  * [- Home Assistant ](/en/homeassistant/overview)
-
-  * [- nanoFramework ](https://github.com/nanoframework/nanoFramework.M5Stack)
-
-  * [- Product Guide ](/en/guide/product_guide)
-
-  * Datasheet & Files 
-
-  * [- Products Certification ](/en/learn/certification/certification)
-
-  * [- I2C Table ](/en/product_i2c_addr)
-
-  * [- Product Selector ](/en/products_selector/m5core_compare)
-
-  * [- 3D STL Files ](https://github.com/m5stack/M5_Hardware/tree/master/Structure)
-
-  * [- PCB Files ](https://github.com/m5stack/M5_Hardware/tree/master/PCB)
-
-  * EXPLORE
-
-EXPLORE 
-
-  * [ Project HUB ](https://m5stack.com/project-hub?category_id=1&page=1)
-
-  * [ YouTube ](https://www.youtube.com/m5stack)
-
-  * [ Forum ](https://community.m5stack.com/)
-
-  * [ Github ](https://github.com/m5stack)
-
-  * [ Global Contest ](https://m5stack.com/global-innovation-contest-2025)
-
-  * [ABOUT US](https://m5stack.com/about-us)
-
-ABOUT US 
-
-  * [ About us ](https://m5stack.com/about-us)
-
-  * [ News ](https://m5stack.com/explore?page=1)
-
-  * [FAQ](https://faq.m5stack.com/)
-
-
-
-__
-
-English 简体中文 日本語
-
-DOCUMENT
-
-Welcome to M5Stack Developer Center
-
-[ Learn More ](/en/learn/intro) [ Product Selector ](/en/products_selector/m5core_compare)
-
-SHOW EOL
-
-[START](/en/start)[PRODUCTS](/en/products)[DOWNLOAD](/en/download)[FAQ](https://faq.m5stack.com/)[I2C TABLE](/en/product_i2c_addr)
-
-Not Search Result HOT SEARCHES Camera  WiFi  RS485  RS232  Relay  LoRaWAN  GPS  NB-IoT  LTE  GSM  Zigbee  Servo  StepMotor  Ethernet  E-Paper 
-
-Product  Tutorial 
-
-Search
-
-Where to buy 
-
-  * [ Distributors ](https://m5stack.com/distributor)
-  * [ AliExpress ](https://m5stack.aliexpress.com/store/911661199)
-  * [ Amazon ](https://www.amazon.com/shops/m5stack)
-  * [ Taobao ](https://m5stack.taobao.com/)
-
-
-
-Support 
-
-  * [ FAQ ](https://faq.m5stack.com/)
-  * [ Forum ](https://community.m5stack.com/)
-  * [ Contact Us ](https://m5stack.com/contact)
-
-
-
-[ Document ](/en/products)
-
-  * [ UiFlow1 ](/en/uiflow/uiflow_web)
-  * [ UiFlow2 ](/en/uiflow2/uiflow_web)
-  * [ Arduino ](/en/arduino/arduino_ide)
-  * [ StackFlow AI ](/en/stackflow/overview)
-  * [ Product Guide ](/en/guide/product_guide)
-
-
-
-Terms & Conditions 
-
-  * [ Terms of Service ](https://m5stack-store.myshopify.com/policies/terms-of-service)
-  * [ Privacy Policy ](https://m5stack-store.myshopify.com/policies/privacy-policy)
-  * [ Shipping Policy ](https://m5stack-store.myshopify.com/policies/shipping-policy)
-  * [ Refund Policy ](https://m5stack-store.myshopify.com/policies/refund-policy)
-  * [ Payment Method ](https://m5stack-store.myshopify.com/pages/payment-method)
-
-
-
-Stay tuned 
-
-Weekly product releases, news, special offers, and more. 
-
-Subscribe 
-
-Email is invalid! 
-
-Thanks for subscribing 
-
-[](https://x.com/M5Stack)[](https://www.linkedin.com/company/m5stack)[](https://www.hackster.io/m5stack)[](https://discord.gg/ysQAWBUE9Q)[](https://www.youtube.com/m5stack)[](https://github.com/m5stack)[](https://www.facebook.com/M5Stack)[](https://www.instagram.com/m5stack)
-
-Address: 
-
-Block A10, Expo Bay South Coast, Fuhai Street, Bao'an District, Shenzhen, China 
-
-TEL: +86 755 8657 5379 
-
-Copyright ©2021- [M5Stack](/)
-
-[ 【粤ICP备16010631号】 ](https://beian.miit.gov.cn/)
-
-================================================================================
-
-# Page: https://docs.m5stack.com/en/products
+# Page: https://docs.m5stack.com/en/products?id=accessories-cable
 
 [](https://m5stack.com/)
 
@@ -2509,6 +2285,230 @@ Copyright ©2021- [M5Stack](/)
 ================================================================================
 
 # Page: https://docs.m5stack.com/en/products?id=for stamp-wireless
+
+[](https://m5stack.com/)
+
+[](/en)
+  * [SOLUTION](https://m5stack.com/solution?id=1)
+
+SOLUTION 
+
+  * [ Smart Factory ](https://m5stack.com/solution?id=1)
+
+  * [ Smart Agriculture ](https://m5stack.com/solution?id=2)
+
+  * [ Smart Retail ](https://m5stack.com/solution?id=3)
+
+  * [ Weather Station ](https://m5stack.com/solution?id=4)
+
+  * [STORE](https://m5stack-store.myshopify.com/)
+
+STORE 
+
+  * [ Controllers ](https://m5stack-store.myshopify.com/collections/m5-controllers)
+
+  * [ Sensors ](https://m5stack-store.myshopify.com/collections/m5-sensor)
+
+  * [ Modules ](https://m5stack-store.myshopify.com/collections/m5-modules)
+
+  * [ Cameras ](https://m5stack-store.myshopify.com/collections/m5-cameras)
+
+  * [ Kits ](https://m5stack-store.myshopify.com/collections/m5-kits)
+
+  * [ Hobby ](https://m5stack-store.myshopify.com/collections/m5-hobby)
+
+  * [ Accessories ](https://m5stack-store.myshopify.com/collections/m5-accessories)
+
+  * [SOFTWARE](https://uiflow2.m5stack.com/)
+
+SOFTWARE 
+
+  * [ UiFlow Coding IDE ](https://m5stack.com/uiflow)
+
+  * [- UiFlow1 ](https://flow.m5stack.com/)
+
+  * [- UiFlow2 ](https://uiflow2.m5stack.com/)
+
+  * [ Developer Tools ](/en/platform)
+
+  * [- M5Burner ](/en/uiflow/m5burner/intro)
+
+  * [- Block Designer ](https://block-designer.m5stack.com/)
+
+  * [- Ezdata 2.0 ](/en/guide/ezdata/ezdata_v2)
+
+  * [- EasyLoader Packer ](/en/guide/easyloader/easyloader_packer)
+
+  * [- Stacking Screw Length Calculator ](/en/learn/extension/module)
+
+  * [- vlw Font Creator ](/en/guide/develop_tools/vlw_font_creator)
+
+  * Device Driver 
+
+  * [- Device USB Driver ](/en/download)
+
+  * [DOCUMENT](/en/start)
+
+DOCUMENT 
+
+  * [ Products Document ](/en/products)
+
+  * [- Controllers ](/en/products?id=controllers-core)
+
+  * [- Unit ](/en/products?id=unit-sensor)
+
+  * [- For Stick ](/en/products?id=for stick-sensor)
+
+  * [- For Stack ](/en/products?id=for stack-module)
+
+  * [- For Atom ](/en/products?id=for atom-atom kit)
+
+  * [- For Stamp ](/en/products?id=for stamp-wireless)
+
+  * [- Hobby ](/en/products?id=hobby-drone)
+
+  * [- Accessories ](/en/products?id=accessories-cable)
+
+  * [- Other ](/en/products?id=others-coreink base)
+
+  * Platform 
+
+  * [- UiFlow1 ](/en/uiflow/uiflow_web)
+
+  * [- UiFlow2 ](/en/uiflow2/uiflow_web)
+
+  * [- Arduino ](/en/arduino/arduino_ide)
+
+  * [- ESP-IDF ](/en/esp_idf/esp_idf)
+
+  * [- StackFlow AI ](/en/stackflow/overview)
+
+  * [- Home Assistant ](/en/homeassistant/overview)
+
+  * [- nanoFramework ](https://github.com/nanoframework/nanoFramework.M5Stack)
+
+  * [- Product Guide ](/en/guide/product_guide)
+
+  * Datasheet & Files 
+
+  * [- Products Certification ](/en/learn/certification/certification)
+
+  * [- I2C Table ](/en/product_i2c_addr)
+
+  * [- Product Selector ](/en/products_selector/m5core_compare)
+
+  * [- 3D STL Files ](https://github.com/m5stack/M5_Hardware/tree/master/Structure)
+
+  * [- PCB Files ](https://github.com/m5stack/M5_Hardware/tree/master/PCB)
+
+  * EXPLORE
+
+EXPLORE 
+
+  * [ Project HUB ](https://m5stack.com/project-hub?category_id=1&page=1)
+
+  * [ YouTube ](https://www.youtube.com/m5stack)
+
+  * [ Forum ](https://community.m5stack.com/)
+
+  * [ Github ](https://github.com/m5stack)
+
+  * [ Global Contest ](https://m5stack.com/global-innovation-contest-2025)
+
+  * [ABOUT US](https://m5stack.com/about-us)
+
+ABOUT US 
+
+  * [ About us ](https://m5stack.com/about-us)
+
+  * [ News ](https://m5stack.com/explore?page=1)
+
+  * [FAQ](https://faq.m5stack.com/)
+
+
+
+__
+
+English 简体中文 日本語
+
+DOCUMENT
+
+Welcome to M5Stack Developer Center
+
+[ Learn More ](/en/learn/intro) [ Product Selector ](/en/products_selector/m5core_compare)
+
+SHOW EOL
+
+[START](/en/start)[PRODUCTS](/en/products)[DOWNLOAD](/en/download)[FAQ](https://faq.m5stack.com/)[I2C TABLE](/en/product_i2c_addr)
+
+Not Search Result HOT SEARCHES Camera  WiFi  RS485  RS232  Relay  LoRaWAN  GPS  NB-IoT  LTE  GSM  Zigbee  Servo  StepMotor  Ethernet  E-Paper 
+
+Product  Tutorial 
+
+Search
+
+Where to buy 
+
+  * [ Distributors ](https://m5stack.com/distributor)
+  * [ AliExpress ](https://m5stack.aliexpress.com/store/911661199)
+  * [ Amazon ](https://www.amazon.com/shops/m5stack)
+  * [ Taobao ](https://m5stack.taobao.com/)
+
+
+
+Support 
+
+  * [ FAQ ](https://faq.m5stack.com/)
+  * [ Forum ](https://community.m5stack.com/)
+  * [ Contact Us ](https://m5stack.com/contact)
+
+
+
+[ Document ](/en/products)
+
+  * [ UiFlow1 ](/en/uiflow/uiflow_web)
+  * [ UiFlow2 ](/en/uiflow2/uiflow_web)
+  * [ Arduino ](/en/arduino/arduino_ide)
+  * [ StackFlow AI ](/en/stackflow/overview)
+  * [ Product Guide ](/en/guide/product_guide)
+
+
+
+Terms & Conditions 
+
+  * [ Terms of Service ](https://m5stack-store.myshopify.com/policies/terms-of-service)
+  * [ Privacy Policy ](https://m5stack-store.myshopify.com/policies/privacy-policy)
+  * [ Shipping Policy ](https://m5stack-store.myshopify.com/policies/shipping-policy)
+  * [ Refund Policy ](https://m5stack-store.myshopify.com/policies/refund-policy)
+  * [ Payment Method ](https://m5stack-store.myshopify.com/pages/payment-method)
+
+
+
+Stay tuned 
+
+Weekly product releases, news, special offers, and more. 
+
+Subscribe 
+
+Email is invalid! 
+
+Thanks for subscribing 
+
+[](https://x.com/M5Stack)[](https://www.linkedin.com/company/m5stack)[](https://www.hackster.io/m5stack)[](https://discord.gg/ysQAWBUE9Q)[](https://www.youtube.com/m5stack)[](https://github.com/m5stack)[](https://www.facebook.com/M5Stack)[](https://www.instagram.com/m5stack)
+
+Address: 
+
+Block A10, Expo Bay South Coast, Fuhai Street, Bao'an District, Shenzhen, China 
+
+TEL: +86 755 8657 5379 
+
+Copyright ©2021- [M5Stack](/)
+
+[ 【粤ICP备16010631号】 ](https://beian.miit.gov.cn/)
+
+================================================================================
+
+# Page: https://docs.m5stack.com/en/products?id=hobby-drone
 
 [](https://m5stack.com/)
 
