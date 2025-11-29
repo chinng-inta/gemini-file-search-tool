@@ -14,10 +14,26 @@ APIドキュメントを自動的にクロール・学習し、Gemini AIのFile 
 
 ## セットアップ手順
 
-### 1. リポジトリのクローン
+### 1. リポジトリの取得
+
+**方法A: GitHub Templateから作成（推奨）**
+
+1. GitHubで「Use this template」ボタンをクリック
+2. 新しいリポジトリ名を入力して作成
+3. 作成したリポジトリをクローン
 
 ```bash
-git clone <repository-url>
+git clone <your-repository-url>
+cd gemini-rag-mcp
+```
+
+**方法B: Forkして使用**
+
+1. GitHubで「Fork」ボタンをクリック
+2. フォークしたリポジトリをクローン
+
+```bash
+git clone <your-forked-repository-url>
 cd gemini-rag-mcp
 ```
 
@@ -28,6 +44,15 @@ cd gemini-rag-mcp
 ```bash
 cp .env.template .env
 ```
+
+**URL設定（オプション）**
+
+独自のAPIドキュメントを追加する場合は、`config/url_config.json`を編集してください。
+
+> **⚠️ 重要な注意事項**
+> - `data/docs/`と`config/url_config.json`はリポジトリに含まれます
+> - **公開リポジトリの場合**：公開されても問題ないAPIドキュメントのみをクロールしてください
+> - **機密情報を含むドキュメント**：プライベートリポジトリとして使用するか、クロールしないでください
 
 `.env`ファイルを編集して、APIキーとパスを設定：
 
