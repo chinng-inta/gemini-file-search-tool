@@ -222,3 +222,7 @@ config/rag_config.json
 
 # テスト用の大きなファイル
 tests/test_large_file_*.txt
+
+# Note用の記事下書き
+docs/Note/*
+
