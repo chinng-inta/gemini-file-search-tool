@@ -125,14 +125,14 @@ class GeminiRAGMCPServer:
                     }
                 ),
                 Tool(
-                    name="generate_code",
-                    description="APIドキュメントに基づいてコードを生成します。",
+                    name="query_api_docs",
+                    description="APIドキュメントを検索して質問に回答します。コード生成、API使用方法の説明、技術的な質問に対応します。",
                     inputSchema={
                         "type": "object",
                         "properties": {
                             "prompt": {
                                 "type": "string",
-                                "description": "コード生成のプロンプト"
+                                "description": "質問またはコード生成のプロンプト"
                             },
                             "doc_type": {
                                 "type": "string",
@@ -199,8 +199,8 @@ class GeminiRAGMCPServer:
                     result = await self.handle_upload_documents(
                         doc_type=arguments.get("doc_type")
                     )
-                elif name == "generate_code":
-                    result = await self.handle_generate_code(
+                elif name == "query_api_docs":
+                    result = await self.handle_query_api_docs(
                         prompt=arguments.get("prompt"),
                         doc_type=arguments.get("doc_type")
                     )
@@ -443,16 +443,16 @@ class GeminiRAGMCPServer:
                 "error": f"Unexpected error: {str(e)}"
             }
     
-    async def handle_generate_code(self, prompt: str, doc_type: str) -> dict:
+    async def handle_query_api_docs(self, prompt: str, doc_type: str) -> dict:
         """
-        コードを生成.
+        APIドキュメントを検索して質問に回答.
         
         Args:
-            prompt: コード生成プロンプト
+            prompt: 質問またはコード生成プロンプト
             doc_type: 参照するドキュメントの種類
             
         Returns:
-            dict: コード生成結果
+            dict: 回答結果
         """
         try:
             # パラメータ検証
@@ -468,19 +468,19 @@ class GeminiRAGMCPServer:
                     "error": "doc_type is required"
                 }
             
-            logger.info(f"Generating code for doc_type: {doc_type}")
+            logger.info(f"Querying API docs for doc_type: {doc_type}")
             
-            # Gemini RAGマネージャーを呼び出してコード生成
-            generated_code = await self.rag_manager.generate_code(
+            # Gemini RAGマネージャーを呼び出して回答生成
+            response = await self.rag_manager.generate_code(
                 prompt=prompt,
                 doc_type=doc_type
             )
             
             return {
                 "success": True,
-                "message": "Code generated successfully",
+                "message": "Query completed successfully",
                 "doc_type": doc_type,
-                "code": generated_code
+                "response": response
             }
             
         except RAGError as e:
@@ -490,7 +490,7 @@ class GeminiRAGMCPServer:
                 "error": str(e)
             }
         except Exception as e:
-            logger.exception("Unexpected error during code generation")
+            logger.exception("Unexpected error during API docs query")
             return {
                 "success": False,
                 "error": f"Unexpected error: {str(e)}"
