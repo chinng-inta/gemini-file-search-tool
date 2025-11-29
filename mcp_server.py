@@ -471,7 +471,7 @@ class GeminiRAGMCPServer:
             logger.info(f"Querying API docs for doc_type: {doc_type}")
             
             # Gemini RAGマネージャーを呼び出して回答生成
-            response = await self.rag_manager.generate_code(
+            response = await self.rag_manager.query_api_docs(
                 prompt=prompt,
                 doc_type=doc_type
             )

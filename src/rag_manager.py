@@ -586,25 +586,25 @@ class GeminiRAGManager:
             logger.warning(f"Git pull error: {e}")
             return False
     
-    async def generate_code(
+    async def query_api_docs(
         self,
         prompt: str,
         doc_type: str,
         model: str = "gemini-2.5-flash"
     ) -> str:
         """
-        APIドキュメントに基づいてコードを生成.
+        APIドキュメントに基づいて質問に回答またはコードを生成.
         
         Args:
-            prompt: コード生成プロンプト
+            prompt: 質問またはコード生成プロンプト
             doc_type: 参照するドキュメントの種類（例: 'gemini', 'gas'）
             model: 使用するGeminiモデル（デフォルト: gemini-2.5-flash）
             
         Returns:
-            str: 生成されたコード
+            str: 生成された回答またはコード
             
         Raises:
-            RAGError: コード生成に失敗した場合
+            RAGError: API問い合わせに失敗した場合
         """
         if not prompt:
             raise RAGError("プロンプトは必須です")
@@ -654,7 +654,7 @@ class GeminiRAGManager:
             raise
         except Exception as e:
             raise RAGError(
-                f"コード生成に失敗しました: {e}\n"
+                f"API問い合わせに失敗しました: {e}\n"
                 f"モデル: {model}\n"
                 f"ドキュメント種類: {doc_type}\n"
                 f"RAG ID: {rag_id}"

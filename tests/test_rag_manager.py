@@ -734,8 +734,8 @@ class TestGenerateCode:
     """コード生成機能のテスト."""
     
     @pytest.mark.asyncio
-    async def test_generate_code_basic(self, rag_manager, monkeypatch):
-        """基本的なコード生成が正常に動作することを確認."""
+    async def test_query_api_docs_basic(self, rag_manager, monkeypatch):
+        """基本的なAPI問い合わせが正常に動作することを確認."""
         # RAGを追加
         rag_manager.add_rag("gemini", "fileSearchStores/test123")
         
@@ -762,8 +762,8 @@ class TestGenerateCode:
         )
         manager.config = rag_manager.config
         
-        # コードを生成
-        code = await manager.generate_code(
+        # APIドキュメントに問い合わせ
+        code = await manager.query_api_docs(
             prompt="Create a hello world function",
             doc_type="gemini"
         )
@@ -773,10 +773,10 @@ class TestGenerateCode:
         assert "print" in code
     
     @pytest.mark.asyncio
-    async def test_generate_code_empty_prompt(self, rag_manager):
+    async def test_query_api_docs_empty_prompt(self, rag_manager):
         """プロンプトが空の場合、エラーが発生することを確認."""
         with pytest.raises(RAGError) as exc_info:
-            await rag_manager.generate_code(
+            await rag_manager.query_api_docs(
                 prompt="",
                 doc_type="gemini"
             )
@@ -784,10 +784,10 @@ class TestGenerateCode:
         assert "プロンプトは必須" in str(exc_info.value)
     
     @pytest.mark.asyncio
-    async def test_generate_code_empty_doc_type(self, rag_manager):
+    async def test_query_api_docs_empty_doc_type(self, rag_manager):
         """doc_typeが空の場合、エラーが発生することを確認."""
         with pytest.raises(RAGError) as exc_info:
-            await rag_manager.generate_code(
+            await rag_manager.query_api_docs(
                 prompt="Create a function",
                 doc_type=""
             )
@@ -795,10 +795,10 @@ class TestGenerateCode:
         assert "doc_typeは必須" in str(exc_info.value)
     
     @pytest.mark.asyncio
-    async def test_generate_code_no_rag_exists(self, rag_manager):
+    async def test_query_api_docs_no_rag_exists(self, rag_manager):
         """RAGが存在しない場合、エラーが発生することを確認."""
         with pytest.raises(RAGError) as exc_info:
-            await rag_manager.generate_code(
+            await rag_manager.query_api_docs(
                 prompt="Create a function",
                 doc_type="nonexistent"
             )
@@ -807,7 +807,7 @@ class TestGenerateCode:
         assert "upload_documents" in str(exc_info.value)
     
     @pytest.mark.asyncio
-    async def test_generate_code_uses_latest_rag(self, rag_manager, monkeypatch):
+    async def test_query_api_docs_uses_latest_rag(self, rag_manager, monkeypatch):
         """最新のRAG IDが使用されることを確認."""
         import time
         
@@ -846,8 +846,8 @@ class TestGenerateCode:
         )
         manager.config = rag_manager.config
         
-        # コードを生成
-        await manager.generate_code(
+        # APIドキュメントに問い合わせ
+        await manager.query_api_docs(
             prompt="Create a function",
             doc_type="gemini"
         )
@@ -856,7 +856,7 @@ class TestGenerateCode:
         assert used_rag_id == "fileSearchStores/new456"
     
     @pytest.mark.asyncio
-    async def test_generate_code_api_error(self, rag_manager, monkeypatch):
+    async def test_query_api_docs_api_error(self, rag_manager, monkeypatch):
         """Gemini APIがエラーを返した場合、適切なエラーメッセージが返されることを確認."""
         # RAGを追加
         rag_manager.add_rag("gemini", "fileSearchStores/test123")
@@ -880,20 +880,20 @@ class TestGenerateCode:
         )
         manager.config = rag_manager.config
         
-        # コード生成（失敗するはず）
+        # API問い合わせ（失敗するはず）
         with pytest.raises(RAGError) as exc_info:
-            await manager.generate_code(
+            await manager.query_api_docs(
                 prompt="Create a function",
                 doc_type="gemini"
             )
         
         error_message = str(exc_info.value)
-        assert "コード生成に失敗しました" in error_message
+        assert "API問い合わせに失敗しました" in error_message
         assert "gemini" in error_message
         assert "fileSearchStores/test123" in error_message
     
     @pytest.mark.asyncio
-    async def test_generate_code_empty_response(self, rag_manager, monkeypatch):
+    async def test_query_api_docs_empty_response(self, rag_manager, monkeypatch):
         """Gemini APIが空のレスポンスを返した場合、エラーが発生することを確認."""
         # RAGを追加
         rag_manager.add_rag("gemini", "fileSearchStores/test123")
@@ -921,9 +921,9 @@ class TestGenerateCode:
         )
         manager.config = rag_manager.config
         
-        # コード生成（失敗するはず）
+        # API問い合わせ（失敗するはず）
         with pytest.raises(RAGError) as exc_info:
-            await manager.generate_code(
+            await manager.query_api_docs(
                 prompt="Create a function",
                 doc_type="gemini"
             )
