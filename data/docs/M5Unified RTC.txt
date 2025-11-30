@@ -1,6 +1,6 @@
 ---
 doc_type: M5Unified RTC
-crawled_at: 2025/11/30 09:51:37
+crawled_at: 2025/11/30 19:12:24
 first_url: https://docs.m5stack.com/ja/arduino/m5unified/rtc8563_class/
 ---
 
