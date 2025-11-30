@@ -124,6 +124,11 @@
       "name": "Anti Gravity Docs",
       "url": "https://antigravity.google/docs/home",
       "description": "Anti Gravity Docs / ドキュメント"
+    },
+    "yt-dlp": {
+      "name": "yt-dlp",
+      "url": "https://github.com/yt-dlp/yt-dlp",
+      "description": "yt-dlp"      
     }
   }
 }
