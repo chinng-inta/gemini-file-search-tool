@@ -1,6 +1,6 @@
 ---
 doc_type: Arduino Programming
-crawled_at: 2025/11/23 11:59:58
+crawled_at: 2025/11/30 09:47:24
 first_url: https://docs.arduino.cc/language-reference/
 ---
 
@@ -220,73 +220,7 @@ For controlling the Arduino board and performing computations.
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/language-reference/en/functions/communication/print/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/interrupts/noInterrupts/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/analog-io/analogWrite/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/advanced-io/pulseIn/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/trigonometry/tan/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/bits-and-bytes/bit/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/math/min/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/bits-and-bytes/bitClear/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/characters/isAlpha/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/advanced-io/shiftOut/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/trigonometry/sin/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/time/millis/
+# Page: https://docs.arduino.cc/language-reference/en/functions/advanced-io/noTone/
 
 
 
@@ -298,19 +232,43 @@ For controlling the Arduino board and performing computations.
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/language-reference/en/functions/communication/wire/
+# Page: https://docs.arduino.cc/language-reference/en/functions/characters/isWhitespace/
 
 
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/language-reference/en/functions/usb/Keyboard/
+# Page: https://docs.arduino.cc/language-reference/en/functions/bits-and-bytes/highByte/
 
 
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/language-reference/en/functions/digital-io/digitalread/
+# Page: https://docs.arduino.cc/language-reference/en/functions/interrupts/interrupts/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/trigonometry/sin/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/advanced-io/pulseIn/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/advanced-io/shiftOut/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/trigonometry/tan/
 
 
 
@@ -322,7 +280,7 @@ For controlling the Arduino board and performing computations.
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/language-reference/en/functions/characters/isLowerCase/
+# Page: https://docs.arduino.cc/language-reference/en/functions/advanced-io/tone/
 
 
 
@@ -376,49 +334,13 @@ Estruturas
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/language-reference/en/functions/bits-and-bytes/bitRead/
+# Page: https://docs.arduino.cc/language-reference/en/functions/math/max/
 
 
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/language-reference/en/functions/advanced-io/tone/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/bits-and-bytes/bitSet/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/analog-io/analogRead/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/analog-io/analogWriteResolution/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/math/map/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/external-interrupts/detachInterrupt/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/characters/isAlphaNumeric/
+# Page: https://docs.arduino.cc/language-reference/en/functions/analog-io/analogReadResolution/
 
 
 
@@ -430,31 +352,25 @@ Estruturas
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/language-reference/en/functions/time/micros/
+# Page: https://docs.arduino.cc/language-reference/en/functions/bits-and-bytes/bitClear/
 
 
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/language-reference/en/functions/communication/SPI/
+# Page: https://docs.arduino.cc/language-reference/en/functions/analog-io/analogWriteResolution/
 
 
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/language-reference/en/functions/characters/isGraph/
+# Page: https://docs.arduino.cc/language-reference/en/functions/advanced-io/shiftIn/
 
 
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/language-reference/en/functions/wifi/wificlass/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/wifi/client/
+# Page: https://docs.arduino.cc/language-reference/en/functions/bits-and-bytes/bitWrite/
 
 
 
@@ -508,97 +424,13 @@ Struktur
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/language-reference/en/functions/characters/isAscii/
+# Page: https://docs.arduino.cc/language-reference/en/functions/characters/isLowerCase/
 
 
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/language-reference/en/functions/advanced-io/noTone/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/characters/isSpace/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/math/pow/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/characters/isDigit/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/communication/serial/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/digital-io/pinMode/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/characters/isWhitespace/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/external-interrupts/digitalPinToInterrupt/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/math/abs/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/characters/isPunct/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/wifi/udp/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/advanced-io/shiftIn/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/characters/isUpperCase/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/characters/isControl/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/random-numbers/random/
+# Page: https://docs.arduino.cc/language-reference/en/functions/communication/SPI/
 
 
 
@@ -616,67 +448,19 @@ Struktur
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/language-reference/en/functions/interrupts/interrupts/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/analog-io/analogReadResolution/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/time/delayMicroseconds/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/math/max/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/characters/isHexadecimalDigit/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/bits-and-bytes/lowByte/
-
-
-
-================================================================================
-
 # Page: https://docs.arduino.cc/language-reference/en/functions/random-numbers/randomSeed/
 
 
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/language-reference/en/functions/usb/Mouse/
+# Page: https://docs.arduino.cc/language-reference/en/functions/bits-and-bytes/bitRead/
 
 
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/language-reference/en/functions/wifi/overview/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/time/delay/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/wifi/ipaddress/
+# Page: https://docs.arduino.cc/language-reference/en/functions/wifi/wificlass/
 
 
 
@@ -688,25 +472,13 @@ Struktur
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/language-reference/en/functions/digital-io/digitalwrite/
+# Page: https://docs.arduino.cc/language-reference/en/functions/characters/isDigit/
 
 
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/language-reference/en/functions/math/sq/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/trigonometry/cos/
-
-
-
-================================================================================
-
-# Page: https://docs.arduino.cc/language-reference/en/functions/math/sqrt/
+# Page: https://docs.arduino.cc/language-reference/en/functions/time/delay/
 
 
 
@@ -718,13 +490,241 @@ Struktur
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/language-reference/en/functions/bits-and-bytes/highByte/
+# Page: https://docs.arduino.cc/language-reference/en/functions/trigonometry/cos/
 
 
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/language-reference/en/functions/bits-and-bytes/bitWrite/
+# Page: https://docs.arduino.cc/language-reference/en/functions/time/micros/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/characters/isAlphaNumeric/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/bits-and-bytes/bitSet/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/characters/isControl/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/analog-io/analogRead/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/characters/isGraph/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/characters/isPunct/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/characters/isAlpha/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/random-numbers/random/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/digital-io/digitalwrite/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/time/millis/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/usb/Mouse/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/characters/isHexadecimalDigit/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/wifi/client/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/interrupts/noInterrupts/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/digital-io/digitalread/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/external-interrupts/detachInterrupt/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/characters/isSpace/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/communication/serial/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/bits-and-bytes/lowByte/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/math/min/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/math/pow/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/analog-io/analogWrite/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/usb/Keyboard/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/wifi/overview/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/external-interrupts/digitalPinToInterrupt/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/communication/print/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/wifi/udp/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/time/delayMicroseconds/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/math/abs/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/digital-io/pinMode/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/bits-and-bytes/bit/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/characters/isUpperCase/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/math/map/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/math/sq/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/characters/isAscii/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/communication/wire/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/wifi/ipaddress/
+
+
+
+================================================================================
+
+# Page: https://docs.arduino.cc/language-reference/en/functions/math/sqrt/
 
 
 

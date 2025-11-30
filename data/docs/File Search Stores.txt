@@ -1,6 +1,6 @@
 ---
 doc_type: File Search Stores
-crawled_at: 2025/11/23 12:02:20
+crawled_at: 2025/11/30 09:52:12
 first_url: https://ai.google.dev/api/file-search/file-search-stores
 ---
 
@@ -89,7 +89,7 @@ Skip to main content
 
 
 
-Gemini 3 is here. Read the [developer guide](https://ai.google.dev/gemini-api/docs/gemini-3) to get started with our most advanced model yet. 
+Gemini 3 Pro is here. [Try it for free in Google AI Studio](https://aistudio.google.com?model=gemini-3-pro-preview). 
 
   * [ Home ](https://ai.google.dev/)
   * [ Gemini API ](https://ai.google.dev/gemini-api)
