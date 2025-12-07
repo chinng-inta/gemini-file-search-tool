@@ -1,6 +1,6 @@
 ---
 doc_type: C++
-crawled_at: 2025/11/30 19:12:28
+crawled_at: 2025/12/07 09:49:49
 first_url: https://cpprefjp.github.io/reference.html
 ---
 
@@ -17,8 +17,8 @@ Toggle navigation [ cpprefjp - C++日本語リファレンス ](./index.html)
 
 
 
-最終更新日時(UTC):  2025年08月11日 06時35分16秒    
-suomesta が更新 
+最終更新日時(UTC):  2025年12月03日 12時42分40秒    
+K10-K10 が更新 
 
 [ 履歴 ](https://github.com/cpprefjp/site/commits/master/reference.md) [ 編集 ](https://github.com/cpprefjp/site/edit/master/reference.md)
 
@@ -243,7 +243,7 @@ C++20で削除
 `<ciso646>` | `&&`に対する別名`and`のような、各種演算子に対するマクロを定義する。  
 ただしC++ではこれらの別名はキーワードとして定義されるため、このヘッダでは何も定義されない。 | C++20で削除  
 `[<climits>](reference/climits.html)` | 整数型の最小値、最大値を表すマクロ |   
-`<clocale>` | ロケール |   
+`[<clocale>](reference/clocale.html)` | ロケール |   
 `[<cmath>](reference/cmath.html)` | 数学関数 |   
 `<csetjmp>` | ジャンプ処理 |   
 `<csignal>` | シグナル |   
