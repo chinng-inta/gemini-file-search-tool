@@ -1,6 +1,6 @@
 ---
 doc_type: File Search Stores
-crawled_at: 2025/12/07 09:49:52
+crawled_at: 2025/12/14 09:50:44
 first_url: https://ai.google.dev/api/file-search/file-search-stores
 ---
 
@@ -40,7 +40,7 @@ Skip to main content
 
 [ Get API key ](https://aistudio.google.com/apikey) [ Cookbook ](https://github.com/google-gemini/cookbook) [ Community ](https://discuss.ai.google.dev/c/gemini-api/) Sign in
 
-[ Gemini API Docs ](https://ai.google.dev/gemini-api/docs) [ API reference ](https://ai.google.dev/api)
+[ Docs ](https://ai.google.dev/gemini-api/docs) [ API reference ](https://ai.google.dev/api)
 
 [ ](/)
 
@@ -48,7 +48,7 @@ Skip to main content
 
 
   * [ Gemini API  ](/gemini-api/docs)
-    * [ Gemini API Docs  ](/gemini-api/docs)
+    * [ Docs  ](/gemini-api/docs)
     * [ API reference  ](/api)
   * [ Get API key  ](https://aistudio.google.com/apikey)
   * [ Cookbook  ](https://github.com/google-gemini/cookbook)
@@ -64,6 +64,7 @@ Skip to main content
   * [Generating content](/api/generate-content)
   * [Live API](/api/live)
   * [Live Music API](/api/live_music)
+  * [Interactions API](/api/interactions-api)
   * [Tokens](/api/tokens)
   * [Files](/api/files)
   * [Batch API](/api/batch-api)
@@ -89,7 +90,7 @@ Skip to main content
 
 
 
-Gemini 3 Pro is here. [Try it for free in Google AI Studio](https://aistudio.google.com?model=gemini-3-pro-preview). 
+A new Live API model is here. [Try it for free in Google AI Studio](https://aistudio.google.com/live). 
 
   * [ Home ](https://ai.google.dev/)
   * [ Gemini API ](https://ai.google.dev/gemini-api)
