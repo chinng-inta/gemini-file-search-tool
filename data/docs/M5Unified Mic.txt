@@ -1,6 +1,6 @@
 ---
 doc_type: M5Unified Mic
-crawled_at: 2025/12/14 09:50:35
+crawled_at: 2025/12/21 09:49:56
 first_url: https://docs.m5stack.com/ja/arduino/m5unified/mic_class/
 ---
 
@@ -1786,6 +1786,14 @@ Chain
 ##### 
 
 [ Chain デバイスのバス通信 ](/en/arduino/projects/chain/chain_bus)
+
+##### 
+
+[ Chain Angle ](/en/arduino/projects/chain/chain_angle)
+
+##### 
+
+[ Chain Encoder ](/en/arduino/projects/chain/chain_encoder)
 
 ##### 
 

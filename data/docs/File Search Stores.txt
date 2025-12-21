@@ -1,6 +1,6 @@
 ---
 doc_type: File Search Stores
-crawled_at: 2025/12/14 09:50:44
+crawled_at: 2025/12/21 09:50:04
 first_url: https://ai.google.dev/api/file-search/file-search-stores
 ---
 
@@ -90,7 +90,7 @@ Skip to main content
 
 
 
-A new Live API model is here. [Try it for free in Google AI Studio](https://aistudio.google.com/live). 
+Gemini 3 Flash is here. [Try it for free in Google AI Studio](https://aistudio.google.com?model=gemini-3-flash-preview). 
 
   * [ Home ](https://ai.google.dev/)
   * [ Gemini API ](https://ai.google.dev/gemini-api)
