@@ -1,6 +1,6 @@
 ---
 doc_type: C++
-crawled_at: 2026/01/04 09:54:20
+crawled_at: 2026/01/11 09:53:37
 first_url: https://cpprefjp.github.io/reference.html
 ---
 
