@@ -1,6 +1,6 @@
 ---
 doc_type: M5GFX
-crawled_at: 2026/01/11 09:53:36
+crawled_at: 2026/01/18 09:52:55
 first_url: https://docs.m5stack.com/ja/arduino/m5gfx/m5gfx_functions/
 ---
 
@@ -1779,6 +1779,10 @@ Atom DTU
 
 [ Atom DTU NBIoT2 ](/en/arduino/projects/atom_dtu/atom_dtu_nblot2)
 
+##### 
+
+[ Atom DTU NBIoT2 v1.1 ](/en/arduino/projects/atom_dtu/atom_dtu_nblot2_v1.1)
+
 #### 
 
 Hat 
@@ -1866,6 +1870,10 @@ StamPLC
 ##### 
 
 [ StamPLC AC ](/en/arduino/projects/stamplc/stamplc_ac)
+
+##### 
+
+[ StamPLC PoE ](/en/arduino/projects/stamplc/stamplc_poe)
 
 #### 
 
