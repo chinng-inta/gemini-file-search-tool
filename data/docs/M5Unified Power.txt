@@ -1,6 +1,6 @@
 ---
 doc_type: M5Unified Power
-crawled_at: 2026/01/25 09:53:51
+crawled_at: 2026/02/01 10:06:00
 first_url: https://docs.m5stack.com/ja/arduino/m5unified/power_class/
 ---
 
@@ -115,9 +115,9 @@ first_url: https://docs.m5stack.com/ja/arduino/m5unified/power_class/
 
   * [- Product Selector ](/ja/products_selector/m5core_compare)
 
-  * [- 3D STL Files ](https://github.com/m5stack/M5_Hardware/tree/master/Structure)
+  * [- 3D STL Files ](https://github.com/m5stack/M5_Hardware)
 
-  * [- PCB Files ](https://github.com/m5stack/M5_Hardware/tree/master/PCB)
+  * [- PCB Files ](https://github.com/m5stack/M5_Hardware)
 
   * EXPLORE
 
