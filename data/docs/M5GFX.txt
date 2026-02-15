@@ -1,6 +1,6 @@
 ---
 doc_type: M5GFX
-crawled_at: 2026/02/08 10:15:05
+crawled_at: 2026/02/15 10:03:45
 first_url: https://docs.m5stack.com/ja/arduino/m5gfx/m5gfx_functions/
 ---
 
@@ -1127,7 +1127,7 @@ StickS3
 
 ##### 
 
-[ PMIC ](/en/arduino/m5sticks3/pmic)
+[ M5PM1 ](/en/arduino/m5sticks3/m5pm1)
 
 #### 
 
