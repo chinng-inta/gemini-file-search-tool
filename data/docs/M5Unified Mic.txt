@@ -1,6 +1,6 @@
 ---
 doc_type: M5Unified Mic
-crawled_at: 2026/02/15 10:03:39
+crawled_at: 2026/02/22 09:59:58
 first_url: https://docs.m5stack.com/ja/arduino/m5unified/mic_class/
 ---
 

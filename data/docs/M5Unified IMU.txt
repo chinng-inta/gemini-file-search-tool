@@ -1,6 +1,6 @@
 ---
 doc_type: M5Unified IMU
-crawled_at: 2026/02/15 10:03:30
+crawled_at: 2026/02/22 09:59:50
 first_url: https://docs.m5stack.com/ja/arduino/m5unified/imu_class/
 ---
 

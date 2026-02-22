@@ -1,6 +1,6 @@
 ---
 doc_type: M5GFX
-crawled_at: 2026/02/15 10:03:45
+crawled_at: 2026/02/22 10:00:04
 first_url: https://docs.m5stack.com/ja/arduino/m5gfx/m5gfx_functions/
 ---
 
