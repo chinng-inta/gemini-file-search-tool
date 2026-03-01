@@ -1,6 +1,6 @@
 ---
 doc_type: File Search Stores
-crawled_at: 2026/02/22 10:00:19
+crawled_at: 2026/03/01 10:05:27
 first_url: https://ai.google.dev/api/file-search/file-search-stores
 ---
 
@@ -90,7 +90,7 @@ Skip to main content
 
 
 
-Announcing Gemini 3.1 Pro Preview. [Try it for free in Google AI Studio](https://aistudio.google.com/prompts/new_chat?model=gemini-3.1-pro-preview). 
+Nano Banana 2 is here. [Learn more in our blog](https://blog.google/innovation-and-ai/technology/developers-tools/build-with-nano-banana-2/). 
 
   * [ Home ](https://ai.google.dev/)
   * [ Gemini API ](https://ai.google.dev/gemini-api)
