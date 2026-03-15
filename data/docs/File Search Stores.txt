@@ -1,6 +1,6 @@
 ---
 doc_type: File Search Stores
-crawled_at: 2026/03/08 09:59:48
+crawled_at: 2026/03/15 10:07:48
 first_url: https://ai.google.dev/api/file-search/file-search-stores
 ---
 
@@ -90,7 +90,7 @@ Skip to main content
 
 
 
-Gemini 3.1 Flash-Lite Preview is now available. [Try it in AI Studio](https://aistudio.google.com/prompts/new_chat?model=gemini-3.1-flash-lite-preview). 
+Announcing [Gemini Embedding 2](/gemini-api/docs/embeddings), our first fully multimodal embedding model. 
 
   * [ Home ](https://ai.google.dev/)
   * [ Gemini API ](https://ai.google.dev/gemini-api)
