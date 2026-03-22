@@ -1,6 +1,6 @@
 ---
 doc_type: File Search Stores
-crawled_at: 2026/03/15 10:07:48
+crawled_at: 2026/03/22 10:02:39
 first_url: https://ai.google.dev/api/file-search/file-search-stores
 ---
 
@@ -90,7 +90,7 @@ Skip to main content
 
 
 
-Announcing [Gemini Embedding 2](/gemini-api/docs/embeddings), our first fully multimodal embedding model. 
+Try the new [Built-in tools and Function calling combination](/gemini-api/docs/tool-combination) feature, and [Grounding with Google Maps](/gemini-api/docs/maps-grounding), now supported for Gemini 3 models. 
 
   * [ Home ](https://ai.google.dev/)
   * [ Gemini API ](https://ai.google.dev/gemini-api)
