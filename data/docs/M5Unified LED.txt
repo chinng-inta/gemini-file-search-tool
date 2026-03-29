@@ -1,6 +1,6 @@
 ---
 doc_type: M5Unified LED
-crawled_at: 2026/03/22 10:02:13
+crawled_at: 2026/03/29 10:09:19
 first_url: https://docs.m5stack.com/ja/arduino/m5unified/led_class/
 ---
 
@@ -56,6 +56,8 @@ first_url: https://docs.m5stack.com/ja/arduino/m5unified/led_class/
   * [- Ezdata 2.0 ](/ja/guide/ezdata/ezdata_v2)
 
   * [- EasyLoader Packer ](/ja/guide/easyloader/easyloader_packer)
+
+  * [- モジュール積層互換 ](/ja/compatible_stack)
 
   * [- Stacking Screw Length Calculator ](/ja/learn/extension/module)
 
@@ -1005,18 +1007,6 @@ PowerHub
 
 #### 
 
-Stamp C6LoRa 
-
-##### 
-
-[ クイックスタート ](/en/arduino/m5stamp_c6lora/program)
-
-##### 
-
-[ EXT IO ](/en/arduino/m5stamp_c6lora/ext_io)
-
-#### 
-
 [ Stamp-C3 ](/en/arduino/m5stampc3/program)
 
 #### 
@@ -1070,6 +1060,18 @@ Stamp-S3Bat
 ##### 
 
 [ Wakeup ](/en/arduino/m5stamp_s3bat/wakeup)
+
+#### 
+
+Stamp-P4 
+
+##### 
+
+[ クイックスタート ](/en/arduino/m5stampp4/program)
+
+##### 
+
+[ Wi-Fi ](/en/arduino/m5stampp4/wifi)
 
 #### 
 

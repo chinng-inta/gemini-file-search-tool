@@ -1,6 +1,6 @@
 ---
 doc_type: C++
-crawled_at: 2026/03/22 10:02:37
+crawled_at: 2026/03/29 10:09:41
 first_url: https://cpprefjp.github.io/reference.html
 ---
 
@@ -17,8 +17,8 @@ Toggle navigation [ cpprefjp - C++日本語リファレンス ](./index.html)
 
 
 
-最終更新日時(UTC):  2026年01月18日 09時49分27秒    
-K10-K10 が更新 
+最終更新日時(UTC):  2026年03月24日 04時23分43秒    
+Akira Takahashi が更新 
 
 [ 履歴 ](https://github.com/cpprefjp/site/commits/master/reference.md) [ 編集 ](https://github.com/cpprefjp/site/edit/master/reference.md)
 
@@ -113,7 +113,7 @@ K10-K10 が更新
 ヘッダ | 説明 | 対応バージョン  
 ---|---|---  
 `[<locale>](reference/locale.html)` | ロケール |   
-`<text_encoding>` | 文字列エンコーディングの識別 | C++26  
+`[<text_encoding>](reference/text_encoding.html)` | 文字列エンコーディングの識別 | C++26  
 `[<codecvt>](reference/codecvt.html)` | コード変換ファセット | C++11  
 C++17から非推奨  
 C++26で削除  
