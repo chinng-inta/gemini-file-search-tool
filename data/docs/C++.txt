@@ -1,6 +1,6 @@
 ---
 doc_type: C++
-crawled_at: 2026/03/29 10:09:41
+crawled_at: 2026/04/05 10:10:09
 first_url: https://cpprefjp.github.io/reference.html
 ---
 
@@ -17,7 +17,7 @@ Toggle navigation [ cpprefjp - C++日本語リファレンス ](./index.html)
 
 
 
-最終更新日時(UTC):  2026年03月24日 04時23分43秒    
+最終更新日時(UTC):  2026年03月30日 09時31分10秒    
 Akira Takahashi が更新 
 
 [ 履歴 ](https://github.com/cpprefjp/site/commits/master/reference.md) [ 編集 ](https://github.com/cpprefjp/site/edit/master/reference.md)
@@ -129,7 +129,7 @@ C++26で削除
 `[<queue>](reference/queue.html)` | FIFOキュー |   
 `[<stack>](reference/stack.html)` | LIFOスタック |   
 `[<vector>](reference/vector.html)` | 可変長配列 |   
-`<inplace_vector>` | 容量固定の可変長配列 | C++26  
+`[<inplace_vector>](reference/inplace_vector.html)` | 容量固定の可変長配列 | C++26  
 `[<map>](reference/map.html)` | 順序付き連想配列 |   
 `[<set>](reference/set.html)` | 順序付き集合 |   
 `[<flat_map>](reference/flat_map.html)` | ソート済みキーによる順序付き連想配列 | C++23  
