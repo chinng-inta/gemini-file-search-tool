@@ -1,6 +1,6 @@
 ---
 doc_type: Arduino Servo
-crawled_at: 2026/04/05 10:09:31
+crawled_at: 2026/04/12 10:13:35
 first_url: https://docs.arduino.cc/libraries/servo/
 ---
 

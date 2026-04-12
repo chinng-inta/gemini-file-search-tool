@@ -1,6 +1,6 @@
 ---
 doc_type: C++
-crawled_at: 2026/04/05 10:10:09
+crawled_at: 2026/04/12 10:14:11
 first_url: https://cpprefjp.github.io/reference.html
 ---
 
@@ -17,7 +17,7 @@ Toggle navigation [ cpprefjp - C++日本語リファレンス ](./index.html)
 
 
 
-最終更新日時(UTC):  2026年03月30日 09時31分10秒    
+最終更新日時(UTC):  2026年04月06日 02時49分40秒    
 Akira Takahashi が更新 
 
 [ 履歴 ](https://github.com/cpprefjp/site/commits/master/reference.md) [ 編集 ](https://github.com/cpprefjp/site/edit/master/reference.md)
@@ -250,8 +250,8 @@ C++20で削除
 `<cstdalign>` | アライメント操作のマクロ | C++17で非推奨  
 C++20で削除  
 `<cstdarg>` | 可変引数操作 |   
-`<stdbit.h>` | ビット操作 | C++26  
-`<stdckdint.h>` | 検査付き整数演算 | C++26  
+`[<stdbit.h>](reference/stdbit.h.html)` | ビット操作 | C++26  
+`[<stdckdint.h>](reference/stdckdint.h.html)` | 検査付き整数演算 | C++26  
 `<cstdbool>` | 真理値型の定義 | C++11 (C99)  
 C++17で非推奨  
 C++20で削除  
