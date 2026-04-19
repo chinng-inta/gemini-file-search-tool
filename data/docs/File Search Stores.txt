@@ -1,6 +1,6 @@
 ---
 doc_type: File Search Stores
-crawled_at: 2026/04/12 10:14:12
+crawled_at: 2026/04/19 10:17:06
 first_url: https://ai.google.dev/api/file-search/file-search-stores
 ---
 
@@ -76,10 +76,6 @@ Skip to main content
     * [Document](/api/file-search/documents)
 
   * [All methods](/api/all-methods)
-  * Deprecated
-
-    * [PaLM (decomissioned)](/api/palm)
-
   * SDK references
 
   * [Python](https://googleapis.github.io/python-genai/)
@@ -90,7 +86,7 @@ Skip to main content
 
 
 
-Try the new high-speed, cost-effective [Veo 3.1 Lite](/gemini-api/docs/models/veo-3.1-lite-generate-preview) model for video generation at scale. 
+Try the new [Gemini 3.1 Flash TTS Preview](/gemini-api/docs/models/gemini-3.1-flash-tts-preview) model for expressive, multilingual speech generation. 
 
   * [ Home ](https://ai.google.dev/)
   * [ Gemini API ](https://ai.google.dev/gemini-api)
@@ -112,6 +108,7 @@ The File Search API provides a hosted question answering service for building Re
     * JSON representation
   * Response body
     * JSON representation
+  * Authorization scopes
 
 
 
@@ -307,6 +304,7 @@ Response from `fileSearchStores.list` containing a paginated list of `FileSearch
   * Request body
     * JSON representation
   * Response body
+  * Authorization scopes
 
 
 
@@ -502,9 +500,9 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-01-12 UTC.
+Last updated 2026-04-17 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-01-12 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-04-17 UTC."],[],[]] 
 
   * [ Terms ](//policies.google.com/terms)
   * [ Privacy ](//policies.google.com/privacy)
