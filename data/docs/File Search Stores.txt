@@ -1,6 +1,6 @@
 ---
 doc_type: File Search Stores
-crawled_at: 2026/04/19 10:17:06
+crawled_at: 2026/04/26 10:19:32
 first_url: https://ai.google.dev/api/file-search/file-search-stores
 ---
 
@@ -86,7 +86,7 @@ Skip to main content
 
 
 
-Try the new [Gemini 3.1 Flash TTS Preview](/gemini-api/docs/models/gemini-3.1-flash-tts-preview) model for expressive, multilingual speech generation. 
+[Gemini Deep Research](/gemini-api/docs/deep-research) is now available in preview with collaborative planning, visualization, MCP support, and more. 
 
   * [ Home ](https://ai.google.dev/)
   * [ Gemini API ](https://ai.google.dev/gemini-api)
