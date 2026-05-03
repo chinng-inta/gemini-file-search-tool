@@ -1,6 +1,6 @@
 ---
 doc_type: M5 products
-crawled_at: 2026/04/26 10:18:57
+crawled_at: 2026/05/03 10:25:34
 first_url: https://docs.m5stack.com/en/products/
 ---
 
@@ -96,6 +96,9 @@ Documentation
   * [I2C Table](/en/product_i2c_addr)
   * [Product Selector](/en/products_selector/m5core_compare)
   * [Hardware Design Files](https://github.com/m5stack/M5_Hardware)
+  * [Release History](/en/history)
+  * [Stack Compatibility](/en/compatible_stack)
+  * [Stack Screw Length](/en/learn/extension/module)
 
 
 
@@ -257,6 +260,9 @@ Documentation
   * [I2C Table](/en/product_i2c_addr)
   * [Product Selector](/en/products_selector/m5core_compare)
   * [Hardware Design Files](https://github.com/m5stack/M5_Hardware)
+  * [Release History](/en/history)
+  * [Stack Compatibility](/en/compatible_stack)
+  * [Stack Screw Length](/en/learn/extension/module)
 
 
 
@@ -380,6 +386,9 @@ Documentation
   * [I2C Table](/en/product_i2c_addr)
   * [Product Selector](/en/products_selector/m5core_compare)
   * [Hardware Design Files](https://github.com/m5stack/M5_Hardware)
+  * [Release History](/en/history)
+  * [Stack Compatibility](/en/compatible_stack)
+  * [Stack Screw Length](/en/learn/extension/module)
 
 
 
