@@ -1,6 +1,6 @@
 ---
 doc_type: M5Unified Button
-crawled_at: 2026/05/03 10:25:41
+crawled_at: 2026/05/10 10:29:36
 first_url: https://docs.m5stack.com/ja/arduino/m5unified/button_class/
 ---
 

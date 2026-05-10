@@ -1,6 +1,6 @@
 ---
 doc_type: Arduino liquidcrystal
-crawled_at: 2026/05/03 10:25:25
+crawled_at: 2026/05/10 10:29:21
 first_url: https://docs.arduino.cc/libraries/liquidcrystal/
 ---
 

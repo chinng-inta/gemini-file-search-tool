@@ -1,6 +1,6 @@
 ---
 doc_type: C++
-crawled_at: 2026/05/03 10:26:09
+crawled_at: 2026/05/10 10:30:02
 first_url: https://cpprefjp.github.io/reference.html
 ---
 
@@ -17,7 +17,7 @@ Toggle navigation [ cpprefjp - C++日本語リファレンス ](./index.html)
 
 
 
-最終更新日時(UTC):  2026年04月06日 02時49分40秒    
+最終更新日時(UTC):  2026年05月07日 02時42分33秒    
 Akira Takahashi が更新 
 
 [ 履歴 ](https://github.com/cpprefjp/site/commits/master/reference.md) [ 編集 ](https://github.com/cpprefjp/site/edit/master/reference.md)
@@ -100,6 +100,7 @@ Akira Takahashi が更新
 `[<charconv>](reference/charconv.html)` | 高速な文字列 ⇔ 数値変換 | C++17  
 `[<format>](reference/format.html)` | 文字列フォーマット | C++20  
 `[<stacktrace>](reference/stacktrace.html)` | スタックトレース | C++23  
+`[<meta>](reference/meta.html)` | 静的リフレクション | C++26  
   
 ## 文字列ライブラリ
 
@@ -245,7 +246,7 @@ C++20で削除
 `[<climits>](reference/climits.html)` | 整数型の最小値、最大値を表すマクロ |   
 `[<clocale>](reference/clocale.html)` | ロケール |   
 `[<cmath>](reference/cmath.html)` | 数学関数 |   
-`<csetjmp>` | ジャンプ処理 |   
+`[<csetjmp>](reference/csetjmp.html)` | ジャンプ処理 |   
 `[<csignal>](reference/csignal.html)` | シグナル |   
 `<cstdalign>` | アライメント操作のマクロ | C++17で非推奨  
 C++20で削除  

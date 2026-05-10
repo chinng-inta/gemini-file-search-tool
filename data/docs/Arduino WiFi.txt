@@ -1,6 +1,6 @@
 ---
 doc_type: Arduino WiFi
-crawled_at: 2026/05/03 10:25:30
+crawled_at: 2026/05/10 10:29:26
 first_url: https://docs.arduino.cc/libraries/wifi/
 ---
 

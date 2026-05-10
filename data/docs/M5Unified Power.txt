@@ -1,6 +1,6 @@
 ---
 doc_type: M5Unified Power
-crawled_at: 2026/05/03 10:25:47
+crawled_at: 2026/05/10 10:29:42
 first_url: https://docs.m5stack.com/ja/arduino/m5unified/power_class/
 ---
 
