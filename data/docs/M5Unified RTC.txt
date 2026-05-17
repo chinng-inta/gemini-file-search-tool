@@ -1,6 +1,6 @@
 ---
 doc_type: M5Unified RTC
-crawled_at: 2026/05/10 10:29:57
+crawled_at: 2026/05/17 10:46:25
 first_url: https://docs.m5stack.com/ja/arduino/m5unified/rtc8563_class/
 ---
 
@@ -922,6 +922,62 @@ PaperS3
 ##### 
 
 [ Wakeup ](/en/arduino/m5papers3/wakeup)
+
+#### 
+
+PaperColor 
+
+##### 
+
+[ クイックスタート ](/en/arduino/papercolor/program)
+
+##### 
+
+[ Display ](/en/arduino/papercolor/display)
+
+##### 
+
+[ Button ](/en/arduino/papercolor/button)
+
+##### 
+
+[ Battery ](/en/arduino/papercolor/battery)
+
+##### 
+
+[ RGB LED ](/en/arduino/papercolor/rgb_led)
+
+##### 
+
+[ IR NEC ](/en/arduino/papercolor/ir_nec)
+
+##### 
+
+[ MIC ](/en/arduino/papercolor/mic)
+
+##### 
+
+[ Speaker ](/en/arduino/papercolor/speaker)
+
+##### 
+
+[ microSD ](/en/arduino/papercolor/microsd)
+
+##### 
+
+[ SHT40 ](/en/arduino/papercolor/sht40)
+
+##### 
+
+[ RTC ](/en/arduino/papercolor/rtc)
+
+##### 
+
+[ Wakeup ](/en/arduino/papercolor/wakeup)
+
+##### 
+
+[ M5PM1 ](/en/arduino/papercolor/m5pm1)
 
 #### 
 
