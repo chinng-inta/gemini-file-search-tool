@@ -1,6 +1,6 @@
 ---
 doc_type: M5Unified speaker
-crawled_at: 2026/05/24 10:52:53
+crawled_at: 2026/05/31 10:59:36
 first_url: https://docs.m5stack.com/ja/arduino/m5unified/speaker_class/
 ---
 
@@ -2114,6 +2114,14 @@ StamPLC
 ##### 
 
 [ StamPLC PoE ](/en/arduino/projects/stamplc/stamplc_poe)
+
+#### 
+
+Tab5 
+
+##### 
+
+[ Tab5 Keyboard ](/en/arduino/projects/tab5/tab5_keyboard)
 
 #### 
 
