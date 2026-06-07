@@ -1,6 +1,6 @@
 ---
 doc_type: M5Unified Touch
-crawled_at: 2026/05/31 10:59:33
+crawled_at: 2026/06/07 11:04:22
 first_url: https://docs.m5stack.com/ja/arduino/m5unified/touch_class/
 ---
 
@@ -2098,6 +2098,10 @@ Chain
 ##### 
 
 [ Chain Key ](/en/arduino/projects/chain/chain_key)
+
+##### 
+
+[ Chain Mono ](/en/arduino/projects/chain/chain_mono)
 
 ##### 
 
