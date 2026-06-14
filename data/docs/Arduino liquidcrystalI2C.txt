@@ -1,6 +1,6 @@
 ---
 doc_type: Arduino liquidcrystalI2C
-crawled_at: 2026/06/07 11:03:57
+crawled_at: 2026/06/14 11:07:39
 first_url: https://docs.arduino.cc/libraries/liquidcrystal-i2c/
 ---
 
