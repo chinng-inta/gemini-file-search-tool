@@ -1,6 +1,6 @@
 ---
 doc_type: M5Unified RTC
-crawled_at: 2026/06/21 11:11:11
+crawled_at: 2026/06/28 11:01:18
 first_url: https://docs.m5stack.com/ja/arduino/m5unified/rtc8563_class/
 ---
 
@@ -86,6 +86,10 @@ Tab5
 ##### 
 
 [ Power ](/en/arduino/m5tab5/power)
+
+##### 
+
+[ Wakeup ](/en/arduino/m5tab5/wakeup)
 
 #### 
 
@@ -2082,6 +2086,10 @@ Hat
 #### 
 
 Base 
+
+##### 
+
+[ Base Dual 16340 ](/en/arduino/projects/base/base_dual_16340)
 
 ##### 
 
