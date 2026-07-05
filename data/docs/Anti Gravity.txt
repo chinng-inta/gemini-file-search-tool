@@ -1,6 +1,6 @@
 ---
 doc_type: Anti Gravity
-crawled_at: 2026/06/28 11:06:31
+crawled_at: 2026/07/05 10:36:12
 first_url: https://antigravity.google/docs/home
 ---
 
