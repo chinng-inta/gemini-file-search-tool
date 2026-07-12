@@ -1,6 +1,6 @@
 ---
 doc_type: M5Unified Touch
-crawled_at: 2026/07/05 10:31:06
+crawled_at: 2026/07/12 10:17:47
 first_url: https://docs.m5stack.com/ja/arduino/m5unified/touch_class/
 ---
 
@@ -1094,6 +1094,22 @@ PowerHub
 #### 
 
 [ Stamp-C3U ](/en/arduino/m5stampc3u/program)
+
+#### 
+
+Stamp-C5 
+
+##### 
+
+[ クイックスタート ](/en/arduino/m5stampc5/program)
+
+##### 
+
+[ LED ](/en/arduino/m5stampc5/led)
+
+##### 
+
+[ Wi-Fi ](/en/arduino/m5stampc5/wifi)
 
 #### 
 
