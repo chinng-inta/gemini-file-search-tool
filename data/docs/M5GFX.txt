@@ -1,6 +1,6 @@
 ---
 doc_type: M5GFX
-crawled_at: 2026/07/12 10:17:58
+crawled_at: 2026/07/19 10:15:45
 first_url: https://docs.m5stack.com/ja/arduino/m5gfx/m5gfx_functions/
 ---
 
@@ -22,8 +22,6 @@ English
 简体中文
 
 日本語
-
-[](https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/pdf/static.pdf)
 
 Arduino入門
 
@@ -1337,6 +1335,42 @@ StickC-Plus
 
 #### 
 
+StickC-Plus SE 
+
+##### 
+
+[ クイックスタート ](/en/arduino/m5stickc-plus_se/program)
+
+##### 
+
+[ Battery ](/en/arduino/m5stickc-plus_se/battery)
+
+##### 
+
+[ Button ](/en/arduino/m5stickc-plus_se/button)
+
+##### 
+
+[ Display ](/en/arduino/m5stickc-plus_se/display)
+
+##### 
+
+[ IR NEC ](/en/arduino/m5stickc-plus_se/ir_nec)
+
+##### 
+
+[ MIC ](/en/arduino/m5stickc-plus_se/mic)
+
+##### 
+
+[ Speaker ](/en/arduino/m5stickc-plus_se/speaker)
+
+##### 
+
+[ Wakeup ](/en/arduino/m5stickc-plus_se/wakeup)
+
+#### 
+
 StickC-Plus2 
 
 ##### 
@@ -2169,6 +2203,10 @@ StamPLC
 
 ##### 
 
+[ StamPLC IO ](/en/arduino/projects/stamplc/stamplc_io)
+
+##### 
+
 [ StamPLC PoE ](/en/arduino/projects/stamplc/stamplc_poe)
 
 #### 
@@ -2712,6 +2750,12 @@ Search
 
 
 [Next 1\. Arduino環境設定 - 1. Arduino IDEインストール ](/en/arduino/arduino_ide)
+
+Page Tools
+
+[ PDF](https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/pdf/static/ja/arduino/m5gfx/m5gfx_functions.pdf "Download PDF")
+
+Copy page
 
 ###### On This Page
 

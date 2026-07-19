@@ -1,6 +1,6 @@
 ---
 doc_type: M5Unified Touch
-crawled_at: 2026/07/12 10:17:47
+crawled_at: 2026/07/19 10:15:36
 first_url: https://docs.m5stack.com/ja/arduino/m5unified/touch_class/
 ---
 
@@ -22,8 +22,6 @@ English
 简体中文
 
 日本語
-
-[](https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/pdf/static.pdf)
 
 Arduino入門
 
@@ -1337,6 +1335,42 @@ StickC-Plus
 
 #### 
 
+StickC-Plus SE 
+
+##### 
+
+[ クイックスタート ](/en/arduino/m5stickc-plus_se/program)
+
+##### 
+
+[ Battery ](/en/arduino/m5stickc-plus_se/battery)
+
+##### 
+
+[ Button ](/en/arduino/m5stickc-plus_se/button)
+
+##### 
+
+[ Display ](/en/arduino/m5stickc-plus_se/display)
+
+##### 
+
+[ IR NEC ](/en/arduino/m5stickc-plus_se/ir_nec)
+
+##### 
+
+[ MIC ](/en/arduino/m5stickc-plus_se/mic)
+
+##### 
+
+[ Speaker ](/en/arduino/m5stickc-plus_se/speaker)
+
+##### 
+
+[ Wakeup ](/en/arduino/m5stickc-plus_se/wakeup)
+
+#### 
+
 StickC-Plus2 
 
 ##### 
@@ -2166,6 +2200,10 @@ StamPLC
 ##### 
 
 [ StamPLC AC ](/en/arduino/projects/stamplc/stamplc_ac)
+
+##### 
+
+[ StamPLC IO ](/en/arduino/projects/stamplc/stamplc_io)
 
 ##### 
 
@@ -3045,6 +3083,12 @@ cpp ` struct touch_detail_t : public m5gfx::touch_point_t { // ... (Content trun
 
 
 [Next 1\. Arduino環境設定 - 1. Arduino IDEインストール ](/en/arduino/arduino_ide)
+
+Page Tools
+
+[ PDF](https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/pdf/static/ja/arduino/m5unified/touch_class.pdf "Download PDF")
+
+Copy page
 
 ###### On This Page
 

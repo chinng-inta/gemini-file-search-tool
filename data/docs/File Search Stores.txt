@@ -1,6 +1,6 @@
 ---
 doc_type: File Search Stores
-crawled_at: 2026/07/12 10:18:02
+crawled_at: 2026/07/19 10:15:48
 first_url: https://ai.google.dev/api/file-search/file-search-stores
 ---
 
@@ -71,6 +71,7 @@ Skip to main content
   * [Model API](/api/models)
   * [Agents](/api/agents)
   * [Webhooks](/api/webhooks)
+  * [Triggers](/api/triggers)
   * [Batch API](/api/batch-api)
   * [Files API](/api/files)
   * [Tokens](/api/tokens)
