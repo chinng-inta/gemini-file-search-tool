@@ -1,6 +1,6 @@
 ---
 doc_type: M5 products
-crawled_at: 2026/07/26 10:21:31
+crawled_at: 2026/08/02 10:20:44
 first_url: https://docs.m5stack.com/en/products/
 ---
 
@@ -1823,11 +1823,15 @@ Search
 
 ##  For Chain-Sensor 
 
+## [Chain PIR STM32G031G8U6 AS312 PIR WS2812C UART HY2.0-4P ](/en/chain/Chain_PIR)
+
+[View Details](/en/chain/Chain_PIR) [](https://shop.m5stack.com/products/chain-pir-stm32g031)
+
 ## [Chain ToF VL53L0C WS2812C STM32G031G8U6 UART Rang Sensor Laser ](/en/chain/Chain_ToF)
 
 [View Details](/en/chain/Chain_ToF) [](https://shop.m5stack.com/products/chain-tof-vl53l0)
 
-[Chain ToF](/en/chain/Chain_ToF)
+[Chain PIR](/en/chain/Chain_PIR)[Chain ToF](/en/chain/Chain_ToF)
 
 ##  For Chain-Connector 
 
@@ -4259,11 +4263,15 @@ Search
 
 ##  For Chain-Sensor 
 
+## [Chain PIR STM32G031G8U6 AS312 PIR WS2812C UART HY2.0-4P ](/en/chain/Chain_PIR)
+
+[View Details](/en/chain/Chain_PIR) [](https://shop.m5stack.com/products/chain-pir-stm32g031)
+
 ## [Chain ToF VL53L0C WS2812C STM32G031G8U6 UART Rang Sensor Laser ](/en/chain/Chain_ToF)
 
 [View Details](/en/chain/Chain_ToF) [](https://shop.m5stack.com/products/chain-tof-vl53l0)
 
-[Chain ToF](/en/chain/Chain_ToF)
+[Chain PIR](/en/chain/Chain_PIR)[Chain ToF](/en/chain/Chain_ToF)
 
 ##  For Chain-Connector 
 

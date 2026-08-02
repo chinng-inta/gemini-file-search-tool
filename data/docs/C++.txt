@@ -1,6 +1,6 @@
 ---
 doc_type: C++
-crawled_at: 2026/07/26 10:21:55
+crawled_at: 2026/08/02 10:21:09
 first_url: https://cpprefjp.github.io/reference.html
 ---
 
@@ -17,7 +17,7 @@ Toggle navigation [ cpprefjp - C++日本語リファレンス ](./index.html)
 
 
 
-最終更新日時:  2026年06月08日 20時56分08秒 (JST)    
+最終更新日時:  2026年07月29日 11時07分26秒 (JST)    
 Akira Takahashi が更新 
 
 [ 履歴 ](https://github.com/cpprefjp/site/commits/master/reference.md) [ 編集 ](https://github.com/cpprefjp/site/edit/master/reference.md)
@@ -126,6 +126,7 @@ C++26で削除
 `[<array>](reference/array.html)` | 配列 | C++11  
 `[<deque>](reference/deque.html)` | 両端キュー |   
 `[<forward_list>](reference/forward_list.html)` | 単方向リスト | C++11  
+`[<hive>](reference/hive.html)` | 要素のメモリ位置が安定したコンテナ | C++26  
 `[<list>](reference/list.html)` | 双方向リスト |   
 `[<queue>](reference/queue.html)` | FIFOキュー |   
 `[<stack>](reference/stack.html)` | LIFOスタック |   

@@ -1,6 +1,6 @@
 ---
 doc_type: Anti Gravity
-crawled_at: 2026/07/26 10:26:36
+crawled_at: 2026/08/02 10:25:50
 first_url: https://antigravity.google/docs/home
 ---
 
@@ -74,7 +74,7 @@ Everything you need to stay up-to-date and get help
 
 [Home](/docs/home)
 
-Antigravity 2.0v2.3.1keyboard_arrow_right
+Antigravity 2.0v2.4.3keyboard_arrow_right
 
 [Overview](/docs/overview)
 
@@ -126,7 +126,7 @@ Artifactskeyboard_arrow_right
 
 [Screenshots](/docs/screenshots)
 
-Antigravity CLIv1.1.7keyboard_arrow_right
+Antigravity CLIv1.1.9keyboard_arrow_right
 
 [Overview](/docs/cli/overview)
 
@@ -143,6 +143,8 @@ Antigravity CLIv1.1.7keyboard_arrow_right
 [Gemini Migration](/docs/cli/gcli-migration)
 
 [Prompting](/docs/cli/prompting)
+
+[Headless mode](/docs/cli/headless)
 
 Artifactskeyboard_arrow_right
 
@@ -170,7 +172,7 @@ Settingskeyboard_arrow_right
 
 Customizationskeyboard_arrow_right
 
-[MCP](/docs/mcp)
+[MCP](/docs/cli/mcp#antigravity-cli)
 
 [Plugins & Skills](/docs/cli/plugins)
 
@@ -210,7 +212,7 @@ Antigravity SDKv0.1.7keyboard_arrow_right
 
 Customizationskeyboard_arrow_right
 
-[MCP](/docs/mcp)
+[MCP](/docs/sdk/mcp#antigravity-sdk)
 
 Antigravity IDEv2.1.1keyboard_arrow_right
 
@@ -246,7 +248,7 @@ Browserkeyboard_arrow_right
 
 Customizationskeyboard_arrow_right
 
-[MCP](/docs/mcp)
+[MCP](/docs/ide/mcp#antigravity-ide)
 
 [Skills](/docs/ide/skills)
 
@@ -324,12 +326,12 @@ Every Antigravity surface runs on a shared, highly-optimized agent harness co-tr
   * **[Asynchronous Subagents](/docs/subagents)** : Allows the main agent to delegate parallel background tasks to concurrent subagents without blocking your flow.
   * **[Visual Artifacts](/docs/artifacts)** : Track and verify agent output (plans, code diffs, browser recordings) with high-fidelity visual reports, keeping you informed every step of the way.
   * **[Security by Design](/docs/permissions)** : Secure local execution via safe defaults, local proxying, and granular tool approval gates.
-  * **[Google Integrations](/docs/build-with-google)** : We partner with product teams across Google to provide curated bundles of skills, MCP servers, and extensions that make building on Google platforms frictionless.
-  * **Android** : Editor extension, CLI integrations, and Android developer skills.
-  * **Firebase** : Curated skills for Firebase Firestore, Cloud Functions, and more.
-  * **Web** : Chrome and Web MCP servers for autonomous browser research.
-  * **Science** : Specialized DeepMind biology and chemistry skills to accelerate scientific workflows.
-  * **AGY SDK** : Skills that optimize your agent’s ability to use the Antigravity SDK to build custom AI agents tailored to your workflow.
+  * **[Google Integrations](/docs/build-with-google)** : We partner with product teams across Google to provide curated bundles of skills, MCP servers, and extensions that make building on Google platforms frictionless. 
+    * **Android** : Editor extension, CLI integrations, and Android developer skills.
+    * **Firebase** : Curated skills for Firebase Firestore, Cloud Functions, and more.
+    * **Web** : Chrome and Web MCP servers for autonomous browser research.
+    * **Science** : Specialized DeepMind biology and chemistry skills to accelerate scientific workflows.
+    * **AGY SDK** : Skills that optimize your agent’s ability to use the Antigravity SDK to build custom AI agents tailored to your workflow.
 
 
 

@@ -1,6 +1,6 @@
 ---
 doc_type: File Search Stores
-crawled_at: 2026/07/26 10:21:57
+crawled_at: 2026/08/02 10:21:10
 first_url: https://ai.google.dev/api/file-search/file-search-stores
 ---
 
@@ -72,6 +72,7 @@ Skip to main content
   * [Agents](/api/agents)
   * [Webhooks](/api/webhooks)
   * [Triggers](/api/triggers)
+  * [Environments](/api/environments)
   * [Batch API](/api/batch-api)
   * [Files API](/api/files)
   * [Tokens](/api/tokens)
@@ -83,7 +84,6 @@ Skip to main content
     * [Documents](/api/file-search/documents)
 
   * [All methods](/api/all-methods)
-  * [Miscellaneous](/api/miscellaneous)
   * SDK references
 
   * [Python](https://googleapis.github.io/python-genai/)

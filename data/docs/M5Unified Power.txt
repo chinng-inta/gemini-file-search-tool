@@ -1,6 +1,6 @@
 ---
 doc_type: M5Unified Power
-crawled_at: 2026/07/26 10:21:41
+crawled_at: 2026/08/02 10:20:54
 first_url: https://docs.m5stack.com/ja/arduino/m5unified/power_class/
 ---
 
@@ -739,7 +739,7 @@ StopWatch
 
 ##### 
 
-[ M5PM1 & M5IOE1 ](/en/arduino/stopwatch/m5pm1&m5ioe1)
+[ M5PM1 & M5IOE1 ](/en/arduino/stopwatch/m5pm1_m5ioe1)
 
 #### 
 
@@ -1971,6 +1971,10 @@ Module
 
 ##### 
 
+[ Module13.2 Servo2 ](/en/arduino/projects/module/module13.2_servo2)
+
+##### 
+
 [ Module Fan v1.1 ](/en/arduino/projects/module/module_fan_v1.1)
 
 ##### 
@@ -2196,6 +2200,10 @@ Chain
 ##### 
 
 [ Chain Buzzer ](/en/arduino/projects/chain/chain_buzzer)
+
+##### 
+
+[ Chain PIR ](/en/arduino/projects/chain/chain_pir)
 
 #### 
 
