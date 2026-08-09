@@ -1,6 +1,6 @@
 ---
 doc_type: Anti Gravity
-crawled_at: 2026/08/02 10:25:50
+crawled_at: 2026/08/09 09:51:19
 first_url: https://antigravity.google/docs/home
 ---
 
@@ -18,7 +18,7 @@ Use Caseskeyboard_arrow_down
 
 [Pricing](/pricing)
 
-[Blog](/blog)
+[Enterprise](/use-cases/enterprise)
 
 Resourceskeyboard_arrow_down
 
@@ -38,11 +38,11 @@ Built for developers in the agent-first era
 
 [See overview](/use-cases)
 
-[Enterprise](/use-cases/enterprise)[Frontend](/use-cases/frontend)[Fullstack](/use-cases/fullstack)[Science](/use-cases/science)[Marketer](/use-cases/marketer)
+[Frontend](/use-cases/frontend)[Fullstack](/use-cases/fullstack)[Science](/use-cases/science)[Marketer](/use-cases/marketer)
 
 Everything you need to stay up-to-date and get help
 
-[Documentationkeyboard_arrow_right](/docs/getting-started)[Changelog](/changelog)[Support](/support)[Press](/press)[Releases](/releases)
+[Documentationkeyboard_arrow_right](/docs/getting-started)[Blog](/blog)[Changelog](/changelog)[Support](/support)[Press](/press)[Releases](/releases)
 
 Productskeyboard_arrow_down
 
@@ -60,21 +60,21 @@ Built for developers in the agent-first era
 
 [See overview](/use-cases)
 
-[Enterprise](/use-cases/enterprise)[Frontend](/use-cases/frontend)[Fullstack](/use-cases/fullstack)[Science](/use-cases/science)[Marketer](/use-cases/marketer)
+[Frontend](/use-cases/frontend)[Fullstack](/use-cases/fullstack)[Science](/use-cases/science)[Marketer](/use-cases/marketer)
 
 [Pricing](/pricing)
 
-[Blog](/blog)
+[Enterprise](/use-cases/enterprise)
 
 Resourceskeyboard_arrow_down
 
 Everything you need to stay up-to-date and get help
 
-[Documentationkeyboard_arrow_right](/docs/getting-started)[Changelog](/changelog)[Support](/support)[Press](/press)[Releases](/releases)
+[Documentationkeyboard_arrow_right](/docs/getting-started)[Blog](/blog)[Changelog](/changelog)[Support](/support)[Press](/press)[Releases](/releases)
 
 [Home](/docs/home)
 
-Antigravity 2.0v2.4.3keyboard_arrow_right
+Antigravity 2.0v2.6.0keyboard_arrow_right
 
 [Overview](/docs/overview)
 
@@ -126,7 +126,7 @@ Artifactskeyboard_arrow_right
 
 [Screenshots](/docs/screenshots)
 
-Antigravity CLIv1.1.9keyboard_arrow_right
+Antigravity CLIv1.1.11keyboard_arrow_right
 
 [Overview](/docs/cli/overview)
 
@@ -168,6 +168,8 @@ Settingskeyboard_arrow_right
 
 [Overview](/docs/cli/settings)
 
+[Vim Editor Mode](/docs/cli/vim-editor-mode)
+
 [AI Credits](/docs/cli/credits)
 
 Customizationskeyboard_arrow_right
@@ -206,7 +208,7 @@ Commandskeyboard_arrow_right
 
 [Reference](/docs/cli/reference)
 
-Antigravity SDKv0.1.7keyboard_arrow_right
+Antigravity SDKv0.1.10keyboard_arrow_right
 
 [Overview + Quick Start](/docs/sdk/overview)
 
@@ -337,7 +339,7 @@ Every Antigravity surface runs on a shared, highly-optimized agent harness co-tr
 
 [Overview](/docs/overview)
 
-On this PageWelcome to Google AntigravityChoose Your Surface
+On this PageWelcome to Google AntigravityChoose Your SurfaceAntigravity 2.0Antigravity CLIAntigravity SDKAntigravity IDECore Agent Capabilities
 
 ================================================================================
 

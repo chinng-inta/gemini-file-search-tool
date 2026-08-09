@@ -1,6 +1,6 @@
 ---
 doc_type: M5 products
-crawled_at: 2026/08/02 10:20:44
+crawled_at: 2026/08/09 09:40:50
 first_url: https://docs.m5stack.com/en/products/
 ---
 
@@ -31,7 +31,7 @@ Welcome to M5Stack Developer Center
 
 SHOW EOL
 
-[START](/en/start)[PRODUCTS](/en/products)[DOWNLOAD](/en/download)[HISTORY](/en/history)[FAQ](https://faq.m5stack.com)[I2C TABLE](/en/product_i2c_addr)
+[START](/en/start)[PRODUCTS](/en/products)[DOWNLOAD](/en/download)[HISTORY](/en/history)[FAQ](https://faq.m5stack.com)[CERTIFICATION](/en/certification)
 
 No Results Found Hot Searches Camera  WiFi  RS485  RS232  Relay  LoRaWAN  GPS  NB-IoT  LTE  GSM  Zigbee  Servo  StepMotor  Ethernet  E-Paper 
 
@@ -1087,6 +1087,10 @@ Search
 
 [View Details](/en/unit/Unit_PoE-P4) [](https://shop.m5stack.com/products/unit-poe-with-esp32-p4)
 
+## [AddOn Display In For PoE-P4 LT6911D Unit PoE-P4 HDMI MIPI CSI USB Type-A microSD ](/en/addon/AddOn_Display_In_For_PoE-P4)
+
+[View Details](/en/addon/AddOn_Display_In_For_PoE-P4) [](https://shop.m5stack.com/products/add-on-display-in-for-poe-p4-lt6911d)
+
 ## [AddOn Display Out For PoE-P4 LT8912B Unit PoE-P4 HDMI Display Output USB Type-A microSD ](/en/addon/AddOn_Display_Out_For_PoE-P4)
 
 [View Details](/en/addon/AddOn_Display_Out_For_PoE-P4) [](https://shop.m5stack.com/products/add-on-display-out-for-poe-p4-lt8912b)
@@ -1095,7 +1099,7 @@ Search
 
 [View Details](/en/unit/poesp32) [](https://shop.m5stack.com/products/esp32-ethernet-unit-with-poe)
 
-[Unit PoE-P4](/en/unit/Unit_PoE-P4)[AddOn Display Out For PoE-P4](/en/addon/AddOn_Display_Out_For_PoE-P4)[Unit PoESP32](/en/unit/poesp32)
+[Unit PoE-P4](/en/unit/Unit_PoE-P4)[AddOn Display In For PoE-P4](/en/addon/AddOn_Display_In_For_PoE-P4)[AddOn Display Out For PoE-P4](/en/addon/AddOn_Display_Out_For_PoE-P4)[Unit PoESP32](/en/unit/poesp32)
 
 ##  Unit-Others 
 
@@ -2471,7 +2475,7 @@ Welcome to M5Stack Developer Center
 
 SHOW EOL
 
-[START](/en/start)[PRODUCTS](/en/products)[DOWNLOAD](/en/download)[HISTORY](/en/history)[FAQ](https://faq.m5stack.com)[I2C TABLE](/en/product_i2c_addr)
+[START](/en/start)[PRODUCTS](/en/products)[DOWNLOAD](/en/download)[HISTORY](/en/history)[FAQ](https://faq.m5stack.com)[CERTIFICATION](/en/certification)
 
 No Results Found Hot Searches Camera  WiFi  RS485  RS232  Relay  LoRaWAN  GPS  NB-IoT  LTE  GSM  Zigbee  Servo  StepMotor  Ethernet  E-Paper 
 
@@ -3527,6 +3531,10 @@ Search
 
 [View Details](/en/unit/Unit_PoE-P4) [](https://shop.m5stack.com/products/unit-poe-with-esp32-p4)
 
+## [AddOn Display In For PoE-P4 LT6911D Unit PoE-P4 HDMI MIPI CSI USB Type-A microSD ](/en/addon/AddOn_Display_In_For_PoE-P4)
+
+[View Details](/en/addon/AddOn_Display_In_For_PoE-P4) [](https://shop.m5stack.com/products/add-on-display-in-for-poe-p4-lt6911d)
+
 ## [AddOn Display Out For PoE-P4 LT8912B Unit PoE-P4 HDMI Display Output USB Type-A microSD ](/en/addon/AddOn_Display_Out_For_PoE-P4)
 
 [View Details](/en/addon/AddOn_Display_Out_For_PoE-P4) [](https://shop.m5stack.com/products/add-on-display-out-for-poe-p4-lt8912b)
@@ -3535,7 +3543,7 @@ Search
 
 [View Details](/en/unit/poesp32) [](https://shop.m5stack.com/products/esp32-ethernet-unit-with-poe)
 
-[Unit PoE-P4](/en/unit/Unit_PoE-P4)[AddOn Display Out For PoE-P4](/en/addon/AddOn_Display_Out_For_PoE-P4)[Unit PoESP32](/en/unit/poesp32)
+[Unit PoE-P4](/en/unit/Unit_PoE-P4)[AddOn Display In For PoE-P4](/en/addon/AddOn_Display_In_For_PoE-P4)[AddOn Display Out For PoE-P4](/en/addon/AddOn_Display_Out_For_PoE-P4)[Unit PoESP32](/en/unit/poesp32)
 
 ##  Unit-Others 
 

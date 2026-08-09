@@ -1,6 +1,6 @@
 ---
 doc_type: C++
-crawled_at: 2026/08/02 10:21:09
+crawled_at: 2026/08/09 09:41:15
 first_url: https://cpprefjp.github.io/reference.html
 ---
 
@@ -17,8 +17,8 @@ Toggle navigation [ cpprefjp - C++日本語リファレンス ](./index.html)
 
 
 
-最終更新日時:  2026年07月29日 11時07分26秒 (JST)    
-Akira Takahashi が更新 
+最終更新日時:  2026年08月09日 02時04分00秒 (JST)    
+rotarymars が更新 
 
 [ 履歴 ](https://github.com/cpprefjp/site/commits/master/reference.md) [ 編集 ](https://github.com/cpprefjp/site/edit/master/reference.md)
 
@@ -168,6 +168,7 @@ C++26で削除
 `[<bit>](reference/bit.html)` | ビット操作 | C++20  
 `[<random>](reference/random.html)` | 乱数生成 | C++11  
 `[<valarray>](reference/valarray.html)` | 数値の配列 |   
+`[<simd>](reference/simd.html)` | データ並列型 | C++26  
 `[<numeric>](reference/numeric.html)` | 一般的な数値操作 |   
 `[<numbers>](reference/numbers.html)` | 数値 | C++20  
 `[<linalg>](reference/linalg.html)` | 線形代数 | C++26  
@@ -227,7 +228,7 @@ C++26で削除
 `[<future>](reference/future.html)` | Future | C++11  
 `[<rcu>](reference/rcu.html)` | データの参照・更新 | C++26  
 `<hazard_pointer>` | ハザードポインタ | C++26  
-`<simd>` | データ並列 | C++26  
+`[<simd>](reference/simd.html)` | データ並列 | C++26  
   
 ## C言語互換ライブラリ
 
