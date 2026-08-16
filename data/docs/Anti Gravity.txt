@@ -1,291 +1,170 @@
 ---
 doc_type: Anti Gravity
-crawled_at: 2026/08/09 09:51:19
+crawled_at: 2026/08/16 09:41:46
 first_url: https://antigravity.google/docs/home
 ---
 
 # Page: https://antigravity.google/docs/home
 
-[](/)
+Skip to content
+
+[Google Antigravity Docs](/)
+
+Search``Ctrl``K``
+
+Cancel
+
+Select themeDarkLightAuto
+
+  * [Home](/docs/home/)
+  * Antigravity 2.0v2.8.1
+    * [Overview](/docs/overview/)
+    * [Getting Started](/docs/getting-started/)
+    * [Build with Google](/docs/build-with-google/)
+    * [Feature Overview](/docs/features/)
+    * [Models](/docs/models/)
+    * [Projects](/docs/projects/)
+    * Settings
+      * [Overview](/docs/settings/)
+      * [Agent Settings](/docs/agent-settings/)
+      * [Artifact Review](/docs/artifact-review/)
+    * Customizations
+      * [MCP](/docs/mcp/)
+      * [Skills](/docs/skills/)
+      * [Rules](/docs/rules-workflows/)
+      * [Plugins](/docs/plugins/)
+      * [Hooks](/docs/hooks/)
+      * [Sidecars](/docs/sidecars/)
+    * Agent Capabilities
+      * [Permissions](/docs/permissions/)
+      * [Subagents](/docs/subagents/)
+    * Artifacts
+      * [Overview](/docs/artifacts/)
+      * [Plan](/docs/implementation-plan/)
+      * [Walkthrough](/docs/walkthrough/)
+      * [Screenshots](/docs/screenshots/)
+  * Antigravity CLIv1.1.13
+    * [Overview](/docs/cli/overview/)
+    * [Getting Started](/docs/cli/getting-started/)
+    * [Installation & Auth](/docs/cli/install/)
+    * [Tutorial](/docs/cli/tutorial/)
+    * [Using AGY CLI](/docs/cli/using/)
+    * [Features](/docs/cli/features/)
+    * [Migration](/docs/cli/gcli-migration/)
+    * [Prompting & Interaction](/docs/cli/prompting/)
+    * Artifacts
+      * [Reviewing Artifacts](/docs/cli/artifacts/)
+    * [Managing Conversations](/docs/cli/conversations/)
+    * Agent Capabilities
+      * [Choose an execution mode](/docs/cli/modes/)
+      * [Headless Mode](/docs/cli/headless/)
+      * [Background Tasks & Subagents](/docs/cli/subagents/)
+      * [Sandbox](/docs/cli/sandbox/)
+      * [Permissions](/docs/cli/permissions/)
+    * [Projects](/docs/cli/projects/)
+    * Settings
+      * [Settings, Rendering & Keybindings](/docs/cli/settings/)
+      * [Vim Editor Mode](/docs/cli/vim-editor-mode/)
+    * [AI Credits](/docs/cli/credits/)
+    * Customizations
+      * [MCP](/docs/cli/mcp/)
+      * [Plugins & Skills](/docs/cli/plugins/)
+      * [Status Line Customization](/docs/cli/statusline/)
+      * [Terminal Title Customization](/docs/cli/title/)
+    * Commands
+      * [Agents Command (/agents)](/docs/cli/commands/agents/)
+      * [Code Search Command (/codesearch)](/docs/cli/commands/codesearch/)
+      * [AI Credits Command (/credits)](/docs/cli/commands/credits/)
+      * [Diff Command (/diff)](/docs/cli/commands/diff/)
+      * [Permissions Command (/permissions)](/docs/cli/commands/permissions/)
+      * [Resume Command (/resume)](/docs/cli/commands/resume/)
+      * [Status Line Command (/statusline)](/docs/cli/commands/statusline/)
+      * [Window Title Command (/title)](/docs/cli/commands/title/)
+      * [Model Quotas (/usage)](/docs/cli/commands/usage/)
+    * [Best Practices](/docs/cli/best-practices/)
+    * [Troubleshooting](/docs/cli/troubleshooting/)
+    * [CLI Reference](/docs/cli/reference/)
+  * Antigravity SDKv0.1.12
+    * [Overview + Quick Start](/docs/sdk/overview/)
+    * Customizations
+      * [MCP](/docs/sdk/mcp/)
+  * Antigravity IDEv2.5.5
+    * [Overview](/docs/ide/overview/)
+    * [Getting Started](/docs/ide/getting-started/)
+    * Features
+      * [Tab](/docs/ide/tab/)
+      * [Side Panel](/docs/ide/agent-side-panel/)
+      * [Review Changes](/docs/ide/review-changes-editor/)
+    * Artifacts
+      * [Plan](/docs/ide/implementation-plan/)
+      * [Walkthrough](/docs/ide/walkthrough/)
+      * [Screenshots](/docs/ide/screenshots/)
+      * [Browser Recordings](/docs/ide/browser-recordings/)
+    * Browser
+      * [Overview](/docs/ide/browser/)
+      * [Allowlist / Denylist](/docs/ide/allowlist-denylist/)
+      * [Separate Chrome Profile](/docs/ide/separate-chrome-profile/)
+    * Customizations
+      * [MCP](/docs/ide/mcp/)
+      * [Skills](/docs/ide/skills/)
+      * [Rules](/docs/ide/rules/)
+      * [Workflows](/docs/ide/workflows/)
+      * [Plugins](/docs/ide/plugins/)
+      * [Hooks](/docs/ide/hooks/)
+    * [Settings](/docs/ide/settings/)
+  * Migration
+    * [Firebase Studio Migration](/docs/firebase-studio-migration/)
+  * [Enterprise](/docs/enterprise/)
+  * [Plans](/docs/plans/)
+  * [FAQ](/docs/faq/)
 
-Copy Logo as SVGCopied!
 
-[newspaperPress Guidelines](/press)
 
-Productskeyboard_arrow_down
+Select themeDarkLightAuto
 
-Use Caseskeyboard_arrow_down
+On this page
 
-[Pricing](/pricing)
+  * Overview
+  * Choose Your Surface
+    * Antigravity 2.0
+    * Antigravity CLI
+    * Antigravity SDK
+    * Antigravity IDE
+    * Core Agent Capabilities
 
-[Enterprise](/use-cases/enterprise)
 
-Resourceskeyboard_arrow_down
 
-[Downloaddownload](/download)
+## On this page
 
-menu
+  * Overview
+  * Choose Your Surface
+    * Antigravity 2.0
+    * Antigravity CLI
+    * Antigravity SDK
+    * Antigravity IDE
+    * Core Agent Capabilities
 
-Explore our next generation products
 
-[See overview](/product)
 
-Products
+HomeHome
 
-[antigravityAntigravity 2.0](/product/antigravity-2)[terminalAntigravity CLI](/product/antigravity-cli)[codeAntigravity IDE](/product/antigravity-ide)[sdkAntigravity SDK](/product/antigravity-sdk)
+Markdownkeyboard_arrow_down
 
-Built for developers in the agent-first era
+content_copyCopy Markdownopen_in_newView Markdown
 
-[See overview](/use-cases)
+# Welcome to Google Antigravity
 
-[Frontend](/use-cases/frontend)[Fullstack](/use-cases/fullstack)[Science](/use-cases/science)[Marketer](/use-cases/marketer)
+Section titled “Welcome to Google Antigravity”
 
-Everything you need to stay up-to-date and get help
+## Choose Your Surface
 
-[Documentationkeyboard_arrow_right](/docs/getting-started)[Blog](/blog)[Changelog](/changelog)[Support](/support)[Press](/press)[Releases](/releases)
-
-Productskeyboard_arrow_down
-
-Explore our next generation products
-
-[See overview](/product)
-
-Products
-
-[antigravityAntigravity 2.0](/product/antigravity-2)[terminalAntigravity CLI](/product/antigravity-cli)[codeAntigravity IDE](/product/antigravity-ide)[sdkAntigravity SDK](/product/antigravity-sdk)
-
-Use Caseskeyboard_arrow_down
-
-Built for developers in the agent-first era
-
-[See overview](/use-cases)
-
-[Frontend](/use-cases/frontend)[Fullstack](/use-cases/fullstack)[Science](/use-cases/science)[Marketer](/use-cases/marketer)
-
-[Pricing](/pricing)
-
-[Enterprise](/use-cases/enterprise)
-
-Resourceskeyboard_arrow_down
-
-Everything you need to stay up-to-date and get help
-
-[Documentationkeyboard_arrow_right](/docs/getting-started)[Blog](/blog)[Changelog](/changelog)[Support](/support)[Press](/press)[Releases](/releases)
-
-[Home](/docs/home)
-
-Antigravity 2.0v2.6.0keyboard_arrow_right
-
-[Overview](/docs/overview)
-
-[Getting Started](/docs/getting-started)
-
-[Build with Google](/docs/build-with-google)
-
-[Feature Overview](/docs/features)
-
-[Models](/docs/models)
-
-[Projects](/docs/projects)
-
-Settingskeyboard_arrow_right
-
-[Overview](/docs/settings)
-
-[Agent Settings](/docs/agent-settings)
-
-[Artifact Review](/docs/artifact-review)
-
-Customizationskeyboard_arrow_right
-
-[MCP](/docs/mcp)
-
-[Skills](/docs/skills)
-
-[Rules](/docs/rules-workflows)
-
-[Plugins](/docs/plugins)
-
-[Hooks](/docs/hooks)
-
-[Sidecars](/docs/sidecars)
-
-Agent Capabilitieskeyboard_arrow_right
-
-[Permissions](/docs/permissions)
-
-[Subagents](/docs/subagents)
-
-Artifactskeyboard_arrow_right
-
-[Overview](/docs/artifacts)
-
-[Plan](/docs/implementation-plan)
-
-[Walkthrough](/docs/walkthrough)
-
-[Screenshots](/docs/screenshots)
-
-Antigravity CLIv1.1.11keyboard_arrow_right
-
-[Overview](/docs/cli/overview)
-
-[Getting Started](/docs/cli/getting-started)
-
-[Installation & Auth](/docs/cli/install)
-
-[Tutorial](/docs/cli/tutorial)
-
-[Using AGY CLI](/docs/cli/using)
-
-[Features](/docs/cli/features)
-
-[Gemini Migration](/docs/cli/gcli-migration)
-
-[Prompting](/docs/cli/prompting)
-
-[Headless mode](/docs/cli/headless)
-
-Artifactskeyboard_arrow_right
-
-[Overview](/docs/cli/artifacts)
-
-[Conversations](/docs/cli/conversations)
-
-Agent Capabilitieskeyboard_arrow_right
-
-[Choose an execution mode](/docs/cli/modes)
-
-[Subagents](/docs/cli/subagents)
-
-[Sandbox](/docs/cli/sandbox)
-
-[Permissions](/docs/cli/permissions)
-
-[Projects](/docs/cli/projects)
-
-Settingskeyboard_arrow_right
-
-[Overview](/docs/cli/settings)
-
-[Vim Editor Mode](/docs/cli/vim-editor-mode)
-
-[AI Credits](/docs/cli/credits)
-
-Customizationskeyboard_arrow_right
-
-[MCP](/docs/cli/mcp#antigravity-cli)
-
-[Plugins & Skills](/docs/cli/plugins)
-
-[Status Line](/docs/cli/statusline)
-
-[Window Title](/docs/cli/title)
-
-Commandskeyboard_arrow_right
-
-[Agents (/agents)](/docs/cli/commands/agents)
-
-[Code Search (/codesearch)](/docs/cli/commands/codesearch)
-
-[AI Credits (/credits)](/docs/cli/commands/credits)
-
-[Diff (/diff)](/docs/cli/commands/diff)
-
-[Permissions (/permissions)](/docs/cli/commands/permissions)
-
-[Resume (/resume)](/docs/cli/commands/resume)
-
-[Status Line (/statusline)](/docs/cli/commands/statusline)
-
-[Window Title (/title)](/docs/cli/commands/title)
-
-[Model Quotas (/usage, /quota)](/docs/cli/commands/usage)
-
-[Best Practices](/docs/cli/best-practices)
-
-[Troubleshooting](/docs/cli/troubleshooting)
-
-[Reference](/docs/cli/reference)
-
-Antigravity SDKv0.1.10keyboard_arrow_right
-
-[Overview + Quick Start](/docs/sdk/overview)
-
-Customizationskeyboard_arrow_right
-
-[MCP](/docs/sdk/mcp#antigravity-sdk)
-
-Antigravity IDEv2.1.1keyboard_arrow_right
-
-[Overview](/docs/ide/overview)
-
-[Getting Started](/docs/ide/getting-started)
-
-Featureskeyboard_arrow_right
-
-[Tab](/docs/ide/tab)
-
-[Side Panel](/docs/ide/agent-side-panel)
-
-[Review Changes](/docs/ide/review-changes-editor)
-
-Artifactskeyboard_arrow_right
-
-[Plan](/docs/ide/implementation-plan)
-
-[Walkthrough](/docs/ide/walkthrough)
-
-[Screenshots](/docs/ide/screenshots)
-
-[Browser Recordings](/docs/ide/browser-recordings)
-
-Browserkeyboard_arrow_right
-
-[Overview](/docs/ide/browser)
-
-[Allowlist / Denylist](/docs/ide/allowlist-denylist)
-
-[Separate Chrome Profile](/docs/ide/separate-chrome-profile)
-
-Customizationskeyboard_arrow_right
-
-[MCP](/docs/ide/mcp#antigravity-ide)
-
-[Skills](/docs/ide/skills)
-
-[Rules](/docs/ide/rules)
-
-[Workflows](/docs/ide/workflows)
-
-[Plugins](/docs/ide/plugins)
-
-[Hooks](/docs/ide/hooks)
-
-[Settings](/docs/ide/settings)
-
-Migrationkeyboard_arrow_right
-
-[Firebase Studio Migration](/docs/firebase-studio-migration)
-
-[Enterprise](/docs/enterprise)
-
-[Plans](/docs/plans)
-
-[FAQ](/docs/faq)
-
-  * side_navigation
-  * Home
-
-
-
-# Welcome to Google Antigravitylink
-
-## Choose Your Surfacelink
+Section titled “Choose Your Surface”
 
 Google Antigravity offers multiple product surfaces tailored to your specific development workflow. Select the interface that best fits your needs:
 
-### Antigravity 2.0link
+### Antigravity 2.0
+
+Section titled “Antigravity 2.0”
 
 Your standalone desktop command center for your agents. Start agents inside Projects, work across multiple workspaces and worktrees, and orchestrate complex tasks using parallel local subagents.
 
@@ -294,7 +173,9 @@ Your standalone desktop command center for your agents. Start agents inside Proj
 
 
 
-### Antigravity CLIlink
+### Antigravity CLI
+
+Section titled “Antigravity CLI”
 
 The lightweight, keyboard-centric Terminal User Interface surface. It brings the same core agentic capabilities as the desktop app directly to your terminal workflow, making it perfect for fast interactions and SSH sessions.
 
@@ -303,7 +184,9 @@ The lightweight, keyboard-centric Terminal User Interface surface. It brings the
 
 
 
-### Antigravity SDKlink
+### Antigravity SDK
+
+Section titled “Antigravity SDK”
 
 A programmatic Python framework for researchers and developers who want complete control over their agent deployments. Custom build an agent, register custom tools, and implement lifecycle hooks, all on top of the Antigravity Harness.
 
@@ -312,7 +195,9 @@ A programmatic Python framework for researchers and developers who want complete
 
 
 
-### Antigravity IDElink
+### Antigravity IDE
+
+Section titled “Antigravity IDE”
 
 The fully-featured, AI-powered developer environment. Standardize your daily coding with powerful tightly integrated coding agents, deep context awareness, tools like MCP and skills, and more.
 
@@ -320,7 +205,9 @@ The fully-featured, AI-powered developer environment. Standardize your daily cod
 
 
 
-### Core Agent Capabilitieslink
+### Core Agent Capabilities
+
+Section titled “Core Agent Capabilities”
 
 Every Antigravity surface runs on a shared, highly-optimized agent harness co-trained with Gemini models:
 
@@ -337,9 +224,233 @@ Every Antigravity surface runs on a shared, highly-optimized agent harness co-tr
 
 
 
-[Overview](/docs/overview)
+[Next  
+Overview](/docs/overview/)
 
-On this PageWelcome to Google AntigravityChoose Your SurfaceAntigravity 2.0Antigravity CLIAntigravity SDKAntigravity IDECore Agent Capabilities
+================================================================================
+
+# Page: https://antigravity.google/docs/home/
+
+Skip to content
+
+[Google Antigravity Docs](/)
+
+Search``Ctrl``K``
+
+Cancel
+
+Select themeDarkLightAuto
+
+  * [Home](/docs/home/)
+  * Antigravity 2.0v2.8.1
+    * [Overview](/docs/overview/)
+    * [Getting Started](/docs/getting-started/)
+    * [Build with Google](/docs/build-with-google/)
+    * [Feature Overview](/docs/features/)
+    * [Models](/docs/models/)
+    * [Projects](/docs/projects/)
+    * Settings
+      * [Overview](/docs/settings/)
+      * [Agent Settings](/docs/agent-settings/)
+      * [Artifact Review](/docs/artifact-review/)
+    * Customizations
+      * [MCP](/docs/mcp/)
+      * [Skills](/docs/skills/)
+      * [Rules](/docs/rules-workflows/)
+      * [Plugins](/docs/plugins/)
+      * [Hooks](/docs/hooks/)
+      * [Sidecars](/docs/sidecars/)
+    * Agent Capabilities
+      * [Permissions](/docs/permissions/)
+      * [Subagents](/docs/subagents/)
+    * Artifacts
+      * [Overview](/docs/artifacts/)
+      * [Plan](/docs/implementation-plan/)
+      * [Walkthrough](/docs/walkthrough/)
+      * [Screenshots](/docs/screenshots/)
+  * Antigravity CLIv1.1.13
+    * [Overview](/docs/cli/overview/)
+    * [Getting Started](/docs/cli/getting-started/)
+    * [Installation & Auth](/docs/cli/install/)
+    * [Tutorial](/docs/cli/tutorial/)
+    * [Using AGY CLI](/docs/cli/using/)
+    * [Features](/docs/cli/features/)
+    * [Migration](/docs/cli/gcli-migration/)
+    * [Prompting & Interaction](/docs/cli/prompting/)
+    * Artifacts
+      * [Reviewing Artifacts](/docs/cli/artifacts/)
+    * [Managing Conversations](/docs/cli/conversations/)
+    * Agent Capabilities
+      * [Choose an execution mode](/docs/cli/modes/)
+      * [Headless Mode](/docs/cli/headless/)
+      * [Background Tasks & Subagents](/docs/cli/subagents/)
+      * [Sandbox](/docs/cli/sandbox/)
+      * [Permissions](/docs/cli/permissions/)
+    * [Projects](/docs/cli/projects/)
+    * Settings
+      * [Settings, Rendering & Keybindings](/docs/cli/settings/)
+      * [Vim Editor Mode](/docs/cli/vim-editor-mode/)
+    * [AI Credits](/docs/cli/credits/)
+    * Customizations
+      * [MCP](/docs/cli/mcp/)
+      * [Plugins & Skills](/docs/cli/plugins/)
+      * [Status Line Customization](/docs/cli/statusline/)
+      * [Terminal Title Customization](/docs/cli/title/)
+    * Commands
+      * [Agents Command (/agents)](/docs/cli/commands/agents/)
+      * [Code Search Command (/codesearch)](/docs/cli/commands/codesearch/)
+      * [AI Credits Command (/credits)](/docs/cli/commands/credits/)
+      * [Diff Command (/diff)](/docs/cli/commands/diff/)
+      * [Permissions Command (/permissions)](/docs/cli/commands/permissions/)
+      * [Resume Command (/resume)](/docs/cli/commands/resume/)
+      * [Status Line Command (/statusline)](/docs/cli/commands/statusline/)
+      * [Window Title Command (/title)](/docs/cli/commands/title/)
+      * [Model Quotas (/usage)](/docs/cli/commands/usage/)
+    * [Best Practices](/docs/cli/best-practices/)
+    * [Troubleshooting](/docs/cli/troubleshooting/)
+    * [CLI Reference](/docs/cli/reference/)
+  * Antigravity SDKv0.1.12
+    * [Overview + Quick Start](/docs/sdk/overview/)
+    * Customizations
+      * [MCP](/docs/sdk/mcp/)
+  * Antigravity IDEv2.5.5
+    * [Overview](/docs/ide/overview/)
+    * [Getting Started](/docs/ide/getting-started/)
+    * Features
+      * [Tab](/docs/ide/tab/)
+      * [Side Panel](/docs/ide/agent-side-panel/)
+      * [Review Changes](/docs/ide/review-changes-editor/)
+    * Artifacts
+      * [Plan](/docs/ide/implementation-plan/)
+      * [Walkthrough](/docs/ide/walkthrough/)
+      * [Screenshots](/docs/ide/screenshots/)
+      * [Browser Recordings](/docs/ide/browser-recordings/)
+    * Browser
+      * [Overview](/docs/ide/browser/)
+      * [Allowlist / Denylist](/docs/ide/allowlist-denylist/)
+      * [Separate Chrome Profile](/docs/ide/separate-chrome-profile/)
+    * Customizations
+      * [MCP](/docs/ide/mcp/)
+      * [Skills](/docs/ide/skills/)
+      * [Rules](/docs/ide/rules/)
+      * [Workflows](/docs/ide/workflows/)
+      * [Plugins](/docs/ide/plugins/)
+      * [Hooks](/docs/ide/hooks/)
+    * [Settings](/docs/ide/settings/)
+  * Migration
+    * [Firebase Studio Migration](/docs/firebase-studio-migration/)
+  * [Enterprise](/docs/enterprise/)
+  * [Plans](/docs/plans/)
+  * [FAQ](/docs/faq/)
+
+
+
+Select themeDarkLightAuto
+
+On this page
+
+  * Overview
+  * Choose Your Surface
+    * Antigravity 2.0
+    * Antigravity CLI
+    * Antigravity SDK
+    * Antigravity IDE
+    * Core Agent Capabilities
+
+
+
+## On this page
+
+  * Overview
+  * Choose Your Surface
+    * Antigravity 2.0
+    * Antigravity CLI
+    * Antigravity SDK
+    * Antigravity IDE
+    * Core Agent Capabilities
+
+
+
+HomeHome
+
+Markdownkeyboard_arrow_down
+
+content_copyCopy Markdownopen_in_newView Markdown
+
+# Welcome to Google Antigravity
+
+Section titled “Welcome to Google Antigravity”
+
+## Choose Your Surface
+
+Section titled “Choose Your Surface”
+
+Google Antigravity offers multiple product surfaces tailored to your specific development workflow. Select the interface that best fits your needs:
+
+### Antigravity 2.0
+
+Section titled “Antigravity 2.0”
+
+Your standalone desktop command center for your agents. Start agents inside Projects, work across multiple workspaces and worktrees, and orchestrate complex tasks using parallel local subagents.
+
+  * **Key Features** : Asynchronous task management, Scheduled Tasks (Cron sidecars), and voice transcription.
+  * **Get Started** : Read the [Getting Started Guide](/docs/getting-started)
+
+
+
+### Antigravity CLI
+
+Section titled “Antigravity CLI”
+
+The lightweight, keyboard-centric Terminal User Interface surface. It brings the same core agentic capabilities as the desktop app directly to your terminal workflow, making it perfect for fast interactions and SSH sessions.
+
+  * **Key Features** : High-speed prompt shortcuts, custom keybindings, and parallel subagent management.
+  * **Get Started** : Explore the [CLI Quick Overview](/docs/cli/overview)
+
+
+
+### Antigravity SDK
+
+Section titled “Antigravity SDK”
+
+A programmatic Python framework for researchers and developers who want complete control over their agent deployments. Custom build an agent, register custom tools, and implement lifecycle hooks, all on top of the Antigravity Harness.
+
+  * **Key Features** : Declarative safety policies, inspect/decide/transform hooks, and programmatic subagent spawning.
+  * **Get Started** : Review the [SDK Overview](/docs/sdk/overview)
+
+
+
+### Antigravity IDE
+
+Section titled “Antigravity IDE”
+
+The fully-featured, AI-powered developer environment. Standardize your daily coding with powerful tightly integrated coding agents, deep context awareness, tools like MCP and skills, and more.
+
+  * **Get Started** : Read the [IDE Getting Started Guide](/docs/ide/getting-started)
+
+
+
+### Core Agent Capabilities
+
+Section titled “Core Agent Capabilities”
+
+Every Antigravity surface runs on a shared, highly-optimized agent harness co-trained with Gemini models:
+
+  * **Gemini 3.5 Flash** : Powering all local agents with SOTA speed, reasoning, and context window capacity.
+  * **[Asynchronous Subagents](/docs/subagents)** : Allows the main agent to delegate parallel background tasks to concurrent subagents without blocking your flow.
+  * **[Visual Artifacts](/docs/artifacts)** : Track and verify agent output (plans, code diffs, browser recordings) with high-fidelity visual reports, keeping you informed every step of the way.
+  * **[Security by Design](/docs/permissions)** : Secure local execution via safe defaults, local proxying, and granular tool approval gates.
+  * **[Google Integrations](/docs/build-with-google)** : We partner with product teams across Google to provide curated bundles of skills, MCP servers, and extensions that make building on Google platforms frictionless. 
+    * **Android** : Editor extension, CLI integrations, and Android developer skills.
+    * **Firebase** : Curated skills for Firebase Firestore, Cloud Functions, and more.
+    * **Web** : Chrome and Web MCP servers for autonomous browser research.
+    * **Science** : Specialized DeepMind biology and chemistry skills to accelerate scientific workflows.
+    * **AGY SDK** : Skills that optimize your agent’s ability to use the Antigravity SDK to build custom AI agents tailored to your workflow.
+
+
+
+[Next  
+Overview](/docs/overview/)
 
 ================================================================================
 

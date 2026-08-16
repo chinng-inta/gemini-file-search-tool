@@ -1,6 +1,6 @@
 ---
 doc_type: C++
-crawled_at: 2026/08/09 09:41:15
+crawled_at: 2026/08/16 09:29:00
 first_url: https://cpprefjp.github.io/reference.html
 ---
 
@@ -17,8 +17,8 @@ Toggle navigation [ cpprefjp - C++日本語リファレンス ](./index.html)
 
 
 
-最終更新日時:  2026年08月09日 02時04分00秒 (JST)    
-rotarymars が更新 
+最終更新日時:  2026年08月09日 16時26分25秒 (JST)    
+Akira Takahashi が更新 
 
 [ 履歴 ](https://github.com/cpprefjp/site/commits/master/reference.md) [ 編集 ](https://github.com/cpprefjp/site/edit/master/reference.md)
 
@@ -227,7 +227,7 @@ C++26で削除
 `[<barrier>](reference/barrier.html)` | バリア同期 | C++20  
 `[<future>](reference/future.html)` | Future | C++11  
 `[<rcu>](reference/rcu.html)` | データの参照・更新 | C++26  
-`<hazard_pointer>` | ハザードポインタ | C++26  
+`[<hazard_pointer>](reference/hazard_pointer.html)` | ハザードポインタ | C++26  
 `[<simd>](reference/simd.html)` | データ並列 | C++26  
   
 ## C言語互換ライブラリ
