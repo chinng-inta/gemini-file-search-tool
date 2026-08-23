@@ -1,6 +1,6 @@
 ---
 doc_type: M5Unified LED
-crawled_at: 2026/08/16 09:28:43
+crawled_at: 2026/08/23 09:29:00
 first_url: https://docs.m5stack.com/ja/arduino/m5unified/led_class/
 ---
 
@@ -1051,6 +1051,70 @@ PaperColor
 
 #### 
 
+PaperMono 
+
+##### 
+
+[ クイックスタート ](/en/arduino/papermono/program)
+
+##### 
+
+[ Display ](/en/arduino/papermono/display)
+
+##### 
+
+[ Button ](/en/arduino/papermono/button)
+
+##### 
+
+[ Battery ](/en/arduino/papermono/battery)
+
+##### 
+
+[ Touch ](/en/arduino/papermono/touch)
+
+##### 
+
+[ IMU ](/en/arduino/papermono/imu)
+
+##### 
+
+[ MIC ](/en/arduino/papermono/mic)
+
+##### 
+
+[ Buzzer ](/en/arduino/papermono/buzzer)
+
+##### 
+
+[ RGB LED ](/en/arduino/papermono/rgb_led)
+
+##### 
+
+[ microSD ](/en/arduino/papermono/microsd)
+
+##### 
+
+[ RTC ](/en/arduino/papermono/rtc)
+
+##### 
+
+[ NFC ](/en/arduino/papermono/nfc)
+
+##### 
+
+[ LoRa ](/en/arduino/papermono/lora)
+
+##### 
+
+[ Wakeup ](/en/arduino/papermono/wakeup)
+
+##### 
+
+[ M5PM1 & M5IOE1 ](/en/arduino/papermono/m5pm1_m5ioe1)
+
+#### 
+
 PowerHub 
 
 ##### 
@@ -1779,11 +1843,23 @@ Unit
 
 ##### 
 
+[ Unit Synth ](/en/arduino/projects/unit/unit_synth)
+
+##### 
+
+[ Unit MIDI ](/en/arduino/projects/unit/unit_midi)
+
+##### 
+
 [ Unit Mini PDM ](/en/arduino/projects/unit/unit_mini_pdm)
 
 ##### 
 
 [ Unit MIC ](/en/arduino/projects/unit/unit_mic)
+
+##### 
+
+[ Unit Buzzer ](/en/arduino/projects/unit/unit_buzzer)
 
 ##### 
 
@@ -1952,6 +2028,10 @@ Unit
 ##### 
 
 [ Unit RFID / RFID2 ](/en/arduino/projects/unit/unit_rfid)
+
+##### 
+
+[ Unit ID ](/en/arduino/projects/unit/unit_id)
 
 ##### 
 

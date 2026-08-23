@@ -1,6 +1,6 @@
 ---
 doc_type: C++
-crawled_at: 2026/08/16 09:29:00
+crawled_at: 2026/08/23 09:29:17
 first_url: https://cpprefjp.github.io/reference.html
 ---
 
@@ -17,7 +17,7 @@ Toggle navigation [ cpprefjp - C++日本語リファレンス ](./index.html)
 
 
 
-最終更新日時:  2026年08月09日 16時26分25秒 (JST)    
+最終更新日時:  2026年08月18日 03時08分41秒 (JST)    
 Akira Takahashi が更新 
 
 [ 履歴 ](https://github.com/cpprefjp/site/commits/master/reference.md) [ 編集 ](https://github.com/cpprefjp/site/edit/master/reference.md)
@@ -184,7 +184,7 @@ C++26で削除
 
 ヘッダ | 説明 | 対応バージョン  
 ---|---|---  
-`<iosfwd>` | 先行宣言 |   
+`[<iosfwd>](reference/iosfwd.html)` | 先行宣言 |   
 `[<iostream>](reference/iostream.html)` | 標準`iostream`オブジェクト |   
 `[<ios>](reference/ios.html)` | `iostream`基底クラス |   
 `[<streambuf>](reference/streambuf.html)` | ストリームバッファ |   
@@ -252,7 +252,7 @@ C++20で削除
 `[<csignal>](reference/csignal.html)` | シグナル |   
 `<cstdalign>` | アライメント操作のマクロ | C++17で非推奨  
 C++20で削除  
-`<cstdarg>` | 可変引数操作 |   
+`[<cstdarg>](reference/cstdarg.html)` | 可変引数操作 |   
 `[<stdbit.h>](reference/stdbit.h.html)` | ビット操作 | C++26  
 `[<stdckdint.h>](reference/stdckdint.h.html)` | 検査付き整数演算 | C++26  
 `<cstdbool>` | 真理値型の定義 | C++11 (C99)  

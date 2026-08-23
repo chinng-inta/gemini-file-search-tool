@@ -1,6 +1,6 @@
 ---
 doc_type: File Search Stores
-crawled_at: 2026/08/16 09:29:02
+crawled_at: 2026/08/23 09:29:19
 first_url: https://ai.google.dev/api/file-search/file-search-stores
 ---
 
@@ -438,33 +438,6 @@ The request body must be empty.
 
 If successful, the response body contains an instance of `[Operation](/api/batch-api#Operation)`.
 
-## Method: media.download
-
-  * Endpoint
-  * Path parameters
-  * Request body
-  * Response body
-  * Authorization scopes
-
-Downloads media from a `FileSearchStore`.
-
-### Endpoint
-
-get  `https://generativelanguage.googleapis.com/v1beta/{name=fileSearchStores/*/media/**}`   
-
-
-### Path parameters
-
-| `name` `string` Required. The resource name of the media to download. Example: `fileSearchStores/abc-123/media/blob123` It takes the form `fileSearchStores/{filesearchstore}/media/{+media}`.
-
-### Request body
-
-The request body must be empty.
-
-### Response body
-
-If successful, the response body is empty.
-
 ## Method: media.uploadToFileSearchStore
 
   * Endpoint
@@ -536,9 +509,9 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-06-01 UTC.
+Last updated 2026-08-17 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-06-01 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-08-17 UTC."],[],[]] 
 
   * [ Terms ](//policies.google.com/terms)
   * [ Privacy ](//policies.google.com/privacy)
