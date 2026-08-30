@@ -1,6 +1,6 @@
 ---
 doc_type: M5 products
-crawled_at: 2026/08/23 09:28:52
+crawled_at: 2026/08/30 10:48:54
 first_url: https://docs.m5stack.com/en/products/
 ---
 
@@ -1473,6 +1473,10 @@ Search
 
 ##  For Stack-Base 
 
+## [Base M5GO Bottom2 v1.3 BMI270 LMD4020 SK6812 TP4057 Pogo 500mAh ](/en/base/Base_M5GO_Bottom2_v1.3)
+
+[View Details](/en/base/Base_M5GO_Bottom2_v1.3) [](https://shop.m5stack.com/products/m5go-battery-bottom2-for-core2-only-v1-3)
+
 ## [Base Dual 16340 INA226 DW01A 16340 700mAh DC 3.7V HY2.0-4P ](/en/base/Base_Dual_16340)
 
 [View Details](/en/base/Base_Dual_16340) [](https://shop.m5stack.com/products/base-dual-16340-1400-mah)
@@ -1509,7 +1513,7 @@ Search
 
 [View Details](/en/base/m5go_bottom) [](https://shop.m5stack.com/products/m5go-fire-battery-bottom)
 
-## [Base M5GO Bottom2 MPU6886 SPM1423 SK6812 Pogo 500mAh IMU ](/en/base/m5go_bottom2)
+## [Base M5GO Bottom2 MPU6886 LMD4737 SK6812 Pogo 500mAh IMU ](/en/base/m5go_bottom2)
 
 [View Details](/en/base/m5go_bottom2) [](https://shop.m5stack.com/products/m5go-battery-bottom2-for-core2-only)
 
@@ -1557,7 +1561,7 @@ Search
 
 [View Details](/en/module/PM2.5 AIR QUALITY KIT \(Excluding Core\)) [](https://shop.m5stack.com/products/pm2-5-air-quality-kit)
 
-[Base Dual 16340](/en/base/Base_Dual_16340)[IoT Base CatM](/en/base/iot_base_catm)[IoT Base NBIoT-CN](/en/base/iot_base_nb_cn)[IoT Base Thermal Online CatM](/en/base/thermalonline_catm)[Base LAN PoE v1.2](/en/base/lan_poe_v12)[Base LAN v1.2](/en/base/lan_v12)[Base BTC](/en/base/btc_base)[Base AC Power](/en/base/ac_power)[Base M5GO Bottom](/en/base/m5go_bottom)[Base M5GO Bottom2](/en/base/m5go_bottom2)[Base AAA](/en/base/base_aaa)[Base M5GO Charger](/en/base/m5go_charger)[Base X](/en/base/basex)[Base26 v1.1](/en/module/Base26 V1.1)[Base15 v1.1](/en/module/Base15 V1.1)[Base PLC-M12 v1.1](/en/module/PLC-M12 Base v1.1)[Base DIN](/en/base/DIN BASE)[Base M5GO Bottom3](/en/module/M5GO3 Bottom)[Base Bottom v1.1](/en/base/BLACK-BOTTOM_V1.1)[Base DMX](/en/base/DMX_Base)[Module Air Quality](/en/module/PM2.5 AIR QUALITY KIT \(Excluding Core\))
+[Base M5GO Bottom2 v1.3](/en/base/Base_M5GO_Bottom2_v1.3)[Base Dual 16340](/en/base/Base_Dual_16340)[IoT Base CatM](/en/base/iot_base_catm)[IoT Base NBIoT-CN](/en/base/iot_base_nb_cn)[IoT Base Thermal Online CatM](/en/base/thermalonline_catm)[Base LAN PoE v1.2](/en/base/lan_poe_v12)[Base LAN v1.2](/en/base/lan_v12)[Base BTC](/en/base/btc_base)[Base AC Power](/en/base/ac_power)[Base M5GO Bottom](/en/base/m5go_bottom)[Base M5GO Bottom2](/en/base/m5go_bottom2)[Base AAA](/en/base/base_aaa)[Base M5GO Charger](/en/base/m5go_charger)[Base X](/en/base/basex)[Base26 v1.1](/en/module/Base26 V1.1)[Base15 v1.1](/en/module/Base15 V1.1)[Base PLC-M12 v1.1](/en/module/PLC-M12 Base v1.1)[Base DIN](/en/base/DIN BASE)[Base M5GO Bottom3](/en/module/M5GO3 Bottom)[Base Bottom v1.1](/en/base/BLACK-BOTTOM_V1.1)[Base DMX](/en/base/DMX_Base)[Module Air Quality](/en/module/PM2.5 AIR QUALITY KIT \(Excluding Core\))
 
 ##  For Stack-Faces 
 
@@ -1777,7 +1781,7 @@ Search
 
 ## [Cap CC1101 CC1101 315/433/868/915 MHz NFC SPI RP-SMA ](/en/cap/Cap_CC1101)
 
-[View Details](/en/cap/Cap_CC1101) [](https://shop.m5stack.com/collections)
+[View Details](/en/cap/Cap_CC1101) [](https://shop.m5stack.com/products/cap-cc1101-nfc-for-cardputer)
 
 [Cap LoRa-1262](/en/cap/Cap_LoRa-1262)[Cap CC1101](/en/cap/Cap_CC1101)
 
@@ -3933,6 +3937,10 @@ Search
 
 ##  For Stack-Base 
 
+## [Base M5GO Bottom2 v1.3 BMI270 LMD4020 SK6812 TP4057 Pogo 500mAh ](/en/base/Base_M5GO_Bottom2_v1.3)
+
+[View Details](/en/base/Base_M5GO_Bottom2_v1.3) [](https://shop.m5stack.com/products/m5go-battery-bottom2-for-core2-only-v1-3)
+
 ## [Base Dual 16340 INA226 DW01A 16340 700mAh DC 3.7V HY2.0-4P ](/en/base/Base_Dual_16340)
 
 [View Details](/en/base/Base_Dual_16340) [](https://shop.m5stack.com/products/base-dual-16340-1400-mah)
@@ -3969,7 +3977,7 @@ Search
 
 [View Details](/en/base/m5go_bottom) [](https://shop.m5stack.com/products/m5go-fire-battery-bottom)
 
-## [Base M5GO Bottom2 MPU6886 SPM1423 SK6812 Pogo 500mAh IMU ](/en/base/m5go_bottom2)
+## [Base M5GO Bottom2 MPU6886 LMD4737 SK6812 Pogo 500mAh IMU ](/en/base/m5go_bottom2)
 
 [View Details](/en/base/m5go_bottom2) [](https://shop.m5stack.com/products/m5go-battery-bottom2-for-core2-only)
 
@@ -4017,7 +4025,7 @@ Search
 
 [View Details](/en/module/PM2.5 AIR QUALITY KIT \(Excluding Core\)) [](https://shop.m5stack.com/products/pm2-5-air-quality-kit)
 
-[Base Dual 16340](/en/base/Base_Dual_16340)[IoT Base CatM](/en/base/iot_base_catm)[IoT Base NBIoT-CN](/en/base/iot_base_nb_cn)[IoT Base Thermal Online CatM](/en/base/thermalonline_catm)[Base LAN PoE v1.2](/en/base/lan_poe_v12)[Base LAN v1.2](/en/base/lan_v12)[Base BTC](/en/base/btc_base)[Base AC Power](/en/base/ac_power)[Base M5GO Bottom](/en/base/m5go_bottom)[Base M5GO Bottom2](/en/base/m5go_bottom2)[Base AAA](/en/base/base_aaa)[Base M5GO Charger](/en/base/m5go_charger)[Base X](/en/base/basex)[Base26 v1.1](/en/module/Base26 V1.1)[Base15 v1.1](/en/module/Base15 V1.1)[Base PLC-M12 v1.1](/en/module/PLC-M12 Base v1.1)[Base DIN](/en/base/DIN BASE)[Base M5GO Bottom3](/en/module/M5GO3 Bottom)[Base Bottom v1.1](/en/base/BLACK-BOTTOM_V1.1)[Base DMX](/en/base/DMX_Base)[Module Air Quality](/en/module/PM2.5 AIR QUALITY KIT \(Excluding Core\))
+[Base M5GO Bottom2 v1.3](/en/base/Base_M5GO_Bottom2_v1.3)[Base Dual 16340](/en/base/Base_Dual_16340)[IoT Base CatM](/en/base/iot_base_catm)[IoT Base NBIoT-CN](/en/base/iot_base_nb_cn)[IoT Base Thermal Online CatM](/en/base/thermalonline_catm)[Base LAN PoE v1.2](/en/base/lan_poe_v12)[Base LAN v1.2](/en/base/lan_v12)[Base BTC](/en/base/btc_base)[Base AC Power](/en/base/ac_power)[Base M5GO Bottom](/en/base/m5go_bottom)[Base M5GO Bottom2](/en/base/m5go_bottom2)[Base AAA](/en/base/base_aaa)[Base M5GO Charger](/en/base/m5go_charger)[Base X](/en/base/basex)[Base26 v1.1](/en/module/Base26 V1.1)[Base15 v1.1](/en/module/Base15 V1.1)[Base PLC-M12 v1.1](/en/module/PLC-M12 Base v1.1)[Base DIN](/en/base/DIN BASE)[Base M5GO Bottom3](/en/module/M5GO3 Bottom)[Base Bottom v1.1](/en/base/BLACK-BOTTOM_V1.1)[Base DMX](/en/base/DMX_Base)[Module Air Quality](/en/module/PM2.5 AIR QUALITY KIT \(Excluding Core\))
 
 ##  For Stack-Faces 
 
@@ -4237,7 +4245,7 @@ Search
 
 ## [Cap CC1101 CC1101 315/433/868/915 MHz NFC SPI RP-SMA ](/en/cap/Cap_CC1101)
 
-[View Details](/en/cap/Cap_CC1101) [](https://shop.m5stack.com/collections)
+[View Details](/en/cap/Cap_CC1101) [](https://shop.m5stack.com/products/cap-cc1101-nfc-for-cardputer)
 
 [Cap LoRa-1262](/en/cap/Cap_LoRa-1262)[Cap CC1101](/en/cap/Cap_CC1101)
 

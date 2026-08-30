@@ -1,6 +1,6 @@
 ---
 doc_type: File Search Stores
-crawled_at: 2026/08/23 09:29:19
+crawled_at: 2026/08/30 10:49:22
 first_url: https://ai.google.dev/api/file-search/file-search-stores
 ---
 
@@ -94,7 +94,7 @@ Skip to main content
 
 
 
-The [Interactions API](/gemini-api/docs/interactions-overview) is now generally available. We recommend using this API for access to all the latest features and models. 
+Gemini 3.7 Flash is now available. [Try it out](https://aistudio.google.com/prompts/new_chat?model=gemini-3.7-flash). 
 
   * [ Home ](https://ai.google.dev/)
   * [ Gemini API ](https://ai.google.dev/gemini-api)
@@ -312,9 +312,9 @@ This resource represents a long-running operation that is the result of a networ
   
 `name` `string` The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`. | `metadata` `object` Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.An object containing fields of an arbitrary type. An additional field `"@type"` contains a URI identifying the type. Example: `{ "id": 1234, "@type": "types.example.com/standard/id" }`. | `done` `boolean` If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available. | `result` `Union type`  
   
-The operation result, which can be either an `error` or a valid `response`. If `done` == `false`, neither `error` nor `response` is set. If `done` == `true`, exactly one of `error` or `response` can be set. Some services might not provide the result. `result` can be only one of the following:
+The operation result, which can be either an `error` or a valid `response`. If `done` == `false`, neither `error` nor `response` is set. If `done` == `true`, exactly one of `error` or `response` can be set. Some services might not provide the result. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:
 
-`error` `object (`[Status](/api/files#v1beta.Status)`)` The error result of the operation in case of failure or cancellation. | `response` `object` The normal, successful response of the operation. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.An object containing fields of an arbitrary type. An additional field `"@type"` contains a URI identifying the type. Example: `{ "id": 1234, "@type": "types.example.com/standard/id" }`. | JSON representation  
+`error` `object (`[Status](/api/files#v1beta.Status)`)` The error result of the operation in case of failure or cancellation. | `response` `object` The normal, successful response of the operation. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.An object containing fields of an arbitrary type. An additional field `"@type"` contains a URI identifying the type. Example: `{ "id": 1234, "@type": "types.example.com/standard/id" }`. End of mutually exclusive fields. | JSON representation  
 ---  
       
     
@@ -382,9 +382,9 @@ This resource represents a long-running operation that is the result of a networ
   
 `name` `string` The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`. | `metadata` `object` Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.An object containing fields of an arbitrary type. An additional field `"@type"` contains a URI identifying the type. Example: `{ "id": 1234, "@type": "types.example.com/standard/id" }`. | `done` `boolean` If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available. | `result` `Union type`  
   
-The operation result, which can be either an `error` or a valid `response`. If `done` == `false`, neither `error` nor `response` is set. If `done` == `true`, exactly one of `error` or `response` can be set. Some services might not provide the result. `result` can be only one of the following:
+The operation result, which can be either an `error` or a valid `response`. If `done` == `false`, neither `error` nor `response` is set. If `done` == `true`, exactly one of `error` or `response` can be set. Some services might not provide the result. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:
 
-`error` `object (`[Status](/api/files#v1beta.Status)`)` The error result of the operation in case of failure or cancellation. | `response` `object` The normal, successful response of the operation. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.An object containing fields of an arbitrary type. An additional field `"@type"` contains a URI identifying the type. Example: `{ "id": 1234, "@type": "types.example.com/standard/id" }`. | JSON representation  
+`error` `object (`[Status](/api/files#v1beta.Status)`)` The error result of the operation in case of failure or cancellation. | `response` `object` The normal, successful response of the operation. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.An object containing fields of an arbitrary type. An additional field `"@type"` contains a URI identifying the type. Example: `{ "id": 1234, "@type": "types.example.com/standard/id" }`. End of mutually exclusive fields. | JSON representation  
 ---  
       
     
@@ -438,6 +438,38 @@ The request body must be empty.
 
 If successful, the response body contains an instance of `[Operation](/api/batch-api#Operation)`.
 
+## Method: media.download
+
+  * Endpoint
+  * Path parameters
+  * Query parameters
+  * Request body
+  * Response body
+  * Authorization scopes
+
+Retrieves a file or directory from an environment's snapshot (HTTP endpoint).
+
+### Endpoint
+
+get  `https://generativelanguage.googleapis.com/v1beta/{parent=environments/*}/files`   
+
+
+### Path parameters
+
+| `parent` `string` Required. The resource name of the environment. Format: `environments/{environmentId}` It takes the form `environments/{environment}`.
+
+### Query parameters
+
+| `path` `string` Optional. The path of the file or directory within the environment. If empty, defaults to the root of the workspace. Example: "workspace/src/main.py" | `recursive` `boolean` Optional. If true and the path is a directory, recursively lists all files and subdirectories. Defaults to false (immediate children only). | `page_size` `integer` Optional. Maximum number of entries to return per page (for directory listing). If unspecified, defaults to 100. Maximum is 1000. NOLINT | `page_token` `string` Optional. Pagination token for directory listing. NOLINT
+
+### Request body
+
+The request body must be empty.
+
+### Response body
+
+If successful, the response body contains an instance of `GetEnvironmentFilesResponse`.
+
 ## Method: media.uploadToFileSearchStore
 
   * Endpoint
@@ -478,9 +510,9 @@ If successful, the response body contains data with the following structure: | F
   
 `name` `string` The server-assigned name, which is only unique within the same service that originally returns it. If you use the default HTTP mapping, the `name` should be a resource name ending with `operations/{unique_id}`. | `metadata` `object` Service-specific metadata associated with the operation. It typically contains progress information and common metadata such as create time. Some services might not provide such metadata. Any method that returns a long-running operation should document the metadata type, if any.An object containing fields of an arbitrary type. An additional field `"@type"` contains a URI identifying the type. Example: `{ "id": 1234, "@type": "types.example.com/standard/id" }`. | `done` `boolean` If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available. | `result` `Union type`  
   
-The operation result, which can be either an `error` or a valid `response`. If `done` == `false`, neither `error` nor `response` is set. If `done` == `true`, exactly one of `error` or `response` can be set. Some services might not provide the result. `result` can be only one of the following:
+The operation result, which can be either an `error` or a valid `response`. If `done` == `false`, neither `error` nor `response` is set. If `done` == `true`, exactly one of `error` or `response` can be set. Some services might not provide the result. The following is a list of mutually exclusive fields. At most one of the fields will be set in a response:
 
-`error` `object (`[Status](/api/files#v1beta.Status)`)` The error result of the operation in case of failure or cancellation. | `response` `object` The normal, successful response of the operation. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.An object containing fields of an arbitrary type. An additional field `"@type"` contains a URI identifying the type. Example: `{ "id": 1234, "@type": "types.example.com/standard/id" }`. | JSON representation  
+`error` `object (`[Status](/api/files#v1beta.Status)`)` The error result of the operation in case of failure or cancellation. | `response` `object` The normal, successful response of the operation. If the original method returns no data on success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the response should have the type `XxxResponse`, where `Xxx` is the original method name. For example, if the original method name is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.An object containing fields of an arbitrary type. An additional field `"@type"` contains a URI identifying the type. Example: `{ "id": 1234, "@type": "types.example.com/standard/id" }`. End of mutually exclusive fields. | JSON representation  
 ---  
       
     
@@ -509,9 +541,9 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-08-17 UTC.
+Last updated 2026-08-28 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-08-17 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-08-28 UTC."],[],[]] 
 
   * [ Terms ](//policies.google.com/terms)
   * [ Privacy ](//policies.google.com/privacy)

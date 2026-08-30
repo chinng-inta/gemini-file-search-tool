@@ -1,6 +1,6 @@
 ---
 doc_type: Anti Gravity
-crawled_at: 2026/08/23 09:43:30
+crawled_at: 2026/08/30 11:03:08
 first_url: https://antigravity.google/docs/home
 ---
 
@@ -17,7 +17,7 @@ Cancel
 Select themeDarkLightAuto
 
   * [Home](/docs/home/)
-  * Antigravity 2.0v2.9.1
+  * Antigravity 2.0v2.11.0
     * [Overview](/docs/overview/)
     * [Getting Started](/docs/getting-started/)
     * [Build with Google](/docs/build-with-google/)
@@ -37,6 +37,8 @@ Select themeDarkLightAuto
       * [Hooks](/docs/hooks/)
       * [Sidecars](/docs/sidecars/)
     * Agent Capabilities
+      * [Slash commands overview](/docs/slash-commands/)
+      * [Teamwork agent teams (/teamwork-preview)](/docs/teamwork/)
       * [Permissions](/docs/permissions/)
       * [Subagents](/docs/subagents/)
     * Artifacts
@@ -44,7 +46,7 @@ Select themeDarkLightAuto
       * [Plan](/docs/implementation-plan/)
       * [Walkthrough](/docs/walkthrough/)
       * [Screenshots](/docs/screenshots/)
-  * Antigravity CLIv1.1.17
+  * Antigravity CLIv1.1.22
     * [Overview](/docs/cli/overview/)
     * [Getting Started](/docs/cli/getting-started/)
     * [Installation & Auth](/docs/cli/install/)
@@ -80,12 +82,14 @@ Select themeDarkLightAuto
       * [Permissions Command (/permissions)](/docs/cli/commands/permissions/)
       * [Resume Command (/resume)](/docs/cli/commands/resume/)
       * [Status Line Command (/statusline)](/docs/cli/commands/statusline/)
+      * [Teamwork Command (/teamwork-preview)](/docs/teamwork/)
       * [Window Title Command (/title)](/docs/cli/commands/title/)
       * [Model Quotas (/usage)](/docs/cli/commands/usage/)
+      * [Voice Dictation (/voice)](/docs/cli/commands/voice/)
     * [Best Practices](/docs/cli/best-practices/)
     * [Troubleshooting](/docs/cli/troubleshooting/)
     * [CLI Reference](/docs/cli/reference/)
-  * Antigravity SDKv0.1.13
+  * Antigravity SDKv0.1.15
     * [Overview + Quick Start](/docs/sdk/overview/)
     * [Personas](/docs/sdk/personas/)
     * [Tools & Skills](/docs/sdk/tools/)
@@ -104,6 +108,7 @@ Select themeDarkLightAuto
       * [Visual Studio](/docs/ide/extensions/visual-studio/)
       * [JetBrains](/docs/ide/extensions/jetbrains/)
       * [Zed](/docs/ide/extensions/zed/)
+      * [Xcode](/docs/ide/extensions/xcode/)
     * Features
       * [Tab](/docs/ide/tab/)
       * [Side Panel](/docs/ide/agent-side-panel/)
@@ -255,7 +260,7 @@ Cancel
 Select themeDarkLightAuto
 
   * [Home](/docs/home/)
-  * Antigravity 2.0v2.9.1
+  * Antigravity 2.0v2.11.0
     * [Overview](/docs/overview/)
     * [Getting Started](/docs/getting-started/)
     * [Build with Google](/docs/build-with-google/)
@@ -275,6 +280,8 @@ Select themeDarkLightAuto
       * [Hooks](/docs/hooks/)
       * [Sidecars](/docs/sidecars/)
     * Agent Capabilities
+      * [Slash commands overview](/docs/slash-commands/)
+      * [Teamwork agent teams (/teamwork-preview)](/docs/teamwork/)
       * [Permissions](/docs/permissions/)
       * [Subagents](/docs/subagents/)
     * Artifacts
@@ -282,7 +289,7 @@ Select themeDarkLightAuto
       * [Plan](/docs/implementation-plan/)
       * [Walkthrough](/docs/walkthrough/)
       * [Screenshots](/docs/screenshots/)
-  * Antigravity CLIv1.1.17
+  * Antigravity CLIv1.1.22
     * [Overview](/docs/cli/overview/)
     * [Getting Started](/docs/cli/getting-started/)
     * [Installation & Auth](/docs/cli/install/)
@@ -318,12 +325,14 @@ Select themeDarkLightAuto
       * [Permissions Command (/permissions)](/docs/cli/commands/permissions/)
       * [Resume Command (/resume)](/docs/cli/commands/resume/)
       * [Status Line Command (/statusline)](/docs/cli/commands/statusline/)
+      * [Teamwork Command (/teamwork-preview)](/docs/teamwork/)
       * [Window Title Command (/title)](/docs/cli/commands/title/)
       * [Model Quotas (/usage)](/docs/cli/commands/usage/)
+      * [Voice Dictation (/voice)](/docs/cli/commands/voice/)
     * [Best Practices](/docs/cli/best-practices/)
     * [Troubleshooting](/docs/cli/troubleshooting/)
     * [CLI Reference](/docs/cli/reference/)
-  * Antigravity SDKv0.1.13
+  * Antigravity SDKv0.1.15
     * [Overview + Quick Start](/docs/sdk/overview/)
     * [Personas](/docs/sdk/personas/)
     * [Tools & Skills](/docs/sdk/tools/)
@@ -342,6 +351,7 @@ Select themeDarkLightAuto
       * [Visual Studio](/docs/ide/extensions/visual-studio/)
       * [JetBrains](/docs/ide/extensions/jetbrains/)
       * [Zed](/docs/ide/extensions/zed/)
+      * [Xcode](/docs/ide/extensions/xcode/)
     * Features
       * [Tab](/docs/ide/tab/)
       * [Side Panel](/docs/ide/agent-side-panel/)
