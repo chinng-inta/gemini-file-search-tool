@@ -1,6 +1,6 @@
 ---
 doc_type: Anti Gravity
-crawled_at: 2026/08/30 11:03:08
+crawled_at: 2026/09/06 10:40:18
 first_url: https://antigravity.google/docs/home
 ---
 
@@ -17,7 +17,7 @@ Cancel
 Select themeDarkLightAuto
 
   * [Home](/docs/home/)
-  * Antigravity 2.0v2.11.0
+  * Antigravity 2.0v2.12.2
     * [Overview](/docs/overview/)
     * [Getting Started](/docs/getting-started/)
     * [Build with Google](/docs/build-with-google/)
@@ -38,15 +38,17 @@ Select themeDarkLightAuto
       * [Sidecars](/docs/sidecars/)
     * Agent Capabilities
       * [Slash commands overview](/docs/slash-commands/)
+      * [Boost deep reasoning (/boost)](/docs/boost/)
       * [Teamwork agent teams (/teamwork-preview)](/docs/teamwork/)
       * [Permissions](/docs/permissions/)
+      * [Sandbox](/docs/sandbox/)
       * [Subagents](/docs/subagents/)
     * Artifacts
       * [Overview](/docs/artifacts/)
       * [Plan](/docs/implementation-plan/)
       * [Walkthrough](/docs/walkthrough/)
       * [Screenshots](/docs/screenshots/)
-  * Antigravity CLIv1.1.22
+  * Antigravity CLIv1.1.25
     * [Overview](/docs/cli/overview/)
     * [Getting Started](/docs/cli/getting-started/)
     * [Installation & Auth](/docs/cli/install/)
@@ -76,6 +78,7 @@ Select themeDarkLightAuto
       * [Terminal Title Customization](/docs/cli/title/)
     * Commands
       * [Agents Command (/agents)](/docs/cli/commands/agents/)
+      * [Boost Command (/boost)](/docs/boost/)
       * [Code Search Command (/codesearch)](/docs/cli/commands/codesearch/)
       * [AI Credits Command (/credits)](/docs/cli/commands/credits/)
       * [Diff Command (/diff)](/docs/cli/commands/diff/)
@@ -89,7 +92,7 @@ Select themeDarkLightAuto
     * [Best Practices](/docs/cli/best-practices/)
     * [Troubleshooting](/docs/cli/troubleshooting/)
     * [CLI Reference](/docs/cli/reference/)
-  * Antigravity SDKv0.1.15
+  * Antigravity SDKv0.1.16
     * [Overview + Quick Start](/docs/sdk/overview/)
     * [Personas](/docs/sdk/personas/)
     * [Tools & Skills](/docs/sdk/tools/)
@@ -132,6 +135,7 @@ Select themeDarkLightAuto
     * [Settings](/docs/ide/settings/)
   * Migration
     * [Firebase Studio Migration](/docs/firebase-studio-migration/)
+    * [Workflows to Skills Migration](/docs/migration/workflows-to-skills/)
   * [Enterprise](/docs/enterprise/)
   * [Plans](/docs/plans/)
   * [FAQ](/docs/faq/)
@@ -229,7 +233,7 @@ Section titled “Core Agent Capabilities”
 
 Every Antigravity surface runs on a shared, highly-optimized agent harness co-trained with Gemini models:
 
-  * **Gemini 3.5 Flash** : Powering all local agents with SOTA speed, reasoning, and context window capacity.
+  * **Gemini 3.8 Flash** : Powering all local agents with SOTA speed, reasoning, and context window capacity.
   * **[Asynchronous Subagents](/docs/subagents)** : Allows the main agent to delegate parallel background tasks to concurrent subagents without blocking your flow.
   * **[Visual Artifacts](/docs/artifacts)** : Track and verify agent output (plans, code diffs, browser recordings) with high-fidelity visual reports, keeping you informed every step of the way.
   * **[Security by Design](/docs/permissions)** : Secure local execution via safe defaults, local proxying, and granular tool approval gates.
@@ -260,7 +264,7 @@ Cancel
 Select themeDarkLightAuto
 
   * [Home](/docs/home/)
-  * Antigravity 2.0v2.11.0
+  * Antigravity 2.0v2.12.2
     * [Overview](/docs/overview/)
     * [Getting Started](/docs/getting-started/)
     * [Build with Google](/docs/build-with-google/)
@@ -281,15 +285,17 @@ Select themeDarkLightAuto
       * [Sidecars](/docs/sidecars/)
     * Agent Capabilities
       * [Slash commands overview](/docs/slash-commands/)
+      * [Boost deep reasoning (/boost)](/docs/boost/)
       * [Teamwork agent teams (/teamwork-preview)](/docs/teamwork/)
       * [Permissions](/docs/permissions/)
+      * [Sandbox](/docs/sandbox/)
       * [Subagents](/docs/subagents/)
     * Artifacts
       * [Overview](/docs/artifacts/)
       * [Plan](/docs/implementation-plan/)
       * [Walkthrough](/docs/walkthrough/)
       * [Screenshots](/docs/screenshots/)
-  * Antigravity CLIv1.1.22
+  * Antigravity CLIv1.1.25
     * [Overview](/docs/cli/overview/)
     * [Getting Started](/docs/cli/getting-started/)
     * [Installation & Auth](/docs/cli/install/)
@@ -319,6 +325,7 @@ Select themeDarkLightAuto
       * [Terminal Title Customization](/docs/cli/title/)
     * Commands
       * [Agents Command (/agents)](/docs/cli/commands/agents/)
+      * [Boost Command (/boost)](/docs/boost/)
       * [Code Search Command (/codesearch)](/docs/cli/commands/codesearch/)
       * [AI Credits Command (/credits)](/docs/cli/commands/credits/)
       * [Diff Command (/diff)](/docs/cli/commands/diff/)
@@ -332,7 +339,7 @@ Select themeDarkLightAuto
     * [Best Practices](/docs/cli/best-practices/)
     * [Troubleshooting](/docs/cli/troubleshooting/)
     * [CLI Reference](/docs/cli/reference/)
-  * Antigravity SDKv0.1.15
+  * Antigravity SDKv0.1.16
     * [Overview + Quick Start](/docs/sdk/overview/)
     * [Personas](/docs/sdk/personas/)
     * [Tools & Skills](/docs/sdk/tools/)
@@ -375,6 +382,7 @@ Select themeDarkLightAuto
     * [Settings](/docs/ide/settings/)
   * Migration
     * [Firebase Studio Migration](/docs/firebase-studio-migration/)
+    * [Workflows to Skills Migration](/docs/migration/workflows-to-skills/)
   * [Enterprise](/docs/enterprise/)
   * [Plans](/docs/plans/)
   * [FAQ](/docs/faq/)
@@ -472,7 +480,7 @@ Section titled “Core Agent Capabilities”
 
 Every Antigravity surface runs on a shared, highly-optimized agent harness co-trained with Gemini models:
 
-  * **Gemini 3.5 Flash** : Powering all local agents with SOTA speed, reasoning, and context window capacity.
+  * **Gemini 3.8 Flash** : Powering all local agents with SOTA speed, reasoning, and context window capacity.
   * **[Asynchronous Subagents](/docs/subagents)** : Allows the main agent to delegate parallel background tasks to concurrent subagents without blocking your flow.
   * **[Visual Artifacts](/docs/artifacts)** : Track and verify agent output (plans, code diffs, browser recordings) with high-fidelity visual reports, keeping you informed every step of the way.
   * **[Security by Design](/docs/permissions)** : Secure local execution via safe defaults, local proxying, and granular tool approval gates.

@@ -1,6 +1,6 @@
 ---
 doc_type: M5 products
-crawled_at: 2026/08/30 10:48:54
+crawled_at: 2026/09/06 10:24:06
 first_url: https://docs.m5stack.com/en/products/
 ---
 
@@ -1565,6 +1565,24 @@ Search
 
 ##  For Stack-Faces 
 
+## [Faces Keyboard3 STM32F030C8T6 QWERTY I2C 70-key RGB LED Keyboard ](/en/faces/Faces_Keyboard3)
+
+[View Details](/en/faces/Faces_Keyboard3) [](https://shop.m5stack.com/products/m5stack-faces-keyboard-panel-v3-0)
+
+## [Faces Bottom3 600mAh TP4057 SK6812 M5-Bus HY2.0-4P Pogo Pin ](/en/faces/Faces_Bottom3)
+
+[View Details](/en/faces/Faces_Bottom3) [](https://shop.m5stack.com/products/m5stack-faces-3-bottom-board)
+
+## [Faces Gamepad3 STM32F030F4P6 I2C Gamepad 8-key D-Pad Button Input ](/en/faces/Faces_Gamepad3)
+
+[View Details](/en/faces/Faces_Gamepad3) [](https://shop.m5stack.com/products/m5stack-faces-gamepad-panel-v3-0)
+
+## [Faces Calculator3 STM32G031G8U6 I2C 20-key Calculator Numeric Input Embedded Control ](/en/faces/Faces_Calculator3)
+
+[View Details](/en/faces/Faces_Calculator3) [](https://shop.m5stack.com/products/m5stack-faces-calculator-panel-v3-0)
+
+[Faces Keyboard3](/en/faces/Faces_Keyboard3)[Faces Bottom3](/en/faces/Faces_Bottom3)[Faces Gamepad3](/en/faces/Faces_Gamepad3)[Faces Calculator3](/en/faces/Faces_Calculator3)
+
 ##  For Atom-Atomic Base 
 
 ## [Voice Pyramid STM32G030F6P6 ES8311 ES7210 AW87559 HY2.0-4P RGB LED ](/en/atom/Echo_Pyramid)
@@ -2214,170 +2232,6 @@ Search
 [View Details](/en/1515/ap) [](https://shop.m5stack.com/products/1515-cutting-aluminum-profile-100-200-500-1000mm-used-in-assembling-device)
 
 [Stick Watch Accessory Kit](/en/accessory/Stick_Watch_Accessory_Kit)[Proto Board](/en/accessory/proto_board)[RFID Card 13.56MHz](/en/accessory/RFID_Card_13.56MHz)[M5Box](/en/accessory/m5box)[CoreInk Proto Base](/en/coreink/proto_base)[Guide Rail](/en/accessory/guide_rail)[SandwichC](/en/accessory/sandwichc)[Screw](/en/accessory/screw)[Frame](/en/accessory/frame)[KeyCap](/en/accessory/KeyCap)[Module Proto Frame](/en/accessory/proto_module_frame)[Panel Frame](/en/accessory/panel_frame)[Unit Proto Case](/en/accessory/proto_unit_case)[ESP32 Downloader Kit](/en/accessory/esp32_downloader_kit)[Capsule Proto](/en/accessory/Capsule-proto)[StickC-Plus2 Watch Kit](/en/accessory/M5StickC Plus2 with Watch Accessories)[StickC-Plus Watch Kit](/en/accessory/M5StickC Plus with Watch Accessories)[Watch Dev Kit v1.1](/en/accessory/WATCH v1.1 Dev Kit)[Cardputer Accessory Kit](/en/accessory/Cardputer Accessory Kit)[Cardputer Accessory Kit v1.1](/en/accessory/Cardputer_Accessory_Kit_v1.1)[StampFly Accessory Kit](/en/accessory/Stamp Fly Accessory Kit)[CLIP-B](/en/accessory/CLIP-B)[CLIP-A](/en/accessory/CLIP-A)[Corner](/en/1515/corner)[Nut](/en/1515/nut)[Connector](/en/1515/connectors)[Aluminium Extrusions](/en/1515/ap)
-
-About Us 
-
-  * [About M5Stack](https://m5stack.com/about-us)
-  * [News](https://m5stack.com/explore?page=1)
-  * [Blog](https://m5stack.com/explore?type=blog&page=1)
-  * [Events](https://m5stack.com/events)
-  * [Contact Us](https://m5stack.com/contact)
-
-
-
-Where to buy 
-
-  * [Distributors](https://m5stack.com/distributor)
-  * [Official Store](https://shop.m5stack.com/)
-  * [AliExpress](https://m5stack.aliexpress.com/store/911661199)
-  * [Amazon](https://www.amazon.com/shops/m5stack)
-  * [Taobao](https://m5stack.taobao.com/)
-
-
-
-Solution 
-
-  * [For Business](https://m5stack.com/business)
-  * [For Developers](https://m5stack.com/developers)
-
-
-
-Software 
-
-  * [UiFlow1](https://flow.m5stack.com/)
-  * [UiFlow2](https://uiflow2.m5stack.com/)
-  * [M5Burner](/en/uiflow/m5burner/intro)
-  * [Block Designer](https://block-designer.m5stack.com/)
-  * [EzData 2.0](/en/guide/ezdata/ezdata_v2)
-  * [EasyLoader Packer](/en/guide/easyloader/easyloader_packer)
-  * [VLW Font Creator](/en/guide/develop_tools/vlw_font_creator)
-  * [Device USB Driver](/en/download)
-
-
-
-Documentation 
-
-  * [Product Documents](/en/products)
-  * [UiFlow1](/en/uiflow/uiflow_web)
-  * [UiFlow2](/en/uiflow2/uiflow_web)
-  * [Arduino](/en/arduino/arduino_ide)
-  * [ESP-IDF](/en/esp_idf/esp_idf)
-  * [StackFlow AI](/en/stackflow/overview)
-  * [Home Assistant](/en/homeassistant/overview)
-  * [nanoFramework](https://github.com/nanoframework/nanoFramework.M5Stack)
-  * [Product Guide](/en/guide/product_guide)
-  * [Product Certifications](/en/certification)
-  * [I2C Table](/en/product_i2c_addr)
-  * [Product Selector](/en/products_selector/m5core_compare)
-  * [Hardware Design Files](https://github.com/m5stack/M5_Hardware)
-  * [Release History](/en/history)
-  * [Stack Compatibility](/en/compatible_stack)
-  * [Stack Screw Length](/en/learn/extension/module)
-
-
-
-Stay in the Loop 
-
-Weekly updates on new products, innovations, and announcements. 
-
-Subscribe 
-
-Email is invalid! 
-
-Thanks for subscribing 
-
-[](https://x.com/M5Stack)[](https://www.linkedin.com/company/m5stack)[](https://www.instagram.com/m5stack)[](https://www.facebook.com/M5Stack)[](https://www.youtube.com/m5stack)[](https://www.tiktok.com/@m5stack)[](https://www.hackster.io/m5stack)[](https://discord.gg/ysQAWBUE9Q)[](https://github.com/m5stack)
-
-M5Stack Technology Co., Ltd 
-
-Address: Block A10, Expo Bay South Coast, Fuhai Street, Bao'an District, Shenzhen, China 
-
-TEL: +86 755 8657 5379 
-
-Email: support@m5stack.com 
-
-Copyright © [M5Stack Technology Co., Ltd.](https://m5stack.com/) All rights reserved. 
-
-[Privacy Policy](https://shop.m5stack.com/policies/privacy-policy)| [Terms of Service](https://shop.m5stack.com/policies/terms-of-service)| [Shipping Policy](https://shop.m5stack.com/policies/shipping-policy)| [Refund Policy](https://shop.m5stack.com/policies/refund-policy)| [Payment Method](https://shop.m5stack.com/pages/payment-method)
-
-[粤ICP备16010631号](https://beian.miit.gov.cn/)
-
-================================================================================
-
-# Page: https://docs.m5stack.com/en/products_selector/m5core_compare
-
-[](https://m5stack.com/)
-
-* Solution
-* [Store](https://shop.m5stack.com)
-* Software
-* Documentation
-* About Us
-* Contact
-
-English
-
-English
-
-简体中文
-
-日本語
-
-Product Selector
-
-### 
-
-Controller 
-
-#### 
-
-[ Core Family ](/en/products_selector/m5core_compare)
-
-#### 
-
-[ Stick Family ](/en/products_selector/m5stick_compare)
-
-#### 
-
-[ Atom Family ](/en/products_selector/m5atom_compare)
-
-#### 
-
-[ Cardputer Family ](/en/products_selector/m5cardputer_compare)
-
-#### 
-
-[ Station Family ](/en/products_selector/m5station_compare)
-
-#### 
-
-[ Paper/CoreInk Family ](/en/products_selector/m5paper_compare)
-
-#### 
-
-[ Stamp Family ](/en/products_selector/m5stamp_compare)
-
-### 
-
-Wi-Fi Camera 
-
-#### 
-
-[ UnitCAM Family ](/en/products_selector/unit_cam_compare)
-
-#### 
-
-[ TimerCAM Family ](/en/products_selector/timer_cam_compare)
-
-### 
-
-AI Camera 
-
-#### 
-
-[ UnitV Family ](/en/products_selector/unitv_compare)
-
-Select Product For Compare
 
 About Us 
 
@@ -4029,6 +3883,24 @@ Search
 
 ##  For Stack-Faces 
 
+## [Faces Keyboard3 STM32F030C8T6 QWERTY I2C 70-key RGB LED Keyboard ](/en/faces/Faces_Keyboard3)
+
+[View Details](/en/faces/Faces_Keyboard3) [](https://shop.m5stack.com/products/m5stack-faces-keyboard-panel-v3-0)
+
+## [Faces Bottom3 600mAh TP4057 SK6812 M5-Bus HY2.0-4P Pogo Pin ](/en/faces/Faces_Bottom3)
+
+[View Details](/en/faces/Faces_Bottom3) [](https://shop.m5stack.com/products/m5stack-faces-3-bottom-board)
+
+## [Faces Gamepad3 STM32F030F4P6 I2C Gamepad 8-key D-Pad Button Input ](/en/faces/Faces_Gamepad3)
+
+[View Details](/en/faces/Faces_Gamepad3) [](https://shop.m5stack.com/products/m5stack-faces-gamepad-panel-v3-0)
+
+## [Faces Calculator3 STM32G031G8U6 I2C 20-key Calculator Numeric Input Embedded Control ](/en/faces/Faces_Calculator3)
+
+[View Details](/en/faces/Faces_Calculator3) [](https://shop.m5stack.com/products/m5stack-faces-calculator-panel-v3-0)
+
+[Faces Keyboard3](/en/faces/Faces_Keyboard3)[Faces Bottom3](/en/faces/Faces_Bottom3)[Faces Gamepad3](/en/faces/Faces_Gamepad3)[Faces Calculator3](/en/faces/Faces_Calculator3)
+
 ##  For Atom-Atomic Base 
 
 ## [Voice Pyramid STM32G030F6P6 ES8311 ES7210 AW87559 HY2.0-4P RGB LED ](/en/atom/Echo_Pyramid)
@@ -4678,6 +4550,170 @@ Search
 [View Details](/en/1515/ap) [](https://shop.m5stack.com/products/1515-cutting-aluminum-profile-100-200-500-1000mm-used-in-assembling-device)
 
 [Stick Watch Accessory Kit](/en/accessory/Stick_Watch_Accessory_Kit)[Proto Board](/en/accessory/proto_board)[RFID Card 13.56MHz](/en/accessory/RFID_Card_13.56MHz)[M5Box](/en/accessory/m5box)[CoreInk Proto Base](/en/coreink/proto_base)[Guide Rail](/en/accessory/guide_rail)[SandwichC](/en/accessory/sandwichc)[Screw](/en/accessory/screw)[Frame](/en/accessory/frame)[KeyCap](/en/accessory/KeyCap)[Module Proto Frame](/en/accessory/proto_module_frame)[Panel Frame](/en/accessory/panel_frame)[Unit Proto Case](/en/accessory/proto_unit_case)[ESP32 Downloader Kit](/en/accessory/esp32_downloader_kit)[Capsule Proto](/en/accessory/Capsule-proto)[StickC-Plus2 Watch Kit](/en/accessory/M5StickC Plus2 with Watch Accessories)[StickC-Plus Watch Kit](/en/accessory/M5StickC Plus with Watch Accessories)[Watch Dev Kit v1.1](/en/accessory/WATCH v1.1 Dev Kit)[Cardputer Accessory Kit](/en/accessory/Cardputer Accessory Kit)[Cardputer Accessory Kit v1.1](/en/accessory/Cardputer_Accessory_Kit_v1.1)[StampFly Accessory Kit](/en/accessory/Stamp Fly Accessory Kit)[CLIP-B](/en/accessory/CLIP-B)[CLIP-A](/en/accessory/CLIP-A)[Corner](/en/1515/corner)[Nut](/en/1515/nut)[Connector](/en/1515/connectors)[Aluminium Extrusions](/en/1515/ap)
+
+About Us 
+
+  * [About M5Stack](https://m5stack.com/about-us)
+  * [News](https://m5stack.com/explore?page=1)
+  * [Blog](https://m5stack.com/explore?type=blog&page=1)
+  * [Events](https://m5stack.com/events)
+  * [Contact Us](https://m5stack.com/contact)
+
+
+
+Where to buy 
+
+  * [Distributors](https://m5stack.com/distributor)
+  * [Official Store](https://shop.m5stack.com/)
+  * [AliExpress](https://m5stack.aliexpress.com/store/911661199)
+  * [Amazon](https://www.amazon.com/shops/m5stack)
+  * [Taobao](https://m5stack.taobao.com/)
+
+
+
+Solution 
+
+  * [For Business](https://m5stack.com/business)
+  * [For Developers](https://m5stack.com/developers)
+
+
+
+Software 
+
+  * [UiFlow1](https://flow.m5stack.com/)
+  * [UiFlow2](https://uiflow2.m5stack.com/)
+  * [M5Burner](/en/uiflow/m5burner/intro)
+  * [Block Designer](https://block-designer.m5stack.com/)
+  * [EzData 2.0](/en/guide/ezdata/ezdata_v2)
+  * [EasyLoader Packer](/en/guide/easyloader/easyloader_packer)
+  * [VLW Font Creator](/en/guide/develop_tools/vlw_font_creator)
+  * [Device USB Driver](/en/download)
+
+
+
+Documentation 
+
+  * [Product Documents](/en/products)
+  * [UiFlow1](/en/uiflow/uiflow_web)
+  * [UiFlow2](/en/uiflow2/uiflow_web)
+  * [Arduino](/en/arduino/arduino_ide)
+  * [ESP-IDF](/en/esp_idf/esp_idf)
+  * [StackFlow AI](/en/stackflow/overview)
+  * [Home Assistant](/en/homeassistant/overview)
+  * [nanoFramework](https://github.com/nanoframework/nanoFramework.M5Stack)
+  * [Product Guide](/en/guide/product_guide)
+  * [Product Certifications](/en/certification)
+  * [I2C Table](/en/product_i2c_addr)
+  * [Product Selector](/en/products_selector/m5core_compare)
+  * [Hardware Design Files](https://github.com/m5stack/M5_Hardware)
+  * [Release History](/en/history)
+  * [Stack Compatibility](/en/compatible_stack)
+  * [Stack Screw Length](/en/learn/extension/module)
+
+
+
+Stay in the Loop 
+
+Weekly updates on new products, innovations, and announcements. 
+
+Subscribe 
+
+Email is invalid! 
+
+Thanks for subscribing 
+
+[](https://x.com/M5Stack)[](https://www.linkedin.com/company/m5stack)[](https://www.instagram.com/m5stack)[](https://www.facebook.com/M5Stack)[](https://www.youtube.com/m5stack)[](https://www.tiktok.com/@m5stack)[](https://www.hackster.io/m5stack)[](https://discord.gg/ysQAWBUE9Q)[](https://github.com/m5stack)
+
+M5Stack Technology Co., Ltd 
+
+Address: Block A10, Expo Bay South Coast, Fuhai Street, Bao'an District, Shenzhen, China 
+
+TEL: +86 755 8657 5379 
+
+Email: support@m5stack.com 
+
+Copyright © [M5Stack Technology Co., Ltd.](https://m5stack.com/) All rights reserved. 
+
+[Privacy Policy](https://shop.m5stack.com/policies/privacy-policy)| [Terms of Service](https://shop.m5stack.com/policies/terms-of-service)| [Shipping Policy](https://shop.m5stack.com/policies/shipping-policy)| [Refund Policy](https://shop.m5stack.com/policies/refund-policy)| [Payment Method](https://shop.m5stack.com/pages/payment-method)
+
+[粤ICP备16010631号](https://beian.miit.gov.cn/)
+
+================================================================================
+
+# Page: https://docs.m5stack.com/en/products_selector/m5core_compare
+
+[](https://m5stack.com/)
+
+* Solution
+* [Store](https://shop.m5stack.com)
+* Software
+* Documentation
+* About Us
+* Contact
+
+English
+
+English
+
+简体中文
+
+日本語
+
+Product Selector
+
+### 
+
+Controller 
+
+#### 
+
+[ Core Family ](/en/products_selector/m5core_compare)
+
+#### 
+
+[ Stick Family ](/en/products_selector/m5stick_compare)
+
+#### 
+
+[ Atom Family ](/en/products_selector/m5atom_compare)
+
+#### 
+
+[ Cardputer Family ](/en/products_selector/m5cardputer_compare)
+
+#### 
+
+[ Station Family ](/en/products_selector/m5station_compare)
+
+#### 
+
+[ Paper/CoreInk Family ](/en/products_selector/m5paper_compare)
+
+#### 
+
+[ Stamp Family ](/en/products_selector/m5stamp_compare)
+
+### 
+
+Wi-Fi Camera 
+
+#### 
+
+[ UnitCAM Family ](/en/products_selector/unit_cam_compare)
+
+#### 
+
+[ TimerCAM Family ](/en/products_selector/timer_cam_compare)
+
+### 
+
+AI Camera 
+
+#### 
+
+[ UnitV Family ](/en/products_selector/unitv_compare)
+
+Select Product For Compare
 
 About Us 
 

@@ -1,6 +1,6 @@
 ---
 doc_type: M5Unified Power
-crawled_at: 2026/08/30 10:49:05
+crawled_at: 2026/09/06 10:24:17
 first_url: https://docs.m5stack.com/ja/arduino/m5unified/power_class/
 ---
 
@@ -2007,6 +2007,10 @@ Unit
 
 ##### 
 
+[ Unit SSR ](/en/arduino/projects/unit/unit_ssr)
+
+##### 
+
 [ Unit Finger ](/en/arduino/projects/unit/unit_finger)
 
 ##### 
@@ -2100,6 +2104,14 @@ Module
 ##### 
 
 [ Module13.2 Servo2 ](/en/arduino/projects/module/module13.2_servo2)
+
+##### 
+
+[ Module13.2 2Relay ](/en/arduino/projects/module/module13.2_2relay)
+
+##### 
+
+[ Module13.2 4Relay v1.1 ](/en/arduino/projects/module/module13.2_4relay_v1.1)
 
 ##### 
 
@@ -2339,7 +2351,27 @@ Chain
 
 #### 
 
+Faces 
+
+##### 
+
+[ Faces Keyboard3 ](/en/arduino/projects/faces/faces_keyboard3)
+
+##### 
+
+[ Faces Gamepad3 ](/en/arduino/projects/faces/faces_gamepad3)
+
+##### 
+
+[ Faces Calculator3 ](/en/arduino/projects/faces/faces_calculator3)
+
+#### 
+
 Stamp 
+
+##### 
+
+[ Stamp Timer Power ](/en/arduino/projects/stamp/stamp_timer_power)
 
 ##### 
 

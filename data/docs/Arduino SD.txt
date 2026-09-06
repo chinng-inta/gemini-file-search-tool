@@ -1,6 +1,6 @@
 ---
 doc_type: Arduino SD
-crawled_at: 2026/08/30 10:48:52
+crawled_at: 2026/09/06 10:24:03
 first_url: https://docs.arduino.cc/libraries/sd/
 ---
 
