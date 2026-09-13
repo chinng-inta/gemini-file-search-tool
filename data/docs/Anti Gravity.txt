@@ -1,6 +1,6 @@
 ---
 doc_type: Anti Gravity
-crawled_at: 2026/09/06 10:40:18
+crawled_at: 2026/09/13 10:48:20
 first_url: https://antigravity.google/docs/home
 ---
 
@@ -17,7 +17,7 @@ Cancel
 Select themeDarkLightAuto
 
   * [Home](/docs/home/)
-  * Antigravity 2.0v2.12.2
+  * Antigravity 2.0v2.13.0
     * [Overview](/docs/overview/)
     * [Getting Started](/docs/getting-started/)
     * [Build with Google](/docs/build-with-google/)
@@ -48,7 +48,7 @@ Select themeDarkLightAuto
       * [Plan](/docs/implementation-plan/)
       * [Walkthrough](/docs/walkthrough/)
       * [Screenshots](/docs/screenshots/)
-  * Antigravity CLIv1.1.25
+  * Antigravity CLIv1.2.0
     * [Overview](/docs/cli/overview/)
     * [Getting Started](/docs/cli/getting-started/)
     * [Installation & Auth](/docs/cli/install/)
@@ -264,7 +264,7 @@ Cancel
 Select themeDarkLightAuto
 
   * [Home](/docs/home/)
-  * Antigravity 2.0v2.12.2
+  * Antigravity 2.0v2.13.0
     * [Overview](/docs/overview/)
     * [Getting Started](/docs/getting-started/)
     * [Build with Google](/docs/build-with-google/)
@@ -295,7 +295,7 @@ Select themeDarkLightAuto
       * [Plan](/docs/implementation-plan/)
       * [Walkthrough](/docs/walkthrough/)
       * [Screenshots](/docs/screenshots/)
-  * Antigravity CLIv1.1.25
+  * Antigravity CLIv1.2.0
     * [Overview](/docs/cli/overview/)
     * [Getting Started](/docs/cli/getting-started/)
     * [Installation & Auth](/docs/cli/install/)
