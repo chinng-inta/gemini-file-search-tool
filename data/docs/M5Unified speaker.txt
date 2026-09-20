@@ -1,6 +1,6 @@
 ---
 doc_type: M5Unified speaker
-crawled_at: 2026/09/13 10:30:40
+crawled_at: 2026/09/20 10:47:00
 first_url: https://docs.m5stack.com/ja/arduino/m5unified/speaker_class/
 ---
 
@@ -2372,6 +2372,14 @@ Faces
 #### 
 
 Stamp 
+
+##### 
+
+[ Stamp-AddOn Cam0308 ](/en/arduino/projects/stamp/stamp_addon_cam0308)
+
+##### 
+
+[ Stamp-AddOn Cam3660 ](/en/arduino/projects/stamp/stamp_addon_cam3660)
 
 ##### 
 

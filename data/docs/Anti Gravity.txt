@@ -1,6 +1,6 @@
 ---
 doc_type: Anti Gravity
-crawled_at: 2026/09/13 10:48:20
+crawled_at: 2026/09/20 11:04:35
 first_url: https://antigravity.google/docs/home
 ---
 
@@ -14,131 +14,151 @@ Search``Ctrl``K``
 
 Cancel
 
+[🚀 Remote Control](https://antigravity.google.com "Launch Remote Control")[Downloaddownload](/download)
+
 Select themeDarkLightAuto
 
+[Get Started](/docs/getting-started/)[Features](/docs/features/)[SDK](/docs/sdk/overview/)
+
+[Changelogs ↗](https://antigravity.google/changelog/)[Blog ↗](/blog/)
+
+## GET STARTED
+
   * [Home](/docs/home/)
-  * Antigravity 2.0v2.13.0
-    * [Overview](/docs/overview/)
-    * [Getting Started](/docs/getting-started/)
-    * [Build with Google](/docs/build-with-google/)
-    * [Feature Overview](/docs/features/)
-    * [Models](/docs/models/)
-    * [Projects](/docs/projects/)
-    * [Remote Control](/docs/remote-control/)
-    * Settings
-      * [Overview](/docs/settings/)
-      * [Agent Settings](/docs/agent-settings/)
-      * [Artifact Review](/docs/artifact-review/)
-    * Customizations
-      * [MCP](/docs/mcp/)
-      * [Skills](/docs/skills/)
-      * [Rules](/docs/rules-workflows/)
-      * [Plugins](/docs/plugins/)
-      * [Hooks](/docs/hooks/)
-      * [Sidecars](/docs/sidecars/)
-    * Agent Capabilities
-      * [Slash commands overview](/docs/slash-commands/)
-      * [Boost deep reasoning (/boost)](/docs/boost/)
-      * [Teamwork agent teams (/teamwork-preview)](/docs/teamwork/)
-      * [Permissions](/docs/permissions/)
-      * [Sandbox](/docs/sandbox/)
-      * [Subagents](/docs/subagents/)
-    * Artifacts
-      * [Overview](/docs/artifacts/)
-      * [Plan](/docs/implementation-plan/)
-      * [Walkthrough](/docs/walkthrough/)
-      * [Screenshots](/docs/screenshots/)
-  * Antigravity CLIv1.2.0
-    * [Overview](/docs/cli/overview/)
-    * [Getting Started](/docs/cli/getting-started/)
-    * [Installation & Auth](/docs/cli/install/)
-    * [Tutorial](/docs/cli/tutorial/)
-    * [Using AGY CLI](/docs/cli/using/)
-    * [Features](/docs/cli/features/)
-    * [Migration](/docs/cli/gcli-migration/)
-    * [Prompting & Interaction](/docs/cli/prompting/)
-    * Artifacts
-      * [Reviewing Artifacts](/docs/cli/artifacts/)
-    * [Managing Conversations](/docs/cli/conversations/)
-    * Agent Capabilities
-      * [Choose an execution mode](/docs/cli/modes/)
-      * [Headless Mode](/docs/cli/headless/)
-      * [Background Tasks & Subagents](/docs/cli/subagents/)
-      * [Sandbox](/docs/cli/sandbox/)
-      * [Permissions](/docs/cli/permissions/)
-    * [Projects](/docs/cli/projects/)
-    * Settings
-      * [Settings, Rendering & Keybindings](/docs/cli/settings/)
-      * [Vim Editor Mode](/docs/cli/vim-editor-mode/)
-    * [AI Credits](/docs/cli/credits/)
-    * Customizations
-      * [MCP](/docs/cli/mcp/)
-      * [Plugins & Skills](/docs/cli/plugins/)
-      * [Status Line Customization](/docs/cli/statusline/)
-      * [Terminal Title Customization](/docs/cli/title/)
-    * Commands
-      * [Agents Command (/agents)](/docs/cli/commands/agents/)
-      * [Boost Command (/boost)](/docs/boost/)
-      * [Code Search Command (/codesearch)](/docs/cli/commands/codesearch/)
-      * [AI Credits Command (/credits)](/docs/cli/commands/credits/)
-      * [Diff Command (/diff)](/docs/cli/commands/diff/)
-      * [Permissions Command (/permissions)](/docs/cli/commands/permissions/)
-      * [Resume Command (/resume)](/docs/cli/commands/resume/)
-      * [Status Line Command (/statusline)](/docs/cli/commands/statusline/)
-      * [Teamwork Command (/teamwork-preview)](/docs/teamwork/)
-      * [Window Title Command (/title)](/docs/cli/commands/title/)
-      * [Model Quotas (/usage)](/docs/cli/commands/usage/)
-      * [Voice Dictation (/voice)](/docs/cli/commands/voice/)
-    * [Best Practices](/docs/cli/best-practices/)
-    * [Troubleshooting](/docs/cli/troubleshooting/)
-    * [CLI Reference](/docs/cli/reference/)
-  * Antigravity SDKv0.1.16
-    * [Overview + Quick Start](/docs/sdk/overview/)
-    * [Personas](/docs/sdk/personas/)
-    * [Tools & Skills](/docs/sdk/tools/)
-    * Customizations
-      * [MCP](/docs/sdk/mcp/)
-    * [Policies](/docs/sdk/policies/)
-    * [Subagents](/docs/sdk/subagents/)
-    * [Structured Output](/docs/sdk/structured-output/)
-    * [Lifecycle & Hooks](/docs/sdk/lifecycle/)
-  * Antigravity for IDEsv2.5.5
-    * [Overview](/docs/ide/overview/)
-    * [Getting Started](/docs/ide/getting-started/)
-    * IDE Extensions
-      * [Overview](/docs/ide/extensions/)
-      * [Visual Studio Code](/docs/ide/extensions/vscode/)
-      * [Visual Studio](/docs/ide/extensions/visual-studio/)
-      * [JetBrains](/docs/ide/extensions/jetbrains/)
-      * [Zed](/docs/ide/extensions/zed/)
-      * [Xcode](/docs/ide/extensions/xcode/)
-    * Features
-      * [Tab](/docs/ide/tab/)
-      * [Side Panel](/docs/ide/agent-side-panel/)
-      * [Review Changes](/docs/ide/review-changes-editor/)
-    * Artifacts
-      * [Plan](/docs/ide/implementation-plan/)
-      * [Walkthrough](/docs/ide/walkthrough/)
-      * [Screenshots](/docs/ide/screenshots/)
-      * [Browser Recordings](/docs/ide/browser-recordings/)
-    * Browser
-      * [Overview](/docs/ide/browser/)
-      * [Allowlist / Denylist](/docs/ide/allowlist-denylist/)
-      * [Separate Chrome Profile](/docs/ide/separate-chrome-profile/)
-    * Customizations
-      * [MCP](/docs/ide/mcp/)
-      * [Skills](/docs/ide/skills/)
-      * [Rules](/docs/ide/rules/)
-      * [Workflows](/docs/ide/workflows/)
-      * [Plugins](/docs/ide/plugins/)
-      * [Hooks](/docs/ide/hooks/)
-    * [Settings](/docs/ide/settings/)
-  * Migration
+  * [Getting Started](/docs/getting-started/)
+
+
+
+## ANTIGRAVITY 2.0
+
+  * [Overview](/docs/overview/)
+  * [Build with Google](/docs/build-with-google/)
+  * [Models](/docs/models/)
+
+
+
+## CLI
+
+  * [CLI Overview](/docs/cli/overview/)
+  * [Installation & Auth](/docs/cli/install/)
+  * [Tutorial](/docs/cli/tutorial/)
+  * [Using AGY CLI](/docs/cli/using/)
+  * [Features](/docs/cli/features/)
+  * [Best Practices](/docs/cli/best-practices/)
+  * [Troubleshooting](/docs/cli/troubleshooting/)
+  * [CLI Reference](/docs/cli/reference/)
+
+
+
+## ANTIGRAVITY FOR IDES
+
+  * [Antigravity IDE](/docs/ide/overview/)
+  * IDE Extensions
+    * [Overview](/docs/ide/extensions/)
+    * [Visual Studio Code](/docs/ide/extensions/vscode/)
+    * [Visual Studio](/docs/ide/extensions/visual-studio/)
+    * [JetBrains](/docs/ide/extensions/jetbrains/)
+    * [Zed](/docs/ide/extensions/zed/)
+    * [Xcode](/docs/ide/extensions/xcode/)
+
+
+
+## RESOURCES
+
+  * [FAQ](/docs/faq/)
+  * [Plans & AI Credits](/docs/plans/)
+  * [Enterprise Overview](/docs/enterprise/)
+  * Migrations
     * [Firebase Studio Migration](/docs/firebase-studio-migration/)
     * [Workflows to Skills Migration](/docs/migration/workflows-to-skills/)
-  * [Enterprise](/docs/enterprise/)
-  * [Plans](/docs/plans/)
-  * [FAQ](/docs/faq/)
+    * [GCLI Migration](/docs/cli/gcli-migration/)
+
+
+
+## LEARN
+
+  * [Overview](/docs/features/)
+  * [Remote Control](/docs/remote-control/)
+  * [Plugins](/docs/plugins/)
+  * [Terminal Sandbox](/docs/sandbox/)
+  * [Review Changes](/docs/ide/review-changes-editor/)
+  * Terminal
+    * [Execution Modes](/docs/cli/modes/)
+    * [Headless Mode](/docs/cli/headless/)
+    * [Status Line Customization](/docs/cli/statusline/)
+    * [Terminal Title Customization](/docs/cli/title/)
+  * Browser
+    * [Overview](/docs/ide/browser/)
+    * [Browser Recordings](/docs/ide/browser-recordings/)
+    * [Allowlist / Denylist](/docs/ide/allowlist-denylist/)
+    * [Separate Chrome Profile](/docs/ide/separate-chrome-profile/)
+  * Artifacts
+    * [Overview](/docs/artifacts/)
+    * [Implementation Plan](/docs/implementation-plan/)
+    * [Walkthrough](/docs/walkthrough/)
+    * [Visual Screenshots](/docs/screenshots/)
+    * [Reviewing Artifacts (CLI)](/docs/cli/artifacts/)
+  * Projects
+    * [Overview](/docs/projects/)
+    * [Prompting & Interaction](/docs/cli/prompting/)
+    * [Managing Conversations](/docs/cli/conversations/)
+  * Permissions
+    * [Overview](/docs/permissions/)
+    * [AI Credits](/docs/cli/credits/)
+  * Editor Features
+    * [Tab Completion](/docs/ide/tab/)
+    * [Agent Side Panel](/docs/ide/agent-side-panel/)
+    * [Agent Overview](/docs/agent/)
+    * [Task Groups](/docs/tools/)
+  * Settings
+    * [Overview](/docs/settings/)
+    * [Agent Settings](/docs/agent-settings/)
+    * [Artifact Review](/docs/artifact-review/)
+    * [Vim Editor Mode](/docs/cli/vim-editor-mode/)
+
+
+
+## SLASH COMMANDS
+
+  * [Overview](/docs/slash-commands/)
+  * [Boost (/boost)](/docs/boost/)
+  * [Teamwork (/teamwork-preview)](/docs/teamwork/)
+  * [Agents (/agents)](/docs/cli/commands/agents/)
+  * [Code Search (/codesearch)](/docs/cli/commands/codesearch/)
+  * [AI Credits (/credits)](/docs/cli/commands/credits/)
+  * [Diff (/diff)](/docs/cli/commands/diff/)
+  * [Permissions (/permissions)](/docs/cli/commands/permissions/)
+  * [Resume (/resume)](/docs/cli/commands/resume/)
+  * [Status Line (/statusline)](/docs/cli/commands/statusline/)
+  * [Window Title (/title)](/docs/cli/commands/title/)
+  * [Model Quotas (/usage)](/docs/cli/commands/usage/)
+  * [Voice Dictation (/voice)](/docs/cli/commands/voice/)
+
+
+
+## EXTEND
+
+  * [MCP](/docs/mcp/)
+  * Skills
+    * [Agent Skills](/docs/skills/)
+    * [Rules & Workflows](/docs/rules-workflows/)
+    * [IDE Workflows](/docs/ide/workflows/)
+  * [Custom Subagents](/docs/subagents/)
+  * [Lifecycle Hooks](/docs/hooks/)
+  * [Sidecars](/docs/sidecars/)
+
+
+
+## ANTIGRAVITY SDK
+
+  * [Overview + Quick Start](/docs/sdk/overview/)
+  * [Personas](/docs/sdk/personas/)
+  * [Tools & Skills](/docs/sdk/tools/)
+  * [MCP](/docs/sdk/mcp/)
+  * [Policies](/docs/sdk/policies/)
+  * [Subagents](/docs/sdk/subagents/)
+  * [Structured Output](/docs/sdk/structured-output/)
+  * [Lifecycle & Hooks](/docs/sdk/lifecycle/)
 
 
 
@@ -168,7 +188,7 @@ On this page
 
 
 
-HomeHome
+Get StartedHome
 
 Markdownkeyboard_arrow_down
 
@@ -247,7 +267,7 @@ Every Antigravity surface runs on a shared, highly-optimized agent harness co-tr
 
 
 [Next  
-Overview](/docs/overview/)
+Getting Started](/docs/getting-started/)
 
 ================================================================================
 
@@ -261,131 +281,151 @@ Search``Ctrl``K``
 
 Cancel
 
+[🚀 Remote Control](https://antigravity.google.com "Launch Remote Control")[Downloaddownload](/download)
+
 Select themeDarkLightAuto
 
+[Get Started](/docs/getting-started/)[Features](/docs/features/)[SDK](/docs/sdk/overview/)
+
+[Changelogs ↗](https://antigravity.google/changelog/)[Blog ↗](/blog/)
+
+## GET STARTED
+
   * [Home](/docs/home/)
-  * Antigravity 2.0v2.13.0
-    * [Overview](/docs/overview/)
-    * [Getting Started](/docs/getting-started/)
-    * [Build with Google](/docs/build-with-google/)
-    * [Feature Overview](/docs/features/)
-    * [Models](/docs/models/)
-    * [Projects](/docs/projects/)
-    * [Remote Control](/docs/remote-control/)
-    * Settings
-      * [Overview](/docs/settings/)
-      * [Agent Settings](/docs/agent-settings/)
-      * [Artifact Review](/docs/artifact-review/)
-    * Customizations
-      * [MCP](/docs/mcp/)
-      * [Skills](/docs/skills/)
-      * [Rules](/docs/rules-workflows/)
-      * [Plugins](/docs/plugins/)
-      * [Hooks](/docs/hooks/)
-      * [Sidecars](/docs/sidecars/)
-    * Agent Capabilities
-      * [Slash commands overview](/docs/slash-commands/)
-      * [Boost deep reasoning (/boost)](/docs/boost/)
-      * [Teamwork agent teams (/teamwork-preview)](/docs/teamwork/)
-      * [Permissions](/docs/permissions/)
-      * [Sandbox](/docs/sandbox/)
-      * [Subagents](/docs/subagents/)
-    * Artifacts
-      * [Overview](/docs/artifacts/)
-      * [Plan](/docs/implementation-plan/)
-      * [Walkthrough](/docs/walkthrough/)
-      * [Screenshots](/docs/screenshots/)
-  * Antigravity CLIv1.2.0
-    * [Overview](/docs/cli/overview/)
-    * [Getting Started](/docs/cli/getting-started/)
-    * [Installation & Auth](/docs/cli/install/)
-    * [Tutorial](/docs/cli/tutorial/)
-    * [Using AGY CLI](/docs/cli/using/)
-    * [Features](/docs/cli/features/)
-    * [Migration](/docs/cli/gcli-migration/)
-    * [Prompting & Interaction](/docs/cli/prompting/)
-    * Artifacts
-      * [Reviewing Artifacts](/docs/cli/artifacts/)
-    * [Managing Conversations](/docs/cli/conversations/)
-    * Agent Capabilities
-      * [Choose an execution mode](/docs/cli/modes/)
-      * [Headless Mode](/docs/cli/headless/)
-      * [Background Tasks & Subagents](/docs/cli/subagents/)
-      * [Sandbox](/docs/cli/sandbox/)
-      * [Permissions](/docs/cli/permissions/)
-    * [Projects](/docs/cli/projects/)
-    * Settings
-      * [Settings, Rendering & Keybindings](/docs/cli/settings/)
-      * [Vim Editor Mode](/docs/cli/vim-editor-mode/)
-    * [AI Credits](/docs/cli/credits/)
-    * Customizations
-      * [MCP](/docs/cli/mcp/)
-      * [Plugins & Skills](/docs/cli/plugins/)
-      * [Status Line Customization](/docs/cli/statusline/)
-      * [Terminal Title Customization](/docs/cli/title/)
-    * Commands
-      * [Agents Command (/agents)](/docs/cli/commands/agents/)
-      * [Boost Command (/boost)](/docs/boost/)
-      * [Code Search Command (/codesearch)](/docs/cli/commands/codesearch/)
-      * [AI Credits Command (/credits)](/docs/cli/commands/credits/)
-      * [Diff Command (/diff)](/docs/cli/commands/diff/)
-      * [Permissions Command (/permissions)](/docs/cli/commands/permissions/)
-      * [Resume Command (/resume)](/docs/cli/commands/resume/)
-      * [Status Line Command (/statusline)](/docs/cli/commands/statusline/)
-      * [Teamwork Command (/teamwork-preview)](/docs/teamwork/)
-      * [Window Title Command (/title)](/docs/cli/commands/title/)
-      * [Model Quotas (/usage)](/docs/cli/commands/usage/)
-      * [Voice Dictation (/voice)](/docs/cli/commands/voice/)
-    * [Best Practices](/docs/cli/best-practices/)
-    * [Troubleshooting](/docs/cli/troubleshooting/)
-    * [CLI Reference](/docs/cli/reference/)
-  * Antigravity SDKv0.1.16
-    * [Overview + Quick Start](/docs/sdk/overview/)
-    * [Personas](/docs/sdk/personas/)
-    * [Tools & Skills](/docs/sdk/tools/)
-    * Customizations
-      * [MCP](/docs/sdk/mcp/)
-    * [Policies](/docs/sdk/policies/)
-    * [Subagents](/docs/sdk/subagents/)
-    * [Structured Output](/docs/sdk/structured-output/)
-    * [Lifecycle & Hooks](/docs/sdk/lifecycle/)
-  * Antigravity for IDEsv2.5.5
-    * [Overview](/docs/ide/overview/)
-    * [Getting Started](/docs/ide/getting-started/)
-    * IDE Extensions
-      * [Overview](/docs/ide/extensions/)
-      * [Visual Studio Code](/docs/ide/extensions/vscode/)
-      * [Visual Studio](/docs/ide/extensions/visual-studio/)
-      * [JetBrains](/docs/ide/extensions/jetbrains/)
-      * [Zed](/docs/ide/extensions/zed/)
-      * [Xcode](/docs/ide/extensions/xcode/)
-    * Features
-      * [Tab](/docs/ide/tab/)
-      * [Side Panel](/docs/ide/agent-side-panel/)
-      * [Review Changes](/docs/ide/review-changes-editor/)
-    * Artifacts
-      * [Plan](/docs/ide/implementation-plan/)
-      * [Walkthrough](/docs/ide/walkthrough/)
-      * [Screenshots](/docs/ide/screenshots/)
-      * [Browser Recordings](/docs/ide/browser-recordings/)
-    * Browser
-      * [Overview](/docs/ide/browser/)
-      * [Allowlist / Denylist](/docs/ide/allowlist-denylist/)
-      * [Separate Chrome Profile](/docs/ide/separate-chrome-profile/)
-    * Customizations
-      * [MCP](/docs/ide/mcp/)
-      * [Skills](/docs/ide/skills/)
-      * [Rules](/docs/ide/rules/)
-      * [Workflows](/docs/ide/workflows/)
-      * [Plugins](/docs/ide/plugins/)
-      * [Hooks](/docs/ide/hooks/)
-    * [Settings](/docs/ide/settings/)
-  * Migration
+  * [Getting Started](/docs/getting-started/)
+
+
+
+## ANTIGRAVITY 2.0
+
+  * [Overview](/docs/overview/)
+  * [Build with Google](/docs/build-with-google/)
+  * [Models](/docs/models/)
+
+
+
+## CLI
+
+  * [CLI Overview](/docs/cli/overview/)
+  * [Installation & Auth](/docs/cli/install/)
+  * [Tutorial](/docs/cli/tutorial/)
+  * [Using AGY CLI](/docs/cli/using/)
+  * [Features](/docs/cli/features/)
+  * [Best Practices](/docs/cli/best-practices/)
+  * [Troubleshooting](/docs/cli/troubleshooting/)
+  * [CLI Reference](/docs/cli/reference/)
+
+
+
+## ANTIGRAVITY FOR IDES
+
+  * [Antigravity IDE](/docs/ide/overview/)
+  * IDE Extensions
+    * [Overview](/docs/ide/extensions/)
+    * [Visual Studio Code](/docs/ide/extensions/vscode/)
+    * [Visual Studio](/docs/ide/extensions/visual-studio/)
+    * [JetBrains](/docs/ide/extensions/jetbrains/)
+    * [Zed](/docs/ide/extensions/zed/)
+    * [Xcode](/docs/ide/extensions/xcode/)
+
+
+
+## RESOURCES
+
+  * [FAQ](/docs/faq/)
+  * [Plans & AI Credits](/docs/plans/)
+  * [Enterprise Overview](/docs/enterprise/)
+  * Migrations
     * [Firebase Studio Migration](/docs/firebase-studio-migration/)
     * [Workflows to Skills Migration](/docs/migration/workflows-to-skills/)
-  * [Enterprise](/docs/enterprise/)
-  * [Plans](/docs/plans/)
-  * [FAQ](/docs/faq/)
+    * [GCLI Migration](/docs/cli/gcli-migration/)
+
+
+
+## LEARN
+
+  * [Overview](/docs/features/)
+  * [Remote Control](/docs/remote-control/)
+  * [Plugins](/docs/plugins/)
+  * [Terminal Sandbox](/docs/sandbox/)
+  * [Review Changes](/docs/ide/review-changes-editor/)
+  * Terminal
+    * [Execution Modes](/docs/cli/modes/)
+    * [Headless Mode](/docs/cli/headless/)
+    * [Status Line Customization](/docs/cli/statusline/)
+    * [Terminal Title Customization](/docs/cli/title/)
+  * Browser
+    * [Overview](/docs/ide/browser/)
+    * [Browser Recordings](/docs/ide/browser-recordings/)
+    * [Allowlist / Denylist](/docs/ide/allowlist-denylist/)
+    * [Separate Chrome Profile](/docs/ide/separate-chrome-profile/)
+  * Artifacts
+    * [Overview](/docs/artifacts/)
+    * [Implementation Plan](/docs/implementation-plan/)
+    * [Walkthrough](/docs/walkthrough/)
+    * [Visual Screenshots](/docs/screenshots/)
+    * [Reviewing Artifacts (CLI)](/docs/cli/artifacts/)
+  * Projects
+    * [Overview](/docs/projects/)
+    * [Prompting & Interaction](/docs/cli/prompting/)
+    * [Managing Conversations](/docs/cli/conversations/)
+  * Permissions
+    * [Overview](/docs/permissions/)
+    * [AI Credits](/docs/cli/credits/)
+  * Editor Features
+    * [Tab Completion](/docs/ide/tab/)
+    * [Agent Side Panel](/docs/ide/agent-side-panel/)
+    * [Agent Overview](/docs/agent/)
+    * [Task Groups](/docs/tools/)
+  * Settings
+    * [Overview](/docs/settings/)
+    * [Agent Settings](/docs/agent-settings/)
+    * [Artifact Review](/docs/artifact-review/)
+    * [Vim Editor Mode](/docs/cli/vim-editor-mode/)
+
+
+
+## SLASH COMMANDS
+
+  * [Overview](/docs/slash-commands/)
+  * [Boost (/boost)](/docs/boost/)
+  * [Teamwork (/teamwork-preview)](/docs/teamwork/)
+  * [Agents (/agents)](/docs/cli/commands/agents/)
+  * [Code Search (/codesearch)](/docs/cli/commands/codesearch/)
+  * [AI Credits (/credits)](/docs/cli/commands/credits/)
+  * [Diff (/diff)](/docs/cli/commands/diff/)
+  * [Permissions (/permissions)](/docs/cli/commands/permissions/)
+  * [Resume (/resume)](/docs/cli/commands/resume/)
+  * [Status Line (/statusline)](/docs/cli/commands/statusline/)
+  * [Window Title (/title)](/docs/cli/commands/title/)
+  * [Model Quotas (/usage)](/docs/cli/commands/usage/)
+  * [Voice Dictation (/voice)](/docs/cli/commands/voice/)
+
+
+
+## EXTEND
+
+  * [MCP](/docs/mcp/)
+  * Skills
+    * [Agent Skills](/docs/skills/)
+    * [Rules & Workflows](/docs/rules-workflows/)
+    * [IDE Workflows](/docs/ide/workflows/)
+  * [Custom Subagents](/docs/subagents/)
+  * [Lifecycle Hooks](/docs/hooks/)
+  * [Sidecars](/docs/sidecars/)
+
+
+
+## ANTIGRAVITY SDK
+
+  * [Overview + Quick Start](/docs/sdk/overview/)
+  * [Personas](/docs/sdk/personas/)
+  * [Tools & Skills](/docs/sdk/tools/)
+  * [MCP](/docs/sdk/mcp/)
+  * [Policies](/docs/sdk/policies/)
+  * [Subagents](/docs/sdk/subagents/)
+  * [Structured Output](/docs/sdk/structured-output/)
+  * [Lifecycle & Hooks](/docs/sdk/lifecycle/)
 
 
 
@@ -415,7 +455,7 @@ On this page
 
 
 
-HomeHome
+Get StartedHome
 
 Markdownkeyboard_arrow_down
 
@@ -494,7 +534,7 @@ Every Antigravity surface runs on a shared, highly-optimized agent harness co-tr
 
 
 [Next  
-Overview](/docs/overview/)
+Getting Started](/docs/getting-started/)
 
 ================================================================================
 

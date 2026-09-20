@@ -1,6 +1,6 @@
 ---
 doc_type: Arduino Hardware
-crawled_at: 2026/09/13 10:28:15
+crawled_at: 2026/09/20 10:44:26
 first_url: https://docs.arduino.cc/hardware/
 ---
 
@@ -75,118 +75,6 @@ Arduino UNO Q bridges high-performance computing with real-time control. Get pow
 [Project Hub](https://projecthub.arduino.cc/)[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/)
 
 [Product Compliance](/certifications/)[Help Center](https://support.arduino.cc/hc/en-us/articles/9264736457500-Hardware-Support)[Trademarks & Licensing](https://www.arduino.cc/en/trademark/)
-
-Back to top
-
-© 2026 Arduino
-
-[Trademarks & Copyrights](https://arduino.cc/en/trademark)
-
-[Whistleblowing](https://secure.ethicspoint.com/domain/media/en/gui/33575/)
-
-[Digital Services Act](https://arduino.cc/en/digital-services-act)
-
-[Terms of Service](https://arduino.cc/en/terms-conditions)
-
-[Privacy Policy](https://arduino.cc/en/privacy-policy)
-
-[Security](https://arduino.cc/en/security)
-
-Cookie Settings
-
-================================================================================
-
-# Page: https://docs.arduino.cc/hardware/modulino-light
-
-[](https://arduino.cc "Go to arduino.cc")[](https://docs.arduino.cc)
-
-/
-
-Theme
-
-[Go Back](/hardware/)
-
-Modulino Light
-
-##### MKR Family
-
-##### UNO Family
-
-##### Nano Family
-
-##### Portenta Family
-
-##### Pro Solutions and Kits
-
-##### Nicla Family
-
-##### Opta
-
-##### Education
-
-##### Kits
-
-##### Mega
-
-##### Modulino
-
-###### Modulino Nodes
-
-[Modulino Buttons](/hardware/modulino-buttons)[Modulino Buzzer](/hardware/modulino-buzzer)[Modulino Distance](/hardware/modulino-distance)[Modulino Extender](/hardware/modulino-extender)[Modulino Hub](/hardware/modulino-hub)[Modulino Joystick](/hardware/modulino-joystick)[Modulino Knob](/hardware/modulino-knob)[Modulino Latch Relay](/hardware/modulino-latch)[Modulino Light](/hardware/modulino-light)[Modulino LED Matrix](/hardware/modulino-matrix)[Modulino Motors](/hardware/modulino-motors)[Modulino Movement](/hardware/modulino-movement)[Modulino Pixels](/hardware/modulino-pixels)[Modulino Thermo](/hardware/modulino-thermo)[Modulino Vibro](/hardware/modulino-vibro)
-
-##### Classic
-
-##### Accessories
-
-##### VENTUNO
-
-[Home / ](/)[Hardware / ](/hardware/)[Modulino Light ](/hardware/modulino-light)
-
-# Modulino Light
-
-An advanced optical sensor featuring ambient light, RGB colour detection, and infrared sensing capabilities. Identify colours, measure light levels, or detect infrared radiation for smart lighting, colour sorting, or interactive projects. Compatible with Arduino UNO R4 WiFi or any Qwiic-enabled board, with simple I2C integration for comprehensive optical sensing.
-
-[Get Started](https://docs.arduino.cc/tutorials/modulino-light/how-light/)[More on Modulino Nodes](https://docs.arduino.cc/tutorials/modulino-thermo/how-general/)
-
-Pinout
-
-[Buy now](https://store.arduino.cc/products/modulino-light)
-
-## Downloadable resources
-
-[Datasheet](/resources/datasheets/ABX00111-datasheet.pdf)[Schematics](/resources/schematics/ABX00111-schematics.pdf)[CAD Files](/static/adace78c0d1d5293e99258a291bda029/ABX00111-cad-files.zip)[STEP Files](/resources/models/ABX00111-step.zip)
-
-Features
-
-Tutorials (2)
-
-Tech Specs
-
-Compatibility
-
-Suggested Libraries
-
-The Modulino® Light module features an advanced optical sensor providing ambient light, RGB colour detection, and infrared sensing capabilities. It is designed to be used with any compatible board with Qwiic, allowing you to build smart lighting, colour recognition, and optical sensing projects without making complicated connections. The module also includes example projects for you to learn important programming concepts and get inspired.
-
-RGB Colour Detection
-
-This module provides high-precision colour detection with separate red, green, and blue channels, plus ambient light and infrared sensing for comprehensive optical measurements.
-
-Qwiic Connectors
-
-The Modulino® Light module connects to your UNO R4 WiFi with Qwiic cables, letting you focus on learning programming without building complex circuits.
-
-#### Certifications
-
-CEUKCA
-
-#### Connect and Contribute
-
-[Project Hub](https://projecthub.arduino.cc/?value=Modulino Light)[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/c/hardware/accessories/213)
-
-[Product Compliance](/certifications/)[Help Center](https://support.arduino.cc/hc/en-us/articles/9264736457500-Hardware-Support)[Trademarks & Licensing](https://www.arduino.cc/en/trademark/)
-
-#### Was this article helpful?
 
 Back to top
 
@@ -316,7 +204,7 @@ Cookie Settings
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/hardware/usb-c-power-supply-45w
+# Page: https://docs.arduino.cc/hardware/modulino-light
 
 [](https://arduino.cc "Go to arduino.cc")[](https://docs.arduino.cc)
 
@@ -326,7 +214,7 @@ Theme
 
 [Go Back](/hardware/)
 
-USB-C Power Supply (45W)
+Modulino Light
 
 ##### MKR Family
 
@@ -350,113 +238,9 @@ USB-C Power Supply (45W)
 
 ##### Modulino
 
-##### Classic
+###### Modulino Nodes
 
-##### Accessories
-
-###### Accessories
-
-[Bughopper](/hardware/bughopper)[USB-C Cable (24-pin)](/hardware/usb-c-cable-24-pin)[USB-C Hub (8 in 1)](/hardware/usb-c-hub-8-in-1)[USB-C Power Supply (45W)](/hardware/usb-c-power-supply-45w)[USB-C Power Supply (65W)](/hardware/usb-c-power-supply-65w)
-
-##### VENTUNO
-
-[Home / ](/)[Hardware / ](/hardware/)[USB-C Power Supply (45W) ](/hardware/usb-c-power-supply-45w)
-
-# USB-C Power Supply (45W)
-
-The Arduino® USB-C Power Supply (45W) is a compact, interchangeable plug adapter for USB-C devices supporting USB Power Delivery (PD). The 45 W multi-voltage power adapter provides intelligent power delivery across five voltage profiles (5 V, 9 V, 12 V, 15 V, 20 V), negotiating the optimal charging parameters for connected devices. With interchangeable regional plugs (EU, UK, US, AU) and broad safety certifications, it provides a universal power solution for development, prototyping, and deployment scenarios worldwide.
-
-[Buy now](https://store.arduino.cc/products/usb-c-power-supply)
-
-## Downloadable resources
-
-[Datasheet](/resources/datasheets/TPX00242-datasheet.pdf)
-
-Features
-
-Tech Specs
-
-Suggested Libraries
-
-The **Arduino® USB-C Power Supply (45W)** provides power delivery for USB-C devices with multiple voltage outputs. The adapter features interchangeable regional plugs for worldwide use.
-
-Power Output
-
-Voltage outputs: 5 V, 9 V, 12 V, 15 V, and 20 V (up to 45 W maximum).
-
-USB Power Delivery 3.0
-
-USB PD 3.0 and PPS support for automatic voltage negotiation.
-
-Interchangeable Plugs
-
-Regional plugs for US, EU, and UK. Tool-free plug replacement.
-
-Safety Protection
-
-Over-current, short-circuit, over-voltage, and over-temperature protection with auto-recovery.
-
-#### Connect and Contribute
-
-[Project Hub](https://projecthub.arduino.cc/?value=USB-C Power Supply \(45W\))[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/)
-
-[Product Compliance](/certifications/)[Help Center](https://support.arduino.cc/hc/en-us/articles/9264736457500-Hardware-Support)[Trademarks & Licensing](https://www.arduino.cc/en/trademark/)
-
-#### Was this article helpful?
-
-Back to top
-
-© 2026 Arduino
-
-[Trademarks & Copyrights](https://arduino.cc/en/trademark)
-
-[Whistleblowing](https://secure.ethicspoint.com/domain/media/en/gui/33575/)
-
-[Digital Services Act](https://arduino.cc/en/digital-services-act)
-
-[Terms of Service](https://arduino.cc/en/terms-conditions)
-
-[Privacy Policy](https://arduino.cc/en/privacy-policy)
-
-[Security](https://arduino.cc/en/security)
-
-Cookie Settings
-
-================================================================================
-
-# Page: https://docs.arduino.cc/hardware/ventuno-q
-
-[](https://arduino.cc "Go to arduino.cc")[](https://docs.arduino.cc)
-
-/
-
-Theme
-
-[Go Back](/hardware/)
-
-VENTUNO Q
-
-##### MKR Family
-
-##### UNO Family
-
-##### Nano Family
-
-##### Portenta Family
-
-##### Pro Solutions and Kits
-
-##### Nicla Family
-
-##### Opta
-
-##### Education
-
-##### Kits
-
-##### Mega
-
-##### Modulino
+[Modulino Buttons](/hardware/modulino-buttons)[Modulino Buzzer](/hardware/modulino-buzzer)[Modulino Distance](/hardware/modulino-distance)[Modulino Extender](/hardware/modulino-extender)[Modulino Hub](/hardware/modulino-hub)[Modulino Joystick](/hardware/modulino-joystick)[Modulino Knob](/hardware/modulino-knob)[Modulino Latch Relay](/hardware/modulino-latch)[Modulino Light](/hardware/modulino-light)[Modulino LED Matrix](/hardware/modulino-matrix)[Modulino Motors](/hardware/modulino-motors)[Modulino Movement](/hardware/modulino-movement)[Modulino Pixels](/hardware/modulino-pixels)[Modulino Thermo](/hardware/modulino-thermo)[Modulino Vibro](/hardware/modulino-vibro)
 
 ##### Classic
 
@@ -464,35 +248,25 @@ VENTUNO Q
 
 ##### VENTUNO
 
-###### Boards
+[Home / ](/)[Hardware / ](/hardware/)[Modulino Light ](/hardware/modulino-light)
 
-[VENTUNO Q](/hardware/ventuno-q)
+# Modulino Light
 
-[Home / ](/)[Hardware / ](/hardware/)[VENTUNO Q ](/hardware/ventuno-q)
+An advanced optical sensor featuring ambient light, RGB colour detection, and infrared sensing capabilities. Identify colours, measure light levels, or detect infrared radiation for smart lighting, colour sorting, or interactive projects. Compatible with Arduino UNO R4 WiFi or any Qwiic-enabled board, with simple I2C integration for comprehensive optical sensing.
 
-# VENTUNO Q
-
-The Arduino VENTUNO Q is the edge AI computer that redefines what is possible at the edge, serving as the definitive powerhouse for AI and robotics applications. At its core lies a revolutionary Dual-Brain architecture: the robust Qualcomm Dragonwing™ IQ8 delivers up to 40 dense TOPS of AI compute for advanced computer vision and local LLMs, while the dedicated STM32H5 Microcontroller ensures the low-latency precision required for complex motor control and robotics.
-
-[User Manual](/tutorials/ventuno-q/user-manual)[Arduino App Lab](/software/app-lab/tutorials/01.getting-started/apps-lab-ide)
+[Get Started](https://docs.arduino.cc/tutorials/modulino-light/how-light/)[More on Modulino Nodes](https://docs.arduino.cc/tutorials/modulino-thermo/how-general/)
 
 Pinout
 
-[Buy now](https://store.arduino.cc/products/ventuno-q)
+[Buy now](https://store.arduino.cc/products/modulino-light)
 
 ## Downloadable resources
 
-[Pinout (PDF)](/resources/pinouts/ABX00181-full-pinout.pdf)
-
-Datasheet
-
-[Schematics](/resources/schematics/ABX00181-schematics.pdf)[CAD Files](/static/fc4011e6b94dbc335edb894569949a66/ABX00181-cad-files.zip)[STEP Files](/resources/models/ABX00181-step.zip)[Power Tree](/static/643e154ec9aff1e623e70f57f8a35970/ABX00181-power-tree.pdf)[Block Diagram](/static/f1df6fa7ce6f84bf6db015137f9597e2/ABX00181-block-diagram.pdf)
-
-Overview
+[Datasheet](/resources/datasheets/ABX00111-datasheet.pdf)[Schematics](/resources/schematics/ABX00111-schematics.pdf)[CAD Files](/static/adace78c0d1d5293e99258a291bda029/ABX00111-cad-files.zip)[STEP Files](/resources/models/ABX00111-step.zip)
 
 Features
 
-Tutorials (29)
+Tutorials (2)
 
 Tech Specs
 
@@ -500,84 +274,23 @@ Compatibility
 
 Suggested Libraries
 
-The **Arduino® VENTUNO™ Q** integrates the Qualcomm® Dragonwing™ IQ8 (QCS8275) Microprocessor (MPU), running a full Ubuntu Linux environment (with Debian support coming soon), with the STMicroelectronics® STM32H5F5 Microcontroller (MCU) built on Arm® Cortex®-M33 architecture. This dual-architecture platform brings together Linux and microcontroller worlds through a built-in RPC library, so you can create powerful, responsive applications in one seamless workflow with Arduino App Lab.
+The Modulino® Light module features an advanced optical sensor providing ambient light, RGB colour detection, and infrared sensing capabilities. It is designed to be used with any compatible board with Qwiic, allowing you to build smart lighting, colour recognition, and optical sensing projects without making complicated connections. The module also includes example projects for you to learn important programming concepts and get inspired.
 
-Arduino App Lab combines Arduino sketches, Python scripts, and AI models into ready-to-run apps. The board features integrated Wi-Fi® 6 connectivity for fast, reliable data transfer, alongside a comprehensive suite of built-in connectors, including high-speed USB 3.0, HDMI, 2.5 Gb Ethernet, and expandable NVMe Gen.4 storage.
+RGB Colour Detection
 
-Advanced AI at the Edge
+This module provides high-precision colour detection with separate red, green, and blue channels, plus ambient light and infrared sensing for comprehensive optical measurements.
 
-Run powerful AI Models securely on-device with the 40 dense TOPS NPU:
+Qwiic Connectors
 
-  * **Local LLM & VLM:** Low-latency reasoning without cloud constraints.
-  * **Speech-to-Text & Text-to-Speech:** Two-way voice interaction with local transcription.
-  * **Object Detection:** Classify and track objects in complex scenes for advanced machine vision and automation.
+The Modulino® Light module connects to your UNO R4 WiFi with Qwiic cables, letting you focus on learning programming without building complex circuits.
 
+#### Certifications
 
-
-Qualcomm Dragonwing™ IQ8
-
-Includes the powerful Qualcomm Dragonwing™ IQ8 (QCS8275) processor featuring:
-
-  * Octa-core Arm® Cortex®
-  * Adreno GPU/VPU: Arm® Cortex® A623 at 877 MHz
-  * Hexagon Tensor AI Processor (NPU): up to 40 dense TOPS
-  * Qualcomm Spectra 692 ISP
-
-
-
-[Overview](https://www.qualcomm.com/internet-of-things/products/iq8-series/iq-8275)
-
-STM32H5F5 Arm® Cortex®-M33 32-bit MCU
-
-The VENTUNO Q integrates the STM32H5F5 microcontroller featuring:
-
-  * Arm® Cortex®-M33 at 250 MHz
-  * 4 MB flash memory
-  * 1.5 MB RAM
-
-
-
-Comprehensive Connectivity
-
-The VENTUNO Q ensures you remain connected and ready to execute with a comprehensive suite of built-in connectors:
-
-  * 1x 2.5Gbit RJ45 Ethernet
-  * 1x HDMI muxed with MIPI DSI
-  * 1x USB-C port with host/device role switching and video output
-  * 2x USB 3.0 Type A
-  * Wi-Fi® 6 2.4/5/6 GHz and Bluetooth® 5.3
-
-
-
-Seamless Expandability
-
-Unlock unprecedented hardware possibilities natively:
-
-  * **UNO Shield Headers:** Compatible with the vast library of Arduino UNO Shields.
-  * **Qwiic Connector:** Instant access to Modulino® nodes and sensors without soldering.
-  * **M.2 Connector:** NVMe Gen.4 external storage expansion.
-  * **Carrier Headers (JMEDIA, JMISC, JOMEGA):** Bridging high-speed cameras, displays, audio, or precise motor control.
-  * **40-Pin Header:** Compatible with standard Raspberry Pi HATs to tap into a massive ecosystem of SBC accessories.
-
-
-
-Arduino App Lab
-
-The converging point of development across NPU, CPU, GPU, and MCU platforms, uniting embedded (sketch) programming, Linux development, and edge AI.
-
-  * **Standalone Mode:** Runs directly on VENTUNO Q, just plug in a monitor, keyboard, and mouse.
-  * **PC-Connected Mode:** Connect via USB-C or network and run Arduino App Lab on your PC.
-  * **Networked Mode:** Run VENTUNO Q headless, no display or keyboard needed. Access remotely over Wi-Fi® or Ethernet.
-
-
-
-#### Discover More
-
-##### [Dragonwing Documentation Explore more documentation for VENTUNO Q on the Dragonwing Documentation page.](https://dragonwingdocs.qualcomm.com/)##### [Edge Impulse Documentation Explore more documentation for VENTUNO Q at Edge Impulse.](https://docs.edgeimpulse.com/hardware/boards/arduino-ventuno-q)##### [Qualcomm AI Hub Explore models for VENTUNO Q at Qualcomm AI Hub.](https://aihub.qualcomm.com/models?chipsets=qualcomm-qcs8275)
+CEUKCA
 
 #### Connect and Contribute
 
-[Project Hub](https://projecthub.arduino.cc/?value=VENTUNO Q)[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/c/official-hardware/ventuno-q/227)
+[Project Hub](https://projecthub.arduino.cc/?value=Modulino Light)[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/c/hardware/accessories/213)
 
 [Product Compliance](/certifications/)[Help Center](https://support.arduino.cc/hc/en-us/articles/9264736457500-Hardware-Support)[Trademarks & Licensing](https://www.arduino.cc/en/trademark/)
 
@@ -713,7 +426,7 @@ Cookie Settings
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/hardware/uno-breakout-carrier
+# Page: https://docs.arduino.cc/hardware/usb-c-power-supply-65w
 
 [](https://arduino.cc "Go to arduino.cc")[](https://docs.arduino.cc)
 
@@ -723,23 +436,11 @@ Theme
 
 [Go Back](/hardware/)
 
-UNO Breakout Carrier
+USB-C Power Supply (65W)
 
 ##### MKR Family
 
 ##### UNO Family
-
-###### Boards
-
-[UNO Mini Limited Edition](/hardware/uno-mini-limited-edition)[UNO Q](/hardware/uno-q)[UNO R4 Minima](/hardware/uno-r4-minima)[UNO R4 WiFi](/hardware/uno-r4-wifi)[UNO R3](/hardware/uno-rev3)[UNO R3 SMD](/hardware/uno-rev3-smd)[UNO WiFi Rev2](/hardware/uno-wifi-rev2)
-
-###### Carriers
-
-[UNO Breakout Carrier](/hardware/uno-breakout-carrier)[UNO Media Carrier](/hardware/uno-media-carrier)
-
-###### Shields
-
-[4 Relays Shield](/hardware/4-relays-shield)[9 Axis Motion Shield](/hardware/9-axis-motion-shield)[Ethernet Shield Rev2](/hardware/ethernet-shield-rev2)[Motor Shield Rev3](/hardware/motor-shield-rev3)[UNO SPE Shield](/hardware/spe-shield)
 
 ##### Nano Family
 
@@ -763,55 +464,159 @@ UNO Breakout Carrier
 
 ##### Accessories
 
+###### Accessories
+
+[Bughopper](/hardware/bughopper)[USB-C Cable (24-pin)](/hardware/usb-c-cable-24-pin)[USB-C Hub (8 in 1)](/hardware/usb-c-hub-8-in-1)[USB-C Power Supply (45W)](/hardware/usb-c-power-supply-45w)[USB-C Power Supply (65W)](/hardware/usb-c-power-supply-65w)
+
 ##### VENTUNO
 
-[Home / ](/)[Hardware / ](/hardware/)[UNO Breakout Carrier ](/hardware/uno-breakout-carrier)
+[Home / ](/)[Hardware / ](/hardware/)[USB-C Power Supply (65W) ](/hardware/usb-c-power-supply-65w)
 
-# UNO Breakout Carrier
+# USB-C Power Supply (65W)
 
-The Arduino UNO Breakout Carrier is designed to give developers complete, direct access to relevant signal available on the UNO Q’s JMEDIA and JMISC high-speed connectors.
+The Arduino® USB-C Power Supply (65W) is a compact wall adapter for USB-C devices that support USB Power Delivery (PD). Recommended as the power source for the Arduino® VENTUNO™ Q, it features a foldable plug for easy transport and interchangeable EU and UK plugs. A USB-C to jack adapter (20 VDC X 3A) is also included for devices with a DC barrel jack input.
 
-[Datasheet](https://docs.arduino.cc/resources/datasheets/ASX00085-datasheet.pdf)
-
-Pinout
-
-[Buy now](https://store.arduino.cc/products/uno-breakout-carrier)
+[Buy now](https://store.arduino.cc/products/usb-c-power-supply-65w)
 
 ## Downloadable resources
 
-[Pinout (PDF)](/resources/pinouts/ASX00085-full-pinout.pdf)[Datasheet](/resources/datasheets/ASX00085-datasheet.pdf)[Schematics](/resources/schematics/ASX00085-schematics.pdf)[CAD Files](/static/77244a80f57dcd43254f4c2c978efcf1/ASX00085-cad-files.zip)[STEP Files](/resources/models/ASX00085-step.zip)
+[Datasheet](/resources/datasheets/TPX00256-datasheet.pdf)
 
 Features
 
-Tutorials (1)
-
 Tech Specs
-
-Compatibility
 
 Suggested Libraries
 
-The **UNO Breakout Carrier** expands the capabilities of the Arduino UNO Q by providing complete, direct access to relevant signal available on the JMEDIA and JMISC high-speed connectors. Ideal for advanced prototyping, testing, and integration work, the UNO Breakout Carrier safely exposes audio, I2C, SPI, UART, PWM, power rails, and control signals to standard headers. It eliminates the need for complex adapters or soldering, making it the ultimate tool for accelerating hardware validation and simplifying troubleshooting.
+The Arduino® USB-C Power Supply (65W) delivers up to 65 W to USB-C devices through the USB Power Delivery (PD) protocol, across five voltage profiles (5, 9, 12, 15, and 20 VDC), automatically negotiating the optimal output for the connected device. It is the recommended power source for the Arduino® VENTUNO™ Q board, and features a foldable plug with interchangeable EU and UK options.
 
-Standard 2.54 mm Male Headers
+Power Output
 
-Connect the UNO Q to custom circuits, measurement equipment, or third-party modules effortlessly. The clearly labeled dual 2x20 header rows allow for fast, reliable wiring without the need for complex adapters or soldering.
+Five voltage profiles: 5, 9, 12, 15, and 20 VDC, with a maximum output of 65 W.
 
-Direct High-Speed Signal Access
+USB Power Delivery 3.0
 
-Unlocks the full potential of the UNO Q's advanced interfaces by safely routing Audio, I2C, SPI, UART, PWM, PSSI, and GPIO signals directly to your custom peripherals and interface boards. 
+USB PD 3.0 support for automatic voltage and current negotiation.
 
-Advanced Audio Prototyping
+Regional Plugs
 
-Fully exposes crucial multimedia interfaces—including HP OUT, LINE OUT, MIC IN, and EAR OUT—making it the perfect platform for developing, integrating, and testing smart audio and complex multimedia systems.
+Integrated foldable US plug, plus interchangeable EU and UK plugs that swap without tools.
 
-Simplified Hardware Debugging
+Safety Protection
 
-Designed for R&D and test engineers, the accessible layout allows for quick attachment of oscilloscopes and logic analyzers. It enables rapid signal integrity testing and compliance validation across all critical communication buses.
+Over-current, short-circuit, and over-voltage protection with automatic recovery.
 
 #### Connect and Contribute
 
-[Project Hub](https://projecthub.arduino.cc/?value=UNO Breakout Carrier)[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/c/official-hardware/uno-family/uno-breakout-carrier/228)
+[Project Hub](https://projecthub.arduino.cc/?value=USB-C Power Supply \(65W\))[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/)
+
+[Product Compliance](/certifications/)[Help Center](https://support.arduino.cc/hc/en-us/articles/9264736457500-Hardware-Support)[Trademarks & Licensing](https://www.arduino.cc/en/trademark/)
+
+#### Was this article helpful?
+
+Back to top
+
+© 2026 Arduino
+
+[Trademarks & Copyrights](https://arduino.cc/en/trademark)
+
+[Whistleblowing](https://secure.ethicspoint.com/domain/media/en/gui/33575/)
+
+[Digital Services Act](https://arduino.cc/en/digital-services-act)
+
+[Terms of Service](https://arduino.cc/en/terms-conditions)
+
+[Privacy Policy](https://arduino.cc/en/privacy-policy)
+
+[Security](https://arduino.cc/en/security)
+
+Cookie Settings
+
+================================================================================
+
+# Page: https://docs.arduino.cc/hardware/usb-c-power-supply-45w
+
+[](https://arduino.cc "Go to arduino.cc")[](https://docs.arduino.cc)
+
+/
+
+Theme
+
+[Go Back](/hardware/)
+
+USB-C Power Supply (45W)
+
+##### MKR Family
+
+##### UNO Family
+
+##### Nano Family
+
+##### Portenta Family
+
+##### Pro Solutions and Kits
+
+##### Nicla Family
+
+##### Opta
+
+##### Education
+
+##### Kits
+
+##### Mega
+
+##### Modulino
+
+##### Classic
+
+##### Accessories
+
+###### Accessories
+
+[Bughopper](/hardware/bughopper)[USB-C Cable (24-pin)](/hardware/usb-c-cable-24-pin)[USB-C Hub (8 in 1)](/hardware/usb-c-hub-8-in-1)[USB-C Power Supply (45W)](/hardware/usb-c-power-supply-45w)[USB-C Power Supply (65W)](/hardware/usb-c-power-supply-65w)
+
+##### VENTUNO
+
+[Home / ](/)[Hardware / ](/hardware/)[USB-C Power Supply (45W) ](/hardware/usb-c-power-supply-45w)
+
+# USB-C Power Supply (45W)
+
+The Arduino® USB-C Power Supply (45W) is a compact, interchangeable plug adapter for USB-C devices supporting USB Power Delivery (PD). The 45 W multi-voltage power adapter provides intelligent power delivery across five voltage profiles (5 V, 9 V, 12 V, 15 V, 20 V), negotiating the optimal charging parameters for connected devices. With interchangeable regional plugs (EU, UK, US, AU) and broad safety certifications, it provides a universal power solution for development, prototyping, and deployment scenarios worldwide.
+
+[Buy now](https://store.arduino.cc/products/usb-c-power-supply)
+
+## Downloadable resources
+
+[Datasheet](/resources/datasheets/TPX00242-datasheet.pdf)
+
+Features
+
+Tech Specs
+
+Suggested Libraries
+
+The **Arduino® USB-C Power Supply (45W)** provides power delivery for USB-C devices with multiple voltage outputs. The adapter features interchangeable regional plugs for worldwide use.
+
+Power Output
+
+Voltage outputs: 5 V, 9 V, 12 V, 15 V, and 20 V (up to 45 W maximum).
+
+USB Power Delivery 3.0
+
+USB PD 3.0 and PPS support for automatic voltage negotiation.
+
+Interchangeable Plugs
+
+Regional plugs for US, EU, and UK. Tool-free plug replacement.
+
+Safety Protection
+
+Over-current, short-circuit, over-voltage, and over-temperature protection with auto-recovery.
+
+#### Connect and Contribute
+
+[Project Hub](https://projecthub.arduino.cc/?value=USB-C Power Supply \(45W\))[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/)
 
 [Product Compliance](/certifications/)[Help Center](https://support.arduino.cc/hc/en-us/articles/9264736457500-Hardware-Support)[Trademarks & Licensing](https://www.arduino.cc/en/trademark/)
 
@@ -1005,7 +810,7 @@ A built-in RPC library (i.e., Arduino Bridge) brings together the MPU running Li
 
 #### Certifications
 
-AnatelICASAIMDAWPCNCCCEKCFCC (DSS)FCC (DTS)UKCAFCC (NII)ISEDSRRCOFCA
+AnatelICASAWPCIMDANCCCEUKCAKCFCC (DSS)FCC (DTS)FCC (NII)ISEDSRRCOFCA
 
 #### Connect and Contribute
 
@@ -1035,7 +840,7 @@ Cookie Settings
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/hardware/modulino-joystick
+# Page: https://docs.arduino.cc/hardware/modulino-latch
 
 [](https://arduino.cc "Go to arduino.cc")[](https://docs.arduino.cc)
 
@@ -1045,7 +850,7 @@ Theme
 
 [Go Back](/hardware/)
 
-Modulino Joystick
+Modulino Latch Relay
 
 ##### MKR Family
 
@@ -1079,21 +884,21 @@ Modulino Joystick
 
 ##### VENTUNO
 
-[Home / ](/)[Hardware / ](/hardware/)[Modulino Joystick ](/hardware/modulino-joystick)
+[Home / ](/)[Hardware / ](/hardware/)[Modulino Latch Relay ](/hardware/modulino-latch)
 
-# Modulino Joystick
+# Modulino Latch Relay
 
-A dual-axis analogue joystick with integrated pushbutton for precise directional control. Perfect for gaming controllers, robotics navigation, or interactive interfaces. Compatible with Arduino UNO R4 WiFi or any Qwiic-enabled board, with solderable pins available for custom wiring. Get smooth, responsive control without complex circuitry.
+A bistable latching relay that maintains its state without continuous power, ideal for DC power control and automation. Switch high-current loads up to 30V DC with easy I2C control. Compatible with Arduino UNO R4 WiFi or any Qwiic-enabled board. Control motors, pumps, or lighting systems without complex wiring.
 
-[Get Started](https://docs.arduino.cc/tutorials/modulino-joystick/how-joystick/)[More on Modulino Nodes](https://docs.arduino.cc/tutorials/modulino-thermo/how-general/)
+[Get Started](https://docs.arduino.cc/tutorials/modulino-latch/how-latch/)[More on Modulino Nodes](https://docs.arduino.cc/tutorials/modulino-thermo/how-general/)
 
 Pinout
 
-[Buy now](https://store.arduino.cc/products/modulino-joystick)
+[Buy now](https://store.arduino.cc/products/modulino-latch-relay)
 
 ## Downloadable resources
 
-[Datasheet](/resources/datasheets/ABX00135-datasheet.pdf)[Schematics](/resources/schematics/ABX00135-schematics.pdf)[CAD Files](/static/3f52e128bd09025991d106d726d19f0b/ABX00135-cad-files.zip)[STEP Files](/resources/models/ABX00135-step.zip)
+[Datasheet](/resources/datasheets/ABX00138-datasheet.pdf)[Schematics](/resources/schematics/ABX00138-schematics.pdf)[CAD Files](/static/bbf3d9c4bb0d5238df77f0230659199b/ABX00138-cad-files.zip)[STEP Files](/resources/models/ABX00138-step.zip)
 
 Features
 
@@ -1105,23 +910,23 @@ Compatibility
 
 Suggested Libraries
 
-The Modulino® Joystick module features a dual-axis analogue joystick with an integrated pushbutton, perfect for gaming, robotics control, and interactive interfaces. It is designed to be used with any compatible board with Qwiic, allowing you to build interactive projects without making complicated connections. The module also includes example projects for you to learn important programming concepts and get inspired.
+The Modulino® Latch Relay module features a bistable latching relay that maintains its state without continuous power, capable of switching high-current DC loads up to 30V. It is designed to be used with any compatible board with Qwiic, allowing you to build automation and power control projects without making complicated connections. The module also includes example projects for you to learn important programming concepts and get inspired.
 
-Dual-Axis Control
+Bistable Operation
 
-This module provides smooth analogue control across both horizontal and vertical axes with a 60° movement range, perfect for gaming controllers and robotics navigation.
+This module uses a latching relay that maintains its state even when power is removed, ideal for energy-efficient automation and safety-critical applications.
 
 Qwiic Connectors
 
-The Modulino® Joystick module connects to your UNO R4 WiFi with Qwiic cables, letting you focus on learning programming without building complex circuits.
+The Modulino® Latch Relay module connects to your UNO R4 WiFi with Qwiic cables, letting you focus on learning programming without building complex circuits.
 
 #### Certifications
 
-UKCACE
+CEUKCA
 
 #### Connect and Contribute
 
-[Project Hub](https://projecthub.arduino.cc/?value=Modulino Joystick)[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/c/hardware/accessories/213)
+[Project Hub](https://projecthub.arduino.cc/?value=Modulino Latch Relay)[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/c/hardware/accessories/213)
 
 [Product Compliance](/certifications/)[Help Center](https://support.arduino.cc/hc/en-us/articles/9264736457500-Hardware-Support)[Trademarks & Licensing](https://www.arduino.cc/en/trademark/)
 
@@ -1147,7 +952,7 @@ Cookie Settings
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/hardware/usb-c-power-supply-65w
+# Page: https://docs.arduino.cc/hardware/ventuno-q
 
 [](https://arduino.cc "Go to arduino.cc")[](https://docs.arduino.cc)
 
@@ -1157,7 +962,7 @@ Theme
 
 [Go Back](/hardware/)
 
-USB-C Power Supply (65W)
+VENTUNO Q
 
 ##### MKR Family
 
@@ -1185,51 +990,250 @@ USB-C Power Supply (65W)
 
 ##### Accessories
 
-###### Accessories
-
-[Bughopper](/hardware/bughopper)[USB-C Cable (24-pin)](/hardware/usb-c-cable-24-pin)[USB-C Hub (8 in 1)](/hardware/usb-c-hub-8-in-1)[USB-C Power Supply (45W)](/hardware/usb-c-power-supply-45w)[USB-C Power Supply (65W)](/hardware/usb-c-power-supply-65w)
-
 ##### VENTUNO
 
-[Home / ](/)[Hardware / ](/hardware/)[USB-C Power Supply (65W) ](/hardware/usb-c-power-supply-65w)
+###### Boards
 
-# USB-C Power Supply (65W)
+[VENTUNO Q](/hardware/ventuno-q)
 
-The Arduino® USB-C Power Supply (65W) is a compact wall adapter for USB-C devices that support USB Power Delivery (PD). Recommended as the power source for the Arduino® VENTUNO™ Q, it features a foldable plug for easy transport and interchangeable EU and UK plugs. A USB-C to jack adapter (20 VDC X 3A) is also included for devices with a DC barrel jack input.
+[Home / ](/)[Hardware / ](/hardware/)[VENTUNO Q ](/hardware/ventuno-q)
 
-[Buy now](https://store.arduino.cc/products/usb-c-power-supply-65w)
+# VENTUNO Q
+
+The Arduino VENTUNO Q is the edge AI computer that redefines what is possible at the edge, serving as the definitive powerhouse for AI and robotics applications. At its core lies a revolutionary Dual-Brain architecture: the robust Qualcomm Dragonwing™ IQ8 delivers up to 40 dense TOPS of AI compute for advanced computer vision and local LLMs, while the dedicated STM32H5 Microcontroller ensures the low-latency precision required for complex motor control and robotics.
+
+[User Manual](/tutorials/ventuno-q/user-manual)[Arduino App Lab](/software/app-lab/tutorials/01.getting-started/apps-lab-ide)
+
+Pinout
+
+[Buy now](https://store.arduino.cc/products/ventuno-q)
 
 ## Downloadable resources
 
-[Datasheet](/resources/datasheets/TPX00256-datasheet.pdf)
+[Pinout (PDF)](/resources/pinouts/ABX00181-full-pinout.pdf)
+
+Datasheet
+
+[Schematics](/resources/schematics/ABX00181-schematics.pdf)[CAD Files](/static/7163959818b559513e9497e4f9df9302/ABX00181-cad-files.zip)[STEP Files](/resources/models/ABX00181-step.zip)[Power Tree](/static/643e154ec9aff1e623e70f57f8a35970/ABX00181-power-tree.pdf)[Block Diagram](/static/f1df6fa7ce6f84bf6db015137f9597e2/ABX00181-block-diagram.pdf)
+
+Overview
 
 Features
 
+Tutorials (29)
+
 Tech Specs
+
+Compatibility
 
 Suggested Libraries
 
-The Arduino® USB-C Power Supply (65W) delivers up to 65 W to USB-C devices through the USB Power Delivery (PD) protocol, across five voltage profiles (5, 9, 12, 15, and 20 VDC), automatically negotiating the optimal output for the connected device. It is the recommended power source for the Arduino® VENTUNO™ Q board, and features a foldable plug with interchangeable EU and UK options.
+The **Arduino® VENTUNO™ Q** integrates the Qualcomm® Dragonwing™ IQ8 (QCS8275) Microprocessor (MPU), running a full Ubuntu Linux environment (with Debian support coming soon), with the STMicroelectronics® STM32H5F5 Microcontroller (MCU) built on Arm® Cortex®-M33 architecture. This dual-architecture platform brings together Linux and microcontroller worlds through a built-in RPC library, so you can create powerful, responsive applications in one seamless workflow with Arduino App Lab.
 
-Power Output
+Arduino App Lab combines Arduino sketches, Python scripts, and AI models into ready-to-run apps. The board features integrated Wi-Fi® 6 connectivity for fast, reliable data transfer, alongside a comprehensive suite of built-in connectors, including high-speed USB 3.0, HDMI, 2.5 Gb Ethernet, and expandable NVMe Gen.4 storage.
 
-Five voltage profiles: 5, 9, 12, 15, and 20 VDC, with a maximum output of 65 W.
+Advanced AI at the Edge
 
-USB Power Delivery 3.0
+Run powerful AI Models securely on-device with the 40 dense TOPS NPU:
 
-USB PD 3.0 support for automatic voltage and current negotiation.
+  * **Local LLM & VLM:** Low-latency reasoning without cloud constraints.
+  * **Speech-to-Text & Text-to-Speech:** Two-way voice interaction with local transcription.
+  * **Object Detection:** Classify and track objects in complex scenes for advanced machine vision and automation.
 
-Regional Plugs
 
-Integrated foldable US plug, plus interchangeable EU and UK plugs that swap without tools.
 
-Safety Protection
+Qualcomm Dragonwing™ IQ8
 
-Over-current, short-circuit, and over-voltage protection with automatic recovery.
+Includes the powerful Qualcomm Dragonwing™ IQ8 (QCS8275) processor featuring:
+
+  * Octa-core Arm® Cortex®
+  * Adreno GPU/VPU: Arm® Cortex® A623 at 877 MHz
+  * Hexagon Tensor AI Processor (NPU): up to 40 dense TOPS
+  * Qualcomm Spectra 692 ISP
+
+
+
+[Overview](https://www.qualcomm.com/internet-of-things/products/iq8-series/iq-8275)
+
+STM32H5F5 Arm® Cortex®-M33 32-bit MCU
+
+The VENTUNO Q integrates the STM32H5F5 microcontroller featuring:
+
+  * Arm® Cortex®-M33 at 250 MHz
+  * 4 MB flash memory
+  * 1.5 MB RAM
+
+
+
+Comprehensive Connectivity
+
+The VENTUNO Q ensures you remain connected and ready to execute with a comprehensive suite of built-in connectors:
+
+  * 1x 2.5Gbit RJ45 Ethernet
+  * 1x HDMI muxed with MIPI DSI
+  * 1x USB-C port with host/device role switching and video output
+  * 2x USB 3.0 Type A
+  * Wi-Fi® 6 2.4/5/6 GHz and Bluetooth® 5.3
+
+
+
+Seamless Expandability
+
+Unlock unprecedented hardware possibilities natively:
+
+  * **UNO Shield Headers:** Compatible with the vast library of Arduino UNO Shields.
+  * **Qwiic Connector:** Instant access to Modulino® nodes and sensors without soldering.
+  * **M.2 Connector:** NVMe Gen.4 external storage expansion.
+  * **Carrier Headers (JMEDIA, JMISC, JOMEGA):** Bridging high-speed cameras, displays, audio, or precise motor control.
+  * **40-Pin Header:** Compatible with standard Raspberry Pi HATs to tap into a massive ecosystem of SBC accessories.
+
+
+
+Arduino App Lab
+
+The converging point of development across NPU, CPU, GPU, and MCU platforms, uniting embedded (sketch) programming, Linux development, and edge AI.
+
+  * **Standalone Mode:** Runs directly on VENTUNO Q, just plug in a monitor, keyboard, and mouse.
+  * **PC-Connected Mode:** Connect via USB-C or network and run Arduino App Lab on your PC.
+  * **Networked Mode:** Run VENTUNO Q headless, no display or keyboard needed. Access remotely over Wi-Fi® or Ethernet.
+
+
+
+#### Discover More
+
+##### [Dragonwing Documentation Explore more documentation for VENTUNO Q on the Dragonwing Documentation page.](https://dragonwingdocs.qualcomm.com/)##### [Edge Impulse Documentation Explore more documentation for VENTUNO Q at Edge Impulse.](https://docs.edgeimpulse.com/hardware/boards/arduino-ventuno-q)##### [Qualcomm AI Hub Explore models for VENTUNO Q at Qualcomm AI Hub.](https://aihub.qualcomm.com/models?chipsets=qualcomm-qcs8275)
+
+#### Certifications
+
+UKCACE
 
 #### Connect and Contribute
 
-[Project Hub](https://projecthub.arduino.cc/?value=USB-C Power Supply \(65W\))[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/)
+[Project Hub](https://projecthub.arduino.cc/?value=VENTUNO Q)[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/c/official-hardware/ventuno-q/227)
+
+[Product Compliance](/certifications/)[Help Center](https://support.arduino.cc/hc/en-us/articles/9264736457500-Hardware-Support)[Trademarks & Licensing](https://www.arduino.cc/en/trademark/)
+
+#### Was this article helpful?
+
+Back to top
+
+© 2026 Arduino
+
+[Trademarks & Copyrights](https://arduino.cc/en/trademark)
+
+[Whistleblowing](https://secure.ethicspoint.com/domain/media/en/gui/33575/)
+
+[Digital Services Act](https://arduino.cc/en/digital-services-act)
+
+[Terms of Service](https://arduino.cc/en/terms-conditions)
+
+[Privacy Policy](https://arduino.cc/en/privacy-policy)
+
+[Security](https://arduino.cc/en/security)
+
+Cookie Settings
+
+================================================================================
+
+# Page: https://docs.arduino.cc/hardware/uno-breakout-carrier
+
+[](https://arduino.cc "Go to arduino.cc")[](https://docs.arduino.cc)
+
+/
+
+Theme
+
+[Go Back](/hardware/)
+
+UNO Breakout Carrier
+
+##### MKR Family
+
+##### UNO Family
+
+###### Boards
+
+[UNO Mini Limited Edition](/hardware/uno-mini-limited-edition)[UNO Q](/hardware/uno-q)[UNO R4 Minima](/hardware/uno-r4-minima)[UNO R4 WiFi](/hardware/uno-r4-wifi)[UNO R3](/hardware/uno-rev3)[UNO R3 SMD](/hardware/uno-rev3-smd)[UNO WiFi Rev2](/hardware/uno-wifi-rev2)
+
+###### Carriers
+
+[UNO Breakout Carrier](/hardware/uno-breakout-carrier)[UNO Media Carrier](/hardware/uno-media-carrier)
+
+###### Shields
+
+[4 Relays Shield](/hardware/4-relays-shield)[9 Axis Motion Shield](/hardware/9-axis-motion-shield)[Ethernet Shield Rev2](/hardware/ethernet-shield-rev2)[Motor Shield Rev3](/hardware/motor-shield-rev3)[UNO SPE Shield](/hardware/spe-shield)
+
+##### Nano Family
+
+##### Portenta Family
+
+##### Pro Solutions and Kits
+
+##### Nicla Family
+
+##### Opta
+
+##### Education
+
+##### Kits
+
+##### Mega
+
+##### Modulino
+
+##### Classic
+
+##### Accessories
+
+##### VENTUNO
+
+[Home / ](/)[Hardware / ](/hardware/)[UNO Breakout Carrier ](/hardware/uno-breakout-carrier)
+
+# UNO Breakout Carrier
+
+The Arduino UNO Breakout Carrier is designed to give developers complete, direct access to relevant signal available on the UNO Q’s JMEDIA and JMISC high-speed connectors.
+
+[Datasheet](https://docs.arduino.cc/resources/datasheets/ASX00085-datasheet.pdf)
+
+Pinout
+
+[Buy now](https://store.arduino.cc/products/uno-breakout-carrier)
+
+## Downloadable resources
+
+[Pinout (PDF)](/resources/pinouts/ASX00085-full-pinout.pdf)[Datasheet](/resources/datasheets/ASX00085-datasheet.pdf)[Schematics](/resources/schematics/ASX00085-schematics.pdf)[CAD Files](/static/77244a80f57dcd43254f4c2c978efcf1/ASX00085-cad-files.zip)[STEP Files](/resources/models/ASX00085-step.zip)
+
+Features
+
+Tutorials (1)
+
+Tech Specs
+
+Compatibility
+
+Suggested Libraries
+
+The **UNO Breakout Carrier** expands the capabilities of the Arduino UNO Q by providing complete, direct access to relevant signal available on the JMEDIA and JMISC high-speed connectors. Ideal for advanced prototyping, testing, and integration work, the UNO Breakout Carrier safely exposes audio, I2C, SPI, UART, PWM, power rails, and control signals to standard headers. It eliminates the need for complex adapters or soldering, making it the ultimate tool for accelerating hardware validation and simplifying troubleshooting.
+
+Standard 2.54 mm Male Headers
+
+Connect the UNO Q to custom circuits, measurement equipment, or third-party modules effortlessly. The clearly labeled dual 2x20 header rows allow for fast, reliable wiring without the need for complex adapters or soldering.
+
+Direct High-Speed Signal Access
+
+Unlocks the full potential of the UNO Q's advanced interfaces by safely routing Audio, I2C, SPI, UART, PWM, PSSI, and GPIO signals directly to your custom peripherals and interface boards. 
+
+Advanced Audio Prototyping
+
+Fully exposes crucial multimedia interfaces—including HP OUT, LINE OUT, MIC IN, and EAR OUT—making it the perfect platform for developing, integrating, and testing smart audio and complex multimedia systems.
+
+Simplified Hardware Debugging
+
+Designed for R&D and test engineers, the accessible layout allows for quick attachment of oscilloscopes and logic analyzers. It enables rapid signal integrity testing and compliance validation across all critical communication buses.
+
+#### Connect and Contribute
+
+[Project Hub](https://projecthub.arduino.cc/?value=UNO Breakout Carrier)[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/c/official-hardware/uno-family/uno-breakout-carrier/228)
 
 [Product Compliance](/certifications/)[Help Center](https://support.arduino.cc/hc/en-us/articles/9264736457500-Hardware-Support)[Trademarks & Licensing](https://www.arduino.cc/en/trademark/)
 
@@ -1367,7 +1371,7 @@ Cookie Settings
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/hardware/modulino-latch
+# Page: https://docs.arduino.cc/hardware/modulino-joystick
 
 [](https://arduino.cc "Go to arduino.cc")[](https://docs.arduino.cc)
 
@@ -1377,7 +1381,7 @@ Theme
 
 [Go Back](/hardware/)
 
-Modulino Latch Relay
+Modulino Joystick
 
 ##### MKR Family
 
@@ -1411,21 +1415,21 @@ Modulino Latch Relay
 
 ##### VENTUNO
 
-[Home / ](/)[Hardware / ](/hardware/)[Modulino Latch Relay ](/hardware/modulino-latch)
+[Home / ](/)[Hardware / ](/hardware/)[Modulino Joystick ](/hardware/modulino-joystick)
 
-# Modulino Latch Relay
+# Modulino Joystick
 
-A bistable latching relay that maintains its state without continuous power, ideal for DC power control and automation. Switch high-current loads up to 30V DC with easy I2C control. Compatible with Arduino UNO R4 WiFi or any Qwiic-enabled board. Control motors, pumps, or lighting systems without complex wiring.
+A dual-axis analogue joystick with integrated pushbutton for precise directional control. Perfect for gaming controllers, robotics navigation, or interactive interfaces. Compatible with Arduino UNO R4 WiFi or any Qwiic-enabled board, with solderable pins available for custom wiring. Get smooth, responsive control without complex circuitry.
 
-[Get Started](https://docs.arduino.cc/tutorials/modulino-latch/how-latch/)[More on Modulino Nodes](https://docs.arduino.cc/tutorials/modulino-thermo/how-general/)
+[Get Started](https://docs.arduino.cc/tutorials/modulino-joystick/how-joystick/)[More on Modulino Nodes](https://docs.arduino.cc/tutorials/modulino-thermo/how-general/)
 
 Pinout
 
-[Buy now](https://store.arduino.cc/products/modulino-latch-relay)
+[Buy now](https://store.arduino.cc/products/modulino-joystick)
 
 ## Downloadable resources
 
-[Datasheet](/resources/datasheets/ABX00138-datasheet.pdf)[Schematics](/resources/schematics/ABX00138-schematics.pdf)[CAD Files](/static/bbf3d9c4bb0d5238df77f0230659199b/ABX00138-cad-files.zip)[STEP Files](/resources/models/ABX00138-step.zip)
+[Datasheet](/resources/datasheets/ABX00135-datasheet.pdf)[Schematics](/resources/schematics/ABX00135-schematics.pdf)[CAD Files](/static/3f52e128bd09025991d106d726d19f0b/ABX00135-cad-files.zip)[STEP Files](/resources/models/ABX00135-step.zip)
 
 Features
 
@@ -1437,15 +1441,15 @@ Compatibility
 
 Suggested Libraries
 
-The Modulino® Latch Relay module features a bistable latching relay that maintains its state without continuous power, capable of switching high-current DC loads up to 30V. It is designed to be used with any compatible board with Qwiic, allowing you to build automation and power control projects without making complicated connections. The module also includes example projects for you to learn important programming concepts and get inspired.
+The Modulino® Joystick module features a dual-axis analogue joystick with an integrated pushbutton, perfect for gaming, robotics control, and interactive interfaces. It is designed to be used with any compatible board with Qwiic, allowing you to build interactive projects without making complicated connections. The module also includes example projects for you to learn important programming concepts and get inspired.
 
-Bistable Operation
+Dual-Axis Control
 
-This module uses a latching relay that maintains its state even when power is removed, ideal for energy-efficient automation and safety-critical applications.
+This module provides smooth analogue control across both horizontal and vertical axes with a 60° movement range, perfect for gaming controllers and robotics navigation.
 
 Qwiic Connectors
 
-The Modulino® Latch Relay module connects to your UNO R4 WiFi with Qwiic cables, letting you focus on learning programming without building complex circuits.
+The Modulino® Joystick module connects to your UNO R4 WiFi with Qwiic cables, letting you focus on learning programming without building complex circuits.
 
 #### Certifications
 
@@ -1453,7 +1457,7 @@ CEUKCA
 
 #### Connect and Contribute
 
-[Project Hub](https://projecthub.arduino.cc/?value=Modulino Latch Relay)[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/c/hardware/accessories/213)
+[Project Hub](https://projecthub.arduino.cc/?value=Modulino Joystick)[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/c/hardware/accessories/213)
 
 [Product Compliance](/certifications/)[Help Center](https://support.arduino.cc/hc/en-us/articles/9264736457500-Hardware-Support)[Trademarks & Licensing](https://www.arduino.cc/en/trademark/)
 
