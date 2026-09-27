@@ -1,6 +1,6 @@
 ---
 doc_type: M5Unified LED
-crawled_at: 2026/09/20 10:46:51
+crawled_at: 2026/09/27 10:58:26
 first_url: https://docs.m5stack.com/ja/arduino/m5unified/led_class/
 ---
 
@@ -2011,6 +2011,14 @@ Unit
 
 ##### 
 
+[ Unit 8Servos2-Chain ](/en/arduino/projects/unit/unit_8servos2_chain)
+
+##### 
+
+[ Unit 8Servos2-I2C ](/en/arduino/projects/unit/unit_8servos2_i2c)
+
+##### 
+
 [ Unit Finger ](/en/arduino/projects/unit/unit_finger)
 
 ##### 
@@ -2091,7 +2099,7 @@ Module
 
 ##### 
 
-[ Module LLM ](/en/stackflow/module_llm/arduino)
+[ Module LLM ](/en/compute/module_llm/arduino)
 
 ##### 
 
@@ -2948,9 +2956,9 @@ Software
   * [UiFlow2](https://uiflow2.m5stack.com/)
   * [M5Burner](/ja/uiflow/m5burner/intro)
   * [Block Designer](https://block-designer.m5stack.com/)
-  * [EzData 2.0](/ja/guide/ezdata/ezdata_v2)
-  * [EasyLoader Packer](/ja/guide/easyloader/easyloader_packer)
-  * [VLW Font Creator](/ja/guide/develop_tools/vlw_font_creator)
+  * [EzData 2.0](/ja/guide/ezdata2/getting_started)
+  * [EasyLoader Packer](/ja/guide/tools/easyloader_packer)
+  * [VLW Font Creator](/ja/guide/tools/vlw_font_creator)
   * [Device USB Driver](/ja/download)
 
 
@@ -2962,10 +2970,11 @@ Documentation
   * [UiFlow2](/ja/uiflow2/uiflow_web)
   * [Arduino](/ja/arduino/arduino_ide)
   * [ESP-IDF](/ja/esp_idf/esp_idf)
+  * [Linux & Edge AI](/ja/compute/overview)
   * [StackFlow AI](/ja/stackflow/overview)
   * [Home Assistant](/ja/homeassistant/overview)
   * [nanoFramework](https://github.com/nanoframework/nanoFramework.M5Stack)
-  * [Product Guide](/ja/guide/product_guide)
+  * [製品ガイド](/ja/guide/overview)
   * [Product Certifications](/ja/certification)
   * [I2C Table](/ja/product_i2c_addr)
   * [Product Selector](/ja/products_selector/m5core_compare)

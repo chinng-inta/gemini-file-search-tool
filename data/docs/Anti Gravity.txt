@@ -1,6 +1,6 @@
 ---
 doc_type: Anti Gravity
-crawled_at: 2026/09/20 11:04:35
+crawled_at: 2026/09/27 11:15:35
 first_url: https://antigravity.google/docs/home
 ---
 
@@ -14,7 +14,7 @@ Search``Ctrl``K``
 
 Cancel
 
-[🚀 Remote Control](https://antigravity.google.com "Launch Remote Control")[Downloaddownload](/download)
+[🚀 Remote Control](https://antigravity.google.com "Launch Remote Control")[Download](/download)
 
 Select themeDarkLightAuto
 
@@ -122,6 +122,7 @@ Select themeDarkLightAuto
 
   * [Overview](/docs/slash-commands/)
   * [Boost (/boost)](/docs/boost/)
+  * [Plan (/plan)](/docs/plan/)
   * [Teamwork (/teamwork-preview)](/docs/teamwork/)
   * [Agents (/agents)](/docs/cli/commands/agents/)
   * [Code Search (/codesearch)](/docs/cli/commands/codesearch/)
@@ -141,7 +142,7 @@ Select themeDarkLightAuto
   * [MCP](/docs/mcp/)
   * Skills
     * [Agent Skills](/docs/skills/)
-    * [Rules & Workflows](/docs/rules-workflows/)
+    * [Rules](/docs/rules/)
     * [IDE Workflows](/docs/ide/workflows/)
   * [Custom Subagents](/docs/subagents/)
   * [Lifecycle Hooks](/docs/hooks/)
@@ -152,6 +153,7 @@ Select themeDarkLightAuto
 ## ANTIGRAVITY SDK
 
   * [Overview + Quick Start](/docs/sdk/overview/)
+  * [Local Models](/docs/sdk/local-models/)
   * [Personas](/docs/sdk/personas/)
   * [Tools & Skills](/docs/sdk/tools/)
   * [MCP](/docs/sdk/mcp/)
@@ -190,7 +192,7 @@ On this page
 
 Get StartedHome
 
-Markdownkeyboard_arrow_down
+Markdown
 
 content_copyCopy Markdownopen_in_newView Markdown
 
@@ -281,7 +283,7 @@ Search``Ctrl``K``
 
 Cancel
 
-[🚀 Remote Control](https://antigravity.google.com "Launch Remote Control")[Downloaddownload](/download)
+[🚀 Remote Control](https://antigravity.google.com "Launch Remote Control")[Download](/download)
 
 Select themeDarkLightAuto
 
@@ -389,6 +391,7 @@ Select themeDarkLightAuto
 
   * [Overview](/docs/slash-commands/)
   * [Boost (/boost)](/docs/boost/)
+  * [Plan (/plan)](/docs/plan/)
   * [Teamwork (/teamwork-preview)](/docs/teamwork/)
   * [Agents (/agents)](/docs/cli/commands/agents/)
   * [Code Search (/codesearch)](/docs/cli/commands/codesearch/)
@@ -408,7 +411,7 @@ Select themeDarkLightAuto
   * [MCP](/docs/mcp/)
   * Skills
     * [Agent Skills](/docs/skills/)
-    * [Rules & Workflows](/docs/rules-workflows/)
+    * [Rules](/docs/rules/)
     * [IDE Workflows](/docs/ide/workflows/)
   * [Custom Subagents](/docs/subagents/)
   * [Lifecycle Hooks](/docs/hooks/)
@@ -419,6 +422,7 @@ Select themeDarkLightAuto
 ## ANTIGRAVITY SDK
 
   * [Overview + Quick Start](/docs/sdk/overview/)
+  * [Local Models](/docs/sdk/local-models/)
   * [Personas](/docs/sdk/personas/)
   * [Tools & Skills](/docs/sdk/tools/)
   * [MCP](/docs/sdk/mcp/)
@@ -457,7 +461,7 @@ On this page
 
 Get StartedHome
 
-Markdownkeyboard_arrow_down
+Markdown
 
 content_copyCopy Markdownopen_in_newView Markdown
 
