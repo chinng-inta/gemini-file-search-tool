@@ -1,6 +1,6 @@
 ---
 doc_type: File Search Stores
-crawled_at: 2026/09/27 10:58:44
+crawled_at: 2026/10/04 11:56:04
 first_url: https://ai.google.dev/api/file-search/file-search-stores
 ---
 
@@ -440,38 +440,6 @@ The request body must be empty.
 
 If successful, the response body contains an instance of `[Operation](/api/batch-api#Operation)`.
 
-## Method: media.download
-
-  * Endpoint
-  * Path parameters
-  * Query parameters
-  * Request body
-  * Response body
-  * Authorization scopes
-
-Retrieves file metadata or directory contents from an environment's snapshot. To download file contents directly, pass ?alt=media or use the files.download helper.
-
-### Endpoint
-
-get  `https://generativelanguage.googleapis.com/v1beta/{parent=environments/*}/files`   
-
-
-### Path parameters
-
-| `parent` `string` Required. The resource name of the environment. Format: `environments/{environmentId}` It takes the form `environments/{environment}`.
-
-### Query parameters
-
-| `path` `string` Optional. The path of the file or directory within the environment. If empty, defaults to the root of the workspace. Example: "workspace/src/main.py" | `recursive` `boolean` Optional. If true and the path is a directory, recursively lists all files and subdirectories. Defaults to false (immediate children only). | `page_size` `integer` Optional. Maximum number of entries to return per page (for directory listing). If unspecified, defaults to 100. Maximum is 1000. NOLINT | `page_token` `string` Optional. Pagination token for directory listing. NOLINT
-
-### Request body
-
-The request body must be empty.
-
-### Response body
-
-If successful, the response body contains an instance of `GetEnvironmentFilesResponse`.
-
 ## Method: media.uploadToFileSearchStore
 
   * Endpoint
@@ -543,9 +511,9 @@ Send feedback
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
-Last updated 2026-09-23 UTC.
+Last updated 2026-09-30 UTC.
 
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-09-23 UTC."],[],[]] 
+Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-09-30 UTC."],[],[]] 
 
   * [ Terms ](//policies.google.com/terms)
   * [ Privacy ](//policies.google.com/privacy)

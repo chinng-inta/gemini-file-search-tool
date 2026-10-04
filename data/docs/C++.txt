@@ -1,6 +1,6 @@
 ---
 doc_type: C++
-crawled_at: 2026/09/27 10:58:42
+crawled_at: 2026/10/04 11:56:02
 first_url: https://cpprefjp.github.io/reference.html
 ---
 
@@ -17,7 +17,7 @@ Toggle navigation [ cpprefjp - C++日本語リファレンス ](./index.html)
 
 
 
-最終更新日時:  2026年08月18日 03時08分41秒 (JST)    
+最終更新日時:  2026年10月03日 20時58分45秒 (JST)    
 Akira Takahashi が更新 
 
 [ 履歴 ](https://github.com/cpprefjp/site/commits/master/reference.md) [ 編集 ](https://github.com/cpprefjp/site/edit/master/reference.md)
@@ -268,8 +268,8 @@ C++17で非推奨
 C++20で削除  
 `[<ctime>](reference/ctime.html)` | 日付・時間 |   
 `[<cuchar>](reference/cuchar.html)` | ユニコード文字型 | C++11 (C11)  
-`<cwchar>` | ワイド文字型 |   
-`<cwctype>` | ワイド文字の種別と判定 |   
+`[<cwchar>](reference/cwchar.html)` | ワイド文字型 |   
+`[<cwctype>](reference/cwctype.html)` | ワイド文字の種別と判定 |   
   
 ## 説明専用ライブラリ
 
