@@ -1,6 +1,6 @@
 ---
 doc_type: C++
-crawled_at: 2026/10/04 11:56:02
+crawled_at: 2026/10/11 11:19:55
 first_url: https://cpprefjp.github.io/reference.html
 ---
 
@@ -17,7 +17,7 @@ Toggle navigation [ cpprefjp - C++日本語リファレンス ](./index.html)
 
 
 
-最終更新日時:  2026年10月03日 20時58分45秒 (JST)    
+最終更新日時:  2026年10月06日 10時18分37秒 (JST)    
 Akira Takahashi が更新 
 
 [ 履歴 ](https://github.com/cpprefjp/site/commits/master/reference.md) [ 編集 ](https://github.com/cpprefjp/site/edit/master/reference.md)
@@ -235,7 +235,7 @@ C++26で削除
 ヘッダ | 説明 | 対応バージョン  
 ---|---|---  
 `[<cassert>](reference/cassert.html)` | アサート |   
-`<ccomplex>` | 複素数 | C++11 (C99)  
+`[<ccomplex>](reference/ccomplex.html)` | 複素数 | C++11 (C99)  
 C++17で非推奨  
 C++20で削除  
 `[<cctype>](reference/cctype.html)` | 文字種別の判定と変換 |   
@@ -243,19 +243,20 @@ C++20で削除
 `[<cfenv>](reference/cfenv.html)` | 浮動小数点環境へのアクセス | C++11 (C99)  
 `[<cfloat>](reference/cfloat.html)` | 浮動小数点数の定数 |   
 `[<cinttypes>](reference/cinttypes.html)` | 固定精度整数のための書式指定マクロ | C++11 (C99)  
-`<ciso646>` | `&&`に対する別名`and`のような、各種演算子に対するマクロを定義する。  
+`[<ciso646>](reference/ciso646.html)` | `&&`に対する別名`and`のような、各種演算子に対するマクロを定義する。  
 ただしC++ではこれらの別名はキーワードとして定義されるため、このヘッダでは何も定義されない。 | C++20で削除  
 `[<climits>](reference/climits.html)` | 整数型の最小値、最大値を表すマクロ |   
 `[<clocale>](reference/clocale.html)` | ロケール |   
 `[<cmath>](reference/cmath.html)` | 数学関数 |   
 `[<csetjmp>](reference/csetjmp.html)` | ジャンプ処理 |   
 `[<csignal>](reference/csignal.html)` | シグナル |   
-`<cstdalign>` | アライメント操作のマクロ | C++17で非推奨  
+`[<cstdalign>](reference/cstdalign.html)` | アライメント操作のマクロ | C++11 (C11)  
+C++17で非推奨  
 C++20で削除  
 `[<cstdarg>](reference/cstdarg.html)` | 可変引数操作 |   
 `[<stdbit.h>](reference/stdbit.h.html)` | ビット操作 | C++26  
 `[<stdckdint.h>](reference/stdckdint.h.html)` | 検査付き整数演算 | C++26  
-`<cstdbool>` | 真理値型の定義 | C++11 (C99)  
+`[<cstdbool>](reference/cstdbool.html)` | 真理値型の定義 | C++11 (C99)  
 C++17で非推奨  
 C++20で削除  
 `[<cstddef>](reference/cstddef.html)` | 基本的な型、値、マクロの定義 |   
@@ -263,7 +264,7 @@ C++20で削除
 `[<cstdio>](reference/cstdio.html)` | 入出力 |   
 `[<cstdlib>](reference/cstdlib.html)` | ユーティリティ関数 |   
 `[<cstring>](reference/cstring.html)` | 文字列操作 |   
-`<ctgmath>` | ジェネリックな数学関数 | C++11 (C99)  
+`[<ctgmath>](reference/ctgmath.html)` | ジェネリックな数学関数 | C++11 (C99)  
 C++17で非推奨  
 C++20で削除  
 `[<ctime>](reference/ctime.html)` | 日付・時間 |   
@@ -283,7 +284,7 @@ C++20で削除
 
 
 
-本サイトの情報は、 [クリエイティブ・コモンズ 表示 4.0 非移植 ライセンス(CC BY)](https://creativecommons.org/licenses/by/4.0/deed.ja) の下に提供されています。
+本サイトの情報は、 [クリエイティブ・コモンズ 表示 4.0 国際 ライセンス(CC BY)](https://creativecommons.org/licenses/by/4.0/deed.ja) の下に提供されています。
 
 ================================================================================
 

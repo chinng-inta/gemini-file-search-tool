@@ -1,6 +1,6 @@
 ---
 doc_type: M5Unified IMU
-crawled_at: 2026/10/04 11:55:48
+crawled_at: 2026/10/11 11:19:43
 first_url: https://docs.m5stack.com/ja/arduino/m5unified/imu_class/
 ---
 
@@ -1588,6 +1588,46 @@ Tough
 ##### 
 
 [ Wakeup ](/en/arduino/m5tough/wakeup)
+
+#### 
+
+ToughC5 
+
+##### 
+
+[ クイックスタート ](/en/arduino/toughc5/program)
+
+##### 
+
+[ Battery ](/en/arduino/toughc5/battery)
+
+##### 
+
+[ Buzzer ](/en/arduino/toughc5/buzzer)
+
+##### 
+
+[ microSD ](/en/arduino/toughc5/microsd)
+
+##### 
+
+[ RS485 ](/en/arduino/toughc5/rs485)
+
+##### 
+
+[ RTC ](/en/arduino/toughc5/rtc)
+
+##### 
+
+[ Touch ](/en/arduino/toughc5/touch)
+
+##### 
+
+[ Wakeup ](/en/arduino/toughc5/wakeup)
+
+##### 
+
+[ M5PM1 & M5IOE1 ](/en/arduino/toughc5/m5pm1_m5ioe1)
 
 #### 
 

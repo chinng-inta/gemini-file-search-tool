@@ -1,6 +1,6 @@
 ---
 doc_type: M5 products
-crawled_at: 2026/10/04 11:55:35
+crawled_at: 2026/10/11 11:19:31
 first_url: https://docs.m5stack.com/en/products/
 ---
 
@@ -95,6 +95,10 @@ Search
 
 [View Details](/en/core/Core2_For_AWS) [](https://shop.m5stack.com/products/m5stack-core2-esp32-iot-development-kit-for-aws-iot-edukit)
 
+## [ToughC5 ESP32-C5HR8 2.4 & 5 GHz Wi-Fi 6 BLE 5 IEEE 802.15.4 Waterproof RS485 ILI9342C ](/en/core/ToughC5)
+
+[View Details](/en/core/ToughC5) [](https://shop.m5stack.com/products/m5stack-toughc5-iot-dev-kit-esp32-c5)
+
 ## [Tough ESP32-D0WDQ6-V3 AXP192 BM8563 NS4168 ILI9342C CHSC6540 ](/en/core/Tough)
 
 [View Details](/en/core/Tough) [](https://shop.m5stack.com/products/m5stack-tough-esp32-iot-development-board-kit)
@@ -111,7 +115,7 @@ Search
 
 [View Details](/en/core/M5GO_IoT_Kit_v2.7) [](https://shop.m5stack.com/products/m5go-iot-starter-kit-v2-6)
 
-[Tab5](/en/core/Tab5)[Core2 v1.3](/en/core/Core2_v1.3)[CoreS3 Thread BR](/en/core/CoreS3_Thread_BR)[PowerHub](/en/core/PowerHub)[CoreMP135](/en/core/CoreMP135)[CM4Stack](/en/core/CM4Stack)[CoreS3](/en/core/CoreS3)[CoreS3-SE](/en/core/CoreS3-SE)[CoreS3-Lite](/en/core/CoreS3-Lite)[Core2](/en/core/Core2)[Core2 v1.1](/en/core/Core2_v1.1)[Core2 For AWS v1.3](/en/core/Core2_For_AWS_v1.3)[Core2 For AWS](/en/core/Core2_For_AWS)[Tough](/en/core/Tough)[Basic v2.7](/en/core/Basic_v2.7)[Fire v2.7](/en/core/Fire_v2.7)[M5GO IoT Kit v2.7](/en/core/M5GO_IoT_Kit_v2.7)
+[Tab5](/en/core/Tab5)[Core2 v1.3](/en/core/Core2_v1.3)[CoreS3 Thread BR](/en/core/CoreS3_Thread_BR)[PowerHub](/en/core/PowerHub)[CoreMP135](/en/core/CoreMP135)[CM4Stack](/en/core/CM4Stack)[CoreS3](/en/core/CoreS3)[CoreS3-SE](/en/core/CoreS3-SE)[CoreS3-Lite](/en/core/CoreS3-Lite)[Core2](/en/core/Core2)[Core2 v1.1](/en/core/Core2_v1.1)[Core2 For AWS v1.3](/en/core/Core2_For_AWS_v1.3)[Core2 For AWS](/en/core/Core2_For_AWS)[ToughC5](/en/core/ToughC5)[Tough](/en/core/Tough)[Basic v2.7](/en/core/Basic_v2.7)[Fire v2.7](/en/core/Fire_v2.7)[M5GO IoT Kit v2.7](/en/core/M5GO_IoT_Kit_v2.7)
 
 ##  Controllers-Stick 
 
@@ -1885,6 +1889,14 @@ Search
 
 [View Details](/en/chain/Chain_Joystick) [](https://shop.m5stack.com/products/chain-joystick-stm32g031)
 
+## [Chain Switch STM32G031G8U6 Slider Switch 12-bit ADC WS2812C UART HY2.0-4P ](/en/chain/Chain_Switch)
+
+[View Details](/en/chain/Chain_Switch) [](https://shop.m5stack.com/products/chain-switch-stm32g031)
+
+## [Chain MIC STM32G031G8U6 GMI4015P-2C 12-bit ADC WS2812C UART HY2.0-4P ](/en/chain/Chain_MIC)
+
+[View Details](/en/chain/Chain_MIC) [](https://shop.m5stack.com/products/chain-microphone-gmi4015p)
+
 ## [Chain RGB STM32G031G8U6 RGB LED 8×8 ASCII UART HY2.0-4P ](/en/chain/Chain_RGB)
 
 [View Details](/en/chain/Chain_RGB) [](https://shop.m5stack.com/products/chain-rgb-matrix-with-8x8-leds)
@@ -1897,7 +1909,7 @@ Search
 
 [View Details](/en/chain/Chain_Buzzer) [](https://shop.m5stack.com/products/chain-buzzer)
 
-[Chain DualKey](/en/chain/Chain_DualKey)[Chain Angle](/en/chain/Chain_Angle)[Chain Encoder](/en/chain/Chain_Encoder)[Chain Key](/en/chain/Chain_Key)[Chain Joystick](/en/chain/Chain_Joystick)[Chain RGB](/en/chain/Chain_RGB)[Chain Mono](/en/chain/Chain_Mono)[Chain Buzzer](/en/chain/Chain_Buzzer)
+[Chain DualKey](/en/chain/Chain_DualKey)[Chain Angle](/en/chain/Chain_Angle)[Chain Encoder](/en/chain/Chain_Encoder)[Chain Key](/en/chain/Chain_Key)[Chain Joystick](/en/chain/Chain_Joystick)[Chain Switch](/en/chain/Chain_Switch)[Chain MIC](/en/chain/Chain_MIC)[Chain RGB](/en/chain/Chain_RGB)[Chain Mono](/en/chain/Chain_Mono)[Chain Buzzer](/en/chain/Chain_Buzzer)
 
 ##  For Chain-Sensor 
 
@@ -2623,6 +2635,10 @@ Search
 
 [View Details](/en/core/Core2_For_AWS) [](https://shop.m5stack.com/products/m5stack-core2-esp32-iot-development-kit-for-aws-iot-edukit)
 
+## [ToughC5 ESP32-C5HR8 2.4 & 5 GHz Wi-Fi 6 BLE 5 IEEE 802.15.4 Waterproof RS485 ILI9342C ](/en/core/ToughC5)
+
+[View Details](/en/core/ToughC5) [](https://shop.m5stack.com/products/m5stack-toughc5-iot-dev-kit-esp32-c5)
+
 ## [Tough ESP32-D0WDQ6-V3 AXP192 BM8563 NS4168 ILI9342C CHSC6540 ](/en/core/Tough)
 
 [View Details](/en/core/Tough) [](https://shop.m5stack.com/products/m5stack-tough-esp32-iot-development-board-kit)
@@ -2639,7 +2655,7 @@ Search
 
 [View Details](/en/core/M5GO_IoT_Kit_v2.7) [](https://shop.m5stack.com/products/m5go-iot-starter-kit-v2-6)
 
-[Tab5](/en/core/Tab5)[Core2 v1.3](/en/core/Core2_v1.3)[CoreS3 Thread BR](/en/core/CoreS3_Thread_BR)[PowerHub](/en/core/PowerHub)[CoreMP135](/en/core/CoreMP135)[CM4Stack](/en/core/CM4Stack)[CoreS3](/en/core/CoreS3)[CoreS3-SE](/en/core/CoreS3-SE)[CoreS3-Lite](/en/core/CoreS3-Lite)[Core2](/en/core/Core2)[Core2 v1.1](/en/core/Core2_v1.1)[Core2 For AWS v1.3](/en/core/Core2_For_AWS_v1.3)[Core2 For AWS](/en/core/Core2_For_AWS)[Tough](/en/core/Tough)[Basic v2.7](/en/core/Basic_v2.7)[Fire v2.7](/en/core/Fire_v2.7)[M5GO IoT Kit v2.7](/en/core/M5GO_IoT_Kit_v2.7)
+[Tab5](/en/core/Tab5)[Core2 v1.3](/en/core/Core2_v1.3)[CoreS3 Thread BR](/en/core/CoreS3_Thread_BR)[PowerHub](/en/core/PowerHub)[CoreMP135](/en/core/CoreMP135)[CM4Stack](/en/core/CM4Stack)[CoreS3](/en/core/CoreS3)[CoreS3-SE](/en/core/CoreS3-SE)[CoreS3-Lite](/en/core/CoreS3-Lite)[Core2](/en/core/Core2)[Core2 v1.1](/en/core/Core2_v1.1)[Core2 For AWS v1.3](/en/core/Core2_For_AWS_v1.3)[Core2 For AWS](/en/core/Core2_For_AWS)[ToughC5](/en/core/ToughC5)[Tough](/en/core/Tough)[Basic v2.7](/en/core/Basic_v2.7)[Fire v2.7](/en/core/Fire_v2.7)[M5GO IoT Kit v2.7](/en/core/M5GO_IoT_Kit_v2.7)
 
 ##  Controllers-Stick 
 
@@ -4413,6 +4429,14 @@ Search
 
 [View Details](/en/chain/Chain_Joystick) [](https://shop.m5stack.com/products/chain-joystick-stm32g031)
 
+## [Chain Switch STM32G031G8U6 Slider Switch 12-bit ADC WS2812C UART HY2.0-4P ](/en/chain/Chain_Switch)
+
+[View Details](/en/chain/Chain_Switch) [](https://shop.m5stack.com/products/chain-switch-stm32g031)
+
+## [Chain MIC STM32G031G8U6 GMI4015P-2C 12-bit ADC WS2812C UART HY2.0-4P ](/en/chain/Chain_MIC)
+
+[View Details](/en/chain/Chain_MIC) [](https://shop.m5stack.com/products/chain-microphone-gmi4015p)
+
 ## [Chain RGB STM32G031G8U6 RGB LED 8×8 ASCII UART HY2.0-4P ](/en/chain/Chain_RGB)
 
 [View Details](/en/chain/Chain_RGB) [](https://shop.m5stack.com/products/chain-rgb-matrix-with-8x8-leds)
@@ -4425,7 +4449,7 @@ Search
 
 [View Details](/en/chain/Chain_Buzzer) [](https://shop.m5stack.com/products/chain-buzzer)
 
-[Chain DualKey](/en/chain/Chain_DualKey)[Chain Angle](/en/chain/Chain_Angle)[Chain Encoder](/en/chain/Chain_Encoder)[Chain Key](/en/chain/Chain_Key)[Chain Joystick](/en/chain/Chain_Joystick)[Chain RGB](/en/chain/Chain_RGB)[Chain Mono](/en/chain/Chain_Mono)[Chain Buzzer](/en/chain/Chain_Buzzer)
+[Chain DualKey](/en/chain/Chain_DualKey)[Chain Angle](/en/chain/Chain_Angle)[Chain Encoder](/en/chain/Chain_Encoder)[Chain Key](/en/chain/Chain_Key)[Chain Joystick](/en/chain/Chain_Joystick)[Chain Switch](/en/chain/Chain_Switch)[Chain MIC](/en/chain/Chain_MIC)[Chain RGB](/en/chain/Chain_RGB)[Chain Mono](/en/chain/Chain_Mono)[Chain Buzzer](/en/chain/Chain_Buzzer)
 
 ##  For Chain-Sensor 
 
