@@ -1,6 +1,6 @@
 ---
 doc_type: M5 products
-crawled_at: 2026/10/11 11:19:31
+crawled_at: 2026/10/18 10:37:08
 first_url: https://docs.m5stack.com/en/products/
 ---
 
@@ -159,10 +159,6 @@ Search
 
 [View Details](/en/atom/Atom_Voice) [](https://shop.m5stack.com/products/atom-echo-smart-speaker-dev-kit)
 
-## [AtomS3 ESP32-S3FN8 MPU6886 0.85-inch GC9107 8MB ](/en/core/AtomS3)
-
-[View Details](/en/core/AtomS3) [](https://shop.m5stack.com/products/atoms3-dev-kit-w-0-85-inch-screen)
-
 ## [AtomS3-Lite ESP32-S3FN8 Wi-Fi RGB LED SY8089 WS2812 3D Antenna ](/en/core/AtomS3-Lite)
 
 [View Details](/en/core/AtomS3-Lite) [](https://shop.m5stack.com/products/atoms3-lite-esp32s3-dev-kit)
@@ -199,7 +195,7 @@ Search
 
 [View Details](/en/core/AtomS3R-CAM_AI_Chatbot) [](https://shop.m5stack.com/products/atoms3r-cam-ai-chatbot-kit-8mb-psram)
 
-[Atom VoiceS3R](/en/core/Atom_VoiceS3R)[Atom-Lite](/en/core/Atom-Lite)[Atom-Matrix v1.1](/en/core/Atom-Matrix_v1.1)[Atom-Matrix](/en/core/Atom-Matrix)[Atom Voice](/en/atom/Atom_Voice)[AtomS3](/en/core/AtomS3)[AtomS3-Lite](/en/core/AtomS3-Lite)[AtomS3U](/en/core/AtomS3U)[AtomS3R](/en/core/AtomS3R)[AtomS3R-CAM](/en/core/AtomS3R-CAM)[AtomS3R-Ext](/en/core/AtomS3R-Ext)[AtomS3R-M12](/en/core/AtomS3R-M12)[AtomS3R-M12 Volcengine Kit](/en/core/AtomS3R-M12_Volcengine_Kit)[AtomS3R-AI Chatbot](/en/core/AtomS3R-AI_Chatbot)[AtomS3R-CAM AI Chatbot](/en/core/AtomS3R-CAM_AI_Chatbot)
+[Atom VoiceS3R](/en/core/Atom_VoiceS3R)[Atom-Lite](/en/core/Atom-Lite)[Atom-Matrix v1.1](/en/core/Atom-Matrix_v1.1)[Atom-Matrix](/en/core/Atom-Matrix)[Atom Voice](/en/atom/Atom_Voice)[AtomS3-Lite](/en/core/AtomS3-Lite)[AtomS3U](/en/core/AtomS3U)[AtomS3R](/en/core/AtomS3R)[AtomS3R-CAM](/en/core/AtomS3R-CAM)[AtomS3R-Ext](/en/core/AtomS3R-Ext)[AtomS3R-M12](/en/core/AtomS3R-M12)[AtomS3R-M12 Volcengine Kit](/en/core/AtomS3R-M12_Volcengine_Kit)[AtomS3R-AI Chatbot](/en/core/AtomS3R-AI_Chatbot)[AtomS3R-CAM AI Chatbot](/en/core/AtomS3R-CAM_AI_Chatbot)
 
 ##  Controllers-Cardputer 
 
@@ -367,6 +363,14 @@ Search
 
 [View Details](/en/core/PaperS3) [](https://shop.m5stack.com/products/m5papers3-esp32s3-development-kit)
 
+## [PaperDIY Assembly Kit ESP32-S3R8 ED047TC1 M5PM1 4.7 Inch 960x540 microSD ](/en/core/PaperDIY_Assembly_Kit)
+
+[View Details](/en/core/PaperDIY_Assembly_Kit) [](https://shop.m5stack.com/products/paperdiy-assembly-kit-esp32-s3)
+
+## [PaperDIY Complete Kit ESP32-S3R8 ED047TC1 M5PM1 4.7 Inch PLA 3D Printed ](/en/core/PaperDIY_Complete_Kit)
+
+[View Details](/en/core/PaperDIY_Complete_Kit) [](https://shop.m5stack.com/products/paperdiy-complete-kit-esp32-s3)
+
 ## [Xiaozhi Card Kit ESP32-S3-PICO-1-N8R8 GDEY027T91 ML307R-DL ES8311 E-ink 4G ](/en/core/Xiaozhi_Card_Kit)
 
 [View Details](/en/core/Xiaozhi_Card_Kit) [](https://shop.m5stack.com/collections)
@@ -379,7 +383,7 @@ Search
 
 [View Details](/en/core/Paper_v1.1) [](https://shop.m5stack.com/products/m5paper-esp32-development-kit-v1-1-960x540-4-7-eink-display-235-ppi)
 
-[PaperMono](/en/core/PaperMono)[PaperMono-Lite](/en/core/PaperMono-Lite)[PaperColor](/en/core/PaperColor)[PaperS3](/en/core/PaperS3)[Xiaozhi Card Kit](/en/core/Xiaozhi_Card_Kit)[CoreInk](/en/core/CoreInk)[Paper v1.1](/en/core/Paper_v1.1)
+[PaperMono](/en/core/PaperMono)[PaperMono-Lite](/en/core/PaperMono-Lite)[PaperColor](/en/core/PaperColor)[PaperS3](/en/core/PaperS3)[PaperDIY Assembly Kit](/en/core/PaperDIY_Assembly_Kit)[PaperDIY Complete Kit](/en/core/PaperDIY_Complete_Kit)[Xiaozhi Card Kit](/en/core/Xiaozhi_Card_Kit)[CoreInk](/en/core/CoreInk)[Paper v1.1](/en/core/Paper_v1.1)
 
 ##  Controllers-Others 
 
@@ -2699,10 +2703,6 @@ Search
 
 [View Details](/en/atom/Atom_Voice) [](https://shop.m5stack.com/products/atom-echo-smart-speaker-dev-kit)
 
-## [AtomS3 ESP32-S3FN8 MPU6886 0.85-inch GC9107 8MB ](/en/core/AtomS3)
-
-[View Details](/en/core/AtomS3) [](https://shop.m5stack.com/products/atoms3-dev-kit-w-0-85-inch-screen)
-
 ## [AtomS3-Lite ESP32-S3FN8 Wi-Fi RGB LED SY8089 WS2812 3D Antenna ](/en/core/AtomS3-Lite)
 
 [View Details](/en/core/AtomS3-Lite) [](https://shop.m5stack.com/products/atoms3-lite-esp32s3-dev-kit)
@@ -2739,7 +2739,7 @@ Search
 
 [View Details](/en/core/AtomS3R-CAM_AI_Chatbot) [](https://shop.m5stack.com/products/atoms3r-cam-ai-chatbot-kit-8mb-psram)
 
-[Atom VoiceS3R](/en/core/Atom_VoiceS3R)[Atom-Lite](/en/core/Atom-Lite)[Atom-Matrix v1.1](/en/core/Atom-Matrix_v1.1)[Atom-Matrix](/en/core/Atom-Matrix)[Atom Voice](/en/atom/Atom_Voice)[AtomS3](/en/core/AtomS3)[AtomS3-Lite](/en/core/AtomS3-Lite)[AtomS3U](/en/core/AtomS3U)[AtomS3R](/en/core/AtomS3R)[AtomS3R-CAM](/en/core/AtomS3R-CAM)[AtomS3R-Ext](/en/core/AtomS3R-Ext)[AtomS3R-M12](/en/core/AtomS3R-M12)[AtomS3R-M12 Volcengine Kit](/en/core/AtomS3R-M12_Volcengine_Kit)[AtomS3R-AI Chatbot](/en/core/AtomS3R-AI_Chatbot)[AtomS3R-CAM AI Chatbot](/en/core/AtomS3R-CAM_AI_Chatbot)
+[Atom VoiceS3R](/en/core/Atom_VoiceS3R)[Atom-Lite](/en/core/Atom-Lite)[Atom-Matrix v1.1](/en/core/Atom-Matrix_v1.1)[Atom-Matrix](/en/core/Atom-Matrix)[Atom Voice](/en/atom/Atom_Voice)[AtomS3-Lite](/en/core/AtomS3-Lite)[AtomS3U](/en/core/AtomS3U)[AtomS3R](/en/core/AtomS3R)[AtomS3R-CAM](/en/core/AtomS3R-CAM)[AtomS3R-Ext](/en/core/AtomS3R-Ext)[AtomS3R-M12](/en/core/AtomS3R-M12)[AtomS3R-M12 Volcengine Kit](/en/core/AtomS3R-M12_Volcengine_Kit)[AtomS3R-AI Chatbot](/en/core/AtomS3R-AI_Chatbot)[AtomS3R-CAM AI Chatbot](/en/core/AtomS3R-CAM_AI_Chatbot)
 
 ##  Controllers-Cardputer 
 
@@ -2907,6 +2907,14 @@ Search
 
 [View Details](/en/core/PaperS3) [](https://shop.m5stack.com/products/m5papers3-esp32s3-development-kit)
 
+## [PaperDIY Assembly Kit ESP32-S3R8 ED047TC1 M5PM1 4.7 Inch 960x540 microSD ](/en/core/PaperDIY_Assembly_Kit)
+
+[View Details](/en/core/PaperDIY_Assembly_Kit) [](https://shop.m5stack.com/products/paperdiy-assembly-kit-esp32-s3)
+
+## [PaperDIY Complete Kit ESP32-S3R8 ED047TC1 M5PM1 4.7 Inch PLA 3D Printed ](/en/core/PaperDIY_Complete_Kit)
+
+[View Details](/en/core/PaperDIY_Complete_Kit) [](https://shop.m5stack.com/products/paperdiy-complete-kit-esp32-s3)
+
 ## [Xiaozhi Card Kit ESP32-S3-PICO-1-N8R8 GDEY027T91 ML307R-DL ES8311 E-ink 4G ](/en/core/Xiaozhi_Card_Kit)
 
 [View Details](/en/core/Xiaozhi_Card_Kit) [](https://shop.m5stack.com/collections)
@@ -2919,7 +2927,7 @@ Search
 
 [View Details](/en/core/Paper_v1.1) [](https://shop.m5stack.com/products/m5paper-esp32-development-kit-v1-1-960x540-4-7-eink-display-235-ppi)
 
-[PaperMono](/en/core/PaperMono)[PaperMono-Lite](/en/core/PaperMono-Lite)[PaperColor](/en/core/PaperColor)[PaperS3](/en/core/PaperS3)[Xiaozhi Card Kit](/en/core/Xiaozhi_Card_Kit)[CoreInk](/en/core/CoreInk)[Paper v1.1](/en/core/Paper_v1.1)
+[PaperMono](/en/core/PaperMono)[PaperMono-Lite](/en/core/PaperMono-Lite)[PaperColor](/en/core/PaperColor)[PaperS3](/en/core/PaperS3)[PaperDIY Assembly Kit](/en/core/PaperDIY_Assembly_Kit)[PaperDIY Complete Kit](/en/core/PaperDIY_Complete_Kit)[Xiaozhi Card Kit](/en/core/Xiaozhi_Card_Kit)[CoreInk](/en/core/CoreInk)[Paper v1.1](/en/core/Paper_v1.1)
 
 ##  Controllers-Others 
 
