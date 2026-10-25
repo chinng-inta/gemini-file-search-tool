@@ -1,6 +1,6 @@
 ---
 doc_type: M5 products
-crawled_at: 2026/10/18 10:37:08
+crawled_at: 2026/10/25 10:51:00
 first_url: https://docs.m5stack.com/en/products/
 ---
 
@@ -359,15 +359,15 @@ Search
 
 [View Details](/en/core/PaperColor) [](https://shop.m5stack.com/products/m5paper-color-esp32s3-dev-kit)
 
-## [PaperS3 ESP32-S3R8 EPD_ED047TC1 GT911 BMI270 BM8563 LGS4056H ](/en/core/PaperS3)
+## [PaperS3 ESP32-S3R8 ET047TC1 GT911 BMI270 BM8563 LGS4056H ](/en/core/PaperS3)
 
 [View Details](/en/core/PaperS3) [](https://shop.m5stack.com/products/m5papers3-esp32s3-development-kit)
 
-## [PaperDIY Assembly Kit ESP32-S3R8 ED047TC1 M5PM1 4.7 Inch 960x540 microSD ](/en/core/PaperDIY_Assembly_Kit)
+## [PaperDIY Assembly Kit ESP32-S3R8 ET047TC1 M5PM1 4.7 Inch 960x540 microSD ](/en/core/PaperDIY_Assembly_Kit)
 
 [View Details](/en/core/PaperDIY_Assembly_Kit) [](https://shop.m5stack.com/products/paperdiy-assembly-kit-esp32-s3)
 
-## [PaperDIY Complete Kit ESP32-S3R8 ED047TC1 M5PM1 4.7 Inch PLA 3D Printed ](/en/core/PaperDIY_Complete_Kit)
+## [PaperDIY Complete Kit ESP32-S3R8 ET047TC1 M5PM1 4.7 Inch PLA 3D Printed ](/en/core/PaperDIY_Complete_Kit)
 
 [View Details](/en/core/PaperDIY_Complete_Kit) [](https://shop.m5stack.com/products/paperdiy-complete-kit-esp32-s3)
 
@@ -379,7 +379,7 @@ Search
 
 [View Details](/en/core/CoreInk) [](https://shop.m5stack.com/products/m5stack-esp32-core-ink-development-kit1-54-elnk-display)
 
-## [Paper v1.1 ESP32-D0WDQ6-V3 e-ink screen IT8951E SHT30 RTC GT911 FM24C02 ](/en/core/Paper_v1.1)
+## [Paper v1.1 ESP32-D0WDQ6-V3 ET047TC1 IT8951E SHT30 RTC GT911 FM24C02 ](/en/core/Paper_v1.1)
 
 [View Details](/en/core/Paper_v1.1) [](https://shop.m5stack.com/products/m5paper-esp32-development-kit-v1-1-960x540-4-7-eink-display-235-ppi)
 
@@ -450,6 +450,22 @@ Search
 [LLM-8850 Kit](/en/ai_hardware/LLM-8850_Kit)[LLM‑8850 Card](/en/ai_hardware/LLM-8850_Card)
 
 ##  Unit-Sensor 
+
+## [Unit DoF6 BMI270 Six-axis 16-bit ±16 g ±2000 °/s I2C ](/en/unit/Unit_DoF6)
+
+[View Details](/en/unit/Unit_DoF6) [](https://shop.m5stack.com/products/6-dof-imu-unit-bmi270)
+
+## [Unit DoF9 BMI270 BMM350 9-Axis TMR 0.1 μT I2C ](/en/unit/Unit_DoF9)
+
+[View Details](/en/unit/Unit_DoF9) [](https://shop.m5stack.com/products/9-dof-imu-unit-bmi270-bmm350)
+
+## [Unit DoF10 BMI270 BMM350 SPA06-003 10-Axis 300-1100 hPa I2C ](/en/unit/Unit_DoF10)
+
+[View Details](/en/unit/Unit_DoF10) [](https://shop.m5stack.com/products/10-dof-imu-unit-bmi270-bmm350-spa06-003)
+
+## [Unit BMM350 BMM350 3-Axis Magnetometer TMR 0.1 μT I2C 0x14 ](/en/unit/Unit_BMM350)
+
+[View Details](/en/unit/Unit_BMM350) [](https://shop.m5stack.com/products/3-axis-magnetometer-unit-bmm350)
 
 ## [Unit Fingerprint2 STM32G031G8U6 A - K323CP 100 Fingerprints RGB LED Ring UART ](/en/unit/Unit_Fingerprint2)
 
@@ -667,7 +683,7 @@ Search
 
 [View Details](/en/unit/Unit_DAC2) [](https://shop.m5stack.com/products/dac-2-i2c-unit-gp8413)
 
-[Unit Fingerprint2](/en/unit/Unit_Fingerprint2)[Unit MQ](/en/unit/Unit_MQ)[Unit INA226-10A](/en/unit/Unit_INA226-10A)[Unit INA226-1A](/en/unit/Unit_INA226-1A)[Unit Gateway H2](/en/unit/Unit_Gateway_H2)[Unit ASR](/en/unit/Unit_ASR)[Unit Ultrasonic-I2C](/en/unit/Unit_Ultrasonic-I2C)[Unit Ultrasonic-IO](/en/unit/Unit_Ultrasonic-IO)[Unit ToF](/en/unit/Unit_ToF)[Unit Limit](/en/unit/Unit_Limit)[Unit PIR](/en/unit/Unit_PIR)[Unit OP90](/en/unit/Unit_OP90)[Unit OP180](/en/unit/Unit_OP180)[Unit Weight](/en/unit/Unit_Weight)[Unit Scales](/en/unit/Unit_Scales)[Unit Gesture](/en/unit/Unit_Gesture)[Unit Color](/en/unit/Unit_Color)[Unit Thermal](/en/unit/Unit_Thermal)[Unit Light](/en/unit/Unit_Light)[Unit DLight](/en/unit/Unit_DLight)[Unit AMeter](/en/unit/Unit_AMeter)[Unit VMeter](/en/unit/Unit_VMeter)[Unit NCIR](/en/unit/Unit_NCIR)[Unit Heart](/en/unit/Unit_Heart)[Unit Finger](/en/unit/Unit_Finger)[Unit Mini IMU](/en/unit/Unit_Mini_IMU)[Unit Accel](/en/unit/Unit_Accel)[Unit ENV-III](/en/unit/Unit_ENV-III)[Unit ENV-Pro](/en/unit/Unit_ENV-Pro)[Unit CO2](/en/unit/Unit_CO2)[Unit Mini TVOC/eCO2](/en/unit/Unit_Mini_TVOC_eCO2)[Unit Earth](/en/unit/Unit_Earth)[Unit Watering](/en/unit/Unit_Watering)[Unit Tube Pressure](/en/unit/Unit_Tube_Pressure)[Unit Hall](/en/unit/Unit_Hall)[Unit MIC](/en/unit/Unit_MIC)[Unit Mini PDM](/en/unit/Unit_Mini_PDM)[Unit Thermal2](/en/unit/Unit_Thermal2)[Unit NCIR2](/en/unit/Unit_NCIR2)[Unit Mini BPS v1.1](/en/unit/Unit_Mini_BPS_v1.1)[Unit CO2L](/en/unit/Unit_CO2L)[Unit KMeter-ISO](/en/unit/Unit_KMeter-ISO)[Unit AIN4-20mA](/en/unit/Unit_AIN4-20mA)[Unit AC Measure](/en/unit/Unit_AC_Measure)[Unit ToF4M](/en/unit/Unit_ToF4M)[Unit Mini ToF-90°](/en/unit/Unit_Mini_ToF-90)[Unit Reflective IR](/en/unit/Unit_Reflective_IR)[Unit Mini Scales](/en/unit/Unit_Mini_Scales)[Unit Weight-I2C](/en/unit/Unit_Weight-I2C)[Unit TMOS PIR](/en/unit/Unit_TMOS_PIR)[Unit Grove to Grove](/en/unit/Unit_Grove_to_Grove)[Unit ExtEncoder](/en/unit/Unit_ExtEncoder)[Unit ADC v1.1](/en/unit/Unit_ADC_v1.1)[Unit DAC2](/en/unit/Unit_DAC2)
+[Unit DoF6](/en/unit/Unit_DoF6)[Unit DoF9](/en/unit/Unit_DoF9)[Unit DoF10](/en/unit/Unit_DoF10)[Unit BMM350](/en/unit/Unit_BMM350)[Unit Fingerprint2](/en/unit/Unit_Fingerprint2)[Unit MQ](/en/unit/Unit_MQ)[Unit INA226-10A](/en/unit/Unit_INA226-10A)[Unit INA226-1A](/en/unit/Unit_INA226-1A)[Unit Gateway H2](/en/unit/Unit_Gateway_H2)[Unit ASR](/en/unit/Unit_ASR)[Unit Ultrasonic-I2C](/en/unit/Unit_Ultrasonic-I2C)[Unit Ultrasonic-IO](/en/unit/Unit_Ultrasonic-IO)[Unit ToF](/en/unit/Unit_ToF)[Unit Limit](/en/unit/Unit_Limit)[Unit PIR](/en/unit/Unit_PIR)[Unit OP90](/en/unit/Unit_OP90)[Unit OP180](/en/unit/Unit_OP180)[Unit Weight](/en/unit/Unit_Weight)[Unit Scales](/en/unit/Unit_Scales)[Unit Gesture](/en/unit/Unit_Gesture)[Unit Color](/en/unit/Unit_Color)[Unit Thermal](/en/unit/Unit_Thermal)[Unit Light](/en/unit/Unit_Light)[Unit DLight](/en/unit/Unit_DLight)[Unit AMeter](/en/unit/Unit_AMeter)[Unit VMeter](/en/unit/Unit_VMeter)[Unit NCIR](/en/unit/Unit_NCIR)[Unit Heart](/en/unit/Unit_Heart)[Unit Finger](/en/unit/Unit_Finger)[Unit Mini IMU](/en/unit/Unit_Mini_IMU)[Unit Accel](/en/unit/Unit_Accel)[Unit ENV-III](/en/unit/Unit_ENV-III)[Unit ENV-Pro](/en/unit/Unit_ENV-Pro)[Unit CO2](/en/unit/Unit_CO2)[Unit Mini TVOC/eCO2](/en/unit/Unit_Mini_TVOC_eCO2)[Unit Earth](/en/unit/Unit_Earth)[Unit Watering](/en/unit/Unit_Watering)[Unit Tube Pressure](/en/unit/Unit_Tube_Pressure)[Unit Hall](/en/unit/Unit_Hall)[Unit MIC](/en/unit/Unit_MIC)[Unit Mini PDM](/en/unit/Unit_Mini_PDM)[Unit Thermal2](/en/unit/Unit_Thermal2)[Unit NCIR2](/en/unit/Unit_NCIR2)[Unit Mini BPS v1.1](/en/unit/Unit_Mini_BPS_v1.1)[Unit CO2L](/en/unit/Unit_CO2L)[Unit KMeter-ISO](/en/unit/Unit_KMeter-ISO)[Unit AIN4-20mA](/en/unit/Unit_AIN4-20mA)[Unit AC Measure](/en/unit/Unit_AC_Measure)[Unit ToF4M](/en/unit/Unit_ToF4M)[Unit Mini ToF-90°](/en/unit/Unit_Mini_ToF-90)[Unit Reflective IR](/en/unit/Unit_Reflective_IR)[Unit Mini Scales](/en/unit/Unit_Mini_Scales)[Unit Weight-I2C](/en/unit/Unit_Weight-I2C)[Unit TMOS PIR](/en/unit/Unit_TMOS_PIR)[Unit Grove to Grove](/en/unit/Unit_Grove_to_Grove)[Unit ExtEncoder](/en/unit/Unit_ExtEncoder)[Unit ADC v1.1](/en/unit/Unit_ADC_v1.1)[Unit DAC2](/en/unit/Unit_DAC2)
 
 ##  Unit-Actuator 
 
@@ -2351,7 +2367,7 @@ Documentation
   * [Hardware Design Files](https://github.com/m5stack/M5_Hardware)
   * [Release History](/en/history)
   * [Stack Compatibility](/en/compatible_stack)
-  * [Stack Screw Length](/en/learn/extension/module)
+  * [Stack Screw Length](/en/guide/basics/stack_screw_length)
 
 
 
@@ -2516,7 +2532,7 @@ Documentation
   * [Hardware Design Files](https://github.com/m5stack/M5_Hardware)
   * [Release History](/en/history)
   * [Stack Compatibility](/en/compatible_stack)
-  * [Stack Screw Length](/en/learn/extension/module)
+  * [Stack Screw Length](/en/guide/basics/stack_screw_length)
 
 
 
@@ -2903,15 +2919,15 @@ Search
 
 [View Details](/en/core/PaperColor) [](https://shop.m5stack.com/products/m5paper-color-esp32s3-dev-kit)
 
-## [PaperS3 ESP32-S3R8 EPD_ED047TC1 GT911 BMI270 BM8563 LGS4056H ](/en/core/PaperS3)
+## [PaperS3 ESP32-S3R8 ET047TC1 GT911 BMI270 BM8563 LGS4056H ](/en/core/PaperS3)
 
 [View Details](/en/core/PaperS3) [](https://shop.m5stack.com/products/m5papers3-esp32s3-development-kit)
 
-## [PaperDIY Assembly Kit ESP32-S3R8 ED047TC1 M5PM1 4.7 Inch 960x540 microSD ](/en/core/PaperDIY_Assembly_Kit)
+## [PaperDIY Assembly Kit ESP32-S3R8 ET047TC1 M5PM1 4.7 Inch 960x540 microSD ](/en/core/PaperDIY_Assembly_Kit)
 
 [View Details](/en/core/PaperDIY_Assembly_Kit) [](https://shop.m5stack.com/products/paperdiy-assembly-kit-esp32-s3)
 
-## [PaperDIY Complete Kit ESP32-S3R8 ED047TC1 M5PM1 4.7 Inch PLA 3D Printed ](/en/core/PaperDIY_Complete_Kit)
+## [PaperDIY Complete Kit ESP32-S3R8 ET047TC1 M5PM1 4.7 Inch PLA 3D Printed ](/en/core/PaperDIY_Complete_Kit)
 
 [View Details](/en/core/PaperDIY_Complete_Kit) [](https://shop.m5stack.com/products/paperdiy-complete-kit-esp32-s3)
 
@@ -2923,7 +2939,7 @@ Search
 
 [View Details](/en/core/CoreInk) [](https://shop.m5stack.com/products/m5stack-esp32-core-ink-development-kit1-54-elnk-display)
 
-## [Paper v1.1 ESP32-D0WDQ6-V3 e-ink screen IT8951E SHT30 RTC GT911 FM24C02 ](/en/core/Paper_v1.1)
+## [Paper v1.1 ESP32-D0WDQ6-V3 ET047TC1 IT8951E SHT30 RTC GT911 FM24C02 ](/en/core/Paper_v1.1)
 
 [View Details](/en/core/Paper_v1.1) [](https://shop.m5stack.com/products/m5paper-esp32-development-kit-v1-1-960x540-4-7-eink-display-235-ppi)
 
@@ -2994,6 +3010,22 @@ Search
 [LLM-8850 Kit](/en/ai_hardware/LLM-8850_Kit)[LLM‑8850 Card](/en/ai_hardware/LLM-8850_Card)
 
 ##  Unit-Sensor 
+
+## [Unit DoF6 BMI270 Six-axis 16-bit ±16 g ±2000 °/s I2C ](/en/unit/Unit_DoF6)
+
+[View Details](/en/unit/Unit_DoF6) [](https://shop.m5stack.com/products/6-dof-imu-unit-bmi270)
+
+## [Unit DoF9 BMI270 BMM350 9-Axis TMR 0.1 μT I2C ](/en/unit/Unit_DoF9)
+
+[View Details](/en/unit/Unit_DoF9) [](https://shop.m5stack.com/products/9-dof-imu-unit-bmi270-bmm350)
+
+## [Unit DoF10 BMI270 BMM350 SPA06-003 10-Axis 300-1100 hPa I2C ](/en/unit/Unit_DoF10)
+
+[View Details](/en/unit/Unit_DoF10) [](https://shop.m5stack.com/products/10-dof-imu-unit-bmi270-bmm350-spa06-003)
+
+## [Unit BMM350 BMM350 3-Axis Magnetometer TMR 0.1 μT I2C 0x14 ](/en/unit/Unit_BMM350)
+
+[View Details](/en/unit/Unit_BMM350) [](https://shop.m5stack.com/products/3-axis-magnetometer-unit-bmm350)
 
 ## [Unit Fingerprint2 STM32G031G8U6 A - K323CP 100 Fingerprints RGB LED Ring UART ](/en/unit/Unit_Fingerprint2)
 
@@ -3211,7 +3243,7 @@ Search
 
 [View Details](/en/unit/Unit_DAC2) [](https://shop.m5stack.com/products/dac-2-i2c-unit-gp8413)
 
-[Unit Fingerprint2](/en/unit/Unit_Fingerprint2)[Unit MQ](/en/unit/Unit_MQ)[Unit INA226-10A](/en/unit/Unit_INA226-10A)[Unit INA226-1A](/en/unit/Unit_INA226-1A)[Unit Gateway H2](/en/unit/Unit_Gateway_H2)[Unit ASR](/en/unit/Unit_ASR)[Unit Ultrasonic-I2C](/en/unit/Unit_Ultrasonic-I2C)[Unit Ultrasonic-IO](/en/unit/Unit_Ultrasonic-IO)[Unit ToF](/en/unit/Unit_ToF)[Unit Limit](/en/unit/Unit_Limit)[Unit PIR](/en/unit/Unit_PIR)[Unit OP90](/en/unit/Unit_OP90)[Unit OP180](/en/unit/Unit_OP180)[Unit Weight](/en/unit/Unit_Weight)[Unit Scales](/en/unit/Unit_Scales)[Unit Gesture](/en/unit/Unit_Gesture)[Unit Color](/en/unit/Unit_Color)[Unit Thermal](/en/unit/Unit_Thermal)[Unit Light](/en/unit/Unit_Light)[Unit DLight](/en/unit/Unit_DLight)[Unit AMeter](/en/unit/Unit_AMeter)[Unit VMeter](/en/unit/Unit_VMeter)[Unit NCIR](/en/unit/Unit_NCIR)[Unit Heart](/en/unit/Unit_Heart)[Unit Finger](/en/unit/Unit_Finger)[Unit Mini IMU](/en/unit/Unit_Mini_IMU)[Unit Accel](/en/unit/Unit_Accel)[Unit ENV-III](/en/unit/Unit_ENV-III)[Unit ENV-Pro](/en/unit/Unit_ENV-Pro)[Unit CO2](/en/unit/Unit_CO2)[Unit Mini TVOC/eCO2](/en/unit/Unit_Mini_TVOC_eCO2)[Unit Earth](/en/unit/Unit_Earth)[Unit Watering](/en/unit/Unit_Watering)[Unit Tube Pressure](/en/unit/Unit_Tube_Pressure)[Unit Hall](/en/unit/Unit_Hall)[Unit MIC](/en/unit/Unit_MIC)[Unit Mini PDM](/en/unit/Unit_Mini_PDM)[Unit Thermal2](/en/unit/Unit_Thermal2)[Unit NCIR2](/en/unit/Unit_NCIR2)[Unit Mini BPS v1.1](/en/unit/Unit_Mini_BPS_v1.1)[Unit CO2L](/en/unit/Unit_CO2L)[Unit KMeter-ISO](/en/unit/Unit_KMeter-ISO)[Unit AIN4-20mA](/en/unit/Unit_AIN4-20mA)[Unit AC Measure](/en/unit/Unit_AC_Measure)[Unit ToF4M](/en/unit/Unit_ToF4M)[Unit Mini ToF-90°](/en/unit/Unit_Mini_ToF-90)[Unit Reflective IR](/en/unit/Unit_Reflective_IR)[Unit Mini Scales](/en/unit/Unit_Mini_Scales)[Unit Weight-I2C](/en/unit/Unit_Weight-I2C)[Unit TMOS PIR](/en/unit/Unit_TMOS_PIR)[Unit Grove to Grove](/en/unit/Unit_Grove_to_Grove)[Unit ExtEncoder](/en/unit/Unit_ExtEncoder)[Unit ADC v1.1](/en/unit/Unit_ADC_v1.1)[Unit DAC2](/en/unit/Unit_DAC2)
+[Unit DoF6](/en/unit/Unit_DoF6)[Unit DoF9](/en/unit/Unit_DoF9)[Unit DoF10](/en/unit/Unit_DoF10)[Unit BMM350](/en/unit/Unit_BMM350)[Unit Fingerprint2](/en/unit/Unit_Fingerprint2)[Unit MQ](/en/unit/Unit_MQ)[Unit INA226-10A](/en/unit/Unit_INA226-10A)[Unit INA226-1A](/en/unit/Unit_INA226-1A)[Unit Gateway H2](/en/unit/Unit_Gateway_H2)[Unit ASR](/en/unit/Unit_ASR)[Unit Ultrasonic-I2C](/en/unit/Unit_Ultrasonic-I2C)[Unit Ultrasonic-IO](/en/unit/Unit_Ultrasonic-IO)[Unit ToF](/en/unit/Unit_ToF)[Unit Limit](/en/unit/Unit_Limit)[Unit PIR](/en/unit/Unit_PIR)[Unit OP90](/en/unit/Unit_OP90)[Unit OP180](/en/unit/Unit_OP180)[Unit Weight](/en/unit/Unit_Weight)[Unit Scales](/en/unit/Unit_Scales)[Unit Gesture](/en/unit/Unit_Gesture)[Unit Color](/en/unit/Unit_Color)[Unit Thermal](/en/unit/Unit_Thermal)[Unit Light](/en/unit/Unit_Light)[Unit DLight](/en/unit/Unit_DLight)[Unit AMeter](/en/unit/Unit_AMeter)[Unit VMeter](/en/unit/Unit_VMeter)[Unit NCIR](/en/unit/Unit_NCIR)[Unit Heart](/en/unit/Unit_Heart)[Unit Finger](/en/unit/Unit_Finger)[Unit Mini IMU](/en/unit/Unit_Mini_IMU)[Unit Accel](/en/unit/Unit_Accel)[Unit ENV-III](/en/unit/Unit_ENV-III)[Unit ENV-Pro](/en/unit/Unit_ENV-Pro)[Unit CO2](/en/unit/Unit_CO2)[Unit Mini TVOC/eCO2](/en/unit/Unit_Mini_TVOC_eCO2)[Unit Earth](/en/unit/Unit_Earth)[Unit Watering](/en/unit/Unit_Watering)[Unit Tube Pressure](/en/unit/Unit_Tube_Pressure)[Unit Hall](/en/unit/Unit_Hall)[Unit MIC](/en/unit/Unit_MIC)[Unit Mini PDM](/en/unit/Unit_Mini_PDM)[Unit Thermal2](/en/unit/Unit_Thermal2)[Unit NCIR2](/en/unit/Unit_NCIR2)[Unit Mini BPS v1.1](/en/unit/Unit_Mini_BPS_v1.1)[Unit CO2L](/en/unit/Unit_CO2L)[Unit KMeter-ISO](/en/unit/Unit_KMeter-ISO)[Unit AIN4-20mA](/en/unit/Unit_AIN4-20mA)[Unit AC Measure](/en/unit/Unit_AC_Measure)[Unit ToF4M](/en/unit/Unit_ToF4M)[Unit Mini ToF-90°](/en/unit/Unit_Mini_ToF-90)[Unit Reflective IR](/en/unit/Unit_Reflective_IR)[Unit Mini Scales](/en/unit/Unit_Mini_Scales)[Unit Weight-I2C](/en/unit/Unit_Weight-I2C)[Unit TMOS PIR](/en/unit/Unit_TMOS_PIR)[Unit Grove to Grove](/en/unit/Unit_Grove_to_Grove)[Unit ExtEncoder](/en/unit/Unit_ExtEncoder)[Unit ADC v1.1](/en/unit/Unit_ADC_v1.1)[Unit DAC2](/en/unit/Unit_DAC2)
 
 ##  Unit-Actuator 
 
@@ -4895,7 +4927,7 @@ Documentation
   * [Hardware Design Files](https://github.com/m5stack/M5_Hardware)
   * [Release History](/en/history)
   * [Stack Compatibility](/en/compatible_stack)
-  * [Stack Screw Length](/en/learn/extension/module)
+  * [Stack Screw Length](/en/guide/basics/stack_screw_length)
 
 
 

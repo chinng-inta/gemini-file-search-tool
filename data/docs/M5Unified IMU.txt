@@ -1,6 +1,6 @@
 ---
 doc_type: M5Unified IMU
-crawled_at: 2026/10/18 10:37:21
+crawled_at: 2026/10/25 10:51:12
 first_url: https://docs.m5stack.com/ja/arduino/m5unified/imu_class/
 ---
 
@@ -1963,6 +1963,10 @@ Unit
 
 ##### 
 
+[ Unit LCD ](/en/arduino/projects/unit/unit_lcd)
+
+##### 
+
 [ Unit OLED ](/en/arduino/projects/unit/unit_oled)
 
 ##### 
@@ -1976,6 +1980,18 @@ Unit
 ##### 
 
 [ Unit Glass2 ](/en/arduino/projects/unit/unit_glass2)
+
+##### 
+
+[ Unit DigiClock ](/en/arduino/projects/unit/unit_digiclock)
+
+##### 
+
+[ Unit HEX / NeoHEX ](/en/arduino/projects/unit/unit_hex)
+
+##### 
+
+[ Unit Neco ](/en/arduino/projects/unit/unit_neco)
 
 ##### 
 
@@ -2000,6 +2016,10 @@ Unit
 ##### 
 
 [ Unit Reflective IR ](/en/arduino/projects/unit/unit_reflective_ir)
+
+##### 
+
+[ Unit FlashLight ](/en/arduino/projects/unit/unit_flashlight)
 
 ##### 
 
@@ -2140,6 +2160,22 @@ Unit
 ##### 
 
 [ Unit ACSSR/DCSSR ](/en/arduino/projects/unit/unit_acssr)
+
+##### 
+
+[ Unit DoF6 ](/en/arduino/projects/unit/unit_dof6)
+
+##### 
+
+[ Unit DoF9 ](/en/arduino/projects/unit/unit_dof9)
+
+##### 
+
+[ Unit DoF10 ](/en/arduino/projects/unit/unit_dof10)
+
+##### 
+
+[ Unit BMM350 ](/en/arduino/projects/unit/unit_bmm350)
 
 #### 
 
@@ -3379,7 +3415,7 @@ Documentation
   * [Hardware Design Files](https://github.com/m5stack/M5_Hardware)
   * [Release History](/ja/history)
   * [Stack Compatibility](/ja/compatible_stack)
-  * [Stack Screw Length](/ja/learn/extension/module)
+  * [Stack Screw Length](/ja/guide/basics/stack_screw_length)
 
 
 
