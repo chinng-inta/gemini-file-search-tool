@@ -1,6 +1,6 @@
 ---
 doc_type: M5Unified Touch
-crawled_at: 2026/10/25 10:51:15
+crawled_at: 2026/11/01 11:42:46
 first_url: https://docs.m5stack.com/ja/arduino/m5unified/touch_class/
 ---
 
@@ -2496,6 +2496,10 @@ Stamp
 ##### 
 
 [ Stamp LoRa-1262 ](/en/arduino/projects/stamp/stamp_lora-1262)
+
+##### 
+
+[ Stamp Timer Power2 ](/en/arduino/projects/stamp/stamp_timer_power2)
 
 ##### 
 

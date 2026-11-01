@@ -1,6 +1,6 @@
 ---
 doc_type: M5 products
-crawled_at: 2026/10/25 10:51:00
+crawled_at: 2026/11/01 11:42:31
 first_url: https://docs.m5stack.com/en/products/
 ---
 
@@ -1825,6 +1825,10 @@ Search
 
 ##  For Stamp-Others 
 
+## [Stamp Timer Power2 M5PM1 LGS4056HDA Power Management I2C 650mA/180mA Timer Wake-up ](/en/stamp/Stamp_Timer_Power2)
+
+[View Details](/en/stamp/Stamp_Timer_Power2) [](https://shop.m5stack.com/products/m5stamp-timer-power-2-py32l020)
+
 ## [Stamp-S3 BreakOut Grove 1.27mm 2.54mm ](/en/stamp/Stamp-S3_BreakOut)
 
 [View Details](/en/stamp/Stamp-S3_BreakOut) [](https://shop.m5stack.com/products/m5stamps3-breakout)
@@ -1849,7 +1853,7 @@ Search
 
 [View Details](/en/accessory/Stamp-S3_GroveBreakOut) [](https://shop.m5stack.com/products/m5stamps3-grove-breakout-w-1-27-header-pin)
 
-[Stamp-S3 BreakOut](/en/stamp/Stamp-S3_BreakOut)[Stamp IO](/en/stamp/Stamp_IO)[Stamp PWR485](/en/stamp/Stamp_PWR485)[Stamp ISP](/en/stamp/Stamp_ISP)[Stamp Timer Power](/en/stamp/Stamp_Timer_Power)[Stamp-S3 GroveBreakOut](/en/accessory/Stamp-S3_GroveBreakOut)
+[Stamp Timer Power2](/en/stamp/Stamp_Timer_Power2)[Stamp-S3 BreakOut](/en/stamp/Stamp-S3_BreakOut)[Stamp IO](/en/stamp/Stamp_IO)[Stamp PWR485](/en/stamp/Stamp_PWR485)[Stamp ISP](/en/stamp/Stamp_ISP)[Stamp Timer Power](/en/stamp/Stamp_Timer_Power)[Stamp-S3 GroveBreakOut](/en/accessory/Stamp-S3_GroveBreakOut)
 
 ##  For Cardputer-Adv-Wireless 
 
@@ -4385,6 +4389,10 @@ Search
 
 ##  For Stamp-Others 
 
+## [Stamp Timer Power2 M5PM1 LGS4056HDA Power Management I2C 650mA/180mA Timer Wake-up ](/en/stamp/Stamp_Timer_Power2)
+
+[View Details](/en/stamp/Stamp_Timer_Power2) [](https://shop.m5stack.com/products/m5stamp-timer-power-2-py32l020)
+
 ## [Stamp-S3 BreakOut Grove 1.27mm 2.54mm ](/en/stamp/Stamp-S3_BreakOut)
 
 [View Details](/en/stamp/Stamp-S3_BreakOut) [](https://shop.m5stack.com/products/m5stamps3-breakout)
@@ -4409,7 +4417,7 @@ Search
 
 [View Details](/en/accessory/Stamp-S3_GroveBreakOut) [](https://shop.m5stack.com/products/m5stamps3-grove-breakout-w-1-27-header-pin)
 
-[Stamp-S3 BreakOut](/en/stamp/Stamp-S3_BreakOut)[Stamp IO](/en/stamp/Stamp_IO)[Stamp PWR485](/en/stamp/Stamp_PWR485)[Stamp ISP](/en/stamp/Stamp_ISP)[Stamp Timer Power](/en/stamp/Stamp_Timer_Power)[Stamp-S3 GroveBreakOut](/en/accessory/Stamp-S3_GroveBreakOut)
+[Stamp Timer Power2](/en/stamp/Stamp_Timer_Power2)[Stamp-S3 BreakOut](/en/stamp/Stamp-S3_BreakOut)[Stamp IO](/en/stamp/Stamp_IO)[Stamp PWR485](/en/stamp/Stamp_PWR485)[Stamp ISP](/en/stamp/Stamp_ISP)[Stamp Timer Power](/en/stamp/Stamp_Timer_Power)[Stamp-S3 GroveBreakOut](/en/accessory/Stamp-S3_GroveBreakOut)
 
 ##  For Cardputer-Adv-Wireless 
 
