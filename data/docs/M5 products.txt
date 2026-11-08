@@ -1,6 +1,6 @@
 ---
 doc_type: M5 products
-crawled_at: 2026/11/01 11:42:31
+crawled_at: 2026/11/08 11:48:21
 first_url: https://docs.m5stack.com/en/products/
 ---
 
@@ -46,6 +46,10 @@ Search
 ## [Tab5 ESP32-P4 ESP32-C6 2MP Camera TFT Screen Battery BMI270 ](/en/core/Tab5)
 
 [View Details](/en/core/Tab5) [](https://shop.m5stack.com/products/m5stack-tab5-iot-development-kit-esp32-p4)
+
+## [CoreMatrix ESP32-C61HR8 16 x 16 LED Matrix TM1680 BMI270 M5PM1 ](/en/core/CoreMatrix)
+
+[View Details](/en/core/CoreMatrix) [](https://shop.m5stack.com/products/m5stack-core-matrix-dev-kit-esp32-c61)
 
 ## [Core2 v1.3 ESP32-D0WDQ6-V3 BMI270 AXP192 FT6336U SPM1423 BM8563 ](/en/core/Core2_v1.3)
 
@@ -115,7 +119,7 @@ Search
 
 [View Details](/en/core/M5GO_IoT_Kit_v2.7) [](https://shop.m5stack.com/products/m5go-iot-starter-kit-v2-6)
 
-[Tab5](/en/core/Tab5)[Core2 v1.3](/en/core/Core2_v1.3)[CoreS3 Thread BR](/en/core/CoreS3_Thread_BR)[PowerHub](/en/core/PowerHub)[CoreMP135](/en/core/CoreMP135)[CM4Stack](/en/core/CM4Stack)[CoreS3](/en/core/CoreS3)[CoreS3-SE](/en/core/CoreS3-SE)[CoreS3-Lite](/en/core/CoreS3-Lite)[Core2](/en/core/Core2)[Core2 v1.1](/en/core/Core2_v1.1)[Core2 For AWS v1.3](/en/core/Core2_For_AWS_v1.3)[Core2 For AWS](/en/core/Core2_For_AWS)[ToughC5](/en/core/ToughC5)[Tough](/en/core/Tough)[Basic v2.7](/en/core/Basic_v2.7)[Fire v2.7](/en/core/Fire_v2.7)[M5GO IoT Kit v2.7](/en/core/M5GO_IoT_Kit_v2.7)
+[Tab5](/en/core/Tab5)[CoreMatrix](/en/core/CoreMatrix)[Core2 v1.3](/en/core/Core2_v1.3)[CoreS3 Thread BR](/en/core/CoreS3_Thread_BR)[PowerHub](/en/core/PowerHub)[CoreMP135](/en/core/CoreMP135)[CM4Stack](/en/core/CM4Stack)[CoreS3](/en/core/CoreS3)[CoreS3-SE](/en/core/CoreS3-SE)[CoreS3-Lite](/en/core/CoreS3-Lite)[Core2](/en/core/Core2)[Core2 v1.1](/en/core/Core2_v1.1)[Core2 For AWS v1.3](/en/core/Core2_For_AWS_v1.3)[Core2 For AWS](/en/core/Core2_For_AWS)[ToughC5](/en/core/ToughC5)[Tough](/en/core/Tough)[Basic v2.7](/en/core/Basic_v2.7)[Fire v2.7](/en/core/Fire_v2.7)[M5GO IoT Kit v2.7](/en/core/M5GO_IoT_Kit_v2.7)
 
 ##  Controllers-Stick 
 
@@ -1213,7 +1217,7 @@ Search
 
 ## [Hat ADC v1.1 Analog Digital Converter I2C ADS1110 Sensor ](/en/hat/Hat_ADC_v1.1)
 
-[View Details](/en/hat/Hat_ADC_v1.1) [](https://shop.m5stack.com/products/adc-i2c-unit-v1-1-ads1100)
+[View Details](/en/hat/Hat_ADC_v1.1) [](https://shop.m5stack.com/products/m5stickc-adc-hat-ads1110-v1-1)
 
 ## [Hat DAC2 GP8413 DAC 15-bit 0-10V 0.01% I2C ](/en/hat/Hat_DAC2)
 
@@ -2611,6 +2615,10 @@ Search
 
 [View Details](/en/core/Tab5) [](https://shop.m5stack.com/products/m5stack-tab5-iot-development-kit-esp32-p4)
 
+## [CoreMatrix ESP32-C61HR8 16 x 16 LED Matrix TM1680 BMI270 M5PM1 ](/en/core/CoreMatrix)
+
+[View Details](/en/core/CoreMatrix) [](https://shop.m5stack.com/products/m5stack-core-matrix-dev-kit-esp32-c61)
+
 ## [Core2 v1.3 ESP32-D0WDQ6-V3 BMI270 AXP192 FT6336U SPM1423 BM8563 ](/en/core/Core2_v1.3)
 
 [View Details](/en/core/Core2_v1.3) [](https://shop.m5stack.com/products/m5stack-core2-esp32-iot-development-kit-v1-3)
@@ -2679,7 +2687,7 @@ Search
 
 [View Details](/en/core/M5GO_IoT_Kit_v2.7) [](https://shop.m5stack.com/products/m5go-iot-starter-kit-v2-6)
 
-[Tab5](/en/core/Tab5)[Core2 v1.3](/en/core/Core2_v1.3)[CoreS3 Thread BR](/en/core/CoreS3_Thread_BR)[PowerHub](/en/core/PowerHub)[CoreMP135](/en/core/CoreMP135)[CM4Stack](/en/core/CM4Stack)[CoreS3](/en/core/CoreS3)[CoreS3-SE](/en/core/CoreS3-SE)[CoreS3-Lite](/en/core/CoreS3-Lite)[Core2](/en/core/Core2)[Core2 v1.1](/en/core/Core2_v1.1)[Core2 For AWS v1.3](/en/core/Core2_For_AWS_v1.3)[Core2 For AWS](/en/core/Core2_For_AWS)[ToughC5](/en/core/ToughC5)[Tough](/en/core/Tough)[Basic v2.7](/en/core/Basic_v2.7)[Fire v2.7](/en/core/Fire_v2.7)[M5GO IoT Kit v2.7](/en/core/M5GO_IoT_Kit_v2.7)
+[Tab5](/en/core/Tab5)[CoreMatrix](/en/core/CoreMatrix)[Core2 v1.3](/en/core/Core2_v1.3)[CoreS3 Thread BR](/en/core/CoreS3_Thread_BR)[PowerHub](/en/core/PowerHub)[CoreMP135](/en/core/CoreMP135)[CM4Stack](/en/core/CM4Stack)[CoreS3](/en/core/CoreS3)[CoreS3-SE](/en/core/CoreS3-SE)[CoreS3-Lite](/en/core/CoreS3-Lite)[Core2](/en/core/Core2)[Core2 v1.1](/en/core/Core2_v1.1)[Core2 For AWS v1.3](/en/core/Core2_For_AWS_v1.3)[Core2 For AWS](/en/core/Core2_For_AWS)[ToughC5](/en/core/ToughC5)[Tough](/en/core/Tough)[Basic v2.7](/en/core/Basic_v2.7)[Fire v2.7](/en/core/Fire_v2.7)[M5GO IoT Kit v2.7](/en/core/M5GO_IoT_Kit_v2.7)
 
 ##  Controllers-Stick 
 
@@ -3777,7 +3785,7 @@ Search
 
 ## [Hat ADC v1.1 Analog Digital Converter I2C ADS1110 Sensor ](/en/hat/Hat_ADC_v1.1)
 
-[View Details](/en/hat/Hat_ADC_v1.1) [](https://shop.m5stack.com/products/adc-i2c-unit-v1-1-ads1100)
+[View Details](/en/hat/Hat_ADC_v1.1) [](https://shop.m5stack.com/products/m5stickc-adc-hat-ads1110-v1-1)
 
 ## [Hat DAC2 GP8413 DAC 15-bit 0-10V 0.01% I2C ](/en/hat/Hat_DAC2)
 
