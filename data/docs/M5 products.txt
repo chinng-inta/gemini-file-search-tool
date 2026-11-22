@@ -1,6 +1,6 @@
 ---
 doc_type: M5 products
-crawled_at: 2026/11/15 12:15:21
+crawled_at: 2026/11/22 12:36:15
 first_url: https://docs.m5stack.com/en/products/
 ---
 
@@ -1905,6 +1905,10 @@ Search
 
 ##  For Chain-HMI 
 
+## [Chain Captain ESP32-S3R8 1.54-inch LCD ES8311 BMI270 IR 800mAh ](/en/chain/Chain_Captain)
+
+[View Details](/en/chain/Chain_Captain) [](https://shop.m5stack.com/products/chain-captain-dev-kit-esp32-s3)
+
 ## [Chain DualKey ESP32-S3FN8 Hot-swappable 350mAh WS2812B HID ](/en/chain/Chain_DualKey)
 
 [View Details](/en/chain/Chain_DualKey) [](https://shop.m5stack.com/products/chain-dual-key-with-esp32-s3)
@@ -1945,9 +1949,13 @@ Search
 
 [View Details](/en/chain/Chain_Buzzer) [](https://shop.m5stack.com/products/chain-buzzer)
 
-[Chain DualKey](/en/chain/Chain_DualKey)[Chain Angle](/en/chain/Chain_Angle)[Chain Encoder](/en/chain/Chain_Encoder)[Chain Key](/en/chain/Chain_Key)[Chain Joystick](/en/chain/Chain_Joystick)[Chain Switch](/en/chain/Chain_Switch)[Chain MIC](/en/chain/Chain_MIC)[Chain RGB](/en/chain/Chain_RGB)[Chain Mono](/en/chain/Chain_Mono)[Chain Buzzer](/en/chain/Chain_Buzzer)
+[Chain Captain](/en/chain/Chain_Captain)[Chain DualKey](/en/chain/Chain_DualKey)[Chain Angle](/en/chain/Chain_Angle)[Chain Encoder](/en/chain/Chain_Encoder)[Chain Key](/en/chain/Chain_Key)[Chain Joystick](/en/chain/Chain_Joystick)[Chain Switch](/en/chain/Chain_Switch)[Chain MIC](/en/chain/Chain_MIC)[Chain RGB](/en/chain/Chain_RGB)[Chain Mono](/en/chain/Chain_Mono)[Chain Buzzer](/en/chain/Chain_Buzzer)
 
 ##  For Chain-Sensor 
+
+## [Chain ENV STM32G031G8U6 AHT20 SPA06 Temperature Humidity Pressure ](/en/chain/Chain_ENV)
+
+[View Details](/en/chain/Chain_ENV) [](https://shop.m5stack.com/products/chain-env-with-temperature-humidity-air-pressure-sensor-aht2-spa06-003)
 
 ## [Chain PIR STM32G031G8U6 AS312 PIR WS2812C UART HY2.0-4P ](/en/chain/Chain_PIR)
 
@@ -1957,7 +1965,7 @@ Search
 
 [View Details](/en/chain/Chain_ToF) [](https://shop.m5stack.com/products/chain-tof-vl53l0)
 
-[Chain PIR](/en/chain/Chain_PIR)[Chain ToF](/en/chain/Chain_ToF)
+[Chain ENV](/en/chain/Chain_ENV)[Chain PIR](/en/chain/Chain_PIR)[Chain ToF](/en/chain/Chain_ToF)
 
 ##  For Chain-Connector 
 
@@ -2271,6 +2279,10 @@ Search
 
 [View Details](/en/accessory/ESP32_Downloader_Kit) [](https://shop.m5stack.com/products/esp32-downloader-kit)
 
+## [CardputerZero LCD Repair Kit CardputerZero LCD Repair Kit ST7789v3 1.9inch Screen Replacement ](/en/accessory/CardputerZero_LCD_Repair_Kit)
+
+[View Details](/en/accessory/CardputerZero_LCD_Repair_Kit) [](https://shop.m5stack.com/collections)
+
 ## [Capsule Proto M5Capsule Proto Breadboard 2.54mm 9P PCB ](/en/accessory/Capsule_Proto)
 
 [View Details](/en/accessory/Capsule_Proto) [](https://shop.m5stack.com/products/proto-kit-for-m5capsule)
@@ -2323,7 +2335,7 @@ Search
 
 [View Details](/en/1515/Aluminium_Extrusions) [](https://shop.m5stack.com/products/1515-cutting-aluminum-profile-100-200-500-1000mm-used-in-assembling-device)
 
-[Magnet Nut](/en/accessory/Magnet_Nut)[Stick Watch Accessory Kit](/en/accessory/Stick_Watch_Accessory_Kit)[Proto Board](/en/accessory/Proto_Board)[RFID Card 13.56MHz](/en/accessory/RFID_Card_13.56MHz)[M5Box](/en/accessory/M5Box)[CoreInk Proto Base](/en/coreink/CoreInk_Proto_Base)[Guide Rail](/en/accessory/Guide_Rail)[SandwichC](/en/accessory/SandwichC)[Screw](/en/accessory/Screw)[Frame](/en/accessory/Frame)[KeyCap](/en/accessory/KeyCap)[Module Proto Frame](/en/accessory/Module_Proto_Frame)[Panel Frame](/en/accessory/Panel_Frame)[Unit Proto Case](/en/accessory/Unit_Proto_Case)[ESP32 Downloader Kit](/en/accessory/ESP32_Downloader_Kit)[Capsule Proto](/en/accessory/Capsule_Proto)[StickC-Plus2 Watch Kit](/en/accessory/StickC-Plus2_Watch_Kit)[StickC-Plus Watch Kit](/en/accessory/StickC-Plus_Watch_Kit)[Watch Dev Kit v1.1](/en/accessory/Watch_Dev_Kit_v1.1)[Cardputer Accessory Kit](/en/accessory/Cardputer_Accessory_Kit)[Cardputer Accessory Kit v1.1](/en/accessory/Cardputer_Accessory_Kit_v1.1)[StampFly Accessory Kit](/en/accessory/StampFly_Accessory_Kit)[CLIP-B](/en/accessory/CLIP-B)[CLIP-A](/en/accessory/CLIP-A)[Corner](/en/1515/Corner)[Nut](/en/1515/Nut)[Connector](/en/1515/Connector)[Aluminium Extrusions](/en/1515/Aluminium_Extrusions)
+[Magnet Nut](/en/accessory/Magnet_Nut)[Stick Watch Accessory Kit](/en/accessory/Stick_Watch_Accessory_Kit)[Proto Board](/en/accessory/Proto_Board)[RFID Card 13.56MHz](/en/accessory/RFID_Card_13.56MHz)[M5Box](/en/accessory/M5Box)[CoreInk Proto Base](/en/coreink/CoreInk_Proto_Base)[Guide Rail](/en/accessory/Guide_Rail)[SandwichC](/en/accessory/SandwichC)[Screw](/en/accessory/Screw)[Frame](/en/accessory/Frame)[KeyCap](/en/accessory/KeyCap)[Module Proto Frame](/en/accessory/Module_Proto_Frame)[Panel Frame](/en/accessory/Panel_Frame)[Unit Proto Case](/en/accessory/Unit_Proto_Case)[ESP32 Downloader Kit](/en/accessory/ESP32_Downloader_Kit)[CardputerZero LCD Repair Kit](/en/accessory/CardputerZero_LCD_Repair_Kit)[Capsule Proto](/en/accessory/Capsule_Proto)[StickC-Plus2 Watch Kit](/en/accessory/StickC-Plus2_Watch_Kit)[StickC-Plus Watch Kit](/en/accessory/StickC-Plus_Watch_Kit)[Watch Dev Kit v1.1](/en/accessory/Watch_Dev_Kit_v1.1)[Cardputer Accessory Kit](/en/accessory/Cardputer_Accessory_Kit)[Cardputer Accessory Kit v1.1](/en/accessory/Cardputer_Accessory_Kit_v1.1)[StampFly Accessory Kit](/en/accessory/StampFly_Accessory_Kit)[CLIP-B](/en/accessory/CLIP-B)[CLIP-A](/en/accessory/CLIP-A)[Corner](/en/1515/Corner)[Nut](/en/1515/Nut)[Connector](/en/1515/Connector)[Aluminium Extrusions](/en/1515/Aluminium_Extrusions)
 
 About Us 
 
@@ -4316,6 +4328,10 @@ Search
 
 ##  For Chain-HMI 
 
+## [Chain Captain ESP32-S3R8 1.54-inch LCD ES8311 BMI270 IR 800mAh ](/en/chain/Chain_Captain)
+
+[View Details](/en/chain/Chain_Captain) [](https://shop.m5stack.com/products/chain-captain-dev-kit-esp32-s3)
+
 ## [Chain DualKey ESP32-S3FN8 Hot-swappable 350mAh WS2812B HID ](/en/chain/Chain_DualKey)
 
 [View Details](/en/chain/Chain_DualKey) [](https://shop.m5stack.com/products/chain-dual-key-with-esp32-s3)
@@ -4356,9 +4372,13 @@ Search
 
 [View Details](/en/chain/Chain_Buzzer) [](https://shop.m5stack.com/products/chain-buzzer)
 
-[Chain DualKey](/en/chain/Chain_DualKey)[Chain Angle](/en/chain/Chain_Angle)[Chain Encoder](/en/chain/Chain_Encoder)[Chain Key](/en/chain/Chain_Key)[Chain Joystick](/en/chain/Chain_Joystick)[Chain Switch](/en/chain/Chain_Switch)[Chain MIC](/en/chain/Chain_MIC)[Chain RGB](/en/chain/Chain_RGB)[Chain Mono](/en/chain/Chain_Mono)[Chain Buzzer](/en/chain/Chain_Buzzer)
+[Chain Captain](/en/chain/Chain_Captain)[Chain DualKey](/en/chain/Chain_DualKey)[Chain Angle](/en/chain/Chain_Angle)[Chain Encoder](/en/chain/Chain_Encoder)[Chain Key](/en/chain/Chain_Key)[Chain Joystick](/en/chain/Chain_Joystick)[Chain Switch](/en/chain/Chain_Switch)[Chain MIC](/en/chain/Chain_MIC)[Chain RGB](/en/chain/Chain_RGB)[Chain Mono](/en/chain/Chain_Mono)[Chain Buzzer](/en/chain/Chain_Buzzer)
 
 ##  For Chain-Sensor 
+
+## [Chain ENV STM32G031G8U6 AHT20 SPA06 Temperature Humidity Pressure ](/en/chain/Chain_ENV)
+
+[View Details](/en/chain/Chain_ENV) [](https://shop.m5stack.com/products/chain-env-with-temperature-humidity-air-pressure-sensor-aht2-spa06-003)
 
 ## [Chain PIR STM32G031G8U6 AS312 PIR WS2812C UART HY2.0-4P ](/en/chain/Chain_PIR)
 
@@ -4368,7 +4388,7 @@ Search
 
 [View Details](/en/chain/Chain_ToF) [](https://shop.m5stack.com/products/chain-tof-vl53l0)
 
-[Chain PIR](/en/chain/Chain_PIR)[Chain ToF](/en/chain/Chain_ToF)
+[Chain ENV](/en/chain/Chain_ENV)[Chain PIR](/en/chain/Chain_PIR)[Chain ToF](/en/chain/Chain_ToF)
 
 ##  For Chain-Connector 
 
@@ -4682,6 +4702,10 @@ Search
 
 [View Details](/en/accessory/ESP32_Downloader_Kit) [](https://shop.m5stack.com/products/esp32-downloader-kit)
 
+## [CardputerZero LCD Repair Kit CardputerZero LCD Repair Kit ST7789v3 1.9inch Screen Replacement ](/en/accessory/CardputerZero_LCD_Repair_Kit)
+
+[View Details](/en/accessory/CardputerZero_LCD_Repair_Kit) [](https://shop.m5stack.com/collections)
+
 ## [Capsule Proto M5Capsule Proto Breadboard 2.54mm 9P PCB ](/en/accessory/Capsule_Proto)
 
 [View Details](/en/accessory/Capsule_Proto) [](https://shop.m5stack.com/products/proto-kit-for-m5capsule)
@@ -4734,7 +4758,7 @@ Search
 
 [View Details](/en/1515/Aluminium_Extrusions) [](https://shop.m5stack.com/products/1515-cutting-aluminum-profile-100-200-500-1000mm-used-in-assembling-device)
 
-[Magnet Nut](/en/accessory/Magnet_Nut)[Stick Watch Accessory Kit](/en/accessory/Stick_Watch_Accessory_Kit)[Proto Board](/en/accessory/Proto_Board)[RFID Card 13.56MHz](/en/accessory/RFID_Card_13.56MHz)[M5Box](/en/accessory/M5Box)[CoreInk Proto Base](/en/coreink/CoreInk_Proto_Base)[Guide Rail](/en/accessory/Guide_Rail)[SandwichC](/en/accessory/SandwichC)[Screw](/en/accessory/Screw)[Frame](/en/accessory/Frame)[KeyCap](/en/accessory/KeyCap)[Module Proto Frame](/en/accessory/Module_Proto_Frame)[Panel Frame](/en/accessory/Panel_Frame)[Unit Proto Case](/en/accessory/Unit_Proto_Case)[ESP32 Downloader Kit](/en/accessory/ESP32_Downloader_Kit)[Capsule Proto](/en/accessory/Capsule_Proto)[StickC-Plus2 Watch Kit](/en/accessory/StickC-Plus2_Watch_Kit)[StickC-Plus Watch Kit](/en/accessory/StickC-Plus_Watch_Kit)[Watch Dev Kit v1.1](/en/accessory/Watch_Dev_Kit_v1.1)[Cardputer Accessory Kit](/en/accessory/Cardputer_Accessory_Kit)[Cardputer Accessory Kit v1.1](/en/accessory/Cardputer_Accessory_Kit_v1.1)[StampFly Accessory Kit](/en/accessory/StampFly_Accessory_Kit)[CLIP-B](/en/accessory/CLIP-B)[CLIP-A](/en/accessory/CLIP-A)[Corner](/en/1515/Corner)[Nut](/en/1515/Nut)[Connector](/en/1515/Connector)[Aluminium Extrusions](/en/1515/Aluminium_Extrusions)
+[Magnet Nut](/en/accessory/Magnet_Nut)[Stick Watch Accessory Kit](/en/accessory/Stick_Watch_Accessory_Kit)[Proto Board](/en/accessory/Proto_Board)[RFID Card 13.56MHz](/en/accessory/RFID_Card_13.56MHz)[M5Box](/en/accessory/M5Box)[CoreInk Proto Base](/en/coreink/CoreInk_Proto_Base)[Guide Rail](/en/accessory/Guide_Rail)[SandwichC](/en/accessory/SandwichC)[Screw](/en/accessory/Screw)[Frame](/en/accessory/Frame)[KeyCap](/en/accessory/KeyCap)[Module Proto Frame](/en/accessory/Module_Proto_Frame)[Panel Frame](/en/accessory/Panel_Frame)[Unit Proto Case](/en/accessory/Unit_Proto_Case)[ESP32 Downloader Kit](/en/accessory/ESP32_Downloader_Kit)[CardputerZero LCD Repair Kit](/en/accessory/CardputerZero_LCD_Repair_Kit)[Capsule Proto](/en/accessory/Capsule_Proto)[StickC-Plus2 Watch Kit](/en/accessory/StickC-Plus2_Watch_Kit)[StickC-Plus Watch Kit](/en/accessory/StickC-Plus_Watch_Kit)[Watch Dev Kit v1.1](/en/accessory/Watch_Dev_Kit_v1.1)[Cardputer Accessory Kit](/en/accessory/Cardputer_Accessory_Kit)[Cardputer Accessory Kit v1.1](/en/accessory/Cardputer_Accessory_Kit_v1.1)[StampFly Accessory Kit](/en/accessory/StampFly_Accessory_Kit)[CLIP-B](/en/accessory/CLIP-B)[CLIP-A](/en/accessory/CLIP-A)[Corner](/en/1515/Corner)[Nut](/en/1515/Nut)[Connector](/en/1515/Connector)[Aluminium Extrusions](/en/1515/Aluminium_Extrusions)
 
 About Us 
 

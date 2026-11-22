@@ -1,6 +1,6 @@
 ---
 doc_type: Arduino Stepper
-crawled_at: 2026/11/15 12:15:17
+crawled_at: 2026/11/22 12:36:10
 first_url: https://docs.arduino.cc/libraries/stepper/
 ---
 

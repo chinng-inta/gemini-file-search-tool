@@ -1,6 +1,6 @@
 ---
 doc_type: M5Unified IMU
-crawled_at: 2026/11/15 12:15:33
+crawled_at: 2026/11/22 12:36:27
 first_url: https://docs.m5stack.com/ja/arduino/m5unified/imu_class/
 ---
 
@@ -384,6 +384,58 @@ Cardputer / -Adv
 ##### 
 
 [ Speaker ](/en/arduino/m5cardputer/speaker)
+
+#### 
+
+Chain Captain 
+
+##### 
+
+[ クイックスタート ](/en/arduino/chain_captain/program)
+
+##### 
+
+[ Battery ](/en/arduino/chain_captain/battery)
+
+##### 
+
+[ Button ](/en/arduino/chain_captain/button)
+
+##### 
+
+[ Display ](/en/arduino/chain_captain/display)
+
+##### 
+
+[ IMU ](/en/arduino/chain_captain/imu)
+
+##### 
+
+[ IR ](/en/arduino/chain_captain/ir)
+
+##### 
+
+[ MIC ](/en/arduino/chain_captain/mic)
+
+##### 
+
+[ RGB LED ](/en/arduino/chain_captain/rgb_led)
+
+##### 
+
+[ RTC ](/en/arduino/chain_captain/rtc)
+
+##### 
+
+[ Speaker ](/en/arduino/chain_captain/speaker)
+
+##### 
+
+[ Wakeup ](/en/arduino/chain_captain/wakeup)
+
+##### 
+
+[ M5PM1 & M5IOE1 ](/en/arduino/chain_captain/m5pm1_m5ioe1)
 
 #### 
 
@@ -1407,15 +1459,15 @@ StickC
 
 ##### 
 
-[ Display ](/en/arduino/m5stickc/lcd_m5stickc)
+[ Display ](/en/arduino/m5stickc/display)
 
 ##### 
 
-[ Power ](/en/arduino/m5stickc/axp192_m5stickc)
+[ Battery ](/en/arduino/m5stickc/power)
 
 ##### 
 
-[ PWM ](/en/arduino/m5stickc/pwm)
+[ IR NEC ](/en/arduino/m5stickc/ir)
 
 ##### 
 
@@ -1423,19 +1475,11 @@ StickC
 
 ##### 
 
-[ SH200Q ](/en/arduino/m5stickc/sh200q_m5stickc)
-
-##### 
-
 [ RTC ](/en/arduino/m5stickc/rtc)
 
 ##### 
 
-[ MIC ](/en/arduino/m5stickc/spm1423_m5stickc)
-
-##### 
-
-[ System ](/en/arduino/m5stickc/system_m5stickc)
+[ MIC ](/en/arduino/m5stickc/mic)
 
 #### 
 
@@ -1816,6 +1860,86 @@ Air Quality
 ##### 
 
 [ Wi-Fi ](/en/arduino/m5air_quality/wifi)
+
+#### 
+
+Demo Board-SHT30 
+
+##### 
+
+[ クイックスタート ](/en/arduino/demo_board/program)
+
+##### 
+
+Sensor 
+
+###### 
+
+[ Temperature Humity ](/en/arduino/demo_board/sht30)
+
+###### 
+
+[ LuminoSity ](/en/arduino/demo_board/light)
+
+###### 
+
+[ Air Pressure ](/en/arduino/demo_board/qmp6988)
+
+###### 
+
+[ Microphone ](/en/arduino/demo_board/mic)
+
+##### 
+
+[ Relay ](/en/arduino/demo_board/relay)
+
+##### 
+
+[ JoyStick ](/en/arduino/demo_board/joystick)
+
+##### 
+
+[ Encoder ](/en/arduino/demo_board/encoder)
+
+##### 
+
+[ Matrix ](/en/arduino/demo_board/led)
+
+##### 
+
+[ Servo ](/en/arduino/demo_board/servo)
+
+##### 
+
+[ RS-485 ](/en/arduino/demo_board/rs485)
+
+##### 
+
+[ RS-232 ](/en/arduino/demo_board/rs232)
+
+##### 
+
+[ DAC ](/en/arduino/demo_board/dac)
+
+##### 
+
+[ ADC ](/en/arduino/demo_board/adc)
+
+##### 
+
+[ Keyboard ](/en/arduino/demo_board/keyboard)
+
+##### 
+
+[ DC-Motor ](/en/arduino/demo_board/dc_motor)
+
+##### 
+
+[ StepMotor ](/en/arduino/demo_board/step_motor)
+
+##### 
+
+[ RFID ](/en/arduino/demo_board/rfid)
 
 ### 
 
@@ -2513,6 +2637,10 @@ Chain
 
 [ Chain PIR ](/en/arduino/projects/chain/chain_pir)
 
+##### 
+
+[ Chain ENV ](/en/arduino/projects/chain/chain_env)
+
 #### 
 
 Faces 
@@ -2804,6 +2932,8 @@ Search
 
 
 
+`sensor_index_t` と `sensor_mask_t` は、どちらも `m5::IMU_Class` 内で定義されています。以下はクラス内の宣言の抜粋です。
+
 cpp `enum sensor_index_t { sensor_index_accel = 0, sensor_index_gyro = 1, sensor_index_mag = 2, }; enum sensor_mask_t { sensor_mask_none = 0, sensor_mask_accel = 1 << sensor_index_accel, sensor_mask_gyro = 1 << sensor_index_gyro, sensor_mask_mag = 1 << sensor_index_mag, };`
 
 1 2 3 4 5 6 7 8 9 10 11 12 13 14
@@ -2889,6 +3019,8 @@ cpp `enum sensor_index_t { sensor_index_accel = 0, sensor_index_gyro = 1, sensor
   * axis_t axis0, axis_t axis1, axis_t axis2
 
 
+
+`axis_t` は `m5::IMU_Class` 内で定義されています。クラス外では、例えば `m5::IMU_Class::axis_x_pos` として列挙値を参照できます。
 
 cpp `enum axis_t { axis_x_pos = 0, axis_x_neg = 1, axis_y_pos = 2, axis_y_neg = 3, axis_z_pos = 4, axis_z_neg = 5, };`
 

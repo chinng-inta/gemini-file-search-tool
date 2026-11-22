@@ -1,6 +1,6 @@
 ---
 doc_type: Arduino Hardware
-crawled_at: 2026/11/15 12:13:33
+crawled_at: 2026/11/22 12:33:57
 first_url: https://docs.arduino.cc/hardware/
 ---
 
@@ -96,7 +96,7 @@ Cookie Settings
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/hardware/uno-r4-wifi
+# Page: https://docs.arduino.cc/hardware/usb-camera
 
 [](https://arduino.cc "Go to arduino.cc")[](https://docs.arduino.cc)
 
@@ -106,25 +106,13 @@ Theme
 
 [Go Back](/hardware/)
 
-UNO R4 WiFi
+USB Camera
 
 ##### VENTUNO
 
 ##### MKR Family
 
 ##### UNO Family
-
-###### Boards
-
-[UNO Mini Limited Edition](/hardware/uno-mini-limited-edition)[UNO Q](/hardware/uno-q)[UNO R4 Minima](/hardware/uno-r4-minima)[UNO R4 WiFi](/hardware/uno-r4-wifi)[UNO R3](/hardware/uno-rev3)[UNO R3 SMD](/hardware/uno-rev3-smd)[UNO WiFi Rev2](/hardware/uno-wifi-rev2)
-
-###### Carriers
-
-[UNO Breakout Carrier](/hardware/uno-breakout-carrier)[UNO Media Carrier](/hardware/uno-media-carrier)
-
-###### Shields
-
-[4 Relays Shield](/hardware/4-relays-shield)[9 Axis Motion Shield](/hardware/9-axis-motion-shield)[Ethernet Shield Rev2](/hardware/ethernet-shield-rev2)[Motor Shield Rev3](/hardware/motor-shield-rev3)[UNO SPE Shield](/hardware/spe-shield)
 
 ##### Nano Family
 
@@ -148,31 +136,25 @@ UNO R4 WiFi
 
 ##### Accessories
 
-[Home / ](/)[Hardware / ](/hardware/)[UNO R4 WiFi ](/hardware/uno-r4-wifi)
+###### Accessories
 
-# UNO R4 WiFi
+[Bughopper](/hardware/bughopper)[USB-C Cable (24-pin)](/hardware/usb-c-cable-24-pin)[USB-C Hub (8 in 1)](/hardware/usb-c-hub-8-in-1)[USB-C Power Supply (45W)](/hardware/usb-c-power-supply-45w)[USB-C Power Supply (65W)](/hardware/usb-c-power-supply-65w)[USB Camera](/hardware/usb-camera)
 
-The Arduino UNO R4 WiFi is designed around the 32-bit microcontroller RA4M1 from [Renesas](https://www.renesas.com/us/en) while also featuring a ESP32 module for Wi-Fi® and Bluetooth® connectivity. Its distinctive 12x8 LED matrix makes it possible to prototype visuals directly on the board, and with a Qwiic connector, you can create projects plug-and-play style.
+[Home / ](/)[Hardware / ](/hardware/)[USB Camera ](/hardware/usb-camera)
 
-[Get Started](/tutorials/uno-r4-wifi/r4-wifi-getting-started)
+# USB Camera
 
-Interactive Viewer
+The Arduino® USB Camera is a compact, plug-and-play camera accessory for the Arduino® UNO Q and VENTUNO Q. Built around the Sony IMX376 image sensor, it captures up to 3840 × 2160 (UHD 4K) video and is recognized automatically as a standard USB Video Class (UVC) device, with no drivers to install. It features an autofocus lens, an integrated LED ring light, and a built-in microphone.
 
-Pinout
-
-[Buy now](https://store.arduino.cc/uno-r4-wifi)
+[Buy now](https://store.arduino.cc/products/usb-camera)
 
 ## Downloadable resources
 
-[Pinout (PDF)](/resources/pinouts/ABX00087-full-pinout.pdf)
-
-Datasheet
-
-[Schematics](/resources/schematics/ABX00087-schematics.pdf)[CAD Files](/static/41d76ccb600d3cb1ec1e98a28d24f111/ABX00087-cad-files.zip)[STEP Files](/resources/models/ABX00087-step.zip)
+[Datasheet](/resources/datasheets/TPX00246-datasheet.pdf)
 
 Features
 
-Tutorials (18)
+Tutorials (1)
 
 Tech Specs
 
@@ -180,67 +162,27 @@ Compatibility
 
 Suggested Libraries
 
-The MCU on the board is the high performance Renesas RA4M1 (Arm® Cortex®-M4) with a 48 MHz clock speed, 32 kB SRAM and 256 kB flash memory. This MCU features an RTC, a DAC and a CAN bus and has support for HID via USB.
+The Arduino® USB Camera is a compact camera accessory for the Arduino® UNO Q and VENTUNO Q boards. Built around the Sony IMX376 image sensor, it captures up to 3840 × 2160 (UHD 4K) video and connects over USB as a standard USB Video Class (UVC) device, requiring no drivers. It combines an autofocus lens, an integrated LED ring light, and a built-in microphone for video capture, streaming, and vision-based applications.
 
-The UNO R4 WiFi also features an ESP32-S3 for Wi-Fi®/Bluetooth® connectivity, which can also be separately programmed via a specific header.
+4K Video Capture
 
-Arduino Cloud
+Sony IMX376 image sensor capturing up to 3840 × 2160 (UHD 4K) at 30 fps in MJPEG.
 
-The UNO R4 WiFi is compatible with the Arduino Cloud platform. Build IoT projects in just minutes!
+Plug-and-Play UVC
 
-[Go to Platform](https://app.arduino.cc/)
+USB Video Class (UVC) compliance for automatic, driver-free recognition on the UNO Q and VENTUNO Q.
 
-User Manual
+Autofocus Lens
 
-A reference to all technical features on this board, with pointers to additional documents.
+Autofocus from 20 cm to infinity, with an F/2.0 lens and an 80° diagonal field of view.
 
-[User Manual](/tutorials/uno-r4-wifi/cheat-sheet)
+Ring Light & Microphone
 
-3 months of Cloud Maker plan included
-
-With Arduino UNO R4 you will get 3 months of cloud maker plan for free
-
-[Register product](https://arduino.cc/start)
-
-5 V Operating Voltage
-
-The RA4M1 and the GPIOs of this board operates on 5 V.
-
-LED Matrix
-
-Learn how to create animations and graphics on the 12x8 LED matrix.
-
-[Documentation](/tutorials/uno-r4-wifi/led-matrix)
-
-Real-Time Clock (RTC)
-
-Keep track of time & date and set alarms with the built-in RTC.
-
-[Documentation](/tutorials/uno-r4-wifi/rtc)
-
-Digital-to-Analog Converter (DAC)
-
-Use the onboard 12-bit DAC to build sophisticated audio projects.
-
-[Documentation](/tutorials/uno-r4-wifi/dac)
-
-Mouse/Keyboard Emulation (HID)
-
-Build game controllers by emulating a mouse/keyboard.
-
-[Documentation](/tutorials/uno-r4-wifi/usb-hid)
-
-Input Voltage
-
-Power your UNO R4 board through the VIN pin or the barrel jack at up to 6-24 V.
-
-#### Certifications
-
-RCMFCCISEDCE (RED)UKCACEMICKC
+Integrated LED ring light with warm and cool white settings, plus a built-in microphone for capture, conferencing, and content creation.
 
 #### Connect and Contribute
 
-[Project Hub](https://projecthub.arduino.cc/?value=UNO R4 WiFi)[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/c/hardware/uno-r4/uno-r4-wifi/189)
+[Project Hub](https://projecthub.arduino.cc/?value=USB Camera)[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/c/official-hardware/accessories/usb-camera/233)
 
 [Product Compliance](/certifications/)[Help Center](https://support.arduino.cc/hc/en-us/articles/9264736457500-Hardware-Support)[Trademarks & Licensing](https://www.arduino.cc/en/trademark/)
 
@@ -266,7 +208,7 @@ Cookie Settings
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/hardware/starter-kit-r4
+# Page: https://docs.arduino.cc/hardware/usb-c-hub-8-in-1
 
 [](https://arduino.cc "Go to arduino.cc")[](https://docs.arduino.cc)
 
@@ -276,7 +218,7 @@ Theme
 
 [Go Back](/hardware/)
 
-Starter Kit R4
+USB-C Hub (8 in 1)
 
 ##### VENTUNO
 
@@ -298,10 +240,6 @@ Starter Kit R4
 
 ##### Kits
 
-###### Maker
-
-[Matter Discovery Bundle](/hardware/discovery-bundle)[IoT Bundle](/hardware/iot-bundle)[Make Your UNO Kit](/hardware/make-your-uno-kit)[Nesso N1](/hardware/nesso-n1)[Plant Watering Kit](/hardware/plant-watering-kit)[Plug and Make Kit](/hardware/plug-and-make-kit)[Starter Kit R4](/hardware/starter-kit-r4)
-
 ##### Mega
 
 ##### Modulino
@@ -310,65 +248,53 @@ Starter Kit R4
 
 ##### Accessories
 
-[Home / ](/)[Hardware / ](/hardware/)[Starter Kit R4 ](/hardware/starter-kit-r4)
+###### Accessories
 
-# Starter Kit R4
+[Bughopper](/hardware/bughopper)[USB-C Cable (24-pin)](/hardware/usb-c-cable-24-pin)[USB-C Hub (8 in 1)](/hardware/usb-c-hub-8-in-1)[USB-C Power Supply (45W)](/hardware/usb-c-power-supply-45w)[USB-C Power Supply (65W)](/hardware/usb-c-power-supply-65w)[USB Camera](/hardware/usb-camera)
 
-The Arduino® Starter Kit R4 is your hands-on introduction to the world of electronics and programming. This all-in-one kit includes everything you need to get started: a powerful [Arduino UNO R4 WiFi](../../hardware/uno-r4-wifi/), a wide selection of electronic components, and a detailed project book. Follow 13+ easy projects to learn the fundamentals, from making LEDs blink to controlling motors and reading sensors. Once you master the basics, online content will guide you in using the board's advanced features: Wi-Fi®, Bluetooth®, and the 12x8 LED matrix, to build Internet of Things projects.
+[Home / ](/)[Hardware / ](/hardware/)[USB-C Hub (8 in 1) ](/hardware/usb-c-hub-8-in-1)
 
-[Go To Course](https://courses.arduino.cc/starter-kit-r4/)
+# USB-C Hub (8 in 1)
 
-[Buy now](https://store.arduino.cc/products/starter-kit-r4)
+The Arduino® USB-C Hub (8 in 1) is a compact multiport adapter that expands a single USB-C port into eight functional interfaces, including power delivery, USB data ports, HDMI video output, Ethernet connectivity, and SD/TF card readers. With its plug-and-play design and broad OS compatibility, it provides I/O expansion for USB-C devices in development, prototyping, and deployment scenarios.
+
+[Buy now](https://store.arduino.cc/products/usb-c-hub)
 
 ## Downloadable resources
 
-[Datasheet](/resources/datasheets/K000007_R4-datasheet.pdf)
+[Datasheet](/resources/datasheets/TPX00241-datasheet.pdf)
 
 Features
 
 Tech Specs
 
-Compatibility
-
 Suggested Libraries
 
-The Arduino Starter Kit R4 includes everything you need to dive into the world of electronics and IoT. Based on the powerful UNO R4 WiFi, this kit guides you through 14 hands-on projects with a printed book and offers even more online.
+The **Arduino® USB-C Hub (8 in 1)** expands a single USB-C port into eight functional interfaces. The compact hub provides power delivery, USB data ports, HDMI video output, Ethernet connectivity, and card readers.
 
-Next‑Gen Innovation with UNO R4 WiFi
+Eight Ports
 
-The kit is built around the powerful Arduino UNO R4 WiFi, featuring a 32-bit microcontroller, Wi-Fi®, Bluetooth®, and a 12x8 LED matrix for dynamic projects.
+USB-C PD (65 W), USB-C Data, USB-A 3.0 (5 Gbps), USB-A 2.0, HDMI (4K @ 30 Hz), RJ45 Ethernet (100 Mbps), SD card reader, and TF card reader.
 
-[Learn More](https://www.arduino.cc/starterkit)
+Video Output
 
-All-In-One Kit
+HDMI output supports up to 4K resolution (3840 × 2160) at 30 Hz with audio pass-through.
 
-Includes a wide selection of sensors, actuators, and electronic components to build 14 guided projects and countless others.
+Power Delivery
 
-Master Electronics from the Ground Up
+USB-C PD port supports up to 65 W power delivery with pass-through to connected devices.
 
-Comes with a detailed, full-color project book that guides you from basic electronics to more complex concepts, making learning hands-on and fun.
+Network Connectivity
 
-Global Learning, Local Language Support
+RJ45 Ethernet port for wired network connection (10/100 Mbps).
 
-All book content and online projects are available in English, Spanish, Italian, German, and French, accessible and easy to learn for makers worldwide.
+Card Readers
 
-Unlock Endless Possibilities Beyond the Book
-
-Access additional projects online and learn how to connect your creations to the Arduino Cloud, bringing your ideas to the digital world.
-
-AI-Powered Guidance for Every Beginner
-
-Built into the Arduino online editor, the AI assistant helps beginners overcome coding challenges with smart suggestions, answers, and inspiration.
-
-Earn Your Official Arduino Certification
-
-Use the exam voucher included in the box to take one attempt at the official Arduino Certification exam online, and validate your new skills with an internationally recognized certificate.
-
-[Certification](https://www.arduino.cc/education/certification/)
+SD and TF (microSD) card readers support UHS-I and UHS-II formats. Both readers can be used simultaneously.
 
 #### Connect and Contribute
 
-[Project Hub](https://projecthub.arduino.cc/?value=Starter Kit R4)[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/)
+[Project Hub](https://projecthub.arduino.cc/?value=USB-C Hub \(8 in 1\))[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/)
 
 [Product Compliance](/certifications/)[Help Center](https://support.arduino.cc/hc/en-us/articles/9264736457500-Hardware-Support)[Trademarks & Licensing](https://www.arduino.cc/en/trademark/)
 
@@ -594,6 +520,272 @@ Cookie Settings
 
 ================================================================================
 
+# Page: https://docs.arduino.cc/hardware/starter-kit-r4
+
+[](https://arduino.cc "Go to arduino.cc")[](https://docs.arduino.cc)
+
+/
+
+Theme
+
+[Go Back](/hardware/)
+
+Starter Kit R4
+
+##### VENTUNO
+
+##### MKR Family
+
+##### UNO Family
+
+##### Nano Family
+
+##### Portenta Family
+
+##### Pro Solutions and Kits
+
+##### Nicla Family
+
+##### Opta
+
+##### Education
+
+##### Kits
+
+###### Maker
+
+[Matter Discovery Bundle](/hardware/discovery-bundle)[IoT Bundle](/hardware/iot-bundle)[Make Your UNO Kit](/hardware/make-your-uno-kit)[Nesso N1](/hardware/nesso-n1)[Plant Watering Kit](/hardware/plant-watering-kit)[Plug and Make Kit](/hardware/plug-and-make-kit)[Starter Kit R4](/hardware/starter-kit-r4)
+
+##### Mega
+
+##### Modulino
+
+##### Classic
+
+##### Accessories
+
+[Home / ](/)[Hardware / ](/hardware/)[Starter Kit R4 ](/hardware/starter-kit-r4)
+
+# Starter Kit R4
+
+The Arduino® Starter Kit R4 is your hands-on introduction to the world of electronics and programming. This all-in-one kit includes everything you need to get started: a powerful [Arduino UNO R4 WiFi](../../hardware/uno-r4-wifi/), a wide selection of electronic components, and a detailed project book. Follow 13+ easy projects to learn the fundamentals, from making LEDs blink to controlling motors and reading sensors. Once you master the basics, online content will guide you in using the board's advanced features: Wi-Fi®, Bluetooth®, and the 12x8 LED matrix, to build Internet of Things projects.
+
+[Go To Course](https://courses.arduino.cc/starter-kit-r4/)
+
+[Buy now](https://store.arduino.cc/products/starter-kit-r4)
+
+## Downloadable resources
+
+[Datasheet](/resources/datasheets/K000007_R4-datasheet.pdf)
+
+Features
+
+Tech Specs
+
+Compatibility
+
+Suggested Libraries
+
+The Arduino Starter Kit R4 includes everything you need to dive into the world of electronics and IoT. Based on the powerful UNO R4 WiFi, this kit guides you through 14 hands-on projects with a printed book and offers even more online.
+
+Next‑Gen Innovation with UNO R4 WiFi
+
+The kit is built around the powerful Arduino UNO R4 WiFi, featuring a 32-bit microcontroller, Wi-Fi®, Bluetooth®, and a 12x8 LED matrix for dynamic projects.
+
+[Learn More](https://www.arduino.cc/starterkit)
+
+All-In-One Kit
+
+Includes a wide selection of sensors, actuators, and electronic components to build 14 guided projects and countless others.
+
+Master Electronics from the Ground Up
+
+Comes with a detailed, full-color project book that guides you from basic electronics to more complex concepts, making learning hands-on and fun.
+
+Global Learning, Local Language Support
+
+All book content and online projects are available in English, Spanish, Italian, German, and French, accessible and easy to learn for makers worldwide.
+
+Unlock Endless Possibilities Beyond the Book
+
+Access additional projects online and learn how to connect your creations to the Arduino Cloud, bringing your ideas to the digital world.
+
+AI-Powered Guidance for Every Beginner
+
+Built into the Arduino online editor, the AI assistant helps beginners overcome coding challenges with smart suggestions, answers, and inspiration.
+
+Earn Your Official Arduino Certification
+
+Use the exam voucher included in the box to take one attempt at the official Arduino Certification exam online, and validate your new skills with an internationally recognized certificate.
+
+[Certification](https://www.arduino.cc/education/certification/)
+
+#### Connect and Contribute
+
+[Project Hub](https://projecthub.arduino.cc/?value=Starter Kit R4)[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/)
+
+[Product Compliance](/certifications/)[Help Center](https://support.arduino.cc/hc/en-us/articles/9264736457500-Hardware-Support)[Trademarks & Licensing](https://www.arduino.cc/en/trademark/)
+
+#### Was this article helpful?
+
+Back to top
+
+© 2026 Arduino
+
+[Trademarks & Copyrights](https://arduino.cc/en/trademark)
+
+[Whistleblowing](https://secure.ethicspoint.com/domain/media/en/gui/33575/)
+
+[Digital Services Act](https://arduino.cc/en/digital-services-act)
+
+[Terms of Service](https://arduino.cc/en/terms-conditions)
+
+[Privacy Policy](https://arduino.cc/en/privacy-policy)
+
+[Security](https://arduino.cc/en/security)
+
+Cookie Settings
+
+================================================================================
+
+# Page: https://docs.arduino.cc/hardware/nano-xl-link
+
+[](https://arduino.cc "Go to arduino.cc")[](https://docs.arduino.cc)
+
+/
+
+Theme
+
+[Go Back](/hardware/)
+
+Nano XL Link
+
+##### VENTUNO
+
+##### MKR Family
+
+##### UNO Family
+
+##### Nano Family
+
+###### Boards
+
+[Nano](/hardware/nano)[Nano 33 BLE](/hardware/nano-33-ble)[Nano 33 BLE Rev2](/hardware/nano-33-ble-rev2)[Nano 33 BLE Sense](/hardware/nano-33-ble-sense)[Nano 33 BLE Sense Rev2](/hardware/nano-33-ble-sense-rev2)[Nano 33 IoT](/hardware/nano-33-iot)[Nano ESP32](/hardware/nano-esp32)[Nano Every](/hardware/nano-every)[Nano Matter](/hardware/nano-matter)[Nano R4](/hardware/nano-r4)[Nano RP2040 Connect](/hardware/nano-rp2040-connect)[Nano XL Link](/hardware/nano-xl-link)
+
+###### Carriers
+
+[Nano Connector Carrier](/hardware/nano-connector-carrier)[Nano Motor Carrier](/hardware/nano-motor-carrier)[Nano Screw Terminal Adapter](/hardware/nano-screw-terminal-adapter)[Nano XL Link Connector Carrier](/hardware/nano-xl-connector-carrier)
+
+##### Portenta Family
+
+##### Pro Solutions and Kits
+
+##### Nicla Family
+
+##### Opta
+
+##### Education
+
+##### Kits
+
+##### Mega
+
+##### Modulino
+
+##### Classic
+
+##### Accessories
+
+[Home / ](/)[Hardware / ](/hardware/)[Nano XL Link ](/hardware/nano-xl-link)
+
+# Nano XL Link
+
+The Nano XL Link is a compact board for industrial and building automation, based on the Microchip® PIC32CK2051SG01144 microcontroller (Arm® Cortex®-M33). Its onboard CAN FD, RS-485, and Ethernet interfaces connect it to industrial networks, and its extended Nano pinout adds a second row of headers with additional I/O and fieldbus lines.
+
+[User Manual](/tutorials/nano-xl-link/user-manual)
+
+Pinout
+
+[Buy now](https://store.arduino.cc/pages/nano-xl-link)
+
+## Downloadable resources
+
+[Pinout (PDF)](/resources/pinouts/ABX00182-full-pinout.pdf)[Datasheet](/resources/datasheets/ABX00182-datasheet.pdf)[Schematics](/resources/schematics/ABX00182-schematics.pdf)[CAD Files](/static/96e0b9f8e2ce685116bc064e81fefc5e/ABX00182-cad-files.zip)[STEP Files](/resources/models/ABX00182-step.zip)[Power Tree](/static/f94319565b86a34333a9458f4a8ac219/ABX00182-power-tree.pdf)[Block Diagram](/static/cdef48e32af81e136d6df41d51e409bd/ABX00182-block-diagram.pdf)
+
+Features
+
+Tutorials (1)
+
+Tech Specs
+
+Compatibility
+
+Suggested Libraries
+
+The Nano XL Link is based on the Microchip® PIC32CK2051SG01144 microcontroller, a 32-bit Arm® Cortex®-M33 with 2 MB of flash memory, 512 kB of RAM and an integrated hardware security module (HSM). The board is programmed with the Arduino Zephyr core, which runs Arduino sketches on top of the Zephyr® real-time operating system.
+
+The board integrates CAN FD, RS-485 and 10/100 Ethernet interfaces and extends the classic Nano pinout through two 2x15 headers, so it can connect directly to industrial networks.
+
+Arm® Cortex®-M33 Microcontroller
+
+The PIC32CK2051SG01144 provides 2 MB of flash memory, 512 kB of RAM and a hardware security module (HSM) for secure boot and key storage.
+
+CAN FD Interface
+
+An onboard TCAN3414 transceiver exposes the CANH and CANL lines on the headers. Supports classic CAN and CAN FD with payloads of up to 64 bytes and data rates of up to 8 Mbps.
+
+RS-485 Interface
+
+An onboard THVD2410 half-duplex transceiver exposes the A and B lines on the headers, with support for the ArduinoRS485 library and Modbus RTU applications.
+
+10/100 Ethernet
+
+An onboard KSZ8081RNAIA PHY provides a 10/100 Mbps Ethernet interface through the Zephyr network stack (IPv4, TCP, UDP, DHCP and DNS). The RJ45 connector and magnetics are provided by the Nano Connector Carrier.
+
+Extended Nano Pinout
+
+Two 2x15 headers keep the classic Nano digital, analog and power pins and add a second row with 12 extra digital pins, a second SPI bus, an I²C bus, a second UART, I²S and the fieldbus lines.
+
+Qwiic Connector
+
+The onboard Qwiic connector provides a +3.3 VDC I²C bus with pull-up resistors for Qwiic, STEMMA QT and Modulino® devices, without soldering.
+
+Wide Power Input
+
+The board can be powered from USB-C, from +7-24 VDC on the VIN pin through the onboard buck converter, or from a regulated +3.3 VDC source on the 3V3 pin.
+
+Industrial Temperature Range
+
+Rated for operation from -20 °C to +85 °C, with bus termination resistors for CAN and RS-485 selectable through onboard solder jumpers.
+
+#### Connect and Contribute
+
+[Project Hub](https://projecthub.arduino.cc/?value=Nano XL Link)[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/c/official-hardware/nano-family/87)
+
+[Product Compliance](/certifications/)[Help Center](https://support.arduino.cc/hc/en-us/articles/9264736457500-Hardware-Support)[Trademarks & Licensing](https://www.arduino.cc/en/trademark/)
+
+#### Was this article helpful?
+
+Back to top
+
+© 2026 Arduino
+
+[Trademarks & Copyrights](https://arduino.cc/en/trademark)
+
+[Whistleblowing](https://secure.ethicspoint.com/domain/media/en/gui/33575/)
+
+[Digital Services Act](https://arduino.cc/en/digital-services-act)
+
+[Terms of Service](https://arduino.cc/en/terms-conditions)
+
+[Privacy Policy](https://arduino.cc/en/privacy-policy)
+
+[Security](https://arduino.cc/en/security)
+
+Cookie Settings
+
+================================================================================
+
 # Page: https://docs.arduino.cc/hardware/nano-xl-connector-carrier
 
 [](https://arduino.cc "Go to arduino.cc")[](https://docs.arduino.cc)
@@ -697,228 +889,6 @@ The dedicated Power IN screw terminal accepts a wide +7-24V input range (VIN) to
 #### Connect and Contribute
 
 [Project Hub](https://projecthub.arduino.cc/?value=Nano XL Link Connector Carrier)[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/c/official-hardware/nano-family/87)
-
-[Product Compliance](/certifications/)[Help Center](https://support.arduino.cc/hc/en-us/articles/9264736457500-Hardware-Support)[Trademarks & Licensing](https://www.arduino.cc/en/trademark/)
-
-#### Was this article helpful?
-
-Back to top
-
-© 2026 Arduino
-
-[Trademarks & Copyrights](https://arduino.cc/en/trademark)
-
-[Whistleblowing](https://secure.ethicspoint.com/domain/media/en/gui/33575/)
-
-[Digital Services Act](https://arduino.cc/en/digital-services-act)
-
-[Terms of Service](https://arduino.cc/en/terms-conditions)
-
-[Privacy Policy](https://arduino.cc/en/privacy-policy)
-
-[Security](https://arduino.cc/en/security)
-
-Cookie Settings
-
-================================================================================
-
-# Page: https://docs.arduino.cc/hardware/usb-c-hub-8-in-1
-
-[](https://arduino.cc "Go to arduino.cc")[](https://docs.arduino.cc)
-
-/
-
-Theme
-
-[Go Back](/hardware/)
-
-USB-C Hub (8 in 1)
-
-##### VENTUNO
-
-##### MKR Family
-
-##### UNO Family
-
-##### Nano Family
-
-##### Portenta Family
-
-##### Pro Solutions and Kits
-
-##### Nicla Family
-
-##### Opta
-
-##### Education
-
-##### Kits
-
-##### Mega
-
-##### Modulino
-
-##### Classic
-
-##### Accessories
-
-###### Accessories
-
-[Bughopper](/hardware/bughopper)[USB-C Cable (24-pin)](/hardware/usb-c-cable-24-pin)[USB-C Hub (8 in 1)](/hardware/usb-c-hub-8-in-1)[USB-C Power Supply (45W)](/hardware/usb-c-power-supply-45w)[USB-C Power Supply (65W)](/hardware/usb-c-power-supply-65w)[USB Camera](/hardware/usb-camera)
-
-[Home / ](/)[Hardware / ](/hardware/)[USB-C Hub (8 in 1) ](/hardware/usb-c-hub-8-in-1)
-
-# USB-C Hub (8 in 1)
-
-The Arduino® USB-C Hub (8 in 1) is a compact multiport adapter that expands a single USB-C port into eight functional interfaces, including power delivery, USB data ports, HDMI video output, Ethernet connectivity, and SD/TF card readers. With its plug-and-play design and broad OS compatibility, it provides I/O expansion for USB-C devices in development, prototyping, and deployment scenarios.
-
-[Buy now](https://store.arduino.cc/products/usb-c-hub)
-
-## Downloadable resources
-
-[Datasheet](/resources/datasheets/TPX00241-datasheet.pdf)
-
-Features
-
-Tech Specs
-
-Suggested Libraries
-
-The **Arduino® USB-C Hub (8 in 1)** expands a single USB-C port into eight functional interfaces. The compact hub provides power delivery, USB data ports, HDMI video output, Ethernet connectivity, and card readers.
-
-Eight Ports
-
-USB-C PD (65 W), USB-C Data, USB-A 3.0 (5 Gbps), USB-A 2.0, HDMI (4K @ 30 Hz), RJ45 Ethernet (100 Mbps), SD card reader, and TF card reader.
-
-Video Output
-
-HDMI output supports up to 4K resolution (3840 × 2160) at 30 Hz with audio pass-through.
-
-Power Delivery
-
-USB-C PD port supports up to 65 W power delivery with pass-through to connected devices.
-
-Network Connectivity
-
-RJ45 Ethernet port for wired network connection (10/100 Mbps).
-
-Card Readers
-
-SD and TF (microSD) card readers support UHS-I and UHS-II formats. Both readers can be used simultaneously.
-
-#### Connect and Contribute
-
-[Project Hub](https://projecthub.arduino.cc/?value=USB-C Hub \(8 in 1\))[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/)
-
-[Product Compliance](/certifications/)[Help Center](https://support.arduino.cc/hc/en-us/articles/9264736457500-Hardware-Support)[Trademarks & Licensing](https://www.arduino.cc/en/trademark/)
-
-#### Was this article helpful?
-
-Back to top
-
-© 2026 Arduino
-
-[Trademarks & Copyrights](https://arduino.cc/en/trademark)
-
-[Whistleblowing](https://secure.ethicspoint.com/domain/media/en/gui/33575/)
-
-[Digital Services Act](https://arduino.cc/en/digital-services-act)
-
-[Terms of Service](https://arduino.cc/en/terms-conditions)
-
-[Privacy Policy](https://arduino.cc/en/privacy-policy)
-
-[Security](https://arduino.cc/en/security)
-
-Cookie Settings
-
-================================================================================
-
-# Page: https://docs.arduino.cc/hardware/usb-c-power-supply-65w
-
-[](https://arduino.cc "Go to arduino.cc")[](https://docs.arduino.cc)
-
-/
-
-Theme
-
-[Go Back](/hardware/)
-
-USB-C Power Supply (65W)
-
-##### VENTUNO
-
-##### MKR Family
-
-##### UNO Family
-
-##### Nano Family
-
-##### Portenta Family
-
-##### Pro Solutions and Kits
-
-##### Nicla Family
-
-##### Opta
-
-##### Education
-
-##### Kits
-
-##### Mega
-
-##### Modulino
-
-##### Classic
-
-##### Accessories
-
-###### Accessories
-
-[Bughopper](/hardware/bughopper)[USB-C Cable (24-pin)](/hardware/usb-c-cable-24-pin)[USB-C Hub (8 in 1)](/hardware/usb-c-hub-8-in-1)[USB-C Power Supply (45W)](/hardware/usb-c-power-supply-45w)[USB-C Power Supply (65W)](/hardware/usb-c-power-supply-65w)[USB Camera](/hardware/usb-camera)
-
-[Home / ](/)[Hardware / ](/hardware/)[USB-C Power Supply (65W) ](/hardware/usb-c-power-supply-65w)
-
-# USB-C Power Supply (65W)
-
-The Arduino® USB-C Power Supply (65W) is a compact wall adapter for USB-C devices that support USB Power Delivery (PD). Recommended as the power source for the Arduino® VENTUNO™ Q, it features a foldable plug for easy transport and interchangeable EU and UK plugs. A USB-C to jack adapter (20 VDC X 3A) is also included for devices with a DC barrel jack input.
-
-[Buy now](https://store.arduino.cc/products/usb-c-power-supply-65w)
-
-## Downloadable resources
-
-[Datasheet](/resources/datasheets/TPX00256-datasheet.pdf)
-
-Features
-
-Tech Specs
-
-Compatibility
-
-Suggested Libraries
-
-The Arduino® USB-C Power Supply (65W) delivers up to 65 W to USB-C devices through the USB Power Delivery (PD) protocol, across five voltage profiles (5, 9, 12, 15, and 20 VDC), automatically negotiating the optimal output for the connected device. It is the recommended power source for the Arduino® VENTUNO™ Q board, and features a foldable plug with interchangeable EU and UK options.
-
-Power Output
-
-Five voltage profiles: 5, 9, 12, 15, and 20 VDC, with a maximum output of 65 W.
-
-USB Power Delivery 3.0
-
-USB PD 3.0 support for automatic voltage and current negotiation.
-
-Regional Plugs
-
-Integrated foldable US plug, plus interchangeable EU and UK plugs that swap without tools.
-
-Safety Protection
-
-Over-current, short-circuit, and over-voltage protection with automatic recovery.
-
-#### Connect and Contribute
-
-[Project Hub](https://projecthub.arduino.cc/?value=USB-C Power Supply \(65W\))[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/)
 
 [Product Compliance](/certifications/)[Help Center](https://support.arduino.cc/hc/en-us/articles/9264736457500-Hardware-Support)[Trademarks & Licensing](https://www.arduino.cc/en/trademark/)
 
@@ -1068,118 +1038,6 @@ Cookie Settings
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/hardware/usb-camera
-
-[](https://arduino.cc "Go to arduino.cc")[](https://docs.arduino.cc)
-
-/
-
-Theme
-
-[Go Back](/hardware/)
-
-USB Camera
-
-##### VENTUNO
-
-##### MKR Family
-
-##### UNO Family
-
-##### Nano Family
-
-##### Portenta Family
-
-##### Pro Solutions and Kits
-
-##### Nicla Family
-
-##### Opta
-
-##### Education
-
-##### Kits
-
-##### Mega
-
-##### Modulino
-
-##### Classic
-
-##### Accessories
-
-###### Accessories
-
-[Bughopper](/hardware/bughopper)[USB-C Cable (24-pin)](/hardware/usb-c-cable-24-pin)[USB-C Hub (8 in 1)](/hardware/usb-c-hub-8-in-1)[USB-C Power Supply (45W)](/hardware/usb-c-power-supply-45w)[USB-C Power Supply (65W)](/hardware/usb-c-power-supply-65w)[USB Camera](/hardware/usb-camera)
-
-[Home / ](/)[Hardware / ](/hardware/)[USB Camera ](/hardware/usb-camera)
-
-# USB Camera
-
-The Arduino® USB Camera is a compact, plug-and-play camera accessory for the Arduino® UNO Q and VENTUNO Q. Built around the Sony IMX376 image sensor, it captures up to 3840 × 2160 (UHD 4K) video and is recognized automatically as a standard USB Video Class (UVC) device, with no drivers to install. It features an autofocus lens, an integrated LED ring light, and a built-in microphone.
-
-[Buy now](https://store.arduino.cc/products/usb-camera)
-
-## Downloadable resources
-
-[Datasheet](/resources/datasheets/TPX00246-datasheet.pdf)
-
-Features
-
-Tutorials (1)
-
-Tech Specs
-
-Compatibility
-
-Suggested Libraries
-
-The Arduino® USB Camera is a compact camera accessory for the Arduino® UNO Q and VENTUNO Q boards. Built around the Sony IMX376 image sensor, it captures up to 3840 × 2160 (UHD 4K) video and connects over USB as a standard USB Video Class (UVC) device, requiring no drivers. It combines an autofocus lens, an integrated LED ring light, and a built-in microphone for video capture, streaming, and vision-based applications.
-
-4K Video Capture
-
-Sony IMX376 image sensor capturing up to 3840 × 2160 (UHD 4K) at 30 fps in MJPEG.
-
-Plug-and-Play UVC
-
-USB Video Class (UVC) compliance for automatic, driver-free recognition on the UNO Q and VENTUNO Q.
-
-Autofocus Lens
-
-Autofocus from 20 cm to infinity, with an F/2.0 lens and an 80° diagonal field of view.
-
-Ring Light & Microphone
-
-Integrated LED ring light with warm and cool white settings, plus a built-in microphone for capture, conferencing, and content creation.
-
-#### Connect and Contribute
-
-[Project Hub](https://projecthub.arduino.cc/?value=USB Camera)[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/c/official-hardware/accessories/usb-camera/233)
-
-[Product Compliance](/certifications/)[Help Center](https://support.arduino.cc/hc/en-us/articles/9264736457500-Hardware-Support)[Trademarks & Licensing](https://www.arduino.cc/en/trademark/)
-
-#### Was this article helpful?
-
-Back to top
-
-© 2026 Arduino
-
-[Trademarks & Copyrights](https://arduino.cc/en/trademark)
-
-[Whistleblowing](https://secure.ethicspoint.com/domain/media/en/gui/33575/)
-
-[Digital Services Act](https://arduino.cc/en/digital-services-act)
-
-[Terms of Service](https://arduino.cc/en/terms-conditions)
-
-[Privacy Policy](https://arduino.cc/en/privacy-policy)
-
-[Security](https://arduino.cc/en/security)
-
-Cookie Settings
-
-================================================================================
-
 # Page: https://docs.arduino.cc/hardware/ventuno-q
 
 [](https://arduino.cc "Go to arduino.cc")[](https://docs.arduino.cc)
@@ -1230,7 +1088,7 @@ VENTUNO Q
 
 The Arduino VENTUNO Q is the edge AI computer that redefines what is possible at the edge, serving as the definitive powerhouse for AI and robotics applications. At its core lies a revolutionary Dual-Brain architecture: the robust Qualcomm Dragonwing™ IQ8 delivers up to 40 dense TOPS of AI compute for advanced computer vision and local LLMs, while the dedicated STM32H5 Microcontroller ensures the low-latency precision required for complex motor control and robotics.
 
-[User Manual](/tutorials/ventuno-q/user-manual)[Arduino App Lab](/software/app-lab/tutorials/01.getting-started/apps-lab-ide)
+[User Manual](/tutorials/ventuno-q/user-manual)[Arduino App Lab](/software/app-lab)
 
 Pinout
 
@@ -1363,7 +1221,7 @@ Cookie Settings
 
 ================================================================================
 
-# Page: https://docs.arduino.cc/hardware/nano-xl-link
+# Page: https://docs.arduino.cc/hardware/usb-c-power-supply-65w
 
 [](https://arduino.cc "Go to arduino.cc")[](https://docs.arduino.cc)
 
@@ -1373,7 +1231,7 @@ Theme
 
 [Go Back](/hardware/)
 
-Nano XL Link
+USB-C Power Supply (65W)
 
 ##### VENTUNO
 
@@ -1382,14 +1240,6 @@ Nano XL Link
 ##### UNO Family
 
 ##### Nano Family
-
-###### Boards
-
-[Nano](/hardware/nano)[Nano 33 BLE](/hardware/nano-33-ble)[Nano 33 BLE Rev2](/hardware/nano-33-ble-rev2)[Nano 33 BLE Sense](/hardware/nano-33-ble-sense)[Nano 33 BLE Sense Rev2](/hardware/nano-33-ble-sense-rev2)[Nano 33 IoT](/hardware/nano-33-iot)[Nano ESP32](/hardware/nano-esp32)[Nano Every](/hardware/nano-every)[Nano Matter](/hardware/nano-matter)[Nano R4](/hardware/nano-r4)[Nano RP2040 Connect](/hardware/nano-rp2040-connect)[Nano XL Link](/hardware/nano-xl-link)
-
-###### Carriers
-
-[Nano Connector Carrier](/hardware/nano-connector-carrier)[Nano Motor Carrier](/hardware/nano-motor-carrier)[Nano Screw Terminal Adapter](/hardware/nano-screw-terminal-adapter)[Nano XL Link Connector Carrier](/hardware/nano-xl-connector-carrier)
 
 ##### Portenta Family
 
@@ -1411,25 +1261,23 @@ Nano XL Link
 
 ##### Accessories
 
-[Home / ](/)[Hardware / ](/hardware/)[Nano XL Link ](/hardware/nano-xl-link)
+###### Accessories
 
-# Nano XL Link
+[Bughopper](/hardware/bughopper)[USB-C Cable (24-pin)](/hardware/usb-c-cable-24-pin)[USB-C Hub (8 in 1)](/hardware/usb-c-hub-8-in-1)[USB-C Power Supply (45W)](/hardware/usb-c-power-supply-45w)[USB-C Power Supply (65W)](/hardware/usb-c-power-supply-65w)[USB Camera](/hardware/usb-camera)
 
-The Nano XL Link is a compact board for industrial and building automation, based on the Microchip® PIC32CK2051SG01144 microcontroller (Arm® Cortex®-M33). Its onboard CAN FD, RS-485, and Ethernet interfaces connect it to industrial networks, and its extended Nano pinout adds a second row of headers with additional I/O and fieldbus lines.
+[Home / ](/)[Hardware / ](/hardware/)[USB-C Power Supply (65W) ](/hardware/usb-c-power-supply-65w)
 
-[User Manual](/tutorials/nano-xl-link/user-manual)
+# USB-C Power Supply (65W)
 
-Pinout
+The Arduino® USB-C Power Supply (65W) is a compact wall adapter for USB-C devices that support USB Power Delivery (PD). Recommended as the power source for the Arduino® VENTUNO™ Q, it features a foldable plug for easy transport and interchangeable EU and UK plugs. A USB-C to jack adapter (20 VDC X 3A) is also included for devices with a DC barrel jack input.
 
-[Buy now](https://store.arduino.cc/pages/nano-xl-link)
+[Buy now](https://store.arduino.cc/products/usb-c-power-supply-65w)
 
 ## Downloadable resources
 
-[Pinout (PDF)](/resources/pinouts/ABX00182-full-pinout.pdf)[Datasheet](/resources/datasheets/ABX00182-datasheet.pdf)[Power Tree](/static/f94319565b86a34333a9458f4a8ac219/ABX00182-power-tree.pdf)[Block Diagram](/static/cdef48e32af81e136d6df41d51e409bd/ABX00182-block-diagram.pdf)
+[Datasheet](/resources/datasheets/TPX00256-datasheet.pdf)
 
 Features
-
-Tutorials (1)
 
 Tech Specs
 
@@ -1437,45 +1285,197 @@ Compatibility
 
 Suggested Libraries
 
-The Nano XL Link is based on the Microchip® PIC32CK2051SG01144 microcontroller, a 32-bit Arm® Cortex®-M33 with 2 MB of flash memory, 512 kB of RAM and an integrated hardware security module (HSM). The board is programmed with the Arduino Zephyr core, which runs Arduino sketches on top of the Zephyr® real-time operating system.
+The Arduino® USB-C Power Supply (65W) delivers up to 65 W to USB-C devices through the USB Power Delivery (PD) protocol, across five voltage profiles (5, 9, 12, 15, and 20 VDC), automatically negotiating the optimal output for the connected device. It is the recommended power source for the Arduino® VENTUNO™ Q board, and features a foldable plug with interchangeable EU and UK options.
 
-The board integrates CAN FD, RS-485 and 10/100 Ethernet interfaces and extends the classic Nano pinout through two 2x15 headers, so it can connect directly to industrial networks.
+Power Output
 
-Arm® Cortex®-M33 Microcontroller
+Five voltage profiles: 5, 9, 12, 15, and 20 VDC, with a maximum output of 65 W.
 
-The PIC32CK2051SG01144 provides 2 MB of flash memory, 512 kB of RAM and a hardware security module (HSM) for secure boot and key storage.
+USB Power Delivery 3.0
 
-CAN FD Interface
+USB PD 3.0 support for automatic voltage and current negotiation.
 
-An onboard TCAN3414 transceiver exposes the CANH and CANL lines on the headers. Supports classic CAN and CAN FD with payloads of up to 64 bytes and data rates of up to 8 Mbps.
+Regional Plugs
 
-RS-485 Interface
+Integrated foldable US plug, plus interchangeable EU and UK plugs that swap without tools.
 
-An onboard THVD2410 half-duplex transceiver exposes the A and B lines on the headers, with support for the ArduinoRS485 library and Modbus RTU applications.
+Safety Protection
 
-10/100 Ethernet
-
-An onboard KSZ8081RNAIA PHY provides a 10/100 Mbps Ethernet interface through the Zephyr network stack (IPv4, TCP, UDP, DHCP and DNS). The RJ45 connector and magnetics are provided by the Nano Connector Carrier.
-
-Extended Nano Pinout
-
-Two 2x15 headers keep the classic Nano digital, analog and power pins and add a second row with 12 extra digital pins, a second SPI bus, an I²C bus, a second UART, I²S and the fieldbus lines.
-
-Qwiic Connector
-
-The onboard Qwiic connector provides a +3.3 VDC I²C bus with pull-up resistors for Qwiic, STEMMA QT and Modulino® devices, without soldering.
-
-Wide Power Input
-
-The board can be powered from USB-C, from +7-24 VDC on the VIN pin through the onboard buck converter, or from a regulated +3.3 VDC source on the 3V3 pin.
-
-Industrial Temperature Range
-
-Rated for operation from -20 °C to +85 °C, with bus termination resistors for CAN and RS-485 selectable through onboard solder jumpers.
+Over-current, short-circuit, and over-voltage protection with automatic recovery.
 
 #### Connect and Contribute
 
-[Project Hub](https://projecthub.arduino.cc/?value=Nano XL Link)[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/c/official-hardware/nano-family/87)
+[Project Hub](https://projecthub.arduino.cc/?value=USB-C Power Supply \(65W\))[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/)
+
+[Product Compliance](/certifications/)[Help Center](https://support.arduino.cc/hc/en-us/articles/9264736457500-Hardware-Support)[Trademarks & Licensing](https://www.arduino.cc/en/trademark/)
+
+#### Was this article helpful?
+
+Back to top
+
+© 2026 Arduino
+
+[Trademarks & Copyrights](https://arduino.cc/en/trademark)
+
+[Whistleblowing](https://secure.ethicspoint.com/domain/media/en/gui/33575/)
+
+[Digital Services Act](https://arduino.cc/en/digital-services-act)
+
+[Terms of Service](https://arduino.cc/en/terms-conditions)
+
+[Privacy Policy](https://arduino.cc/en/privacy-policy)
+
+[Security](https://arduino.cc/en/security)
+
+Cookie Settings
+
+================================================================================
+
+# Page: https://docs.arduino.cc/hardware/uno-r4-wifi
+
+[](https://arduino.cc "Go to arduino.cc")[](https://docs.arduino.cc)
+
+/
+
+Theme
+
+[Go Back](/hardware/)
+
+UNO R4 WiFi
+
+##### VENTUNO
+
+##### MKR Family
+
+##### UNO Family
+
+###### Boards
+
+[UNO Mini Limited Edition](/hardware/uno-mini-limited-edition)[UNO Q](/hardware/uno-q)[UNO R4 Minima](/hardware/uno-r4-minima)[UNO R4 WiFi](/hardware/uno-r4-wifi)[UNO R3](/hardware/uno-rev3)[UNO R3 SMD](/hardware/uno-rev3-smd)[UNO WiFi Rev2](/hardware/uno-wifi-rev2)
+
+###### Carriers
+
+[UNO Breakout Carrier](/hardware/uno-breakout-carrier)[UNO Media Carrier](/hardware/uno-media-carrier)
+
+###### Shields
+
+[4 Relays Shield](/hardware/4-relays-shield)[9 Axis Motion Shield](/hardware/9-axis-motion-shield)[Ethernet Shield Rev2](/hardware/ethernet-shield-rev2)[Motor Shield Rev3](/hardware/motor-shield-rev3)[UNO SPE Shield](/hardware/spe-shield)
+
+##### Nano Family
+
+##### Portenta Family
+
+##### Pro Solutions and Kits
+
+##### Nicla Family
+
+##### Opta
+
+##### Education
+
+##### Kits
+
+##### Mega
+
+##### Modulino
+
+##### Classic
+
+##### Accessories
+
+[Home / ](/)[Hardware / ](/hardware/)[UNO R4 WiFi ](/hardware/uno-r4-wifi)
+
+# UNO R4 WiFi
+
+The Arduino UNO R4 WiFi is designed around the 32-bit microcontroller RA4M1 from [Renesas](https://www.renesas.com/us/en) while also featuring a ESP32 module for Wi-Fi® and Bluetooth® connectivity. Its distinctive 12x8 LED matrix makes it possible to prototype visuals directly on the board, and with a Qwiic connector, you can create projects plug-and-play style.
+
+[Get Started](/tutorials/uno-r4-wifi/r4-wifi-getting-started)
+
+Interactive Viewer
+
+Pinout
+
+[Buy now](https://store.arduino.cc/uno-r4-wifi)
+
+## Downloadable resources
+
+[Pinout (PDF)](/resources/pinouts/ABX00087-full-pinout.pdf)
+
+Datasheet
+
+[Schematics](/resources/schematics/ABX00087-schematics.pdf)[CAD Files](/static/41d76ccb600d3cb1ec1e98a28d24f111/ABX00087-cad-files.zip)[STEP Files](/resources/models/ABX00087-step.zip)
+
+Features
+
+Tutorials (18)
+
+Tech Specs
+
+Compatibility
+
+Suggested Libraries
+
+The MCU on the board is the high performance Renesas RA4M1 (Arm® Cortex®-M4) with a 48 MHz clock speed, 32 kB SRAM and 256 kB flash memory. This MCU features an RTC, a DAC and a CAN bus and has support for HID via USB.
+
+The UNO R4 WiFi also features an ESP32-S3 for Wi-Fi®/Bluetooth® connectivity, which can also be separately programmed via a specific header.
+
+Arduino Cloud
+
+The UNO R4 WiFi is compatible with the Arduino Cloud platform. Build IoT projects in just minutes!
+
+[Go to Platform](https://app.arduino.cc/)
+
+User Manual
+
+A reference to all technical features on this board, with pointers to additional documents.
+
+[User Manual](/tutorials/uno-r4-wifi/cheat-sheet)
+
+3 months of Cloud Maker plan included
+
+With Arduino UNO R4 you will get 3 months of cloud maker plan for free
+
+[Register product](https://arduino.cc/start)
+
+5 V Operating Voltage
+
+The RA4M1 and the GPIOs of this board operates on 5 V.
+
+LED Matrix
+
+Learn how to create animations and graphics on the 12x8 LED matrix.
+
+[Documentation](/tutorials/uno-r4-wifi/led-matrix)
+
+Real-Time Clock (RTC)
+
+Keep track of time & date and set alarms with the built-in RTC.
+
+[Documentation](/tutorials/uno-r4-wifi/rtc)
+
+Digital-to-Analog Converter (DAC)
+
+Use the onboard 12-bit DAC to build sophisticated audio projects.
+
+[Documentation](/tutorials/uno-r4-wifi/dac)
+
+Mouse/Keyboard Emulation (HID)
+
+Build game controllers by emulating a mouse/keyboard.
+
+[Documentation](/tutorials/uno-r4-wifi/usb-hid)
+
+Input Voltage
+
+Power your UNO R4 board through the VIN pin or the barrel jack at up to 6-24 V.
+
+#### Certifications
+
+RCMFCCISEDCE (RED)UKCACEMICKC
+
+#### Connect and Contribute
+
+[Project Hub](https://projecthub.arduino.cc/?value=UNO R4 WiFi)[GitHub Repository](https://github.com/arduino/docs-content)[Forum](https://forum.arduino.cc/c/hardware/uno-r4/uno-r4-wifi/189)
 
 [Product Compliance](/certifications/)[Help Center](https://support.arduino.cc/hc/en-us/articles/9264736457500-Hardware-Support)[Trademarks & Licensing](https://www.arduino.cc/en/trademark/)
 
